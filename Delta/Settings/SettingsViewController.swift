@@ -956,3 +956,23 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate
         controller.dismiss(animated: true, completion: nil)
     }
 }
+
+
+extension SettingsViewController{
+    
+    
+    static func instance() -> SettingsViewController{
+        let viewController = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+        viewController.modalPresentationStyle = .overFullScreen
+        return viewController
+    }
+    
+    static func present(from presenter : UIViewController?){
+        presenter?.present(instance(), animated: true, completion: nil)
+    }
+    
+    
+    static func push(from pusher : UIViewController?){
+        pusher?.navigationController?.pushViewController(instance(), animated: true)
+    }
+}

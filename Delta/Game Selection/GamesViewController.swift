@@ -199,6 +199,10 @@ extension GamesViewController
         self.sync()
     }
     
+    @IBAction func goToSetting(_ sender: Any){
+        SettingsViewController.push(from: self)
+    }
+    
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)

@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ALTDeviceID</key>
-	<string>00008110-000A68390A82801E</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDocumentTypes</key>
@@ -195,7 +193,6 @@
 	<array>
 		<string>dbapi-8-emm</string>
 		<string>dbapi-2</string>
-		<string>altstore</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -230,18 +227,6 @@
 				</dict>
 			</dict>
 		</dict>
-	</dict>
-	<key>SKExternalPurchaseLink</key>
-	<dict>
-		<key>us</key>
-		<string>https://altstore.io/patreon</string>
-	</dict>
-	<key>SKExternalPurchaseMultiLink</key>
-	<dict>
-		<key>us</key>
-		<array>
-			<string>https://altstore.io/patreon</string>
-		</array>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
