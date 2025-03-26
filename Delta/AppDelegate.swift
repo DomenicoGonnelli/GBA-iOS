@@ -63,13 +63,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             // false = we handled the deep link, so no need to call delegate method separately.
             return false
         }
-        
-        if #available(iOS 17.5, *)
-        {
-            Task<Void, Never> {
-                await PurchaseManager.shared.prepare()
-            }
-        }
                 
         return true
     }
@@ -90,7 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         guard DatabaseManager.shared.isStarted else { return }
-        PatreonAPI.shared.refreshPatreonAccount()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication)
@@ -153,7 +145,7 @@ private extension AppDelegate
         #else
         
         #if BETA
-        System.allCases.forEach { Delta.register($0.deltaCore) }
+        System.DGITems.forEach { Delta.register($0.deltaCore) }
         #else
         System.allCases.filter { $0 != .genesis }.forEach { Delta.register($0.deltaCore) }
         #endif

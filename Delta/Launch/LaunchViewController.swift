@@ -118,13 +118,6 @@ extension LaunchViewController
         guard !self.presentedGameViewController else { return }
         self.presentedGameViewController = true
         
-        PatreonAPI.shared.refreshPatreonAccount()
-        
-        if #available(iOS 17.5, *)
-        {
-            FriendZoneManager.shared.updatePatronsIfNeeded()
-        }
-        
         WFCManager.shared.updateKnownWFCServers()
         
         func showGameViewController()

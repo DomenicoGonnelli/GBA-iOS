@@ -219,32 +219,32 @@ extension DatabaseManager
         }
     }
     
-    func patreonAccount(in context: NSManagedObjectContext = DatabaseManager.shared.viewContext) -> PatreonAccount?
-    {
-        guard let patreonAccountID = Keychain.shared.patreonAccountID else { return nil }
-        
-        // Search in-memory first.
-        let registeredAccounts = context.registeredObjects.lazy.compactMap { $0 as? PatreonAccount }.filter { $0.identifier == patreonAccountID }
-        if let patreonAccount = registeredAccounts.first
-        {
-            return patreonAccount
-        }
-        
-        do
-        {
-            let fetchRequest = PatreonAccount.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "%K == %@", #keyPath(PatreonAccount.identifier), patreonAccountID)
-            fetchRequest.returnsObjectsAsFaults = false
-            
-            let patreonAccount = try context.fetch(fetchRequest).first
-            return patreonAccount
-        }
-        catch
-        {
-            Logger.main.error("Failed to fetch Patreon account from database. \(error.localizedDescription, privacy: .public)")
-            return nil
-        }
-    }
+//    func patreonAccount(in context: NSManagedObjectContext = DatabaseManager.shared.viewContext) -> PatreonAccount?
+//    {
+//        guard let patreonAccountID = Keychain.shared.patreonAccountID else { return nil }
+//        
+//        // Search in-memory first.
+//        let registeredAccounts = context.registeredObjects.lazy.compactMap { $0 as? PatreonAccount }.filter { $0.identifier == patreonAccountID }
+//        if let patreonAccount = registeredAccounts.first
+//        {
+//            return patreonAccount
+//        }
+//        
+//        do
+//        {
+//            let fetchRequest = PatreonAccount.fetchRequest()
+//            fetchRequest.predicate = NSPredicate(format: "%K == %@", #keyPath(PatreonAccount.identifier), patreonAccountID)
+//            fetchRequest.returnsObjectsAsFaults = false
+//            
+//            let patreonAccount = try context.fetch(fetchRequest).first
+//            return patreonAccount
+//        }
+//        catch
+//        {
+//            Logger.main.error("Failed to fetch Patreon account from database. \(error.localizedDescription, privacy: .public)")
+//            return nil
+//        }
+//    }
 }
 
 //MARK: - Update -

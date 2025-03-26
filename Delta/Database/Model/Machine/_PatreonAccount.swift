@@ -8,9 +8,7 @@ import DeltaCore
 
 public class _PatreonAccount: NSManagedObject 
 {   
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<PatreonAccount> {
-        return NSFetchRequest<PatreonAccount>(entityName: "PatreonAccount")
-    }
+
 
     // MARK: - Properties
 

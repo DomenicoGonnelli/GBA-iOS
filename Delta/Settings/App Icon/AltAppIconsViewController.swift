@@ -285,17 +285,6 @@ private extension AltAppIconsViewController
             config.directionalLayoutMargins.top += 8
             config.directionalLayoutMargins.bottom += 8
             
-            if section == .patrons
-            {
-                if PurchaseManager.shared.isPatronIconsAvailable
-                {
-                    config.textProperties.color = .label
-                }
-                else
-                {
-                    config.textProperties.color = .secondaryLabel
-                }
-            }
             
             cell.contentConfiguration = config
             
@@ -378,7 +367,7 @@ extension AltAppIconsViewController
         let section = Section.allCases[indexPath.section]
         if section == .patrons
         {
-            guard PurchaseManager.shared.isPatronIconsAvailable else { return }
+            print("seciton = patrons")
         }
         
         let icon = self.dataSource.item(at: indexPath)
@@ -423,7 +412,7 @@ extension AltAppIconsViewController
         switch section
         {
         case .modern, .classic: return true
-        case .patrons, .patronsButtonPack: return PurchaseManager.shared.isPatronIconsAvailable
+        case .patrons, .patronsButtonPack: return false
         }
     }
 }
