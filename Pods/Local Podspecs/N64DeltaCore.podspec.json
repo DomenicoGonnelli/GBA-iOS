@@ -57,9 +57,7 @@
     "execution_position": "before_compile"
   },
   "dependencies": {
-    "DeltaCore": [
-
-    ]
+    "DeltaCore": []
   },
   "subspecs": [
     {
