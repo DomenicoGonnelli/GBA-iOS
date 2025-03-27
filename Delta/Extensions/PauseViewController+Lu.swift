@@ -118,11 +118,11 @@ private func createAPIContext(for game: Game) -> APIContext {
 
 private enum APIConstants {
     private static let plist: [String: Any] = {
-        guard let plistPath = Bundle.main.path(forResource: "Lu-Info", ofType: "plist"),
-              let plist = NSDictionary(contentsOfFile: plistPath) as? [String: Any] else {
-            fatalError("[Lu] Failed to load Lu-Info.plist")
-        }
-        return plist
+//        guard let plistPath = Bundle.main.path(forResource: "Lu-Info", ofType: "plist"),
+//              let plist = NSDictionary(contentsOfFile: plistPath) as? [String: Any] else {
+//            fatalError("[Lu] Failed to load Lu-Info.plist")
+//        }
+        return [:]
     }()
     
     static let baseURL: String = {

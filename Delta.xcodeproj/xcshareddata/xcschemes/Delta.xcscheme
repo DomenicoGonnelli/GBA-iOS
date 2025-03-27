@@ -30,7 +30,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BFFA71D61AAC406100EE9DD1"
                BuildableName = "Delta.app"
-               BlueprintName = "Delta"
+               BlueprintName = "GemBoy"
                ReferencedContainer = "container:Delta.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BFFA71D61AAC406100EE9DD1"
             BuildableName = "Delta.app"
-            BlueprintName = "Delta"
+            BlueprintName = "GemBoy"
             ReferencedContainer = "container:Delta.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -70,7 +70,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BFFA71D61AAC406100EE9DD1"
             BuildableName = "Delta.app"
-            BlueprintName = "Delta"
+            BlueprintName = "GemBoy"
             ReferencedContainer = "container:Delta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -108,7 +108,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BFFA71D61AAC406100EE9DD1"
             BuildableName = "Delta.app"
-            BlueprintName = "Delta"
+            BlueprintName = "GemBoy"
             ReferencedContainer = "container:Delta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
