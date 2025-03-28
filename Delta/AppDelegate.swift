@@ -10,7 +10,7 @@ import UIKit
 
 import DeltaCore
 import AltKit
-//import FirebaseCore
+import FirebaseCore
 
 import ShowTouches
 
@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.databaseManagerDidStart(_:)), name: DatabaseManager.didStartNotification, object: DatabaseManager.shared)
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.settingsDidChange(_:)), name: Settings.didChangeNotification, object: nil)
-//        FirebaseApp.configure()
+        FirebaseApp.configure()
         // Deep Links
         if let shortcut = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem
         {
