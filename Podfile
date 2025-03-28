@@ -17,7 +17,6 @@ target 'GemBoy' do
     pod 'GBADeltaCore', :path => 'Cores/GBADeltaCore'
     pod 'MelonDSDeltaCore', :path => 'Cores/MelonDSDeltaCore'
     pod 'Roxas', :path => 'External/Roxas'
-    pod 'Harmony', :path => 'External/Harmony'
 end
 
 target 'DeltaPreviews' do

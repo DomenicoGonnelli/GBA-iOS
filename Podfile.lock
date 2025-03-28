@@ -1,45 +1,10 @@
 PODS:
-  - Alamofire (4.7.3)
-  - AppAuth (1.7.6):
-    - AppAuth/Core (= 1.7.6)
-    - AppAuth/ExternalUserAgent (= 1.7.6)
-  - AppAuth/Core (1.7.6)
-  - AppAuth/ExternalUserAgent (1.7.6):
-    - AppAuth/Core
   - DeltaCore (0.1):
     - ZIPFoundation
   - GBADeltaCore (0.1):
     - DeltaCore
   - GBCDeltaCore (0.1):
     - DeltaCore
-  - GoogleAPIClientForREST/Core (1.3.11):
-    - GTMSessionFetcher (>= 1.1.7)
-  - GoogleAPIClientForREST/Drive (1.3.11):
-    - GoogleAPIClientForREST/Core
-    - GTMSessionFetcher (>= 1.1.7)
-  - GoogleSignIn (5.0.2):
-    - AppAuth (~> 1.2)
-    - GTMAppAuth (~> 1.0)
-    - GTMSessionFetcher/Core (~> 1.1)
-  - GTMAppAuth (1.3.1):
-    - AppAuth/Core (~> 1.6)
-    - GTMSessionFetcher/Core (< 3.0, >= 1.5)
-  - GTMSessionFetcher (1.7.2):
-    - GTMSessionFetcher/Full (= 1.7.2)
-  - GTMSessionFetcher/Core (1.7.2)
-  - GTMSessionFetcher/Full (1.7.2):
-    - GTMSessionFetcher/Core (= 1.7.2)
-  - Harmony (0.1):
-    - Harmony/Harmony-Drive (= 0.1)
-    - Harmony/Harmony-Dropbox (= 0.1)
-    - Roxas
-  - Harmony/Harmony-Drive (0.1):
-    - GoogleAPIClientForREST/Drive (~> 1.3.0)
-    - GoogleSignIn (~> 5.0)
-    - Roxas
-  - Harmony/Harmony-Dropbox (0.1):
-    - Roxas
-    - SwiftyDropbox (~> 5.0.0)
   - MelonDSDeltaCore (0.1):
     - DeltaCore
   - N64DeltaCore (0.1):
@@ -62,15 +27,12 @@ PODS:
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
-  - SwiftyDropbox (5.0.0):
-    - Alamofire (~> 4.7.3)
   - ZIPFoundation (0.9.19)
 
 DEPENDENCIES:
   - DeltaCore (from `Cores/DeltaCore`)
   - GBADeltaCore (from `Cores/GBADeltaCore`)
   - GBCDeltaCore (from `Cores/GBCDeltaCore`)
-  - Harmony (from `External/Harmony`)
   - MelonDSDeltaCore (from `Cores/MelonDSDeltaCore`)
   - N64DeltaCore (from `Cores/N64DeltaCore`)
   - NESDeltaCore (from `Cores/NESDeltaCore`)
@@ -82,16 +44,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Alamofire
-    - AppAuth
-    - GoogleAPIClientForREST
-    - GoogleSignIn
-    - GTMAppAuth
-    - GTMSessionFetcher
     - SDWebImage
     - SMCalloutView
     - SQLite.swift
-    - SwiftyDropbox
     - ZIPFoundation
 
 EXTERNAL SOURCES:
@@ -101,8 +56,6 @@ EXTERNAL SOURCES:
     :path: Cores/GBADeltaCore
   GBCDeltaCore:
     :path: Cores/GBCDeltaCore
-  Harmony:
-    :path: External/Harmony
   MelonDSDeltaCore:
     :path: Cores/MelonDSDeltaCore
   N64DeltaCore:
@@ -115,16 +68,9 @@ EXTERNAL SOURCES:
     :path: Cores/SNESDeltaCore
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  AppAuth: d4f13a8fe0baf391b2108511793e4b479691fb73
   DeltaCore: 34fa5d77f195d43597f330216b2fba47ef303384
   GBADeltaCore: 833d6ed008e40daf8c91c92eeebe99cf7817e919
   GBCDeltaCore: 820ff1db27f67534229e536504ebfedf40ef0abc
-  GoogleAPIClientForREST: 0f19a8280dfe6471f76016645d26eb5dae305101
-  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
-  GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
-  GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
-  Harmony: 97a11ba000d5a5dbdf13925cf3d55b8b33d3d8fa
   MelonDSDeltaCore: 390bafa4bdf8284d30436c98e5e1b571a67ef564
   N64DeltaCore: 28c148ad8ee6b6ebd2dfba643f429b06ff89bbdd
   NESDeltaCore: f03042c80d16c800ddc10b999535d0153229af20
@@ -133,9 +79,8 @@ SPEC CHECKSUMS:
   SMCalloutView: 5c0ee363dc8e7204b2fda17dfad38c93e9e23481
   SNESDeltaCore: c537de1864485166e22749d18bb3fe20c9444c02
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
-  SwiftyDropbox: 378b4425a2e8d0cb24c7b0f2e3af72bfbaaf1e73
   ZIPFoundation: b8c29ea7ae353b309bc810586181fd073cb3312c
 
-PODFILE CHECKSUM: dd1dee59f30b6273449f87c6e21d6515f8cceaca
+PODFILE CHECKSUM: 7d9d54ede2146e8c962c4de17eb4aa565954bd41
 
 COCOAPODS: 1.16.2
