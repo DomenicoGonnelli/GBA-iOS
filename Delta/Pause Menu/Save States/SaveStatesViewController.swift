@@ -823,7 +823,6 @@ private extension SaveStatesViewController
             }
             
             try FileManager.default.copyItem(at: fileURL, to: saveState.fileURL, shouldReplace: true)
-            SyncManager.shared.recordController?.updateRecord(for: saveState)
         }
         catch
         {

@@ -74,7 +74,7 @@ extension GameSave: Syncable
     {
         do
         {
-            guard let game = self.game else { throw SyncValidationError.incorrectGame(nil) }
+            guard let game = self.game else { return }
             
             if game.identifier != self.identifier
             {
@@ -94,25 +94,10 @@ extension GameSave: Syncable
                     game.gameSave = nil
                 }
                 
-                throw SyncValidationError.incorrectGame(game.name)
+//                throw SyncValidationError.incorrectGame(game.name)
             }
         }
-        catch let error as SyncValidationError
-        {
-            guard SyncManager.shared.ignoredCorruptedRecordIDs.contains(record.recordID) else { throw error }
-            
-            let fetchRequest = Game.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "%K == %@", #keyPath(Game.identifier), self.identifier)
-            
-            if let correctGame = try self.managedObjectContext?.fetch(fetchRequest).first
-            {
-                self.game = correctGame
-            }
-            else
-            {
-                throw ValidationError.nilRelationshipObjects(keys: [#keyPath(GameSave.game)])
-            }
-        }
+        
     }
     
     public func resolveConflict(_ record: AnyRecord) -> ConflictResolution 

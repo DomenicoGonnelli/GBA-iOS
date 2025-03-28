@@ -11,7 +11,6 @@ import CoreData
 
 // Workspace
 import DeltaCore
-import Harmony
 import Roxas
 import ZIPFoundation
 import MelonDSDeltaCore

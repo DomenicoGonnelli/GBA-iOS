@@ -288,60 +288,60 @@ private extension ReviewSaveStatesViewController
     {
         self.navigationItem.rightBarButtonItem?.isIndicatingActivity = true
         
-        self.managedObjectContext.perform {
-            do
-            {
-                let saveStates: [SaveState]?
-                
-                switch self.filter
-                {
-                case .recent, .all:
-                    // Only upload metadata for changed SaveStates.
-                    saveStates = self.managedObjectContext.updatedObjects.compactMap { $0 as? SaveState }
-                    
-                case .sinceLastBeta:
-                    // Upload metadata for _all_ SaveStates.
-                    saveStates = self.saveStatesDataSource.fetchedResultsController.fetchedObjects
-                }
-                
-                try self.managedObjectContext.save()
-                
-                if let saveStates = saveStates, let coordinator = SyncManager.shared.coordinator
-                {
-                    let records = try coordinator.recordController.fetchRecords(for: saveStates)
-                    if let context = records.first?.recordedObject?.managedObjectContext
-                    {
-                        try context.performAndWait {
-                            for record in records
-                            {
-                                record.perform { managedRecord in
-                                    managedRecord.flags.insert(.isGameRelationshipVerified)
-                                    managedRecord.setNeedsMetadataUpdate()
-                                    
-                                    let saveState = record.recordedObject
-                                    Logger.database.notice("Flagged SaveState “\(saveState?.localizedName ?? record.recordID.identifier, privacy: .public)” for metadata update.")
-                                }
-                            }
-                            
-                            try context.save()
-                        }
-                    }
-                }
-                
-                DispatchQueue.main.async {
-                    self.completionHandler?()
-                }
-            }
-            catch
-            {
-                DispatchQueue.main.async {
-                    self.navigationItem.rightBarButtonItem?.isIndicatingActivity = false
-                    
-                    let alertController = UIAlertController(title: NSLocalizedString("Unable to Save Changes", comment: ""), error: error)
-                    (self._parentNavigationController ?? self).present(alertController, animated: true)
-                }
-            }
-        }
+//        self.managedObjectContext.perform {
+//            do
+//            {
+//                let saveStates: [SaveState]?
+//                
+//                switch self.filter
+//                {
+//                case .recent, .all:
+//                    // Only upload metadata for changed SaveStates.
+//                    saveStates = self.managedObjectContext.updatedObjects.compactMap { $0 as? SaveState }
+//                    
+//                case .sinceLastBeta:
+//                    // Upload metadata for _all_ SaveStates.
+//                    saveStates = self.saveStatesDataSource.fetchedResultsController.fetchedObjects
+//                }
+//                
+//                try self.managedObjectContext.save()
+//                
+//                if let saveStates = saveStates, let coordinator = SyncManager.shared.coordinator
+//                {
+//                    let records = try coordinator.recordController.fetchRecords(for: saveStates)
+//                    if let context = records.first?.recordedObject?.managedObjectContext
+//                    {
+//                        try context.performAndWait {
+//                            for record in records
+//                            {
+//                                record.perform { managedRecord in
+//                                    managedRecord.flags.insert(.isGameRelationshipVerified)
+//                                    managedRecord.setNeedsMetadataUpdate()
+//                                    
+//                                    let saveState = record.recordedObject
+//                                    Logger.database.notice("Flagged SaveState “\(saveState?.localizedName ?? record.recordID.identifier, privacy: .public)” for metadata update.")
+//                                }
+//                            }
+//                            
+//                            try context.save()
+//                        }
+//                    }
+//                }
+//                
+//                DispatchQueue.main.async {
+//                    self.completionHandler?()
+//                }
+//            }
+//            catch
+//            {
+//                DispatchQueue.main.async {
+//                    self.navigationItem.rightBarButtonItem?.isIndicatingActivity = false
+//                    
+//                    let alertController = UIAlertController(title: NSLocalizedString("Unable to Save Changes", comment: ""), error: error)
+//                    (self._parentNavigationController ?? self).present(alertController, animated: true)
+//                }
+//            }
+//        }
     }
 }
 

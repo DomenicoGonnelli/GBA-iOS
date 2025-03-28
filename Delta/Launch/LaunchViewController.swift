@@ -9,8 +9,6 @@
 import UIKit
 import Roxas
 
-import Harmony
-
 class LaunchViewController: RSTLaunchViewController
 {
     var deepLinkGame: Game?
@@ -63,14 +61,8 @@ extension LaunchViewController
         
         let isSyncingManagerStarted = RSTLaunchCondition(condition: { self.didAttemptStartingSyncManager }) { (completionHandler) in
             self.didAttemptStartingSyncManager = true
+            completionHandler(nil)
             
-            SyncManager.shared.start(service: Settings.syncingService) { (result) in
-                switch result
-                {
-                case .success: completionHandler(nil)
-                case .failure(let error): completionHandler(error)
-                }
-            }
         }
         
         // Repair database _after_ starting SyncManager so we can access RecordController.
@@ -95,11 +87,6 @@ extension LaunchViewController
         do
         {
             throw error
-        }
-        catch is HarmonyError
-        {
-            // Ignore
-            self.handleLaunchConditions()
         }
         catch
         {

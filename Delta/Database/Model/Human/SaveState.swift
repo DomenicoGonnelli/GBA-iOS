@@ -141,52 +141,53 @@ extension SaveState: Syncable
     
     public func awakeFromSync(_ record: AnyRecord) throws
     {
-        let verifiedGameID = record.remoteMetadata?[.verifiedGameID]
-        
-        do
-        {
-            guard let game = self.game else { return }
-            
-            if let system = System(gameType: game.type), self.coreIdentifier == nil
-            {
-                if let coreIdentifier = record.remoteMetadata?[.coreID]
-                {
-                    // SaveState was synced to older version of Delta and lost its coreIdentifier,
-                    // but it remains in the remote metadata so we can reassign it.
-                    self.coreIdentifier = coreIdentifier
-                }
-                else
-                {
-                    switch system
-                    {
-                    case .ds: self.coreIdentifier = Delta.desmumeCoreID // Assume DS save state with nil coreIdentifier is from DeSmuME core.
-                    default: self.coreIdentifier = system.deltaCore.identifier
-                    }
-                }
-            }
-            
-            if let verifiedGameID, verifiedGameID != game.identifier
-            {
-                // Game does not match verified game ID, which most likely means
-                // this SaveState was reviewed + fixed on another device, but not uploaded.
-                throw SyncValidationError.incorrectGame(game.name)
-            }
-        }
-        catch let error as SyncValidationError
-        {
-            guard let verifiedGameID, SyncManager.shared.ignoredCorruptedRecordIDs.contains(record.recordID) else { throw error }
-            
-            let fetchRequest = Game.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "%K == %@", #keyPath(Game.identifier), verifiedGameID)
-            
-            if let correctGame = try self.managedObjectContext?.fetch(fetchRequest).first
-            {
-                self.game = correctGame
-            }
-            else
-            {
-                throw ValidationError.nilRelationshipObjects(keys: [#keyPath(GameSave.game)])
-            }
-        }
+//        let verifiedGameID = record.remoteMetadata?[.verifiedGameID]
+//        
+//        do
+//        {
+//            guard let game = self.game else { return }
+//            
+//            if let system = System(gameType: game.type), self.coreIdentifier == nil
+//            {
+//                if let coreIdentifier = record.remoteMetadata?[.coreID]
+//                {
+//                    // SaveState was synced to older version of Delta and lost its coreIdentifier,
+//                    // but it remains in the remote metadata so we can reassign it.
+//                    self.coreIdentifier = coreIdentifier
+//                }
+//                else
+//                {
+//                    switch system
+//                    {
+//                    case .ds: self.coreIdentifier = Delta.desmumeCoreID // Assume DS save state with nil coreIdentifier is from DeSmuME core.
+//                    default: self.coreIdentifier = system.deltaCore.identifier
+//                    }
+//                }
+//            }
+//            
+//            if let verifiedGameID, verifiedGameID != game.identifier
+//            {
+//                // Game does not match verified game ID, which most likely means
+//                // this SaveState was reviewed + fixed on another device, but not uploaded.
+//                
+//            
+//            }
+//        }
+//        catch let error
+//        {
+//            guard let verifiedGameID, SyncManager.shared.ignoredCorruptedRecordIDs.contains(record.recordID) else { throw error }
+//            
+//            let fetchRequest = Game.fetchRequest()
+//            fetchRequest.predicate = NSPredicate(format: "%K == %@", #keyPath(Game.identifier), verifiedGameID)
+//            
+//            if let correctGame = try self.managedObjectContext?.fetch(fetchRequest).first
+//            {
+//                self.game = correctGame
+//            }
+//            else
+//            {
+//                throw ValidationError.nilRelationshipObjects(keys: [#keyPath(GameSave.game)])
+//            }
+//        }
     }
 }

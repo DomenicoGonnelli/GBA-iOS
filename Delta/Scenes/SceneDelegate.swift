@@ -9,7 +9,6 @@
 import UIKit
 
 import DeltaCore
-import Harmony
 
 extension UIApplication
 {
@@ -203,10 +202,6 @@ private extension SceneDelegate
                     {
                         self.importControllerSkin(at: url)
                     }
-                }
-                else if url.scheme?.hasPrefix("db-") == true
-                {
-                    _ = DropboxService.shared.handleDropboxURL(url)
                 }
                 else if url.scheme?.lowercased() == "delta"
                 {

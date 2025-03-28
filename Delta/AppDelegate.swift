@@ -9,7 +9,6 @@
 import UIKit
 
 import DeltaCore
-import Harmony
 import AltKit
 //import FirebaseCore
 
@@ -193,10 +192,6 @@ extension AppDelegate
             {
                 return self.importControllerSkin(at: url)
             }
-        }
-        else if url.scheme?.hasPrefix("db-") == true
-        {
-            return DropboxService.shared.handleDropboxURL(url)
         }
         else if url.scheme?.lowercased() == "delta"
         {

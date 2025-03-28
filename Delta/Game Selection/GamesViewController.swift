@@ -9,11 +9,8 @@
 import UIKit
 import CoreData
 import MobileCoreServices
-
 import DeltaCore
-
 import Roxas
-import Harmony
 
 class GamesViewController: UIViewController
 {
@@ -82,8 +79,6 @@ class GamesViewController: UIViewController
         
         self.fetchedResultsController.delegate = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(GamesViewController.syncingDidStart(_:)), name: SyncCoordinator.didStartSyncingNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(GamesViewController.syncingDidFinish(_:)), name: SyncCoordinator.didFinishSyncingNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GamesViewController.settingsDidChange(_:)), name: Settings.didChangeNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GamesViewController.emulationDidQuit(_:)), name: EmulatorCore.emulationDidQuitNotification, object: nil)
     }
@@ -195,8 +190,6 @@ extension GamesViewController
                 activeEmulatorCore.stop()
             }
         }
-        
-        self.sync()
     }
     
     @IBAction func goToSetting(_ sender: Any){
@@ -248,7 +241,7 @@ extension GamesViewController
     
     @IBAction private func unwindFromSettingsViewController(_ segue: UIStoryboardSegue)
     {
-        self.sync()
+//        self.sync()
     }
 }
 
@@ -509,64 +502,6 @@ extension GamesViewController: ImportControllerDelegate
 /// Syncing
 private extension GamesViewController
 {
-    @IBAction func sync()
-    {
-        // Show toast view in case sync started before this view controller existed.
-        self.showSyncingToastViewIfNeeded()
-        
-        SyncManager.shared.sync()
-    }
-    
-    func showSyncingToastViewIfNeeded()
-    {
-        guard let coordinator = SyncManager.shared.coordinator, let syncProgress = SyncManager.shared.syncProgress, coordinator.isSyncing && self.syncingToastView == nil else { return }
-
-        let toastView = RSTToastView(text: NSLocalizedString("Syncing...", comment: ""), detailText: syncProgress.localizedAdditionalDescription)
-        toastView.activityIndicatorView.startAnimating()
-        toastView.addTarget(self, action: #selector(GamesViewController.hideSyncingToastView), for: .touchUpInside)
-        toastView.show(in: self.view)
-        
-        self.syncingProgressObservation = syncProgress.observe(\.localizedAdditionalDescription) { [weak toastView, weak self] (progress, change) in
-            DispatchQueue.main.async {
-                // Prevent us from updating text right as we're dismissing the toast view.
-                guard self?.syncingToastView != nil else { return }
-                toastView?.detailTextLabel.text = progress.localizedAdditionalDescription
-            }
-        }
-        
-        self.syncingToastView = toastView
-    }
-    
-    func showSyncFinishedToastView(result: SyncResult)
-    {
-        let toastView: RSTToastView
-        
-        switch result
-        {
-        case .success: toastView = RSTToastView(text: NSLocalizedString("Sync Complete", comment: ""), detailText: nil)
-        case .failure(let error): toastView = RSTToastView(text: NSLocalizedString("Sync Failed", comment: ""), detailText: error.failureReason)
-        }
-        
-        toastView.textLabel.textAlignment = .center
-        toastView.addTarget(self, action: #selector(GamesViewController.presentSyncResultsViewController), for: .touchUpInside)
-        
-        toastView.show(in: self.view, duration: 2.0)
-        
-        self.syncingToastView = nil
-    }
-    
-    @objc func hideSyncingToastView()
-    {
-        self.syncingToastView = nil
-    }
-    
-    @objc func presentSyncResultsViewController()
-    {
-        guard let result = SyncManager.shared.previousSyncResult else { return }
-        
-        let navigationController = SyncResultViewController.make(result: result)
-        self.present(navigationController, animated: true, completion: nil)
-    }
     
     func quitEmulation()
     {
@@ -610,16 +545,16 @@ private extension GamesViewController
     @objc func syncingDidStart(_ notification: Notification)
     {
         DispatchQueue.main.async {
-            self.showSyncingToastViewIfNeeded()
+//            self.showSyncingToastViewIfNeeded()
         }
     }
     
     @objc func syncingDidFinish(_ notification: Notification)
     {        
-        DispatchQueue.main.async {
-            guard let result = notification.userInfo?[SyncCoordinator.syncResultKey] as? SyncResult else { return }
-            self.showSyncFinishedToastView(result: result)
-        }
+//        DispatchQueue.main.async {
+//            guard let result = notification.userInfo?[SyncCoordinator.syncResultKey] as? SyncResult else { return }
+////            self.showSyncFinishedToastView(result: result)
+//        }
     }
     
     @objc func emulationDidQuit(_ notification: Notification)
@@ -710,6 +645,6 @@ extension GamesViewController: UIAdaptivePresentationControllerDelegate
 {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController)
     {
-        self.sync()
+//        self.sync()
     }
 }

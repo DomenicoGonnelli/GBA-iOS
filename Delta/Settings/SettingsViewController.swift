@@ -13,7 +13,6 @@ import MessageUI
 import StoreKit
 
 import DeltaCore
-import Harmony
 
 import Roxas
 
@@ -231,18 +230,6 @@ private extension SettingsViewController
         self.supportExternalDisplaysSwitch.isOn = Settings.supportsExternalDisplays
         self.topScreenOnlySwitch.isOn = Settings.features.dsAirPlay.topScreenOnly
         self.layoutScreensHorizontallySwitch.isOn = (Settings.features.dsAirPlay.layoutAxis == .horizontal)
-        
-        self.syncingServiceLabel.text = Settings.syncingService?.localizedName
-        
-        do
-        {
-            let records = try SyncManager.shared.recordController?.fetchConflictedRecords() ?? []
-            self.syncingConflictsCount = records.count
-        }
-        catch
-        {
-            print(error)
-        }
         
         self.buttonHapticFeedbackEnabledSwitch.isOn = Settings.isButtonHapticFeedbackEnabled
         self.thumbstickHapticFeedbackEnabledSwitch.isOn = Settings.isThumbstickHapticFeedbackEnabled
@@ -573,7 +560,7 @@ extension SettingsViewController
             
             return numberOfRows
             
-        case .syncing where !isSectionHidden(section): return SyncManager.shared.coordinator?.account == nil ? 1 : super.tableView(tableView, numberOfRowsInSection: sectionIndex)
+        case .syncing where !isSectionHidden(section): return 0
         case .advanced where !isSectionHidden(section):
             if true
             {

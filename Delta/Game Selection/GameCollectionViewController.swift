@@ -16,7 +16,6 @@ import DeltaCore
 import MelonDSDeltaCore
 
 import Roxas
-import Harmony
 
 import SDWebImage
 
@@ -655,30 +654,6 @@ private extension GameCollectionViewController
             }
         }
         
-        if let coordinator = SyncManager.shared.coordinator, coordinator.isSyncing
-        {
-            if let gameSave = game.gameSave
-            {
-                do
-                {
-                    if let record = try coordinator.recordController.fetchRecords(for: [gameSave]).first
-                    {
-                        if record.isSyncingEnabled && !record.isConflicted && (record.localStatus == nil || record.remoteStatus == .updated)
-                        {
-                            throw LaunchError.downloadingGameSave
-                        }
-                    }
-                }
-                catch let error as LaunchError
-                {
-                    throw error
-                }
-                catch
-                {
-                    print("Error fetching record for game save.", error)
-                }
-            }
-        }
         
         if game.type == .ds && Settings.preferredCore(for: .ds) == MelonDS.core
         {
@@ -973,8 +948,6 @@ private extension GameCollectionViewController
                 temporaryGame.artworkURL = imageURL
                 context.saveWithErrorLogging()
                 
-                // Local image URLs may not change despite being a different image, so manually mark record as updated.
-                SyncManager.shared.recordController?.updateRecord(for: temporaryGame)
                 
                 DispatchQueue.main.async {
                     if let indexPath = self.dataSource.fetchedResultsController.indexPath(forObject: game)
@@ -1081,11 +1054,6 @@ private extension GameCollectionViewController
                 if let fileURL = fileURL
                 {
                     try FileManager.default.copyItem(at: fileURL, to: game.gameSaveURL, shouldReplace: true)
-                    
-                    if let gameSave = game.gameSave
-                    {
-                        SyncManager.shared.recordController?.updateRecord(for: gameSave)
-                    }
                 }
             }
             catch
