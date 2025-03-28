@@ -62,11 +62,11 @@ final class DatabaseManager: RSTPersistentContainer
     {
         guard
             let modelURL = Bundle(for: DatabaseManager.self).url(forResource: "Delta", withExtension: "momd"),
-            let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL),
-            let harmonyModel = NSManagedObjectModel.harmonyModel(byMergingWith: [managedObjectModel])
+            let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)
+//            let harmonyModel = NSManagedObjectModel.harmonyModel(byMergingWith: [managedObjectModel])
         else { fatalError("Core Data model cannot be found. Aborting.") }
         
-        super.init(name: "Delta", managedObjectModel: harmonyModel)
+        super.init(name: "Delta", managedObjectModel: managedObjectModel)
         
         self.shouldAddStoresAsynchronously = true
     }
@@ -93,7 +93,7 @@ extension DatabaseManager
             for description in self.persistentStoreDescriptions
             {
                 // Set configuration so RSTPersistentContainer can determine how to migrate this and Harmony's database independently.
-                description.configuration = NSManagedObjectModel.Configuration.external.rawValue
+//                todo:DG description.configuration = NSManagedObjectModel.Configuration.external.rawValue
             }
             
             self.loadPersistentStores { (description, error) in

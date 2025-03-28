@@ -437,58 +437,6 @@ private extension SettingsViewController
         self.navigationController?.pushViewController(hostingController, animated: true)
     }
     
-    @available(iOS 15, *)
-    func exportErrorLog()
-    {
-        self.exportLogActivityIndicatorView.startAnimating()
-        
-        if let indexPath = self.tableView.indexPathForSelectedRow
-        {
-            self.tableView.deselectRow(at: indexPath, animated: true)
-        }
-        
-        Task<Void, Never>.detached(priority: .userInitiated) {
-            do
-            {
-                let store = try OSLogStore(scope: .currentProcessIdentifier)
-                
-                // All logs since the app launched.
-                let position = store.position(timeIntervalSinceLatestBoot: 0)
-                let predicate = NSPredicate(format: "subsystem IN %@", [Logger.deltaSubsystem, Logger.harmonySubsystem])
-                
-                let entries = try store.getEntries(at: position, matching: predicate)
-                    .compactMap { $0 as? OSLogEntryLog }
-                    .map { "[\($0.date.formatted())] [\($0.category)] [\($0.level.localizedName)] \($0.composedMessage)" }
-                
-                let outputText = entries.joined(separator: "\n")
-                
-                let outputDirectory = FileManager.default.uniqueTemporaryURL()
-                try FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true)
-                
-                let dateString = self.errorLogDateFormatter.string(from: .now)
-                let filename = "Delta-\(dateString).log"
-                
-                let outputURL = outputDirectory.appendingPathComponent(filename)
-                try outputText.write(to: outputURL, atomically: true, encoding: .utf8)
-                
-                await MainActor.run {
-                    self._exportedLogURL = outputURL
-                    
-                    let previewController = QLPreviewController()
-                    previewController.delegate = self
-                    previewController.dataSource = self
-                    self.present(previewController, animated: true)
-                }
-            }
-            catch
-            {
-                print("Failed to export Harmony logs.", error)
-            }
-            
-            await self.exportLogActivityIndicatorView.stopAnimating()
-        }
-    }
-    
 }
 
 private extension SettingsViewController
@@ -671,8 +619,7 @@ extension SettingsViewController
             switch row
             {
             case .exportLog:
-                guard #available(iOS 15, *) else { return }
-                self.exportErrorLog()
+                print("nothing to do")
                 
             case .experimentalFeatures: self.showExperimentalFeatures()
             }

@@ -12,7 +12,6 @@ import OSLog
 import DeltaCore
 
 import Roxas
-import Harmony
 
 private extension String
 {
@@ -73,24 +72,21 @@ private extension RepairDatabaseViewController
         Logger.database.info("Begin repairing database...")
         
         self.repairGames { result in
-            switch result
-            {
-            case .failure(let error):
+            if result {
                 DispatchQueue.main.async {
-                    let alertController = UIAlertController(title: "Unable to Repair Games", error: error)
+                    let alertController = UIAlertController(title: "Unable to Repair Games", error: nil)
                     self.present(alertController, animated: true)
                 }
-                
-            case .success:
+            }
+            else {
                 self.repairGameSaves { result in
                     DispatchQueue.main.async {
-                        switch result
-                        {
-                        case .failure(let error):
-                            let alertController = UIAlertController(title: "Unable to Repair Save Files", error: error)
+                        if result{
+                            let alertController = UIAlertController(title: "Unable to Repair Save Files", error: nil)
                             self.present(alertController, animated: true)
+                        }
                             
-                        case .success:
+                        else{
                             self.showReviewViewController()
                         }
                     }
@@ -99,7 +95,7 @@ private extension RepairDatabaseViewController
         }
     }
     
-    func repairGames(completion: @escaping (Result<Void, Error>) -> Void)
+    func repairGames(completion: @escaping (Bool) -> Void)
     {
         self.managedObjectContext.perform {
             do
@@ -124,16 +120,16 @@ private extension RepairDatabaseViewController
                 
                 try self.managedObjectContext.save()
                 
-                completion(.success)
+                completion(true)
             }
             catch
             {
-                completion(.failure(error))
+                completion(false)
             }
         }
     }
     
-    func repairGameSaves(completion: @escaping (Result<Void, Error>) -> Void)
+    func repairGameSaves(completion: @escaping (Bool) -> Void)
     {
         self.managedObjectContext.perform {
             do
@@ -195,11 +191,11 @@ private extension RepairDatabaseViewController
                 let conflictsLog = conflictedGames.map { $0.name + " (" + $0.identifier + ")" }.sorted().joined(separator: "\n")
                 try conflictsLog.write(to: outputURL, atomically: true, encoding: .utf8)
                 
-                completion(.success)
+                completion(true)
             }
             catch
             {
-                completion(.failure(error))
+                completion(false)
             }
         }
     }
@@ -450,7 +446,7 @@ private extension RepairDatabaseViewController
                     
                     let entries = try store.getEntries(at: position)
                         .compactMap { $0 as? OSLogEntryLog }
-                        .filter { $0.subsystem == Logger.deltaSubsystem || $0.subsystem == Logger.harmonySubsystem }
+                        .filter { $0.subsystem == Logger.deltaSubsystem }
                         .map { "[\($0.date.formatted())] [\($0.level.localizedName)] \($0.composedMessage)" }
                                     
                     let outputURL = self.backupsDirectory.appendingPathComponent("repair.log")

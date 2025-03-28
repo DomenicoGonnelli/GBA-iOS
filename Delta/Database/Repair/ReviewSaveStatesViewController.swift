@@ -8,8 +8,6 @@
 
 import UIKit
 import OSLog
-
-import Harmony
 import Roxas
 
 extension ReviewSaveStatesViewController
@@ -22,10 +20,6 @@ extension ReviewSaveStatesViewController
     }
 }
 
-extension RecordFlags
-{
-    static let isGameRelationshipVerified = RecordFlags(rawValue: 1 << 0)
-}
 
 class ReviewSaveStatesViewController: UITableViewController
 {

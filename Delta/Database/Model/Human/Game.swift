@@ -11,8 +11,6 @@ import Foundation
 import DeltaCore
 import MelonDSDeltaCore
 
-import Harmony
-
 public extension Game
 {
     typealias Setting = __GameSetting
@@ -160,74 +158,6 @@ extension Game
         if managedObjectContext.hasChanges
         {
             managedObjectContext.saveWithErrorLogging()
-        }
-    }
-}
-
-extension Game: Syncable
-{
-    public static var syncablePrimaryKey: AnyKeyPath {
-        return \Game.identifier
-    }
-    
-    public var syncableKeys: Set<AnyKeyPath> {
-        return [\Game.artworkURL, \Game.filename, \Game.name, \Game.type]
-    }
-    
-    public var syncableFiles: Set<File> {
-        let artworkURL: URL
-        
-        if let fileURL = self.artworkURL, fileURL.isFileURL
-        {
-            artworkURL = fileURL
-        }
-        else
-        {
-            artworkURL = DatabaseManager.artworkURL(for: self)
-        }
-        
-        let artworkFile = File(identifier: "artwork", fileURL: artworkURL)
-                
-        switch self.identifier
-        {
-        case Game.melonDSBIOSIdentifier:
-            let bios7File = File(identifier: "bios7", fileURL: MelonDSEmulatorBridge.shared.bios7URL)
-            let bios9File = File(identifier: "bios9", fileURL: MelonDSEmulatorBridge.shared.bios9URL)
-            let firmwareFile = File(identifier: "firmware", fileURL: MelonDSEmulatorBridge.shared.firmwareURL)
-            
-            return [artworkFile, bios7File, bios9File, firmwareFile]
-            
-        case Game.melonDSDSiBIOSIdentifier:
-            let bios7File = File(identifier: "bios7", fileURL: MelonDSEmulatorBridge.shared.dsiBIOS7URL)
-            let bios9File = File(identifier: "bios9", fileURL: MelonDSEmulatorBridge.shared.dsiBIOS9URL)
-            let firmwareFile = File(identifier: "firmware", fileURL: MelonDSEmulatorBridge.shared.dsiFirmwareURL)
-            
-            // DSi NAND is ~240MB, so don't sync for now until Harmony can selectively download files.
-            // let nandFile = File(identifier: "nand", fileURL: MelonDSEmulatorBridge.shared.dsiNANDURL)
-            
-            return [artworkFile, bios7File, bios9File, firmwareFile]
-            
-        default:
-            let gameFile = File(identifier: "game", fileURL: self.fileURL)
-            return [artworkFile, gameFile]
-        }
-    }
-    
-    public var syncableRelationships: Set<AnyKeyPath> {
-        return [\Game.gameCollection]
-    }
-    
-    public var syncableLocalizedName: String? {
-        return self.name
-    }
-    
-    public func awakeFromSync(_ record: AnyRecord) throws
-    {
-        guard let gameCollection = self.gameCollection else { return }
-        
-        if gameCollection.identifier != self.type.rawValue
-        {
-            return
         }
     }
 }

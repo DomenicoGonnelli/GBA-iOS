@@ -247,6 +247,7 @@
 		D5F702FD2C24CE5300DCD271 /* UISceneSession+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */; };
 		D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
 		D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
+		EB7CB6962D96949400CA27FC /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CB6952D96949400CA27FC /* UIAlertController.swift */; };
 		EB8E0D292D946055004BFB1F /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D272D946055004BFB1F /* SKProduct.swift */; };
 		EB8E0D2A2D946055004BFB1F /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D182D946055004BFB1F /* Dictionary.swift */; };
 		EB8E0D2C2D946055004BFB1F /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D252D946055004BFB1F /* Optional.swift */; };
@@ -581,6 +582,7 @@
 		D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneSession+Delta.swift"; sourceTree = "<group>"; };
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		EB7CB6952D96949400CA27FC /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		EB8E0D182D946055004BFB1F /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		EB8E0D192D946055004BFB1F /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		EB8E0D1A2D946055004BFB1F /* StringExtensionCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionCommon.swift; sourceTree = "<group>"; };
@@ -700,6 +702,7 @@
 				BFC6F7B71F435BC500221B96 /* Input+Display.swift */,
 				BF6424841F5CBDC900D6AB44 /* UIView+ParentViewController.swift */,
 				BFC3627F21ADE2BA00EF2BE6 /* UIAlertController+Error.swift */,
+				EB7CB6952D96949400CA27FC /* UIAlertController.swift */,
 				BF1F45AC21AF57BA00EF9895 /* HarmonyMetadataKey+Keys.swift */,
 				BF647A6922FB8FCE0061D76D /* Bundle+SwizzleBundleID.swift */,
 				BFD1EF3F2336BD8800D197CF /* UIDevice+Processor.swift */,
@@ -1818,6 +1821,7 @@
 				BF15AF841F54B43B009B6AAB /* ActionInput.swift in Sources */,
 				D552DE3D2D39DB2A00E737BE /* WFCServer.swift in Sources */,
 				D5D78AE529F9BC3700E064F0 /* DSAirPlay.swift in Sources */,
+				EB7CB6962D96949400CA27FC /* UIAlertController.swift in Sources */,
 				BF4828841F9027B600028B97 /* Delta.xcdatamodeld in Sources */,
 				D5F702FD2C24CE5300DCD271 /* UISceneSession+Delta.swift in Sources */,
 				D510BC752A5CA9F500450CC0 /* Delta6ToDelta7.xcmappingmodel in Sources */,

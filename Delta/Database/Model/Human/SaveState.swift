@@ -9,7 +9,6 @@
 import Foundation
 
 import DeltaCore
-import Harmony
 
 @objc public enum SaveStateType: Int16
 {
@@ -101,93 +100,5 @@ public class SaveState: _SaveState, SaveStateProtocol
         fetchRequest.predicate = predicate
         
         return fetchRequest
-    }
-}
-
-extension SaveState: Syncable
-{
-    public static var syncablePrimaryKey: AnyKeyPath {
-        return \SaveState.identifier
-    }
-    
-    public var syncableKeys: Set<AnyKeyPath> {
-        return [\SaveState.creationDate, \SaveState.filename, \SaveState.modifiedDate, \SaveState.name, \SaveState.type, \SaveState.coreIdentifier, \SaveState.coreVersion]
-    }
-    
-    public var syncableFiles: Set<File> {
-        return [File(identifier: "saveState", fileURL: self.fileURL), File(identifier: "thumbnail", fileURL: self.imageFileURL)]
-    }
-    
-    public var syncableRelationships: Set<AnyKeyPath> {
-        return [\SaveState.game]
-    }
-    
-    public var isSyncingEnabled: Bool {
-        // self.game may be nil if being downloaded, so don't enforce it.
-        // guard let identifier = self.game?.identifier else { return false }
-        
-        let isSyncingEnabled = (self.type != .auto && self.type != .quick) && (self.game?.identifier != Game.melonDSBIOSIdentifier && self.game?.identifier != Game.melonDSDSiBIOSIdentifier)
-        return isSyncingEnabled
-    }
-    
-    public var syncableMetadata: [HarmonyMetadataKey : String] {
-        guard let game = self.game else { return [:] }
-        return [.gameID: game.identifier, .gameName: game.name, .coreID: self.coreIdentifier, .verifiedGameID: game.identifier].compactMapValues { $0 }
-    }
-    
-    public var syncableLocalizedName: String? {
-        return self.localizedName
-    }
-    
-    public func awakeFromSync(_ record: AnyRecord) throws
-    {
-//        let verifiedGameID = record.remoteMetadata?[.verifiedGameID]
-//        
-//        do
-//        {
-//            guard let game = self.game else { return }
-//            
-//            if let system = System(gameType: game.type), self.coreIdentifier == nil
-//            {
-//                if let coreIdentifier = record.remoteMetadata?[.coreID]
-//                {
-//                    // SaveState was synced to older version of Delta and lost its coreIdentifier,
-//                    // but it remains in the remote metadata so we can reassign it.
-//                    self.coreIdentifier = coreIdentifier
-//                }
-//                else
-//                {
-//                    switch system
-//                    {
-//                    case .ds: self.coreIdentifier = Delta.desmumeCoreID // Assume DS save state with nil coreIdentifier is from DeSmuME core.
-//                    default: self.coreIdentifier = system.deltaCore.identifier
-//                    }
-//                }
-//            }
-//            
-//            if let verifiedGameID, verifiedGameID != game.identifier
-//            {
-//                // Game does not match verified game ID, which most likely means
-//                // this SaveState was reviewed + fixed on another device, but not uploaded.
-//                
-//            
-//            }
-//        }
-//        catch let error
-//        {
-//            guard let verifiedGameID, SyncManager.shared.ignoredCorruptedRecordIDs.contains(record.recordID) else { throw error }
-//            
-//            let fetchRequest = Game.fetchRequest()
-//            fetchRequest.predicate = NSPredicate(format: "%K == %@", #keyPath(Game.identifier), verifiedGameID)
-//            
-//            if let correctGame = try self.managedObjectContext?.fetch(fetchRequest).first
-//            {
-//                self.game = correctGame
-//            }
-//            else
-//            {
-//                throw ValidationError.nilRelationshipObjects(keys: [#keyPath(GameSave.game)])
-//            }
-//        }
     }
 }

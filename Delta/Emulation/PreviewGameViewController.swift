@@ -254,7 +254,7 @@ private extension PreviewGameViewController
         
         self.copiedSaveFiles.removeAll()
         
-        let fileURLs = gameSave.syncableFiles.lazy.map { $0.fileURL }
+        let fileURLs : [URL]  = [] //gameSave.syncableFiles.lazy.map { $0.fileURL }
         for fileURL in fileURLs
         {
             do
