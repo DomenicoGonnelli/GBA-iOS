@@ -1,10 +1,17 @@
 PODS:
+  - Alamofire (5.10.2)
+  - CircleBar (0.8.2)
+  - CollectionViewPagingLayout (1.1.0)
   - DeltaCore (0.1):
     - ZIPFoundation
   - GBADeltaCore (0.1):
     - DeltaCore
   - GBCDeltaCore (0.1):
     - DeltaCore
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
+  - lottie-ios (4.5.1)
   - MelonDSDeltaCore (0.1):
     - DeltaCore
   - N64DeltaCore (0.1):
@@ -30,9 +37,14 @@ PODS:
   - ZIPFoundation (0.9.19)
 
 DEPENDENCIES:
+  - Alamofire
+  - CircleBar (from `https://github.com/DomenicoGonnelli/CircleBar.git`, branch `General`)
+  - CollectionViewPagingLayout
   - DeltaCore (from `Cores/DeltaCore`)
   - GBADeltaCore (from `Cores/GBADeltaCore`)
   - GBCDeltaCore (from `Cores/GBCDeltaCore`)
+  - Kingfisher (~> 5.15.7)
+  - lottie-ios
   - MelonDSDeltaCore (from `Cores/MelonDSDeltaCore`)
   - N64DeltaCore (from `Cores/N64DeltaCore`)
   - NESDeltaCore (from `Cores/NESDeltaCore`)
@@ -44,12 +56,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - CollectionViewPagingLayout
+    - Kingfisher
+    - lottie-ios
     - SDWebImage
     - SMCalloutView
     - SQLite.swift
     - ZIPFoundation
 
 EXTERNAL SOURCES:
+  CircleBar:
+    :branch: General
+    :git: https://github.com/DomenicoGonnelli/CircleBar.git
   DeltaCore:
     :path: Cores/DeltaCore
   GBADeltaCore:
@@ -67,10 +86,20 @@ EXTERNAL SOURCES:
   SNESDeltaCore:
     :path: Cores/SNESDeltaCore
 
+CHECKOUT OPTIONS:
+  CircleBar:
+    :commit: 6a6100b877d7cf3f8fdd97e3c5a20e739f48a804
+    :git: https://github.com/DomenicoGonnelli/CircleBar.git
+
 SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  CircleBar: 5b882eb3870de5bbda42bef1b2ec6c5c533497db
+  CollectionViewPagingLayout: 2f8d50683bae57ca88f47fa4ab0195c9079582cf
   DeltaCore: 34fa5d77f195d43597f330216b2fba47ef303384
   GBADeltaCore: 833d6ed008e40daf8c91c92eeebe99cf7817e919
   GBCDeltaCore: 820ff1db27f67534229e536504ebfedf40ef0abc
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  lottie-ios: 248b380fa1b97d18e792c37d90da7ab2aa0d6562
   MelonDSDeltaCore: 390bafa4bdf8284d30436c98e5e1b571a67ef564
   N64DeltaCore: 28c148ad8ee6b6ebd2dfba643f429b06ff89bbdd
   NESDeltaCore: f03042c80d16c800ddc10b999535d0153229af20
@@ -81,6 +110,6 @@ SPEC CHECKSUMS:
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   ZIPFoundation: b8c29ea7ae353b309bc810586181fd073cb3312c
 
-PODFILE CHECKSUM: 7d9d54ede2146e8c962c4de17eb4aa565954bd41
+PODFILE CHECKSUM: f2635f93006a295b11e7f61b1beb3ee6cbf88b99
 
 COCOAPODS: 1.16.2
