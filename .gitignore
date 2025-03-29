@@ -37,3 +37,5 @@ Delta.playground
 Delta/GoogleService-Info.plist
 
 Pods/
+
+*.xcscheme
