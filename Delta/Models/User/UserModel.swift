@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Lottie
 import FirebaseFirestore
 import UIKit
 
@@ -101,7 +100,6 @@ class UserModel : DatabaseModelProtocol{
         if let voucher = voucher {
             returnData["voucher"] = voucher
         }
-        
         return returnData
         
     }

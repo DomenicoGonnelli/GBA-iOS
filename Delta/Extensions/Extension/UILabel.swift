@@ -272,7 +272,7 @@ extension UILabel: XIBLocalizedText{
             if let key = key{
                 var localizedText = key.localizable
                 if localizedText.contains("<AppName/>") {
-                    let name = AppManager.shared.homeData?.iosConfig?.appName ?? "F1 Fantasy"
+                    let name =  AppManager.shared.appName
                     localizedText = localizedText.replacingOccurrences(of: "<AppName/>", with: name)
                 }
                 self.setAttributedWithTag(text: localizedText)

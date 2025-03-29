@@ -21,13 +21,13 @@ class AppManager {
         DeviceManager.getLang()
     }
     var appName : String{
-        return homeData?.iosConfig?.appName ?? "Gemboy Advance"
+        return ""// homeData?.iosConfig?.appName ?? "Gemboy Advance"
     }
     
-    var homeData: HomeServiceModel?
+//    var homeData: HomeServiceModel?
     
     var appStoreURL: URL? {
-        return URL(string: homeData?.iosConfig?.appStoreURL ?? "")
+        return nil// URL(string: homeData?.iosConfig?.appStoreURL ?? "")
     }
     
     var premiumExpired = false
@@ -53,7 +53,7 @@ class AppManager {
     }
     
     var GADID: String {
-        return homeData?.iosConfig?.GADid ?? "ca-app-pub-8207452024525594/8651011980"
+        return ""// homeData?.iosConfig?.GADid ?? "ca-app-pub-8207452024525594/8651011980"
     }
     
 
@@ -94,14 +94,14 @@ class AppManager {
     var inReview: Bool = false
     
     var isTimeForSales: Bool {
-        if let start = homeData?.salesConfig?.startDate, let end = homeData?.salesConfig?.endDate {
-            return start <= Date() && Date() <= end
-        }
+//        if let start = homeData?.salesConfig?.startDate, let end = homeData?.salesConfig?.endDate {
+//            return start <= Date() && Date() <= end
+//        }
         return false
     }
     
     var idSale: String {
-        return homeData?.salesConfig?.idSale ?? "GenericSales"
+        return  ""//homeData?.salesConfig?.idSale ?? "GenericSales"
     }
     
     static func isShowedSale() -> Bool{
@@ -130,7 +130,7 @@ class AppManager {
     
     func saveUserMail() {
         if let sharedDefaults = UserDefaults(suiteName: DeviceManager.group) {
-            let token = LoginManager.shared.user?.identificator ?? "null"
+            let token = ""// LoginManager.shared.user?.identificator ?? "null"
             sharedDefaults.set(token, forKey: "userMail")
             sharedDefaults.synchronize()
         }
