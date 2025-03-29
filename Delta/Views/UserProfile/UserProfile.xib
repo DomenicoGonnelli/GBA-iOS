@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserProfile" customModule="Collaudo" customModuleProvider="target">
+            <connections>
+                <outlet property="bg_view" destination="Ahg-2n-M0A" id="g9q-R3-whK"/>
+                <outlet property="car" destination="M2q-GO-1dw" id="yN6-KF-KYg"/>
+                <outlet property="casco" destination="GOH-RD-Ccr" id="D98-v0-1nA"/>
+                <outlet property="defaultImage" destination="aFb-LD-2tF" id="Rfo-Ng-SAh"/>
+                <outlet property="visiera" destination="AD8-wA-JLs" id="r1e-Bi-s5N"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6gi-Bg-1Qr">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahg-2n-M0A">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sfondo_luci" translatesAutoresizingMaskIntoConstraints="NO" id="Dfd-jZ-XjA">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macchina colore" translatesAutoresizingMaskIntoConstraints="NO" id="M2q-GO-1dw">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macchina-luci" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-gG-xEd">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casco_colore" translatesAutoresizingMaskIntoConstraints="NO" id="GOH-RD-Ccr">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casco_luci" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-mq-Pej">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visiera_colore" translatesAutoresizingMaskIntoConstraints="NO" id="AD8-wA-JLs">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visiera_luci" translatesAutoresizingMaskIntoConstraints="NO" id="LPH-Be-HaS">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                </imageView>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="aFb-LD-2tF">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Uto-hO-BL2"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="M2q-GO-1dw" secondAttribute="trailing" id="2vB-Xg-FmU"/>
+                <constraint firstAttribute="trailing" secondItem="LPH-Be-HaS" secondAttribute="trailing" id="47p-Ch-guJ"/>
+                <constraint firstItem="Ahg-2n-M0A" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="5K0-cb-ZTc"/>
+                <constraint firstAttribute="bottom" secondItem="AD8-wA-JLs" secondAttribute="bottom" id="5gA-mV-65G"/>
+                <constraint firstItem="UdL-gG-xEd" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="8xw-yy-Byj"/>
+                <constraint firstAttribute="trailing" secondItem="AD8-wA-JLs" secondAttribute="trailing" id="EZj-Q5-tAo"/>
+                <constraint firstAttribute="trailing" secondItem="ahZ-mq-Pej" secondAttribute="trailing" id="G9J-OH-bhT"/>
+                <constraint firstAttribute="trailing" secondItem="GOH-RD-Ccr" secondAttribute="trailing" id="H8I-3L-1ky"/>
+                <constraint firstItem="AD8-wA-JLs" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="HOo-V4-P3R"/>
+                <constraint firstItem="GOH-RD-Ccr" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="ISQ-wc-7pS"/>
+                <constraint firstItem="AD8-wA-JLs" firstAttribute="leading" secondItem="Uto-hO-BL2" secondAttribute="leading" id="JyZ-Xy-l2T"/>
+                <constraint firstItem="aFb-LD-2tF" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="Kss-ph-kok"/>
+                <constraint firstItem="M2q-GO-1dw" firstAttribute="leading" secondItem="Uto-hO-BL2" secondAttribute="leading" id="MCg-Zb-Lpz"/>
+                <constraint firstItem="LPH-Be-HaS" firstAttribute="leading" secondItem="Uto-hO-BL2" secondAttribute="leading" id="NMp-is-GdO"/>
+                <constraint firstItem="M2q-GO-1dw" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="NX2-jp-nM7"/>
+                <constraint firstItem="Dfd-jZ-XjA" firstAttribute="leading" secondItem="Uto-hO-BL2" secondAttribute="leading" id="O1U-Tz-8sq"/>
+                <constraint firstAttribute="trailing" secondItem="Ahg-2n-M0A" secondAttribute="trailing" id="PF1-HC-azd"/>
+                <constraint firstAttribute="bottom" secondItem="UdL-gG-xEd" secondAttribute="bottom" id="PVV-LE-V8m"/>
+                <constraint firstAttribute="bottom" secondItem="ahZ-mq-Pej" secondAttribute="bottom" id="UlJ-dA-sAk"/>
+                <constraint firstItem="Ahg-2n-M0A" firstAttribute="leading" secondItem="6gi-Bg-1Qr" secondAttribute="leading" id="VZC-ho-Kyg"/>
+                <constraint firstItem="ahZ-mq-Pej" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="XHs-gb-ejT"/>
+                <constraint firstAttribute="trailing" secondItem="Dfd-jZ-XjA" secondAttribute="trailing" id="ZXG-Vd-YFg"/>
+                <constraint firstAttribute="bottom" secondItem="M2q-GO-1dw" secondAttribute="bottom" id="Zut-uQ-mXi"/>
+                <constraint firstAttribute="bottom" secondItem="Ahg-2n-M0A" secondAttribute="bottom" id="a2X-D1-wo2"/>
+                <constraint firstItem="ahZ-mq-Pej" firstAttribute="leading" secondItem="Uto-hO-BL2" secondAttribute="leading" id="d3Q-HN-maF"/>
+                <constraint firstAttribute="bottom" secondItem="GOH-RD-Ccr" secondAttribute="bottom" id="hQY-pY-Q6t"/>
+                <constraint firstItem="LPH-Be-HaS" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="hee-Su-pZ6"/>
+                <constraint firstAttribute="trailing" secondItem="UdL-gG-xEd" secondAttribute="trailing" id="ioG-DF-12y"/>
+                <constraint firstAttribute="bottom" secondItem="Dfd-jZ-XjA" secondAttribute="bottom" id="n8P-0r-qXj"/>
+                <constraint firstItem="aFb-LD-2tF" firstAttribute="leading" secondItem="6gi-Bg-1Qr" secondAttribute="leading" id="nlD-xb-f7X"/>
+                <constraint firstItem="Dfd-jZ-XjA" firstAttribute="top" secondItem="6gi-Bg-1Qr" secondAttribute="top" id="s7D-dh-grP"/>
+                <constraint firstItem="GOH-RD-Ccr" firstAttribute="leading" secondItem="Uto-hO-BL2" secondAttribute="leading" id="sh7-KI-uFQ"/>
+                <constraint firstItem="aFb-LD-2tF" firstAttribute="trailing" secondItem="Uto-hO-BL2" secondAttribute="trailing" id="trf-f3-fTp"/>
+                <constraint firstAttribute="bottom" secondItem="LPH-Be-HaS" secondAttribute="bottom" id="uxp-X2-zlk"/>
+                <constraint firstAttribute="bottom" secondItem="aFb-LD-2tF" secondAttribute="bottom" id="vdw-Kg-Wvc"/>
+                <constraint firstItem="UdL-gG-xEd" firstAttribute="leading" secondItem="Uto-hO-BL2" secondAttribute="leading" id="vz2-EQ-WPr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-189.31297709923663" y="-654.22535211267609"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="casco_colore" width="529" height="509"/>
+        <image name="casco_luci" width="529" height="509"/>
+        <image name="default" width="529" height="509"/>
+        <image name="macchina colore" width="529" height="509"/>
+        <image name="macchina-luci" width="529" height="509"/>
+        <image name="sfondo_luci" width="529" height="509"/>
+        <image name="visiera_colore" width="529" height="509"/>
+        <image name="visiera_luci" width="529" height="509"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

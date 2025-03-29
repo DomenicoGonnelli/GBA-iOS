@@ -120,7 +120,7 @@ class AltAppIconsViewController: UICollectionViewController
             self.iconsBySection = icons
             
             #if !BETA
-            if !PurchaseManager.shared.supportsExternalPurchases
+            if true
             {
                 // External purchases aren't supported, so hide patron-exclusive icons.
                 self.iconsBySection[.patrons] = []
@@ -157,7 +157,7 @@ class AltAppIconsViewController: UICollectionViewController
                 #if BETA
                 configuration.text = NSLocalizedString("Thank you for joining our Patreon!", comment: "")
                 #else
-                if PurchaseManager.shared.isPatronIconsAvailable
+                if false
                 {
                     configuration.text = NSLocalizedString("Thank you for supporting us! These icons will remain available even after your subscription ends.", comment: "")
                 }
