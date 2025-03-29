@@ -14,20 +14,20 @@ class SharingHelper{
         return [.instagram,.whatsApp, .telegram, .other]
     }
     
-    static func share(social: Social, subject : String, text: String, image: UIImage? = nil, vc: BaseViewController? = nil, completion: ((Bool) -> Void)? = nil) {
-        guard social.isAvailable else {
-            vc?.showAlert(alertTypology: .genericError)
-            return
-        }
-        switch social{
-        case .instagram:
-            shareOnInstagramStory(image, completion: completion)
-        case .other:
-            otherSharing(vc: vc, stringToShare: text)
-        default:
-            openSocialUrl(social: social, subject : subject, text: text)
-        }
-    }
+//    static func share(social: Social, subject : String, text: String, image: UIImage? = nil, vc: BaseViewController? = nil, completion: ((Bool) -> Void)? = nil) {
+//        guard social.isAvailable else {
+//            vc?.showAlert(alertTypology: .genericError)
+//            return
+//        }
+//        switch social{
+//        case .instagram:
+//            shareOnInstagramStory(image, completion: completion)
+//        case .other:
+//            otherSharing(vc: vc, stringToShare: text)
+//        default:
+//            openSocialUrl(social: social, subject : subject, text: text)
+//        }
+//    }
     
     static func otherSharing(vc: UIViewController?, stringToShare: String){
         guard let vc = vc,let text = stringToShare as NSString? else { return }
