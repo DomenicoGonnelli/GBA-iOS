@@ -15,7 +15,7 @@ class CustomNavigationBar : BaseView {
         return "CustomNavigationBar"
     }
     
-    var controller : BaseViewController?
+    //var controller : BaseViewController?
     
     @IBOutlet weak var title : UILabel!
     @IBOutlet weak var backButton : UIButton!
@@ -57,10 +57,10 @@ class CustomNavigationBar : BaseView {
     
     
     @IBAction func backpressed(_ sender: Any){
-        controller?.leftAction()
+        //controller?.leftAction()
     }
     
     @IBAction func rightButtonPressed(_ sender: Any){
-        controller?.rightAction()
+        //controller?.rightAction()
     }
 }

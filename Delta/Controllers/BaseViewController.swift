@@ -32,7 +32,7 @@ class BaseViewController: UIViewController, AlertViewDelegate {
     var enableBack = true
     var isShowed: Bool = false
     var alertView: AlertView?
-    var interstitial: GADRewardedAd?
+    var interstitial: RewardedAd?
     var isAdbPressd = false
     var autorefrashInterstial = true
     var social =  SharingHelper.avaiableSocials()
@@ -401,14 +401,14 @@ extension BaseViewController : UIGestureRecognizerDelegate {
     }
 }
 
-extension BaseViewController: GADFullScreenContentDelegate {
+extension BaseViewController: FullScreenContentDelegate {
     
     func refreshInterstitial() {
         if LoginManager.shared.user?.isPremium == false {
             showLoader()
-            let request = GADRequest()
+            let request = Request()
             
-            GADRewardedAd.load(withAdUnitID: AppManager.shared.GADID,
+            RewardedAd.load(with: AppManager.shared.GADID,
                                request: request,
                                completionHandler: { [self] ad, error in
                 self.hideLoader()
@@ -433,7 +433,7 @@ extension BaseViewController: GADFullScreenContentDelegate {
             return
         }
         
-        interstitial.present(fromRootViewController: self, userDidEarnRewardHandler: {
+        interstitial.present(from: self, userDidEarnRewardHandler: {
             if let vc = self.presentedViewController?.view {
                 let viw = UIButton(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 400))
                 viw.addTarget(self, action: #selector(self.closeAD(_:)), for: .touchUpInside)
@@ -459,22 +459,22 @@ extension BaseViewController: GADFullScreenContentDelegate {
     }
 
     /// Tells the delegate an ad request succeeded.
-    func interstitialDidReceiveAd(_ ad: GADRewardedInterstitialAd) {
+    func interstitialDidReceiveAd(_ ad: RewardedInterstitialAd) {
         print("interstitialDidReceiveAd")
     }
     
-//    private func ad(_ ad: FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+//    private func ad(_ ad: FullScreenPresentin, didFailToPresentFullScreenContentWithError error: Error) {
 //        refreshInterstitial()
 //    }
 //    
     
     /// Tells the delegate that an interstitial will be presented.
-    func interstitialWillPresentScreen(_ ad: GADRewardedInterstitialAd) {
+    func interstitialWillPresentScreen(_ ad: RewardedInterstitialAd) {
         print("interstitialWillPresentScreen")
     }
     
     /// Tells the delegate the interstitial is to be animated off the screen.
-    func interstitialWillDismissScreen(_ ad: GADRewardedInterstitialAd) {
+    func interstitialWillDismissScreen(_ ad: RewardedInterstitialAd) {
         if self.autorefrashInterstial {
             self.refreshInterstitial()
         }
@@ -482,7 +482,7 @@ extension BaseViewController: GADFullScreenContentDelegate {
     }
     /// Tells the delegate that a user click will open another app
     /// (such as the App Store), backgrounding the current app.
-    func interstitialWillLeaveApplication(_ ad: GADRewardedInterstitialAd) {
+    func interstitialWillLeaveApplication(_ ad: RewardedInterstitialAd) {
         print("interstitialWillLeaveApplication")
     }
 }

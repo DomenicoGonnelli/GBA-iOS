@@ -281,6 +281,27 @@
 		EB8E0D562D947537004BFB1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0D542D947537004BFB1F /* Localizable.strings */; };
 		EB8E0D682D947655004BFB1F /* Notification.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EB8E0D612D947655004BFB1F /* Notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EB8E0D7C2D947B88004BFB1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0D7B2D947B88004BFB1F /* GoogleService-Info.plist */; };
+		EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BA9F2D984792007A25A6 /* AlertView.xib */; };
+		EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */; };
+		EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB82D984792007A25A6 /* UserProfile.xib */; };
+		EBA2BAC42D984792007A25A6 /* SwipableControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB22D984792007A25A6 /* SwipableControllerCell.xib */; };
+		EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB52D984792007A25A6 /* SwipableController.xib */; };
+		EBA2BAC62D984792007A25A6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAA12D984792007A25A6 /* RoundedButton.swift */; };
+		EBA2BACB2D984792007A25A6 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BABC2D984792007A25A6 /* DashedView.swift */; };
+		EBA2BACC2D984792007A25A6 /* DynamicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BABD2D984792007A25A6 /* DynamicView.swift */; };
+		EBA2BACD2D984792007A25A6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAB72D984792007A25A6 /* UserProfile.swift */; };
+		EBA2BACF2D984792007A25A6 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BA9E2D984792007A25A6 /* AlertView.swift */; };
+		EBA2BAD02D984792007A25A6 /* SwipableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAB42D984792007A25A6 /* SwipableController.swift */; };
+		EBA2BAD12D984792007A25A6 /* SwipableControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAB12D984792007A25A6 /* SwipableControllerCell.swift */; };
+		EBA2BAD22D984792007A25A6 /* CustomCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BABB2D984792007A25A6 /* CustomCornerView.swift */; };
+		EBA2BAD32D984792007A25A6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BABA2D984792007A25A6 /* BaseView.swift */; };
+		EBA2BAD52D984792007A25A6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAA62D984792007A25A6 /* GradientView.swift */; };
+		EBA2BAD62D984792007A25A6 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAA32D984792007A25A6 /* CustomNavigationBar.swift */; };
+		EBA2BADA2D9848AE007A25A6 /* UseProfileMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAD92D9848AE007A25A6 /* UseProfileMenuItem.swift */; };
+		EBA2BADB2D9848AE007A25A6 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAD72D9848AE007A25A6 /* AlertModel.swift */; };
+		EBA2BADC2D9848AE007A25A6 /* HomeServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAD82D9848AE007A25A6 /* HomeServiceModel.swift */; };
+		EBA2BADE2D98490C007A25A6 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BADD2D98490C007A25A6 /* LoginManager.swift */; };
 		EBB0FA942D96A16800CA8EB1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA932D96A16800CA8EB1 /* FirebaseAnalytics */; };
 		EBB0FA962D96A16800CA8EB1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA952D96A16800CA8EB1 /* FirebaseAuth */; };
 		EBB0FA982D96A16800CA8EB1 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA972D96A16800CA8EB1 /* FirebaseCore */; };
@@ -639,6 +660,26 @@
 		EB8E0D5C2D94759B004BFB1F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EB8E0D612D947655004BFB1F /* Notification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Notification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8E0D7B2D947B88004BFB1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EBA2BA9E2D984792007A25A6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		EBA2BA9F2D984792007A25A6 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		EBA2BAA12D984792007A25A6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		EBA2BAA32D984792007A25A6 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationBar.xib; sourceTree = "<group>"; };
+		EBA2BAA62D984792007A25A6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		EBA2BAB12D984792007A25A6 /* SwipableControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableControllerCell.swift; sourceTree = "<group>"; };
+		EBA2BAB22D984792007A25A6 /* SwipableControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipableControllerCell.xib; sourceTree = "<group>"; };
+		EBA2BAB42D984792007A25A6 /* SwipableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableController.swift; sourceTree = "<group>"; };
+		EBA2BAB52D984792007A25A6 /* SwipableController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipableController.xib; sourceTree = "<group>"; };
+		EBA2BAB72D984792007A25A6 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		EBA2BAB82D984792007A25A6 /* UserProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfile.xib; sourceTree = "<group>"; };
+		EBA2BABA2D984792007A25A6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		EBA2BABB2D984792007A25A6 /* CustomCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCornerView.swift; sourceTree = "<group>"; };
+		EBA2BABC2D984792007A25A6 /* DashedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
+		EBA2BABD2D984792007A25A6 /* DynamicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicView.swift; sourceTree = "<group>"; };
+		EBA2BAD72D9848AE007A25A6 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		EBA2BAD82D9848AE007A25A6 /* HomeServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceModel.swift; sourceTree = "<group>"; };
+		EBA2BAD92D9848AE007A25A6 /* UseProfileMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseProfileMenuItem.swift; sourceTree = "<group>"; };
+		EBA2BADD2D98490C007A25A6 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -677,6 +718,7 @@
 				BF69FBA823E396860051BEEA /* libz.tbd in Frameworks */,
 				D52CB8C62CE2B7B600B04458 /* RevenueCat in Frameworks */,
 				D52CB8C82CE2B7C800B04458 /* StoreKit.framework in Frameworks */,
+				EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */,
 				BF69FBAA23E399AA0051BEEA /* CoreMotion.framework in Frameworks */,
 				BF69FBA223E375A20051BEEA /* libVBA-M.a in Frameworks */,
 				EBB0FA942D96A16800CA8EB1 /* FirebaseAnalytics in Frameworks */,
@@ -1188,6 +1230,8 @@
 		BFFA71D91AAC406100EE9DD1 /* Delta */ = {
 			isa = PBXGroup;
 			children = (
+				EBA2BABE2D984792007A25A6 /* Views */,
+				EBA2BA992D984778007A25A6 /* Controllers */,
 				EB69AB192D977FC800311D39 /* IAP */,
 				EB69AB162D977F6D00311D39 /* FirebaseHelper */,
 				EB8E0D3F2D94642D004BFB1F /* Models */,
@@ -1461,6 +1505,7 @@
 		EB8E0D3C2D9462B8004BFB1F /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EBA2BADD2D98490C007A25A6 /* LoginManager.swift */,
 				EB69AB242D97828D00311D39 /* AppStoreReviewManager.swift */,
 				EB69AB252D97828D00311D39 /* ColorPickerManager.swift */,
 				EB69AB262D97828D00311D39 /* SharingManager.swift */,
@@ -1485,10 +1530,99 @@
 		EB8E0D402D946445004BFB1F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EBA2BAD72D9848AE007A25A6 /* AlertModel.swift */,
+				EBA2BAD82D9848AE007A25A6 /* HomeServiceModel.swift */,
+				EBA2BAD92D9848AE007A25A6 /* UseProfileMenuItem.swift */,
 				EB8E0D432D946518004BFB1F /* NotificationInApp.swift */,
 				EB8E0D412D946451004BFB1F /* PushNotification.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EBA2BA992D984778007A25A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EBA2BAA02D984792007A25A6 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2BA9E2D984792007A25A6 /* AlertView.swift */,
+				EBA2BA9F2D984792007A25A6 /* AlertView.xib */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		EBA2BAA22D984792007A25A6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2BAA12D984792007A25A6 /* RoundedButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		EBA2BAA52D984792007A25A6 /* CustomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2BAA32D984792007A25A6 /* CustomNavigationBar.swift */,
+				EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */,
+			);
+			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
+		EBA2BAA72D984792007A25A6 /* GradientVie */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2BAA62D984792007A25A6 /* GradientView.swift */,
+			);
+			path = GradientVie;
+			sourceTree = "<group>";
+		};
+		EBA2BAB32D984792007A25A6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2BAB12D984792007A25A6 /* SwipableControllerCell.swift */,
+				EBA2BAB22D984792007A25A6 /* SwipableControllerCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EBA2BAB62D984792007A25A6 /* swipableController */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2BAB32D984792007A25A6 /* Cell */,
+				EBA2BAB42D984792007A25A6 /* SwipableController.swift */,
+				EBA2BAB52D984792007A25A6 /* SwipableController.xib */,
+			);
+			path = swipableController;
+			sourceTree = "<group>";
+		};
+		EBA2BAB92D984792007A25A6 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2BAB72D984792007A25A6 /* UserProfile.swift */,
+				EBA2BAB82D984792007A25A6 /* UserProfile.xib */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		EBA2BABE2D984792007A25A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBA2BAA02D984792007A25A6 /* AlertView */,
+				EBA2BAA22D984792007A25A6 /* Buttons */,
+				EBA2BAA52D984792007A25A6 /* CustomNavigationBar */,
+				EBA2BAA72D984792007A25A6 /* GradientVie */,
+				EBA2BAB62D984792007A25A6 /* swipableController */,
+				EBA2BAB92D984792007A25A6 /* UserProfile */,
+				EBA2BABA2D984792007A25A6 /* BaseView.swift */,
+				EBA2BABB2D984792007A25A6 /* CustomCornerView.swift */,
+				EBA2BABC2D984792007A25A6 /* DashedView.swift */,
+				EBA2BABD2D984792007A25A6 /* DynamicView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FD1E8AE87FA2DB8793F7B937 /* Pods */ = {
@@ -1711,6 +1845,11 @@
 				BF353FF61C5D837600C1184C /* PauseMenu.storyboard in Resources */,
 				EB8E0D562D947537004BFB1F /* Localizable.strings in Resources */,
 				EB8E0D7C2D947B88004BFB1F /* GoogleService-Info.plist in Resources */,
+				EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */,
+				EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */,
+				EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */,
+				EBA2BAC42D984792007A25A6 /* SwipableControllerCell.xib in Resources */,
+				EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */,
 				BF27CC8E1BC9FEA200A20D89 /* Assets.xcassets in Resources */,
 				D5BE1BD72D0B9CBE00D2142E /* PatreonAPI.plist in Resources */,
 			);
@@ -1906,6 +2045,17 @@
 				BFFC46201D59823500AF2CC6 /* InitialGamesStoryboardSegue.swift in Sources */,
 				D5CDCCF02A859E5500E22131 /* UserDefaults+Delta.swift in Sources */,
 				BF15AF841F54B43B009B6AAB /* ActionInput.swift in Sources */,
+				EBA2BAC62D984792007A25A6 /* RoundedButton.swift in Sources */,
+				EBA2BACB2D984792007A25A6 /* DashedView.swift in Sources */,
+				EBA2BACC2D984792007A25A6 /* DynamicView.swift in Sources */,
+				EBA2BACD2D984792007A25A6 /* UserProfile.swift in Sources */,
+				EBA2BACF2D984792007A25A6 /* AlertView.swift in Sources */,
+				EBA2BAD02D984792007A25A6 /* SwipableController.swift in Sources */,
+				EBA2BAD12D984792007A25A6 /* SwipableControllerCell.swift in Sources */,
+				EBA2BAD22D984792007A25A6 /* CustomCornerView.swift in Sources */,
+				EBA2BAD32D984792007A25A6 /* BaseView.swift in Sources */,
+				EBA2BAD52D984792007A25A6 /* GradientView.swift in Sources */,
+				EBA2BAD62D984792007A25A6 /* CustomNavigationBar.swift in Sources */,
 				D552DE3D2D39DB2A00E737BE /* WFCServer.swift in Sources */,
 				D5D78AE529F9BC3700E064F0 /* DSAirPlay.swift in Sources */,
 				EB7CB6962D96949400CA27FC /* UIAlertController.swift in Sources */,
@@ -1938,6 +2088,7 @@
 				D5265A802D4848A00002C6CE /* PreferredControllerSkinsView.swift in Sources */,
 				BF1DAD5D1D9F576000E752A7 /* PreferredControllerSkinsViewController.swift in Sources */,
 				BFE022A01F5B57FF0052D888 /* PopoverMenuButton.swift in Sources */,
+				EBA2BADE2D98490C007A25A6 /* LoginManager.swift in Sources */,
 				BF6BF31C1EB821A0008E83CD /* GamesDatabaseImportOption.swift in Sources */,
 				D5AA0F142CE3F5040015D134 /* _ManagedPatron.swift in Sources */,
 				D51D8EC82D49CA26002649C2 /* Delta10ToDelta11.xcmappingmodel in Sources */,
@@ -1978,6 +2129,9 @@
 				BF5942641E09BBB10051894B /* LoadControllerSkinImageOperation.swift in Sources */,
 				D5A98CE2284EF14B00E023E5 /* SceneDelegate.swift in Sources */,
 				BFE56E1923EB7BE00014FECD /* UIImage+SymbolFallback.swift in Sources */,
+				EBA2BADA2D9848AE007A25A6 /* UseProfileMenuItem.swift in Sources */,
+				EBA2BADB2D9848AE007A25A6 /* AlertModel.swift in Sources */,
+				EBA2BADC2D9848AE007A25A6 /* HomeServiceModel.swift in Sources */,
 				AC1C992729F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift in Sources */,
 				D5E12AEB2D01157F000C7531 /* String+Profanity.swift in Sources */,
 				BF6EE5E91F7C5F860051AD6C /* _GameControllerInputMapping.swift in Sources */,
@@ -2358,6 +2512,8 @@
 					"\"WebKit\"",
 					"-weak_framework",
 					"\"AuthenticationServices\"",
+					"-framework",
+					"\"JavaScriptCore\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator;

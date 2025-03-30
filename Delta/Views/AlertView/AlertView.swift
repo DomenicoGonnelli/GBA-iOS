@@ -30,7 +30,6 @@ class AlertView: BaseView{
                 setItem(view: descriptionLabel, text: alert.description)
                 setItem(view: actionButton, text: alert.firstButtonTitle)
                 setItem(view: cancelButton, text: alert.secondButtonTitle)
-                container?.transform.scaledBy(x: 0.1, y: 0.1)
                 if alertType?.isToDelete == true{
                     actionButton.backgroundColor = .systemRed
                 } else {
