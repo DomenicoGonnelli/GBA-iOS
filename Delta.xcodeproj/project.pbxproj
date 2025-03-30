@@ -317,6 +317,18 @@
 		EBBB196C2D9971A8009C977A /* GothamRnd-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195B2D9971A8009C977A /* GothamRnd-BoldItal.otf */; };
 		EBBB196D2D9971A8009C977A /* GothamRnd-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195F2D9971A8009C977A /* GothamRnd-LightItal.otf */; };
 		EBBB196E2D9971A8009C977A /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19612D9971A8009C977A /* GothamRnd-Medium.otf */; };
+		EBBB19722D997269009C977A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB196F2D997269009C977A /* Loader.swift */; };
+		EBBB19732D997269009C977A /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19702D997269009C977A /* Loader.xib */; };
+		EBBB19752D99727D009C977A /* libKingfisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19742D99727D009C977A /* libKingfisher.a */; };
+		EBBB19772D99727D009C977A /* liblottie-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19762D99727D009C977A /* liblottie-ios.a */; };
+		EBBB19812D9972DB009C977A /* OnBoardingPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB197E2D9972DB009C977A /* OnBoardingPagerViewController.swift */; };
+		EBBB19822D9972DB009C977A /* OnBoardingItemViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19792D9972DB009C977A /* OnBoardingItemViewProtocol.swift */; };
+		EBBB19832D9972DB009C977A /* OnBoardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB197C2D9972DB009C977A /* OnBoardingItemView.swift */; };
+		EBBB19842D9972DB009C977A /* OnBoardingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19782D9972DB009C977A /* OnBoardingBaseViewController.swift */; };
+		EBBB19852D9972DB009C977A /* OnBoardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB197B2D9972DB009C977A /* OnBoardingButton.swift */; };
+		EBBB19862D9972DB009C977A /* OnBoardingPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB197F2D9972DB009C977A /* OnBoardingPages.storyboard */; };
+		EBBB19882D9972E7009C977A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19872D9972E7009C977A /* BaseViewController.swift */; };
+		EBBB198B2D99734B009C977A /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = EBBB198A2D99734B009C977A /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -698,6 +710,17 @@
 		EBBB19602D9971A8009C977A /* GothamRnd-MedItal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-MedItal.otf"; sourceTree = "<group>"; };
 		EBBB19612D9971A8009C977A /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Medium.otf"; sourceTree = "<group>"; };
 		EBBB19632D9971A8009C977A /* loaderPink.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loaderPink.json; sourceTree = "<group>"; };
+		EBBB196F2D997269009C977A /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		EBBB19702D997269009C977A /* Loader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
+		EBBB19742D99727D009C977A /* libKingfisher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libKingfisher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBB19762D99727D009C977A /* liblottie-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBB19782D9972DB009C977A /* OnBoardingBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingBaseViewController.swift; sourceTree = "<group>"; };
+		EBBB19792D9972DB009C977A /* OnBoardingItemViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingItemViewProtocol.swift; sourceTree = "<group>"; };
+		EBBB197B2D9972DB009C977A /* OnBoardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingButton.swift; sourceTree = "<group>"; };
+		EBBB197C2D9972DB009C977A /* OnBoardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingItemView.swift; sourceTree = "<group>"; };
+		EBBB197E2D9972DB009C977A /* OnBoardingPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPagerViewController.swift; sourceTree = "<group>"; };
+		EBBB197F2D9972DB009C977A /* OnBoardingPages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoardingPages.storyboard; sourceTree = "<group>"; };
+		EBBB19872D9972E7009C977A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -732,6 +755,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBBB19752D99727D009C977A /* libKingfisher.a in Frameworks */,
+				EBBB19772D99727D009C977A /* liblottie-ios.a in Frameworks */,
 				D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */,
 				BF69FBA823E396860051BEEA /* libz.tbd in Frameworks */,
 				D52CB8C62CE2B7B600B04458 /* RevenueCat in Frameworks */,
@@ -748,6 +773,7 @@
 				BF69FBC923E3A8380051BEEA /* libNestopia.a in Frameworks */,
 				D5E76AAD2BE199890078C0C5 /* ShowTouches in Frameworks */,
 				EBB0FA962D96A16800CA8EB1 /* FirebaseAuth in Frameworks */,
+				EBBB198B2D99734B009C977A /* GoogleMobileAds in Frameworks */,
 				BFFDF03F23E3C28A00931B96 /* libGambatte.a in Frameworks */,
 				BFFDF03723E3BB2600931B96 /* libSnes9x.a in Frameworks */,
 				EBB0FA9A2D96A16800CA8EB1 /* FirebaseCrashlytics in Frameworks */,
@@ -1086,6 +1112,8 @@
 		BF9F4FCD1AAD7B25004C9500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB19742D99727D009C977A /* libKingfisher.a */,
+				EBBB19762D99727D009C977A /* liblottie-ios.a */,
 				D52CB8C72CE2B7C800B04458 /* StoreKit.framework */,
 				D5FB042B2C5AF40A008329DD /* libresolv.tbd */,
 				BF6E70C225D22F7600E41CD1 /* Systems.framework */,
@@ -1562,6 +1590,7 @@
 		EBA2BA992D984778007A25A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB19872D9972E7009C977A /* BaseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1631,6 +1660,8 @@
 		EBA2BABE2D984792007A25A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB19802D9972DB009C977A /* onBoarding */,
+				EBBB19712D997269009C977A /* Loader */,
 				EBA2BAA02D984792007A25A6 /* AlertView */,
 				EBA2BAA22D984792007A25A6 /* Buttons */,
 				EBA2BAA52D984792007A25A6 /* CustomNavigationBar */,
@@ -1674,6 +1705,44 @@
 				EBBB19642D9971A8009C977A /* Animations */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		EBBB19712D997269009C977A /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB196F2D997269009C977A /* Loader.swift */,
+				EBBB19702D997269009C977A /* Loader.xib */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		EBBB197A2D9972DB009C977A /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB19782D9972DB009C977A /* OnBoardingBaseViewController.swift */,
+				EBBB19792D9972DB009C977A /* OnBoardingItemViewProtocol.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		EBBB197D2D9972DB009C977A /* ItemsView */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB197B2D9972DB009C977A /* OnBoardingButton.swift */,
+				EBBB197C2D9972DB009C977A /* OnBoardingItemView.swift */,
+			);
+			path = ItemsView;
+			sourceTree = "<group>";
+		};
+		EBBB19802D9972DB009C977A /* onBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB197A2D9972DB009C977A /* Bases */,
+				EBBB197D2D9972DB009C977A /* ItemsView */,
+				EBBB197E2D9972DB009C977A /* OnBoardingPagerViewController.swift */,
+				EBBB197F2D9972DB009C977A /* OnBoardingPages.storyboard */,
+			);
+			path = onBoarding;
 			sourceTree = "<group>";
 		};
 		FD1E8AE87FA2DB8793F7B937 /* Pods */ = {
@@ -1736,6 +1805,7 @@
 				EBB0FA992D96A16800CA8EB1 /* FirebaseCrashlytics */,
 				EBB0FA9B2D96A16800CA8EB1 /* FirebaseFirestore */,
 				EBB0FA9D2D96A16800CA8EB1 /* FirebaseMessaging */,
+				EBBB198A2D99734B009C977A /* GoogleMobileAds */,
 			);
 			productName = Delta;
 			productReference = BFFA71D71AAC406100EE9DD1 /* Delta.app */;
@@ -1860,6 +1930,7 @@
 				D5E76AAB2BE199890078C0C5 /* XCRemoteSwiftPackageReference "ShowTouches" */,
 				D52CB8C42CE2B7B600B04458 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
 				EBB0FA922D96A16800CA8EB1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EBBB19892D99734B009C977A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BFFA71D81AAC406100EE9DD1 /* Products */;
@@ -1882,6 +1953,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D797E9298DCC7300738869 /* cheatbase.zip in Resources */,
+				EBBB19862D9972DB009C977A /* OnBoardingPages.storyboard in Resources */,
 				BFFA71E21AAC406100EE9DD1 /* Main.storyboard in Resources */,
 				D5AE76C62C2B7F3D0086471B /* Icons.xcassets in Resources */,
 				D5AE76CD2C2B81870086471B /* AltIcons.plist in Resources */,
@@ -1899,6 +1971,7 @@
 				EBBB196B2D9971A8009C977A /* GothamRnd-Bold.otf in Resources */,
 				EBBB196C2D9971A8009C977A /* GothamRnd-BoldItal.otf in Resources */,
 				EBBB196D2D9971A8009C977A /* GothamRnd-LightItal.otf in Resources */,
+				EBBB19732D997269009C977A /* Loader.xib in Resources */,
 				EBBB196E2D9971A8009C977A /* GothamRnd-Medium.otf in Resources */,
 				BF71CF8A1FE904B1001F1613 /* GameTableViewCell.xib in Resources */,
 				BFFC46461D59861000AF2CC6 /* LaunchScreen.storyboard in Resources */,
@@ -2051,6 +2124,7 @@
 				D5AE76C82C2B808F0086471B /* AltAppIconsViewController.swift in Sources */,
 				BF59426A1E09BBD00051894B /* GridCollectionViewCell.swift in Sources */,
 				BF6BF3181EB82111008E83CD /* iTunesImportOption.swift in Sources */,
+				EBBB19882D9972E7009C977A /* BaseViewController.swift in Sources */,
 				BF647A6A22FB8FCE0061D76D /* Bundle+SwizzleBundleID.swift in Sources */,
 				BFF6452E1F7CC5060056533E /* GameControllerInputMappingTransformer.swift in Sources */,
 				BF59427C1E09BC830051894B /* Cheat.swift in Sources */,
@@ -2124,6 +2198,11 @@
 				D510BC752A5CA9F500450CC0 /* Delta6ToDelta7.xcmappingmodel in Sources */,
 				BF5942951E09BD1A0051894B /* NSManagedObjectContext+Conveniences.swift in Sources */,
 				BFC3628021ADE2BA00EF2BE6 /* UIAlertController+Error.swift in Sources */,
+				EBBB19812D9972DB009C977A /* OnBoardingPagerViewController.swift in Sources */,
+				EBBB19822D9972DB009C977A /* OnBoardingItemViewProtocol.swift in Sources */,
+				EBBB19832D9972DB009C977A /* OnBoardingItemView.swift in Sources */,
+				EBBB19842D9972DB009C977A /* OnBoardingBaseViewController.swift in Sources */,
+				EBBB19852D9972DB009C977A /* OnBoardingButton.swift in Sources */,
 				BF353FF91C5D870B00C1184C /* MenuItem.swift in Sources */,
 				D5D797E6298D946200738869 /* Contributor.swift in Sources */,
 				D5ADD12229F33FBF00CE0560 /* Features.swift in Sources */,
@@ -2236,6 +2315,7 @@
 				BF5E7F441B9A650B00AE44F8 /* SettingsViewController.swift in Sources */,
 				BF8CA9361F5F651900499FDD /* PopoverMenuController.swift in Sources */,
 				D5D39E792AF2D624004BE3F7 /* GameView+AirPlay.swift in Sources */,
+				EBBB19722D997269009C977A /* Loader.swift in Sources */,
 				BFEF24F31F7DD4FD00454C62 /* SaveStateMigrationPolicy.swift in Sources */,
 				D5265A7E2D4845C90002C6CE /* GameSetting.m in Sources */,
 				BF5942931E09BD1A0051894B /* NSFetchedResultsController+Conveniences.m in Sources */,
@@ -2960,6 +3040,14 @@
 				minimumVersion = 11.10.0;
 			};
 		};
+		EBBB19892D99734B009C977A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -3012,6 +3100,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EBB0FA922D96A16800CA8EB1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		EBBB198A2D99734B009C977A /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBBB19892D99734B009C977A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 
