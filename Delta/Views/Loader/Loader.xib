@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRnd-Book.otf">
+            <string>GothamRounded-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Loader" customModule="Delta" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="bg6-a6-w5u" id="uEQ-To-4YW"/>
+                <outlet property="descriptionLabel" destination="CnF-IR-EYj" id="BFe-Vg-aFQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg6-a6-w5u" customClass="LottieAnimationView" customModule="Lottie">
+                    <rect key="frame" x="137.66666666666666" y="379.66666666666669" width="117.66666666666666" height="117.66666666666669"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bg6-a6-w5u" secondAttribute="height" id="HI6-5F-KfK"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="nBt-gj-ghV"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnF-IR-EYj">
+                    <rect key="frame" x="30" y="517.33333333333337" width="333" height="14.333333333333371"/>
+                    <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
+                    <color key="textColor" name="primaryColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bg6-a6-w5u" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="FL8-vF-VCw"/>
+                <constraint firstItem="bg6-a6-w5u" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ohb-v2-f2O"/>
+                <constraint firstItem="CnF-IR-EYj" firstAttribute="top" secondItem="bg6-a6-w5u" secondAttribute="bottom" constant="20" id="UNs-1k-Brg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CnF-IR-EYj" secondAttribute="trailing" constant="30" id="dTb-mN-Cf3"/>
+                <constraint firstItem="CnF-IR-EYj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="xf8-5c-0I6"/>
+                <constraint firstItem="bg6-a6-w5u" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" priority="700" id="yHg-4E-EJs"/>
+            </constraints>
+            <point key="canvasLocation" x="89" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primaryColor">
+            <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,8 +1,8 @@
 //
 //  Loader.swift
-//  SanremoFantasy
+//  GemBoy
 //
-//  Created by EGONNEDGJ on 11/01/23.
+//  Created by Domenico Gonnelli on 30/03/25.
 //
 
 import Foundation
@@ -16,7 +16,7 @@ class Loader: BaseView{
         return "Loader"
     }
     
-    let animationName = "loaderFF"
+    let animationName = "loaderPink"
     
     @IBOutlet weak var descriptionLabel : UILabel!
     @IBOutlet weak var animationView : LottieAnimationView!
