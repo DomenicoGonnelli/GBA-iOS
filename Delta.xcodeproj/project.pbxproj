@@ -308,6 +308,15 @@
 		EBB0FA9A2D96A16800CA8EB1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA992D96A16800CA8EB1 /* FirebaseCrashlytics */; };
 		EBB0FA9C2D96A16800CA8EB1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA9B2D96A16800CA8EB1 /* FirebaseFirestore */; };
 		EBB0FA9E2D96A16800CA8EB1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA9D2D96A16800CA8EB1 /* FirebaseMessaging */; };
+		EBBB19662D9971A8009C977A /* GothamRnd-MedItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19602D9971A8009C977A /* GothamRnd-MedItal.otf */; };
+		EBBB19672D9971A8009C977A /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195D2D9971A8009C977A /* GothamRnd-BookItal.otf */; };
+		EBBB19682D9971A8009C977A /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195C2D9971A8009C977A /* GothamRnd-Book.otf */; };
+		EBBB19692D9971A8009C977A /* loaderPink.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19632D9971A8009C977A /* loaderPink.json */; };
+		EBBB196A2D9971A8009C977A /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195E2D9971A8009C977A /* GothamRnd-Light.otf */; };
+		EBBB196B2D9971A8009C977A /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195A2D9971A8009C977A /* GothamRnd-Bold.otf */; };
+		EBBB196C2D9971A8009C977A /* GothamRnd-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195B2D9971A8009C977A /* GothamRnd-BoldItal.otf */; };
+		EBBB196D2D9971A8009C977A /* GothamRnd-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195F2D9971A8009C977A /* GothamRnd-LightItal.otf */; };
+		EBBB196E2D9971A8009C977A /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19612D9971A8009C977A /* GothamRnd-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -680,6 +689,15 @@
 		EBA2BAD82D9848AE007A25A6 /* HomeServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceModel.swift; sourceTree = "<group>"; };
 		EBA2BAD92D9848AE007A25A6 /* UseProfileMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseProfileMenuItem.swift; sourceTree = "<group>"; };
 		EBA2BADD2D98490C007A25A6 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		EBBB195A2D9971A8009C977A /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Bold.otf"; sourceTree = "<group>"; };
+		EBBB195B2D9971A8009C977A /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-BoldItal.otf"; sourceTree = "<group>"; };
+		EBBB195C2D9971A8009C977A /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
+		EBBB195D2D9971A8009C977A /* GothamRnd-BookItal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-BookItal.otf"; sourceTree = "<group>"; };
+		EBBB195E2D9971A8009C977A /* GothamRnd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Light.otf"; sourceTree = "<group>"; };
+		EBBB195F2D9971A8009C977A /* GothamRnd-LightItal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-LightItal.otf"; sourceTree = "<group>"; };
+		EBBB19602D9971A8009C977A /* GothamRnd-MedItal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-MedItal.otf"; sourceTree = "<group>"; };
+		EBBB19612D9971A8009C977A /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Medium.otf"; sourceTree = "<group>"; };
+		EBBB19632D9971A8009C977A /* loaderPink.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loaderPink.json; sourceTree = "<group>"; };
 		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1163,6 +1181,8 @@
 		BFEC732F1AAECCBD00650035 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB19622D9971A8009C977A /* Font */,
+				EBBB19652D9971A8009C977A /* Json */,
 				BF6BB2451BB73FE800CCF94A /* Assets.xcassets */,
 				D5AE76C52C2B7F3D0086471B /* Icons.xcassets */,
 				D5AE76CC2C2B81870086471B /* AltIcons.plist */,
@@ -1625,6 +1645,37 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EBBB19622D9971A8009C977A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB195A2D9971A8009C977A /* GothamRnd-Bold.otf */,
+				EBBB195B2D9971A8009C977A /* GothamRnd-BoldItal.otf */,
+				EBBB195C2D9971A8009C977A /* GothamRnd-Book.otf */,
+				EBBB195D2D9971A8009C977A /* GothamRnd-BookItal.otf */,
+				EBBB195E2D9971A8009C977A /* GothamRnd-Light.otf */,
+				EBBB195F2D9971A8009C977A /* GothamRnd-LightItal.otf */,
+				EBBB19602D9971A8009C977A /* GothamRnd-MedItal.otf */,
+				EBBB19612D9971A8009C977A /* GothamRnd-Medium.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		EBBB19642D9971A8009C977A /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB19632D9971A8009C977A /* loaderPink.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		EBBB19652D9971A8009C977A /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB19642D9971A8009C977A /* Animations */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		FD1E8AE87FA2DB8793F7B937 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1840,6 +1891,15 @@
 				BF5E7F461B9A652600AE44F8 /* Settings.storyboard in Resources */,
 				BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */,
 				D53415A7298C78BC00FD67B1 /* Contributors.plist in Resources */,
+				EBBB19662D9971A8009C977A /* GothamRnd-MedItal.otf in Resources */,
+				EBBB19672D9971A8009C977A /* GothamRnd-BookItal.otf in Resources */,
+				EBBB19682D9971A8009C977A /* GothamRnd-Book.otf in Resources */,
+				EBBB19692D9971A8009C977A /* loaderPink.json in Resources */,
+				EBBB196A2D9971A8009C977A /* GothamRnd-Light.otf in Resources */,
+				EBBB196B2D9971A8009C977A /* GothamRnd-Bold.otf in Resources */,
+				EBBB196C2D9971A8009C977A /* GothamRnd-BoldItal.otf in Resources */,
+				EBBB196D2D9971A8009C977A /* GothamRnd-LightItal.otf in Resources */,
+				EBBB196E2D9971A8009C977A /* GothamRnd-Medium.otf in Resources */,
 				BF71CF8A1FE904B1001F1613 /* GameTableViewCell.xib in Resources */,
 				BFFC46461D59861000AF2CC6 /* LaunchScreen.storyboard in Resources */,
 				BF353FF61C5D837600C1184C /* PauseMenu.storyboard in Resources */,
