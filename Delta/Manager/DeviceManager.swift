@@ -11,7 +11,7 @@ import UIKit
 
 class DeviceManager {
     
-    static var group = "group.com.Domenico.Gonnelli.fonefantasy"
+    static var group = "group.com.domenico.gonnelli.gba.emulator"
     
     static var currentDevice : DevicesType {
         switch UIDevice.current.userInterfaceIdiom {

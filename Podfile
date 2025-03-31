@@ -10,7 +10,7 @@ target 'GemBoy' do
     pod 'SMCalloutView', '~> 2.1.0'
     
     
-    pod 'GoogleSignIn'
+   # pod 'GoogleSignIn'
     pod 'lottie-ios'
     pod 'Alamofire'
     pod 'Kingfisher','~>5.15.7'

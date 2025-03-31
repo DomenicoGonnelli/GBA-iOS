@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PremiumSubscriptionModel: DatabaseModelProtocol{
+class PremiumSubscriptionModel: DatabaseModelProtocolGet{
     
     var subscriptionName: String?
     var subscriptionId: String?
@@ -65,7 +65,7 @@ class PremiumSubscriptionModel: DatabaseModelProtocol{
 
 }
 
-public class PremiumBenefitModel: DatabaseModelProtocol{
+public class PremiumBenefitModel: DatabaseModelProtocolGet{
     
     var title: String?
     var decription: String?

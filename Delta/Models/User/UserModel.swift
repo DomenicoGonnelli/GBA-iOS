@@ -11,15 +11,13 @@ import UIKit
 
 class UserModel : DatabaseModelProtocol{
 
-    var voucher: String?
-    var openVoucher: Bool = false
-    
     var id: String?
     var loginMode: LoginMode = .null
     var identificator: String? //mail
     var name: String?
+    var imgLink: String?
     var registrationDate : Date?
-    var admin : Bool = false
+    
     var premium : PremiumUser?
     
     var premiumSubscription: PremiumSubscriptionModel?{
@@ -62,43 +60,38 @@ class UserModel : DatabaseModelProtocol{
             loginMode = LoginMode(rawValue: d) ?? .null
         }
         
-        voucher = value["voucher"] as? String
-        
         identificator = value["email"] as? String
-        openVoucher = value["openVoucher"] as? Bool ?? false
+        imgLink = value["imgLink"] as? String
         
-        if let val = value["id"] as? String {
-            id = val
-        }
         if let val = value["name"] as? String {
             name = val
         }
-        if let val = value["registrationDate"] as? Int {
-            registrationDate = Date(milliseconds: val)
+        if let val = value["registrationDate"] as? String {
+            registrationDate = Date(date: val)
         }
-        if let val = value["premium"] as? [String:Any] {
-            self.premium = PremiumUser(value: val)
-        }
-        if let val = value["admin"] as? Bool {
-            admin = val
-        }
-        admin = admin || identificator == "7h5grbsbz2@privaterelay.appleid.com"
+      
+        let admin = identificator == "7h5grbsbz2@privaterelay.appleid.com"
     }
 
     var datafile: Dictionary<String, Any> {
         
         var returnData : [String : Any] = [
-            "loginMode" : loginMode.rawValue,
-            "openVoucher" : openVoucher,
-            "os": "iOS"
+            "loginMode" : loginMode.rawValue
         ]
         
         if let identificator = identificator {
             returnData["email"] = identificator
         }
         
-        if let voucher = voucher {
-            returnData["voucher"] = voucher
+        if let imgLink = imgLink {
+            returnData["imgLink"] = imgLink
+        }
+        if let name = name {
+            returnData["name"] = name
+        }
+        
+        if let registrationDate = registrationDate {
+            returnData["registrationDate"] = registrationDate.jsonData()
         }
         return returnData
         
@@ -184,6 +177,26 @@ class PremiumUser: DatabaseModelProtocol {
         if let expirationDate = value["registrationDateExpiration"] as? Int{
             self.expirationDate = Date(milliseconds: expirationDate)
         }
+    }
+    
+    var datafile: Dictionary<String, Any> {
+        
+        var returnData : [String : Any] = [:]
+        
+        if let registrationDate = registrationDate {
+            returnData["registrationDate"] = registrationDate.datetime
+        }
+        
+        if let expirationDate = expirationDate {
+            returnData["expirationDate"] = expirationDate.datetime
+        }
+        
+        if let type = type {
+            returnData["type"] = type
+        }
+        
+        return returnData
+        
     }
 }
 

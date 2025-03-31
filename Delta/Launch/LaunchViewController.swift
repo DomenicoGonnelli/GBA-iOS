@@ -11,6 +11,7 @@ import Roxas
 
 class LaunchViewController: RSTLaunchViewController
 {
+    static let identifier = "LaunchViewController"
     var deepLinkGame: Game?
     
     @IBOutlet private var gameViewContainerView: UIView!
@@ -140,4 +141,22 @@ extension LaunchViewController
             })
         }
     }
+    
+    static func instance() -> LaunchViewController{
+        var vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier) as! LaunchViewController
+        vc.modalPresentationStyle = .fullScreen
+        return vc
+    }
+    
+       
+
+    static func push(from controller: UIViewController?){
+        controller?.navigationController?.pushViewController(instance(), animated: false)
+    }
+    
+    static func present(from controller: UIViewController?){
+        controller?.present(instance(), animated: true)
+    }
+        
+
 }

@@ -45,11 +45,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions)
     {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        
-        // Become default scene handler for Handoff/other deep links.
+        NotificationManager.shared.registerToPushNotification()
+        if let userActivity = connectionOptions.userActivities.first {
+            self.scene(scene, continue: userActivity)
+        }
+        DeviceManager.resetNotificationCounter()
         scene.activationConditions.prefersToActivateForTargetContentIdentifierPredicate = NSPredicate(value: true)
         
         self.window?.tintColor = .deltaPurple
@@ -64,8 +64,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate
             self.handle(.shortcut(shortcutItem))
         }
         
-        let launchViewController = self.window?.rootViewController as! LaunchViewController
-        self.launchViewController = launchViewController
+        if let launchViewController = self.window?.rootViewController as? LaunchViewController {
+            self.launchViewController = launchViewController
+        }
         
         self.window?.makeKeyAndVisible()
     }
@@ -243,5 +244,24 @@ private extension SceneDelegate
         }
         
         rootViewController?.present(alertController, animated: true, completion: nil)
+    }
+}
+
+
+extension SceneDelegate{
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        NotificationManager.shared.didReceiveNotificationToken(deviceToken: deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(error)
+    }
+    
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        NotificationManager.shared.manageNotificationPayload(userInfo)
+        DeviceManager.incrementNotificationCounter()
+        completionHandler(UIBackgroundFetchResult.newData)
     }
 }

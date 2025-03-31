@@ -5,3 +5,31 @@
   Created by Domenico Gonnelli on 26/03/25.
   Copyright © 2025 Riley Testut. All rights reserved.
 */
+
+"WelcomeMessage" = "Bentornato su\n<b><AppName/></b>";
+"SplashRulesMessage" = "Hai già letto il regolamento?";
+"SplashAccessMessage" = "Cosa aspetti?\n\n<m>Iscriviti</m> per avere i tuoi salvataggi sempre con te e accedere a <b>contenuti esclusivi</b>";
+
+"update_title" = "Aggiornamento Necessario";
+"update_message" = "È stata rilasciato un aggiornamento dell'App.\nPer continuare è necessario scaricare la nuova versione di <b><AppName/></b>";
+"update_button" = "Aggiorna";
+
+
+"Tutorial_1_title" = "Hai nostalgia dei giochi GBA/GBC?";
+"Tutorial_1_message" = "Carica i tuoi giochi in App e immerginiti nel mondo di GemBoy Advance";
+"Tutorial_1_button1" = "Continua";
+"Tutorial_1_button2" = "Salta";
+
+"Tutorial_2_title" = "Seleziona il pulsante '+' e seleziona un file con estensione .gba, .gbc, .gb";
+"Tutorial_2_message" = "Con la funzionalità di ricerca, potrai cercarli direttamente in rete";
+"Tutorial_2_button1" = "Continua";
+"Tutorial_2_button2" = "Salta";
+
+"Tutorial_3_title" = "Registrati in App per portare sempre con te i tuoi salvataggi anche su diversi dispositivi";
+"Tutorial_3_message" = "";
+"Tutorial_3_button1" = "Continua";
+"Tutorial_3_button2" = "Salta";
+
+"Tutorial_4_title" = "Riuscirai a vincere la Leg";
+"Tutorial_4_message" = "Scopri tutte le iniziative";
+"Tutorial_4_button1" = "Inizia";

@@ -11,8 +11,9 @@ import UIKit
 import DeltaCore
 import AltKit
 import FirebaseCore
-
+import GoogleMobileAds
 import ShowTouches
+import GoogleSignIn
 
 private extension CFNotificationName
 {
@@ -55,6 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.databaseManagerDidStart(_:)), name: DatabaseManager.didStartNotification, object: DatabaseManager.shared)
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.settingsDidChange(_:)), name: Settings.didChangeNotification, object: nil)
         FirebaseApp.configure()
+        
+        NotificationManager.shared.registerToPushNotification()
         // Deep Links
         if let shortcut = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem
         {
@@ -117,7 +120,7 @@ extension AppDelegate
         else
         {
             // Default Scene
-            return UISceneConfiguration(name: "Main", sessionRole: connectingSceneSession.role)
+            return UISceneConfiguration(name: "Splash", sessionRole: connectingSceneSession.role)
         }
     }
     
@@ -177,7 +180,14 @@ extension AppDelegate
 {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool
     {
-        return self.openURL(url)
+    
+        if self.openURL(url) {
+            return true
+        }
+        return application(app, open: url,
+                               sourceApplication: options[UIApplication.OpenURLOptionsKey
+                                 .sourceApplication] as? String,
+                               annotation: "")
     }
     
     @discardableResult private func openURL(_ url: URL) -> Bool
@@ -238,6 +248,20 @@ extension AppDelegate
         
         rootViewController?.present(alertController, animated: true, completion: nil)
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        NotificationManager.shared.didReceiveNotificationToken(deviceToken: deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(error)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        NotificationManager.shared.manageNotificationPayload(userInfo)
+        completionHandler(UIBackgroundFetchResult.newData)
+    }
 }
 
 extension AppDelegate
@@ -273,3 +297,24 @@ private extension AppDelegate
     }
 }
 
+extension AppDelegate{
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+//        if let webpageURL = userActivity.webpageURL{
+//            let handled = DynamicLinks.dynamicLinks().handleUniversalLink(webpageURL) { (dynamiclink, error) in
+//                DynamicLinksHelper.handleDeepLink(shortUrl: webpageURL)
+//            }
+//            return handled
+//        }
+        return false
+    }
+
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        if let _ = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+//            DynamicLinksHelper.handleDeepLink(shortUrl: url)
+//            return true
+//        }
+        return GIDSignIn.sharedInstance.handle(url)
+    }
+
+}

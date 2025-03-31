@@ -7,9 +7,11 @@
 
 import Foundation
 
-protocol DatabaseModelProtocol {
-    //var datafile : Dictionary<String, Any> { get }
+protocol DatabaseModelProtocol: DatabaseModelProtocolGet{
+    var datafile : Dictionary<String, Any> { get }
+}
+
+protocol DatabaseModelProtocolGet {
     init(value: [String: Any])
-   // func setValue(for value: [String: Any])
 }
 

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRnd-Bold.otf">
+            <string>GothamRounded-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tutorial Split Container View Controller-->
+        <scene sceneID="q5x-x0-Rhx">
+            <objects>
+                <viewController storyboardIdentifier="TutorialSplitContainerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9BD-pE-FyT" customClass="TutorialSplitContainerViewController" customModule="Collaudo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i6O-pB-HxV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9H-B5-hKl">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6J-Hw-VpM">
+                                <rect key="frame" x="293" y="79" width="80" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="MVF-AS-3cx"/>
+                                    <constraint firstAttribute="height" constant="36" id="kUs-eu-vMZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Salta">
+                                    <color key="titleColor" name="buttonTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="Tutorial_3_button2"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="withShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="9BD-pE-FyT" eventType="touchUpInside" id="Hhw-Rd-hwW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QLT-cD-uTg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S9H-B5-hKl" firstAttribute="top" secondItem="i6O-pB-HxV" secondAttribute="top" id="3Ba-Rd-aNx"/>
+                            <constraint firstItem="i6J-Hw-VpM" firstAttribute="top" secondItem="QLT-cD-uTg" secondAttribute="top" constant="20" id="H4T-FT-UTy"/>
+                            <constraint firstAttribute="trailing" secondItem="S9H-B5-hKl" secondAttribute="trailing" id="Nup-XQ-7uO"/>
+                            <constraint firstAttribute="bottom" secondItem="S9H-B5-hKl" secondAttribute="bottom" id="cc7-qL-mdZ"/>
+                            <constraint firstItem="QLT-cD-uTg" firstAttribute="trailing" secondItem="i6J-Hw-VpM" secondAttribute="trailing" constant="20" id="iMk-cw-5O4"/>
+                            <constraint firstItem="S9H-B5-hKl" firstAttribute="leading" secondItem="i6O-pB-HxV" secondAttribute="leading" id="w8A-Ll-A2O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="S9H-B5-hKl" id="58N-sz-nRy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcp-qX-m8Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

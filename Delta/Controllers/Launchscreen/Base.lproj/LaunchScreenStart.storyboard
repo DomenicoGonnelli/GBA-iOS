@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a0D-6s-UoQ">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="KVF-96-3mC">
+            <objects>
+                <viewController id="a0D-6s-UoQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvS-Ff-Kt7">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="CDp-nn-mCt">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="semitrans2" translatesAutoresizingMaskIntoConstraints="NO" id="SRH-aN-uGL">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="675.33333333333337"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9iG-BX-HgI">
+                                <rect key="frame" x="136.66666666666666" y="300.66666666666669" width="117" height="256.00000000000006"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Ou-Tc-top"/>
+                        <color key="backgroundColor" name="primaryColor"/>
+                        <constraints>
+                            <constraint firstItem="9iG-BX-HgI" firstAttribute="centerX" secondItem="3Ou-Tc-top" secondAttribute="centerX" id="11M-Av-pCS"/>
+                            <constraint firstItem="SRH-aN-uGL" firstAttribute="top" secondItem="CDp-nn-mCt" secondAttribute="top" id="AOf-MU-1kN"/>
+                            <constraint firstItem="SRH-aN-uGL" firstAttribute="trailing" secondItem="CDp-nn-mCt" secondAttribute="trailing" id="BGP-3G-gr4"/>
+                            <constraint firstItem="9iG-BX-HgI" firstAttribute="width" secondItem="gvS-Ff-Kt7" secondAttribute="width" multiplier="0.3" id="PxF-uD-pxM"/>
+                            <constraint firstItem="CDp-nn-mCt" firstAttribute="height" secondItem="gvS-Ff-Kt7" secondAttribute="height" id="S7j-da-nCm"/>
+                            <constraint firstItem="9iG-BX-HgI" firstAttribute="centerY" secondItem="3Ou-Tc-top" secondAttribute="centerY" id="aFA-MG-oQK"/>
+                            <constraint firstAttribute="bottom" secondItem="CDp-nn-mCt" secondAttribute="bottom" id="eFE-Xc-fNe"/>
+                            <constraint firstItem="SRH-aN-uGL" firstAttribute="leading" secondItem="CDp-nn-mCt" secondAttribute="leading" id="esf-uo-xKb"/>
+                            <constraint firstItem="SRH-aN-uGL" firstAttribute="height" secondItem="CDp-nn-mCt" secondAttribute="height" multiplier="0.8" id="g78-lH-pqI"/>
+                            <constraint firstItem="CDp-nn-mCt" firstAttribute="trailing" secondItem="3Ou-Tc-top" secondAttribute="trailing" id="oFa-YJ-ma5"/>
+                            <constraint firstItem="CDp-nn-mCt" firstAttribute="leading" secondItem="3Ou-Tc-top" secondAttribute="leading" id="tp4-NM-p7F"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPS-0b-glY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginBG" width="542.5" height="793"/>
+        <image name="logo" width="256.5" height="256"/>
+        <image name="semitrans2" width="160.5" height="144"/>
+        <namedColor name="primaryColor">
+            <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

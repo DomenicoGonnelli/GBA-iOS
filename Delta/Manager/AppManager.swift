@@ -34,6 +34,8 @@ class AppManager {
 
     var premiumSubscriptions: [PremiumSubscriptionModel] = []
     
+    var links: StorageLinksModel?
+    
     func retrieveProduct(completion: @escaping ((Bool)->Void)){
         DispatchQueue(label: "background").async {
             autoreleasepool {

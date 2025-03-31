@@ -18,7 +18,7 @@ protocol OnBoardingDelegate {
 }
 
 
-public class OnBoardingGenericItem: DatabaseModelProtocol {
+public class OnBoardingGenericItem: DatabaseModelProtocolGet {
     var title: String?
     var body: String?
     var linkKey: String?
@@ -73,7 +73,7 @@ public class OnBoardingGenericItem: DatabaseModelProtocol {
     
 }
 
-public class OnBoardingGenericButton: DatabaseModelProtocol {
+public class OnBoardingGenericButton: DatabaseModelProtocolGet {
     var text: String?
     var action: OnBoardingAction?
     var color: UIColor?

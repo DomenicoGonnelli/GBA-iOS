@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmn-gd-5UN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
                                 <connections>
                                     <segue destination="tpK-ou-yEA" kind="embed" identifier="embedPageViewController" id="cjU-nW-cHY"/>
                                 </connections>
@@ -29,9 +29,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tmn-gd-5UN" secondAttribute="trailing" id="9Rq-HM-vqk"/>
+                            <constraint firstItem="tmn-gd-5UN" firstAttribute="top" secondItem="WoX-O4-qy5" secondAttribute="bottom" id="BQG-7g-RGA"/>
                             <constraint firstItem="tmn-gd-5UN" firstAttribute="leading" secondItem="3Bk-k3-7J9" secondAttribute="leading" id="f1f-sa-dBA"/>
                             <constraint firstAttribute="bottom" secondItem="tmn-gd-5UN" secondAttribute="bottom" id="ifM-Wa-u9y"/>
-                            <constraint firstItem="tmn-gd-5UN" firstAttribute="top" secondItem="3Bk-k3-7J9" secondAttribute="top" id="nhS-aC-rUR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Games" id="pFk-as-3k4">
@@ -96,7 +96,7 @@
         <!--Launch View Controller-->
         <scene sceneID="p7y-IT-nlb">
             <objects>
-                <viewController id="SPq-Bk-fQl" customClass="LaunchViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SPq-Bk-fQl" customClass="LaunchViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qap-U8-zpQ"/>
                         <viewControllerLayoutGuide type="bottom" id="dca-QO-wba"/>
@@ -115,9 +115,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vf5-Iy-lAb" userLabel="Launch Screen">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <connections>
-                                    <segue destination="ibA-aC-X3M" kind="embed" id="fsv-uf-AOE"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,14 +126,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxd-LN-YF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-490.39999999999998" y="284.70764617691157"/>
-        </scene>
-        <!--LaunchScreen-->
-        <scene sceneID="R8v-WR-ElO">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LaunchScreen" id="ibA-aC-X3M" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i4G-1R-eCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="87" y="284"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="ASV-Uk-0aP">
