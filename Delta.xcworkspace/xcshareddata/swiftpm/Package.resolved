@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "AltKit",
-        "repositoryURL": "https://github.com/altstoreio/AltKit.git",
-        "state": {
-          "branch": null,
-          "revision": "2fd376df1c79ec06a5c80cc8933da027f65b3148",
-          "version": null
-        }
-      },
-      {
         "package": "AppCheck",
         "repositoryURL": "https://github.com/google/app-check.git",
         "state": {
@@ -161,15 +152,6 @@
           "branch": null,
           "revision": "540318ecedd63d883069ae7f1ed811a2df00b6ac",
           "version": "2.4.0"
-        }
-      },
-      {
-        "package": "RevenueCat",
-        "repositoryURL": "https://github.com/RevenueCat/purchases-ios-spm.git",
-        "state": {
-          "branch": null,
-          "revision": "3dd291434fd63594b8ada87bca960e001b708241",
-          "version": "5.8.0"
         }
       },
       {

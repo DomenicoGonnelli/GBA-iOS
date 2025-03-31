@@ -140,14 +140,14 @@ class SettingsViewController: UITableViewController
         
         if let version = Bundle.main.object(forInfoDictionaryKey: "DLTAVersion") as? String
         {
-            self.versionLabel.text = NSLocalizedString(String(format: "Delta %@", version), comment: "Delta Version")
+            self.versionLabel.text = ""
         }
         else if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         {
             #if LITE
             self.versionLabel.text = NSLocalizedString(String(format: "Delta Lite %@", version), comment: "Delta Version")
             #else
-            self.versionLabel.text = NSLocalizedString(String(format: "Delta %@", version), comment: "Delta Version")
+            self.versionLabel.text = NSLocalizedString(String(format: "GBA %@", version), comment: "GemBoy Advance Version")
             #endif
         }
         else
@@ -155,7 +155,7 @@ class SettingsViewController: UITableViewController
             #if LITE
             self.versionLabel.text = NSLocalizedString("Delta Lite", comment: "")
             #else
-            self.versionLabel.text = NSLocalizedString("Delta", comment: "")
+            self.versionLabel.text = NSLocalizedString("GBA", comment: "")
             #endif
         }
         

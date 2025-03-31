@@ -169,10 +169,8 @@
 		D51CB7A129EDC01400B59678 /* libDeltaFeatures.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D7C1F129E60DFF00663793 /* libDeltaFeatures.a */; };
 		D51D8EC82D49CA26002649C2 /* Delta10ToDelta11.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D51D8EC72D49CA26002649C2 /* Delta10ToDelta11.xcmappingmodel */; };
 		D524F4A3273DE9C000D500B2 /* ProcessInfo+JIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D524F4A2273DE9C000D500B2 /* ProcessInfo+JIT.swift */; };
-		D524F4A5273DEBB400D500B2 /* ServerManager+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D524F4A4273DEBB400D500B2 /* ServerManager+Delta.swift */; };
 		D5265A7E2D4845C90002C6CE /* GameSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = D5265A7D2D4845C90002C6CE /* GameSetting.m */; };
 		D5265A802D4848A00002C6CE /* PreferredControllerSkinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5265A7F2D48489C0002C6CE /* PreferredControllerSkinsView.swift */; };
-		D52CB8C62CE2B7B600B04458 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = D52CB8C52CE2B7B600B04458 /* RevenueCat */; };
 		D52CB8C82CE2B7C800B04458 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52CB8C72CE2B7C800B04458 /* StoreKit.framework */; };
 		D53415A5298C782A00FD67B1 /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53415A4298C782A00FD67B1 /* ContributorsView.swift */; };
 		D53415A7298C78BC00FD67B1 /* Contributors.plist in Resources */ = {isa = PBXBuildFile; fileRef = D53415A6298C78BC00FD67B1 /* Contributors.plist */; };
@@ -217,7 +215,6 @@
 		D5AE78832BEAAD6100ED25DC /* GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE78822BEAAD6100ED25DC /* GameSceneDelegate.swift */; };
 		D5B4235C2BD9C24000093054 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4235B2BD9C24000093054 /* RoundedImageView.swift */; };
 		D5BE1BD72D0B9CBE00D2142E /* PatreonAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5BE1BD62D0B9CBE00D2142E /* PatreonAPI.plist */; };
-		D5C45FEF2BE992A80009DBB0 /* AltKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5C45FEE2BE992A80009DBB0 /* AltKit */; };
 		D5CDCCEF2A859E5300E22131 /* OSLog+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCCC32A85765900E22131 /* OSLog+Delta.swift */; };
 		D5CDCCF02A859E5500E22131 /* UserDefaults+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCCEA2A8593FC00E22131 /* UserDefaults+Delta.swift */; };
 		D5CDCCF12A859E7500E22131 /* ReviewSaveStatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1375A2A7D8F2600AB1372 /* ReviewSaveStatesViewController.swift */; };
@@ -591,7 +588,6 @@
 		D51D8EC62D49C998002649C2 /* Delta 11.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Delta 11.xcdatamodel"; sourceTree = "<group>"; };
 		D51D8EC72D49CA26002649C2 /* Delta10ToDelta11.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Delta10ToDelta11.xcmappingmodel; sourceTree = "<group>"; };
 		D524F4A2273DE9C000D500B2 /* ProcessInfo+JIT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+JIT.swift"; sourceTree = "<group>"; };
-		D524F4A4273DEBB400D500B2 /* ServerManager+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerManager+Delta.swift"; sourceTree = "<group>"; };
 		D5265A7C2D4843450002C6CE /* GameSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSetting.h; sourceTree = "<group>"; };
 		D5265A7D2D4845C90002C6CE /* GameSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSetting.m; sourceTree = "<group>"; };
 		D5265A7F2D48489C0002C6CE /* PreferredControllerSkinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredControllerSkinsView.swift; sourceTree = "<group>"; };
@@ -814,7 +810,6 @@
 				D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */,
 				EBBB19F52D998826009C977A /* GoogleSignIn in Frameworks */,
 				BF69FBA823E396860051BEEA /* libz.tbd in Frameworks */,
-				D52CB8C62CE2B7B600B04458 /* RevenueCat in Frameworks */,
 				D52CB8C82CE2B7C800B04458 /* StoreKit.framework in Frameworks */,
 				EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */,
 				BF69FBAA23E399AA0051BEEA /* CoreMotion.framework in Frameworks */,
@@ -834,7 +829,6 @@
 				EBBB19D92D997C99009C977A /* FirebaseStorage in Frameworks */,
 				BFFDF03723E3BB2600931B96 /* libSnes9x.a in Frameworks */,
 				EBB0FA9A2D96A16800CA8EB1 /* FirebaseCrashlytics in Frameworks */,
-				D5C45FEF2BE992A80009DBB0 /* AltKit in Frameworks */,
 				05EF6BDEE6C1AC8A92642B10 /* libPods-GemBoy.a in Frameworks */,
 				EBB0FA9E2D96A16800CA8EB1 /* FirebaseMessaging in Frameworks */,
 				EBB0FA9C2D96A16800CA8EB1 /* FirebaseFirestore in Frameworks */,
@@ -890,7 +884,6 @@
 				BFD1EF3F2336BD8800D197CF /* UIDevice+Processor.swift */,
 				BFE56E1823EB7BE00014FECD /* UIImage+SymbolFallback.swift */,
 				D524F4A2273DE9C000D500B2 /* ProcessInfo+JIT.swift */,
-				D524F4A4273DEBB400D500B2 /* ServerManager+Delta.swift */,
 				D5011C47281B6E8B00A0760B /* CharacterSet+Filename.swift */,
 				ACF7E30E29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift */,
 				AC1C992629F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift */,
@@ -1965,10 +1958,8 @@
 			);
 			name = GemBoy;
 			packageProductDependencies = (
-				D5C45FEE2BE992A80009DBB0 /* AltKit */,
 				D5AE76C12C2B59240086471B /* KeychainAccess */,
 				D5E76AAC2BE199890078C0C5 /* ShowTouches */,
-				D52CB8C52CE2B7B600B04458 /* RevenueCat */,
 				EBB0FA932D96A16800CA8EB1 /* FirebaseAnalytics */,
 				EBB0FA952D96A16800CA8EB1 /* FirebaseAuth */,
 				EBB0FA972D96A16800CA8EB1 /* FirebaseCore */,
@@ -2098,10 +2089,8 @@
 			);
 			mainGroup = BFFA71CE1AAC406100EE9DD1;
 			packageReferences = (
-				D5C45FED2BE992A80009DBB0 /* XCRemoteSwiftPackageReference "AltKit" */,
 				D5AE76C02C2B59240086471B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				D5E76AAB2BE199890078C0C5 /* XCRemoteSwiftPackageReference "ShowTouches" */,
-				D52CB8C42CE2B7B600B04458 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
 				EBB0FA922D96A16800CA8EB1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				EBBB19892D99734B009C977A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				EBBB19F32D998826009C977A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
@@ -2407,7 +2396,6 @@
 				D53415A5298C782A00FD67B1 /* ContributorsView.swift in Sources */,
 				BF5942891E09BC8B0051894B /* _GameCollection.swift in Sources */,
 				BF34FA111CF1899D006624C7 /* CheatTextView.swift in Sources */,
-				D524F4A5273DEBB400D500B2 /* ServerManager+Delta.swift in Sources */,
 				EB8E0D442D946518004BFB1F /* NotificationInApp.swift in Sources */,
 				D5AAF27729884F8600F21ACF /* CheatDevice.swift in Sources */,
 				BF1F45AD21AF57BA00EF9895 /* HarmonyMetadataKey+Keys.swift in Sources */,
@@ -3212,28 +3200,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D52CB8C42CE2B7B600B04458 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.8.0;
-			};
-		};
 		D5AE76C02C2B59240086471B /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 4.2.2;
-			};
-		};
-		D5C45FED2BE992A80009DBB0 /* XCRemoteSwiftPackageReference "AltKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/altstoreio/AltKit.git";
-			requirement = {
-				kind = revision;
-				revision = 2fd376df1c79ec06a5c80cc8933da027f65b3148;
 			};
 		};
 		D5E76AAB2BE199890078C0C5 /* XCRemoteSwiftPackageReference "ShowTouches" */ = {
@@ -3271,20 +3243,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D52CB8C52CE2B7B600B04458 /* RevenueCat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D52CB8C42CE2B7B600B04458 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
-			productName = RevenueCat;
-		};
 		D5AE76C12C2B59240086471B /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D5AE76C02C2B59240086471B /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
-		};
-		D5C45FEE2BE992A80009DBB0 /* AltKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D5C45FED2BE992A80009DBB0 /* XCRemoteSwiftPackageReference "AltKit" */;
-			productName = AltKit;
 		};
 		D5E76AAC2BE199890078C0C5 /* ShowTouches */ = {
 			isa = XCSwiftPackageProductDependency;

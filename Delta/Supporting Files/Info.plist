@@ -176,8 +176,6 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>DLTAVersion</key>
-	<string>1.7b5</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5791654562344514~4249868638</string>
 	<key>GCSupportedGameControllers</key>
@@ -205,31 +203,15 @@
 		<string>_altserver._tcp</string>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>Delta uses the local network to communicate with AltServer and enable JIT.</string>
+	<string>GBA uses the local network to communicate with AltServer and enable JIT.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Delta uses your microphone to emulate the Nintendo DS microphone.</string>
+	<string>GBA uses your microphone to emulate the Nintendo DS microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Press &quot;OK&quot; to allow Delta to use images from your Photo Library as game artwork.</string>
+	<string>Press "OK" to allow Delta to use images from your Photo Library as game artwork.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>com.rileytestut.Delta.PlayGame</string>
 	</array>
-	<key>OSLogPreferences</key>
-	<dict>
-		<key>com.rileytestut.Harmony</key>
-		<dict>
-			<key>Sync</key>
-			<dict>
-				<key>Level</key>
-				<dict>
-					<key>Enable</key>
-					<string>Info</string>
-					<key>Persist</key>
-					<string>Info</string>
-				</dict>
-			</dict>
-		</dict>
-	</dict>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>

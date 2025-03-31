@@ -7,9 +7,7 @@
 //
 
 import UIKit
-
 import DeltaCore
-import AltKit
 import FirebaseCore
 import GoogleMobileAds
 import ShowTouches
@@ -45,9 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         // Controllers
         ExternalGameControllerManager.shared.startMonitoring()
-        
-        // JIT
-        ServerManager.shared.prepare()
         
         // Notifications
         let center = CFNotificationCenterGetDarwinNotifyCenter()
