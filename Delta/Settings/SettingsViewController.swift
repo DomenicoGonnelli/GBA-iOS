@@ -145,7 +145,7 @@ class SettingsViewController: UITableViewController
         else if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         {
            
-            self.versionLabel.text =String(format: "app_version".localizable, version)
+            self.versionLabel.text = String(format: "app_version".localizable, version)
            
         }
         else
@@ -553,7 +553,7 @@ extension SettingsViewController
                 content.textProperties.color = .deltaPurple
                 
                 
-                content.text = NSLocalizedString("Connect Patreon Account…", comment: "")
+                content.text = "Connect Patreon Account…"
                 
                 cell.contentConfiguration = content
             }
@@ -596,16 +596,13 @@ extension SettingsViewController
             let row = CreditsRow(rawValue: indexPath.row)!
             switch row
             {
-            case .riley: self.openThreads(username: "rileytestut")
-            case .shane: self.openThreads(username: "shanegill.io")
-            case .caroline: self.openThreads(username: "carolinemoore")
-            case .grant: self.openThreads(username: "glinstagrant")
-            case .litRitt: self.openTwitter(username: "lit_ritt")
+            
             case .contributors:
                 guard #available(iOS 14, *) else { return }
                 self.showContributors()
-                
             case .friendZonePatrons, .softwareLicenses: break
+            default:
+                break
             }
             
         case .support:
@@ -725,11 +722,11 @@ extension SettingsViewController
         case .controllerSkins:
             guard #available(iOS 15, *), let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: AttributedHeaderFooterView.reuseIdentifier) as? AttributedHeaderFooterView else { break }
             
-            var attributedText = "customize_appearence".localizable
+            var attributedText = AttributedString(localized: "customize_appearence")
             attributedText += " "
             
-            var learnMore = "Learn_More".localizable
-            learnMore.link = URL(string: "https://faq.deltaemulator.com/using-delta/controller-skins")
+            var learnMore = AttributedString(localized: "Learn_More")
+            
             attributedText += learnMore
             
             footerView.attributedText = attributedText
