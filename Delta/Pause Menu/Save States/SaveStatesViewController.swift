@@ -39,11 +39,11 @@ extension SaveStatesViewController
         var localizedName: String {
             switch self
             {
-            case .info: return NSLocalizedString("Info", comment: "")
-            case .auto: return NSLocalizedString("Auto Save", comment: "")
-            case .quick: return NSLocalizedString("Quick Save", comment: "")
-            case .general: return NSLocalizedString("General", comment: "")
-            case .locked: return NSLocalizedString("Locked", comment: "")
+            case .info: return "Info".localizable
+            case .auto: return "Auto Save".localizable
+            case .quick: return "Quick Save".localizable
+            case .general: return "General".localizable
+            case .locked: return "Locked".localizable
             }
         }
     }
@@ -56,8 +56,8 @@ extension SaveStatesViewController
         public var localizedName: String {
             switch self
             {
-            case .name: return NSLocalizedString("Name", comment: "")
-            case .date: return NSLocalizedString("Date", comment: "")
+            case .name: return "Name".localizable
+            case .date: return "Date".localizable
             }
         }
     }
@@ -70,8 +70,8 @@ extension SaveStatesViewController
         public var localizedName: String {
             switch self
             {
-            case .compatible: return NSLocalizedString("Compatible", comment: "")
-            case .incompatible: return NSLocalizedString("Incompatible", comment: "")
+            case .compatible: return "Compatible".localizable
+            case .incompatible: return "Incompatible".localizable
             }
         }
     }
@@ -166,12 +166,12 @@ extension SaveStatesViewController
         switch self.mode
         {
         case .saving:
-            self.title = NSLocalizedString("Save State", comment: "")
-            self.placeholderView.detailTextLabel.text = NSLocalizedString("Create a new save state by pressing the + button in the top right.", comment: "")
+            self.title = "Quick_Save".localizable
+            self.placeholderView.detailTextLabel.text = "".localizable
             
         case .loading:
-            self.title = NSLocalizedString("Load State", comment: "")
-            self.placeholderView.detailTextLabel.text = NSLocalizedString("Create a new save state by pressing the Save State option in the pause menu.", comment: "")
+            self.title = "Quick_Load".localizable
+            self.placeholderView.detailTextLabel.text = "Quick_Load_text".localizable
             self.navigationItem.rightBarButtonItems?.removeFirst()
         }
         
@@ -211,8 +211,8 @@ extension SaveStatesViewController
         
         if let core = Delta.core(for: self.game.type), core == MelonDS.core, self.incompatibleSaveStatesCount > 0, !UserDefaults.standard.showedIncompatibleDSSaveStatesAlert
         {
-            let alertController = UIAlertController(title: NSLocalizedString("Incompatible Save States", comment: ""),
-                                                    message: NSLocalizedString("This version of Delta is not compatible with previous Nintendo DS save states.\n\nYou can find previous save states by pressing “View Incompatible Save States” in the options menu.", comment: ""),
+            let alertController = UIAlertController(title: "Incompatible_Save_States".localizable,
+                                                    message: "Incompatible_Save_States_text".localizable,
                                                     preferredStyle: .alert)
             alertController.addAction(.ok)
             self.present(alertController, animated: true)
@@ -257,7 +257,7 @@ private extension SaveStatesViewController
         self.placeholderView = RSTPlaceholderView(frame: CGRect(x: 0, y: 0, width: self.vibrancyView.bounds.width, height: self.vibrancyView.bounds.height))
         self.placeholderView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.placeholderView.stackView.distribution = .fill
-        self.placeholderView.textLabel.text = NSLocalizedString("No Save States", comment: "")
+        self.placeholderView.textLabel.text = "No_Save_States".localizable
         self.placeholderView.textLabel.textColor = UIColor.white
         self.placeholderView.detailTextLabel.textColor = UIColor.white
         
@@ -266,12 +266,12 @@ private extension SaveStatesViewController
         self.incompatibleLabel.font = self.placeholderView.detailTextLabel.font
         self.incompatibleLabel.textColor = .white
         self.incompatibleLabel.numberOfLines = 0
-        self.incompatibleLabel.text = NSLocalizedString("You have save states that are incompatible with this version of Delta.", comment: "")
+        self.incompatibleLabel.text = "No_Save_States_valid".localizable
         self.placeholderView.stackView.addArrangedSubview(self.incompatibleLabel)
         self.placeholderView.stackView.setCustomSpacing(30, after: self.placeholderView.detailTextLabel)
         self.vibrancyView.contentView.addSubview(self.placeholderView)
         
-        self.incompatibleButton = UIButton(type: .system, primaryAction: UIAction(title: NSLocalizedString("View Incompatible Save States", comment: "")) { [weak self] _ in
+        self.incompatibleButton = UIButton(type: .system, primaryAction: UIAction(title:  "View_Incompatible_Save_States".localizable) { [weak self] _ in
             self?.showIncompatibleSaveStates()
         })
         self.incompatibleButton.isHidden = true
@@ -381,12 +381,12 @@ private extension SaveStatesViewController
             switch self.filter
             {
             case .compatible:
-                action = UIAction(title: NSLocalizedString("View Incompatible Save States", comment: ""), image: UIImage(systemName: "x.circle")) { _ in
+                action = UIAction(title: "View_Incompatible_Save_States".localizable, image: UIImage(systemName: "x.circle")) { _ in
                     self.showIncompatibleSaveStates()
                 }
                 
             case .incompatible:
-                action = UIAction(title: NSLocalizedString("View Compatible Save States", comment: ""), image: UIImage(systemName: "checkmark.circle")) { _ in
+                action = UIAction(title: "View_compatible_Save_States".localizable, image: UIImage(systemName: "checkmark.circle")) { _ in
                     self.showCompatibleSaveStates()
                 }
             }
@@ -411,7 +411,7 @@ private extension SaveStatesViewController
             menuOptions = [.displayInline]
         }
         
-        let sortMenu = UIMenu(title: NSLocalizedString("Sort by…", comment: ""), options: menuOptions, children: [sortActions])
+        let sortMenu = UIMenu(title: "Sort_by".localizable, options: menuOptions, children: [sortActions])
         var allMenus = [sortMenu]
         
         if self.incompatibleSaveStatesCount > 0
@@ -524,14 +524,9 @@ private extension SaveStatesViewController
         
         if self.incompatibleSaveStatesCount > 0 && self.filter == .compatible
         {
-            if self.incompatibleSaveStatesCount == 1
-            {
-                self.incompatibleLabel.text = NSLocalizedString("You have 1 save state that is incompatible with this version of Delta.", comment: "")
-            }
-            else
-            {
-                self.incompatibleLabel.text = String(format: NSLocalizedString("You have %@ save states that are incompatible with this version of Delta.", comment: ""), NSNumber(value: self.incompatibleSaveStatesCount))
-            }
+            
+            self.incompatibleLabel.text =  "No_Save_States_valid".localizable
+            
             
             self.incompatibleLabel.isHidden = false
             self.incompatibleButton.isHidden = false
@@ -624,10 +619,10 @@ private extension SaveStatesViewController
         switch section
         {
         case .info:
-            let attributedText = NSMutableAttributedString(string: NSLocalizedString("These save states are incompatible with this version of Delta. You can export them to continue playing in Delta Legacy.", comment: ""), attributes: [.font: UIFont.preferredFont(forTextStyle: .body), .foregroundColor: UIColor.lightGray])
+            let attributedText = NSMutableAttributedString(string:  "quick_save_export_error".localizable, attributes: [.font: UIFont.preferredFont(forTextStyle: .body), .foregroundColor: UIColor.lightGray])
             attributedText.mutableString.append("\n\n")
             
-            let learnMoreLink = NSAttributedString(string: NSLocalizedString("Learn More…", comment: ""), attributes: [.link: URL(string: "https://deltaemulator.com/legacy")!,
+            let learnMoreLink = NSAttributedString(string: "Learn_More".localizable, attributes: [.link: URL(string: "https://deltaemulator.com/legacy")!,
                                                                                                                        .font: UIFont.preferredFont(forTextStyle: .body)])
             attributedText.append(learnMoreLink)
             
@@ -699,8 +694,8 @@ private extension SaveStatesViewController
     
     func deleteSaveState(_ saveState: SaveState)
     {
-        let confirmationAlertController = UIAlertController(title: NSLocalizedString("Delete Save State?", comment: ""), message: NSLocalizedString("Are you sure you want to delete this save state? This cannot be undone.", comment: ""), preferredStyle: .alert)
-        confirmationAlertController.addAction(UIAlertAction(title: NSLocalizedString("Delete", comment: ""), style: .destructive, handler: { action in
+        let confirmationAlertController = UIAlertController(title: "Delete_Save_State".localizable, message: "Delete_Save_State_text".localizable, preferredStyle: .alert)
+        confirmationAlertController.addAction(UIAlertAction(title: "Delete".localizable, style: .destructive, handler: { action in
             
             DatabaseManager.shared.performBackgroundTask { (context) in
                 let temporarySaveState = context.object(with: saveState.objectID)
@@ -709,22 +704,22 @@ private extension SaveStatesViewController
             }
             
         }))
-        confirmationAlertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+        confirmationAlertController.addAction(UIAlertAction(title: "Cancel".localizable, style: .cancel, handler: nil))
         
         self.present(confirmationAlertController, animated: true, completion: nil)
     }
     
     func renameSaveState(_ saveState: SaveState)
     {
-        let alertController = UIAlertController(title: NSLocalizedString("Rename Save State", comment: ""), message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Rename_Save_State".localizable, message: nil, preferredStyle: .alert)
         alertController.addTextField { (textField) in
             textField.text = saveState.name
-            textField.placeholder = NSLocalizedString("Name", comment: "")
+            textField.placeholder = "Name".localizable
             textField.autocapitalizationType = .words
             textField.returnKeyType = .done
         }
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Rename", comment: ""), style: .default, handler: { [unowned alertController] (action) in
+        alertController.addAction(UIAlertAction(title: "Cancel".localizable, style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Rename".localizable, style: .default, handler: { [unowned alertController] (action) in
             self.rename(saveState, with: alertController.textFields?.first?.text)
         }))
         self.present(alertController, animated: true, completion: nil)
@@ -753,16 +748,16 @@ private extension SaveStatesViewController
         
         if #available(iOS 13, *)
         {
-            message = NSLocalizedString("The Preview Save State is loaded whenever you long press this game from the Main Menu. Are you sure you want to change it?", comment: "")
+            message = "Change_save_state_after_press".localizable
         }
         else
         {
-            message = NSLocalizedString("The Preview Save State is loaded whenever you 3D Touch this game from the Main Menu. Are you sure you want to change it?", comment: "")
+            message = "Change_save_state_after_press".localizable
         }
         
-        let alertController = UIAlertController(title: NSLocalizedString("Change Preview Save State?", comment: ""), message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Change", comment: ""), style: .default, handler: { (action) in
+        let alertController = UIAlertController(title: "Change_Preview_Save_State".localizable, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Cancel".localizable, style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Change".localizable, style: .default, handler: { (action) in
             
             DatabaseManager.shared.performBackgroundTask { (context) in
                 let game = context.object(with: self.game.objectID) as! Game
@@ -826,7 +821,7 @@ private extension SaveStatesViewController
         }
         catch
         {
-            let alertController = UIAlertController(title: NSLocalizedString("Unable to Import Save State", comment: ""), error: error)
+            let alertController = UIAlertController(title: "quick_save_import_fail".localizable, error: error)
             self.present(alertController, animated: true, completion: nil)
         }
     }
@@ -848,7 +843,7 @@ private extension SaveStatesViewController
         }
         catch
         {
-            let alertController = UIAlertController(title: NSLocalizedString("Unable to Export Save State", comment: ""), error: error)
+            let alertController = UIAlertController(title: "quick_save_export_fail".localizable, error: error)
             self.present(alertController, animated: true, completion: nil)
         }
     }
@@ -951,24 +946,24 @@ private extension SaveStatesViewController
         let previewAction: UIAction
         if saveState.game?.previewSaveState != saveState
         {
-            previewAction = UIAction(title: NSLocalizedString("Set as Preview Save State", comment: ""), image: UIImage(symbolNameIfAvailable: "eye.fill")) { [unowned self] action in
+            previewAction = UIAction(title: "Set_as_preview".localizable, image: UIImage(symbolNameIfAvailable: "eye.fill")) { [unowned self] action in
                 self.updatePreviewSaveState(saveState)
             }
         }
         else
         {
-            previewAction = UIAction(title: NSLocalizedString("Remove as Preview Save State", comment: ""), image: UIImage(symbolNameIfAvailable: "eye.slash.fill")) { [unowned self] action in
+            previewAction = UIAction(title: "remove_preview".localizable, image: UIImage(symbolNameIfAvailable: "eye.slash.fill")) { [unowned self] action in
                 self.updatePreviewSaveState(nil)
             }
         }
         
         let previewMenu = UIMenu(options: .displayInline, children: [previewAction])
         
-        let markCompatibleAction = UIAction(title: NSLocalizedString("Mark as Compatible", comment: ""), image: UIImage(symbolNameIfAvailable: "checkmark.circle")) { [unowned self] _ in
+        let markCompatibleAction = UIAction(title: "Mark_as_Compatible".localizable, image: UIImage(symbolNameIfAvailable: "checkmark.circle")) { [unowned self] _ in
             self.markSaveStateAsCompatible(saveState)
         }
         
-        let markIncompatibleAction = UIAction(title: NSLocalizedString("Mark as Incompatible", comment: ""), image: UIImage(symbolNameIfAvailable: "x.circle")) { [unowned self] _ in
+        let markIncompatibleAction = UIAction(title: "Mark_as_not_Compatible".localizable, image: UIImage(symbolNameIfAvailable: "x.circle")) { [unowned self] _ in
             self.markSaveStateAsIncompatible(saveState)
         }
         
@@ -987,7 +982,7 @@ private extension SaveStatesViewController
         case .incompatible: actions.append(compatibilityMenu)
         }
         
-        let renameAction = UIAction(title: NSLocalizedString("Rename", comment: ""), image: UIImage(symbolNameIfAvailable: "pencil")) { [unowned self] action in
+        let renameAction = UIAction(title: "Rename".localizable, image: UIImage(symbolNameIfAvailable: "pencil")) { [unowned self] action in
             self.renameSaveState(saveState)
         }
         actions.append(renameAction)
@@ -997,30 +992,30 @@ private extension SaveStatesViewController
         case .auto: break
         case .quick: break
         case .general:
-            let lockAction = UIAction(title: NSLocalizedString("Lock", comment: ""), image: UIImage(symbolNameIfAvailable: "lock.fill")) { [unowned self] action in
+            let lockAction = UIAction(title: "Lock".localizable, image: UIImage(symbolNameIfAvailable: "lock.fill")) { [unowned self] action in
                 self.lockSaveState(saveState)
             }
             actions.append(lockAction)
             
         case .locked:
-            let unlockAction = UIAction(title: NSLocalizedString("Unlock", comment: ""), image: UIImage(symbolNameIfAvailable: "lock.open.fill")) { [unowned self] action in
+            let unlockAction = UIAction(title: "Unlock".localizable, image: UIImage(symbolNameIfAvailable: "lock.open.fill")) { [unowned self] action in
                 self.unlockSaveState(saveState)
             }
             actions.append(unlockAction)
         }
         
-        let importAction = UIAction(title: NSLocalizedString("Import", comment: ""), image: UIImage(symbolNameIfAvailable: "square.and.arrow.down")) { [unowned self] action in
+        let importAction = UIAction(title: "Import".localizable, image: UIImage(symbolNameIfAvailable: "square.and.arrow.down")) { [unowned self] action in
             self.importSaveState(saveState)
         }
         
-        let exportAction = UIAction(title: NSLocalizedString("Export", comment: ""), image: UIImage(symbolNameIfAvailable: "square.and.arrow.up")) { [unowned self] action in
+        let exportAction = UIAction(title: "Export".localizable, image: UIImage(symbolNameIfAvailable: "square.and.arrow.up")) { [unowned self] action in
             self.exportSaveState(saveState)
         }
         
         let manageMenu = UIMenu(options: .displayInline, children: [importAction, exportAction])
         actions.append(manageMenu)
         
-        let deleteAction = UIAction(title: NSLocalizedString("Delete", comment: ""), image: UIImage(symbolNameIfAvailable: "trash"), attributes: .destructive) { [unowned self] action in
+        let deleteAction = UIAction(title: "Delete".localizable, image: UIImage(symbolNameIfAvailable: "trash"), attributes: .destructive) { [unowned self] action in
             self.deleteSaveState(saveState)
         }
         
@@ -1182,8 +1177,8 @@ extension SaveStatesViewController
         switch self.filter
         {
         case .incompatible:
-            let alertController = UIAlertController(title: NSLocalizedString("Incompatible Save State", comment: ""), message: NSLocalizedString("This save state is incompatible with this version of Delta.", comment: ""), preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil))
+            let alertController = UIAlertController(title: "Incompatible_Save_States".localizable, message: "Incompatible_Save_States_message".localizable, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK".localizable, style: .cancel, handler: nil))
             self.present(alertController, animated: true, completion: nil)
             
         case .compatible:
@@ -1204,8 +1199,8 @@ extension SaveStatesViewController
                     }
                     
                 case .locked:
-                    let alertController = UIAlertController(title: NSLocalizedString("Cannot Modify Locked Save State", comment: ""), message: NSLocalizedString("This save state must first be unlocked before it can be modified.", comment: ""), preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil))
+                    let alertController = UIAlertController(title: "Error_editing_lock_save".localizable, message: "Error_editing_lock_save_text".localizable, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK".localizable, style: .cancel, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                     
                 }

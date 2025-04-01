@@ -40,6 +40,7 @@
 "Fast_Forward" = "Imposta velocità";
 "Screenshot" = "Esegui Screenshot";
 "closeGame" = "Chiudi gioco";
+"Cheat_Codes" = "Codici Cheat";
 
 "Handoff Failed" = "Collegamento Handoff fallito";
 "identifier_missing" = "Identificativo del gioco assente!";
@@ -120,6 +121,76 @@
 "WFC_server_connect_text" = "Alcune funzionalità potrebbero essere disabilitate durante il gioco online";
 "WFC_server_disconnect" = "Disconnesso dal server WFC";
 "troublehooting_multiplayer" = "⚠️ Tocca per consultare la guida alla connessione";
+
+"Hold_Buttons" = "blocca pulsanti";
+"change_speed_text" = "Cambia la velocità per questa piattaforma";
+
+"Maximum" = "Massimo";
+
+"Info" = "Informazioni";
+"Auto Save" = "Salvataggio automatico";
+"General" = "Genereali";
+"Locked" = "Bloccato";
+
+"Name" = "Nome";
+"Date" = "Data";
+"Compatible" = "Compatibile";
+"Incompatible" = "Incompatibile";
+
+"Quick_Save_text" = "Crea un nuovo salvataggio rapido premendo il pultante '+' in alto a destra";
+
+"Quick_Load_text" = "Avvia il gioco da un salvataggio rapido riprendendo da dove avevi interrotto selezionando un salvataggio rapido dal menu";
+
+"Incompatible_Save_States" = "Salvataggio rapido non compatibile";
+"Incompatible_Save_States_text" = "Questa versione di <AppName/> non è compatibile precedenti versioni di salvataggi rapidi per Nintendo DS\n\nPuoi trovare i precedenti Salvataggi nelle opzioni del menu";
+
+"No_Save_States" = "Nessun salvataggio rapido";
+"No_Save_States_valid" = "Alcuni salvataggi rapidi non sono compatibili con questa versione di <AppName/>";
+
+"View_Incompatible_Save_States" = "Vedi salvataggi non compatibili";
+"View_compatible_Save_States" = "Vedi salvataggi compatibili";
+
+"Sort_by" = "Ordina per";
+
+"quick_save_export_error" = "Ci sono salvataggi rapidi non compatibli con questa versione di <AppName/>. Puoi esportarli e giocare con versini precedenti" ;
+
+"Learn_More" = "Scopri di più";
+
+"Delete_Save_State" = "Vuoi eliminare questo salvataggio rapido?";
+"Delete_Save_State_text" = "Sei sicuro di vole procedere con l'eliminazione? Non potrai ripristinarlo una volta eliminato";
+
+"Delete" = "Elimina";
+
+"Rename_Save_State" = "Rinomina Salvataggio rapido";
+
+"Change_save_state_after_press" = "L'anteprima del salvataggio rapido è caricata ogni volta che premi a lungo il gioco dal menu principale. Vuoi davvero cambiarlo?";
+
+"Change_Preview_Save_State" = "Vuoi cambiare l'anteprima del salvataggio rapido?";
+
+"Change" = "Cambia";
+
+"quick_save_import_fail" = "Impossibile importare salvataggio rapido";
+"quick_save_export_fail" = "Impossibile esportare salvataggio rapido";
+
+"Set_as_preview" = "Imposta come anteprima";
+"remove_preview" = "Rimuovi anteprima";
+"Mark_as_Compatible" = "Segna come compatibile";
+"Mark_as_not_Compatible" = "Segna come non compatibile";
+"Lock" = "Blocca";
+"Unlock" = "Sblocca";
+"Import" = "Importa";
+"Export" = "Esporta";
+
+"Incompatible_Save_States_message" = "Questo salvataggio rapido non è compatibile con <AppName/>";
+
+"OK" = "Ok";
+
+"Error_editing_lock_save" = "Non puoi modificare un salvaggio protetto";
+"Error_editing_lock_save_text" = "Questo salvataggio deve essere sbloccato prima di precedere con la modifica";
+
+
+
+
 
 
 

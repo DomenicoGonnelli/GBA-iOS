@@ -22,7 +22,7 @@ class PauseViewController: UIViewController, PauseInfoProviding
         return [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem, self.sustainButtonsItem, self.screenshotItem, self.closeGameItem].compactMap { $0 }
     }
     
-    var closeButtonTitle: String = NSLocalizedString("Main Menu", comment: "")
+    var closeButtonTitle: String = "Main_menu".localizable
     
     var menuInsets: UIEdgeInsets? {
         didSet {
@@ -93,7 +93,7 @@ class PauseViewController: UIViewController, PauseInfoProviding
             
             if UIApplication.shared.supportsMultipleScenes
             {
-                let openNewMainWindowAction = UIAction(title: NSLocalizedString("Open New Window", comment: ""), image: UIImage(systemName: "macwindow.badge.plus")) { [weak self] _ in
+                let openNewMainWindowAction =  "Open_in_New_Window".localizable, image: UIImage(systemName: "macwindow.badge.plus")) { [weak self] _ in
                     self?.openNewMainWindow()
                 }
                 
@@ -207,26 +207,25 @@ private extension PauseViewController
         
         guard let emulatorCore = self.emulatorCore else { return }
         
-        self.saveStateItem = MenuItem(text: NSLocalizedString("Save State", comment: ""), image: #imageLiteral(resourceName: "SaveSaveState"), action: { [unowned self] _ in
+        self.saveStateItem = MenuItem(text: "Quick_Save".localizable, image: #imageLiteral(resourceName: "SaveSaveState"), action: { [unowned self] _ in
             self.saveStatesViewControllerMode = .saving
             self.performSegue(withIdentifier: "saveStates", sender: self)
         })
         
-        self.loadStateItem = MenuItem(text: NSLocalizedString("Load State", comment: ""), image: #imageLiteral(resourceName: "LoadSaveState"), action: { [unowned self] _ in
+        self.loadStateItem = MenuItem(text: "Quick_Load".localizable, image: #imageLiteral(resourceName: "LoadSaveState"), action: { [unowned self] _ in
             self.saveStatesViewControllerMode = .loading
             self.performSegue(withIdentifier: "saveStates", sender: self)
         })
         
-        self.cheatCodesItem = MenuItem(text: NSLocalizedString("Cheat Codes", comment: ""), image: #imageLiteral(resourceName: "CheatCodes"), action: { [unowned self] _ in
+        self.cheatCodesItem = MenuItem(text:"Cheat_Codes".localizable, image: #imageLiteral(resourceName: "CheatCodes"), action: { [unowned self] _ in
             self.performSegue(withIdentifier: "cheats", sender: self)
         })
         
-        self.fastForwardItem = MenuItem(text: NSLocalizedString("Fast Forward", comment: ""), image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
-        self.sustainButtonsItem = MenuItem(text: NSLocalizedString("Hold Buttons", comment: ""), image: #imageLiteral(resourceName: "SustainButtons"), action: { _ in })
-        self.screenshotItem = MenuItem(text: NSLocalizedString("Screenshot", comment: ""), image: #imageLiteral(resourceName: "Screenshot"), action: { _ in })
-        self.closeGameItem = MenuItem(text: NSLocalizedString("closeGame", comment: ""), image: #imageLiteral(resourceName: "deleteTeamUserProfile"), action: { _ in })
+        self.fastForwardItem = MenuItem(text: "Fast_Forward".localizable, image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
+        self.sustainButtonsItem = MenuItem(text: "Hold_Buttons".localizable, image: #imageLiteral(resourceName: "SustainButtons"), action: { _ in })
+        self.screenshotItem = MenuItem(text: "Screenshot".localizable, image: #imageLiteral(resourceName: "Screenshot"), action: { _ in })
+        self.closeGameItem = MenuItem(text: "closeGame".localizable, image: #imageLiteral(resourceName: "deleteTeamUserProfile"), action: { _ in })
 
-        
         if ExperimentalFeatures.shared.variableFastForward.isEnabled
         {
             let menu = self.makeFastForwardMenu(for: emulatorCore.game)
@@ -270,7 +269,7 @@ private extension PauseViewController
     {
         guard let deltaCore = Delta.core(for: game.type), #available(iOS 15, *) else { return nil }
         
-        let menu = UIMenu(title: NSLocalizedString("Change the Fast Forward speed for this system.", comment: ""), options: [.singleSelection], children: [
+        let menu = UIMenu(title: "change_speed_text".localizable, options: [.singleSelection], children: [
             UIDeferredMenuElement.uncached { [weak self] completion in
                 let preferredSpeed = ExperimentalFeatures.shared.variableFastForward[game.type]
                 
@@ -300,7 +299,7 @@ private extension PauseViewController
                 }
 
                 let state: UIAction.State = (preferredSpeed == nil) ? .on : .off
-                let action = UIAction(title: NSLocalizedString("Maximum", comment: ""), state: state) { action in
+                let action = UIAction(title: "Maximum".localizable, state: state) { action in
                     ExperimentalFeatures.shared.variableFastForward[game.type] = nil
                     
                     if let fastForwardItem = self?.fastForwardItem
