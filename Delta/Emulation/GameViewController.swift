@@ -308,7 +308,11 @@ class GameViewController: DeltaCore.GameViewController
             case .toggleFastForward:
                 let isFastForwarding = (emulatorCore.rate != emulatorCore.deltaCore.supportedRates.lowerBound)
                 self.performFastForwardAction(activate: !isFastForwarding)
+            case .close:
+                print("close")
             }
+            
+                
         }
         else if self.isMenuButtonHeldDown
         {
@@ -358,6 +362,7 @@ class GameViewController: DeltaCore.GameViewController
             case .toggleFastForward: break
             case .reverseScreens: break
             case .screenshot: break
+            case .close: break
             }
         }
     }
@@ -398,11 +403,11 @@ extension GameViewController
         
         self.sustainButtonsBackgroundView = RSTPlaceholderView(frame: CGRect(x: 0, y: 0, width: vibrancyView.contentView.bounds.width, height: vibrancyView.contentView.bounds.height))
         self.sustainButtonsBackgroundView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.sustainButtonsBackgroundView.textLabel.text = NSLocalizedString("Select Buttons to Hold Down", comment: "")
+        self.sustainButtonsBackgroundView.textLabel.localizedKey = "Select_Hold_Down"
         self.sustainButtonsBackgroundView.textLabel.numberOfLines = 1
         self.sustainButtonsBackgroundView.textLabel.minimumScaleFactor = 0.5
         self.sustainButtonsBackgroundView.textLabel.adjustsFontSizeToFitWidth = true
-        self.sustainButtonsBackgroundView.detailTextLabel.text = NSLocalizedString("Press the Menu button when finished.", comment: "")
+        self.sustainButtonsBackgroundView.detailTextLabel.localizedKey = "menu_press_stop"
         self.sustainButtonsBackgroundView.alpha = 0.0
         vibrancyView.contentView.addSubview(self.sustainButtonsBackgroundView)
         
@@ -412,7 +417,7 @@ extension GameViewController
         self.handoffPlaceholderView.isHidden = true
         self.handoffPlaceholderView.textLabel.isHidden = true
         self.handoffPlaceholderView.detailTextLabel.font = UIFont.preferredFont(forTextStyle: .body)
-        self.handoffPlaceholderView.detailTextLabel.text = NSLocalizedString("Resuming…", comment: "")
+        self.handoffPlaceholderView.detailTextLabel.localizedKey = "Resuming"
         self.handoffPlaceholderView.detailTextLabel.numberOfLines = 1
         self.handoffPlaceholderView.detailTextLabel.minimumScaleFactor = 0.5
         self.handoffPlaceholderView.detailTextLabel.adjustsFontSizeToFitWidth = true
@@ -526,11 +531,11 @@ extension GameViewController
             self.pausingGameController = gameController
             
             let pauseViewController = segue.destination as! PauseViewController
-            pauseViewController.pauseText = (self.game as? Game)?.name ?? NSLocalizedString("Delta", comment: "")
+            pauseViewController.pauseText = (self.game as? Game)?.name ?? "Appname".localizable
             pauseViewController.emulatorCore = self.emulatorCore
             pauseViewController.saveStatesViewControllerDelegate = self
             pauseViewController.cheatsViewControllerDelegate = self
-            pauseViewController.closeButtonTitle = self.isGameScene ? NSLocalizedString("Close", comment: "") : NSLocalizedString("Main Menu", comment: "")
+            pauseViewController.closeButtonTitle = self.isGameScene ? "Close".localizable : "Main_menu".localizable
             
             if let traits = self.controllerView.controllerSkinTraits, let menuInsets = self.controllerView.controllerSkin?.menuInsets(for: traits)
             {
@@ -1040,7 +1045,7 @@ private extension GameViewController
                 
                 if ExperimentalFeatures.shared.toastNotifications.gameSaveEnabled
                 {
-                    self.presentExperimentalToastView(NSLocalizedString("Game Data Saved", comment: ""))
+                    self.presentExperimentalToastView("Game_Data_Saved".localizable)
                 }
             }
             catch CocoaError.fileNoSuchFile
@@ -1164,7 +1169,7 @@ extension GameViewController: SaveStatesViewControllerDelegate
         if ExperimentalFeatures.shared.toastNotifications.stateSaveEnabled,
            saveState.type != .auto
         {
-            self.presentExperimentalToastView(NSLocalizedString("Saved Save State", comment: ""))
+            self.presentExperimentalToastView("Game_Data_Saved".localizable)
         }
         
         if isRunning
@@ -1217,7 +1222,7 @@ extension GameViewController: SaveStatesViewControllerDelegate
             
             if ExperimentalFeatures.shared.toastNotifications.stateLoadEnabled
             {
-                self.presentExperimentalToastView(NSLocalizedString("Loaded Save State", comment: ""))
+                self.presentExperimentalToastView("Game_Data_Loaded".localizable)
             }
         }
         catch EmulatorCore.SaveStateError.doesNotExist
@@ -1416,7 +1421,7 @@ extension GameViewController
             
             if ExperimentalFeatures.shared.toastNotifications.fastForwardEnabled
             {
-                self.presentExperimentalToastView(NSLocalizedString("Fast Forward Enabled", comment: ""))
+                self.presentExperimentalToastView("Fast_Forward_enabled".localizable)
             }
         }
         else
@@ -1425,7 +1430,7 @@ extension GameViewController
             
             if ExperimentalFeatures.shared.toastNotifications.fastForwardEnabled
             {
-                self.presentExperimentalToastView(NSLocalizedString("Fast Forward Disabled", comment: ""))
+                self.presentExperimentalToastView("Fast_Forward_disabled".localizable)
             }
         }
     }
@@ -1474,12 +1479,12 @@ extension GameViewController
                 try await PHPhotoLibrary.requestAuthorizationIfNeeded()
                 try await PHPhotoLibrary.shared().saveScreenshotData(screenshotData)
                 
-                let toastView = RSTToastView(text: NSLocalizedString("Saved screenshot to Photos", comment: ""), detailText: nil)
+                let toastView = RSTToastView(text: "saved_screen_to_photo".localizable, detailText: nil)
                 self.show(toastView)
             }
             catch
             {
-                let toastView = RSTToastView(text: NSLocalizedString("Unable to Save Screenshot", comment: ""), detailText: error.localizedDescription)
+                let toastView = RSTToastView(text: "not_saved_screen_to_photo".localizable, detailText: error.localizedDescription)
                 self.show(toastView)
             }
             
@@ -1792,7 +1797,7 @@ private extension GameViewController
             
             if UserDefaults.standard.jitEnabledAlertCount < 3
             {
-                detailText = NSLocalizedString("You can now Fast Forward DS games up to 3x speed.", comment: "")
+                detailText = "speedMaxDS".localizable
                 duration = 5.0
             }
             else
@@ -1801,7 +1806,7 @@ private extension GameViewController
                 duration = 2.0
             }
             
-            let toastView = RSTToastView(text: NSLocalizedString("JIT Compilation Enabled", comment: ""), detailText: detailText)
+            let toastView = RSTToastView(text: "JIT Compilation Enabled".localizable, detailText: detailText)
             toastView.edgeOffset.vertical = 8
             self.show(toastView, duration: duration)
             
@@ -1834,8 +1839,8 @@ private extension GameViewController
         {
             if let preferredWFCServer = Settings.preferredWFCServer
             {
-                let alertController = UIAlertController(title: NSLocalizedString("Restart Required", comment: ""), message: NSLocalizedString("Please restart this game to apply your changes.", comment: ""), preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: NSLocalizedString("Restart", comment: ""), style: .destructive) { _ in
+                let alertController = UIAlertController(title: "Restart_Required".localizable, message: "Restart_Required_text".localizable, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Restart".localizable, style: .destructive) { _ in
                     if let emulatorBridge = self.emulatorCore?.deltaCore.emulatorBridge as? MelonDSEmulatorBridge
                     {
                         emulatorBridge.wfcDNS = preferredWFCServer
@@ -1846,7 +1851,7 @@ private extension GameViewController
                     
                     navigationController.dismiss(animated: true)
                 })
-                alertController.addAction(UIAlertAction(title: NSLocalizedString("Later", comment: ""), style: .cancel) { _ in
+                alertController.addAction(UIAlertAction(title: "Later".localizable, style: .cancel) { _ in
                     self.emulatorCore?.resume()
                     navigationController.dismiss(animated: true)
                 })
@@ -2096,7 +2101,7 @@ private extension GameViewController
             
             if let error
             {
-                let toastView = RSTToastView(text: NSLocalizedString("Handoff Failed", comment: ""), detailText: error.localizedDescription)
+                let toastView = RSTToastView(text: "Handoff Failed".localizable, detailText: error.localizedDescription)
                 self.show(toastView)
             }
         }
@@ -2166,7 +2171,7 @@ private extension GameViewController
         
         func presentToastView()
         {
-            let toastView = RSTToastView(text: NSLocalizedString("Autorotation Disabled", comment: ""), detailText: NSLocalizedString("Pause game to change orientation.", comment: ""))
+            let toastView = RSTToastView(text: "Autorotation_disabled_title".localizable, detailText: "Autorotation_disabled_mess".localizable)
             self.show(toastView)
         }
         
@@ -2210,11 +2215,11 @@ private extension GameViewController
             DispatchQueue.main.async {
                 emulatorCore.pause()
                 
-                let alertController = UIAlertController(title: NSLocalizedString("Choose WFC Server", comment: ""), message: NSLocalizedString("You must choose a 3rd-party WFC server to use Nintendo DS online features.", comment: ""), preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: NSLocalizedString("Later", comment: ""), style: .cancel) { _ in
+                let alertController = UIAlertController(title: "WFC_server".localizable, message: "WFC_server_text".localizable, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Later".localizable, style: .cancel) { _ in
                     emulatorCore.resume()
                 })
-                alertController.addAction(UIAlertAction(title: NSLocalizedString("Choose Server", comment: ""), style: .default) { _ in
+                alertController.addAction(UIAlertAction(title: "WFC_server_select".localizable, style: .default) { _ in
                     self.chooseWFCServer()
                 })
                 
@@ -2229,7 +2234,7 @@ private extension GameViewController
         emulatorCore.rate = 1.0 // Disable FF in case it is currently enabled.
         
         DispatchQueue.main.async {
-            let toastView = RSTToastView(text: NSLocalizedString("Connecting to Nintendo WFC…", comment: ""), detailText: NSLocalizedString("Some features will be disabled while playing online.", comment: ""))
+            let toastView = RSTToastView(text: "WFC_server_connect".localizable, detailText: "WFC_server_connect_text".localizable)
             self.show(toastView, in: self.view.window, duration: 5.0) // Show in window to fix not receiving touches 🤷‍♂️
             self._onlineConnectionDate = Date()
         }
@@ -2243,13 +2248,13 @@ private extension GameViewController
         emulatorCore.isWirelessMultiplayerActive = false
         
         DispatchQueue.main.async {
-            let toastView = RSTToastView(text: NSLocalizedString("Disconnected from Nintendo WFC", comment: ""), detailText: nil)
+            let toastView = RSTToastView(text: "WFC_server_disconnect".localizable, detailText: nil)
             var duration = 3.0
             
             if let onlineConnectionDate = self._onlineConnectionDate, Date().timeIntervalSince(onlineConnectionDate) < 30
             {
                 // If we're disconnecting within 30 seconds of connecting, show troubleshooting message.
-                toastView.detailTextLabel.text = NSLocalizedString("⚠️ Tap to view our Troubleshooting Guide.", comment: "")
+                toastView.detailTextLabel.text = "troublehooting_multiplayer".localizable
                 
                 let action = UIAction { _ in
                     let troubleshootingGuideURL = URL(string: "https://faq.deltaemulator.com/using-delta/online-multiplayer")!

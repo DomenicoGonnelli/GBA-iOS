@@ -53,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         FirebaseApp.configure()
         
         NotificationManager.shared.registerToPushNotification()
+        MobileAds.shared.start(completionHandler: nil)
         // Deep Links
         if let shortcut = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem
         {

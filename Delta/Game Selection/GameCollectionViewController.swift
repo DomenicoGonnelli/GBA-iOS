@@ -11,12 +11,9 @@ import SwiftUI
 import MobileCoreServices
 import AVFoundation
 import RegexBuilder
-
 import DeltaCore
 import MelonDSDeltaCore
-
 import Roxas
-
 import SDWebImage
 
 extension GameCollectionViewController
@@ -32,20 +29,20 @@ extension GameCollectionViewController
         var errorTitle: String? {
             switch self
             {
-            case .alreadyRunning: return NSLocalizedString("Game Already Running", comment: "")
-            case .downloadingGameSave: return NSLocalizedString("Downloading Save File", comment: "")
-            case .biosNotFound: return NSLocalizedString("Missing Required DS Files", comment: "")
-            case .systemAlreadyRunning: return NSLocalizedString("System Already Running", comment: "")
-            case .multiplayerSessionActive: return NSLocalizedString("Active Multiplayer Game", comment: "")
+            case .alreadyRunning: return "Game_Already_Running".localizable
+            case .downloadingGameSave: return "Downloading_Save_File".localizable
+            case .biosNotFound: return "Missing_Required_DS_Files".localizable
+            case .systemAlreadyRunning: return "System_Already_Running".localizable
+            case .multiplayerSessionActive: return "Active_Multiplayer_Game".localizable
             }
         }
         
         var errorDescription: String? {
             switch self
             {
-            case .alreadyRunning: return NSLocalizedString("Delta can only play one copy of a game at a time.", comment: "")
-            case .downloadingGameSave: return NSLocalizedString("Please wait until after this game's save file has been downloaded before playing to prevent losing save data.", comment: "")
-            case .biosNotFound: return NSLocalizedString("Please import the required files in Delta's settings to play DS games.", comment: "")
+            case .alreadyRunning: return "Game_Already_Running_text".localizable
+            case .downloadingGameSave: return "Downloading_Save_File_text".localizable
+            case .biosNotFound: return "Missing_Required_DS_Files_text".localizable
             case .systemAlreadyRunning(let game, _):
                 var gameNamePhrase = ""
                 if let game
@@ -53,21 +50,18 @@ extension GameCollectionViewController
                     gameNamePhrase = String(format: " (“%@”)", game.name)
                 }
                 
-                let message = String(format: NSLocalizedString("Delta can only play one game per system at a time.\n\nPlease quit the other game%@, or choose another game for a different system.", comment: ""), gameNamePhrase)
+                let message = String(format: "Missing_Required_DS_Files_text".localizable, gameNamePhrase)
                 return message
                 
             case .multiplayerSessionActive(let emulatorCore):
-                let gameName: String
+                var gameName: String = "a game".localizable
                 if let game = emulatorCore?.game as? Game
                 {
                     gameName = game.name
                 }
-                else
-                {
-                    gameName = NSLocalizedString("a game", comment: "")
-                }
                 
-                let message = String(format: NSLocalizedString("You are currently playing %@ online. Please quit this game before playing another one.", comment: ""), gameName)
+                let message = String(format:
+                                        "Active_Multiplayer_Game_text".localizable, gameName)
                 return message
                 
             }
@@ -77,13 +71,13 @@ extension GameCollectionViewController
             switch self
             {
             case .systemAlreadyRunning(_, let session):
-                let quitAction = UIAlertAction(title: NSLocalizedString("Quit Game", comment: ""), style: .destructive) { _ in
+                let quitAction = UIAlertAction(title: "Quit Game".localizable, style: .destructive) { _ in
                     session.quit()
                 }
                 return [quitAction]
                 
             case .multiplayerSessionActive(let emulatorCore):
-                let quitAction = UIAlertAction(title: NSLocalizedString("Quit Game", comment: ""), style: .destructive) { _ in
+                let quitAction = UIAlertAction(title: "Quit Game".localizable, style: .destructive) { _ in
                     emulatorCore?.stop()
                     NotificationCenter.default.post(name: EmulatorCore.emulationDidQuitNotification, object: emulatorCore, userInfo: nil)
                 }
@@ -357,7 +351,7 @@ extension GameCollectionViewController
         {
             self.isResumingGame = false
             
-            let alertController = UIAlertController(title: NSLocalizedString("Unable to Launch Game", comment: ""), message: error.localizedDescription, preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Unable_to_Launch_Game".localizable, message: error.localizedDescription, preferredStyle: .alert)
             
             if error.recoveryActions.isEmpty
             {
@@ -521,9 +515,9 @@ private extension GameCollectionViewController
                 switch error
                 {
                 case .alreadyRunning:
-                    let alertController = UIAlertController(title: NSLocalizedString("Game Paused", comment: ""), message: NSLocalizedString("Would you like to resume where you left off, or restart the game?", comment: ""), preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
-                    alertController.addAction(UIAlertAction(title: NSLocalizedString("Resume", comment: ""), style: .default, handler: { (action) in
+                    let alertController = UIAlertController(title: "GamePaused".localizable, message: "GamePaused_text".localizable, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Cancel".localizable, style: .cancel, handler: nil))
+                    alertController.addAction(UIAlertAction(title: "Resume".localizable, style: .default, handler: { (action) in
                         // This logic has been copied into self.resume()
                         
                         self.isResumingGame = true
@@ -553,14 +547,14 @@ private extension GameCollectionViewController
                         // The game hasn't changed, so the activeEmulatorCore is the same as before, so we need to enable videoManager it again
                         self.activeEmulatorCore?.videoManager.isEnabled = true
                     }))
-                    alertController.addAction(UIAlertAction(title: NSLocalizedString("Restart", comment: ""), style: .destructive, handler: { (action) in
+                    alertController.addAction(UIAlertAction(title: "Restart".localizable, style: .destructive, handler: { (action) in
                         launchGame(ignoringErrors: [LaunchError.alreadyRunning, LaunchError.multiplayerSessionActive(nil)])
                     }))
                     self.present(alertController, animated: true)
                     
                 case .biosNotFound:
-                    let alertController = UIAlertController(title: NSLocalizedString("Missing Required DS Files", comment: ""), message: NSLocalizedString("Delta requires certain files to play Nintendo DS games. Please import them to launch this game.", comment: ""), preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: NSLocalizedString("Import Files", comment: ""), style: .default) { _ in
+                    let alertController = UIAlertController(title: "Missing_Required_DS_Files".localizable, message: "Missing_Required_DS_Files_text".localizable, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Import_Files".localizable, style: .default) { _ in
                         self.performSegue(withIdentifier: "showDSSettings", sender: nil)
                     })
                     alertController.addAction(.cancel)
@@ -687,46 +681,46 @@ private extension GameCollectionViewController
 {
     func actions(for game: Game) -> [UIMenuElement]
     {
-        let openNewWindowAction = UIAction(title: NSLocalizedString("Open in New Window", comment: ""), image: UIImage(symbolNameIfAvailable: "square.grid.2x2")) { [unowned self] action in
+        let openNewWindowAction = UIAction(title: "Open_in_New_Window".localizable, image: UIImage(symbolNameIfAvailable: "square.grid.2x2")) { [unowned self] action in
             self.openInNewWindow(game)
         }
         
-        let renameAction = UIAction(title: NSLocalizedString("Rename", comment: ""), image: UIImage(symbolNameIfAvailable: "pencil")) { [unowned self] action in
+        let renameAction = UIAction(title: "Rename".localizable, image: UIImage(symbolNameIfAvailable: "pencil")) { [unowned self] action in
             self.rename(game)
         }
         
-        let changeArtworkAction = UIAction(title: NSLocalizedString("Change Artwork", comment: ""), image: UIImage(symbolNameIfAvailable: "photo")) { [unowned self] action in
+        let changeArtworkAction = UIAction(title: "Change_Artwork".localizable, image: UIImage(symbolNameIfAvailable: "photo")) { [unowned self] action in
             self.changeArtwork(for: game)
         }
         
-        let shareAction = UIAction(title: NSLocalizedString("Share", comment: ""), image: UIImage(symbolNameIfAvailable: "square.and.arrow.up")) { [unowned self] action in
+        let shareAction = UIAction(title: "Share".localizable, image: UIImage(symbolNameIfAvailable: "square.and.arrow.up")) { [unowned self] action in
             self.share(game)
         }
         
-        let settingsAction = UIAction(title: NSLocalizedString("Game Settings", comment: ""), image: UIImage(symbolNameIfAvailable: "gear")) { [unowned self] _ in
+        let settingsAction = UIAction(title: "Game_Settings".localizable, image: UIImage(symbolNameIfAvailable: "gear")) { [unowned self] _ in
             self.showSettings(for: game)
         }
         
-        let saveStatesAction = UIAction(title: NSLocalizedString("View Save States", comment: ""), image: UIImage(symbolNameIfAvailable: "doc.on.doc")) { [unowned self] action in
+        let saveStatesAction = UIAction(title: "View Save States".localizable, image: UIImage(symbolNameIfAvailable: "doc.on.doc")) { [unowned self] action in
             self.viewSaveStates(for: game)
         }
         
-        let importSaveFile = UIAction(title: NSLocalizedString("Import Save File", comment: ""), image: UIImage(symbolNameIfAvailable: "tray.and.arrow.down")) { [unowned self] _ in
+        let importSaveFile = UIAction(title: "Import Save File".localizable, image: UIImage(symbolNameIfAvailable: "tray.and.arrow.down")) { [unowned self] _ in
             self.importSaveFile(for: game)
         }
         
-        let exportSaveFile = UIAction(title: NSLocalizedString("Export Save File", comment: ""), image: UIImage(symbolNameIfAvailable: "tray.and.arrow.up")) { [unowned self] _ in
+        let exportSaveFile = UIAction(title: "Export Save File".localizable, image: UIImage(symbolNameIfAvailable: "tray.and.arrow.up")) { [unowned self] _ in
             self.exportSaveFile(for: game)
         }
         
-        let deleteAction = UIAction(title: NSLocalizedString("Delete", comment: ""), image: UIImage(symbolNameIfAvailable: "trash"), attributes: .destructive) { [unowned self] action in
+        let deleteAction = UIAction(title: "DeleteGame".localizable, image: UIImage(symbolNameIfAvailable: "trash"), attributes: .destructive) { [unowned self] action in
             self.delete(game)
         }
         
         let openMenu = UIMenu(title: "", options: .displayInline, children: [openNewWindowAction])
         let openActions = UIApplication.shared.supportsMultipleScenes ? [openMenu] : []
         
-        let saveFileMenu = UIMenu(title: NSLocalizedString("Manage Save File", comment: ""), image: UIImage(symbolNameIfAvailable: "doc"), children: [importSaveFile, exportSaveFile])
+        let saveFileMenu = UIMenu(title: "Manage_Save_File".localizable, image: UIImage(symbolNameIfAvailable: "doc"), children: [importSaveFile, exportSaveFile])
         let savesMenu = UIMenu(title: "", options: .displayInline, children: [saveStatesAction, saveFileMenu])
         
         let settingsMenu = UIMenu(title: "", options: .displayInline, children: [settingsAction])
@@ -790,10 +784,10 @@ private extension GameCollectionViewController
     
     func delete(_ game: Game)
     {
-        let confirmationAlertController = UIAlertController(title: NSLocalizedString("Are you sure you want to delete this game?", comment: ""),
-                                                            message: NSLocalizedString("All associated data, such as saves, save states, and cheat codes, will also be deleted.", comment: ""),
+        let confirmationAlertController = UIAlertController(title: "DeleteGame_title".localizable,
+                                                            message: "DeleteGame_mess".localizable,
                                                             preferredStyle: .alert)
-        confirmationAlertController.addAction(UIAlertAction(title: NSLocalizedString("Delete Game", comment: ""), style: .destructive, handler: { action in
+        confirmationAlertController.addAction(UIAlertAction(title: "DeleteGame".localizable, style: .destructive, handler: { action in
             
             DatabaseManager.shared.performBackgroundTask { (context) in
                 let temporaryGame = context.object(with: game.objectID) as! Game
@@ -803,7 +797,7 @@ private extension GameCollectionViewController
             }
             
         }))
-        confirmationAlertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+        confirmationAlertController.addAction(UIAlertAction(title: "Cancel".localizable, style: .cancel, handler: nil))
         
         self.present(confirmationAlertController, animated: true, completion: nil)
     }
@@ -815,20 +809,20 @@ private extension GameCollectionViewController
     
     func rename(_ game: Game)
     {
-        let alertController = UIAlertController(title: NSLocalizedString("Rename Game", comment: ""), message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Rename".localizable, message: nil, preferredStyle: .alert)
         alertController.addTextField { (textField) in
             textField.text = game.name
-            textField.placeholder = NSLocalizedString("Name", comment: "")
+            textField.placeholder = "insert_name".localizable
             textField.autocapitalizationType = .words
             textField.returnKeyType = .done
             textField.enablesReturnKeyAutomatically = true
             textField.addTarget(self, action: #selector(GameCollectionViewController.textFieldTextDidChange(_:)), for: .editingChanged)
         }
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "Cancel".localizable, style: .cancel, handler: { (action) in
             self._renameAction = nil
         }))
         
-        let renameAction = UIAlertAction(title: NSLocalizedString("Rename", comment: ""), style: .default, handler: { [unowned alertController] (action) in
+        let renameAction = UIAlertAction(title: "Rename".localizable, style: .default, handler: { [unowned alertController] (action) in
             self.rename(game, with: alertController.textFields?.first?.text ?? "")
         })
         alertController.addAction(renameAction)
@@ -967,7 +961,7 @@ private extension GameCollectionViewController
                 func presentAlertController()
                 {
                     
-                    let alertController = UIAlertController(title: NSLocalizedString("Unable to Change Artwork", comment: ""), message: NSLocalizedString("The image might be corrupted or in an unsupported format.", comment: ""), preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "changeAW_error_title".localizable, message: "changeAW_error_mess".localizable, preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: RSTSystemLocalizedString("OK"), style: .cancel, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                 }
@@ -1003,7 +997,7 @@ private extension GameCollectionViewController
         }
         catch
         {
-            let alertController = UIAlertController(title: NSLocalizedString("Could Not Share Game", comment: ""), error: error)
+            let alertController = UIAlertController(title: "Could Not Share Game".localizable, error: error)
             self.present(alertController, animated: true, completion: nil)
             
             return
@@ -1058,7 +1052,7 @@ private extension GameCollectionViewController
             }
             catch
             {
-                let alertController = UIAlertController(title: NSLocalizedString("Failed to Import Save File", comment: ""), error: error)
+                let alertController = UIAlertController(title: "import_failed".localizable, error: error)
                 
                 if let presentedViewController = self.presentedViewController
                 {
@@ -1101,7 +1095,7 @@ private extension GameCollectionViewController
         }
         catch
         {
-            let alertController = UIAlertController(title: NSLocalizedString("Failed to Export Save File", comment: ""), error: error)
+            let alertController = UIAlertController(title: "export_failed".localizable, error: error)
             self.present(alertController, animated: true, completion: nil)
         }
     }

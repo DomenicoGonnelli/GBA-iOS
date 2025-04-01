@@ -19,7 +19,7 @@ class PauseViewController: UIViewController, PauseInfoProviding
     }
     
     var pauseItems: [MenuItem] {
-        return [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem, self.sustainButtonsItem, self.screenshotItem, self.askLuItem].compactMap { $0 }
+        return [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem, self.sustainButtonsItem, self.screenshotItem, self.closeGameItem].compactMap { $0 }
     }
     
     var closeButtonTitle: String = NSLocalizedString("Main Menu", comment: "")
@@ -42,7 +42,7 @@ class PauseViewController: UIViewController, PauseInfoProviding
     var fastForwardItem: MenuItem?
     var sustainButtonsItem: MenuItem?
     var screenshotItem: MenuItem?
-    var askLuItem: MenuItem?
+    var closeGameItem: MenuItem?
     
     /// PauseInfoProviding
     var pauseText: String?
@@ -203,6 +203,7 @@ private extension PauseViewController
         self.sustainButtonsItem = nil
         self.fastForwardItem = nil
         self.screenshotItem = nil
+        self.closeGameItem = nil
         
         guard let emulatorCore = self.emulatorCore else { return }
         
@@ -223,16 +224,15 @@ private extension PauseViewController
         self.fastForwardItem = MenuItem(text: NSLocalizedString("Fast Forward", comment: ""), image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
         self.sustainButtonsItem = MenuItem(text: NSLocalizedString("Hold Buttons", comment: ""), image: #imageLiteral(resourceName: "SustainButtons"), action: { _ in })
         self.screenshotItem = MenuItem(text: NSLocalizedString("Screenshot", comment: ""), image: #imageLiteral(resourceName: "Screenshot"), action: { _ in })
+        self.closeGameItem = MenuItem(text: NSLocalizedString("closeGame", comment: ""), image: #imageLiteral(resourceName: "deleteTeamUserProfile"), action: { _ in })
+
         
         if ExperimentalFeatures.shared.variableFastForward.isEnabled
         {
             let menu = self.makeFastForwardMenu(for: emulatorCore.game)
             self.fastForwardItem?.menu = menu
         }
-        // Add Lu menu item if enabled
-        if ExperimentalFeatures.shared.Lu.isEnabled {
-            self.askLuItem = self.configureLuMenuItem()
-        }
+       
     }
     
     func updateSafeAreaInsets()

@@ -5,7 +5,7 @@
   Created by Domenico Gonnelli on 26/03/25.
   Copyright © 2025 Riley Testut. All rights reserved.
 */
-
+"Appname" = "GemBoyAdvace"
 "WelcomeMessage" = "Bentornato su\n<b><AppName/></b>";
 "SplashRulesMessage" = "Hai già letto il regolamento?";
 "SplashAccessMessage" = "Cosa aspetti?\n\n<m>Iscriviti</m> per avere i tuoi salvataggi sempre con te e accedere a <b>contenuti esclusivi</b>";
@@ -33,3 +33,100 @@
 "Tutorial_4_title" = "Riuscirai a vincere la Leg";
 "Tutorial_4_message" = "Scopri tutte le iniziative";
 "Tutorial_4_button1" = "Inizia";
+
+
+"Quick_Save" = "Salvataggio Rapido";
+"Quick_Load" = "Caricamento Rapido";
+"Fast_Forward" = "Imposta velocità";
+"Screenshot" = "Esegui Screenshot";
+"closeGame" = "Chiudi gioco";
+
+"Handoff Failed" = "Collegamento Handoff fallito";
+"identifier_missing" = "Identificativo del gioco assente!";
+"launh_failed" = "Impossibile avviare <AppName/>, riprova più tardi";
+"Retry" = "Riprova";
+"No_Games" = "Non hai ancora nessun gioco 🎮";
+"import_games_label" = "Puoi importare nuovi giochi premendo il pulstante '+' in alto a detra";
+"Resume" = "Riprendi";
+"import" = "Importa da:";
+"Settings" = "Impostazioni";
+"No_Games_Found" = "Nessun gioco trovato";
+"No_Games_Found_text" = "Assicurati che il nome sia corretto oppure prova a cercare un altro gioco";
+"Games" = "Giochi";
+
+"Game_Already_Running" = "Gioco già aperto";
+"Downloading_Save_File" = "Sto scaricando il file salvato";
+"Missing_Required_DS_Files" = "Files DS necessari mancanti";
+"System_Already_Running" = "Il sistema è già avviato";
+"Active_Multiplayer_Game" = "Attiva modalità Multiplayer";
+
+
+"Game_Already_Running_text" = "<AppName/> può aprire solo una copia del gioco per volta";
+"Downloading_Save_File_text" = "Attendi il termine del Download prima di procedere per evitare di perdere i dati salvati";
+"Missing_Required_DS_Files_text" = "Per favore, importa i files necessari su <AppName/> per giocare ai giochi Nintendo DS";
+"System_Already_Running_text" = "<AppName/> può avviare un solo gioco per Piattaforma. Chiudi il gioco o seleziona un'altra piattaforma";
+"Active_Multiplayer_Game_text" = "Attualmente stai giocando online a @% . Chiudi il gioco prima di aprire uno nuovo";
+"a game" = "un gioco";
+"Quit Game" = "Chiudi Gioco";
+
+"Unable_to_Launch_Game" = "Il gioco non può essere Avviato";
+"GamePaused" = "Gioco in pausa";
+"GamePaused_text" = "Vuoi continuare a giocare o riavviare il gioco? (i dati non salvati andranno persi)";
+
+"Cancel" = "Annulla";
+"Restart" = "Riavvia";
+"Import_Files" = "Importa Files";
+"Open_in_New_Window" = "Apri in una nuova pagina";
+"Rename"= "Rinomina";
+"Change_Artwork" = "Cambia copertina";
+"Share" = "Condividi";
+"Game_Settings" = "Impostazioni di gioco";
+"View Save States" = "Apri Salvataggi Rapidi";
+"Import Save File" = "Importa Salvataggi";
+"Export Save File" = "Condividi Salvataggi";
+"DeleteGame" = "Elimina Gioco";
+"Manage_Save_File" = "Gestisci salvataggi";
+"DeleteGame_title" = "Sei sicuro di voler eliminare il gioco?";
+"DeleteGame_mess" = "Tutti i dati associati al gioco, compresi salvataggi, codici e salvataggi rapidi andranno persi.";
+"insert_name" = "Inserisci nuovo nome";
+"changeAW_error_title" = "Impossibile cambiare copertina";
+"changeAW_error_mess" = "L'immagine potrebbe essere corrotta o in un formato non supportato";
+"Could Not Share Game" = "Non è possibile condividere il gioco";
+"import_failed" = "Import del file fallito";
+"export_failed" = "Export del file fallito";
+"Select_Hold_Down" = "Seleziona i pulsanti da 'bloccare'";
+"menu_press_stop" = "Premi il menu quando hai finito";
+"Resuming" = "Caricamento...";
+"Close" = "Chiudi";
+"Main_menu" = "Menu Principale";
+"Game_Data_Saved" = "Dati di gioco Salvati";
+"Game_Data_Loaded" = "Dati di gioco Caricati";
+"Fast_Forward_enabled" = "Velocità aumentata ATTIVA";
+"Fast_Forward_disabled" = "Velocità aumentata ATTIVA";
+"saved_screen_to_photo" = "Screenshot salvato su Foto";
+"not_saved_screen_to_photo" = "Impossibile salvare screenshot";
+"speedMaxDS" = "Puoi portare la velocità ad un massimo di 3x";
+"JIT Compilation Enabled" = "JIT Compilation Enabled";
+"Restart_Required" = "Necessario riavviare il gioco";
+"Restart_Required_text" = "Riavvia il gioco per applicare le modifiche";
+"Later" = "Magari dopo";
+"Autorotation_disabled_title" = "Rotazione automatica - Disattivata";
+"Autorotation_disabled_mess" = "Metti il gioco in pausa per ruotare lo schermo";
+
+"WFC_server" = "Selezione un server WFC";
+"WFC_server_text" = "Devi usare un server WFC di terze parti per usare la funzionalità online di Nintendo DS";
+"WFC_server_select" = "Seleziona Server";
+"WFC_server_connect" = "Connessione con Ninteno WFC in corso";
+"WFC_server_connect_text" = "Alcune funzionalità potrebbero essere disabilitate durante il gioco online";
+"WFC_server_disconnect" = "Disconnesso dal server WFC";
+"troublehooting_multiplayer" = "⚠️ Tocca per consultare la guida alla connessione";
+
+
+
+
+
+
+
+
+
+

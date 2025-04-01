@@ -256,6 +256,7 @@
 		EB69AB282D97828D00311D39 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB262D97828D00311D39 /* SharingManager.swift */; };
 		EB69AB292D97828D00311D39 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB242D97828D00311D39 /* AppStoreReviewManager.swift */; };
 		EB7CB6962D96949400CA27FC /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CB6952D96949400CA27FC /* UIAlertController.swift */; };
+		EB7D1A462D9AE1DA004B4D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB7D1A452D9AE1DA004B4D94 /* InfoPlist.strings */; };
 		EB8E0D292D946055004BFB1F /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D272D946055004BFB1F /* SKProduct.swift */; };
 		EB8E0D2A2D946055004BFB1F /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D182D946055004BFB1F /* Dictionary.swift */; };
 		EB8E0D2C2D946055004BFB1F /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D252D946055004BFB1F /* Optional.swift */; };
@@ -564,7 +565,7 @@
 		BFEF24F21F7DD4FB00454C62 /* SaveStateMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveStateMigrationPolicy.swift; sourceTree = "<group>"; };
 		BFF0742B1E9DC17500ACDF4A /* GBCDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GBCDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA4C081E8A24D600D87934 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
-		BFFA71D71AAC406100EE9DD1 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GemBoy Advance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA71DB1AAC406100EE9DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFA71DC1AAC406100EE9DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFA71E11AAC406100EE9DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -676,6 +677,8 @@
 		EB69AB252D97828D00311D39 /* ColorPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerManager.swift; sourceTree = "<group>"; };
 		EB69AB262D97828D00311D39 /* SharingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingManager.swift; sourceTree = "<group>"; };
 		EB7CB6952D96949400CA27FC /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		EB7D1A432D9AE1DA004B4D94 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB7D1A442D9AE1DA004B4D94 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB8E0D182D946055004BFB1F /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		EB8E0D192D946055004BFB1F /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		EB8E0D1A2D946055004BFB1F /* StringExtensionCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionCommon.swift; sourceTree = "<group>"; };
@@ -1262,6 +1265,7 @@
 		BFEC732F1AAECCBD00650035 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EB7D1A452D9AE1DA004B4D94 /* InfoPlist.strings */,
 				EBBB19622D9971A8009C977A /* Font */,
 				EBBB19652D9971A8009C977A /* Json */,
 				BF6BB2451BB73FE800CCF94A /* Assets.xcassets */,
@@ -1320,7 +1324,7 @@
 		BFFA71D81AAC406100EE9DD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFFA71D71AAC406100EE9DD1 /* Delta.app */,
+				BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */,
 				D5D7C1F129E60DFF00663793 /* libDeltaFeatures.a */,
 				D539102F29E88B6B0006B350 /* DeltaPreviews.framework */,
 				EB8E0D612D947655004BFB1F /* Notification.appex */,
@@ -1972,7 +1976,7 @@
 				EBBB19F62D998826009C977A /* GoogleSignInSwift */,
 			);
 			productName = Delta;
-			productReference = BFFA71D71AAC406100EE9DD1 /* Delta.app */;
+			productReference = BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D539102E29E88B6B0006B350 /* DeltaPreviews */ = {
@@ -2116,6 +2120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D797E9298DCC7300738869 /* cheatbase.zip in Resources */,
+				EB7D1A462D9AE1DA004B4D94 /* InfoPlist.strings in Resources */,
 				EBBB19862D9972DB009C977A /* OnBoardingPages.storyboard in Resources */,
 				BFFA71E21AAC406100EE9DD1 /* Main.storyboard in Resources */,
 				D5AE76C62C2B7F3D0086471B /* Icons.xcassets in Resources */,
@@ -2616,6 +2621,15 @@
 			path = Delta;
 			sourceTree = SOURCE_ROOT;
 		};
+		EB7D1A452D9AE1DA004B4D94 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB7D1A432D9AE1DA004B4D94 /* InfoPlist.strings */,
+				EB7D1A442D9AE1DA004B4D94 /* InfoPlist.strings */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		EB8E0D542D947537004BFB1F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2809,7 +2823,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "Delta/Supporting Files/Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Advance";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2857,6 +2872,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator;
+				PRODUCT_NAME = "GemBoy Advance";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -2885,7 +2901,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "Delta/Supporting Files/Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Advance";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2897,6 +2914,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator;
+				PRODUCT_NAME = "GemBoy Advance";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;

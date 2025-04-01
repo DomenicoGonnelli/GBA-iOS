@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "BoxArt.png",
+      "filename" : "BoxArt.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "BoxArt@2x.png",
+      "filename" : "BoxArt@2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "BoxArt@3x.png",
+      "filename" : "BoxArt@3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

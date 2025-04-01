@@ -91,17 +91,12 @@ extension GamesViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        let faqButton = UIButton(type: .system)
-        faqButton.addTarget(self, action: #selector(GamesViewController.openFAQ), for: .primaryActionTriggered)
-        faqButton.setTitle(NSLocalizedString("Learn More…", comment: ""), for: .normal)
-        faqButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title3)
                 
         self.placeholderView = RSTPlaceholderView(frame: self.view.bounds)
         self.placeholderView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.placeholderView.textLabel.text = NSLocalizedString("No Games", comment: "")
-        self.placeholderView.detailTextLabel.text = NSLocalizedString("You can import games by pressing the + button in the top right.", comment: "")
-        self.placeholderView.stackView.addArrangedSubview(faqButton)
+        self.placeholderView.textLabel.text = "No_Games".localizable
+        self.placeholderView.detailTextLabel.text = "import_games_label".localizable
+      
         self.placeholderView.stackView.setCustomSpacing(20.0, after: self.placeholderView.detailTextLabel)
         self.view.insertSubview(self.placeholderView, at: 0)
         
@@ -118,7 +113,7 @@ extension GamesViewController
         
         if #available(iOS 16, *)
         {
-            let resumeButton = UIBarButtonItem(title: NSLocalizedString("Resume", comment: ""), style: .done, target: self, action: #selector(GamesViewController.resumeGame))
+            let resumeButton = UIBarButtonItem(title: "Resume".localizable, style: .done, target: self, action: #selector(GamesViewController.resumeGame))
             resumeButton.isHidden = true
             self.resumeButton = resumeButton
             
@@ -157,7 +152,7 @@ extension GamesViewController
             self.importController.presentingViewController = self
             
             let importActions = self.importController.makeActions().menuActions
-            let importMenu = UIMenu(title: NSLocalizedString("Import From…", comment: ""), image: UIImage(systemName: "square.and.arrow.down"), children: importActions)
+            let importMenu = UIMenu(title:  "import".localizable, image: UIImage(systemName: "square.and.arrow.down"), children: importActions)
             self.importButton.menu = importMenu
 
             self.importButton.action = nil
@@ -168,7 +163,7 @@ extension GamesViewController
             self.importController.barButtonItem = self.importButton
         }
         
-        self.navigationItem.leftBarButtonItem?.accessibilityLabel = NSLocalizedString("Settings", comment: "")
+        self.navigationItem.leftBarButtonItem?.accessibilityLabel = "Settings".localizable
         
         self.prepareSearchController()
         
@@ -199,12 +194,7 @@ extension GamesViewController
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
-        
-        if !UserDefaults.standard.didShowWhatsNew
-        {
-            self.performSegue(withIdentifier: "showWhatsNew", sender: nil)
-            UserDefaults.standard.didShowWhatsNew = true
-        }
+    
     }
     
     override func didReceiveMemoryWarning()
@@ -257,8 +247,8 @@ private extension GamesViewController
         searchResultsController.activeEmulatorCore = self.activeEmulatorCore
         
         let placeholderView = RSTPlaceholderView()
-        placeholderView.textLabel.text = NSLocalizedString("No Games Found", comment: "")
-        placeholderView.detailTextLabel.text = NSLocalizedString("Please make sure the name is correct, or try searching for another game.", comment: "")
+        placeholderView.textLabel.localizedKey = "No_Games_Found"
+        placeholderView.detailTextLabel.localizedKey = "No_Games_Found_text"
         
         switch self.theme
         {
@@ -401,8 +391,8 @@ private extension GamesViewController
         }
         else
         {
-            self.title = NSLocalizedString("Games", comment: "")
-            
+            self.title = "Games".localizable
+
             self.pageViewController.view.setHidden(true, animated: animated)
             self.pageViewController.view.superview?.setHidden(true, animated: animated)
             self.placeholderView.setHidden(false, animated: animated)

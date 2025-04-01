@@ -13,7 +13,8 @@ class GridMenuViewController: UICollectionViewController
 {
     var items: [MenuItem] {
         get { return self.dataSource.items }
-        set { self.dataSource.items = newValue; self.updateItems() }
+        set {
+            self.dataSource.items = newValue; self.updateItems() }
     }
     
     var isVibrancyEnabled = true

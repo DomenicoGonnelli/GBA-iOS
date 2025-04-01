@@ -137,7 +137,7 @@ extension SceneDelegate
         
         Logger.main.error("Failed to continue game via Handoff. \(error.localizedDescription, privacy: .public)")
         
-        let alertController = UIAlertController(title: NSLocalizedString("Handoff Failed", comment: ""), error: error)
+        let alertController = UIAlertController(title: "Handoff Failed".localizable, error: error)
         self.present(alertController)
     }
 }
@@ -172,7 +172,7 @@ private extension SceneDelegate
                 do
                 {
                     guard let gameID = userActivity.userInfo?[NSUserActivity.gameIDKey] as? String else {
-                        throw CocoaError(.fileNoSuchFile, userInfo: [NSLocalizedFailureReasonErrorKey: NSLocalizedString("The game's identifier is missing.", comment: "")])
+                        throw CocoaError(.fileNoSuchFile, userInfo: [NSLocalizedFailureReasonErrorKey: "identifier_missing".localizable])
                     }
                     
                     let fetchRequest = Game.fetchRequest()
@@ -187,7 +187,7 @@ private extension SceneDelegate
                 {
                     Logger.main.error("Failed to load game for Handoff. \(error.localizedDescription, privacy: .public)")
                     
-                    let alertController = UIAlertController(title: NSLocalizedString("Handoff Failed", comment: ""), error: error)
+                    let alertController = UIAlertController(title: "Handoff Failed".localizable, error: error)
                     self.present(alertController)
                 }
                 

@@ -1,0 +1,14 @@
+/* 
+  infoPlist.strings
+  Project
+
+  Created by EGONNEDGJ on 26/12/23.
+  
+*/
+
+//infoPlist
+
+"NSFaceIDUsageDescription" = "Utilizza il riconoscimento biometrico per rendere più sicuro l'accesso al tuo profilo";
+"NSPhotoLibraryAddUsageDescription" = "L'app utilizza l'accesso alle foto per darti la possibilità di seleziona un'immagine del profilo personalizzata";
+"NSPhotoLibraryUsageDescription" = "L'app utilizza l'accesso alle foto per darti la possibilità di seleziona un'immagine del profilo personalizzata";
+"NSUserTrackingUsageDescription" = "L'app utilizza i tuoi dati solamente al fine di monitorare la propria efficienza e rendere il sistema più sicuro e solido.";
