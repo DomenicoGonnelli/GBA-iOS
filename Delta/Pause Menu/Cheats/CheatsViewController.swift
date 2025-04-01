@@ -42,16 +42,16 @@ extension CheatsViewController
     {
         super.viewDidLoad()
         
-        self.title = NSLocalizedString("Cheats", comment: "")
+        self.title = "Cheats".localizable
         
         let vibrancyEffect = UIVibrancyEffect(blurEffect: UIBlurEffect(style: .dark))
         let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
         
         let placeholderView = RSTPlaceholderView(frame: CGRect(x: 0, y: 0, width: vibrancyView.bounds.width, height: vibrancyView.bounds.height))
         placeholderView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        placeholderView.textLabel.text = NSLocalizedString("No Cheats", comment: "")
+        placeholderView.textLabel.text = "No_Cheats".localizable
         placeholderView.textLabel.textColor = UIColor.white
-        placeholderView.detailTextLabel.text = NSLocalizedString("You can add a new cheat by pressing the + button in the top right.", comment: "")
+        placeholderView.detailTextLabel.text = "add_cheat_info".localizable
         placeholderView.detailTextLabel.textColor = UIColor.white
         vibrancyView.contentView.addSubview(placeholderView)
         
@@ -117,17 +117,17 @@ private extension CheatsViewController
         // CheatBase only contains DS cheats for now, so hide option completely for other systems.
         guard self.game.type == .ds else { return }
         
-        var searchCheatBaseTitle = NSLocalizedString("Search CheatBase", comment: "")
+        var searchCheatBaseTitle = "Search_CheatBase".localizable
         var attributes: UIMenuElement.Attributes = []
         
         if let cheats = self.cheatBaseCheats, cheats.isEmpty
         {
-            searchCheatBaseTitle = NSLocalizedString("No Cheats in CheatBase", comment: "")
+            searchCheatBaseTitle = "No_CheatBase".localizable
             attributes = [.disabled]
         }
         
         let addCheatMenu = UIMenu(children: [
-            UIAction(title: NSLocalizedString("New Cheat Code", comment: ""), image: UIImage(systemName: "square.and.pencil")) { [weak self] _ in
+            UIAction(title: "New_Cheat".localizable, image: UIImage(systemName: "square.and.pencil")) { [weak self] _ in
                 self?.addCheat()
             },
             
@@ -218,7 +218,7 @@ private extension CheatsViewController
             catch
             {
                 DispatchQueue.main.async {
-                    let alertController = UIAlertController(title: NSLocalizedString("Unable to Add Cheat", comment: ""), error: error)
+                    let alertController = UIAlertController(title: "no_added_cheat".localizable, error: error)
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
@@ -291,11 +291,11 @@ extension CheatsViewController
     {
         let cheat = self.dataSource.item(at: indexPath)
         
-        let deleteAction = UITableViewRowAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { (action, indexPath) in
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
             self.deleteCheat(cheat)
         }
         
-        let editAction = UITableViewRowAction(style: .normal, title: NSLocalizedString("Edit", comment: "")) { (action, indexPath) in
+        let editAction = UITableViewRowAction(style: .normal, title: "Edit".localizable) { (action, indexPath) in
             let editCheatViewController = self.makeEditCheatViewController(cheat: cheat)
             editCheatViewController.presentWithPresentingViewController(self)
         }

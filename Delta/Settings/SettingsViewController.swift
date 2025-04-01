@@ -144,19 +144,13 @@ class SettingsViewController: UITableViewController
         }
         else if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         {
-            #if LITE
-            self.versionLabel.text = NSLocalizedString(String(format: "Delta Lite %@", version), comment: "Delta Version")
-            #else
-            self.versionLabel.text = NSLocalizedString(String(format: "GBA %@", version), comment: "GemBoy Advance Version")
-            #endif
+           
+            self.versionLabel.text =String(format: "app_version".localizable, version)
+           
         }
         else
         {
-            #if LITE
-            self.versionLabel.text = NSLocalizedString("Delta Lite", comment: "")
-            #else
-            self.versionLabel.text = NSLocalizedString("GBA", comment: "")
-            #endif
+            self.versionLabel.text = "Appname".localizable;
         }
         
         if #available(iOS 15, *)
@@ -257,11 +251,8 @@ private extension SettingsViewController
             
             return true
             
-        #if LEGACY || BETA
+       
         case .patreon: return false
-        #elseif APP_STORE
-        case .patreon: return false
-        #endif
             
         case .hapticTouch:
             if #available(iOS 13, *)
@@ -394,35 +385,6 @@ private extension SettingsViewController
         Settings.isQuickGesturesEnabled = sender.isOn
     }
     
-    func openTwitter(username: String)
-    {
-        let twitterAppURL = URL(string: "twitter://user?screen_name=" + username)!
-        UIApplication.shared.open(twitterAppURL, options: [:]) { (success) in
-            if success
-            {
-                if let selectedIndexPath = self.tableView.indexPathForSelectedRow
-                {
-                    self.tableView.deselectRow(at: selectedIndexPath, animated: true)
-                }
-            }
-            else
-            {
-                let safariURL = URL(string: "https://twitter.com/" + username)!
-                
-                let safariViewController = SFSafariViewController(url: safariURL)
-                safariViewController.preferredControlTintColor = .deltaPurple
-                self.present(safariViewController, animated: true, completion: nil)
-            }
-        }
-    }
-    
-    func openThreads(username: String)
-    {
-        // Rely on universal links to open app.
-        
-        let safariURL = URL(string: "https://www.threads.net/@" + username)!
-        UIApplication.shared.open(safariURL, options: [:])
-    }
     
     @available(iOS 14, *)
     func showContributors()
@@ -524,7 +486,7 @@ extension SettingsViewController
             // App Store builds never show the Join Patreon row.
             return 1
             #else
-            return super.tableView(tableView, numberOfRowsInSection: sectionIndex)
+            return 1
             #endif
             
         default:
@@ -577,14 +539,14 @@ extension SettingsViewController
             
         case .cores:
             let preferredCore = Settings.preferredCore(for: .ds)
-            cell.detailTextLabel?.text = preferredCore?.metadata?.name.value ?? preferredCore?.name ?? NSLocalizedString("Unknown", comment: "")
+            cell.detailTextLabel?.text = preferredCore?.metadata?.name.value ?? preferredCore?.name ?? "Unknown".localizable
             
         case .patreon:
             let row = PatreonRow(rawValue: indexPath.row)!
             switch row
             {
             case .joinPatreon:
-                cell.textLabel?.text = NSLocalizedString("Join our Patreon", comment: "")
+                print("")
                 
             case .connectAccount:
                 var content = cell.defaultContentConfiguration()
@@ -670,7 +632,7 @@ extension SettingsViewController
                 }
                 else
                 {
-                    let toastView = RSTToastView(text: NSLocalizedString("Cannot Send Mail", comment: ""), detailText: nil)
+                    let toastView = RSTToastView(text: "Cannot_Send_Mail".localizable, detailText: nil)
                     toastView.show(in: self.navigationController?.view ?? self.view, duration: 4.0)
                 }
                 
@@ -747,8 +709,8 @@ extension SettingsViewController
         
         switch section
         {
-        case .airPlay where self.view.traitCollection.userInterfaceIdiom == .pad: return NSLocalizedString("AirPlay / External Displays", comment: "")
-        case .hapticTouch where self.view.traitCollection.forceTouchCapability == .available: return NSLocalizedString("3D Touch", comment: "")
+        case .airPlay where self.view.traitCollection.userInterfaceIdiom == .pad: return "external_display".localizable
+        case .hapticTouch where self.view.traitCollection.forceTouchCapability == .available: return "3D_Touch".localizable
         default: return super.tableView(tableView, titleForHeaderInSection: section.rawValue)
         }
     }
@@ -763,10 +725,10 @@ extension SettingsViewController
         case .controllerSkins:
             guard #available(iOS 15, *), let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: AttributedHeaderFooterView.reuseIdentifier) as? AttributedHeaderFooterView else { break }
             
-            var attributedText = AttributedString(localized: "Customize the appearance of each system.")
+            var attributedText = "customize_appearence".localizable
             attributedText += " "
             
-            var learnMore = AttributedString(localized: "Learn more…")
+            var learnMore = "Learn_More".localizable
             learnMore.link = URL(string: "https://faq.deltaemulator.com/using-delta/controller-skins")
             attributedText += learnMore
             
@@ -776,11 +738,7 @@ extension SettingsViewController
             
         case .patreon:
             guard #available(iOS 15, *), let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: AttributedHeaderFooterView.reuseIdentifier) as? AttributedHeaderFooterView else { break }
-            
-          
-#if !APP_STORE
-            footerView.attributedText = AttributedString(localized: "Support future development and receive early access to new features by becoming a patron.")
-#endif
+        
             
             return footerView
             
@@ -803,10 +761,10 @@ extension SettingsViewController
         case .airPlay:
             switch (Settings.supportsExternalDisplays, Settings.features.dsAirPlay.topScreenOnly, Settings.features.dsAirPlay.layoutAxis)
             {
-            case (false, _, _): return NSLocalizedString("Games will not take over the entire display when AirPlaying.", comment: "")
-            case (true, true, _): return NSLocalizedString("When AirPlaying DS games, only the top screen will appear on the external display.", comment: "")
-            case (true, false, .vertical): return NSLocalizedString("When AirPlaying DS games, both screens will be stacked vertically on the external display.", comment: "")
-            case (true, false, .horizontal): return NSLocalizedString("When AirPlaying DS games, both screens will be placed side-by-side on the external display.", comment: "")
+            case (false, _, _): return "airPLay_messase_1".localizable
+            case (true, true, _): return "airPLay_messase_2".localizable
+            case (true, false, .vertical): return "airPLay_messase_3".localizable
+            case (true, false, .horizontal): return "airPLay_messase_4".localizable
             }
             
         default: return super.tableView(tableView, titleForFooterInSection: section.rawValue)

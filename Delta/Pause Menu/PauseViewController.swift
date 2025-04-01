@@ -93,7 +93,7 @@ class PauseViewController: UIViewController, PauseInfoProviding
             
             if UIApplication.shared.supportsMultipleScenes
             {
-                let openNewMainWindowAction =  "Open_in_New_Window".localizable, image: UIImage(systemName: "macwindow.badge.plus")) { [weak self] _ in
+                let openNewMainWindowAction = UIAction(title: "Open_in_New_Window".localizable, image: UIImage(systemName: "macwindow.badge.plus")) { [weak self] _ in
                     self?.openNewMainWindow()
                 }
                 

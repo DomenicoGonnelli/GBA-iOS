@@ -24,12 +24,12 @@ extension CheatValidator
         var errorDescription: String? {
             switch self
             {
-            case .invalidCode: return NSLocalizedString("The cheat code isn't in the correct format.", comment: "")
-            case .invalidName: return NSLocalizedString("The name of this cheat is invalid.", comment: "")
-            case .invalidGame: return NSLocalizedString("There is no associated game with this cheat.", comment: "")
-            case .duplicateName: return NSLocalizedString("A cheat already exists with this name.", comment: "")
-            case .duplicateCode: return NSLocalizedString("A cheat already exists with this code.", comment: "")
-            case .unknownCheatType: return NSLocalizedString("Delta does not support this cheat type.", comment: "")
+            case .invalidCode: return "cheat_error_format"
+            case .invalidName: return "cheat_error_name"
+            case .invalidGame: return "cheat_error_game"
+            case .duplicateName: return "cheat_error_exist_name"
+            case .duplicateCode: return "cheat_error_exist_code"
+            case .unknownCheatType: return "cheat_error_support"
             }
         }
     }

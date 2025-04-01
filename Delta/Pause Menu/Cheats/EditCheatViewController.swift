@@ -61,13 +61,13 @@ class EditCheatViewController: UITableViewController
     {
         guard let cheat = self.cheat else { return [] }
         
-        let copyCodeAction = UIPreviewAction(title: NSLocalizedString("Copy Code", comment: ""), style: .default) { (action, viewController) in
+        let copyCodeAction = UIPreviewAction(title: "Copy Code".localizable, style: .default) { (action, viewController) in
             UIPasteboard.general.string = cheat.code
         }
         
         let presentingViewController = self.presentingViewController!
         
-        let editCheatAction = UIPreviewAction(title: NSLocalizedString("Edit", comment: ""), style: .default) { (action, viewController) in
+        let editCheatAction = UIPreviewAction(title: "Edit".localizable, style: .default) { (action, viewController) in
             // Delaying until next run loop prevents self from being dismissed immediately
             DispatchQueue.main.async {
                 let editCheatViewController = viewController as! EditCheatViewController
@@ -76,7 +76,7 @@ class EditCheatViewController: UITableViewController
             }
         }
         
-        let deleteAction = UIPreviewAction(title: NSLocalizedString("Delete", comment: ""), style: .destructive) { [unowned self] (action, viewController) in
+        let deleteAction = UIPreviewAction(title: "Delete".localizable, style: .destructive) { [unowned self] (action, viewController) in
             self.delegate?.editCheatViewController(self, deactivateCheat: cheat)
             
             DatabaseManager.shared.performBackgroundTask { (context) in
@@ -86,10 +86,10 @@ class EditCheatViewController: UITableViewController
             }
         }
         
-        let cancelDeleteAction = UIPreviewAction(title: NSLocalizedString("Cancel", comment: ""), style: .default) { (action, viewController) in
+        let cancelDeleteAction = UIPreviewAction(title: "Cancel".localizable, style: .default) { (action, viewController) in
         }
         
-        let deleteActionGroup = UIPreviewActionGroup(title: NSLocalizedString("Delete", comment: ""), style: .destructive, actions: [deleteAction, cancelDeleteAction])
+        let deleteActionGroup = UIPreviewActionGroup(title: "Delete".localizable, style: .destructive, actions: [deleteAction, cancelDeleteAction])
         
         return [copyCodeAction, editCheatAction, deleteActionGroup]
     }
@@ -134,7 +134,7 @@ extension EditCheatViewController
         
         if name.count == 0
         {
-            self.title = NSLocalizedString("Cheat", comment: "")
+            self.title = "Cheat".localizable
         }
         else
         {
@@ -229,7 +229,7 @@ private extension EditCheatViewController
         var title = sender.text ?? ""
         if title.count == 0
         {
-            title = NSLocalizedString("Cheat", comment: "")
+            title = "Cheat".localizable
         }
         
         self.title = title
@@ -286,25 +286,25 @@ private extension EditCheatViewController
             }
             catch CheatValidator.Error.invalidCode
             {
-                self.presentErrorAlert(title: NSLocalizedString("Invalid Code", comment: ""), message: NSLocalizedString("Please make sure you typed the cheat code in correctly and try again.", comment: "")) {
+                self.presentErrorAlert(title: "invalid_code".localizable, message: "invalid_code_text".localizable) {
                     self.codeTextView.becomeFirstResponder()
                 }
             }
             catch CheatValidator.Error.invalidName
             {
-                self.presentErrorAlert(title: NSLocalizedString("Invalid Name", comment: ""), message: NSLocalizedString("Please rename this cheat and try again.", comment: "")) {
+                self.presentErrorAlert(title: "invalid_name".localizable, message: "invalid_name_text.".localizable) {
                     self.codeTextView.becomeFirstResponder()
                 }
             }
             catch CheatValidator.Error.duplicateCode
             {
-                self.presentErrorAlert(title: NSLocalizedString("Duplicate Code", comment: ""), message: NSLocalizedString("A cheat already exists with this code. Please type in a different code and try again.", comment: "")) {
+                self.presentErrorAlert(title: "duplicate_codee".localizable, message: "duplicate_code_text".localizable) {
                     self.codeTextView.becomeFirstResponder()
                 }
             }
             catch CheatValidator.Error.duplicateName
             {
-                self.presentErrorAlert(title: NSLocalizedString("Duplicate Name", comment: ""), message: NSLocalizedString("A cheat already exists with this name. Please rename this cheat and try again.", comment: "")) {
+                self.presentErrorAlert(title: "duplicate_name".localizable, message: "duplicate_name_tex".localizable) {
                     self.nameTextField.becomeFirstResponder()
                 }
             }
@@ -312,7 +312,7 @@ private extension EditCheatViewController
             {
                 print(error)
                 
-                self.presentErrorAlert(title: NSLocalizedString("Unknown Error", comment: ""), message: NSLocalizedString("An error occured. Please make sure you typed the cheat code in correctly and try again.", comment: "")) {
+                self.presentErrorAlert(title: "Generic_Error".localizable, message: "Generic_Error_text".localizable) {
                     self.codeTextView.becomeFirstResponder()
                 }
             }
@@ -334,7 +334,7 @@ private extension EditCheatViewController
     {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { action in
+            alertController.addAction(UIAlertAction(title: "OK".localizable, style: .default, handler: { action in
                 handler?()
             }))
             self.present(alertController, animated: true, completion: nil)
@@ -351,7 +351,7 @@ extension EditCheatViewController
         case .name: return super.tableView(tableView, titleForFooterInSection: section)
             
         case .type:
-            let title = String.localizedStringWithFormat("Code format is %@.", self.selectedCheatFormat.format)
+            let title = String(format: "code_format".localizable, self.selectedCheatFormat.format)
             return title
             
         case .code:
@@ -360,10 +360,10 @@ extension EditCheatViewController
             
             switch (containsSpaces, containsDashes)
             {
-            case (true, false): return NSLocalizedString("Spaces will be inserted automatically as you type.", comment: "")
-            case (false, true): return NSLocalizedString("Dashes will be inserted automatically as you type.", comment: "")
-            case (true, true): return NSLocalizedString("Spaces and dashes will be inserted automatically as you type.", comment: "")
-            case (false, false): return NSLocalizedString("Code will be formatted automatically as you type.", comment: "")
+            case (true, false): return "space_auto.".localizable
+            case (false, true): return "Dashes will be inserted automatically as you type.".localizable
+            case (true, true): return "dash_space_auto".localizable
+            case (false, false): return "dash_space_auto".localizable
             }
         }
     }

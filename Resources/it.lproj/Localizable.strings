@@ -5,7 +5,7 @@
   Created by Domenico Gonnelli on 26/03/25.
   Copyright © 2025 Riley Testut. All rights reserved.
 */
-"Appname" = "GemBoyAdvace"
+"Appname" = "GemBoyAdvace";
 "WelcomeMessage" = "Bentornato su\n<b><AppName/></b>";
 "SplashRulesMessage" = "Hai già letto il regolamento?";
 "SplashAccessMessage" = "Cosa aspetti?\n\n<m>Iscriviti</m> per avere i tuoi salvataggi sempre con te e accedere a <b>contenuti esclusivi</b>";
@@ -188,16 +188,58 @@
 "Error_editing_lock_save" = "Non puoi modificare un salvaggio protetto";
 "Error_editing_lock_save_text" = "Questo salvataggio deve essere sbloccato prima di precedere con la modifica";
 
+"Cheats" = "Codici";
+"No_Cheats" = "Nessun Codice";
+"add_cheat_info" = "Puoi aggiungere nuovi codici premendo il pulsante '+' in alto a destra";
 
+"Search_CheatBase" = "Cerca Codici CheatBase";
+"No_CheatBase" = "Nessun Codice CheatBase";
+"New_Cheat" = "Nuovo Codice";
+"no_added_cheat" = "Non è stato possibile aggiungere Codice";
 
+"Edit" = "Modifica";
 
+"Copy Code" = "Copia codice";
+"Cheat" = "Codice";
 
+"invalid_code" = "Codice non valido";
+"invalid_code_text" = "Assicurati che il codice che stai inserendo sia valido e riprova";
 
+"invalid_name" = "Nome non valido";
+"invalid_name_text" = "Rinomina il codice e riprova";
 
+"duplicate_code" = "Codice già esistente";
+"duplicate_code_text" = "Questo codice è già stato inserito, insierisci un nuovo codice";
 
+"duplicate_name" = "Nome già esistente";
+"duplicate_name_text" = "Non è possibile avere due codici con lo stesso nome. Per favore, rinominalo e riprova";
 
+"Generic_Error" = "Ops, vi è verificato un errore";
+"Generic_Error_text" = "Si è verificato un errore, riprova";
 
+"code_format" = "Il Format del codice è %@";
 
+"space_auto"= "Gli spazi vengono inseriti automaticamente mentre scrivi";
+"dash_auto"= "I '-' vengono inseriti automaticamente mentre scrivi";
+"dash_space_auto"= "Il codice viene automaticamente formattato correttamente mentre scrivi";
 
+"cheat_error_format" = "Il codice non è nel format corretto";
+"cheat_error_name" = "Il nome del codice non è valido";
+"cheat_error_game" = "Non ci sono giochi associati a questo codice";
+"cheat_error_exist_name" = "Esiste già un altro codice con questo nome";
+"cheat_error_exist_code" = "Questo codice è stato precedentemente inserito";
+"cheat_error_support" = "Il codice non è supportato dall'App";
 
+"app_version" = "v. %@";
+"Unknown" = "Sconosciuto";
+"Cannot_Send_Mail" = "Impossibile inviare mail";
 
+"external_display" = "AirPlay / Display Esterni";
+"3D_Touch" = "3D Touch";
+
+"customize_appearence" = "Personalizza aspetto per ogni piattaforma";
+
+"airPLay_messase_1" = "Quando si usa AirPlay i giochi non sono fruibili a schermo intero";
+"airPLay_messase_2" = "Quando si riproducono giochi DS tramite AirPlay, sul display esterno verrà visualizzato solo lo schermo superiore";
+"airPLay_messase_3" = "Quando si riproducono giochi DS tramite AirPlay, entrambi gli schermi verranno mostrati verticalmente sul display esterno.";
+"airPLay_messase_4" = "Quando si riproducono giochi DS tramite AirPlay, entrambi gli schermi verranno posizionati uno accanto all'altro sul display esterno.";
