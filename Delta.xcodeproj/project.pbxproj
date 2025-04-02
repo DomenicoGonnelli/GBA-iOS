@@ -206,7 +206,6 @@
 		D5AE76C22C2B59240086471B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = D5AE76C12C2B59240086471B /* KeychainAccess */; };
 		D5AE76C42C2B59360086471B /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE76C32C2B59360086471B /* Keychain.swift */; };
 		D5AE76C62C2B7F3D0086471B /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5AE76C52C2B7F3D0086471B /* Icons.xcassets */; };
-		D5AE76C82C2B808F0086471B /* AltAppIconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE76C72C2B808F0086471B /* AltAppIconsViewController.swift */; };
 		D5AE76CA2C2B809C0086471B /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5AE76C52C2B7F3D0086471B /* Icons.xcassets */; };
 		D5AE76CB2C2B81000086471B /* OSLog+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCCC32A85765900E22131 /* OSLog+Delta.swift */; };
 		D5AE76CD2C2B81870086471B /* AltIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5AE76CC2C2B81870086471B /* AltIcons.plist */; };
@@ -637,7 +636,6 @@
 		D5AE76BC2C2B53FC0086471B /* _PatreonAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _PatreonAccount.swift; sourceTree = "<group>"; };
 		D5AE76C32C2B59360086471B /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		D5AE76C52C2B7F3D0086471B /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
-		D5AE76C72C2B808F0086471B /* AltAppIconsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltAppIconsViewController.swift; sourceTree = "<group>"; };
 		D5AE76CC2C2B81870086471B /* AltIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AltIcons.plist; sourceTree = "<group>"; };
 		D5AE76D02C2BA5B70086471B /* Delta8ToDelta9.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Delta8ToDelta9.xcmappingmodel; sourceTree = "<group>"; };
 		D5AE78822BEAAD6100ED25DC /* GameSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneDelegate.swift; sourceTree = "<group>"; };
@@ -1101,7 +1099,6 @@
 		BF71CF851FE8FFF1001F1613 /* App Icon */ = {
 			isa = PBXGroup;
 			children = (
-				D5AE76C72C2B808F0086471B /* AltAppIconsViewController.swift */,
 				BF71CF861FE90006001F1613 /* AppIconShortcutsViewController.swift */,
 			);
 			path = "App Icon";
@@ -2297,7 +2294,6 @@
 			files = (
 				BFB3645823245A6000CD0EB1 /* LicensesViewController.swift in Sources */,
 				BFC6F7B81F435BC500221B96 /* Input+Display.swift in Sources */,
-				D5AE76C82C2B808F0086471B /* AltAppIconsViewController.swift in Sources */,
 				BF59426A1E09BBD00051894B /* GridCollectionViewCell.swift in Sources */,
 				BF6BF3181EB82111008E83CD /* iTunesImportOption.swift in Sources */,
 				EBBB19882D9972E7009C977A /* BaseViewController.swift in Sources */,

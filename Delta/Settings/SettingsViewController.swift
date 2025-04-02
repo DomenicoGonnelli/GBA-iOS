@@ -22,18 +22,14 @@ private extension SettingsViewController
     {
         case controllers
         case controllerSkins
-        case patreon
         case controllerOpacity
-        case display
         case gameAudio
         case multitasking
         case hapticFeedback
-        case syncing
         case gestures
         case airPlay
         case hapticTouch
         case cores
-        case advanced
         case credits
         case support
     }
@@ -59,18 +55,6 @@ private extension SettingsViewController
         case status
     }
     
-    enum AdvancedRow: Int, CaseIterable
-    {
-        case exportLog
-        case experimentalFeatures
-    }
-    
-    enum PatreonRow: Int, CaseIterable
-    {
-        case connectAccount
-        case joinPatreon
-    }
-    
     enum CreditsRow: Int, CaseIterable
     {
         case riley
@@ -87,7 +71,6 @@ private extension SettingsViewController
     {
         case contactUs
         case privacyPolicy
-        case termsOfUse
     }
 }
 
@@ -138,11 +121,7 @@ class SettingsViewController: UITableViewController
     {
         super.viewDidLoad()
         
-        if let version = Bundle.main.object(forInfoDictionaryKey: "DLTAVersion") as? String
-        {
-            self.versionLabel.text = ""
-        }
-        else if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         {
            
             self.versionLabel.text = String(format: "app_version".localizable, version)
@@ -245,15 +224,6 @@ private extension SettingsViewController
         {
         case .multitasking where !UIApplication.shared.supportsMultipleScenes: return true
         case .hapticFeedback where !UIDevice.current.isVibrationSupported: return true
-            
-        case .advanced:
-            guard #unavailable(iOS 15) else { return false }
-            
-            return true
-            
-       
-        case .patreon: return false
-            
         case .hapticTouch:
             if #available(iOS 13, *)
             {
@@ -264,7 +234,8 @@ private extension SettingsViewController
             {
                 return self.view.traitCollection.forceTouchCapability != .available
             }
-            
+        case .cores:
+            return true
         default: return false
         }
     }
@@ -410,15 +381,7 @@ private extension SettingsViewController
         switch settingsName
         {
         case .syncingService:
-            let selectedIndexPath = self.tableView.indexPathForSelectedRow
-            
-            self.tableView.reloadSections(IndexSet(integer: Section.syncing.rawValue), with: .none)
-            
-            let syncingServiceIndexPath = IndexPath(row: SyncingRow.service.rawValue, section: Section.syncing.rawValue)
-            if selectedIndexPath == syncingServiceIndexPath
-            {
-                self.tableView.selectRow(at: selectedIndexPath, animated: true, scrollPosition: .none)
-            }
+            print("nothing to do")
             
         case .localControllerPlayerIndex, .preferredControllerSkin, .translucentControllerSkinOpacity, .respectSilentMode, .isButtonHapticFeedbackEnabled, .isThumbstickHapticFeedbackEnabled, .isAltJITEnabled: break
         default: break
@@ -470,25 +433,6 @@ extension SettingsViewController
             
             return numberOfRows
             
-        case .syncing where !isSectionHidden(section): return 0
-        case .advanced where !isSectionHidden(section):
-            if true
-            {
-                return super.tableView(tableView, numberOfRowsInSection: sectionIndex)
-            }
-            else
-            {
-                return 1
-            }
-            
-        case .patreon where !isSectionHidden(section):
-            #if APP_STORE
-            // App Store builds never show the Join Patreon row.
-            return 1
-            #else
-            return 1
-            #endif
-            
         default:
             if isSectionHidden(section)
             {
@@ -526,39 +470,13 @@ extension SettingsViewController
         case .controllerSkins:
             cell.textLabel?.text = System.registeredSystems[indexPath.row].localizedName
             
-        case .syncing:
-            switch SyncingRow.allCases[indexPath.row]
-            {
-            case .status:
-                let cell = cell as! BadgedTableViewCell
-                cell.badgeLabel.text = self.syncingConflictsCount.description
-                cell.badgeLabel.isHidden = (self.syncingConflictsCount == 0)
-                
-            case .service: break
-            }
-            
+       
         case .cores:
             let preferredCore = Settings.preferredCore(for: .ds)
             cell.detailTextLabel?.text = preferredCore?.metadata?.name.value ?? preferredCore?.name ?? "Unknown".localizable
             
-        case .patreon:
-            let row = PatreonRow(rawValue: indexPath.row)!
-            switch row
-            {
-            case .joinPatreon:
-                print("")
-                
-            case .connectAccount:
-                var content = cell.defaultContentConfiguration()
-                content.textProperties.color = .deltaPurple
-                
-                
-                content.text = "Connect Patreon Account…"
-                
-                cell.contentConfiguration = content
-            }
-            
-        case .controllerOpacity, .display, .gameAudio, .multitasking, .hapticFeedback, .gestures, .airPlay, .hapticTouch, .advanced, .credits, .support: break
+        
+        case .controllerOpacity, .gameAudio, .multitasking, .hapticFeedback, .gestures, .airPlay, .hapticTouch,  .credits, .support: break
         }
 
         return cell
@@ -573,25 +491,8 @@ extension SettingsViewController
         {
         case .controllers: self.performSegue(withIdentifier: Segue.controllers.rawValue, sender: cell)
         case .controllerSkins: self.performSegue(withIdentifier: Segue.controllerSkins.rawValue, sender: cell)
-        case .display: self.performSegue(withIdentifier: Segue.altAppIcons.rawValue, sender: cell)
         case .cores: self.performSegue(withIdentifier: Segue.dsSettings.rawValue, sender: cell)
-        case .controllerOpacity, .gameAudio, .multitasking, .hapticFeedback, .gestures, .airPlay, .hapticTouch, .syncing: break
-        case .advanced:
-            let row = AdvancedRow(rawValue: indexPath.row)!
-            switch row
-            {
-            case .exportLog:
-                print("nothing to do")
-                
-            case .experimentalFeatures: self.showExperimentalFeatures()
-            }
-
-        case .patreon:
-            let row = PatreonRow(rawValue: indexPath.row)!
-            
-            
-            tableView.deselectRow(at: indexPath, animated: true)
-            
+        case .controllerOpacity, .gameAudio, .multitasking, .hapticFeedback, .gestures, .airPlay, .hapticTouch: break
         case .credits:
             let row = CreditsRow(rawValue: indexPath.row)!
             switch row
@@ -637,9 +538,6 @@ extension SettingsViewController
                 let safariURL = URL(string: "https://altstore.io/privacy")!
                 UIApplication.shared.open(safariURL, options: [:])
                 
-            case .termsOfUse:
-                let safariURL = URL(string: "https://altstore.io/terms")!
-                UIApplication.shared.open(safariURL, options: [:])
             }
         }
     }
@@ -657,16 +555,6 @@ extension SettingsViewController
             case .displayFullScreen: break primary
             }
             
-        case .advanced:
-            let row = AdvancedRow(rawValue: indexPath.row)!
-            switch row
-            {
-            case .exportLog:
-                guard #unavailable(iOS 15) else { break }
-                return 0.0
-                
-            default: break
-            }
             
         case .credits:
             let row = CreditsRow(rawValue: indexPath.row)!
@@ -685,9 +573,6 @@ extension SettingsViewController
             case .contributors:
                 // Hide row on iOS 13 and below
                 guard #unavailable(iOS 14) else { break primary }
-                return 0.0
-                
-            case .friendZonePatrons:
                 return 0.0
                 
             default: break
@@ -725,18 +610,12 @@ extension SettingsViewController
             var attributedText = AttributedString(localized: "customize_appearence")
             attributedText += " "
             
-            var learnMore = AttributedString(localized: "Learn_More")
+            let learnMore = AttributedString(localized: "Learn_More")
             
             attributedText += learnMore
             
             footerView.attributedText = attributedText
                         
-            return footerView
-            
-        case .patreon:
-            guard #available(iOS 15, *), let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: AttributedHeaderFooterView.reuseIdentifier) as? AttributedHeaderFooterView else { break }
-        
-            
             return footerView
             
         default: break
@@ -752,8 +631,6 @@ extension SettingsViewController
         
         switch section
         {
-        case .advanced:
-            return super.tableView(tableView, titleForFooterInSection: section.rawValue)
         case .controllerSkins: return nil
         case .airPlay:
             switch (Settings.supportsExternalDisplays, Settings.features.dsAirPlay.topScreenOnly, Settings.features.dsAirPlay.layoutAxis)
@@ -763,10 +640,25 @@ extension SettingsViewController
             case (true, false, .vertical): return "airPLay_messase_3".localizable
             case (true, false, .horizontal): return "airPLay_messase_4".localizable
             }
-            
-        default: return super.tableView(tableView, titleForFooterInSection: section.rawValue)
+        case .controllerOpacity:
+            return "opacityFooter".localizable
+        case .gameAudio:
+            return "gameAudioFooter".localizable
+        case .hapticFeedback:
+            return "hapticFeedbackFooter".localizable
+        case .hapticTouch:
+            return "hapticTouchFooter".localizable
+        case .gestures:
+            return "gameGesturesFooter".localizable
+        case .cores:
+            return "gameCoresFooter".localizable
+        default:
+            return nil
+        
         }
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
@@ -790,7 +682,6 @@ extension SettingsViewController
         switch section
         {
         case .controllerSkins: return UITableView.automaticDimension
-        case .patreon: return UITableView.automaticDimension
         default: return super.tableView(tableView, heightForFooterInSection: section.rawValue)
         }
     }
@@ -803,7 +694,6 @@ extension SettingsViewController
         switch section
         {
         case .controllerSkins: return 30
-        case .patreon: return 30
         default: return UITableView.automaticDimension
         }
     }

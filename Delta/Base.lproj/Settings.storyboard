@@ -14,13 +14,13 @@
         <!--Settings-->
         <scene sceneID="N30-Sa-dHo">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsViewController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eHi-aO-uGS" customClass="SettingsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsViewController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eHi-aO-uGS" customClass="SettingsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hRw-wV-lch">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="3400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="separatorColor" systemColor="separatorColor"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delta 0.6.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Str-BY-agW">
-                            <rect key="frame" x="0.0" y="3243.5" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="2549.5" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,57 +239,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Patreon" footerTitle="" id="QvT-Yt-oP1">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ActivityCell" id="sXq-X7-zis">
-                                        <rect key="frame" x="16" y="641.5" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sXq-X7-zis" id="Gin-0e-sAA">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Patreon Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEx-RK-UyW">
-                                                    <rect key="frame" x="16" y="12" width="195.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" name="Purple"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3jD-Xg-VQh">
-                                                    <rect key="frame" x="307" y="12" width="20" height="20"/>
-                                                    <color key="color" name="Purple"/>
-                                                </activityIndicatorView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="3jD-Xg-VQh" firstAttribute="centerY" secondItem="Gin-0e-sAA" secondAttribute="centerY" id="BTF-Xj-uRI"/>
-                                                <constraint firstItem="3jD-Xg-VQh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GEx-RK-UyW" secondAttribute="trailing" constant="8" symbolic="YES" id="D5Q-mZ-YCr"/>
-                                                <constraint firstItem="GEx-RK-UyW" firstAttribute="centerY" secondItem="Gin-0e-sAA" secondAttribute="centerY" id="EDD-ht-3xX"/>
-                                                <constraint firstItem="GEx-RK-UyW" firstAttribute="leading" secondItem="Gin-0e-sAA" secondAttribute="leadingMargin" id="jvo-9e-ApC"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3jD-Xg-VQh" secondAttribute="trailing" id="mTb-YF-qcI"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="faT-qa-JP0" style="IBUITableViewCellStyleDefault" id="4it-3L-j8P">
-                                        <rect key="frame" x="16" y="685.5" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4it-3L-j8P" id="7dE-36-hzp">
-                                            <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Join our Patreon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="faT-qa-JP0">
-                                                    <rect key="frame" x="16" y="0.0" width="292.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Controller Opacity" footerTitle="Determines how translucent the controller appears, if supported by the controller skin." id="SwK-m9-8gt">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Xxk-vo-eu4">
-                                        <rect key="frame" x="16" y="797" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="641.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Xxk-vo-eu4" id="vxt-Ex-b4b">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -326,30 +279,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Display" footerTitle="Personalize your Delta experience by choosing an alternate app icon." id="dV4-8P-2Dw">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="iV4-br-PKm" style="IBUITableViewCellStyleDefault" id="oZq-9E-1cM">
-                                        <rect key="frame" x="16" y="932.5" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oZq-9E-1cM" id="zvg-wC-kaq">
-                                            <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Change App Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iV4-br-PKm">
-                                                    <rect key="frame" x="16" y="0.0" width="292.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Game Audio" footerTitle="When enabled, Delta will only play game audio if your device isn't silenced." id="aJ4-xT-aZL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" id="mRV-Bi-pZ8" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="1068" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="777" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mRV-Bi-pZ8" id="RtM-ok-LGu">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -383,7 +316,7 @@
                             <tableViewSection headerTitle="Multitasking" footerTitle="Automatically pause games when they are not the active window." id="vbO-8P-7Mc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" id="ei2-rB-x25" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="1203.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="912.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ei2-rB-x25" id="I6x-Y3-r6U">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -417,7 +350,7 @@
                             <tableViewSection headerTitle="Haptic Feedback" footerTitle="When enabled, your device will vibrate in response to touch screen controls." id="avK-bg-nm6">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" id="ZUx-5m-gPq" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="1339" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="1048" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZUx-5m-gPq" id="7fY-cO-dht">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -447,7 +380,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" id="p47-ru-O9r" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="1383" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="1092" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p47-ru-O9r" id="o9R-cP-Tge">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -478,55 +411,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Delta Sync" footerTitle="Sync your games, save data, save states, and cheats between devices." id="y6U-7a-bnX" userLabel="Syncing">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DetailCell" textLabel="4U1-fe-PIb" detailTextLabel="kLY-5g-v8n" style="IBUITableViewCellStyleValue1" id="bwW-PG-BcV">
-                                        <rect key="frame" x="16" y="1518.5" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bwW-PG-BcV" id="RNA-99-evH">
-                                            <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4U1-fe-PIb">
-                                                    <rect key="frame" x="16" y="12" width="57" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Google Drive" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kLY-5g-v8n">
-                                                    <rect key="frame" x="210" y="12" width="98.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="R9m-rV-VgV" kind="show" id="MAM-GM-FlH"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BadgeCell" textLabel="1u0-gh-zP7" style="IBUITableViewCellStyleDefault" id="JPg-6O-DRe" customClass="BadgedTableViewCell" customModule="Delta" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="1562.5" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JPg-6O-DRe" id="zcZ-QR-Nno">
-                                            <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sync Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1u0-gh-zP7">
-                                                    <rect key="frame" x="16" y="0.0" width="292.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="vVg-ci-JRa" kind="show" id="Hfy-lJ-4tW"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Gestures" id="BoE-ds-6Mb">
                                 <string key="footerTitle">Use gestures while holding the menu button to perform quick actions.
 
@@ -536,7 +420,7 @@ Menu + Double-Tap: Quick Save
 Menu + Long-Press: Quick Load</string>
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" id="kfm-Bg-De9" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="1698" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="1227.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfm-Bg-De9" id="hid-pQ-pOH">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -570,7 +454,7 @@ Menu + Long-Press: Quick Load</string>
                             <tableViewSection headerTitle="AirPlay" footerTitle="Automatically pause games when they are not the active window." id="PsL-N1-lvD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" id="Lda-rh-9b3" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="1913.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="1443" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lda-rh-9b3" id="MFo-5Y-5tH">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -600,7 +484,7 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SubtitleSwitchCell" rowHeight="65" id="Wo3-dV-ncA" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="1957.5" width="343" height="65"/>
+                                        <rect key="frame" x="16" y="1487" width="343" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wo3-dV-ncA" id="991-zp-GPj">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="65"/>
@@ -641,7 +525,7 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SubtitleSwitchCell" rowHeight="65" id="tbk-2N-kiR" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="2022.5" width="343" height="65"/>
+                                        <rect key="frame" x="16" y="1552" width="343" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbk-2N-kiR" id="4s0-UR-pM3">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="65"/>
@@ -686,7 +570,7 @@ Menu + Long-Press: Quick Load</string>
                             <tableViewSection headerTitle="Haptic Touch" footerTitle="Preview games and save states when using context menus." id="fdp-8c-oOc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="c5i-qG-ir9" style="IBUITableViewCellStyleDefault" id="SSL-t4-QZj">
-                                        <rect key="frame" x="16" y="2179" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="1708.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SSL-t4-QZj" id="hQB-Iy-bzy">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -705,7 +589,7 @@ Menu + Long-Press: Quick Load</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" id="M7w-lw-FcL" customClass="SwitchTableViewCell">
-                                        <rect key="frame" x="16" y="2223" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="1752.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M7w-lw-FcL" id="p8M-4q-q3o">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -739,7 +623,7 @@ Menu + Long-Press: Quick Load</string>
                             <tableViewSection headerTitle="Core Settings" footerTitle="Manage settings for individual emulation cores." id="1eN-id-M8c">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="zeg-kj-CMN" detailTextLabel="CFd-fn-r0t" style="IBUITableViewCellStyleValue1" id="lxX-Hz-sXl">
-                                        <rect key="frame" x="16" y="2358.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="1888" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lxX-Hz-sXl" id="OWw-OH-9F5">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -763,57 +647,10 @@ Menu + Long-Press: Quick Load</string>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Advanced" footerTitle="Test out new features that have been added by contributors." id="EzW-IN-YAf">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ActivityCell" id="0bj-he-6br">
-                                        <rect key="frame" x="16" y="2478" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bj-he-6br" id="oIP-D5-Xrm">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Export Error Log…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPB-zq-ssX">
-                                                    <rect key="frame" x="16" y="12" width="137.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" name="Purple"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="x5w-dE-ucW">
-                                                    <rect key="frame" x="307" y="12" width="20" height="21"/>
-                                                    <color key="color" name="Purple"/>
-                                                </activityIndicatorView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="x5w-dE-ucW" firstAttribute="centerY" secondItem="oIP-D5-Xrm" secondAttribute="centerY" id="2Du-al-MgG"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="x5w-dE-ucW" secondAttribute="trailing" id="7ek-gm-AM9"/>
-                                                <constraint firstItem="XPB-zq-ssX" firstAttribute="centerY" secondItem="oIP-D5-Xrm" secondAttribute="centerY" id="HsH-e7-iRR"/>
-                                                <constraint firstItem="XPB-zq-ssX" firstAttribute="leading" secondItem="oIP-D5-Xrm" secondAttribute="leadingMargin" id="Ulm-U3-OcK"/>
-                                                <constraint firstItem="x5w-dE-ucW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XPB-zq-ssX" secondAttribute="trailing" constant="8" symbolic="YES" id="vfa-y3-UZc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="Hl1-if-S1K" style="IBUITableViewCellStyleDefault" id="8fe-ab-zkf">
-                                        <rect key="frame" x="16" y="2522" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8fe-ab-zkf" id="Py0-GQ-Z36">
-                                            <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Experimental Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hl1-if-S1K">
-                                                    <rect key="frame" x="16" y="0.0" width="292.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Credits" footerTitle="Follow Riley and Shane on Threads for all the latest Delta news. Tap a name to view their profile." id="foh-L9-g6W">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DetailCell" textLabel="Pum-dL-hGn" detailTextLabel="WQ6-m7-zhh" style="IBUITableViewCellStyleValue1" id="BU4-ee-DGz">
-                                        <rect key="frame" x="16" y="2657.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2007.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BU4-ee-DGz" id="fWf-gm-1sf">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -836,7 +673,7 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DetailCell" textLabel="cht-lO-kpR" detailTextLabel="0pG-CT-ZWR" style="IBUITableViewCellStyleValue1" id="CV9-Df-mUX">
-                                        <rect key="frame" x="16" y="2701.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2051.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CV9-Df-mUX" id="gLC-z2-rMU">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -859,7 +696,7 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DetailCell" textLabel="gWx-Xn-5Nf" detailTextLabel="09x-GX-cpy" style="IBUITableViewCellStyleValue1" id="8qc-0t-Nte">
-                                        <rect key="frame" x="16" y="2745.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2095.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8qc-0t-Nte" id="jUL-fL-i0n">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -882,7 +719,7 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DetailCell" textLabel="zro-BX-EY9" detailTextLabel="e45-FD-ug2" style="IBUITableViewCellStyleValue1" id="Zh9-JJ-jEQ">
-                                        <rect key="frame" x="16" y="2789.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2139.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zh9-JJ-jEQ" id="VCc-oJ-ODB">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -905,7 +742,7 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DetailCell" textLabel="w1i-mR-wOF" detailTextLabel="jRO-48-iRO" style="IBUITableViewCellStyleValue1" id="rrX-Bh-zdW">
-                                        <rect key="frame" x="16" y="2833.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2183.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rrX-Bh-zdW" id="b9U-W6-LnS">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -928,7 +765,7 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DetailCell" textLabel="11H-p1-WYj" detailTextLabel="kwO-jq-LNT" style="IBUITableViewCellStyleValue1" id="67c-Xo-UkZ">
-                                        <rect key="frame" x="16" y="2877.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2227.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="67c-Xo-UkZ" id="dNZ-wd-39n">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -954,7 +791,7 @@ Menu + Long-Press: Quick Load</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="g59-8E-zW7" style="IBUITableViewCellStyleDefault" id="hkv-lx-68h">
-                                        <rect key="frame" x="16" y="2921.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2271.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hkv-lx-68h" id="bNT-kB-3cI">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -970,7 +807,7 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="2K3-IL-94S" style="IBUITableViewCellStyleDefault" id="j7p-ZK-mHq">
-                                        <rect key="frame" x="16" y="2965.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2315.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j7p-ZK-mHq" id="BqT-yP-OpS">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -993,7 +830,7 @@ Menu + Long-Press: Quick Load</string>
                             <tableViewSection headerTitle="Support" id="EXh-f2-RH0">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="mLw-eP-4gt" style="IBUITableViewCellStyleDefault" id="5JY-bE-ydi">
-                                        <rect key="frame" x="16" y="3093.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2443.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5JY-bE-ydi" id="PrW-ow-LaM">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
@@ -1009,29 +846,13 @@ Menu + Long-Press: Quick Load</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="9v6-NL-xiw" style="IBUITableViewCellStyleDefault" id="KuI-g9-UlV">
-                                        <rect key="frame" x="16" y="3137.5" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="2487.5" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KuI-g9-UlV" id="i8j-lL-Hwf">
                                             <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9v6-NL-xiw">
-                                                    <rect key="frame" x="16" y="0.0" width="292.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="ggi-Bt-bY5" style="IBUITableViewCellStyleDefault" id="Azw-Av-Bkc">
-                                        <rect key="frame" x="16" y="3181.5" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Azw-Av-Bkc" id="HT9-DH-U1U">
-                                            <rect key="frame" x="0.0" y="0.0" width="316.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Terms of Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ggi-Bt-bY5">
                                                     <rect key="frame" x="16" y="0.0" width="292.5" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1060,14 +881,13 @@ Menu + Long-Press: Quick Load</string>
                         <outlet property="buttonHapticFeedbackEnabledSwitch" destination="g7m-wj-ueP" id="nOj-sc-foi"/>
                         <outlet property="controllerOpacityLabel" destination="zaz-yD-CYG" id="eUW-u9-xxx"/>
                         <outlet property="controllerOpacitySlider" destination="whi-If-wFf" id="6Cx-HY-xLG"/>
-                        <outlet property="exportLogActivityIndicatorView" destination="x5w-dE-ucW" id="u5a-K3-2ag"/>
                         <outlet property="layoutScreensHorizontallySwitch" destination="Wd1-1b-Ee4" id="8LS-Ix-lQz"/>
                         <outlet property="pauseWhileInactiveSwitch" destination="eeQ-UP-b2W" id="Gde-DL-tO2"/>
                         <outlet property="previewsEnabledSwitch" destination="OJE-9e-9i3" id="Ndg-eN-PPs"/>
                         <outlet property="quickGesturesSwitch" destination="6LN-kh-Afv" id="1Vu-6Q-793"/>
                         <outlet property="respectSilentModeSwitch" destination="mlO-iy-zU2" id="TDT-cx-kCf"/>
                         <outlet property="supportExternalDisplaysSwitch" destination="qO4-fq-zR6" id="pXb-kK-Jm5"/>
-                        <outlet property="syncingServiceLabel" destination="kLY-5g-v8n" id="zzx-qM-q1g"/>
+                        <outlet property="tableView" destination="hRw-wV-lch" id="oXc-1k-itX"/>
                         <outlet property="thumbstickHapticFeedbackEnabledSwitch" destination="19A-ef-F3V" id="K03-kQ-lv3"/>
                         <outlet property="topScreenOnlySwitch" destination="06M-VR-Afh" id="eLS-in-7rx"/>
                         <outlet property="versionLabel" destination="Str-BY-agW" id="gU2-L0-pYt"/>
@@ -1085,7 +905,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Controls-->
         <scene sceneID="Gi9-m1-y9x">
             <objects>
-                <viewController title="Controls" id="x1g-pH-DnF" customClass="ControllerInputsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Controls" id="x1g-pH-DnF" customClass="ControllerInputsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cH1-gu-g2u"/>
                         <viewControllerLayoutGuide type="bottom" id="Z6c-bc-h6l"/>
@@ -1165,7 +985,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Controllers-->
         <scene sceneID="swa-DT-VKS">
             <objects>
-                <tableViewController id="uBz-mm-mXr" customClass="ControllersSettingsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="uBz-mm-mXr" customClass="ControllersSettingsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="hLd-Z5-I3b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1229,7 +1049,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Preferred Controller Skins View Controller-->
         <scene sceneID="pkL-Te-puh">
             <objects>
-                <tableViewController storyboardIdentifier="preferredControllerSkins" id="56e-ul-z6v" customClass="PreferredControllerSkinsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="preferredControllerSkins" id="56e-ul-z6v" customClass="PreferredControllerSkinsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fdQ-n7-kUL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1317,7 +1137,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Home Screen Shortcuts-->
         <scene sceneID="e9N-fv-yuQ">
             <objects>
-                <tableViewController id="yXS-6u-1AN" customClass="AppIconShortcutsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yXS-6u-1AN" customClass="AppIconShortcutsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="97" sectionHeaderHeight="18" sectionFooterHeight="18" id="BGy-Nh-8Yd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1361,13 +1181,13 @@ Menu + Long-Press: Quick Load</string>
         <!--Controller Skins-->
         <scene sceneID="IN0-an-SWm">
             <objects>
-                <tableViewController title="Controller Skins" id="pG9-hI-tRE" customClass="ControllerSkinsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Controller Skins" id="pG9-hI-tRE" customClass="ControllerSkinsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="150" sectionHeaderHeight="18" sectionFooterHeight="18" id="WiB-mC-9xS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kK3-bl-qxv" customClass="ControllerSkinTableViewCell" customModule="Delta" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kK3-bl-qxv" customClass="ControllerSkinTableViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kK3-bl-qxv" id="7Vt-Nl-Sfx">
@@ -1427,7 +1247,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Alt App Icons View Controller-->
         <scene sceneID="GyB-rQ-UAg">
             <objects>
-                <collectionViewController id="3dI-qS-gTg" customClass="AltAppIconsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="3dI-qS-gTg" customClass="AltAppIconsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="j1R-PT-yrg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1480,18 +1300,18 @@ Menu + Long-Press: Quick Load</string>
         <!--Grid Menu View Controller-->
         <scene sceneID="Lgi-Ii-M1W">
             <objects>
-                <collectionViewController id="Jpj-e9-6XW" customClass="GridMenuViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="Jpj-e9-6XW" customClass="GridMenuViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yGk-jU-wZQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tLr-UM-1BH" customClass="GridCollectionViewLayout" customModule="Delta" customModuleProvider="target">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tLr-UM-1BH" customClass="GridCollectionViewLayout" customModule="GemBoy_Advance" customModuleProvider="target">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Hef-IR-nMO" customClass="GridCollectionViewCell" customModule="Delta" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Hef-IR-nMO" customClass="GridCollectionViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1552,7 +1372,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Syncing Service-->
         <scene sceneID="8nM-uV-t0b">
             <objects>
-                <tableViewController title="Syncing Service" id="R9m-rV-VgV" customClass="SyncingServicesViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Syncing Service" id="R9m-rV-VgV" customClass="SyncingServicesViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Zsb-6q-tLe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1698,12 +1518,12 @@ Menu + Long-Press: Quick Load</string>
         <!--Sync Status-->
         <scene sceneID="IYe-DI-U7i">
             <objects>
-                <tableViewController title="Sync Status" id="vVg-ci-JRa" customClass="SyncStatusViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Sync Status" id="vVg-ci-JRa" customClass="SyncStatusViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Nza-ON-XbS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="AWh-ik-Gvu" style="IBUITableViewCellStyleDefault" id="wpv-cf-duw" customClass="BadgedTableViewCell" customModule="Delta" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="AWh-ik-Gvu" style="IBUITableViewCellStyleDefault" id="wpv-cf-duw" customClass="BadgedTableViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="16" y="55.5" width="343" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wpv-cf-duw" id="ehC-Qx-Zx4">
@@ -1766,9 +1586,9 @@ Menu + Long-Press: Quick Load</string>
         <!--Game Sync Status View Controller-->
         <scene sceneID="iQk-cq-qsQ">
             <objects>
-                <tableViewController id="OnX-sX-bHK" customClass="GameSyncStatusViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="OnX-sX-bHK" customClass="GameSyncStatusViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="AFt-Hn-fzR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="RWL-4W-NpH" style="IBUITableViewCellStyleDefault" id="q5G-Db-MXt">
@@ -1806,9 +1626,9 @@ Menu + Long-Press: Quick Load</string>
         <!--Record Sync Status View Controller-->
         <scene sceneID="GG8-80-sV4">
             <objects>
-                <tableViewController storyboardIdentifier="recordSyncStatusViewController" id="kBh-Lp-rBr" customClass="RecordSyncStatusViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="recordSyncStatusViewController" id="kBh-Lp-rBr" customClass="RecordSyncStatusViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="k6O-hT-4zC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
                             <tableViewSection id="6pR-j6-CoP">
@@ -2018,7 +1838,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Versions-->
         <scene sceneID="xaH-AW-NqP">
             <objects>
-                <tableViewController id="PGW-Yp-czd" customClass="RecordVersionsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="PGW-Yp-czd" customClass="RecordVersionsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="9fJ-qb-tfO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2113,7 +1933,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Licenses-->
         <scene sceneID="x0a-yZ-xix">
             <objects>
-                <viewController id="Vew-Fv-phU" customClass="LicensesViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vew-Fv-phU" customClass="LicensesViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFY-Qi-vAX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2243,7 +2063,7 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
         <!--DS Settings-->
         <scene sceneID="rRC-R2-Ico">
             <objects>
-                <tableViewController storyboardIdentifier="dsSettingsViewController" title="DS Settings" id="OwL-4c-EEA" customClass="MelonDSCoreSettingsViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="dsSettingsViewController" title="DS Settings" id="OwL-4c-EEA" customClass="MelonDSCoreSettingsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ops-m1-tlV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1098"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2640,7 +2460,7 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
         <!--Friend Zone Patrons-->
         <scene sceneID="vxf-6s-Sqp">
             <objects>
-                <collectionViewController id="4DO-Ey-uDN" customClass="PatreonViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="4DO-Ey-uDN" customClass="PatreonViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="DK6-vp-wGV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2653,7 +2473,7 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
                             <inset key="sectionInset" minX="20" minY="8" maxX="20" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mqY-Rp-jLe" customClass="PatronCollectionViewCell" customModule="Delta" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mqY-Rp-jLe" customClass="PatronCollectionViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="20" y="8" width="157" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -2719,16 +2539,16 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

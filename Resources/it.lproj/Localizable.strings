@@ -243,3 +243,10 @@
 "airPLay_messase_2" = "Quando si riproducono giochi DS tramite AirPlay, sul display esterno verrà visualizzato solo lo schermo superiore";
 "airPLay_messase_3" = "Quando si riproducono giochi DS tramite AirPlay, entrambi gli schermi verranno mostrati verticalmente sul display esterno.";
 "airPLay_messase_4" = "Quando si riproducono giochi DS tramite AirPlay, entrambi gli schermi verranno posizionati uno accanto all'altro sul display esterno.";
+
+"opacityFooter" = "Determina la trasparenza dei controller, se la skin selezionata supporta la trasparenza";
+"gameAudioFooter"= "Se attivo, <AppName/> riproduce l'audio solamente se il dispositivo non è in silent mode";
+"hapticFeedbackFooter"= "Se attivo, il tuo dispositivo vibrerà al tocco dei tasti migliorando l'esperienza di gioco";
+"gameGesturesFooter"= "Utilizza le gesture mentre giochi per attivare le seguenti azioni:\n• Menu + Swipe orizzontale: Aumenta Velocità\n• Menu + Controller input: Blocca il bottone\n• Menu + Doppio tap: Salvataggio rapido\n• Menu + Long-press: Caricamento Rapido";
+"gameCoresFooter"= "Gestisci le impostazioni su specifico emulatore";
+"hapticTouchFooter"= "Anteprima dei giochi mentre usi il menu contestuale in Home";

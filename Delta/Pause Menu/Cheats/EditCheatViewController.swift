@@ -292,7 +292,7 @@ private extension EditCheatViewController
             }
             catch CheatValidator.Error.invalidName
             {
-                self.presentErrorAlert(title: "invalid_name".localizable, message: "invalid_name_text.".localizable) {
+                self.presentErrorAlert(title: "invalid_name".localizable, message: "invalid_name_text".localizable) {
                     self.codeTextView.becomeFirstResponder()
                 }
             }
@@ -360,8 +360,8 @@ extension EditCheatViewController
             
             switch (containsSpaces, containsDashes)
             {
-            case (true, false): return "space_auto.".localizable
-            case (false, true): return "Dashes will be inserted automatically as you type.".localizable
+            case (true, false): return "space_auto".localizable
+            case (false, true): return "dash_auto".localizable
             case (true, true): return "dash_space_auto".localizable
             case (false, false): return "dash_space_auto".localizable
             }
