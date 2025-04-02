@@ -262,3 +262,28 @@
 "settingsCreditHeader" = "Riconoscimenti";
 "settingsSupportHeader" = "Supporto";
 "settingsCoresHeader" = "Impostazioni aggiungive";
+
+"DS_size" = "Le dimensioni di %@ non possono essere determinate";
+
+"DS_checksum_match" = "La checksum di %@ non corrisponde al valore atteso:\n\nChecsum:\n%@;\n\nValore Atteso:\n%@";
+
+"DS_not_compatible_version" = "%@ non è compatibile con questa vesione di <AppName/>.\n\nChecksum:\n%@";
+"DS_expected_size" = "%@ è %@, ma le dimensioni attese sono %@";
+"DS_expected_size_between" = "%@ è %@, ma le dimensioni attese sono tra %@ e %@";
+
+"DS_bios_file" = "Per favore, scegli un file BIOS differente";
+
+"Optional" = "Opzionale";
+
+"WFC_reset" = "Sei sicuto di voler resettare la tua configurazione WFC?";
+"WFC_text" = "Dovrai registrare nuovamente ogni amico che avevi precedentmente aggiunto";
+"WFC_reset_button" = "Reset Configurazione WFC";
+
+"DSi" = "DSi";
+"DS" = "DS";
+
+"bios_required" = "<AppName/> richiede i seguenti files BIOS per emulare le funzionalità di Nintendo %@" ;
+
+"Delta requires these BIOS files to emulate certain Nintendo \(systemName) features.";
+
+"DS_not_import" = "Non è possibile importare %@";

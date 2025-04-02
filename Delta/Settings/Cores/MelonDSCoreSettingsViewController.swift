@@ -53,13 +53,13 @@ private extension MelonDSCoreSettingsViewController
             switch self
             {
             case .unknownSize(let fileURL):
-                return String(format: NSLocalizedString("%@’s size could not be determined.", comment: ""), fileURL.lastPathComponent)
+                return String(format: "DS_size".localizable, fileURL.lastPathComponent)
                 
             case .incorrectHash(let fileURL, let md5Hash, let expectedHash):
-                return String(format: NSLocalizedString("%@‘s checksum does not match the expected checksum.\n\nChecksum:\n%@\n\nExpected:\n%@", comment: ""), fileURL.lastPathComponent, md5Hash, expectedHash)
+                return String(format: "DS_checksum_match".localizable, fileURL.lastPathComponent, md5Hash, expectedHash)
                 
             case .unsupportedHash(let fileURL, let md5Hash):
-                return String(format: NSLocalizedString("%@ is not compatible with this version of Delta.\n\nChecksum:\n%@", comment: ""), fileURL.lastPathComponent, md5Hash)
+                return String(format: "DS_not_compatible_version".localizable, fileURL.lastPathComponent, md5Hash)
                 
             case .incorrectSize(let fileURL, let size, let validSizes):
                 let actualSize = BIOSError.byteFormatter.string(fromByteCount: Int64(size))
@@ -70,7 +70,7 @@ private extension MelonDSCoreSettingsViewController
                     {
                         // Single value
                         let expectedSize = BIOSError.byteFormatter.string(fromByteCount: Int64(range.lowerBound.converted(to: .bytes).value))
-                        return String(format: NSLocalizedString("%@ is %@, but expected size is %@.", comment: ""), fileURL.lastPathComponent, actualSize, expectedSize)
+                        return String(format: "DS_expected_size".localizable, fileURL.lastPathComponent, actualSize, expectedSize)
                     }
                     else
                     {
@@ -80,12 +80,12 @@ private extension MelonDSCoreSettingsViewController
                         
                         let lowerBound = BIOSError.byteFormatter.string(fromByteCount: Int64(range.lowerBound.converted(to: .bytes).value))
                         let upperBound = BIOSError.byteFormatter.string(fromByteCount: Int64(range.upperBound.converted(to: .bytes).value))
-                        return String(format: NSLocalizedString("%@ is %@, but expected size is between %@ and %@.", comment: ""), fileURL.lastPathComponent, actualSize, lowerBound, upperBound)
+                        return String(format: "DS_expected_size_between".localizable, fileURL.lastPathComponent, actualSize, lowerBound, upperBound)
                     }
                 }
                 else
                 {
-                    var description = String(format: NSLocalizedString("%@ is %@, but expected sizes are:", comment: ""), fileURL.lastPathComponent, actualSize) + "\n"
+                    var description = String(format: "DS_expected_size".localizable, fileURL.lastPathComponent, actualSize) + "\n"
                     
                     let sortedRanges = validSizes.sorted(by: { $0.lowerBound < $1.lowerBound })
                     for range in sortedRanges
@@ -100,7 +100,7 @@ private extension MelonDSCoreSettingsViewController
         }
         
         var recoverySuggestion: String? {
-            return NSLocalizedString("Please choose a different BIOS file.", comment: "")
+            return "DS_bios_file".localizable
         }
     }
 }
@@ -288,7 +288,7 @@ extension MelonDSCoreSettingsViewController
             cell.textLabel?.text = key.localizedName
             
             let item = core.metadata?[key]
-            cell.detailTextLabel?.text = item?.value ?? NSLocalizedString("-", comment: "")
+            cell.detailTextLabel?.text = item?.value ?? "-".localizable
             cell.detailTextLabel?.textColor = .gray
             
             if item?.url != nil
@@ -328,7 +328,7 @@ extension MelonDSCoreSettingsViewController
             else
             {
                 cell.accessoryType = .disclosureIndicator
-                cell.detailTextLabel?.text = NSLocalizedString("Choose", comment: "")
+                cell.detailTextLabel?.text = "Choose".localizable
                 cell.detailTextLabel?.textColor = .deltaPurple
             }
             
@@ -346,7 +346,7 @@ extension MelonDSCoreSettingsViewController
             else
             {
                 cell.accessoryType = .disclosureIndicator
-                cell.detailTextLabel?.text = NSLocalizedString("Optional", comment: "")
+                cell.detailTextLabel?.text = "Optional".localizable
                 cell.detailTextLabel?.textColor = .deltaPurple
             }
             
@@ -364,7 +364,7 @@ extension MelonDSCoreSettingsViewController
             else
             {
                 cell.accessoryType = .disclosureIndicator
-                cell.detailTextLabel?.text = NSLocalizedString("Optional", comment: "")
+                cell.detailTextLabel?.text = "Optional".localizable
                 cell.detailTextLabel?.textColor = .deltaPurple
             }
             
@@ -395,9 +395,9 @@ extension MelonDSCoreSettingsViewController
                 self.navigationController?.pushViewController(hostingController, animated: true)
                 
             case .reset:
-                let alertController = UIAlertController(title: String(localized: "Are you sure you want to reset your WFC configuration?"), message: String(localized: "You may need to re-register any friend codes you've added."), preferredStyle: .actionSheet)
+                let alertController = UIAlertController(title:  "WFC_reset".localizable, message: "WFC_reset_text".localizable, preferredStyle: .actionSheet)
                 alertController.addAction(.cancel)
-                alertController.addAction(UIAlertAction(title: String(localized: "Reset WFC Configuration"), style: .destructive) { [weak self] _ in
+                alertController.addAction(UIAlertAction(title: "WFC_reset_button".localizable, style: .destructive) { [weak self] _ in
                     WFCManager.shared.resetWFCConfiguration()
                     self?.tableView.reloadData()
                 })
@@ -461,14 +461,14 @@ extension MelonDSCoreSettingsViewController
         case .dsBIOS, .dsiBIOS:
             guard #available(iOS 15, *), let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: AttributedHeaderFooterView.reuseIdentifier) as? AttributedHeaderFooterView else { break }
             
-            let systemName = (section == .dsiBIOS) ? String(localized: "DSi") : String(localized: "DS")
+            let systemName = (section == .dsiBIOS) ? "DSi" : "DS"
             
-            var attributedText = AttributedString(localized: "Delta requires these BIOS files to emulate certain Nintendo \(systemName) features.")
+            var attributedText = AttributedString(String(format: "bios_required".localizable, systemName.localizable))
             attributedText += " "
             
-            var learnMore = AttributedString(localized: "Learn more…")
+            var learnMore = AttributedString(localized: "Learn_more")
             learnMore.link = URL(string: "https://faq.deltaemulator.com/getting-started/nintendo-ds-bios-files")
-            attributedText += learnMore
+            attributedText  += learnMore
             
             footerView.attributedText = attributedText
             
@@ -572,7 +572,7 @@ extension MelonDSCoreSettingsViewController: UIDocumentPickerDelegate
         }
         catch let error as NSError
         {
-            let title = String(format: NSLocalizedString("Could not import %@.", comment: ""), bios.filename)
+            let title = String(format: "DS_not_import".localizable, bios.filename)
 
             var message = error.localizedDescription
             if let recoverySuggestion = error.localizedRecoverySuggestion

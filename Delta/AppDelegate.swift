@@ -13,18 +13,6 @@ import GoogleMobileAds
 import ShowTouches
 import GoogleSignIn
 
-private extension CFNotificationName
-{
-    static let altstoreRequestAppState: CFNotificationName = CFNotificationName("com.altstore.RequestAppState.com.rileytestut.Delta" as CFString)
-    static let altstoreAppIsRunning: CFNotificationName = CFNotificationName("com.altstore.AppState.Running.com.rileytestut.Delta" as CFString)
-}
-
-private let ReceivedApplicationState: @convention(c) (CFNotificationCenter?, UnsafeMutableRawPointer?, CFNotificationName?, UnsafeRawPointer?, CFDictionary?) -> Void =
-{ (center, observer, name, object, userInfo) in
-    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-    appDelegate.receivedApplicationStateRequest()
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
@@ -46,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         // Notifications
         let center = CFNotificationCenterGetDarwinNotifyCenter()
-        CFNotificationCenterAddObserver(center, nil, ReceivedApplicationState, CFNotificationName.altstoreRequestAppState.rawValue, nil, .deliverImmediately)
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.databaseManagerDidStart(_:)), name: DatabaseManager.didStartNotification, object: DatabaseManager.shared)
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.settingsDidChange(_:)), name: Settings.didChangeNotification, object: nil)
@@ -286,11 +273,6 @@ private extension AppDelegate
         self.updateSettings()
     }
     
-    func receivedApplicationStateRequest()
-    {
-        let center = CFNotificationCenterGetDarwinNotifyCenter()
-        CFNotificationCenterPostNotification(center!, CFNotificationName(CFNotificationName.altstoreAppIsRunning.rawValue), nil, nil, true)
-    }
 }
 
 extension AppDelegate{
