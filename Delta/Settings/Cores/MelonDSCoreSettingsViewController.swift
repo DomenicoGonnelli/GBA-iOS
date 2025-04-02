@@ -285,7 +285,7 @@ extension MelonDSCoreSettingsViewController
             let filteredKeys = DeltaCoreMetadata.Key.allCases.filter { core.metadata?[$0] != nil }
             
             let key = filteredKeys[indexPath.row]
-            cell.textLabel?.text = key.localizedName
+            cell.textLabel?.text = key.localizableName
             
             let item = core.metadata?[key]
             cell.detailTextLabel?.text = item?.value ?? "-".localizable

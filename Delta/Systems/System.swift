@@ -44,29 +44,29 @@ enum System: CaseIterable
 
 extension System
 {
-    var localizedName: String {
+    var localizableName: String {
         switch self
         {
-        case .nes: return NSLocalizedString("Nintendo", comment: "")
-        case .snes: return NSLocalizedString("Super Nintendo", comment: "")
-        case .n64: return NSLocalizedString("Nintendo 64", comment: "")
-        case .gbc: return NSLocalizedString("Game Boy Color", comment: "")
-        case .gba: return NSLocalizedString("Game Boy Advance", comment: "")
-        case .ds: return NSLocalizedString("Nintendo DS", comment: "")
-        case .genesis: return NSLocalizedString("Sega Genesis", comment: "")
+        case .nes: return "Nintendo".localizable
+        case .snes: return "Super Nintendo".localizable
+        case .n64: return "Nintendo 64".localizable
+        case .gbc: return "Game Boy Color".localizable
+        case .gba: return "Game Boy Advance".localizable
+        case .ds: return "Nintendo DS".localizable
+        case .genesis: return "Sega Genesis".localizable
         }
     }
     
-    var localizedShortName: String {
+    var localizableShortName: String {
         switch self
         {
-        case .nes: return NSLocalizedString("NES", comment: "")
-        case .snes: return NSLocalizedString("SNES", comment: "")
-        case .n64: return NSLocalizedString("N64", comment: "")
-        case .gbc: return NSLocalizedString("GBC", comment: "")
-        case .gba: return NSLocalizedString("GBA", comment: "")
-        case .ds: return NSLocalizedString("DS", comment: "")
-        case .genesis: return NSLocalizedString("Genesis (Beta)", comment: "")
+        case .nes: return "Nintendo_s".localizable
+        case .snes: return "Super Nintendo_s".localizable
+        case .n64: return "Nintendo 64_s".localizable
+        case .gbc: return "Game Boy Color_s".localizable
+        case .gba: return "Game Boy Advance_s".localizable
+        case .ds: return "Nintendo DS_s".localizable
+        case .genesis: return "Sega Genesis_s".localizable
         }
     }
     

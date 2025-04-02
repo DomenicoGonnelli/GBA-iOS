@@ -77,7 +77,8 @@ struct ContributorsView: View
     @State
     private var showErrorAlert: Bool = false
     
-    private var localizedTitle: String { NSLocalizedString("Contributors", comment: "") }
+    private var localizedTitle: String { "Contributors".localizable
+    }
     
     var body: some View {
         List {

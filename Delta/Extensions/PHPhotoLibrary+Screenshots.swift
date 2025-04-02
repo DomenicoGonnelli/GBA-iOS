@@ -15,7 +15,7 @@ extension PHPhotoLibrary
     class func requestAuthorizationIfNeeded() async throws
     {
         lazy var accessDeniedError: PHPhotosError = {
-            let errorMessage = NSLocalizedString("Delta does not have permission to write to your Photos library.", comment: "")
+            let errorMessage = "save_img_permission_denied".localizable
             
             if #available(iOS 15, *)
             {
@@ -50,9 +50,9 @@ extension PHPhotoLibrary
     
     func saveScreenshotData(_ data: Data) async throws
     {
-        guard let screenshotsAlbum = try await self.fetchAlbum(named: "Delta Screenshots", createIfNeeded: true) else {
+        guard let screenshotsAlbum = try await self.fetchAlbum(named: "Game Screenshots".localizable, createIfNeeded: true) else {
             // This should never be called as long as we pass `true` to createIfNeeded:
-            throw PHPhotosError(.internalError, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("Unable to fetch “Delta Screenshots” album.", comment: "")])
+            throw PHPhotosError(.internalError, userInfo: [NSLocalizedDescriptionKey: "Game_Screenshots_not_found".localizable])
         }
         
         try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
@@ -68,7 +68,7 @@ extension PHPhotoLibrary
                 do
                 {
                     guard let changeRequest = PHAssetCollectionChangeRequest(for: screenshotsAlbum), let placeholderAsset = request.placeholderForCreatedAsset else {
-                        throw PHPhotosError(.internalError, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("Could not add screenshot to album.", comment: "")])
+                        throw PHPhotosError(.internalError, userInfo: [NSLocalizedDescriptionKey: "Game_Screenshots_not_add".localizable])
                     }
                     
                     changeRequest.addAssets([placeholderAsset] as NSArray)
@@ -120,7 +120,7 @@ private extension PHPhotoLibrary
                     
                     // Fetch album after creating it.
                     guard let album = self._fetchAlbum(named: name) else {
-                        throw PHPhotosError(.internalError, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("The “Delta Screenshots” album could not be found.", comment: "")])
+                        throw PHPhotosError(.internalError, userInfo: [NSLocalizedDescriptionKey: "Game_Screenshots_not_found".localizable])
                     }
                     
                     continuation.resume(returning: album)

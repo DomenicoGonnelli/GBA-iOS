@@ -48,12 +48,12 @@ private extension GameView
         placeholderView.backgroundColor = .black
         
         placeholderView.textLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        placeholderView.textLabel.text = NSLocalizedString("AirPlay", comment: "")
+        placeholderView.textLabel.text = "AirPlay".localizable
         placeholderView.textLabel.textColor = .systemGray
         placeholderView.textLabel.numberOfLines = 1 // Enforce single line
         
         placeholderView.detailTextLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        placeholderView.detailTextLabel.text = NSLocalizedString("This game is playing on a second screen.", comment: "")
+        placeholderView.detailTextLabel.text = "AirPlay_second_screen".localizable
         placeholderView.detailTextLabel.textColor = .systemGray
         
         let config = UIImage.SymbolConfiguration(pointSize: 100)

@@ -14,11 +14,11 @@ import DeltaCore
 public class GameCollection: _GameCollection
 {
     @objc var name: String {
-        return self.system?.localizedName ?? NSLocalizedString("Unknown", comment: "")
+        return self.system?.localizableName ?? "Unknown".localizable
     }
     
     @objc var shortName: String {
-        return self.system?.localizedShortName ?? NSLocalizedString("Unknown", comment: "")
+        return self.system?.localizableShortName ?? "Unknown".localizable
     }
     
     var system: System? {

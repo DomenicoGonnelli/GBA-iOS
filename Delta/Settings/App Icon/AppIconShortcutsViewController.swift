@@ -255,7 +255,7 @@ extension AppIconShortcutsViewController
             let gameType = GameType(rawValue: self.gamesDataSource.fetchedResultsController.sections![section - 2].name)
             
             let system = System(gameType: gameType)!
-            return system.localizedName
+            return system.localizableName
         }
     }
     

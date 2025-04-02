@@ -39,15 +39,15 @@ extension UIAlertController
         
         if let fileURL = urls.first, let error = errors.first, errors.count == 1
         {
-            title = String(format: NSLocalizedString("Could not import “%@”.", comment: ""), fileURL.lastPathComponent)
+            title = String(format: "import_game_error".localizable, fileURL.lastPathComponent)
             message = error.localizedDescription
         }
         else
         {
             switch importType
             {
-            case .games: title = NSLocalizedString("Error Importing Games", comment: "")
-            case .controllerSkins: title = NSLocalizedString("Error Importing Controller Skins", comment: "")
+            case .games: title = "Error_Importing_Games".localizable
+            case .controllerSkins: title = "Error_Importing_Skins".localizable
             }
             
             if urls.count > 0
@@ -56,8 +56,8 @@ extension UIAlertController
                 
                 switch importType
                 {
-                case .games: tempMessage = NSLocalizedString("The following game files could not be imported:", comment: "") + "\n"
-                case .controllerSkins: tempMessage = NSLocalizedString("The following controller skin files could not be imported:", comment: "") + "\n"
+                case .games: tempMessage = "error_specific_games".localizable + "\n"
+                case .controllerSkins: tempMessage = "error_specific_skins".localizable + "\n"
                 }
                 
                 let filenames = urls.map { $0.lastPathComponent }.sorted()
@@ -74,8 +74,8 @@ extension UIAlertController
                 
                 switch importType
                 {
-                case .games: message = NSLocalizedString("Delta was unable to import games. Please try again later.", comment: "")
-                case .controllerSkins: message = NSLocalizedString("Delta was unable to import controller skins. Please try again later.", comment: "")
+                case .games: message = "import_game_later".localizable
+                case .controllerSkins: message = "import_skin_later".localizable
                 }
             }
         }

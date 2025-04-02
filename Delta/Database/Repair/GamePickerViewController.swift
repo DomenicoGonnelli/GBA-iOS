@@ -37,7 +37,7 @@ class GamePickerViewController: UITableViewController
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: RSTCellContentGenericCellIdentifier)
         
-        self.navigationItem.title = NSLocalizedString("Choose Game", comment: "")
+        self.navigationItem.title = "Choose Game".localizable
         self.navigationItem.searchController = self.dataSource.searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
     }
@@ -108,7 +108,7 @@ extension GamePickerViewController
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         guard let section = self.dataSource.fetchedResultsController.sections?[section], !section.name.isEmpty else {
-            return NSLocalizedString("Unknown System", comment: "")
+            return "Unknown System".localizable
         }
         
         return section.name

@@ -68,7 +68,7 @@ extension GamesDatabase
             switch self
             {
             case .doesNotExist:
-                return NSLocalizedString("The SQLite database could not be found.", comment: "")
+                return "database_not_found".localizable
             }
         }
     }

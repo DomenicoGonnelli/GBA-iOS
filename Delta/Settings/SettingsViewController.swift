@@ -459,7 +459,7 @@ extension SettingsViewController
             }
             
         case .controllerSkins:
-            cell.textLabel?.text = System.registeredSystems[indexPath.row].localizedName
+            cell.textLabel?.text = System.registeredSystems[indexPath.row].localizableName
             
        
         case .cores:

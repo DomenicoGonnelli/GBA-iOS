@@ -197,6 +197,8 @@
 "New_Cheat" = "Nuovo Codice";
 "no_added_cheat" = "Non è stato possibile aggiungere Codice";
 
+"Clipboard" = "Clipboard";
+
 "Edit" = "Modifica";
 
 "Copy Code" = "Copia codice";
@@ -337,3 +339,96 @@
 
 "home_screen_shortcut" = "Giochi in Home";
 "game_preview_menu" = "Anteprima Giochi";
+
+"not_exist_file" = "Il file non esiste";
+"not_valide_file" = "Il file non è valido";
+"not_unsopport_file" = "Il file non è supportato dall'App";
+
+"Home_Screen" = "Home";
+"Home_Screen_DSI" = "Home (DSi)";
+
+"Contributors" = "Ringraziamenti";
+"database_not_found" = "Il Database dell'app non è stato trovato";
+
+"Games_Database" = "Database Giochi";
+"Games_Database_text" = "Per trovare il database, cerca il nome di un gioco nella barra di ricerca";
+
+"Games_Database_no_game" = "Nessun gioco trovato";
+"Games_Database_no_game_text" = "Verifica che il nome sia corretto oppure prova a cercare un altro gioco";
+"Search" = "Cerca";
+
+"Verifying_Database" = "Database in verifica";
+"Repaired_Database" = "Database Ripristinato";
+"Repaired_Database_test" = "Alcuni file di salvataggio erano corretti ed è stato necessario rimuoverli. Importali nuovamente dalla sezione apposita";
+//**"Some save files may still be corrupted and require you to restore an older version from the Delta Sync settings.\n\nA text file listing all affected games has been saved to “On My Device/Delta/Backups/conflicts.txt” in the Files app, alongside backups of any conflicted save files.**/
+
+"Review_Save_States" = "Rivedi Salvataggi Rapidi";
+"Past Month" = "Mese passato";
+"All Time" = "Intero periodo";
+"Filter" = "Filtra";
+
+"error_on_saved" = "I salvataggi rapidi sono stati modificati di recente e sono stati associati al gioco errato! Verifica che le corrette associazioni con il gioco";
+
+"Choose WFC Server" = "Seleziona il server WFC";
+"Choose Game" = "Seleziona un gioco";
+"Unknown System" = "Piattaforma non riconosciuta";
+"Files" = "Files";
+
+"iTunes" = "iTunes";
+"itunes_import" = "Vuoi importare da iTunes?";
+"itunes_import_text" = "<AppName/> importerà giochi e Skin direttamente da iTunes";
+
+"Photo Library" = "Libreria Foto";
+
+"Nintendo" = "Nintendo";
+"Super Nintendo" = "Super Nintendo";
+"Nintendo 64"= "Nintendo 64";
+"Game Boy Color" = "Game Boy Color";
+"Game Boy Advance" = "Game Boy Advance";
+"Nintendo DS" = "Nintendo DS";
+"Sega Genesis" = "Sega Genesis";
+
+"Nintendo_s" = "NES";
+"Super Nintendo_s" = "SNES";
+"Nintendo 64_s"= "N64";
+"Game Boy Color_s" = "GBC";
+"Game Boy Advance_s" = "GBA";
+"Nintendo DS_s" = "DS";
+"Sega Genesis_s" = "Genesis";
+
+
+"melonDS" = "melonDS";
+"Arisotura" = "Arisotura";
+"GitHub" = "GitHub";
+"donate" = "Effettua donazione";
+
+"game_not_exist" = "Questo gioco non esiste nella tua libreria";
+
+"copy_deep_link" = "Copia link rapido";
+"import_game_error" = "Non è possibile importare “%@”";
+
+"Error_Importing_Games" = "Errore nell'import dei giochi";
+"Error_Importing_Skins" = "Errore nell'import delle skin di gioco";
+
+"error_specific_games" = "Non è possibile importare i seguenti giochi:";
+"error_specific_skins" = "Non è possibile importare le seguenti Skin:";
+
+"import_game_later" = "<AppName/> non è riuscita ad importare i giochi. Riprova più tardi";
+"import_skin_later" = "<AppName/> non è riuscita ad importare le Skin. Riprova più tardi";
+
+"save_img_permission_denied" = "<AppName/> non ha i permessi per salvare immagini su Foto";
+
+"Game Screenshots" = "Game Screenshots";
+
+"Game_Screenshots_not_found" = "Non è possibile caricare l'album 'Game Screenshots'";
+"Game_Screenshots_not_add" = "Non è possibile aggiungere lo screenshot all'album 'Game Screenshots'";
+
+
+"Undefined" = "Undefined";
+"Debug" = "Debug";
+"Notice" = "Avviso";
+"Error" = "Errore";
+"Fault" = "Fault";
+
+"AirPlay" = "AirPlay";
+"AirPlay_second_screen" = "Il gioco è savviato su un secondo schermo";

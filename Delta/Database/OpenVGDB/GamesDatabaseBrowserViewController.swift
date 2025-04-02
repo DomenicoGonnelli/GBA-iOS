@@ -165,7 +165,7 @@ private extension GamesDatabaseBrowserViewController
     {
         cell.backgroundColor = UIColor.deltaDarkGray
         
-        cell.nameLabel.text = metadata.name ?? NSLocalizedString("Unknown", comment: "")
+        cell.nameLabel.text = metadata.name ?? "Unknown".localizable
         cell.artworkImageView.image = #imageLiteral(resourceName: "BoxArt")
         
         cell.artworkImageViewLeadingConstraint.constant = 15
@@ -180,13 +180,13 @@ private extension GamesDatabaseBrowserViewController
         
         if self.dataSource.searchController.searchBar.text == ""
         {
-            placeholderView.textLabel.text = NSLocalizedString("Games Database", comment: "")
-            placeholderView.detailTextLabel.text = NSLocalizedString("To search the database, type the name of a game in the search bar.", comment: "")
+            placeholderView.textLabel.text = "Games_Database".localizable
+            placeholderView.detailTextLabel.text = "Games_Database_text".localizable
         }
         else
         {
-            placeholderView.textLabel.text = NSLocalizedString("No Games Found", comment: "")
-            placeholderView.detailTextLabel.text = NSLocalizedString("Please make sure the name is correct, or try searching for another game.", comment: "")
+            placeholderView.textLabel.text = "Games_Database_no_game".localizable
+            placeholderView.detailTextLabel.text = "Games_Database_no_game_text".localizable
         }
     }
     

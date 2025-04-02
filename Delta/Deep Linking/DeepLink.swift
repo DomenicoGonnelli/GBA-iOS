@@ -72,7 +72,7 @@ extension DeepLink
             switch self
             {
             case .gameNotFound:
-                return NSLocalizedString("This game does not exist in your game library.", comment: "")
+                return "game_not_exist".localizable
             }
         }
     }

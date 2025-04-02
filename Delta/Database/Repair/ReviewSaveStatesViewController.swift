@@ -61,7 +61,7 @@ class ReviewSaveStatesViewController: UITableViewController
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ReviewSaveStatesViewController.finish))
         self.navigationItem.rightBarButtonItem = doneButton
         
-        self.navigationItem.title = NSLocalizedString("Review Save States", comment: "")
+        self.navigationItem.title = "Review_Save_States".localizable
         
         // Disable going back to RepairDatabaseViewController.
         self.navigationItem.setHidesBackButton(true, animated: false)
@@ -75,7 +75,7 @@ class ReviewSaveStatesViewController: UITableViewController
         if let parent = self.parent, parent.navigationItem.title == nil
         {
             // Must change parent's navigationItem when we're contained in SwiftUI View.
-            parent.navigationItem.title = NSLocalizedString("Review Save States", comment: "")
+            parent.navigationItem.title = "Review_Save_States".localizable
             parent.navigationItem.rightBarButtonItem = self.makeFilterButton()
         }
     }
@@ -131,7 +131,7 @@ private extension ReviewSaveStatesViewController
             configuration.prefersSideBySideTextAndSecondaryText = false
             
             let fontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body).withSymbolicTraits(.traitBold) ?? .preferredFontDescriptor(withTextStyle: .body)
-            configuration.text = saveState.name ?? NSLocalizedString("Untitled", comment: "")
+            configuration.text = saveState.name ?? "Untitled".localizable
             configuration.textProperties.font = UIFont(descriptor: fontDescriptor, size: 0)
             
             configuration.secondaryText = SaveState.localizedDateFormatter.string(from: saveState.modifiedDate)
@@ -214,10 +214,10 @@ private extension ReviewSaveStatesViewController
     
     func makeFilterButton() -> UIBarButtonItem
     {
-        let recentAction = UIAction(title: NSLocalizedString("Past Month", comment: ""), image: UIImage(systemName: "calendar")) { [weak self] _ in
+        let recentAction = UIAction(title: "Past Month".localizable, image: UIImage(systemName: "calendar")) { [weak self] _ in
             self?.filter = .recent
         }
-        let allAction = UIAction(title: NSLocalizedString("All Time", comment: ""), image: UIImage(systemName: "clock")) { [weak self] _ in
+        let allAction = UIAction(title: "All Time".localizable, image: UIImage(systemName: "clock")) { [weak self] _ in
             self?.filter = .all
         }
         
@@ -232,7 +232,7 @@ private extension ReviewSaveStatesViewController
         
         let filterMenu = UIMenu(options: options, children: [recentAction, allAction])
         
-        let filterButton = UIBarButtonItem(title: NSLocalizedString("Filter", comment: ""), image: UIImage(systemName: "calendar.badge.clock"), menu: filterMenu)
+        let filterButton = UIBarButtonItem(title: "Filter".localizable, image: UIImage(systemName: "calendar.badge.clock"), menu: filterMenu)
         return filterButton
     }
 }
@@ -313,7 +313,7 @@ private extension ReviewSaveStatesViewController
 //                                    managedRecord.setNeedsMetadataUpdate()
 //                                    
 //                                    let saveState = record.recordedObject
-//                                    Logger.database.notice("Flagged SaveState “\(saveState?.localizedName ?? record.recordID.identifier, privacy: .public)” for metadata update.")
+//                                    Logger.database.notice("Flagged SaveState “\(saveState?.localizableName ?? record.recordID.identifier, privacy: .public)” for metadata update.")
 //                                }
 //                            }
 //                            
@@ -331,7 +331,7 @@ private extension ReviewSaveStatesViewController
 //                DispatchQueue.main.async {
 //                    self.navigationItem.rightBarButtonItem?.isIndicatingActivity = false
 //                    
-//                    let alertController = UIAlertController(title: NSLocalizedString("Unable to Save Changes", comment: ""), error: error)
+//                    let alertController = UIAlertController(title: "Unable to Save Changes".localizable, error: error)
 //                    (self._parentNavigationController ?? self).present(alertController, animated: true)
 //                }
 //            }
@@ -357,7 +357,7 @@ extension ReviewSaveStatesViewController
         {
             let section = section - 1
             
-            guard let gameName = self.saveStatesDataSource.fetchedResultsController.sections?[section].name else { return NSLocalizedString("Unknown Game", comment: "") }
+            guard let gameName = self.saveStatesDataSource.fetchedResultsController.sections?[section].name else { return "Unknown".localizable }
             return gameName
         }
     }
@@ -366,6 +366,6 @@ extension ReviewSaveStatesViewController
     {
         guard section == 0 else { return nil }
         
-        return NSLocalizedString("These save states have been modified recently and may be associated with the wrong game.\n\nPlease change any incorrectly associated save states to the correct game by tapping them.", comment: "")
+        return "error_on_saved".localizable
     }
 }

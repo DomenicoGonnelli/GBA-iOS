@@ -35,7 +35,7 @@ struct LegacySearchBar: UIViewRepresentable
     {
         let searchBar = UISearchBar(frame: .zero)
         searchBar.delegate = context.coordinator
-        searchBar.placeholder = NSLocalizedString("Search", comment: "")
+        searchBar.placeholder = "Search".localizable
         return searchBar
     }
     

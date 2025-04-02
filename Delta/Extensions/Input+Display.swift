@@ -72,79 +72,79 @@ extension Input
             let input = StandardGameControllerInput(input: self)!
             switch input
             {
-            case .menu: return NSLocalizedString("Menu", comment: "")
-            case .up: return NSLocalizedString("Up", comment: "")
-            case .down: return NSLocalizedString("Down", comment: "")
-            case .left: return NSLocalizedString("Left", comment: "")
-            case .right: return NSLocalizedString("Right", comment: "")
-            case .leftThumbstickUp: return NSLocalizedString("L🕹↑", comment: "")
-            case .leftThumbstickDown: return NSLocalizedString("L🕹↓", comment: "")
-            case .leftThumbstickLeft: return NSLocalizedString("L🕹←", comment: "")
-            case .leftThumbstickRight: return NSLocalizedString("L🕹→", comment: "")
-            case .rightThumbstickUp: return NSLocalizedString("R🕹↑", comment: "")
-            case .rightThumbstickDown: return NSLocalizedString("R🕹↓", comment: "")
-            case .rightThumbstickLeft: return NSLocalizedString("R🕹←", comment: "")
-            case .rightThumbstickRight: return NSLocalizedString("R🕹→", comment: "")
-            case .a: return NSLocalizedString("A", comment: "")
-            case .b: return NSLocalizedString("B", comment: "")
-            case .x: return NSLocalizedString("X", comment: "")
-            case .y: return NSLocalizedString("Y", comment: "")
-            case .start: return NSLocalizedString("Start", comment: "Start button")
-            case .select: return NSLocalizedString("Select", comment: "Select button")
-            case .l1: return NSLocalizedString("L1", comment: "")
-            case .l2: return NSLocalizedString("L2", comment: "")
-            case .l3: return NSLocalizedString("L3", comment: "")
-            case .r1: return NSLocalizedString("R1", comment: "")
-            case .r2: return NSLocalizedString("R2", comment: "")
-            case .r3: return NSLocalizedString("R3", comment: "")
+            case .menu: return "Menu".localizable
+            case .up: return "Up".localizable
+            case .down: return "Down".localizable
+            case .left: return "Left".localizable
+            case .right: return "Right".localizable
+            case .leftThumbstickUp: return "L🕹↑".localizable
+            case .leftThumbstickDown: return "L🕹↓".localizable
+            case .leftThumbstickLeft: return "L🕹←".localizable
+            case .leftThumbstickRight: return "L🕹→".localizable
+            case .rightThumbstickUp: return "R🕹↑".localizable
+            case .rightThumbstickDown: return "R🕹↓".localizable
+            case .rightThumbstickLeft: return "R🕹←".localizable
+            case .rightThumbstickRight: return "R🕹→".localizable
+            case .a: return "A".localizable
+            case .b: return "B".localizable
+            case .x: return "X".localizable
+            case .y: return "Y".localizable
+            case .start: return "Start".localizable
+            case .select: return "Select".localizable
+            case .l1: return "L1".localizable
+            case .l2: return "L2".localizable
+            case .l3: return "L3".localizable
+            case .r1: return "R1".localizable
+            case .r2: return "R2".localizable
+            case .r3: return "R3".localizable
             }
             
         case .controller(.mfi):
             let input = MFiGameController.Input(input: self)!
             switch input
             {
-            case .menu: return NSLocalizedString("Menu", comment: "")
-            case .up: return NSLocalizedString("Up", comment: "")
-            case .down: return NSLocalizedString("Down", comment: "")
-            case .left: return NSLocalizedString("Left", comment: "")
-            case .right: return NSLocalizedString("Right", comment: "")
-            case .leftThumbstickUp: return NSLocalizedString("L🕹↑", comment: "")
-            case .leftThumbstickDown: return NSLocalizedString("L🕹↓", comment: "")
-            case .leftThumbstickLeft: return NSLocalizedString("L🕹←", comment: "")
-            case .leftThumbstickRight: return NSLocalizedString("L🕹→", comment: "")
-            case .rightThumbstickUp: return NSLocalizedString("R🕹↑", comment: "")
-            case .rightThumbstickDown: return NSLocalizedString("R🕹↓", comment: "")
-            case .rightThumbstickLeft: return NSLocalizedString("R🕹←", comment: "")
-            case .rightThumbstickRight: return NSLocalizedString("R🕹→", comment: "")
-            case .a: return NSLocalizedString("A", comment: "")
-            case .b: return NSLocalizedString("B", comment: "")
-            case .x: return NSLocalizedString("X", comment: "")
-            case .y: return NSLocalizedString("Y", comment: "")
-            case .leftShoulder: return NSLocalizedString("L1", comment: "")
-            case .leftTrigger: return NSLocalizedString("L2", comment: "")
-            case .rightShoulder: return NSLocalizedString("R1", comment: "")
-            case .rightTrigger: return NSLocalizedString("R2", comment: "")
-            case .start: return NSLocalizedString("Start", comment: "")
-            case .select: return NSLocalizedString("Select", comment: "")
+            case .menu: return "Menu".localizable
+            case .up: return "Up".localizable
+            case .down: return "Down".localizable
+            case .left: return "Left".localizable
+            case .right: return "Right".localizable
+            case .leftThumbstickUp: return "L🕹↑".localizable
+            case .leftThumbstickDown: return "L🕹↓".localizable
+            case .leftThumbstickLeft: return "L🕹←".localizable
+            case .leftThumbstickRight: return "L🕹→".localizable
+            case .rightThumbstickUp: return "R🕹↑".localizable
+            case .rightThumbstickDown: return "R🕹↓".localizable
+            case .rightThumbstickLeft: return "R🕹←".localizable
+            case .rightThumbstickRight: return "R🕹→".localizable
+            case .a: return "A".localizable
+            case .b: return "B".localizable
+            case .x: return "X".localizable
+            case .y: return "Y".localizable
+            case .leftShoulder: return "L1".localizable
+            case .leftTrigger: return "L2".localizable
+            case .rightShoulder: return "R1".localizable
+            case .rightTrigger: return "R2".localizable
+            case .start: return "Start".localizable
+            case .select: return "Select".localizable
             }
             
         case .controller(.keyboard):
             let input = KeyboardGameController.Input(input: self)!
             switch input
             {
-            case .up: return NSLocalizedString("↑", comment: "")
-            case .down: return NSLocalizedString("↓", comment: "")
-            case .left: return NSLocalizedString("←", comment: "")
-            case .right: return NSLocalizedString("→", comment: "")
-            case .escape: return NSLocalizedString("⎋", comment: "")
-            case .shift: return NSLocalizedString("⇧", comment: "")
-            case .command: return NSLocalizedString("⌘", comment: "")
-            case .option: return NSLocalizedString("⌥", comment: "")
-            case .control: return NSLocalizedString("Ctrl", comment: "")
-            case .capsLock: return NSLocalizedString("⇪", comment: "")
-            case .space: return NSLocalizedString("Space", comment: "")
-            case .return: return NSLocalizedString("↩\u{FE0E}", comment: "")
-            case .tab: return NSLocalizedString("⇥", comment: "")
+            case .up: return "↑".localizable
+            case .down: return "↓".localizable
+            case .left: return "←".localizable
+            case .right: return "→".localizable
+            case .escape: return "⎋".localizable
+            case .shift: return "⇧".localizable
+            case .command: return "⌘".localizable
+            case .option: return "⌥".localizable
+            case .control: return "Ctrl".localizable
+            case .capsLock: return "⇪".localizable
+            case .space: return "Space".localizable
+            case .return: return "↩\u{FE0E}".localizable
+            case .tab: return "⇥".localizable
             default: return input.stringValue.uppercased()
             }
             

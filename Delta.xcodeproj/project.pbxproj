@@ -159,7 +159,6 @@
 		BFFDF03F23E3C28A00931B96 /* libGambatte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF03D23E3C0F000931B96 /* libGambatte.a */; };
 		BFFDF04623E3D3A600931B96 /* libMupen64Plus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF04523E3D3A600931B96 /* libMupen64Plus.a */; };
 		C6F24AD72D64B452002F939F /* Lu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F24AD62D64B452002F939F /* Lu.swift */; };
-		C6F24AD92D64B550002F939F /* PauseViewController+Lu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F24AD82D64B550002F939F /* PauseViewController+Lu.swift */; };
 		D5011C48281B6E8B00A0760B /* CharacterSet+Filename.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5011C47281B6E8B00A0760B /* CharacterSet+Filename.swift */; };
 		D50CA1572D419E7100F54920 /* GameSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50CA1562D419E7100F54920 /* GameSettingsView.swift */; };
 		D510BC752A5CA9F500450CC0 /* Delta6ToDelta7.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D510BC742A5CA9F500450CC0 /* Delta6ToDelta7.xcmappingmodel */; };
@@ -574,7 +573,6 @@
 		BFFDF03D23E3C0F000931B96 /* libGambatte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGambatte.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFDF04523E3D3A600931B96 /* libMupen64Plus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMupen64Plus.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F24AD62D64B452002F939F /* Lu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lu.swift; sourceTree = "<group>"; };
-		C6F24AD82D64B550002F939F /* PauseViewController+Lu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PauseViewController+Lu.swift"; sourceTree = "<group>"; };
 		C786AF1D2DDB6223BE2063CC /* Pods-Delta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.debug.xcconfig"; sourceTree = "<group>"; };
 		D5011C47281B6E8B00A0760B /* CharacterSet+Filename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Filename.swift"; sourceTree = "<group>"; };
 		D50CA1562D419E7100F54920 /* GameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsView.swift; sourceTree = "<group>"; };
@@ -889,7 +887,6 @@
 				D5EB601A2C0E6190007C543C /* Stream+Conveniences.swift */,
 				D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */,
 				D5E12AEA2D011579000C7531 /* String+Profanity.swift */,
-				C6F24AD82D64B550002F939F /* PauseViewController+Lu.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2323,7 +2320,6 @@
 				EB69AB1A2D977FC800311D39 /* IAPHelper.swift in Sources */,
 				EB69AB1B2D977FC800311D39 /* IAPProduct.swift in Sources */,
 				D5A9C01D29DE058C00A8D610 /* VariableFastForward.swift in Sources */,
-				C6F24AD92D64B550002F939F /* PauseViewController+Lu.swift in Sources */,
 				BFE593CA21F3F8B7003412A6 /* GameSave.swift in Sources */,
 				BF6424831F5B8F3F00D6AB44 /* ListMenuViewController.swift in Sources */,
 				BF1020E31F95B05B00313182 /* DeltaToDelta2.xcmappingmodel in Sources */,

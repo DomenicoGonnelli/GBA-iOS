@@ -173,7 +173,7 @@ private extension ControllerInputsViewController
         // Update popoverMenuButton to display correctly on iOS 10.
         if let popoverMenuButton = self.navigationItem.popoverMenuController?.popoverMenuButton
         {
-            popoverMenuButton.title = self.system.localizedShortName
+            popoverMenuButton.title = self.system.localizableShortName
             popoverMenuButton.bounds.size = popoverMenuButton.intrinsicContentSize
             
             self.navigationController?.navigationBar.layoutIfNeeded()
@@ -222,7 +222,7 @@ private extension ControllerInputsViewController
         self.navigationItem.popoverMenuController = popoverMenuController
         
         let items = System.allCases.filter { Delta.core(for: $0.gameType) != nil }.map { [unowned self, weak popoverMenuController, weak listMenuViewController] system -> MenuItem in
-            let item = MenuItem(text: system.localizedShortName, image: #imageLiteral(resourceName: "CheatCodes")) { [weak popoverMenuController, weak listMenuViewController] item in
+            let item = MenuItem(text: system.localizableShortName, image: #imageLiteral(resourceName: "CheatCodes")) { [weak popoverMenuController, weak listMenuViewController] item in
                 listMenuViewController?.items.forEach { $0.isSelected = ($0 == item) }
                 popoverMenuController?.isActive = false
                 

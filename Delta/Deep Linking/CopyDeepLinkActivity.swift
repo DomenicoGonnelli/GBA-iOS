@@ -26,7 +26,7 @@ class CopyDeepLinkActivity: UIActivity
     }
     
     override var activityTitle: String? {
-        return NSLocalizedString("Copy Deep Link", comment: "")
+        return "copy_deep_link".localizable
     }
     
     override var activityImage: UIImage? {

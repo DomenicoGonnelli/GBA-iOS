@@ -34,7 +34,7 @@ struct DeltaCoreMetadata
         case source
         case donate
         
-        var localizedName: String {
+        var localizableName: String {
             return self.rawValue.capitalized
         }
     }
@@ -91,11 +91,11 @@ extension DeltaCoreProtocol
         switch self
         {
         case MelonDS.core:
-            return DeltaCoreMetadata([.name: .init(value: NSLocalizedString("melonDS", comment: ""), url: URL(string: "http://melonds.kuribo64.net")),
-                                      .developer: .init(value: NSLocalizedString("Arisotura", comment: ""), url: URL(string: "https://twitter.com/Arisotura")),
-                                      .version: .init(value: NSLocalizedString("0.9.5", comment: ""), url: URL(string: "https://github.com/melonDS-emu/melonDS/releases/tag/0.9.5")),
-                                      .source: .init(value: NSLocalizedString("GitHub", comment: ""), url: URL(string: "https://github.com/Arisotura/melonDS")),
-                                      .donate: .init(value: NSLocalizedString("Patreon", comment: ""), url: URL(string: "https://www.patreon.com/staplebutter"))])
+            return DeltaCoreMetadata([.name: .init(value: "melonDS".localizable, url: URL(string: "http://melonds.kuribo64.net")),
+                                      .developer: .init(value: "Arisotura".localizable, url: URL(string: "https://twitter.com/Arisotura")),
+                                      .version: .init(value: "0.9.5", url: URL(string: "https://github.com/melonDS-emu/melonDS/releases/tag/0.9.5")),
+                                      .source: .init(value: "GitHub".localizable, url: URL(string: "https://github.com/Arisotura/melonDS")),
+                                      .donate: .init(value: "donate".localizable, url: URL(string: "https://www.patreon.com/staplebutter"))])
             
         default: return nil
         }

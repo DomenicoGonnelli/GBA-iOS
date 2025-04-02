@@ -12,7 +12,7 @@ import DeltaCore
 
 struct iTunesImportOption: ImportOption
 {
-    let title = NSLocalizedString("iTunes", comment: "")
+    let title = "iTunes".localizable
     let image: UIImage? = UIImage(symbolNameIfAvailable: "music.note")
     
     private let presentingViewController: UIViewController
@@ -24,9 +24,9 @@ struct iTunesImportOption: ImportOption
     
     func `import`(withCompletionHandler completionHandler: @escaping (Set<URL>?) -> Void)
     {
-        let alertController = UIAlertController(title: NSLocalizedString("Import from iTunes?", comment: ""), message: NSLocalizedString("Delta will import the games and controller skins copied over via iTunes.", comment: ""), preferredStyle: .alert)
+        let alertController = UIAlertController(title: "itunes_import".localizable, message: "itunes_import_text".localizable, preferredStyle: .alert)
         
-        let importAction = UIAlertAction(title: NSLocalizedString("Import", comment: ""), style: .default) { action in
+        let importAction = UIAlertAction(title: "Import".localizable, style: .default) { action in
             
             var importedURLs = Set<URL>()
             
@@ -68,7 +68,7 @@ struct iTunesImportOption: ImportOption
         }
         alertController.addAction(importAction)
         
-        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { action in
+        let cancelAction = UIAlertAction(title: "Cancel".localizable, style: .cancel) { action in
             completionHandler(nil)
         }
         alertController.addAction(cancelAction)

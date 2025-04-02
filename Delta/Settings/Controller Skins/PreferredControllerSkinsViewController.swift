@@ -103,7 +103,7 @@ extension PreferredControllerSkinsViewController
     {
         super.viewDidLoad()
         
-        self.title = self.game?.name ?? self.system.localizedShortName
+        self.title = self.game?.name ?? self.system.localizableShortName
         
         self.variantSegmentedControl.removeAllSegments()
         
