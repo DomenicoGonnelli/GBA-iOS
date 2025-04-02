@@ -2533,7 +2533,7 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
         <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <namedColor name="Purple">
-            <color red="0.54509803921568623" green="0.15686274509803921" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.83921568627450982" green="0.090196078431372548" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

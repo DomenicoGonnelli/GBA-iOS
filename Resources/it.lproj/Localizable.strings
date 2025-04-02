@@ -250,3 +250,15 @@
 "gameGesturesFooter"= "Utilizza le gesture mentre giochi per attivare le seguenti azioni:\n• Menu + Swipe orizzontale: Aumenta Velocità\n• Menu + Controller input: Blocca il bottone\n• Menu + Doppio tap: Salvataggio rapido\n• Menu + Long-press: Caricamento Rapido";
 "gameCoresFooter"= "Gestisci le impostazioni su specifico emulatore";
 "hapticTouchFooter"= "Anteprima dei giochi mentre usi il menu contestuale in Home";
+
+"settingsControllersHeader" = "Controllers";
+"settingsControllerSkinHeader" = "Personalizza Aspetto Skin ";
+"settingsOpacitysHeader" = "Opacità Skin";
+"settingsAudioHeader" = "Audio";
+"settingsHapticFeedbackHeader" = "Vibra al tocco";
+"settingsGestureHeader" = "Gesture";
+"settingsAirPlayHeader" = "AirPlay";
+"settingsHapticTouchHeader" = "Anteprima Giochi";
+"settingsCreditHeader" = "Riconoscimenti";
+"settingsSupportHeader" = "Supporto";
+"settingsCoresHeader" = "Impostazioni aggiungive";

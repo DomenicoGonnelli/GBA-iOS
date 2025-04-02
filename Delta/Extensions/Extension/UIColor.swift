@@ -91,7 +91,7 @@ extension UIColor {
         return UIColor(named: "primaryColor") ?? UIColor("#333333")
     }
     static var purpleColor: UIColor{
-        return UIColor(named: "purple") ?? UIColor("#220000")
+        return UIColor(named: "Purple") ?? UIColor("#220000")
     }
     
     static var orangeColor: UIColor{

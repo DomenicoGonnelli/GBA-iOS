@@ -91,9 +91,6 @@ class SettingsViewController: UITableViewController
     
     @IBOutlet private var versionLabel: UILabel!
     
-    @IBOutlet private var syncingServiceLabel: UILabel!
-    @IBOutlet private var exportLogActivityIndicatorView: UIActivityIndicatorView!
-    
     private var selectionFeedbackGenerator: UISelectionFeedbackGenerator?
     
     private var previousSelectedRowIndexPath: IndexPath?
@@ -123,15 +120,12 @@ class SettingsViewController: UITableViewController
         
         if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         {
-           
             self.versionLabel.text = String(format: "app_version".localizable, version)
-           
         }
         else
         {
             self.versionLabel.text = "Appname".localizable;
         }
-        
         if #available(iOS 15, *)
         {
             self.tableView.register(AttributedHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: AttributedHeaderFooterView.reuseIdentifier)
@@ -591,8 +585,37 @@ extension SettingsViewController
         
         switch section
         {
+        case .controllers:
+            return "settingsControllersHeader".localizable
+        case .controllerSkins:
+            return "settingsControllerSkinHeader".localizable
+        case .controllerOpacity:
+            return "settingsOpacitysHeader".localizable
+        case .gameAudio:
+            return "settingsAudioHeader".localizable
+        case .hapticFeedback:
+            return "settingsHapticFeedbackHeader".localizable
+        case .gestures:
+            return "settingsGestureHeader".localizable
+        case .airPlay:
+            return "settingsAirPlayHeader".localizable
+        case .hapticTouch:
+            return "settingsHapticTouchHeader".localizable
+        case .credits:
+            return "settingsCreditHeader".localizable
+        case .support:
+            return "settingsSupportHeader".localizable
+        case .cores:
+            return "settingsCoresHeader".localizable
+            
+            
         case .airPlay where self.view.traitCollection.userInterfaceIdiom == .pad: return "external_display".localizable
         case .hapticTouch where self.view.traitCollection.forceTouchCapability == .available: return "3D_Touch".localizable
+        
+            
+            
+            
+        
         default: return super.tableView(tableView, titleForHeaderInSection: section.rawValue)
         }
     }

@@ -10,6 +10,6 @@ import UIKit
 
 extension UIColor
 {
-    static let deltaPurple = UIColor(named: "purple")!
+    static let deltaPurple = UIColor(named: "Purple")!
     static let deltaDarkGray = UIColor(named: "DarkGray")!
 }
