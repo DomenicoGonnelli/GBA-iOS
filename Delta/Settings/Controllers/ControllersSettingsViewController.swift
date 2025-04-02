@@ -26,7 +26,7 @@ class ControllersSettingsViewController: UITableViewController
 {
     var playerIndex: Int! {
         didSet {
-            self.title = NSLocalizedString("Player \(self.playerIndex + 1)", comment: "")
+            self.title = String(format: "Player".localizable,  "\(self.playerIndex + 1)")
         }
     }
     
@@ -135,7 +135,7 @@ private extension ControllersSettingsViewController
         switch Section(rawValue: indexPath.section)!
         {
         case .none:
-            cell.textLabel?.text = NSLocalizedString("None", comment: "")
+            cell.textLabel?.text = "None".localizable
             
             if self.gameController == nil
             {
@@ -174,7 +174,7 @@ private extension ControllersSettingsViewController
             }
             
         case .customizeControls:
-            cell.textLabel?.text = NSLocalizedString("Customize Controls…", comment: "")
+            cell.textLabel?.text = "Customize Controls…".localizable
             cell.textLabel?.textColor = self.view.tintColor
         }
     }
@@ -294,8 +294,8 @@ extension ControllersSettingsViewController
         switch Section(rawValue: section)!
         {
         case .none: return nil
-        case .localDevice: return NSLocalizedString("This Device", comment: "")
-        case .externalControllers: return NSLocalizedString("Game Controllers", comment: "")
+        case .localDevice: return "This_Device".localizable
+        case .externalControllers: return "Game_Controllers".localizable
         case .customizeControls: return nil
         }
     }

@@ -13,11 +13,11 @@ class LocalDeviceController: NSObject, GameController
     var name: String {
         if ProcessInfo.processInfo.isRunningOnVisionPro
         {
-            return NSLocalizedString("Touch", comment: "")
+            return "Touch".localizable
         }
         else
         {
-            return NSLocalizedString("Touch Screen", comment: "")
+            return "TouchScreen".localizable
         }
     }
     

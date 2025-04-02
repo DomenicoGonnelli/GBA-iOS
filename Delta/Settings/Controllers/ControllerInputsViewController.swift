@@ -210,7 +210,7 @@ private extension ControllerInputsViewController
     func preparePopoverMenuController()
     {
         let listMenuViewController = ListMenuViewController()
-        listMenuViewController.title = NSLocalizedString("Game System", comment: "")
+        listMenuViewController.title = "Game_System".localizable
         
         let navigationController = UINavigationController(rootViewController: listMenuViewController)
         if #available(iOS 13, *)
@@ -262,7 +262,7 @@ private extension ControllerInputsViewController
                 image = #imageLiteral(resourceName: "Screenshot")
                 text = "Screenshot".localizable
             case .close:
-                image = UIImage(named: "close")!
+                image = UIImage(resource: .close)
                 text = "closeGame".localizable
                 
             case .toggleFastForward, .reverseScreens: continue
@@ -457,7 +457,7 @@ private extension ControllerInputsViewController
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.popoverPresentationController?.barButtonItem = sender
         alertController.addAction(.cancel)
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Reset Controls to Defaults", comment: ""), style: .destructive, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "reset_controls".localizable, style: .destructive, handler: { (action) in
             reset()
         }))
         self.present(alertController, animated: true, completion: nil)

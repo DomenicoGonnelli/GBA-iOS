@@ -287,3 +287,53 @@
 "Delta requires these BIOS files to emulate certain Nintendo \(systemName) features.";
 
 "DS_not_import" = "Non è possibile importare %@";
+//** SHORTCUTS  **//
+"no_shortcut" = "Nessuna shortcut in Home";
+"no_shortcut_text" = "Puoi personalizzare le shortcuts con i giochi che appariranno tenendo premuta l'icona dell'App nella Home del tuo dispositivo";
+
+"games_shortcut_recent" = "Giochi a cui hai giocato di recente";
+"Shortcuts" = "Shortcuts";
+"shortcut_home" = "I giochi a cui hai giocato più recentemente appaiono tenendo premuta l'icona dell'App sulla Home del telefono";
+
+"shortcut_home_games" = "I giochi che hai selezionato appariranno tenendo premuta l'icona dell'App sulla Home del telefono";
+
+"shortcut_no_game" = "Non hai giocato a nessun gioco di recente";
+"shortcut_max" = "Puoi selezionare al massimo 4 giochi";
+
+"Remove" = "Rimuovi";
+
+"Player" = "Giocatore %@";
+"None" = "Vuoto";
+
+"Customize_Controls" = "Personalizza controlli";
+"This_Device" = "Questo dispositivo";
+"Game_Controllers" = "Controllers esterni";
+
+"Game_System" = "Sistema di gioco";
+"reset_controls" = "Effettua il reset ai comandi di default";
+
+"Press Button" = "Premi il pulsante";
+"Touch" = "Touch";
+"TouchScreen" = "TouchScreen";
+
+"Full Screen" = "Schermo intero";
+"Standard" = "Standard";
+"Stage Manager" = "Stage Manager";
+"Split View" = "Dividi schermata";
+"Game Controller" = "Controller di gioco";
+"Import_Controller_Skin" = "Importa Skin Controller";
+"Reset_Controller_Skin" = "Errore in fase di import Skin Controller";
+"Reset_Controller_Skin" = "Resetta Skin Controller al default";
+"Designed_for_iPhone" = "Disegnato per iPhone";
+
+"Respect_silent" = "Rispetta la silent Mode";
+"pause_inactive" = "In pausa quando non attivo";
+"Buttons" = "Pulsanti";
+"Control_Stick" = "Controlli";
+"Menu_gesture" = "Gesture di gioco";
+
+"top_screen_only" = "Solo schermo superiore";
+"arrange_screen_h" = "Disponi schermi in orizzontale";
+
+"home_screen_shortcut" = "Giochi in Home";
+"game_preview_menu" = "Anteprima Giochi";

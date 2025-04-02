@@ -48,21 +48,21 @@ extension PreferredControllerSkinsViewController
             case .standard:
                 switch UIDevice.current.userInterfaceIdiom
                 {
-                case .pad: return NSLocalizedString("Full Screen", comment: "")
-                default: return NSLocalizedString("Standard", comment: "")
+                case .pad: return "Full Screen".localizable
+                default: return "Standard".localizable
                 }
                 
             case .splitView:
                 if #available(iOS 16, *), scene.isStageManagerEnabled
                 {
-                    return NSLocalizedString("Stage Manager", comment: "")
+                    return "Stage Manager".localizable
                 }
                 else
                 {
-                    return NSLocalizedString("Split View", comment: "")
+                    return "Split View".localizable
                 }
                 
-            case .airPlay: return NSLocalizedString("AirPlay", comment: "")
+            case .airPlay: return "AirPlay".localizable
             }
         }
     }
@@ -403,11 +403,11 @@ private extension PreferredControllerSkinsViewController
         let actionsProvider: (([UIMenuElement]) -> Void) -> Void = { [weak self] completion in
             guard let self else { return completion([]) }
             
-            let noControllerAction = UIAction(title: NSLocalizedString("Touch", comment: ""), image: UIImage(systemName: "hand.point.up.left"), state: self.isExternalControllerSkin ? .off : .on) { _ in
+            let noControllerAction = UIAction(title: "Touch", image: UIImage(systemName: "hand.point.up.left"), state: self.isExternalControllerSkin ? .off : .on) { _ in
                 self.changeFilter(isExternalControllerSkin: false)
             }
             
-            let connectedControllerAction = UIAction(title: NSLocalizedString("Game Controller", comment: ""), image: UIImage(systemName: "gamecontroller"), state: self.isExternalControllerSkin ? .on : .off) { _ in
+            let connectedControllerAction = UIAction(title: "Game Controller".localizable, image: UIImage(systemName: "gamecontroller"), state: self.isExternalControllerSkin ? .on : .off) { _ in
                 self.changeFilter(isExternalControllerSkin: true)
             }
             

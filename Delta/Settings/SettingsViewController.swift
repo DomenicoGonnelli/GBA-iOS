@@ -358,12 +358,6 @@ private extension SettingsViewController
         self.navigationController?.pushViewController(hostingController, animated: true)
     }
     
-    func showExperimentalFeatures()
-    {
-        let hostingController = ExperimentalFeaturesView.makeViewController()
-        self.navigationController?.pushViewController(hostingController, animated: true)
-    }
-    
 }
 
 private extension SettingsViewController
@@ -447,6 +441,9 @@ extension SettingsViewController
         switch section
         {
         case .controllers:
+            
+            cell.textLabel?.text = String(format: "Player".localizable, "\(indexPath.row+1)")
+            
             if indexPath.row == Settings.localControllerPlayerIndex
             {
                 cell.detailTextLabel?.text = LocalDeviceController().name

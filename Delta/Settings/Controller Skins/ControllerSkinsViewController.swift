@@ -59,7 +59,7 @@ extension ControllerSkinsViewController
         self.tableView.dataSource = self.dataSource
         self.tableView.prefetchDataSource = self.dataSource
         
-        self.importControllerSkinButton.accessibilityLabel = NSLocalizedString("Import Controller Skin", comment: "")
+        self.importControllerSkinButton.accessibilityLabel = "Import_Controller_Skin".localizable
         
         if !self.isResetButtonVisible
         {
@@ -150,7 +150,7 @@ private extension ControllerSkinsViewController
     {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.addAction(.cancel)
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Reset Controller Skin to Default", comment: ""), style: .destructive, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "Reset_Controller_Skin".localizable, style: .destructive, handler: { (action) in
             self.delegate?.controllerSkinsViewControllerDidResetControllerSkin(self)
         }))
         alertController.popoverPresentationController?.barButtonItem = sender
@@ -228,7 +228,7 @@ extension ControllerSkinsViewController
         if self.traits.device == .ipad && !controllerSkin.supports(self.traits)
         {
             // On iPad but viewing an incompatible skin, so assume it's an iPhone skin.
-            return NSLocalizedString("Designed for iPhone", comment: "")
+            return "Designed_for_iPhone".localizable
         }
         else
         {
@@ -251,7 +251,7 @@ extension ControllerSkinsViewController: ImportControllerDelegate
             DispatchQueue.main.async {
                 self.transitionCoordinator?.animate(alongsideTransition: nil) { _ in
                     // Wait until ImportController is dismissed before presenting alert.
-                    let alertController = UIAlertController(title: NSLocalizedString("Failed to Import Controller Skin", comment: ""), error: error)
+                    let alertController = UIAlertController(title: "Failed to Import Controller Skin".localizable, error: error)
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
