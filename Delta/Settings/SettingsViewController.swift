@@ -230,6 +230,8 @@ private extension SettingsViewController
             }
         case .cores:
             return true
+        case .support:
+            return true
         default: return false
         }
     }
