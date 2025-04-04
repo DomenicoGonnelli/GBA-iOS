@@ -103,6 +103,7 @@ class GameViewController: DeltaCore.GameViewController
             let game = self.game as? Game
             NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.managedObjectContextDidChange(with:)), name: .NSManagedObjectContextObjectsDidChange, object: game?.managedObjectContext)
             
+            
             self.emulatorCore?.saveHandler = { [weak self] _ in self?.updateGameSave() }
             
             if oldValue?.fileURL != game?.fileURL
@@ -114,6 +115,7 @@ class GameViewController: DeltaCore.GameViewController
             self.updateAudio()
             
             self.presentedGyroAlert = false
+            
         }
     }
     
@@ -302,7 +304,9 @@ class GameViewController: DeltaCore.GameViewController
             {
             case .quickSave: self.performQuickSaveAction()
             case .quickLoad: self.performQuickLoadAction()
-            case .fastForward: self.performFastForwardAction(activate: true)
+            case .fastForward:
+                print("select speed")
+                self.performFastForwardAction(activate: true)
             case .reverseScreens: self.performReverseScreensAction()
             case .screenshot: self.performScreenshotAction()
             case .toggleFastForward:
@@ -329,6 +333,10 @@ class GameViewController: DeltaCore.GameViewController
                 gameController.sustain(input, value: value)
             }
         }
+    }
+    
+    private func closeGame(){
+        stopGameActivity()
     }
     
     override func gameController(_ gameController: GameController, didDeactivate input: Input)
@@ -362,7 +370,7 @@ class GameViewController: DeltaCore.GameViewController
             case .toggleFastForward: break
             case .reverseScreens: break
             case .screenshot: break
-            case .close: break
+            case .close: self.closeGame()
             }
         }
     }
@@ -499,7 +507,7 @@ extension GameViewController
         
         switch identifier
         {
-        case "showGamesViewController":
+        case "showGamesViewController": //todo---usare
             let gamesViewController = (segue.destination as! UINavigationController).topViewController as! GamesViewController
             
             if let emulatorCore = self.emulatorCore
@@ -1013,6 +1021,7 @@ private extension GameViewController
 /// Game Saves
 private extension GameViewController
 {
+
     func updateGameSave()
     {
         guard let game = self.game as? Game else { return }
@@ -1021,15 +1030,14 @@ private extension GameViewController
             do
             {
                 let game = context.object(with: game.objectID) as! Game
-                
+
                 let hash = try RSTHasher.sha1HashOfFile(at: game.gameSaveURL)
                 let previousHash = game.gameSave?.sha1
-                
                 guard hash != previousHash else { return }
-                
+                let actualDate = Date()
                 if let gameSave = game.gameSave
                 {
-                    gameSave.modifiedDate = Date()
+                    gameSave.modifiedDate = actualDate
                     gameSave.sha1 = hash
                 }
                 else
@@ -1042,10 +1050,13 @@ private extension GameViewController
                 }
                 
                 try context.save()
-                
-                if ExperimentalFeatures.shared.toastNotifications.gameSaveEnabled
-                {
-                    self.presentExperimentalToastView("Game_Data_Saved".localizable)
+                StorageHelper.saveGame(gameName: game.name, path: game.gameSaveURL,actualDate: actualDate){ success in
+                    if success {
+                        self.presentExperimentalToastView("Game_Data_Saved_online".localizable)
+                    } else {
+                        self.presentExperimentalToastView("Game_Data_Saved".localizable)
+                    }
+                    
                 }
             }
             catch CocoaError.fileNoSuchFile

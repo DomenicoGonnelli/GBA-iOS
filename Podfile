@@ -16,6 +16,7 @@ target 'GemBoy' do
     pod 'Kingfisher','~>5.15.7'
     pod 'CircleBar', :git => 'https://github.com/DomenicoGonnelli/CircleBar.git', :branch => 'General'
     pod 'CollectionViewPagingLayout'
+    pod 'ReachabilitySwift'
 
     pod 'DeltaCore', :path => 'Cores/DeltaCore'
     pod 'NESDeltaCore', :path => 'Cores/NESDeltaCore'

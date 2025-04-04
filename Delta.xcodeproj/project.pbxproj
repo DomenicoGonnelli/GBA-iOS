@@ -238,6 +238,8 @@
 		D5F702FD2C24CE5300DCD271 /* UISceneSession+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */; };
 		D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
 		D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
+		EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */; };
+		EB3EB55C2DA00793004FFACF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55B2DA00793004FFACF /* GoogleService-Info.plist */; };
 		EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
 		EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
 		EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
@@ -272,7 +274,6 @@
 		EB8E0D442D946518004BFB1F /* NotificationInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D432D946518004BFB1F /* NotificationInApp.swift */; };
 		EB8E0D562D947537004BFB1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0D542D947537004BFB1F /* Localizable.strings */; };
 		EB8E0D682D947655004BFB1F /* Notification.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EB8E0D612D947655004BFB1F /* Notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		EB8E0D7C2D947B88004BFB1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0D7B2D947B88004BFB1F /* GoogleService-Info.plist */; };
 		EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BA9F2D984792007A25A6 /* AlertView.xib */; };
 		EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */; };
@@ -655,6 +656,8 @@
 		D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneSession+Delta.swift"; sourceTree = "<group>"; };
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReachabilitySwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3EB55B2DA00793004FFACF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB69AB072D977F1B00311D39 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationManagar.swift; sourceTree = "<group>"; };
 		EB69AB092D977F1B00311D39 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -696,7 +699,6 @@
 		EB8E0D5B2D947593004BFB1F /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EB8E0D5C2D94759B004BFB1F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EB8E0D612D947655004BFB1F /* Notification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Notification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB8E0D7B2D947B88004BFB1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBA2BA9E2D984792007A25A6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		EBA2BA9F2D984792007A25A6 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		EBA2BAA12D984792007A25A6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -796,6 +798,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */,
 				EBBB19F02D9985CF009C977A /* libAlamofire.a in Frameworks */,
 				EBBB19EE2D9985BB009C977A /* libCollectionViewPagingLayout.a in Frameworks */,
 				EBBB19752D99727D009C977A /* libKingfisher.a in Frameworks */,
@@ -1153,6 +1156,7 @@
 		BF9F4FCD1AAD7B25004C9500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */,
 				EBBB19F12D998613009C977A /* libGoogleSignIn.a */,
 				EBBB19EF2D9985CF009C977A /* libAlamofire.a */,
 				EBBB19ED2D9985BB009C977A /* libCollectionViewPagingLayout.a */,
@@ -1347,7 +1351,7 @@
 				BF696B7E1D9B2AE6009639E0 /* Theming */,
 				BF090CEE1B490C1A00DCAB45 /* Extensions */,
 				BFFA71DA1AAC406100EE9DD1 /* Supporting Files */,
-				EB8E0D7B2D947B88004BFB1F /* GoogleService-Info.plist */,
+				EB3EB55B2DA00793004FFACF /* GoogleService-Info.plist */,
 			);
 			path = Delta;
 			sourceTree = "<group>";
@@ -2130,7 +2134,6 @@
 				BFFC46461D59861000AF2CC6 /* LaunchScreen.storyboard in Resources */,
 				BF353FF61C5D837600C1184C /* PauseMenu.storyboard in Resources */,
 				EB8E0D562D947537004BFB1F /* Localizable.strings in Resources */,
-				EB8E0D7C2D947B88004BFB1F /* GoogleService-Info.plist in Resources */,
 				EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */,
 				EBBB1A072D9989F5009C977A /* LaunchScreenStart.storyboard in Resources */,
 				EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */,
@@ -2139,6 +2142,7 @@
 				EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */,
 				BF27CC8E1BC9FEA200A20D89 /* Assets.xcassets in Resources */,
 				D5BE1BD72D0B9CBE00D2142E /* PatreonAPI.plist in Resources */,
+				EB3EB55C2DA00793004FFACF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

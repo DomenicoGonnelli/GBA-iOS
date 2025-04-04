@@ -118,7 +118,26 @@ extension UIViewController {
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true)
     }
-//    
+    
+    func showAlerCustom(title: String, message: String, firtButtonText: String, cancelText: String = "cancel".localizable, onOkTap: (() -> Void)? = nil, onCancelTap: (() -> Void)? = nil ){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: firtButtonText, style: .default, handler: { action in
+            DispatchQueue.main.async {
+                alertController.dismiss(animated: true, completion: nil)
+                onOkTap?()
+            }
+        })
+        alertController.addAction(okAction)
+        let cancelAction = UIAlertAction(title: cancelText, style: .default, handler: { action in
+            DispatchQueue.main.async {
+                alertController.dismiss(animated: true, completion: nil)
+                onCancelTap?()
+            }
+        })
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true)
+    }
+//
 //    
 //    func sharingImage(position: Int) -> UIImage?{
 //        let hashtagView = InstragramStoryView(frame: CGRect(x: 0, y: 0, width: 1080, height: 1930))

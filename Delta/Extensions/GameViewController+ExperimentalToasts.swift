@@ -7,11 +7,13 @@
 //
 
 import Roxas
+import Foundation
 
-extension GameViewController
+extension UIViewController
 {
-    func presentExperimentalToastView(_ text: String)
+    func presentExperimentalToastView(_ text: String, duration: Double? = nil)
     {
+        let time = duration ?? ExperimentalFeatures.shared.toastNotifications.duration
         guard ExperimentalFeatures.shared.toastNotifications.isEnabled else { return }
         
         DispatchQueue.main.async {
@@ -19,7 +21,7 @@ extension GameViewController
             toastView.edgeOffset.vertical = 8
             toastView.textLabel.textAlignment = .center
             toastView.presentationEdge = .top
-            toastView.show(in: self.view, duration: ExperimentalFeatures.shared.toastNotifications.duration)
+            toastView.show(in: self.view, duration: time)
         }
     }
 }

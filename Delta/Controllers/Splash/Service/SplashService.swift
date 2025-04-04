@@ -9,11 +9,18 @@ import Foundation
 import FirebaseAuth
 
 class SplashService {
-    
     static func autologin(_ completion: @escaping (Bool)->Void){
-        FirestoreHelper.getUserData(){ user in
-            LoginManager.shared.user = user
-            completion(user != nil)
+        if AppManager.shared.offlineMode {
+            if let id = LoginManager.storedUID {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        } else {
+            FirestoreHelper.getUserData(){ user in
+                LoginManager.shared.user = user
+                completion(user != nil)
+            }
         }
     }
     

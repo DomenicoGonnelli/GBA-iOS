@@ -95,6 +95,15 @@ class LoginManager {
         }
     }
     
+    static var storedUID: String?{
+        return UserDefaults.standard.string(forKey: "user_uid")
+    }
+    
+    static func storeUID(){
+        if let token = FirestoreHelper.uid {
+            UserDefaults.standard.set(token, forKey: "user_uid")
+        }
+    }
 
     
 //    func deleteAccount(completion: @escaping ((DeletingErrorEnum)->Void)){

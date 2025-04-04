@@ -68,7 +68,11 @@ class ViewController: BaseViewController {
             
             guard let home = home else {
                 self?.hideLoader()
-                self?.showAlert(alertTypology: .genericError)
+                if AppManager.shared.offlineMode {
+                    self?.goHome(fromLogin: true)
+                } else {
+                    self?.showAlert(alertTypology: .genericError)
+                }
                 return
             }
             

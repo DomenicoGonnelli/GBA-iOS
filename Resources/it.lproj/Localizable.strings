@@ -101,9 +101,10 @@
 "Close" = "Chiudi";
 "Main_menu" = "Menu Principale";
 "Game_Data_Saved" = "Dati di gioco Salvati";
+"Game_Data_Saved_online" = "Dati di gioco Salvati sul server";
 "Game_Data_Loaded" = "Dati di gioco Caricati";
 "Fast_Forward_enabled" = "Velocità aumentata ATTIVA";
-"Fast_Forward_disabled" = "Velocità aumentata ATTIVA";
+"Fast_Forward_disabled" = "Velocità aumentata DISATTIVATA";
 "saved_screen_to_photo" = "Screenshot salvato su Foto";
 "not_saved_screen_to_photo" = "Impossibile salvare screenshot";
 "speedMaxDS" = "Puoi portare la velocità ad un massimo di 3x";
@@ -129,7 +130,7 @@
 
 "Info" = "Informazioni";
 "Auto Save" = "Salvataggio automatico";
-"General" = "Genereali";
+"General" = "General";
 "Locked" = "Bloccato";
 
 "Name" = "Nome";
@@ -432,3 +433,6 @@
 
 "AirPlay" = "AirPlay";
 "AirPlay_second_screen" = "Il gioco è savviato su un secondo schermo";
+
+"offline_game_mode" = "Stai giocando offline, assicurati di essere online per salvare i dati sul server";
+"online_game_mode" = "Sei nuovamente online";

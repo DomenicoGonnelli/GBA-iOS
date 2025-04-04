@@ -89,8 +89,19 @@ extension GameCollectionViewController
     }
 }
 
-class GameCollectionViewController: UICollectionViewController
+class GameCollectionViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return gameCollection?.games.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
     var gameCollection: GameCollection? {
         didSet {
             self.title = self.gameCollection?.shortName
@@ -138,7 +149,7 @@ class GameCollectionViewController: UICollectionViewController
     required init?(coder aDecoder: NSCoder)
     {
         self.dataSource = RSTFetchedResultsCollectionViewPrefetchingDataSource<Game, UIImage>(fetchedResultsController: NSFetchedResultsController())
-
+        
         super.init(coder: aDecoder)
         
         self.prepareDataSource()
@@ -183,7 +194,7 @@ extension GameCollectionViewController
             })
         }
     }
-
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -222,7 +233,7 @@ extension GameCollectionViewController
             
             let preferredControllerSkinsViewController = (segue.destination as! UINavigationController).topViewController as! PreferredControllerSkinsViewController
             preferredControllerSkinsViewController.game = game
-
+            
         case "unwindFromGames":
             let destinationViewController = segue.destination as! GameViewController
             
@@ -248,10 +259,12 @@ extension GameCollectionViewController
             }
             else
             {
+                
                 // Otherwise, reset emulation and optionally load self.activeSaveState below to "resume".
                 destinationViewController.game = game
+                
             }
-
+            
             if let emulatorBridge = destinationViewController.emulatorCore?.deltaCore.emulatorBridge as? MelonDSEmulatorBridge
             {
                 //TODO: Update this to work with multiple processes by retrieving emulatorBridge directly from emulatorCore.
@@ -270,6 +283,9 @@ extension GameCollectionViewController
                 emulatorBridge.gbaGameURL = game.secondaryGame?.fileURL
                 emulatorBridge.wfcDNS = Settings.preferredWFCServer
             }
+            
+            
+            
             
             if let saveState = self.activeSaveState /* && self.isResumingGame */ // activeSaveState can be non-nil even when not resuming game.
             {
@@ -296,14 +312,69 @@ extension GameCollectionViewController
             self.activeSaveState = nil
             self.isResumingGame = false
             
-            if _performingPreviewTransition
+            if self._performingPreviewTransition
             {
-                _previewTransitionDestinationViewController = destinationViewController
+                self._previewTransitionDestinationViewController = destinationViewController
             }
+            
             
         default: break
         }
     }
+    
+    
+    func getOnlineSave(_ game: Game?, completion: @escaping ()->()){
+        guard let game = game else {
+            completion()
+            return
+        }
+        DatabaseManager.shared.performBackgroundTask { (context) in
+            
+            let game = context.object(with: game.objectID) as! Game
+            let gameURL =  game.gameSaveURL
+            let name = game.name
+            let dateLocal = game.gameSave?.modifiedDate.niceLabelAndHours() ?? Date().niceLabelAndHours()
+            
+            StorageHelper.getSave(path: gameURL){dbData, date in
+                let hash = try? RSTHasher.sha1HashOfFile(at: gameURL)
+                if let onlineData = dbData, let date = date {
+                    let onlineHash = RSTHasher.sha1Hash(of: onlineData)
+                    if onlineHash != hash {
+                        self.showAlerCustom(title: "Trovato salvataggio online!", message: "E' stata trova una versione di '\(name)' sul server differente da quella sul dispositivo:\n\nSalvataggio Locale: \(dateLocal)\nSalvataggio sul server: \(date)", firtButtonText: "Usa salvataggio Online", cancelText: "Usa salvataggio locale\n(sovrascrivi dati online)", onOkTap: {
+                            do {
+                                // Sovrascrivi il file
+                                try dbData?.write(to: gameURL)
+                                completion()
+                                print("File sovrascritto con successo")
+                            } catch {
+                                completion()
+                                print("Errore nel salvataggio del file nel File Manager:", error.localizedDescription)
+                            }
+                        }, onCancelTap: {
+                            completion()
+                        })
+                    } else {
+                        completion()
+                    }
+                } else {
+                    completion()
+                }
+            }
+        }
+        
+    }
+    
+    func getLocalSaveFileURL() -> URL? {
+        let fileManager = FileManager.default
+        let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
+        return documentDirectory?.appendingPathComponent("game_save.sav")
+    }
+    
+    func getLocalFileData(url: URL?) -> Data? {
+        guard let fileURL = url else { return nil }
+        return try? Data(contentsOf: fileURL)
+    }
+    
     
     @IBAction private func unwindToGameCollectionViewController(_ segue: UIStoryboardSegue)
     {
@@ -344,7 +415,6 @@ extension GameCollectionViewController
             
             // Clear screen
             self.activeEmulatorCore?.gameViews.forEach { $0.inputImage = nil }
-            
             self.performSegue(withIdentifier: "unwindFromGames", sender: game)
         }
         catch
@@ -380,7 +450,7 @@ private extension GameCollectionViewController
 {
     func update()
     {
-        let layout = self.collectionViewLayout as! GridCollectionViewLayout
+        let layout = collectionView?.collectionViewLayout as! GridCollectionViewLayout
         
         switch self.traitCollection.horizontalSizeClass
         {
@@ -479,7 +549,7 @@ private extension GameCollectionViewController
             cell.textLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
         }
         
-        let layout = self.collectionViewLayout as! GridCollectionViewLayout
+        let layout = collectionView.collectionViewLayout as! GridCollectionViewLayout
         cell.maximumImageSize = CGSize(width: layout.itemWidth, height: layout.itemWidth)
         
         cell.textLabel.text = game.name
@@ -506,7 +576,14 @@ private extension GameCollectionViewController
                 }
                 
                 let cell = self.collectionView.cellForItem(at: indexPath)
-                self.performSegue(withIdentifier: "unwindFromGames", sender: cell)
+                
+                showLoader()
+                getOnlineSave(game){
+                    self.hideLoader()
+                    self.performSegue(withIdentifier: "unwindFromGames", sender: game)
+                }
+                
+                
             }
             catch
             {
@@ -655,17 +732,17 @@ private extension GameCollectionViewController
             {
                 guard
                     FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.dsiBIOS7URL.path) &&
-                    FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.dsiBIOS9URL.path) &&
-                    FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.dsiFirmwareURL.path) &&
-                    FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.dsiNANDURL.path)
+                        FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.dsiBIOS9URL.path) &&
+                        FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.dsiFirmwareURL.path) &&
+                        FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.dsiNANDURL.path)
                 else { throw LaunchError.biosNotFound }
             }
             else if game.identifier == Game.melonDSBIOSIdentifier
             {
                 guard
                     FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.bios7URL.path) &&
-                    FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.bios9URL.path) &&
-                    FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.firmwareURL.path)
+                        FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.bios9URL.path) &&
+                        FileManager.default.fileExists(atPath: MelonDSEmulatorBridge.shared.firmwareURL.path)
                 else { throw LaunchError.biosNotFound }
             }
             else
@@ -834,7 +911,7 @@ private extension GameCollectionViewController
     func rename(_ game: Game, with name: String)
     {
         guard name.count > 0 else { return }
-
+        
         DatabaseManager.shared.performBackgroundTask { (context) in
             let game = context.object(with: game.objectID) as! Game
             game.name = name
@@ -990,7 +1067,7 @@ private extension GameCollectionViewController
         do
         {
             try FileManager.default.createDirectory(at: temporaryDirectory, withIntermediateDirectories: true, attributes: nil)
-                                    
+            
             // Make a temporary copy so we can control the filename used when sharing.
             // Otherwise, if we just passed in game.fileURL to UIActivityViewController, the file name would be the game's SHA1 hash.
             try FileManager.default.copyItem(at: game.fileURL, to: temporaryURL, shouldReplace: true)
@@ -1179,7 +1256,7 @@ extension GameCollectionViewController: UIViewControllerPreviewingDelegate
         if let emulatorBridge = gameViewController.emulatorCore?.deltaCore.emulatorBridge as? MelonDSEmulatorBridge
         {
             //TODO: Update this to work with multiple processes by retrieving emulatorBridge directly from emulatorCore.
-
+            
             if game.identifier == Game.melonDSDSiBIOSIdentifier
             {
                 emulatorBridge.systemType = .dsi
@@ -1188,7 +1265,7 @@ extension GameCollectionViewController: UIViewControllerPreviewingDelegate
             {
                 emulatorBridge.systemType = .ds
             }
-
+            
             emulatorBridge.isJITEnabled = ProcessInfo.processInfo.isJITAvailable
         }
         
@@ -1282,7 +1359,7 @@ extension GameCollectionViewController: ImportControllerDelegate
 /// UICollectionViewDelegate
 extension GameCollectionViewController
 {
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         guard self.gameCollection?.identifier != GameType.unknown.rawValue else { return }
         
@@ -1312,7 +1389,7 @@ extension GameCollectionViewController: UICollectionViewDelegateFlowLayout
 @available(iOS 13.0, *)
 extension GameCollectionViewController
 {
-    override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?
     {
         let game = self.dataSource.item(at: indexPath)
         
@@ -1341,7 +1418,7 @@ extension GameCollectionViewController
         
         let cell = self.collectionView.cellForItem(at: indexPath)
         self._popoverSourceView = cell
-                
+        
         return UIContextMenuConfiguration(identifier: indexPath as NSIndexPath, previewProvider: { [weak self] in
             guard let self = self else { return nil }
             
@@ -1354,7 +1431,7 @@ extension GameCollectionViewController
                 print("Error trying to preview game:", error)
                 return nil
             }
-                        
+            
             let previewViewController = self.makePreviewGameViewController(for: game)
             previewViewController.isLivePreview = Settings.isPreviewsEnabled
             
@@ -1367,12 +1444,12 @@ extension GameCollectionViewController
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating)
+    func collectionView(_ collectionView: UICollectionView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating)
     {
         self.commitPreviewTransition()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview?
+    func collectionView(_ collectionView: UICollectionView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview?
     {
         guard let indexPath = configuration.identifier as? NSIndexPath else { return nil }
         guard let cell = collectionView.cellForItem(at: indexPath as IndexPath) as? GridCollectionViewCell else { return nil }
@@ -1388,12 +1465,12 @@ extension GameCollectionViewController
             let bezierPath = UIBezierPath(rect: artworkFrame)
             parameters.visiblePath = bezierPath
         }
-
+        
         let preview = UITargetedPreview(view: cell.imageView, parameters: parameters)
         return preview
     }
     
-    override func collectionView(_ collectionView: UICollectionView, previewForDismissingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview?
+    func collectionView(_ collectionView: UICollectionView, previewForDismissingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview?
     {
         _previewTransitionViewController = nil
         return self.collectionView(collectionView, previewForHighlightingContextMenuWithConfiguration: configuration)
@@ -1425,7 +1502,7 @@ extension GameCollectionViewController: UIDocumentPickerDelegate
 
 extension GameCollectionViewController: UICollectionViewDragDelegate
 {
-    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: any UIDragSession, at indexPath: IndexPath) -> [UIDragItem] 
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: any UIDragSession, at indexPath: IndexPath) -> [UIDragItem]
     {
         do
         {
@@ -1436,7 +1513,7 @@ extension GameCollectionViewController: UICollectionViewDragDelegate
             
             let itemProvider = NSItemProvider()
             itemProvider.registerObject(userActivity, visibility: .all)
-                    
+            
             return [UIDragItem(itemProvider: itemProvider)]
         }
         catch

@@ -262,7 +262,7 @@ private extension ControllerInputsViewController
                 image = #imageLiteral(resourceName: "Screenshot")
                 text = "Screenshot".localizable
             case .close:
-                image = UIImage(resource: .close)
+                image = UIImage(resource: .closeGame)
                 text = "closeGame".localizable
                 
             case .toggleFastForward, .reverseScreens: continue

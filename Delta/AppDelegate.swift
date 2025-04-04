@@ -12,15 +12,17 @@ import FirebaseCore
 import GoogleMobileAds
 import ShowTouches
 import GoogleSignIn
+import Reachability
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
     var window: UIWindow?
     
+    var reachability: Reachability?
     private let deepLinkController = DeepLinkController(window: nil)
     private var appLaunchDeepLink: DeepLink?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         Settings.registerDefaults()
@@ -41,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         NotificationManager.shared.registerToPushNotification()
         MobileAds.shared.start(completionHandler: nil)
+        setReachability()
         // Deep Links
         if let shortcut = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem
         {
@@ -49,33 +52,81 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             // false = we handled the deep link, so no need to call delegate method separately.
             return false
         }
-                
+        
         return true
     }
-
+    
+    func setReachability(){
+        reachability = try! Reachability()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)),name: .reachabilityChanged, object: reachability)
+        do{
+            try reachability?.startNotifier()
+            if let connection = reachability?.connection, connection == .unavailable {
+                AppManager.shared.offlineMode = true
+                showNoInternetError()
+            }
+        } catch{
+            print("could not start reachability notifier")
+        }
+    }
+    
+    
+    private func showNoInternetError(){
+        if let controller = actualController{
+            if AppManager.shared.offlineMode {
+                controller.presentExperimentalToastView("offline_game_mode".localizable, duration: 3)
+            } else {
+                controller.presentExperimentalToastView("online_game_mode".localizable, duration: 3)
+            }
+            
+        }
+    }
+    
+    
+    
+    @objc private func reachabilityChanged(note: Notification) {
+        let reachability = note.object as! Reachability
+        if reachability.connection == .wifi || reachability.connection == .cellular {
+            AppManager.shared.offlineMode = false
+            showNoInternetError()
+        } else {
+            AppManager.shared.offlineMode = true
+            showNoInternetError()
+        }
+        
+    }
+    
+    var actualController : UIViewController? {
+        let controller = UIApplication.shared.keyWindow?.rootViewController
+        return controller
+    }
+    
+    
+    
     func applicationWillResignActive(_ application: UIApplication)
     {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
-
+    
     func applicationDidEnterBackground(_ application: UIApplication)
     {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication)
     {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         guard DatabaseManager.shared.isStarted else { return }
     }
-
+    
     func applicationDidBecomeActive(_ application: UIApplication)
     {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication)
     {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
@@ -119,24 +170,24 @@ private extension AppDelegate
 {
     func registerCores()
     {
-        #if LITE
+#if LITE
         
-        #if BETA
+#if BETA
         Delta.register(System.nes.deltaCore)
         Delta.register(System.gbc.deltaCore)
-        #else
+#else
         Delta.register(System.nes.deltaCore)
-        #endif
+#endif
         
-        #else
+#else
         
-        #if BETA
+#if BETA
         System.DGITems.forEach { Delta.register($0.deltaCore) }
-        #else
+#else
         System.allCases.filter { $0 != .genesis }.forEach { Delta.register($0.deltaCore) }
-        #endif
+#endif
         
-        #endif
+#endif
     }
     
     func configureAppearance()
@@ -163,14 +214,14 @@ extension AppDelegate
 {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool
     {
-    
+        
         if self.openURL(url) {
             return true
         }
         return application(app, open: url,
-                               sourceApplication: options[UIApplication.OpenURLOptionsKey
-                                 .sourceApplication] as? String,
-                               annotation: "")
+                           sourceApplication: options[UIApplication.OpenURLOptionsKey
+                            .sourceApplication] as? String,
+                           annotation: "")
     }
     
     @discardableResult private func openURL(_ url: URL) -> Bool
@@ -277,22 +328,22 @@ private extension AppDelegate
 
 extension AppDelegate{
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-//        if let webpageURL = userActivity.webpageURL{
-//            let handled = DynamicLinks.dynamicLinks().handleUniversalLink(webpageURL) { (dynamiclink, error) in
-//                DynamicLinksHelper.handleDeepLink(shortUrl: webpageURL)
-//            }
-//            return handled
-//        }
+        //        if let webpageURL = userActivity.webpageURL{
+        //            let handled = DynamicLinks.dynamicLinks().handleUniversalLink(webpageURL) { (dynamiclink, error) in
+        //                DynamicLinksHelper.handleDeepLink(shortUrl: webpageURL)
+        //            }
+        //            return handled
+        //        }
         return false
     }
-
+    
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        if let _ = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
-//            DynamicLinksHelper.handleDeepLink(shortUrl: url)
-//            return true
-//        }
+        //        if let _ = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+        //            DynamicLinksHelper.handleDeepLink(shortUrl: url)
+        //            return true
+        //        }
         return GIDSignIn.sharedInstance.handle(url)
     }
-
+    
 }

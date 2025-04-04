@@ -58,6 +58,8 @@ class AppManager {
         return homeData?.iosConfig?.GADid ?? "ca-app-pub-5791654562344514/8410172162"
     }
     
+    var offlineMode = false
+    
 
     var products : [SKProduct] = []
     
