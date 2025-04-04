@@ -50,12 +50,10 @@ class StorageHelper{
         let storageRef = Storage.storage().reference(withPath: path)
         
         storageRef.getMetadata(){ metadata, error in
-            
             guard let modificationDate = metadata?.updated?.niceLabelAndHours() else {
                 completion(nil,nil)
                 return
             }
-            
             storageRef.downloadURL(){ url, error in
                 if let downloadURL = url {
                     URLSession.shared.dataTask(with: downloadURL) { (data, response, error) in

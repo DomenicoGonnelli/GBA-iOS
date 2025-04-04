@@ -340,15 +340,12 @@ extension GameCollectionViewController
                 if let onlineData = dbData, let date = date {
                     let onlineHash = RSTHasher.sha1Hash(of: onlineData)
                     if onlineHash != hash {
-                        self.showAlerCustom(title: "Trovato salvataggio online!", message: "E' stata trova una versione di '\(name)' sul server differente da quella sul dispositivo:\n\nSalvataggio Locale: \(dateLocal)\nSalvataggio sul server: \(date)", firtButtonText: "Usa salvataggio Online", cancelText: "Usa salvataggio locale\n(sovrascrivi dati online)", onOkTap: {
+                        self.showAlerCustom(title: "syncDataTitle".localizable, message: String(format: "syncDataMessage".localizable, name, dateLocal,date), firtButtonText: "syncDataOnline".localizable, cancelText: "syncDataLocal".localizable, onOkTap: {
                             do {
-                                // Sovrascrivi il file
                                 try dbData?.write(to: gameURL)
                                 completion()
-                                print("File sovrascritto con successo")
                             } catch {
                                 completion()
-                                print("Errore nel salvataggio del file nel File Manager:", error.localizedDescription)
                             }
                         }, onCancelTap: {
                             completion()

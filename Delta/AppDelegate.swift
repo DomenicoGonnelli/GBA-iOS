@@ -43,12 +43,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         NotificationManager.shared.registerToPushNotification()
         MobileAds.shared.start(completionHandler: nil)
+        ExperimentalFeatures.shared.toastNotifications.isEnabled = true
         setReachability()
+        
         // Deep Links
         if let shortcut = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem
         {
             self.appLaunchDeepLink = .shortcut(shortcut)
-            
             // false = we handled the deep link, so no need to call delegate method separately.
             return false
         }

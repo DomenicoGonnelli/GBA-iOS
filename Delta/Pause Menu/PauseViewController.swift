@@ -224,7 +224,7 @@ private extension PauseViewController
         self.fastForwardItem = MenuItem(text: "Fast_Forward".localizable, image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
         self.sustainButtonsItem = MenuItem(text: "Hold_Buttons".localizable, image: #imageLiteral(resourceName: "SustainButtons"), action: { _ in })
         self.screenshotItem = MenuItem(text: "Screenshot".localizable, image: #imageLiteral(resourceName: "Screenshot"), action: { _ in })
-        self.closeGameItem = MenuItem(text: "closeGame".localizable, image: #imageLiteral(resourceName: "deleteTeamUserProfile"), action: { _ in })
+        self.closeGameItem = MenuItem(text: "closeGame".localizable, image: #imageLiteral(resourceName: "closeGame"), action: { _ in })
 
         if ExperimentalFeatures.shared.variableFastForward.isEnabled
         {

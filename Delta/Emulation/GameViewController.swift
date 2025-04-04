@@ -544,6 +544,12 @@ extension GameViewController
             pauseViewController.saveStatesViewControllerDelegate = self
             pauseViewController.cheatsViewControllerDelegate = self
             pauseViewController.closeButtonTitle = self.isGameScene ? "Close".localizable : "Main_menu".localizable
+            pauseViewController.closeGameItem?.action = { [unowned self] item in
+                self.pauseViewController?.showAlerCustomCancel(title: "Vuoi chiudere il Gioco?", message: "I progressi non salvati andranno persi", firtButtonText: "Chiudi"){
+                        self.quitEmulation()
+                }
+                
+            }
             
             if let traits = self.controllerView.controllerSkinTraits, let menuInsets = self.controllerView.controllerSkin?.menuInsets(for: traits)
             {

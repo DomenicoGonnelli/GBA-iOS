@@ -110,7 +110,7 @@ extension UIViewController {
             }
         })
         alertController.addAction(okAction)
-        let cancelAction = UIAlertAction(title: "cancel".localizable, style: .cancel, handler: { action in
+        let cancelAction = UIAlertAction(title: "Cancel".localizable, style: .cancel, handler: { action in
             DispatchQueue.main.async {
                 alertController.dismiss(animated: true, completion: nil)
             }
@@ -119,7 +119,7 @@ extension UIViewController {
         self.present(alertController, animated: true)
     }
     
-    func showAlerCustom(title: String, message: String, firtButtonText: String, cancelText: String = "cancel".localizable, onOkTap: (() -> Void)? = nil, onCancelTap: (() -> Void)? = nil ){
+    func showAlerCustom(title: String, message: String, firtButtonText: String, cancelText: String, onOkTap: (() -> Void)? = nil, onCancelTap: (() -> Void)? = nil ){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: firtButtonText, style: .default, handler: { action in
             DispatchQueue.main.async {

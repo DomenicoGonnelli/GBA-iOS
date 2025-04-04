@@ -436,3 +436,9 @@
 
 "offline_game_mode" = "Stai giocando offline, assicurati di essere online per salvare i dati sul server";
 "online_game_mode" = "Sei nuovamente online";
+
+"syncDataTitle" = "Trovato salvataggio online!";
+"syncDataMessage" = "È stata trova una versione di '%@' sul server differente da quella sul dispositivo:\n\nSalvataggio Locale: %@\nSalvataggio sul server: %@";
+"syncDataOnline" = "Usa salvataggio Online";
+"syncDataLocal" = "Usa salvataggio locale e sovrascrivi dati online";
+
