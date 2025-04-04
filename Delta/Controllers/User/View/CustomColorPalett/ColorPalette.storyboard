@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRnd-Medium.otf">
+            <string>GothamRounded-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Color Palette View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ColorPaletteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ColorPaletteViewController" customModule="Collaudo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-cj-uu6">
+                                <rect key="frame" x="24" y="109" width="345" height="54"/>
+                                <string key="text">Personalizza l' App di Formula Fantasy: 
+scegli il tema e modifica l'icona</string>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="18"/>
+                                <color key="textColor" name="primaryColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="changeThemeAppTile"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="interlineSpace">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjQ-me-NMv" customClass="CustomNavigationBar" customModule="Collaudo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6MD-vZ-2pv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" name="primaryColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O2u-r0-9Bk">
+                                <rect key="frame" x="20" y="183" width="353" height="615"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColorPaletteCell" id="zGa-sD-Ol1" customClass="ColorPaletteCell" customModule="Collaudo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="353" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zGa-sD-Ol1" id="EoL-U1-hlQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKa-Qh-jFR" customClass="DynamicView" customModule="Collaudo" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="10" width="353" height="75"/>
+                                                    <color key="backgroundColor" red="0.76982717803030298" green="0.76982717803030298" blue="0.76982717803030298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Tema default" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kp-zh-KyN">
+                                                    <rect key="frame" x="20" y="20" width="303" height="15"/>
+                                                    <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
+                                                    <color key="textColor" name="primaryColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UX0-zX-t33">
+                                                    <rect key="frame" x="20" y="45" width="258" height="30"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8w-4h-Drk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="backgroundColor" name="AccentColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="i8w-4h-Drk" secondAttribute="height" id="DX9-mC-fFX"/>
+                                                                <constraint firstAttribute="height" constant="30" id="Qxm-7F-OZj"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osa-BT-WTp">
+                                                            <rect key="frame" x="38" y="0.0" width="30" height="30"/>
+                                                            <color key="backgroundColor" name="buttonTextColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="osa-BT-WTp" secondAttribute="height" id="gUH-kh-68Y"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8b4-Fu-HEl">
+                                                            <rect key="frame" x="76" y="0.0" width="30" height="30"/>
+                                                            <color key="backgroundColor" name="primaryColorFix"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="8b4-Fu-HEl" secondAttribute="height" id="wP3-65-aKM"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ra4-aU-6kx">
+                                                            <rect key="frame" x="114" y="0.0" width="30" height="30"/>
+                                                            <color key="backgroundColor" name="primaryColorLight"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Ra4-aU-6kx" secondAttribute="height" id="sLg-Nc-SDj"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCf-TW-nq7">
+                                                            <rect key="frame" x="152" y="0.0" width="30" height="30"/>
+                                                            <color key="backgroundColor" name="primaryColorLight"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="WCf-TW-nq7" secondAttribute="height" id="mVP-qV-tcj"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwR-xp-c8B">
+                                                            <rect key="frame" x="190" y="0.0" width="30" height="30"/>
+                                                            <color key="backgroundColor" name="purple"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="zwR-xp-c8B" secondAttribute="height" id="iaT-W9-48y"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRT-f9-DSG">
+                                                            <rect key="frame" x="228" y="0.0" width="30" height="30"/>
+                                                            <color key="backgroundColor" name="secondaryColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="TRT-f9-DSG" secondAttribute="height" id="duC-tb-SsL"/>
+                                                                <constraint firstAttribute="width" secondItem="TRT-f9-DSG" secondAttribute="height" id="zRf-10-8Tw"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="WPZ-4L-yYM"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="UX0-zX-t33" firstAttribute="leading" secondItem="3kp-zh-KyN" secondAttribute="leading" id="ASe-tu-2Ve"/>
+                                                <constraint firstItem="zKa-Qh-jFR" firstAttribute="top" secondItem="3kp-zh-KyN" secondAttribute="top" constant="-10" id="BYk-3y-qDx"/>
+                                                <constraint firstItem="3kp-zh-KyN" firstAttribute="leading" secondItem="EoL-U1-hlQ" secondAttribute="leadingMargin" id="DRH-jx-nN4"/>
+                                                <constraint firstItem="UX0-zX-t33" firstAttribute="top" secondItem="3kp-zh-KyN" secondAttribute="bottom" constant="10" id="Qvo-cz-gch"/>
+                                                <constraint firstItem="zKa-Qh-jFR" firstAttribute="leading" secondItem="EoL-U1-hlQ" secondAttribute="leading" id="V3b-RF-VNJ"/>
+                                                <constraint firstItem="3kp-zh-KyN" firstAttribute="top" secondItem="EoL-U1-hlQ" secondAttribute="top" constant="20" id="cgu-pv-ZTT"/>
+                                                <constraint firstItem="zKa-Qh-jFR" firstAttribute="bottom" secondItem="UX0-zX-t33" secondAttribute="bottom" constant="10" id="ck1-Fo-oYH"/>
+                                                <constraint firstAttribute="trailing" secondItem="zKa-Qh-jFR" secondAttribute="trailing" id="eTs-Ab-A0V"/>
+                                                <constraint firstAttribute="bottom" secondItem="UX0-zX-t33" secondAttribute="bottom" constant="10" id="m9y-1A-O3i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3kp-zh-KyN" secondAttribute="trailing" constant="10" id="nrR-cr-MUv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="accentColor" destination="i8w-4h-Drk" id="C2k-9J-AKb"/>
+                                            <outlet property="backGroundView" destination="zKa-Qh-jFR" id="ser-il-oBT"/>
+                                            <outlet property="invertedPrimaryColor" destination="osa-BT-WTp" id="MiO-0V-iQq"/>
+                                            <outlet property="lightGrayPrimaryColor" destination="Ra4-aU-6kx" id="eVa-MJ-jjb"/>
+                                            <outlet property="lightGrayPrimaryColorDark" destination="WCf-TW-nq7" id="oAN-wU-Hhh"/>
+                                            <outlet property="paletteName" destination="3kp-zh-KyN" id="4GS-Jv-XQe"/>
+                                            <outlet property="primaryColor" destination="8b4-Fu-HEl" id="zMh-qc-oxL"/>
+                                            <outlet property="purple" destination="zwR-xp-c8B" id="5ok-L8-FOE"/>
+                                            <outlet property="secondaryColor" destination="TRT-f9-DSG" id="qIe-fO-EUd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewIconCell" id="8Wv-C0-EA2" userLabel="NewIconCell" customClass="NewIconCell" customModule="Collaudo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="135" width="353" height="295.33334350585938"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Wv-C0-EA2" id="fgx-69-VI7">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="295.33334350585938"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Tema default" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69t-yj-x0e">
+                                                    <rect key="frame" x="20" y="20" width="303" height="15"/>
+                                                    <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="15"/>
+                                                    <color key="textColor" name="primaryColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="changeIconAppTile"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mes-qd-NKG">
+                                                    <rect key="frame" x="20" y="45.000000000000014" width="323" height="240.33333333333337"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K7p-aF-gFx">
+                                                            <rect key="frame" x="0.0" y="0.0" width="323" height="75"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ7-Sg-kge">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="75"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="NJ7-Sg-kge" secondAttribute="height" multiplier="1:1" id="l0t-Zq-FVL"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="8DC-GF-zUF"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT2-Qb-M7x">
+                                                                    <rect key="frame" x="82.666666666666671" y="0.0" width="75.000000000000014" height="75"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="tT2-Qb-M7x" secondAttribute="height" multiplier="1:1" id="nqr-wt-Ich"/>
+                                                                        <constraint firstAttribute="width" secondItem="tT2-Qb-M7x" secondAttribute="height" multiplier="1:1" id="snP-Ps-FyG"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="E58-yb-xTC"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftH-4N-DxY">
+                                                                    <rect key="frame" x="165.66666666666666" y="0.0" width="74.666666666666657" height="75"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="ftH-4N-DxY" secondAttribute="height" multiplier="1:1" id="7L5-bM-wUa"/>
+                                                                        <constraint firstAttribute="width" secondItem="ftH-4N-DxY" secondAttribute="height" multiplier="1:1" id="afF-Kf-PjN"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="QJp-4J-Hw1"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gb-Xf-FUm">
+                                                                    <rect key="frame" x="248.33333333333329" y="0.0" width="74.666666666666657" height="75"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="3Gb-Xf-FUm" secondAttribute="height" multiplier="1:1" id="47H-gb-XOh"/>
+                                                                        <constraint firstAttribute="width" secondItem="3Gb-Xf-FUm" secondAttribute="height" multiplier="1:1" id="DXo-E7-RaO"/>
+                                                                        <constraint firstAttribute="width" secondItem="3Gb-Xf-FUm" secondAttribute="height" multiplier="1:1" id="FZp-7z-kni"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="aaN-ww-fJG"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1h7-fv-6Me">
+                                                            <rect key="frame" x="0.0" y="83" width="323" height="74.666666666666686"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30A-wG-R6a">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="74.666666666666671"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="30A-wG-R6a" secondAttribute="height" multiplier="1:1" id="O6w-Z9-7hw"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="FN7-Xm-U6R"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukb-UV-AGY">
+                                                                    <rect key="frame" x="82.666666666666671" y="0.0" width="75.000000000000014" height="74.666666666666671"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="ukb-UV-AGY" secondAttribute="height" multiplier="1:1" id="AcA-za-7f1"/>
+                                                                        <constraint firstAttribute="width" secondItem="ukb-UV-AGY" secondAttribute="height" multiplier="1:1" id="crK-sd-xyE"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="K68-vb-Rt0"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjX-LL-Pvv">
+                                                                    <rect key="frame" x="165.66666666666666" y="0.0" width="74.666666666666657" height="74.666666666666671"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="WjX-LL-Pvv" secondAttribute="height" multiplier="1:1" id="dCL-aL-vVt"/>
+                                                                        <constraint firstAttribute="width" secondItem="WjX-LL-Pvv" secondAttribute="height" multiplier="1:1" id="kIi-sO-xwI"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="cM4-2z-P6q"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-WN-KRC">
+                                                                    <rect key="frame" x="248.33333333333329" y="0.0" width="74.666666666666657" height="74.666666666666671"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="qOH-WN-KRC" secondAttribute="height" multiplier="1:1" id="5dd-he-BxG"/>
+                                                                        <constraint firstAttribute="width" secondItem="qOH-WN-KRC" secondAttribute="height" multiplier="1:1" id="TAr-Il-eV8"/>
+                                                                        <constraint firstAttribute="width" secondItem="qOH-WN-KRC" secondAttribute="height" multiplier="1:1" id="o29-Pb-ncp"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="rzd-aA-drf"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="APQ-as-LUP">
+                                                            <rect key="frame" x="0.0" y="165.66666666666666" width="323" height="74.666666666666657"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ix-Fm-3Ht">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="74.666666666666671"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="0ix-Fm-3Ht" secondAttribute="height" multiplier="1:1" id="tWq-5O-GvM"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="lE3-Kw-y1V"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw6-fV-JAD">
+                                                                    <rect key="frame" x="82.666666666666671" y="0.0" width="75.000000000000014" height="74.666666666666671"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="zw6-fV-JAD" secondAttribute="height" multiplier="1:1" id="Ezl-zd-V3u"/>
+                                                                        <constraint firstAttribute="width" secondItem="zw6-fV-JAD" secondAttribute="height" multiplier="1:1" id="a9F-9W-Uc2"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="t3P-54-DRe"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaM-mP-cgW">
+                                                                    <rect key="frame" x="165.66666666666666" y="0.0" width="74.666666666666657" height="74.666666666666671"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="EaM-mP-cgW" secondAttribute="height" multiplier="1:1" id="Yv1-Sy-LtM"/>
+                                                                        <constraint firstAttribute="width" secondItem="EaM-mP-cgW" secondAttribute="height" multiplier="1:1" id="gvq-Md-bCb"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="wfS-d8-Ci9"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJV-xu-FSU">
+                                                                    <rect key="frame" x="248.33333333333329" y="0.0" width="74.666666666666657" height="74.666666666666671"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="GJV-xu-FSU" secondAttribute="height" multiplier="1:1" id="4MC-ga-f9d"/>
+                                                                        <constraint firstAttribute="width" secondItem="GJV-xu-FSU" secondAttribute="height" multiplier="1:1" id="JYF-Lj-wYc"/>
+                                                                        <constraint firstAttribute="width" secondItem="GJV-xu-FSU" secondAttribute="height" multiplier="1:1" id="chb-ei-q6Z"/>
+                                                                    </constraints>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="12"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="selectedIcon:" destination="8Wv-C0-EA2" eventType="touchUpInside" id="25R-I8-Ep5"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Mes-qd-NKG" firstAttribute="leading" secondItem="69t-yj-x0e" secondAttribute="leading" id="Aha-EK-QNY"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mes-qd-NKG" secondAttribute="trailing" constant="10" id="Jow-Zw-YLU"/>
+                                                <constraint firstItem="69t-yj-x0e" firstAttribute="top" secondItem="fgx-69-VI7" secondAttribute="top" constant="20" id="VBm-TH-v9h"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mes-qd-NKG" secondAttribute="bottom" constant="10" id="djN-Q7-br5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="69t-yj-x0e" secondAttribute="trailing" constant="10" id="mf6-xx-sVf"/>
+                                                <constraint firstItem="Mes-qd-NKG" firstAttribute="top" secondItem="69t-yj-x0e" secondAttribute="bottom" constant="10" id="wi2-sR-XBD"/>
+                                                <constraint firstItem="69t-yj-x0e" firstAttribute="leading" secondItem="fgx-69-VI7" secondAttribute="leadingMargin" id="x4B-42-rbP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outletCollection property="icons" destination="NJ7-Sg-kge" collectionClass="NSMutableArray" id="9kV-CL-V7C"/>
+                                            <outletCollection property="icons" destination="tT2-Qb-M7x" collectionClass="NSMutableArray" id="4LC-4g-d4V"/>
+                                            <outletCollection property="icons" destination="ftH-4N-DxY" collectionClass="NSMutableArray" id="6Ab-Pe-z4s"/>
+                                            <outletCollection property="icons" destination="3Gb-Xf-FUm" collectionClass="NSMutableArray" id="lPG-7w-RXQ"/>
+                                            <outletCollection property="icons" destination="30A-wG-R6a" collectionClass="NSMutableArray" id="1rT-nY-puS"/>
+                                            <outletCollection property="icons" destination="ukb-UV-AGY" collectionClass="NSMutableArray" id="z7V-JS-5aY"/>
+                                            <outletCollection property="icons" destination="WjX-LL-Pvv" collectionClass="NSMutableArray" id="lIs-vO-LXk"/>
+                                            <outletCollection property="icons" destination="qOH-WN-KRC" collectionClass="NSMutableArray" id="3XY-Sb-qKI"/>
+                                            <outletCollection property="icons" destination="0ix-Fm-3Ht" collectionClass="NSMutableArray" id="4XL-vG-7Sr"/>
+                                            <outletCollection property="icons" destination="zw6-fV-JAD" collectionClass="NSMutableArray" id="nim-Gb-t5G"/>
+                                            <outletCollection property="icons" destination="EaM-mP-cgW" collectionClass="NSMutableArray" id="HRe-tC-K4C"/>
+                                            <outletCollection property="icons" destination="GJV-xu-FSU" collectionClass="NSMutableArray" id="UpB-aj-gmL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="Wc3-oL-EtA"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="vDQ-IH-klO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O2u-r0-9Bk" secondAttribute="trailing" constant="20" id="2iA-R4-j8S"/>
+                            <constraint firstItem="wjQ-me-NMv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Fla-7W-qey"/>
+                            <constraint firstItem="O2u-r0-9Bk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Ngs-Za-vd6"/>
+                            <constraint firstItem="wjQ-me-NMv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="at3-Zh-0Is"/>
+                            <constraint firstItem="jAf-cj-uu6" firstAttribute="top" secondItem="wjQ-me-NMv" secondAttribute="bottom" id="e5Z-MO-KZx"/>
+                            <constraint firstAttribute="trailing" secondItem="jAf-cj-uu6" secondAttribute="trailing" constant="24" id="gJe-G1-82a"/>
+                            <constraint firstItem="jAf-cj-uu6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="k6H-Yi-9QT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="O2u-r0-9Bk" secondAttribute="bottom" constant="20" id="nUv-xC-WDJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wjQ-me-NMv" secondAttribute="trailing" id="tnb-zX-ICb"/>
+                            <constraint firstItem="O2u-r0-9Bk" firstAttribute="top" secondItem="jAf-cj-uu6" secondAttribute="bottom" constant="20" id="xtv-Bh-gCS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="wjQ-me-NMv" id="DXr-1n-XcP"/>
+                        <outlet property="tableView" destination="O2u-r0-9Bk" id="UGI-db-dZq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.51908396946564" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="primaryColorFix">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="primaryColorLight">
+            <color red="0.43137254901960786" green="0.42745098039215684" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="purple">
+            <color red="0.14509806036949158" green="0.0" blue="0.14901961386203766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryColor">
+            <color red="0.73333333333333328" green="0.015686274509803921" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

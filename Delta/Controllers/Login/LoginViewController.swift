@@ -14,7 +14,7 @@ import CryptoKit
 import AuthenticationServices
 
 
-class LoginViewController: BaseViewController{
+class LoginViewController: TabBarItemViewController{
     
     static let identifier = "LoginViewController"
     

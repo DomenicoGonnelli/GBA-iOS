@@ -144,7 +144,7 @@ extension LaunchViewController
     
     static func instance() -> LaunchViewController{
         var vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier) as! LaunchViewController
-        vc.modalPresentationStyle = .fullScreen
+        //vc.modalPresentationStyle = .fullScreen
         return vc
     }
     

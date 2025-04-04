@@ -11,16 +11,16 @@ import StoreKit
 
 extension SKProduct {
     
-//    var premiumProductPrize : String?{
-//        if let textPrice = IAPHelper.priceFormatter.string(from: price) {
-//            return textPrice
-//        }
-//        return nil
-//    }
-//    
-//    
-//    func premiumValueMultiplier(value: Int) -> String?{
-//        let textPrice = price.doubleValue * Double(value)
-//        return IAPHelper.priceFormatter.string(from: NSNumber(value: textPrice))
-//    }
+    var premiumProductPrize : String?{
+        if let textPrice = IAPHelper.priceFormatter.string(from: price) {
+            return textPrice
+        }
+        return nil
+    }
+    
+    
+    func premiumValueMultiplier(value: Int) -> String?{
+        let textPrice = price.doubleValue * Double(value)
+        return IAPHelper.priceFormatter.string(from: NSNumber(value: textPrice))
+    }
 }

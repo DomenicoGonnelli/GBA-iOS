@@ -26,3 +26,26 @@ internal extension UILabel
     }
 }
 
+@IBDesignable
+extension UIButton: XIBLocalizedText{
+    @IBInspectable var localizedKey: String?{
+        get{ return nil}
+        set(key) {
+            if let key = key{
+                let localizedText = key.localizable
+                if(localizedText.contains("<b>") || localizedText.contains("<m>")){
+                    let attributedText = NSMutableAttributedString(string: localizedText)
+                    if(localizedText.contains("<b>") && localizedText.contains("</b>")){
+                        attributedText.setBoldText(size: (titleLabel?.font.pointSize)!, color: nil)
+                    }
+                    if(localizedText.contains("<m>") && localizedText.contains("</m>")){
+                        attributedText.setMediumText(size: (titleLabel?.font.pointSize)!, color: nil)
+                    }
+                    setAttributedTitle(attributedText, for: .normal)
+                } else {
+                    setTitle(localizedText, for: .normal)
+                }
+            }
+        }
+    }
+}

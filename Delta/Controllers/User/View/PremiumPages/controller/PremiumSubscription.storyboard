@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRnd-Book.otf">
+            <string>GothamRounded-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Premium Subscription View Controller-->
+        <scene sceneID="obW-Xa-EwU">
+            <objects>
+                <viewController storyboardIdentifier="PremiumSubscriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nab-6c-EnZ" customClass="PremiumSubscriptionViewController" customModule="Collaudo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KqZ-0d-TYB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mly-US-EkR">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <connections>
+                                    <segue destination="GAJ-n4-Czm" kind="embed" identifier="gotopage" id="7YS-E6-m22"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR4-QC-Jr4">
+                                <rect key="frame" x="20" y="104" width="353" height="44"/>
+                                <string key="text">Seleziona
+Abbonamento</string>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="22"/>
+                                <color key="textColor" name="buttonTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="subscriptionPageTitle"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="PKX-jS-N3s">
+                                <rect key="frame" x="0.0" y="796" width="393" height="12"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="ZNF-05-MK2"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" name="primaryColorLight"/>
+                                <color key="currentPageIndicatorTintColor" name="secondaryColor"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xa-zV-ZTR" customClass="CustomNavigationBar" customModule="Collaudo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6NV-zn-Zho"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" name="buttonTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q8t-sU-AdQ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q8t-sU-AdQ" firstAttribute="trailing" secondItem="Mly-US-EkR" secondAttribute="trailing" id="4dB-sK-aGp"/>
+                            <constraint firstItem="GR4-QC-Jr4" firstAttribute="top" secondItem="5xa-zV-ZTR" secondAttribute="bottom" id="FoI-by-ZTD"/>
+                            <constraint firstItem="GR4-QC-Jr4" firstAttribute="leading" secondItem="Q8t-sU-AdQ" secondAttribute="leading" constant="20" id="G2M-YP-fbi"/>
+                            <constraint firstItem="5xa-zV-ZTR" firstAttribute="leading" secondItem="Q8t-sU-AdQ" secondAttribute="leading" id="LBp-ag-d0W"/>
+                            <constraint firstItem="PKX-jS-N3s" firstAttribute="leading" secondItem="Q8t-sU-AdQ" secondAttribute="leading" id="SIe-j4-9hj"/>
+                            <constraint firstItem="5xa-zV-ZTR" firstAttribute="top" secondItem="Q8t-sU-AdQ" secondAttribute="top" id="UNb-oz-7Pb"/>
+                            <constraint firstItem="Q8t-sU-AdQ" firstAttribute="trailing" secondItem="PKX-jS-N3s" secondAttribute="trailing" id="WCd-ll-aFX"/>
+                            <constraint firstItem="Mly-US-EkR" firstAttribute="leading" secondItem="Q8t-sU-AdQ" secondAttribute="leading" id="aLD-Vc-M8L"/>
+                            <constraint firstItem="Q8t-sU-AdQ" firstAttribute="trailing" secondItem="5xa-zV-ZTR" secondAttribute="trailing" id="mmA-i9-z9R"/>
+                            <constraint firstItem="Q8t-sU-AdQ" firstAttribute="trailing" secondItem="GR4-QC-Jr4" secondAttribute="trailing" constant="20" id="n4S-xy-WiA"/>
+                            <constraint firstAttribute="bottom" secondItem="Mly-US-EkR" secondAttribute="bottom" id="tis-2h-67M"/>
+                            <constraint firstItem="PKX-jS-N3s" firstAttribute="bottom" secondItem="Q8t-sU-AdQ" secondAttribute="bottom" constant="-10" id="yGz-Ey-k6U"/>
+                            <constraint firstItem="Mly-US-EkR" firstAttribute="top" secondItem="KqZ-0d-TYB" secondAttribute="top" id="zUX-X2-ckU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dIm-zb-ddf"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="5xa-zV-ZTR" id="Wh9-NI-k1x"/>
+                        <outlet property="pageControl" destination="PKX-jS-N3s" id="ppl-Aj-uXO"/>
+                        <outlet property="titleLabel" destination="GR4-QC-Jr4" id="Tx0-jO-L0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qk-ol-Maz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-872.51908396946567" y="-36.619718309859159"/>
+        </scene>
+        <!--PremiumSubscriptionPagerViewController-->
+        <scene sceneID="1aZ-1T-4jv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PremiumSinglePage" referencedIdentifier="PremiumSubscriptionPagerViewController" id="GAJ-n4-Czm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRn-4V-cmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="-35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColorLight">
+            <color red="0.43500000238418579" green="0.43000000715255737" blue="0.42100000381469727" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="secondaryColor">
+            <color red="0.73333333333333328" green="0.015686274509803921" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

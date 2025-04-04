@@ -12,8 +12,11 @@ import MobileCoreServices
 import DeltaCore
 import Roxas
 
-class GamesViewController: UIViewController
+class GamesViewController: BaseViewController
 {
+    
+    static let identifier = "GamesViewController"
+    
     var theme: Theme = .opaque {
         didSet {
             self.updateTheme()
@@ -637,4 +640,24 @@ extension GamesViewController: UIAdaptivePresentationControllerDelegate
     {
 //        self.sync()
     }
+    
+    
+    static func instance() -> GamesViewController{
+        var vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier) as! GamesViewController
+        //vc.modalPresentationStyle = .fullScreen
+        return vc
+    }
+    
+       
+
+    static func push(from controller: GameViewController?, theme: Theme, emulator: EmulatorCore?){
+        
+        let gamesViewController = instance()
+        gamesViewController.theme = theme
+        gamesViewController.activeEmulatorCore = emulator
+        
+        controller?.navigationController?.pushViewController(gamesViewController, animated: false)
+    }
+    
+  
 }

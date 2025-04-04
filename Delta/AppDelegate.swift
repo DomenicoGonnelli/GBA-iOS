@@ -64,23 +64,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             try reachability?.startNotifier()
             if let connection = reachability?.connection, connection == .unavailable {
                 AppManager.shared.offlineMode = true
-                showNoInternetError(firstTime: true)
+                showNoInternetError()
             }
         } catch{
             print("could not start reachability notifier")
         }
     }
     
+    var firstReachabiltyAlert = true
     
-    private func showNoInternetError(firstTime: Bool = false){
+    private func showNoInternetError(){
         if let controller = actualController{
             if AppManager.shared.offlineMode {
                 controller.presentExperimentalToastView("offline_game_mode".localizable, duration: 3)
-            } else if !firstTime {
+            } else if !firstReachabiltyAlert {
                 controller.presentExperimentalToastView("online_game_mode".localizable, duration: 3)
             }
             
         }
+        firstReachabiltyAlert = false
     }
     
     

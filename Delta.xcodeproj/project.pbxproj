@@ -153,7 +153,6 @@
 		BFFC461F1D59823500AF2CC6 /* GamesStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC461C1D59823500AF2CC6 /* GamesStoryboardSegue.swift */; };
 		BFFC46201D59823500AF2CC6 /* InitialGamesStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC461D1D59823500AF2CC6 /* InitialGamesStoryboardSegue.swift */; };
 		BFFC46231D5984A000AF2CC6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC46221D5984A000AF2CC6 /* LaunchViewController.swift */; };
-		BFFC46461D59861000AF2CC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFC46441D59861000AF2CC6 /* LaunchScreen.storyboard */; };
 		BFFC464C1D5998D600AF2CC6 /* CheatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC464B1D5998D600AF2CC6 /* CheatTableViewCell.swift */; };
 		BFFDF03723E3BB2600931B96 /* libSnes9x.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF03623E3BB2600931B96 /* libSnes9x.a */; };
 		BFFDF03F23E3C28A00931B96 /* libGambatte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF03D23E3C0F000931B96 /* libGambatte.a */; };
@@ -245,6 +244,29 @@
 		EB3EB56C2DA04793004FFACF /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56B2DA04793004FFACF /* dg_NES.deltaskin */; };
 		EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */; };
 		EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */; };
+		EB3EB5752DA0719A004FFACF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5722DA0719A004FFACF /* TabBarViewController.swift */; };
+		EB3EB5762DA0719A004FFACF /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5742DA0719A004FFACF /* Dashboard.storyboard */; };
+		EB3EB5E12DA0738D004FFACF /* PremiumSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5CD2DA0738D004FFACF /* PremiumSubscriptionViewController.swift */; };
+		EB3EB5E22DA0738D004FFACF /* NewIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C62DA0738D004FFACF /* NewIconCell.swift */; };
+		EB3EB5E32DA0738D004FFACF /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5D82DA0738D004FFACF /* UserProfileViewController.swift */; };
+		EB3EB5E42DA0738D004FFACF /* ColorPaletteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C52DA0738D004FFACF /* ColorPaletteCell.swift */; };
+		EB3EB5E52DA0738D004FFACF /* UserProfileMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5DA2DA0738D004FFACF /* UserProfileMenuItemCell.swift */; };
+		EB3EB5E72DA0738D004FFACF /* PremiumSinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C82DA0738D004FFACF /* PremiumSinglePageViewController.swift */; };
+		EB3EB5E92DA0738D004FFACF /* ColorPaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C42DA0738D004FFACF /* ColorPaletteViewController.swift */; };
+		EB3EB5EA2DA0738D004FFACF /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5BF2DA0738D004FFACF /* NotificationListViewController.swift */; };
+		EB3EB5EB2DA0738D004FFACF /* PremiumDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5D02DA0738D004FFACF /* PremiumDataSource.swift */; };
+		EB3EB5EC2DA0738D004FFACF /* PremiumPointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5CB2DA0738D004FFACF /* PremiumPointCell.swift */; };
+		EB3EB5ED2DA0738D004FFACF /* PremiumSubscriptionPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5CA2DA0738D004FFACF /* PremiumSubscriptionPagerViewController.swift */; };
+		EB3EB5EE2DA0738D004FFACF /* PremiumServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5DE2DA0738D004FFACF /* PremiumServices.swift */; };
+		EB3EB5EF2DA0738D004FFACF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5DD2DA0738D004FFACF /* UserService.swift */; };
+		EB3EB5F12DA0738D004FFACF /* NotificationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C12DA0738D004FFACF /* NotificationListCell.swift */; };
+		EB3EB5F22DA0738D004FFACF /* PremiumSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5CE2DA0738D004FFACF /* PremiumSubscription.storyboard */; };
+		EB3EB5F32DA0738D004FFACF /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5D92DA0738D004FFACF /* UserProfile.storyboard */; };
+		EB3EB5F42DA0738D004FFACF /* NotificationList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C02DA0738D004FFACF /* NotificationList.storyboard */; };
+		EB3EB5F62DA0738D004FFACF /* ColorPalette.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C32DA0738D004FFACF /* ColorPalette.storyboard */; };
+		EB3EB5F72DA0738D004FFACF /* PremiumSinglePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C92DA0738D004FFACF /* PremiumSinglePage.storyboard */; };
+		EB3EB5FA2DA07626004FFACF /* TabBarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */; };
+		EB3EB5FE2DA0799D004FFACF /* libCircleBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */; };
 		EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
 		EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
 		EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
@@ -573,7 +595,6 @@
 		BFFC461C1D59823500AF2CC6 /* GamesStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesStoryboardSegue.swift; sourceTree = "<group>"; };
 		BFFC461D1D59823500AF2CC6 /* InitialGamesStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialGamesStoryboardSegue.swift; sourceTree = "<group>"; };
 		BFFC46221D5984A000AF2CC6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		BFFC46451D59861000AF2CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFFC464B1D5998D600AF2CC6 /* CheatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatTableViewCell.swift; sourceTree = "<group>"; };
 		BFFDF03623E3BB2600931B96 /* libSnes9x.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnes9x.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFDF03D23E3C0F000931B96 /* libGambatte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGambatte.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -668,6 +689,29 @@
 		EB3EB56B2DA04793004FFACF /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
 		EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_N64.deltaskin; sourceTree = "<group>"; };
 		EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBC.deltaskin; sourceTree = "<group>"; };
+		EB3EB5722DA0719A004FFACF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		EB3EB5742DA0719A004FFACF /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		EB3EB5BF2DA0738D004FFACF /* NotificationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewController.swift; sourceTree = "<group>"; };
+		EB3EB5C02DA0738D004FFACF /* NotificationList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationList.storyboard; sourceTree = "<group>"; };
+		EB3EB5C12DA0738D004FFACF /* NotificationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListCell.swift; sourceTree = "<group>"; };
+		EB3EB5C32DA0738D004FFACF /* ColorPalette.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorPalette.storyboard; sourceTree = "<group>"; };
+		EB3EB5C42DA0738D004FFACF /* ColorPaletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteViewController.swift; sourceTree = "<group>"; };
+		EB3EB5C52DA0738D004FFACF /* ColorPaletteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteCell.swift; sourceTree = "<group>"; };
+		EB3EB5C62DA0738D004FFACF /* NewIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIconCell.swift; sourceTree = "<group>"; };
+		EB3EB5C82DA0738D004FFACF /* PremiumSinglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumSinglePageViewController.swift; sourceTree = "<group>"; };
+		EB3EB5C92DA0738D004FFACF /* PremiumSinglePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PremiumSinglePage.storyboard; sourceTree = "<group>"; };
+		EB3EB5CA2DA0738D004FFACF /* PremiumSubscriptionPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumSubscriptionPagerViewController.swift; sourceTree = "<group>"; };
+		EB3EB5CB2DA0738D004FFACF /* PremiumPointCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPointCell.swift; sourceTree = "<group>"; };
+		EB3EB5CD2DA0738D004FFACF /* PremiumSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumSubscriptionViewController.swift; sourceTree = "<group>"; };
+		EB3EB5CE2DA0738D004FFACF /* PremiumSubscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PremiumSubscription.storyboard; sourceTree = "<group>"; };
+		EB3EB5D02DA0738D004FFACF /* PremiumDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDataSource.swift; sourceTree = "<group>"; };
+		EB3EB5D82DA0738D004FFACF /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		EB3EB5D92DA0738D004FFACF /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		EB3EB5DA2DA0738D004FFACF /* UserProfileMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileMenuItemCell.swift; sourceTree = "<group>"; };
+		EB3EB5DD2DA0738D004FFACF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		EB3EB5DE2DA0738D004FFACF /* PremiumServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumServices.swift; sourceTree = "<group>"; };
+		EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewController.swift; sourceTree = "<group>"; };
+		EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCircleBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB69AB072D977F1B00311D39 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationManagar.swift; sourceTree = "<group>"; };
 		EB69AB092D977F1B00311D39 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -808,6 +852,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3EB5FE2DA0799D004FFACF /* libCircleBar.a in Frameworks */,
 				EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */,
 				EBBB19F02D9985CF009C977A /* libAlamofire.a in Frameworks */,
 				EBBB19EE2D9985BB009C977A /* libCollectionViewPagingLayout.a in Frameworks */,
@@ -1166,6 +1211,7 @@
 		BF9F4FCD1AAD7B25004C9500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */,
 				EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */,
 				EBBB19F12D998613009C977A /* libGoogleSignIn.a */,
 				EBBB19EF2D9985CF009C977A /* libAlamofire.a */,
@@ -1401,7 +1447,6 @@
 		BFFC46211D59848000AF2CC6 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				BFFC46441D59861000AF2CC6 /* LaunchScreen.storyboard */,
 				BFFC46221D5984A000AF2CC6 /* LaunchViewController.swift */,
 			);
 			path = Launch;
@@ -1564,6 +1609,105 @@
 			path = deltaskin;
 			sourceTree = "<group>";
 		};
+		EB3EB5712DA07143004FFACF /* home */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5732DA0719A004FFACF /* TabBar */,
+				EB3EB5742DA0719A004FFACF /* Dashboard.storyboard */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		EB3EB5732DA0719A004FFACF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5722DA0719A004FFACF /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EB3EB5C22DA0738D004FFACF /* NotificationList */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5BF2DA0738D004FFACF /* NotificationListViewController.swift */,
+				EB3EB5C02DA0738D004FFACF /* NotificationList.storyboard */,
+				EB3EB5C12DA0738D004FFACF /* NotificationListCell.swift */,
+			);
+			path = NotificationList;
+			sourceTree = "<group>";
+		};
+		EB3EB5C72DA0738D004FFACF /* CustomColorPalett */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5C32DA0738D004FFACF /* ColorPalette.storyboard */,
+				EB3EB5C42DA0738D004FFACF /* ColorPaletteViewController.swift */,
+				EB3EB5C52DA0738D004FFACF /* ColorPaletteCell.swift */,
+				EB3EB5C62DA0738D004FFACF /* NewIconCell.swift */,
+			);
+			path = CustomColorPalett;
+			sourceTree = "<group>";
+		};
+		EB3EB5CC2DA0738D004FFACF /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5C82DA0738D004FFACF /* PremiumSinglePageViewController.swift */,
+				EB3EB5C92DA0738D004FFACF /* PremiumSinglePage.storyboard */,
+				EB3EB5CA2DA0738D004FFACF /* PremiumSubscriptionPagerViewController.swift */,
+				EB3EB5CB2DA0738D004FFACF /* PremiumPointCell.swift */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		EB3EB5CF2DA0738D004FFACF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5CD2DA0738D004FFACF /* PremiumSubscriptionViewController.swift */,
+				EB3EB5CE2DA0738D004FFACF /* PremiumSubscription.storyboard */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		EB3EB5D12DA0738D004FFACF /* PremiumPages */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5CC2DA0738D004FFACF /* pages */,
+				EB3EB5CF2DA0738D004FFACF /* controller */,
+				EB3EB5D02DA0738D004FFACF /* PremiumDataSource.swift */,
+			);
+			path = PremiumPages;
+			sourceTree = "<group>";
+		};
+		EB3EB5DB2DA0738D004FFACF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5C22DA0738D004FFACF /* NotificationList */,
+				EB3EB5C72DA0738D004FFACF /* CustomColorPalett */,
+				EB3EB5D12DA0738D004FFACF /* PremiumPages */,
+				EB3EB5D82DA0738D004FFACF /* UserProfileViewController.swift */,
+				EB3EB5D92DA0738D004FFACF /* UserProfile.storyboard */,
+				EB3EB5DA2DA0738D004FFACF /* UserProfileMenuItemCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB3EB5DF2DA0738D004FFACF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5DD2DA0738D004FFACF /* UserService.swift */,
+				EB3EB5DE2DA0738D004FFACF /* PremiumServices.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EB3EB5E02DA0738D004FFACF /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EB5DB2DA0738D004FFACF /* View */,
+				EB3EB5DF2DA0738D004FFACF /* Service */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		EB69AB192D977FC800311D39 /* IAP */ = {
 			isa = PBXGroup;
 			children = (
@@ -1654,6 +1798,8 @@
 		EBA2BA992D984778007A25A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EB3EB5E02DA0738D004FFACF /* User */,
+				EB3EB5712DA07143004FFACF /* home */,
 				EBBB1A062D9989F5009C977A /* Launchscreen */,
 				EBBB19DD2D9982C6009C977A /* TutorialSplit */,
 				EBBB19E02D9982C6009C977A /* Tutorial */,
@@ -1662,6 +1808,7 @@
 				EBBB19C02D9977A0009C977A /* Splash */,
 				EBBB19B82D997796009C977A /* Update */,
 				EBBB19872D9972E7009C977A /* BaseViewController.swift */,
+				EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2140,9 +2287,15 @@
 				BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */,
 				D53415A7298C78BC00FD67B1 /* Contributors.plist in Resources */,
 				EBBB19662D9971A8009C977A /* GothamRnd-MedItal.otf in Resources */,
+				EB3EB5F22DA0738D004FFACF /* PremiumSubscription.storyboard in Resources */,
+				EB3EB5F32DA0738D004FFACF /* UserProfile.storyboard in Resources */,
+				EB3EB5F42DA0738D004FFACF /* NotificationList.storyboard in Resources */,
+				EB3EB5F62DA0738D004FFACF /* ColorPalette.storyboard in Resources */,
+				EB3EB5F72DA0738D004FFACF /* PremiumSinglePage.storyboard in Resources */,
 				EB3EB56C2DA04793004FFACF /* dg_NES.deltaskin in Resources */,
 				EBBB19672D9971A8009C977A /* GothamRnd-BookItal.otf in Resources */,
 				EBBB19682D9971A8009C977A /* GothamRnd-Book.otf in Resources */,
+				EB3EB5762DA0719A004FFACF /* Dashboard.storyboard in Resources */,
 				EBBB19692D9971A8009C977A /* loaderPink.json in Resources */,
 				EBBB196A2D9971A8009C977A /* GothamRnd-Light.otf in Resources */,
 				EBBB196B2D9971A8009C977A /* GothamRnd-Bold.otf in Resources */,
@@ -2158,7 +2311,6 @@
 				EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */,
 				EBBB1A092D9AAA58009C977A /* efupdate.json in Resources */,
 				BF71CF8A1FE904B1001F1613 /* GameTableViewCell.xib in Resources */,
-				BFFC46461D59861000AF2CC6 /* LaunchScreen.storyboard in Resources */,
 				BF353FF61C5D837600C1184C /* PauseMenu.storyboard in Resources */,
 				EB8E0D562D947537004BFB1F /* Localizable.strings in Resources */,
 				EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */,
@@ -2401,6 +2553,7 @@
 				D586497229774ABD0081477E /* CheatBase.swift in Sources */,
 				BFDD04F11D5E2C27002D450E /* GameCollectionViewController.swift in Sources */,
 				BFE4269E1D9C68E600DC913F /* SaveStatesStoryboardSegue.swift in Sources */,
+				EB3EB5752DA0719A004FFACF /* TabBarViewController.swift in Sources */,
 				BFFA71DD1AAC406100EE9DD1 /* AppDelegate.swift in Sources */,
 				BF525EE81FF5F370004AA849 /* DeepLinkController.swift in Sources */,
 				BF59426B1E09BBD00051894B /* GridCollectionViewLayout.swift in Sources */,
@@ -2447,6 +2600,7 @@
 				BFFC464C1D5998D600AF2CC6 /* CheatTableViewCell.swift in Sources */,
 				D5B4235C2BD9C24000093054 /* RoundedImageView.swift in Sources */,
 				BF5942941E09BD1A0051894B /* NSManagedObject+Conveniences.swift in Sources */,
+				EB3EB5FA2DA07626004FFACF /* TabBarItemViewController.swift in Sources */,
 				EB69AB212D9781A500311D39 /* DatabaseModelProtocol.swift in Sources */,
 				EB69AB222D9781A500311D39 /* PremiumSubscriptionModel.swift in Sources */,
 				EBBB19D32D997893009C977A /* EnvHelper.swift in Sources */,
@@ -2470,6 +2624,20 @@
 				D5E12AEB2D01157F000C7531 /* String+Profanity.swift in Sources */,
 				BF6EE5E91F7C5F860051AD6C /* _GameControllerInputMapping.swift in Sources */,
 				BF5942871E09BC8B0051894B /* _ControllerSkin.swift in Sources */,
+				EB3EB5E12DA0738D004FFACF /* PremiumSubscriptionViewController.swift in Sources */,
+				EB3EB5E22DA0738D004FFACF /* NewIconCell.swift in Sources */,
+				EB3EB5E32DA0738D004FFACF /* UserProfileViewController.swift in Sources */,
+				EB3EB5E42DA0738D004FFACF /* ColorPaletteCell.swift in Sources */,
+				EB3EB5E52DA0738D004FFACF /* UserProfileMenuItemCell.swift in Sources */,
+				EB3EB5E72DA0738D004FFACF /* PremiumSinglePageViewController.swift in Sources */,
+				EB3EB5E92DA0738D004FFACF /* ColorPaletteViewController.swift in Sources */,
+				EB3EB5EA2DA0738D004FFACF /* NotificationListViewController.swift in Sources */,
+				EB3EB5EB2DA0738D004FFACF /* PremiumDataSource.swift in Sources */,
+				EB3EB5EC2DA0738D004FFACF /* PremiumPointCell.swift in Sources */,
+				EB3EB5ED2DA0738D004FFACF /* PremiumSubscriptionPagerViewController.swift in Sources */,
+				EB3EB5EE2DA0738D004FFACF /* PremiumServices.swift in Sources */,
+				EB3EB5EF2DA0738D004FFACF /* UserService.swift in Sources */,
+				EB3EB5F12DA0738D004FFACF /* NotificationListCell.swift in Sources */,
 				BF95E2791E4982A10030E7AD /* GamesDatabaseBrowserViewController.swift in Sources */,
 				D5AE76BD2C2B53FC0086471B /* _PatreonAccount.swift in Sources */,
 				D524F4A3273DE9C000D500B2 /* ProcessInfo+JIT.swift in Sources */,
@@ -2613,15 +2781,6 @@
 				BFFA71E11AAC406100EE9DD1 /* Base */,
 			);
 			name = Main.storyboard;
-			path = Delta;
-			sourceTree = SOURCE_ROOT;
-		};
-		BFFC46441D59861000AF2CC6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFFC46451D59861000AF2CC6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			path = Delta;
 			sourceTree = SOURCE_ROOT;
 		};
