@@ -40,6 +40,8 @@ extension ControllerSkinConfigurations
 @objc(ControllerSkin)
 public class ControllerSkin: _ControllerSkin
 {
+    var system: System?
+    
     public var fileURL: URL {
         let fileURL = self.isStandard ? self.controllerSkin!.fileURL : DatabaseManager.controllerSkinsDirectoryURL(for: self.gameType).appendingPathComponent(self.filename)
         return fileURL
@@ -59,7 +61,8 @@ public class ControllerSkin: _ControllerSkin
     public var isReversingScreens: Bool = false
     
     private lazy var controllerSkin: DeltaCore.ControllerSkin? = {
-        let controllerSkin = self.isStandard ? DeltaCore.ControllerSkin.standardControllerSkin(for: self.gameType) : DeltaCore.ControllerSkin(fileURL: self.fileURL)
+        
+        let controllerSkin = self.isStandard ? Self.dg_controller(system: System(gameType: self.gameType)) : DeltaCore.ControllerSkin(fileURL: self.fileURL)
         return controllerSkin
     }()
     

@@ -14,15 +14,26 @@ extension ControllerSkin
 {
     convenience init?(system: System, context: NSManagedObjectContext)
     {
-        guard let deltaControllerSkin = DeltaCore.ControllerSkin.standardControllerSkin(for: system.gameType) else { return nil }
+        guard let deltaControllerSkin = Self.dg_controller(system: system)  else { return nil }
         
         self.init(context: context)
-        
+        self.system = system
         self.isStandard = true
         self.filename = deltaControllerSkin.fileURL.lastPathComponent
         
         self.configure(with: deltaControllerSkin)
     }
+    
+    static func dg_controller(system: System?) -> DeltaCore.ControllerSkin?
+    {
+        guard let s = system else { return nil}
+        guard let fileURL = Bundle.main.url(forResource: "dg_\(s.localizableShortName)", withExtension: "deltaskin") else { return DeltaCore.ControllerSkin.standardControllerSkin(for: s.gameType) }
+        
+        let controllerSkin = DeltaCore.ControllerSkin(fileURL: fileURL)
+        return controllerSkin
+    }
+    
+    
     
     func configure(with skin: DeltaCore.ControllerSkin)
     {
