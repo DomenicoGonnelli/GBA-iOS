@@ -442,3 +442,108 @@
 "syncDataOnline" = "Usa salvataggio Online";
 "syncDataLocal" = "Usa salvataggio locale e sovrascrivi dati online";
 
+"UserProfileMessage" = "<b>Area Personale</b>\n\nCiao, benvenuto nella tua area personale.\nQui puoi vedere alcune informazioni legate alla tua utenza:";
+
+"PremiumDetailUser" = "Dettaglio Premium";
+
+"loginMethodUserProfileTitle" = "Metodo di accesso - Login %@";
+"biometricLoginTIUserProfileTitle" = "Accesso con Touch ID";
+"biometricLoginFIUserProfileTitle" = "Accesso con Face ID";
+"teamDetailUserProfileTitle" = "Dettagli team";
+"changeLanguageUserProfileTitle" = "Cambia lingua";
+"changePaletteColorUserProfileTitle" = "Personalizza tema App";
+"instagramPageUserProfileTitle" = "Seguici su instagram";
+"contactUsUserProfileTitle" = "Contattaci";
+"deleteTeamUserProfileTitle" = "Elimina Team";
+"deleteAccountUserProfileTitle" = "Elimina Account";
+"logoutUserProfileTitle" = "Logout";
+"settingsUserProfileTitle" = "Impostazioni Avanzate";
+"emptyUserProfileTitle" = "";
+
+"changeConfigurationTitle" = "Cambia configurazione";
+"changeConfigurationDescription" = "Stai per cambiare la configurazione dell'App, riavvia l'app per salvare le modifiche";
+"changeConfigurationButton" = "Riavvia";
+"changeConfigurationButton2" = "Annulla";
+
+"newConfigurationNotificationTitle" = "Nuova configurazione salvata";
+"newConfigurationNotificationMessage" = "Configurazione cambiata con successo. Clicca per aprire nuovamente Formula Fantasy";
+
+"loginMode" = "Modalità di accesso";
+"configuration" = "Personalizzazione App";
+"contactUS" = "Contattaci";
+"clear" = "Gestione account";
+
+"faceIdUnavailableAlertTitle" = "%@ non disponibile";
+"faceIdUnavailableAlertDescription" = "Per poter accedere con %@ è necessario abilitare la funzionalità dalle impostazioni";
+"faceIdUnavailableAlertGoSetting" = "Impostazioni";
+"faceIdUnavailableAlertGoLogin" = "Nuovo Login";
+
+"retryFaceIDAlertTitle" = "Non ti abbiamo riconosciuto";
+"retryFaceIDAlertDescription" = "Non è stato possibile autenticarti con %@, la funzionalità sarà disabilitata. È necessario effettuare nuovamente il login";
+"retryFaceIDAlertGoLogin" = "Nuovo Login";
+
+"userProfileBiometricPageTitleActive" = "La login con %@ risulta essere <m>attiva</m>. Per disabilitare la funzionalità premi sull'icona";
+"userProfileBiometricPageTitleUnactive" = "La login con %@ è stata <m>disattivata</m>. Per abilitare nuovamente la funzionalità premi sull'icona sotto";
+"close" = "Chiudi";
+
+"mailMessageBody" = "*Descrivi il problema che stai riscontrando*<br><br><br><br><br><bt>Di seguito alcune informazioni aggiuntive per aiutarci nelle analisi:<br><b>• mail:</b> %@<br><b>• Lingua:</b> %@";
+
+"itPalette" = "Palette Schumacher";
+"esPalette" = "Palette Vettel";
+"enPalette" = "Palette Massa";
+"ptPalette" = "Palette Barrichello";
+"dePalette" = "Palette Häkkinen";
+"frPalette" = "Palette Stewart";
+
+"changeThemeAppTile" = "Personalizza l'App di <b><AppName/></b>:\nScegli una nuova palette di colori o cambia l'icona dell'App";
+"changeIconAppTile" = "Cambia l'icona principale dell'App";
+
+
+"pushUserProfileTitle" = "Notifiche Utente";
+"teamDetailUserProfileTitle" = "Dettaglio team";
+"userInfo" = "Informazioni utente";
+
+"pushNotificationEnded" = "<b>🍹</b>\n<m>Ben Fatto!</m>\nNon hai nessun notifica da leggere";
+"SaveButton" = "Salva modifiche";
+
+"subscriptionPageTitle" = "Seleziona Abbonamento";
+"subscriptionIdButton" = "Sottoscrivi abbonamento %@";
+"subscribedPremium" = "Abbonamento ATTIVO";
+"expirationPremiumLabel" = "<m>Scadenza abbonamento: %@</m>";
+
+
+"paymentOkNotificationTitle" = "Pagamento ricevuto";
+"paymentOkNotificationMessage" = "Abbiamo appena ricevuto il tuo pagamento";
+
+"subscritionSuccessNotificationTitle" = "Utente Premium";
+"subscritionSuccessNotificationMessage" = "Complimenti, adesso sei un utente premium, scopri tutti i vantaggi del tuo abbonamento";
+
+"subscritionExpiringNotificationTitle" = "Abbonamento in scadenza";
+"subscritionExpiringNotificationMessage" = "Il tuo abbonamento sta per scadere, rinnovalo dalla sezione Profilo";
+
+"logoutSuccessNotificationTitle" = "Logout eseguito";
+"logoutSuccessNotificationMessage" = "Logout effettuato con successo";
+
+
+"shareAppUserProfileTitle" = "Condividi app";
+"SOCIAL_WHATSAPP" = "Whatsapp";
+"SOCIAL_SMS" = "Sms";
+"SOCIAL_EMAIL" = "E-mail";
+"SOCIAL_GMAIL" = "Gmail";
+"SOCIAL_TELEGRAM" = "Telegram";
+"SOCIAL_INSTAGRAM" = "Storia Instagram";
+"SOCIAL_OTHER" = "Altro";
+
+"shareButton" = "Condividi o\nCrea una Storia";
+"shareMessage" = "Ciao, sto giocando a %@! Seguici su instagra %@.\nScarica l'app e crea la tua squadra\n\n%@";
+
+
+"accountDeletionTitle" = "Vuoi eliminare l'account?";
+"accountDeletionFirstButton" = "Elimina Account";
+"accountDeletionSecondButton" = "Annulla";
+"accountDeletionDescription2" = "Continuando eliminerai definitivamente il tuo account.\n\nEliminando l'account <m>perderai evenutali vantaggi premium</m> e <m>i FantaCrediti conquistati</m>.\nVerranno eliminati anche i dati relativi al tuo <m>team</m> e sarà necessario crearne uno nuovo per poter giocare al <AppName/>";
+
+"logoutAlertTitle" = "Logout";
+"logoutAlertDescription" = "Vuoi effettuare il logout ed uscire dall'Applicazione?";
+"logoutAlertButton" = "Esci";
+"logoutAlertCancel" = "Annulla";

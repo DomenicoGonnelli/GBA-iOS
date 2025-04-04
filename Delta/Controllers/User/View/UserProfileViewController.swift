@@ -15,13 +15,10 @@ class UserProfileViewController: LoginViewController {
     static let identifier2 = "UserProfileViewController"
     
     @IBOutlet weak var userTitleLabel: UILabel!
-    @IBOutlet weak var userImage: UserProfile!
+    @IBOutlet weak var userImage: UIImageView!
     
     @IBOutlet weak var userTeamButton: UIButton!
     @IBOutlet weak var premiumUserImage: UIImageView!
-    
-    @IBOutlet weak var walletView: UIView!
-    @IBOutlet weak var walletViewInner: UIView!
     
     @IBOutlet weak var tableView: UIView!
     
@@ -61,7 +58,6 @@ class UserProfileViewController: LoginViewController {
             showAlert(alertTypology: .genericError)
             return
         }
-        setView()
         setString()
         setNeedsStatusBarAppearanceUpdate()
         navigationBar?.rightImageButton = UIImage(named: "menuIcon")
@@ -135,19 +131,6 @@ class UserProfileViewController: LoginViewController {
         .lightContent
     }
     
-    func setView(){
-        walletView.isHidden = AppManager.shared.inReview
-    }
-    
-    var addSubtraction = 0
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        if addSubtraction == 2 {
-            walletViewInner.applyCustomIntersectionMask()
-        }
-        addSubtraction += 1
-    }
     
     func setString(){
         setHelmetPremium()
@@ -162,11 +145,7 @@ class UserProfileViewController: LoginViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        addSubtraction = 0
         setString()
-//        self.userInfoLabel.isManualAutoshrink = true
-//        userImage.configureView(user: LoginManager.shared.team?.userColors)
-        walletViewInner.applyCustomIntersectionMask()
     }
     
     override func firstButtonAction(_ type: AlertViewTypology?) {
@@ -281,9 +260,8 @@ class UserProfileViewController: LoginViewController {
         vc.loginController = prensenter
         prensenter.present(vc, animated: true)
     }
-    static func push2(prensenter: TabBarViewController?) {
+    static func push2(prensenter: BaseViewController?) {
         let vc = instance2()
-        vc.controller = prensenter
         prensenter?.navigationController?.pushViewController(vc, animated: false)
     }
     
@@ -367,6 +345,8 @@ extension UserProfileViewController: UITableViewDataSource, UITableViewDelegate{
                 NotificationListViewController.push(prensenter: self)
             case .empty:
                 print("nothing to do")
+            case .settings:
+                SettingsViewController.push(from: self)
             }
         }
     }

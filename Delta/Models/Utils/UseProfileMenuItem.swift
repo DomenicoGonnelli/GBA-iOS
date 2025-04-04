@@ -10,7 +10,7 @@ import UIKit
 
 
 public enum UserProfileMenuItem {
-    case loginMethod, biometricLoginTI,biometricLoginFI, teamDetail, changeLanguage, changePaletteColor, instagramPage, contactUs, push, deleteTeam, deleteAccount, logout, empty, shareApp
+    case loginMethod, biometricLoginTI,biometricLoginFI, teamDetail, changeLanguage, changePaletteColor, instagramPage, contactUs, push, deleteTeam, deleteAccount, logout, empty, shareApp, settings
     
     
     static var sections: [String : [UserProfileMenuItem]] {
@@ -26,10 +26,10 @@ public enum UserProfileMenuItem {
         
         return [
             "loginMode": loginMode,
-            "configuration":[.changeLanguage, .changePaletteColor],
-            "contactUS":[.instagramPage, .contactUs],
-            "userInfo" : [.push, .teamDetail, .shareApp],
-            "clear":[.deleteTeam,.deleteAccount,.logout]
+            "configuration":[.settings,.changeLanguage],
+            "contactUS":[.contactUs],
+            "userInfo" : [.push, .shareApp],
+            "clear":[.deleteAccount,.logout]
         ]
     }
     
@@ -113,7 +113,8 @@ public enum UserProfileMenuItem {
         self == .logout ||
         self == .push ||
         self == .teamDetail ||
-        self == .shareApp
+        self == .shareApp ||
+        self == .settings
     }
     
 }

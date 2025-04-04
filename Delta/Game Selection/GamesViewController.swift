@@ -166,7 +166,7 @@ extension GamesViewController
             self.importController.barButtonItem = self.importButton
         }
         
-        self.navigationItem.leftBarButtonItem?.accessibilityLabel = "Settings".localizable
+        self.navigationItem.leftBarButtonItem?.accessibilityLabel = "Menu".localizable
         
         self.prepareSearchController()
         
@@ -191,7 +191,9 @@ extension GamesViewController
     }
     
     @IBAction func goToSetting(_ sender: Any){
-        SettingsViewController.push(from: self)
+        
+        UserProfileViewController.push2(prensenter: self)
+        //SettingsViewController.push(from: self)
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -358,7 +360,7 @@ private extension GamesViewController
             resetPageViewController = true
         }
         
-        self.navigationController?.setToolbarHidden(sections < 2, animated: animated)
+        self.navigationController?.setToolbarHidden(true, animated: animated)
         
         if sections > 0
         {

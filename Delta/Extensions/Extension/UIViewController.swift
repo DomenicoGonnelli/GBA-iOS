@@ -70,9 +70,9 @@ extension UIViewController {
             getFaceID() { success, available in
                 if let vc = self as? BaseViewController {
                     if success {
-                        TabBarViewController.push(from: self)
+                        LaunchViewController.push(from: self)
                         if var controllers = self.navigationController?.viewControllers{
-                            controllers.removeAll(where: {!($0 is TabBarViewController)})
+                            controllers.removeAll(where: {!($0 is LaunchViewController)})
                             self.navigationController?.viewControllers = controllers
                         }
                         print("goHome")
