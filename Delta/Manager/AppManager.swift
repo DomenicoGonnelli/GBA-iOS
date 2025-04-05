@@ -20,6 +20,7 @@ class AppManager {
     var lang: language{
         DeviceManager.getLang()
     }
+    
     var appName : String{
         return  homeData?.iosConfig?.appName ?? "Gemboy Advance"
     }
@@ -28,6 +29,10 @@ class AppManager {
     
     var appStoreURL: URL? {
         return URL(string: homeData?.iosConfig?.appStoreURL ?? "")
+    }
+    
+    var webUrl: String{
+        return homeData?.iosConfig?.appStoreURL ?? ""
     }
     
     var premiumExpired = false

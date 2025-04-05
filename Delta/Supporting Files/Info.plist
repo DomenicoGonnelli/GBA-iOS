@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ATSApplicationFontsPath</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDocumentTypes</key>
@@ -193,6 +191,12 @@
 	<true/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>fbAPP-ID</string>
+		<string>tg</string>
+		<string>whatsapp</string>
+		<string>fb-messenger</string>
+		<string>googlegmail</string>
+		<string>instagram-stories</string>
 		<string>dbapi-8-emm</string>
 		<string>dbapi-2</string>
 	</array>
@@ -209,7 +213,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>GBA uses your microphone to emulate the Nintendo DS microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Press &quot;OK&quot; to allow App to use images from your Photo Library as game artwork.</string>
+	<string>Press "OK" to allow Delta to use images from your Photo Library as game artwork.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>com.rileytestut.Delta.PlayGame</string>

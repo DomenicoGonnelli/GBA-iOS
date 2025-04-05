@@ -72,6 +72,7 @@ class IOSConfig: DatabaseModelProtocolGet{
         if let values = value["maintenanceMode"] as? [String:Any]{
             maintenance = MaintenanceModel(value: values)
         }
+        DeviceManager.appName = appName ?? ""
     }
 }
 

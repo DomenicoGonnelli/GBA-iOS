@@ -24,6 +24,8 @@ class DeviceManager {
         }
     }
     
+    static var appName : String = "GBA"
+    
     
     static var fontSize: CGFloat {
         switch currentDevice {

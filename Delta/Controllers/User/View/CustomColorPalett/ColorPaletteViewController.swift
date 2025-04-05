@@ -30,14 +30,6 @@ class ColorPaletteViewController: BaseViewController, ChangeAppIconDelegate {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
-    
-    func setAppLanguage(to languageCode: String) {
-        let userDefaults = UserDefaults.standard
-        // Imposta la lingua desiderata
-        userDefaults.set([languageCode], forKey: "AppleLanguages")
-        userDefaults.synchronize()
-       
-    }
 
     override func firstButtonAction(_ type: AlertViewTypology?) {
         if type == .newConfiguration {

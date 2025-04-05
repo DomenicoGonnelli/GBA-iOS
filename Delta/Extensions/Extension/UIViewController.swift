@@ -165,4 +165,12 @@ extension UIViewController {
 //        self.present(shareViewController, animated: true)
 //        
 //    }
+    
+    func setAppLanguage(to languageCode: String) {
+        let userDefaults = UserDefaults.standard
+        // Imposta la lingua desiderata
+        userDefaults.set([languageCode], forKey: "AppleLanguages")
+        userDefaults.synchronize()
+       
+    }
 }

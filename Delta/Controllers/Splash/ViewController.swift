@@ -17,12 +17,20 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let lang = Locale.current.languageCode {
-            DeviceManager.storeLang(lang: lang)
+        if DeviceManager.getFirstLang() == nil, let lang = Locale.current.languageCode {
+            setLang(lang: lang)
+        } else if let lang = Locale.current.languageCode, lang != DeviceManager.getThemeLang().rawValue {
+            setLang(lang: lang)
         }
         appVersionLabel.text = appVersion
         setNeedsStatusBarAppearanceUpdate()
     }
+    
+    func setLang(lang: String){
+        DeviceManager.storeLang(lang: lang)
+        DeviceManager.storeThemeLang(lang: lang)
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }

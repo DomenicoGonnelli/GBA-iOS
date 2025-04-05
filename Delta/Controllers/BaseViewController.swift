@@ -348,23 +348,16 @@ class BaseViewController: UIViewController, AlertViewDelegate {
     }
     
     @IBAction func shareWithSocial(_ sender: UIButton){
-//        if let index = socialButton?.firstIndex(of: sender){
-//            if index < social.count {
-//                let instagram = AppManager.shared.homeData?.socialConfig?.instagramPageName ?? "formulafantasyApp"
-//                let name = AppManager.shared.homeData?.iosConfig?.appName ?? "Formula Fantasy"
-//                let shareMessage = String(format: "shareMessage".localizable, name, "@\(instagram)", AppManager.shared.webUrl)
-//                hideShareView(self)
-//                SharingHelper.share(social: social[index], subject: name, text: shareMessage, image: sharingImage(position: LoginManager.shared.teamPosition), vc: self){ success in
-//                    if success, self.social[index] == .instagram {
-//                        InstagramService.getInstagramBonus(){ success in
-//                            if success {
-//                                self.refreshHome()
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        if let index = socialButton?.firstIndex(of: sender){
+            if index < social.count {
+                let name = AppManager.shared.homeData?.iosConfig?.appName ?? "GemBoy Advance"
+                let shareMessage = String(format: "shareMessage".localizable, name, AppManager.shared.webUrl)
+                hideShareView(self)
+                SharingHelper.share(social: social[index], subject: name, text: shareMessage, image: nil, vc: self){ success in
+                    
+                }
+            }
+        }
         
     }
     

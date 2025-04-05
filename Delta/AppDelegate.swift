@@ -47,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         setReachability()
         DeviceManager.resetNotificationCounter()
         UIApplication.shared.applicationIconBadgeNumber = 0
+        NotificationHelper.registerToTopic(topic: .iOS)
         // Deep Links
         if let shortcut = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem
         {

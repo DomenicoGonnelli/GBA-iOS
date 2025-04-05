@@ -535,7 +535,7 @@
 "SOCIAL_OTHER" = "Altro";
 
 "shareButton" = "Condividi o\nCrea una Storia";
-"shareMessage" = "Ciao, sto giocando a %@! Seguici su instagra %@.\nScarica l'app e crea la tua squadra\n\n%@";
+"shareMessage" = "Ciao, sto giocando a %@!, un'App che Emula console come GBA, GBC e tanto altro.\nScarica l'app e immergiti anche tu nel mondo dei giochi Nintento\n%@";
 
 
 "accountDeletionTitle" = "Vuoi eliminare l'account?";

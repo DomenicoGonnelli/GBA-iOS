@@ -27,7 +27,7 @@ public enum UserProfileMenuItem {
         return [
             "loginMode": loginMode,
             "configuration":[.settings,.changeLanguage],
-            "contactUS":[.contactUs],
+            //"contactUS":[.contactUs],
             "userInfo" : [.push, .shareApp],
             "clear":[.deleteAccount,.logout]
         ]

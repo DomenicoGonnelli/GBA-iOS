@@ -17,7 +17,6 @@ class UserProfileViewController: LoginViewController {
     @IBOutlet weak var userTitleLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     
-    @IBOutlet weak var userTeamButton: UIButton!
     @IBOutlet weak var premiumUserImage: UIImageView!
     
     @IBOutlet weak var tableView: UIView!
@@ -202,6 +201,7 @@ class UserProfileViewController: LoginViewController {
 //            }
         } else if type == .newConfiguration {
             if selectedItem == .changeLanguage {
+                setAppLanguage(to: selectedLanguage.rawValue)
                 DeviceManager.storeLang(lang: selectedLanguage.rawValue)
             }
             restartApp()
