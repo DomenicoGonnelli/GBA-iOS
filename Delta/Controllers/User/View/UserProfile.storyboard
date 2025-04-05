@@ -373,7 +373,7 @@ gfggg
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" name="primaryColorFix"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="deh-YE-c4Y" secondAttribute="trailing" constant="10" id="7je-fI-wTc"/>
                                                         <constraint firstItem="BjW-aA-Y3x" firstAttribute="bottom" secondItem="zx3-qu-QyW" secondAttribute="bottom" id="8TI-7d-GWe"/>

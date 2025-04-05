@@ -28,7 +28,7 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
         IAPProduct.store.delegate = self
         super.viewDidLoad()
         
-        showLoader(bg: .primaryColor)
+        showLoader(bg: .primaryColorFix)
         
         PremiumServices.getAllPremium(){ subscriptions in
             for subscription in subscriptions {
@@ -42,19 +42,22 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
     }
     
     func callServices(isNewSubscription: Bool){
-//        LoginService.getUser(){ user in
-//            self.hideLoader()
-//            if !isNewSubscription {
-//                self.pager?.orderedViewControllers = self.subViews
-//                self.pager?.startView()
-//            }
-//            self.pager?.updateView(isNew: isNewSubscription)
-//            if let id =  user?.premiumSubscription?.subscriptionId, let index = self.subViews.firstIndex(where: {$0.item?.subscriptionId == id}) {
-//                self.pager?.currentIndex = index
-//                self.pager?.moveToSpecificPage(nextViewController: self.subViews[index])
-//            }
-//        }
+        
+        FirestoreHelper.getPremiumrData() { premium in
+            let user = LoginManager.shared.user
+            self.hideLoader()
+            if !isNewSubscription {
+                self.pager?.orderedViewControllers = self.subViews
+                self.pager?.startView()
+            }
+            self.pager?.updateView(isNew: isNewSubscription)
+            if let id =  user?.premiumSubscription?.subscriptionId, let index = self.subViews.firstIndex(where: {$0.item?.subscriptionId == id}) {
+                self.pager?.currentIndex = index
+                self.pager?.moveToSpecificPage(nextViewController: self.subViews[index])
+            }
+        }
     }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .default
@@ -94,24 +97,21 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
     }
 }
 
-
-
 extension PremiumSubscriptionViewController: IAPHelperDelegate{
     
     func paymentOk(identifier: String) {
-        UserService.becamePremium(trans: identifier, type: selectedSubscription?.subscriptionId){ response in
-            self.hideLoader()
-            if response {
-                self.callServices(isNewSubscription: true)
-//                AppManager.setIsNewPremium()
-                self.delegate?.didBecomePremium()
-                //AppManager.premiumExpired = false
-            } else {
-                self.showAlert(alertTypology: .genericError)
-            }
-            
-            print("success")
+        
+        let p = PremiumUser(value: [:])
+        p.type = selectedSubscription?.subscriptionId
+        p.registrationDate = Date()
+        
+        let oggi = Date()
+        if let dataTra12Mesi = Calendar.current.date(byAdding: .month, value: 12, to: oggi) {
+            p.expirationDate = dataTra12Mesi
         }
+        
+        self.delegate?.didBecomePremium()
+        FirestoreHelper.updatePremiumUsers(user: p)
     }
     
     func paymentKO() {

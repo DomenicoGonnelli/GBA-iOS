@@ -267,6 +267,12 @@
 		EB3EB5F72DA0738D004FFACF /* PremiumSinglePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C92DA0738D004FFACF /* PremiumSinglePage.storyboard */; };
 		EB3EB5FA2DA07626004FFACF /* TabBarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */; };
 		EB3EB5FE2DA0799D004FFACF /* libCircleBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */; };
+		EB3EB6262DA0BA1E004FFACF /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D412D946451004BFB1F /* PushNotification.swift */; };
+		EB3EB6272DA0BA2A004FFACF /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D3D2D9462CA004BFB1F /* DeviceManager.swift */; };
+		EB3EB6282DA0BA9C004FFACF /* NotificationInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D432D946518004BFB1F /* NotificationInApp.swift */; };
+		EB3EB6292DA0BADC004FFACF /* StringExtensionCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1A2D946055004BFB1F /* StringExtensionCommon.swift */; };
+		EB3EB62A2DA13E36004FFACF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D202D946055004BFB1F /* Date.swift */; };
+		EB3EB62B2DA13E53004FFACF /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D182D946055004BFB1F /* Dictionary.swift */; };
 		EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
 		EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
 		EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
@@ -2733,6 +2739,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3EB6262DA0BA1E004FFACF /* PushNotification.swift in Sources */,
+				EB3EB62A2DA13E36004FFACF /* Date.swift in Sources */,
+				EB3EB6292DA0BADC004FFACF /* StringExtensionCommon.swift in Sources */,
+				EB3EB6282DA0BA9C004FFACF /* NotificationInApp.swift in Sources */,
+				EB3EB62B2DA13E53004FFACF /* Dictionary.swift in Sources */,
+				EB3EB6272DA0BA2A004FFACF /* DeviceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3240,6 +3252,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Notification/Notification.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -3283,6 +3296,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Notification/Notification.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;

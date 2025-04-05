@@ -60,6 +60,7 @@ class Loader: BaseView{
         let loader = Loader.init(frame: viewController.view.frame)
         loader.backgroundColor = backgroundColor
         loader.setAnimation()
+        loader.loaderDesctiption = nil
         viewController.view.addSubview(loader)
         viewController.view.bringSubviewToFront(loader)
         return loader

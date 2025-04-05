@@ -45,7 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         MobileAds.shared.start(completionHandler: nil)
         ExperimentalFeatures.shared.toastNotifications.isEnabled = true
         setReachability()
-        
+        DeviceManager.resetNotificationCounter()
+        UIApplication.shared.applicationIconBadgeNumber = 0
         // Deep Links
         if let shortcut = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem
         {

@@ -541,9 +541,11 @@
 "accountDeletionTitle" = "Vuoi eliminare l'account?";
 "accountDeletionFirstButton" = "Elimina Account";
 "accountDeletionSecondButton" = "Annulla";
-"accountDeletionDescription2" = "Continuando eliminerai definitivamente il tuo account.\n\nEliminando l'account <m>perderai evenutali vantaggi premium</m> e <m>i FantaCrediti conquistati</m>.\nVerranno eliminati anche i dati relativi al tuo <m>team</m> e sarà necessario crearne uno nuovo per poter giocare al <AppName/>";
+"accountDeletionDescription2" = "Continuando eliminerai definitivamente il tuo account.\n\nEliminando l'account perderai evenutali vantaggi premium e tutti i salvataggi online e sul dispositivo.\nVerranno conservati i giochi sul dispositivo ma sarà necessario ricominciarli";
 
 "logoutAlertTitle" = "Logout";
 "logoutAlertDescription" = "Vuoi effettuare il logout ed uscire dall'Applicazione?";
 "logoutAlertButton" = "Esci";
 "logoutAlertCancel" = "Annulla";
+
+"Remove" = "Rimuovi";

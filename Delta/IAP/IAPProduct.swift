@@ -9,8 +9,8 @@ import Foundation
 
 public enum IAPProduct: String, CaseIterable {
     
-    case premiumMonthly = "FoneFantasyPremiumAccount",
-         premiumAnnual = "FoneFantasyPremiumAccountThreemonth"
+    case premiumMonthly = "com.domenico.gonnelli.gba.month",
+         premiumAnnual = "com.domenico.gonnelli.gba.annual"
     
     private static let productIdentifiers: Set<ProductIdentifier> = [IAPProduct.premiumMonthly.rawValue, IAPProduct.premiumAnnual.rawValue]
     

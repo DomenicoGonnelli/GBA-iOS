@@ -68,7 +68,7 @@ extension NotificationListViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let delete = UIContextualAction(style: .destructive, title: "Remove") { action, view, complete in
+        let delete = UIContextualAction(style: .destructive, title: "Remove".localizable) { action, view, complete in
             complete(true)
             self.list.remove(at: indexPath.row)
             self.list.saveNotification()

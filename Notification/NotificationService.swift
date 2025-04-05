@@ -17,11 +17,17 @@ class NotificationService: UNNotificationServiceExtension {
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
+        let notification =  PushNotification(payload:  request.content.userInfo)
+        PushNotification.saveNotification(push: notification)
         if let bestAttemptContent = bestAttemptContent {
             // Modify the notification content here...
-            bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
-            
+            bestAttemptContent.title = notification.title ?? bestAttemptContent.title
+            bestAttemptContent.body = notification.body ?? bestAttemptContent.body
+            bestAttemptContent.badge = (DeviceManager.incrementNotificationCounter()) as NSNumber
             contentHandler(bestAttemptContent)
+        } else {
+            let content = request.content
+            contentHandler(content)
         }
     }
     
@@ -32,5 +38,6 @@ class NotificationService: UNNotificationServiceExtension {
             contentHandler(bestAttemptContent)
         }
     }
+
 
 }

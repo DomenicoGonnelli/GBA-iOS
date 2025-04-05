@@ -134,7 +134,7 @@ class AppManager {
     
     func saveUserMail() {
         if let sharedDefaults = UserDefaults(suiteName: DeviceManager.group) {
-            let token = ""// LoginManager.shared.user?.identificator ?? "null"
+            let token = FirestoreHelper.uid
             sharedDefaults.set(token, forKey: "userMail")
             sharedDefaults.synchronize()
         }

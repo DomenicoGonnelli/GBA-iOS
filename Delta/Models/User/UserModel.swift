@@ -158,17 +158,28 @@ extension UserModel {
 
 class PremiumUser: DatabaseModelProtocol {
     
-    var isActive: Bool = false
+    var isActive: Bool {
+        let date = Date()
+        if let exp = expirationDate?.millisecondsSince1970 {
+            return date.millisecondsSince1970 < exp
+        }
+        return false
+        
+    }
     var type: String?
     var registrationDate: Date?
-    var isExpired: Bool = false
+    var isExpired: Bool {
+        let date = Date()
+        if let exp = expirationDate?.millisecondsSince1970 {
+            return date.millisecondsSince1970 > exp
+        }
+        return type != nil
+    }
     var expirationDate: Date?
     
     required init(value: [String : Any]) {
-        
-        isActive = value["active"] as? Bool ?? false
+    
         type = value["type"] as? String
-        isExpired = value["expired"] as? Bool ?? false
         
         if let registrationDate = value["registrationDate"] as? Int{
             self.registrationDate = Date(milliseconds: registrationDate)
@@ -184,11 +195,11 @@ class PremiumUser: DatabaseModelProtocol {
         var returnData : [String : Any] = [:]
         
         if let registrationDate = registrationDate {
-            returnData["registrationDate"] = registrationDate.datetime
+            returnData["registrationDate"] = registrationDate.millisecondsSince1970
         }
         
         if let expirationDate = expirationDate {
-            returnData["expirationDate"] = expirationDate.datetime
+            returnData["expirationDate"] = expirationDate.millisecondsSince1970
         }
         
         if let type = type {

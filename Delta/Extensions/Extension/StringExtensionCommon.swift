@@ -23,7 +23,7 @@ extension String: Localizable {
     
     func checkName() -> String{
         if self.contains("<AppName/>") {
-            let name =  AppManager.shared.appName
+            let name =  "GemBoy Advance"//AppManager.shared.appName
             return self.replacingOccurrences(of: "<AppName/>", with: name)
         }
         return self
