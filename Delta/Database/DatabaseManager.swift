@@ -691,9 +691,10 @@ extension DatabaseManager
     {
         let gamesDirectoryURL = DatabaseManager.defaultDirectoryURL().appendingPathComponent("Games")
         self.createDirectory(at: gamesDirectoryURL)
-        
         return gamesDirectoryURL
     }
+    
+    
     
     class var saveStatesDirectoryURL: URL
     {
@@ -770,6 +771,18 @@ private extension DatabaseManager
         catch
         {
             print(error)
+        }
+    }
+    
+    
+}
+
+extension DatabaseManager
+{
+    class func userGamesDirectoryURL(){
+        if LoginManager.shared.canManageUserFolder, let uid = FirestoreHelper.uid {
+            let gamesDirectoryURL = DatabaseManager.gamesDirectoryURL.appendingPathComponent(uid)
+            self.createDirectory(at: gamesDirectoryURL)
         }
     }
 }

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SPq-Bk-fQl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SPq-Bk-fQl">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,14 +14,25 @@
         <scene sceneID="Cd2-Pf-cua">
             <objects>
                 <viewController id="jeE-WD-wXO" customClass="GamesViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WoX-O4-qy5"/>
-                        <viewControllerLayoutGuide type="bottom" id="0om-QB-N5a"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Bk-k3-7J9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcg-t0-0PE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="vJI-Wc-C3i">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vJI-Wc-C3i" secondAttribute="trailing" id="KTW-jJ-XDU"/>
+                                    <constraint firstAttribute="bottom" secondItem="vJI-Wc-C3i" secondAttribute="bottom" id="Nab-c0-X9i"/>
+                                    <constraint firstItem="vJI-Wc-C3i" firstAttribute="leading" secondItem="xcg-t0-0PE" secondAttribute="leading" id="Y2C-QZ-RwK"/>
+                                    <constraint firstItem="vJI-Wc-C3i" firstAttribute="top" secondItem="xcg-t0-0PE" secondAttribute="top" id="dg5-Mh-OEV"/>
+                                </constraints>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmn-gd-5UN">
                                 <rect key="frame" x="0.0" y="56" width="375" height="591"/>
                                 <connections>
@@ -26,12 +40,17 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="LLv-jB-hGs"/>
+                        <color key="backgroundColor" name="primaryColorFix"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tmn-gd-5UN" secondAttribute="trailing" id="9Rq-HM-vqk"/>
-                            <constraint firstItem="tmn-gd-5UN" firstAttribute="top" secondItem="WoX-O4-qy5" secondAttribute="bottom" id="BQG-7g-RGA"/>
-                            <constraint firstItem="tmn-gd-5UN" firstAttribute="leading" secondItem="3Bk-k3-7J9" secondAttribute="leading" id="f1f-sa-dBA"/>
+                            <constraint firstItem="LLv-jB-hGs" firstAttribute="trailing" secondItem="tmn-gd-5UN" secondAttribute="trailing" id="9Rq-HM-vqk"/>
+                            <constraint firstItem="tmn-gd-5UN" firstAttribute="top" secondItem="LLv-jB-hGs" secondAttribute="top" id="BQG-7g-RGA"/>
+                            <constraint firstAttribute="bottom" secondItem="xcg-t0-0PE" secondAttribute="bottom" id="Btj-Ug-h2y"/>
+                            <constraint firstItem="xcg-t0-0PE" firstAttribute="top" secondItem="3Bk-k3-7J9" secondAttribute="top" id="XVH-13-Fvo"/>
+                            <constraint firstItem="tmn-gd-5UN" firstAttribute="leading" secondItem="LLv-jB-hGs" secondAttribute="leading" id="f1f-sa-dBA"/>
+                            <constraint firstItem="LLv-jB-hGs" firstAttribute="trailing" secondItem="xcg-t0-0PE" secondAttribute="trailing" id="iWJ-hM-Kne"/>
                             <constraint firstAttribute="bottom" secondItem="tmn-gd-5UN" secondAttribute="bottom" id="ifM-Wa-u9y"/>
+                            <constraint firstItem="xcg-t0-0PE" firstAttribute="leading" secondItem="LLv-jB-hGs" secondAttribute="leading" id="koK-Y8-upx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Games" id="pFk-as-3k4">
@@ -98,10 +117,6 @@
         <scene sceneID="p7y-IT-nlb">
             <objects>
                 <viewController storyboardIdentifier="LaunchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SPq-Bk-fQl" customClass="LaunchViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Qap-U8-zpQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="dca-QO-wba"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8jv-0a-ItC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +124,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oBZ-xU-jeC" userLabel="GameViewController">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="yhz-fF-D91" kind="embed" identifier="embedGameViewController" id="CKD-pz-gqd"/>
                                 </connections>
@@ -118,7 +134,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="XTu-t1-wVS"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
                     <connections>
                         <outlet property="gameViewContainerView" destination="oBZ-xU-jeC" id="jMI-iF-JlU"/>
@@ -132,14 +149,11 @@
         <scene sceneID="ASV-Uk-0aP">
             <objects>
                 <viewController id="yhz-fF-D91" customClass="GameViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ItC-Bu-WRI"/>
-                        <viewControllerLayoutGuide type="bottom" id="g58-HO-6L5"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="skW-1S-YD4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="gkS-n3-wH4"/>
+                        <color key="backgroundColor" red="0.72464883207070707" green="0.72464883207070707" blue="0.72464883207070707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <segue destination="Yrw-9v-Pcr" kind="presentation" identifier="pause" customClass="PauseStoryboardSegue" customModule="GemBoy_Advance" customModuleProvider="target" id="FLq-Zt-HDv"/>
@@ -149,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxI-00-NlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-490" y="1002"/>
+            <point key="canvasLocation" x="-519" y="1143"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="35q-Io-64T">
@@ -188,7 +202,7 @@
                 <viewControllerPlaceholder storyboardName="PauseMenu" id="Yrw-9v-Pcr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDU-Ql-OgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-491" y="1431"/>
+            <point key="canvasLocation" x="-347" y="1616"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nR0-Va-AI1">
@@ -248,9 +262,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tey-6Z-UHp"/>
+        <segue reference="eR2-0c-0Rv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SettingsButton" width="22" height="22"/>
+        <image name="loginBG" width="540" height="960"/>
+        <namedColor name="primaryColorFix">
+            <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

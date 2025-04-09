@@ -330,11 +330,17 @@ extension GameCollectionViewController
         }
         DatabaseManager.shared.performBackgroundTask { (context) in
             
+            DatabaseManager.userGamesDirectoryURL()
             let game = context.object(with: game.objectID) as! Game
-            let gameURL =  game.gameSaveURL
+            let gameURL =  game.localSaveURL
             let name = game.name
-            let dateLocal = game.gameSave?.modifiedDate.niceLabelAndHours() ?? Date().niceLabelAndHours()
+            var dateLocal =  Date().niceLabelAndHours()
             
+            let attributes = try? FileManager.default.attributesOfItem(atPath: gameURL.path)
+            if let modificationDate = attributes?[.modificationDate] as? Date {
+                dateLocal = modificationDate.niceLabelAndHours()
+            }
+            try? Data(contentsOf: gameURL).write(to: game.gameSaveURL)
             StorageHelper.getSave(path: gameURL){dbData, date in
                 let hash = try? RSTHasher.sha1HashOfFile(at: gameURL)
                 if let onlineData = dbData, let date = date {
@@ -343,6 +349,7 @@ extension GameCollectionViewController
                         self.showAlerCustom(title: "syncDataTitle".localizable, message: String(format: "syncDataMessage".localizable, name, dateLocal,date), firtButtonText: "syncDataOnline".localizable, cancelText: "syncDataLocal".localizable, onOkTap: {
                             do {
                                 try dbData?.write(to: gameURL)
+                                try dbData?.write(to: game.gameSaveURL)
                                 completion()
                             } catch {
                                 completion()
@@ -1121,7 +1128,7 @@ private extension GameCollectionViewController
                 
                 if let fileURL = fileURL
                 {
-                    try FileManager.default.copyItem(at: fileURL, to: game.gameSaveURL, shouldReplace: true)
+                    try FileManager.default.copyItem(at: fileURL, to: game.localSaveURL, shouldReplace: true)
                 }
             }
             catch
@@ -1159,7 +1166,7 @@ private extension GameCollectionViewController
             }
             
             let temporaryURL = FileManager.default.temporaryDirectory.appendingPathComponent(sanitizedFilename).appendingPathExtension(saveFileExtension)
-            try FileManager.default.copyItem(at: game.gameSaveURL, to: temporaryURL, shouldReplace: true)
+            try FileManager.default.copyItem(at: game.localSaveURL, to: temporaryURL, shouldReplace: true)
             
             self._exportedSaveFileURL = temporaryURL
             

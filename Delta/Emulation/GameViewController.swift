@@ -119,6 +119,8 @@ class GameViewController: DeltaCore.GameViewController
         }
     }
     
+    var controller: UIViewController?
+    
     private var isGameScene: Bool {
         let gameScene = self.view.window?.windowScene as? GameScene
         return gameScene != nil
@@ -433,7 +435,6 @@ extension GameViewController
         self.handoffPlaceholderView.activityIndicatorView.startAnimating()
         self.handoffPlaceholderView.activityIndicatorView.color = .white
         self.view.insertSubview(self.handoffPlaceholderView, aboveSubview: self.gameView)
-        
         // Gestures
         for gestureRecognizer in self.menuButtonGestureRecognizers
         {
@@ -507,9 +508,12 @@ extension GameViewController
         
         switch identifier
         {
+        case "showInitialGamesViewController":
+            let gamesViewController = (segue.destination as? UINavigationController)?.topViewController as? GamesViewController
+            gamesViewController?.presenter = self.controller
         case "showGamesViewController": //todo---usare
             let gamesViewController = (segue.destination as! UINavigationController).topViewController as! GamesViewController
-            
+            gamesViewController.presenter = self.controller
             if let emulatorCore = self.emulatorCore
             {
                 gamesViewController.theme = .translucent
@@ -770,7 +774,13 @@ private extension GameViewController
         }
         else
         {
-            self.performSegue(withIdentifier: "showGamesViewController", sender: nil)
+            if let c = controller {
+                c.goHome(fromLogin: false)
+            } else {
+                self.goHome(fromLogin: false)
+            }
+            
+            //self.performSegue(withIdentifier: "showGamesViewController", sender: nil)
         }
         
         self.stopGameActivity()
@@ -1051,12 +1061,15 @@ private extension GameViewController
                     let gameSave = GameSave(context: context)
                     gameSave.identifier = game.identifier
                     gameSave.sha1 = hash
-                    
                     game.gameSave = gameSave
                 }
                 
                 try context.save()
-                StorageHelper.saveGame(gameName: game.name, path: game.gameSaveURL,actualDate: actualDate){ success in
+                
+                DatabaseManager.userGamesDirectoryURL()
+                try Data(contentsOf: game.gameSaveURL).write(to: game.localSaveURL)
+                
+                StorageHelper.saveGame(gameName: game.name, path: game.gameSaveURL, actualDate: actualDate){ success in
                     if success {
                         self.presentExperimentalToastView("Game_Data_Saved_online".localizable)
                     } else {
@@ -1067,7 +1080,7 @@ private extension GameViewController
             }
             catch CocoaError.fileNoSuchFile
             {
-                // Ignore
+                print("fileNoSuchFile")
             }
             catch
             {
@@ -1953,6 +1966,7 @@ extension GameViewController: NSUserActivityDelegate
         guard let userActivity = self.view.window?.windowScene?.userActivity, userActivity.activityType == NSUserActivity.playGameActivityType else { return }
         userActivity.resignCurrent()
     }
+    
     
     func stopGameActivity()
     {

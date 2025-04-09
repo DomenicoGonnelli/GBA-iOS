@@ -49,6 +49,12 @@ class GamesViewController: BaseViewController
     private var placeholderView: RSTPlaceholderView!
     private var pageControl: UIPageControl!
     
+    var presenter: UIViewController?{
+        didSet{
+            print("set")
+        }
+    }
+    
     private let fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>
     
     private var searchController: RSTSearchController?
@@ -191,8 +197,8 @@ extension GamesViewController
     }
     
     @IBAction func goToSetting(_ sender: Any){
-        
-        UserProfileViewController.push2(prensenter: self)
+        print(presenter)
+        UserProfileViewController.push2(prensenter: self, backcontroller: presenter)
         //SettingsViewController.push(from: self)
     }
     
@@ -293,7 +299,7 @@ private extension GamesViewController
     {
         switch self.theme
         {
-        case .opaque: self.view.backgroundColor = UIColor.deltaDarkGray
+        case .opaque: self.view.backgroundColor = .clear
         case .translucent: self.view.backgroundColor = nil
         }
                 

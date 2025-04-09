@@ -86,6 +86,12 @@ extension UIViewController {
                     }
                 }
             }
+        } else {
+            LaunchViewController.push(from: self)
+            if var controllers = self.navigationController?.viewControllers{
+                controllers.removeAll(where: {!($0 is LaunchViewController)})
+                self.navigationController?.viewControllers = controllers
+            }
         }
     }
     

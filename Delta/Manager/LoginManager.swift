@@ -53,6 +53,10 @@ class LoginManager {
     
     var sentOtp : [String:Int] = [:]
     var user: UserModel?
+    
+    var canManageUserFolder: Bool{
+        return !isAnonymous
+    }
    
     var isAnonymous: Bool {
         return user == nil || user?.loginMode == .null
@@ -86,11 +90,11 @@ class LoginManager {
     
     static var isFaceIDEnabled : Bool{
         set {
-            let token = DeviceManager.getUserMail() ?? ""
+            let token = DeviceManager.getUserMail()
             UserDefaults.standard.set(newValue, forKey: "isFaceIDEnabled_\(token)")
         }
         get{
-            let token = DeviceManager.getUserMail() ?? ""
+            let token = DeviceManager.getUserMail()
             return UserDefaults.standard.bool(forKey: "isFaceIDEnabled_\(token)")
         }
     }

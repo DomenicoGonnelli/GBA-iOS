@@ -273,6 +273,7 @@
 		EB3EB6292DA0BADC004FFACF /* StringExtensionCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1A2D946055004BFB1F /* StringExtensionCommon.swift */; };
 		EB3EB62A2DA13E36004FFACF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D202D946055004BFB1F /* Date.swift */; };
 		EB3EB62B2DA13E53004FFACF /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D182D946055004BFB1F /* Dictionary.swift */; };
+		EB3EB6302DA18664004FFACF /* LocalGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB62F2DA1865A004FFACF /* LocalGameProtocol.swift */; };
 		EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
 		EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
 		EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
@@ -718,6 +719,7 @@
 		EB3EB5DE2DA0738D004FFACF /* PremiumServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumServices.swift; sourceTree = "<group>"; };
 		EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewController.swift; sourceTree = "<group>"; };
 		EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCircleBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3EB62F2DA1865A004FFACF /* LocalGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGameProtocol.swift; sourceTree = "<group>"; };
 		EB69AB072D977F1B00311D39 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationManagar.swift; sourceTree = "<group>"; };
 		EB69AB092D977F1B00311D39 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -1726,6 +1728,7 @@
 		EB69AB1D2D9781A500311D39 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				EB3EB62F2DA1865A004FFACF /* LocalGameProtocol.swift */,
 				EB69AB1C2D9781A500311D39 /* DatabaseModelProtocol.swift */,
 			);
 			path = Protocols;
@@ -2656,6 +2659,7 @@
 				BF6EE5EB1F7C5F8F0051AD6C /* GameControllerInputMapping.swift in Sources */,
 				BF8A333421A484A000A42FD4 /* BadgedTableViewCell.swift in Sources */,
 				EB69AB272D97828D00311D39 /* ColorPickerManager.swift in Sources */,
+				EB3EB6302DA18664004FFACF /* LocalGameProtocol.swift in Sources */,
 				EB69AB282D97828D00311D39 /* SharingManager.swift in Sources */,
 				EB69AB292D97828D00311D39 /* AppStoreReviewManager.swift in Sources */,
 				D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */,

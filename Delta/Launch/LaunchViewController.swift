@@ -47,8 +47,10 @@ class LaunchViewController: RSTLaunchViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        if let vc = segue.destination as? GameViewController {
+            vc.controller = self
+        }
         guard segue.identifier == "embedGameViewController" else { return }
-        
         self.gameViewController = segue.destination as? GameViewController
     }
 }

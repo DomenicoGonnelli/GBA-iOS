@@ -270,7 +270,6 @@ private extension RepairDatabaseViewController
             {
                 // GameSave data differs from actual .sav file,
                 // so copy metadata from misplacedGameSave.
-                
                 Logger.database.info("GameSave \(gameSave.identifier, privacy: .public)'s hash does NOT match .sav, ignoring misplaced GameSave \(misplacedGameSave.identifier, privacy: .public).")
                 
                 // Not worth potential conflicts.

@@ -116,7 +116,7 @@ enum Social: String, CaseIterable {
         
         switch self {
         case.instagram:
-            return self.isAppInstalled()
+            return false// self.isAppInstalled()
         case .other:
             return true
         default:

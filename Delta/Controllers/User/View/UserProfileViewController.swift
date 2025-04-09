@@ -35,6 +35,7 @@ class UserProfileViewController: LoginViewController {
     
     var section = UserProfileMenuItem.sections
     var loginController: BaseViewController?
+    var backcontroller: UIViewController?
     var selectedItem : UserProfileMenuItem?
     
     
@@ -152,7 +153,7 @@ class UserProfileViewController: LoginViewController {
             LoginManager.shared.logout(){ _ in
                 self.dismiss(animated: true){
                     NotificationManager.shared.scheduleNotification(notification: .logoutSuccess)
-                    self.controller?.goToLogin()
+                    self.backcontroller?.goToLogin()
                     super.firstButtonAction(type)
                 }
             }
@@ -260,8 +261,9 @@ class UserProfileViewController: LoginViewController {
         vc.loginController = prensenter
         prensenter.present(vc, animated: true)
     }
-    static func push2(prensenter: BaseViewController?) {
+    static func push2(prensenter: UIViewController?, backcontroller: UIViewController?) {
         let vc = instance2()
+        vc.backcontroller = backcontroller
         prensenter?.navigationController?.pushViewController(vc, animated: false)
     }
     
