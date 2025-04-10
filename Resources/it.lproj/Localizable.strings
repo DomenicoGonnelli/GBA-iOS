@@ -442,6 +442,13 @@
 "syncDataOnline" = "Usa salvataggio Online";
 "syncDataLocal" = "Usa salvataggio locale e sovrascrivi dati online";
 
+
+"importOnlineDataTitle" = "Trovato salvataggio online!";
+"importOnlineDataMessage" = "È stata trova una versione di '%@' sul server con data di ultima modifica %@";
+"importOnlineDataButton" = "Importa salvataggio Online";
+"importOnlineDataRestart" = "Ricomincia gioco e sovrascrivi dati online";
+"close_action" = "Annulla";
+
 "UserProfileMessage" = "<b>Area Personale</b>\n\nCiao, benvenuto nella tua area personale.\nQui puoi vedere alcune informazioni legate alla tua utenza:";
 
 "PremiumDetailUser" = "Dettaglio Premium";

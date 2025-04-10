@@ -23,7 +23,7 @@ class StorageHelper{
         }
         let game_id = path.lastPathComponent
         let path = "\(uid)/Games/\(game_id)"
-        print(path)
+        
         let storageRef = Storage.storage().reference(withPath: path)
         // Upload the file to the path "images/rivers.jpg"
         _ = storageRef.putData(data, metadata: nil) { (metadata, error) in

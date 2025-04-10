@@ -333,32 +333,26 @@ extension GameCollectionViewController
             DatabaseManager.userGamesDirectoryURL()
             let game = context.object(with: game.objectID) as! Game
             let gameURL =  game.localSaveURL
+            let principalURL = game.gameSaveURL
             let name = game.name
-            var dateLocal =  Date().niceLabelAndHours()
+            var dateLocal : String?
             
             let attributes = try? FileManager.default.attributesOfItem(atPath: gameURL.path)
             if let modificationDate = attributes?[.modificationDate] as? Date {
                 dateLocal = modificationDate.niceLabelAndHours()
+               
             }
-            try? Data(contentsOf: gameURL).write(to: game.gameSaveURL)
+            try? Data(contentsOf: gameURL).write(to: principalURL)
             StorageHelper.getSave(path: gameURL){dbData, date in
-                let hash = try? RSTHasher.sha1HashOfFile(at: gameURL)
                 if let onlineData = dbData, let date = date {
-                    let onlineHash = RSTHasher.sha1Hash(of: onlineData)
-                    if onlineHash != hash {
-                        self.showAlerCustom(title: "syncDataTitle".localizable, message: String(format: "syncDataMessage".localizable, name, dateLocal,date), firtButtonText: "syncDataOnline".localizable, cancelText: "syncDataLocal".localizable, onOkTap: {
-                            do {
-                                try dbData?.write(to: gameURL)
-                                try dbData?.write(to: game.gameSaveURL)
-                                completion()
-                            } catch {
-                                completion()
-                            }
-                        }, onCancelTap: {
+                    if let dateLocal = dateLocal {
+                        self.showAlertForSelectSav(onlineData: onlineData, name: name, dateLocal: dateLocal, date: date, gameURL: gameURL, gameSaveURL: principalURL){
                             completion()
-                        })
+                        }
                     } else {
-                        completion()
+                        self.showAlertForOnlineSav(onlineData: onlineData, name: name, date: date, gameURL: gameURL, gameSaveURL: principalURL){
+                            completion()
+                        }
                     }
                 } else {
                     completion()
@@ -368,6 +362,42 @@ extension GameCollectionViewController
         
     }
     
+    
+    func showAlertForSelectSav(onlineData: Data, name: String, dateLocal: String, date: String, gameURL: URL, gameSaveURL: URL, completion: @escaping ()->()){
+        let hash = try? RSTHasher.sha1HashOfFile(at: gameURL)
+        let onlineHash = RSTHasher.sha1Hash(of: onlineData)
+        if onlineHash != hash {
+            self.showAlerCustom(title: "syncDataTitle".localizable, message: String(format: "syncDataMessage".localizable, name, dateLocal, date), firtButtonText: "syncDataOnline".localizable, cancelText: "syncDataLocal".localizable, onOkTap: {
+                do {
+                    try onlineData.write(to: gameURL)
+                    try onlineData.write(to: gameSaveURL)
+                    completion()
+                } catch {
+                    completion()
+                }
+            }, onCancelTap: {
+                completion()
+            })
+        } else {
+            completion()
+        }
+    }
+    
+    func showAlertForOnlineSav(onlineData: Data, name: String, date: String, gameURL: URL, gameSaveURL: URL, completion: @escaping ()->()){
+        self.showAlerCustom(title: "importOnlineDataTitle".localizable, message: String(format: "importOnlineDatMessage".localizable, name, date), firtButtonText: "importOnlineDataButton".localizable, cancelText: "importOnlineDataRestart".localizable, onOkTap: {
+            do {
+                try onlineData.write(to: gameURL)
+                try onlineData.write(to: gameSaveURL)
+                completion()
+            } catch {
+                completion()
+            }
+        }, onCancelTap: {
+            completion()
+        })
+    }
+
+
     func getLocalSaveFileURL() -> URL? {
         let fileManager = FileManager.default
         let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first

@@ -1051,6 +1051,7 @@ private extension GameViewController
                 let previousHash = game.gameSave?.sha1
                 guard hash != previousHash else { return }
                 let actualDate = Date()
+                
                 if let gameSave = game.gameSave
                 {
                     gameSave.modifiedDate = actualDate
@@ -1062,13 +1063,12 @@ private extension GameViewController
                     gameSave.identifier = game.identifier
                     gameSave.sha1 = hash
                     game.gameSave = gameSave
+                    try Data(contentsOf: game.localSaveURL).write(to: game.gameSaveURL)
                 }
                 
                 try context.save()
-                
-                DatabaseManager.userGamesDirectoryURL()
                 try Data(contentsOf: game.gameSaveURL).write(to: game.localSaveURL)
-                
+                DatabaseManager.userGamesDirectoryURL()
                 StorageHelper.saveGame(gameName: game.name, path: game.gameSaveURL, actualDate: actualDate){ success in
                     if success {
                         self.presentExperimentalToastView("Game_Data_Saved_online".localizable)
