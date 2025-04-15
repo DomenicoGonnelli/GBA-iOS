@@ -110,25 +110,15 @@ class LoginManager {
     }
 
     
-//    func deleteAccount(completion: @escaping ((DeletingErrorEnum)->Void)){
-//        
-//        UserService.deleteTeam(){ deleted in
-//            if deleted || LoginManager.shared.team == nil{
-//                if LoginManager.shared.user?.isPremium == true {
-//                    UserService.cancelPremium(){ notPremium in
-//                        if notPremium  {
-//                            completion(.noError)
-//                        } else {
-//                            completion(.other)
-//                        }
-//                    }
-//                } else {
-//                    completion(.noError)
-//                }
-//            } else {
-//                completion(.other)
-//            }
-//            
-//        }
-//    }
+    func deleteAccount(completion: @escaping ((Bool)->Void)){
+        StorageHelper.deleteAllGames(){ done in
+            if done {
+                FirestoreHelper.deleteUser()
+                FirestoreHelper.deletePremiumUser()
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
+    }
 }

@@ -20,19 +20,19 @@
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="Delta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7bO-ug-A4M">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="SQC-sA-RWn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="SQC-sA-RWn">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="semitrans2" translatesAutoresizingMaskIntoConstraints="NO" id="2Xh-L4-Ssc">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="675.33333333333337"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="setTintColor">
-                                        <color key="value" name="primaryColor"/>
+                                        <color key="value" name="primaryColorFix"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -285,15 +285,12 @@
         <image name="TwitterLogin" width="600" height="600"/>
         <image name="apple" width="90" height="90"/>
         <image name="google" width="90" height="90"/>
-        <image name="loginBG" width="542.5" height="793"/>
+        <image name="loginBG" width="289.5" height="449"/>
         <image name="loginMethodUserProfile" width="120" height="122"/>
-        <image name="logo" width="256.5" height="256"/>
+        <image name="logo" width="512" height="512"/>
         <image name="semitrans2" width="160.5" height="144"/>
         <namedColor name="buttonTextColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="primaryColor">
-            <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryColorFix">
             <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

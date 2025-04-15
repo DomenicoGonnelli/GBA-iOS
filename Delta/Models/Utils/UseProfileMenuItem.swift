@@ -34,7 +34,9 @@ public enum UserProfileMenuItem {
     }
     
     static var sectionNames: [String] {
-        return ["loginMode","configuration","contactUS","userInfo","clear"]
+        return ["loginMode","configuration",
+                //"contactUS",
+                "userInfo","clear"]
     }
     
     var title: String{

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jby-tL-oeg">
     <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,7 +17,7 @@
         <!--On Boarding Pager View Controller-->
         <scene sceneID="t2U-YS-Cty">
             <objects>
-                <pageViewController storyboardIdentifier="OnBoardingSportAndGigaPagerViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jby-tL-oeg" customClass="OnBoardingPagerViewController" customModule="Collaudo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="OnBoardingSportAndGigaPagerViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jby-tL-oeg" customClass="OnBoardingPagerViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ek-Z3-Ynr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="109" y="-34"/>
@@ -24,7 +25,7 @@
         <!--On Boarding Item View-->
         <scene sceneID="i3p-Jx-4fK">
             <objects>
-                <viewController storyboardIdentifier="OnBoardingItemView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h6N-vj-hrz" customClass="OnBoardingItemView" customModule="Collaudo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoardingItemView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h6N-vj-hrz" customClass="OnBoardingItemView" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="gwE-XY-djo">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
@@ -39,13 +40,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="719"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz7-Vk-AsM" customClass="LottieAnimationView" customModule="Lottie">
-                                                <rect key="frame" x="110" y="249.66666666666669" width="220" height="220"/>
+                                                <rect key="frame" x="66" y="205.66666666666669" width="308" height="308.00000000000006"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1tutorial" translatesAutoresizingMaskIntoConstraints="NO" id="mMR-oX-zHo">
-                                                <rect key="frame" x="110" y="249.66666666666669" width="220" height="220"/>
+                                                <rect key="frame" x="66" y="205.66666666666669" width="308" height="308.00000000000006"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="280" id="vb5-zn-AnJ"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="360" id="vb5-zn-AnJ"/>
                                                     <constraint firstAttribute="width" secondItem="mMR-oX-zHo" secondAttribute="height" id="w4X-wX-AuO"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -61,11 +62,11 @@
                                             <constraint firstItem="Jz7-Vk-AsM" firstAttribute="top" secondItem="mMR-oX-zHo" secondAttribute="top" id="evC-fX-8uj"/>
                                             <constraint firstItem="mMR-oX-zHo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ClU-Vj-6Ax" secondAttribute="top" id="iVH-Eh-6ea"/>
                                             <constraint firstItem="Jz7-Vk-AsM" firstAttribute="leading" secondItem="mMR-oX-zHo" secondAttribute="leading" id="lMA-YK-ni2"/>
-                                            <constraint firstItem="mMR-oX-zHo" firstAttribute="width" secondItem="ClU-Vj-6Ax" secondAttribute="width" multiplier="0.5" priority="900" id="qu9-r9-U1x"/>
+                                            <constraint firstItem="mMR-oX-zHo" firstAttribute="width" secondItem="ClU-Vj-6Ax" secondAttribute="width" multiplier="0.7" priority="900" id="qu9-r9-U1x"/>
                                             <constraint firstItem="Jz7-Vk-AsM" firstAttribute="bottom" secondItem="mMR-oX-zHo" secondAttribute="bottom" id="x7C-US-z4s"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pq-iX-zk4" customClass="AutoshrinkLabel" customModule="Collaudo" customModuleProvider="target">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pq-iX-zk4" customClass="AutoshrinkLabel" customModule="GemBoy_Advance" customModuleProvider="target">
                                         <rect key="frame" x="32" y="765" width="376" height="75"/>
                                         <string key="text">Utilizzeremo i passi registrati sul tuo smartphone per calcolare il tuo punteggio. Proseguendo acconsenti alle condizioni generali dell’iniziativa, 
 per maggior dettagli visita 
@@ -145,9 +146,9 @@ ho-mobile.it/piupassichegiga</string>
         </scene>
     </scenes>
     <resources>
-        <image name="1tutorial" width="242" height="206"/>
+        <image name="1tutorial" width="650" height="650"/>
         <namedColor name="primaryColor">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

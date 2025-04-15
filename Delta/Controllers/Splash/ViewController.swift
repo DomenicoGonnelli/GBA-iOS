@@ -46,16 +46,17 @@ class ViewController: BaseViewController {
                     self.hideLoader()
                     
                     
-                    if #available(iOS 15.0, *) {
-                        let height = UIScreen.main.bounds.height
-                        if height > 700 && DeviceManager.currentDevice == .phone {
-                            TutorialSplitContainerViewController.present(presenter: self)
-                        } else {
-                            OnBoardingViewController.present(presenter: self)
-                        }
-                    } else {
-                        OnBoardingViewController.present(presenter: self)
-                    }
+//                    if #available(iOS 15.0, *) {
+//                        let height = UIScreen.main.bounds.height
+//                        if height > 700 && DeviceManager.currentDevice == .phone {
+//                            TutorialSplitContainerViewController.present(presenter: self)
+//                        } else {
+//                            OnBoardingViewController.present(presenter: self)
+//                        }
+//                    } else {
+//                        OnBoardingViewController.present(presenter: self)
+//                    }
+                    OnBoardingViewController.present(presenter: self)
                     
                 } else {
                     SplashService.autologin(){ isLogged in

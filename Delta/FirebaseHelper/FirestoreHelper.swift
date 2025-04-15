@@ -52,10 +52,20 @@ class FirestoreHelper{
         getUser().document(uid).setData(user.datafile)
     }
     
+    class func deleteUser(){
+        guard let uid = uid else { return}
+        getUser().document(uid).delete()
+    }
+    
     // MARK: USER SERVICES
     class func updatePremiumUsers(user: PremiumUser?){
         guard let uid = uid, let user = user else { return}
         getPremiumUsers().document(uid).setData(user.datafile)
+    }
+    
+    class func deletePremiumUser(){
+        guard let uid = uid else { return}
+        getPremiumUsers().document(uid).delete()
     }
     
     class func getPremiumrData(_ completion: @escaping (PremiumUser?) -> ()){

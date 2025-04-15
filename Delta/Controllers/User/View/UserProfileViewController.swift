@@ -158,20 +158,18 @@ class UserProfileViewController: LoginViewController {
                 }
             }
         } else if type == .accountDeletion{
-//            LoginManager.shared.deleteAccount(){ error in
-//                if error == .noError {
-//                    self.showAlert(alertTypology: .accountDeleted)
-//                } else if error == .requireAuth{
-//                    self.showAlert(alertTypology: .needLogin)
-//                }else {
-//                    self.showAlert(alertTypology: .genericError)
-//                }
-//            }
+            LoginManager.shared.deleteAccount(){ error in
+                if error == false {
+                    self.showAlert(alertTypology: .accountDeleted)
+                } else {
+                    self.showAlert(alertTypology: .genericError)
+                }
+            }
         } else if type == .accountDeleted || type == .noCorrectUser{
             LoginManager.shared.logout(){ _ in
                 self.dismiss(animated: true){
                     self.controller?.firstButtonAction(.genericError)
-                    self.controller?.goToLogin()
+                    self.backcontroller?.goToLogin()
                     super.firstButtonAction(type)
                 }
             }

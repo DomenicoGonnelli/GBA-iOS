@@ -52,6 +52,8 @@ class OnBoardingBaseViewController: UIViewController, OnBoardingItemViewProtocol
             onBoardingBody.text = onBoardingItem?.body
         }
         
+        view.backgroundColor = onBoardingItem?.color
+        
        
         
     }

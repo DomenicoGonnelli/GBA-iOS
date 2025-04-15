@@ -36,6 +36,66 @@ class StorageHelper{
         }
         
     }
+    
+    class func deleteAllGames(completion: @escaping (Bool) ->()) {
+
+        guard let uid = FirestoreHelper.uid else {
+            completion(true)
+            return
+        }
+        let path = "\(uid)/Games"
+        
+        deletePath(at: path) { error in
+            completion(error == nil)
+        }
+        
+    }
+    
+    class func deletePath(at path: String, completion: @escaping (Error?) -> Void) {
+        let storageRef = Storage.storage().reference(withPath: path)
+
+        storageRef.listAll { (result, error) in
+            if let error = error {
+                completion(error)
+                return
+            }
+
+            let dispatchGroup = DispatchGroup()
+            var deletionError: Error?
+            
+            guard let result = result else {
+                completion(deletionError)
+                return
+            }
+
+            for item in result.items {
+                dispatchGroup.enter()
+                item.delete { error in
+                    if let error = error {
+                        deletionError = error
+                    } else {
+                        print("File eliminato: \(item.fullPath)")
+                    }
+                    dispatchGroup.leave()
+                }
+            }
+
+            for prefix in result.prefixes {
+                dispatchGroup.enter()
+                deletePath(at: prefix.fullPath) { error in
+                    if let error = error {
+                        deletionError = error
+                    }
+                    dispatchGroup.leave()
+                }
+            }
+
+            dispatchGroup.notify(queue: .main) {
+                completion(deletionError)
+            }
+        }
+    }
+
         
         
         
