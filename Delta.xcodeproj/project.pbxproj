@@ -329,6 +329,10 @@
 		EBA2BADB2D9848AE007A25A6 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAD72D9848AE007A25A6 /* AlertModel.swift */; };
 		EBA2BADC2D9848AE007A25A6 /* HomeServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAD82D9848AE007A25A6 /* HomeServiceModel.swift */; };
 		EBA2BADE2D98490C007A25A6 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BADD2D98490C007A25A6 /* LoginManager.swift */; };
+		EBAEB7B02DB1615A007C5BB4 /* RankingStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB7AE2DB1615A007C5BB4 /* RankingStarView.swift */; };
+		EBAEB7B12DB1615A007C5BB4 /* RankingStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7AD2DB1615A007C5BB4 /* RankingStarView.xib */; };
+		EBAEB7B42DB162F9007C5BB4 /* SystemSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB7B32DB162E4007C5BB4 /* SystemSelection.swift */; };
+		EBAEB7B62DB163E5007C5BB4 /* SystemSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B52DB163E5007C5BB4 /* SystemSelection.xib */; };
 		EBB0FA942D96A16800CA8EB1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA932D96A16800CA8EB1 /* FirebaseAnalytics */; };
 		EBB0FA962D96A16800CA8EB1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA952D96A16800CA8EB1 /* FirebaseAuth */; };
 		EBB0FA982D96A16800CA8EB1 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA972D96A16800CA8EB1 /* FirebaseCore */; };
@@ -781,6 +785,10 @@
 		EBA2BAD82D9848AE007A25A6 /* HomeServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceModel.swift; sourceTree = "<group>"; };
 		EBA2BAD92D9848AE007A25A6 /* UseProfileMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseProfileMenuItem.swift; sourceTree = "<group>"; };
 		EBA2BADD2D98490C007A25A6 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		EBAEB7AD2DB1615A007C5BB4 /* RankingStarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingStarView.xib; sourceTree = "<group>"; };
+		EBAEB7AE2DB1615A007C5BB4 /* RankingStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStarView.swift; sourceTree = "<group>"; };
+		EBAEB7B32DB162E4007C5BB4 /* SystemSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSelection.swift; sourceTree = "<group>"; };
+		EBAEB7B52DB163E5007C5BB4 /* SystemSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemSelection.xib; sourceTree = "<group>"; };
 		EBBB195A2D9971A8009C977A /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Bold.otf"; sourceTree = "<group>"; };
 		EBBB195B2D9971A8009C977A /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-BoldItal.otf"; sourceTree = "<group>"; };
 		EBBB195C2D9971A8009C977A /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
@@ -1887,6 +1895,8 @@
 		EBA2BABE2D984792007A25A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EBAEB7B22DB162C8007C5BB4 /* tabSelectSystem */,
+				EBAEB7AF2DB1615A007C5BB4 /* StarRanking */,
 				EBBB19802D9972DB009C977A /* onBoarding */,
 				EBBB19712D997269009C977A /* Loader */,
 				EBA2BAA02D984792007A25A6 /* AlertView */,
@@ -1901,6 +1911,24 @@
 				EBA2BABD2D984792007A25A6 /* DynamicView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EBAEB7AF2DB1615A007C5BB4 /* StarRanking */ = {
+			isa = PBXGroup;
+			children = (
+				EBAEB7AD2DB1615A007C5BB4 /* RankingStarView.xib */,
+				EBAEB7AE2DB1615A007C5BB4 /* RankingStarView.swift */,
+			);
+			path = StarRanking;
+			sourceTree = "<group>";
+		};
+		EBAEB7B22DB162C8007C5BB4 /* tabSelectSystem */ = {
+			isa = PBXGroup;
+			children = (
+				EBAEB7B32DB162E4007C5BB4 /* SystemSelection.swift */,
+				EBAEB7B52DB163E5007C5BB4 /* SystemSelection.xib */,
+			);
+			path = tabSelectSystem;
 			sourceTree = "<group>";
 		};
 		EBBB19622D9971A8009C977A /* Font */ = {
@@ -2283,6 +2311,7 @@
 				D5D797E9298DCC7300738869 /* cheatbase.zip in Resources */,
 				EB7D1A462D9AE1DA004B4D94 /* InfoPlist.strings in Resources */,
 				EBBB19862D9972DB009C977A /* OnBoardingPages.storyboard in Resources */,
+				EBAEB7B12DB1615A007C5BB4 /* RankingStarView.xib in Resources */,
 				BFFA71E21AAC406100EE9DD1 /* Main.storyboard in Resources */,
 				D5AE76C62C2B7F3D0086471B /* Icons.xcassets in Resources */,
 				EB3EB56A2DA04718004FFACF /* dg_SNES.deltaskin in Resources */,
@@ -2302,6 +2331,7 @@
 				EB3EB5F62DA0738D004FFACF /* ColorPalette.storyboard in Resources */,
 				EB3EB5F72DA0738D004FFACF /* PremiumSinglePage.storyboard in Resources */,
 				EB3EB56C2DA04793004FFACF /* dg_NES.deltaskin in Resources */,
+				EBAEB7B62DB163E5007C5BB4 /* SystemSelection.xib in Resources */,
 				EBBB19672D9971A8009C977A /* GothamRnd-BookItal.otf in Resources */,
 				EBBB19682D9971A8009C977A /* GothamRnd-Book.otf in Resources */,
 				EB3EB5762DA0719A004FFACF /* Dashboard.storyboard in Resources */,
@@ -2467,6 +2497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB3645823245A6000CD0EB1 /* LicensesViewController.swift in Sources */,
+				EBAEB7B02DB1615A007C5BB4 /* RankingStarView.swift in Sources */,
 				BFC6F7B81F435BC500221B96 /* Input+Display.swift in Sources */,
 				BF59426A1E09BBD00051894B /* GridCollectionViewCell.swift in Sources */,
 				BF6BF3181EB82111008E83CD /* iTunesImportOption.swift in Sources */,
@@ -2684,6 +2715,7 @@
 				BF99A5971DC2F9C400468E9E /* ControllerSkinTableViewCell.swift in Sources */,
 				BFE9908024451E15006409A7 /* MelonDSCoreSettingsViewController.swift in Sources */,
 				BF5942861E09BC8B0051894B /* _Cheat.swift in Sources */,
+				EBAEB7B42DB162F9007C5BB4 /* SystemSelection.swift in Sources */,
 				BF5E7F441B9A650B00AE44F8 /* SettingsViewController.swift in Sources */,
 				BF8CA9361F5F651900499FDD /* PopoverMenuController.swift in Sources */,
 				D5D39E792AF2D624004BE3F7 /* GameView+AirPlay.swift in Sources */,

@@ -106,6 +106,7 @@ class GameCollectionViewController: BaseViewController, UICollectionViewDelegate
         didSet {
             self.title = self.gameCollection?.shortName
             self.updateDataSource()
+            
         }
     }
     

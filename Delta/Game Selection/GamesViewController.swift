@@ -73,6 +73,13 @@ class GamesViewController: BaseViewController
     private var resumeButton: UIBarButtonItem?
     @IBOutlet private var importButton: UIBarButtonItem!
     
+    @IBOutlet private var stack: UIStackView!
+    @IBOutlet private var stackWidth: NSLayoutConstraint!
+
+    @IBOutlet private var selectedRoundedView: UIView!
+    
+    private var orderedSystem : [System] = [.gba, .gbc, .nes, .snes, .n64]
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         fatalError("initWithNibName: not implemented")
     }
@@ -248,7 +255,7 @@ extension GamesViewController
 
 // MARK: - UI -
 /// UI
-private extension GamesViewController
+extension GamesViewController
 {
     func prepareSearchController()
     {
@@ -308,6 +315,7 @@ private extension GamesViewController
             for collectionViewController in viewControllers
             {
                 collectionViewController.theme = self.theme
+
             }
         }
     }
@@ -339,7 +347,7 @@ private extension GamesViewController
         return viewController
     }
     
-    func updateSections(animated: Bool)
+    func updateSections(animated: Bool, force: Bool = false)
     {
         let sections = self.fetchedResultsController.sections?.first?.numberOfObjects ?? 0
         self.pageControl.numberOfPages = sections
@@ -371,7 +379,10 @@ private extension GamesViewController
         if sections > 0
         {
             // Reset page view controller if currently hidden or current child should view controller no longer exists
-            if self.pageViewController.view.isHidden || resetPageViewController
+            
+            setStackView()
+            
+            if self.pageViewController.view.isHidden || resetPageViewController || force
             {
                 var index = 0
                 
@@ -380,6 +391,7 @@ private extension GamesViewController
                     if let gameCollectionIndex = self.fetchedResultsController.fetchedObjects?.firstIndex(where: { $0 as! GameCollection == gameCollection })
                     {
                         index = gameCollectionIndex
+                        
                     }
                 }
                 
@@ -393,6 +405,10 @@ private extension GamesViewController
                     
                     self.title = viewController.title
                     self.pageControl.currentPage = index
+                    
+                    if let gameCollection = viewController.gameCollection{
+                        setBottomView(gameCollection: gameCollection)
+                    }
                 }
             }
             else
@@ -407,6 +423,26 @@ private extension GamesViewController
             self.pageViewController.view.setHidden(true, animated: animated)
             self.pageViewController.view.superview?.setHidden(true, animated: animated)
             self.placeholderView.setHidden(false, animated: animated)
+        }
+    }
+    
+    func setStackView(){
+        
+        for view in stack.arrangedSubviews {
+            stack.removeArrangedSubview(view)
+            view.removeFromSuperview() // 🔥 importante!
+        }
+        if let game = self.fetchedResultsController.fetchedObjects {
+            stackWidth.constant = CGFloat(70 * game.count)
+            for i in 0..<game.count {
+                if let g = game[i] as? GameCollection {
+                    let sys = SystemSelection(frame: CGRect (x: 70*i, y: 0, width: 70, height: 70))
+                    sys.setSystem(system: g.system, delegate: self)
+                    stack.addArrangedSubview(sys)
+                }
+                
+            }
+            stack.layoutIfNeeded()
         }
     }
     
@@ -581,10 +617,23 @@ private extension GamesViewController
     }
 }
 
+extension GamesViewController: SystemSelectionDelegate{
+    
+    func setSystem(system: System?){
+        if let gameCollection = self.fetchedResultsController.fetchedObjects?.first(where: { ($0 as? GameCollection)?.system == system }) as? GameCollection {
+            Settings.previousGameCollection = gameCollection
+            updateSections(animated: true, force: true)
+        }
+        
+    }
+}
+
 //MARK: - UIPageViewController -
 /// UIPageViewController
 extension GamesViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate
 {
+    
+    
     //MARK: - UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
     {
@@ -598,6 +647,32 @@ extension GamesViewController: UIPageViewControllerDataSource, UIPageViewControl
         return viewController
     }
     
+    func setBottomView(gameCollection: GameCollection){
+        
+        if let index = self.fetchedResultsController.fetchedObjects?.firstIndex(where: { $0 as? GameCollection == gameCollection }) {
+            stack.arrangedSubviews.forEach({
+                if let view = $0 as? SystemSelection {
+                    view.selectSystem(color: .lightGray.withAlphaComponent(0.5))
+                }
+            })
+            
+            self.stack.layoutIfNeeded()
+            DispatchQueue.main.async {
+                let center = self.stack.arrangedSubviews[index].center
+                self.selectedRoundedView.center = center
+                self.selectedRoundedView.alpha = 0
+                self.selectedRoundedView.layoutIfNeeded()
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.selectedRoundedView.alpha = 0.3
+                    if let v = self.stack.arrangedSubviews[index] as? SystemSelection {
+                        v.selectSystem(color: .white)
+                    }
+                })
+            }
+        }
+    }
+    
+    
     //MARK: - UIPageViewControllerDelegate
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool)
     {
@@ -607,6 +682,8 @@ extension GamesViewController: UIPageViewControllerDataSource, UIPageViewControl
             self.pageControl.currentPage = index
             
             Settings.previousGameCollection = gameCollection
+            
+            setBottomView(gameCollection: gameCollection)
         }
         else
         {
@@ -614,6 +691,7 @@ extension GamesViewController: UIPageViewControllerDataSource, UIPageViewControl
         }
         
         self.title = pageViewController.viewControllers?.first?.title
+        
     }
 }
 

@@ -15,6 +15,7 @@ import NESDeltaCore
 import N64DeltaCore
 import MelonDSDeltaCore
 import Systems
+import UIKit
 
 
 
@@ -39,6 +40,45 @@ enum System: CaseIterable
     
     static var allCores: [DeltaCoreProtocol] {
         return [NES.core, SNES.core, N64.core, GBC.core, GBA.core]
+    }
+    
+    
+    var imageLine: UIImage? {
+        switch self{
+        case .ds:
+            return UIImage(named: "ds_ic")
+        case .nes:
+            return UIImage(named: "nes_ic")
+        case .genesis:
+            return UIImage(named: "gs_ic")
+        case .snes:
+            return UIImage(named: "snes_ic")
+        case .n64:
+            return UIImage(named: "n64_ic")
+        case .gbc:
+            return UIImage(named: "gbc_ic")
+        case .gba:
+            return UIImage(named: "gba_ic")
+        }
+    }
+    
+    var imageBG: UIImage? {
+        switch self{
+        case .ds:
+            return UIImage(named: "ds_ic 1")
+        case .nes:
+            return UIImage(named: "nes_ic 1")
+        case .genesis:
+            return UIImage(named: "gs_ic 1")
+        case .snes:
+            return UIImage(named: "snes_ic 1")
+        case .n64:
+            return UIImage(named: "n64_ic 1")
+        case .gbc:
+            return UIImage(named: "gbc_ic 1")
+        case .gba:
+            return UIImage(named: "gba_ic 1")
+        }
     }
 }
 
