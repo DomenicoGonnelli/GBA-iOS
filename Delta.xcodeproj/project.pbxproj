@@ -388,7 +388,7 @@
 		EBBB1A072D9989F5009C977A /* LaunchScreenStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */; };
 		EBBB1A092D9AAA58009C977A /* efupdate.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A082D9AAA58009C977A /* efupdate.json */; };
 		EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */; };
-		EBC970E42DB273DD000CA9C1 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E32DB273DD000CA9C1 /* dg_NES.deltaskin */; };
+		EBC970E62DB27475000CA9C1 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -837,7 +837,7 @@
 		EBBB1A042D9989F5009C977A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreenStart.storyboard; sourceTree = "<group>"; };
 		EBBB1A082D9AAA58009C977A /* efupdate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = efupdate.json; sourceTree = "<group>"; };
 		EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_SNES.deltaskin; sourceTree = "<group>"; };
-		EBC970E32DB273DD000CA9C1 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
+		EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
 		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1620,8 +1620,8 @@
 		EB3EB55E2DA034DB004FFACF /* deltaskin */ = {
 			isa = PBXGroup;
 			children = (
+				EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */,
 				EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */,
-				EBC970E32DB273DD000CA9C1 /* dg_NES.deltaskin */,
 				EBAEB7B92DB1CFD7007C5BB4 /* dg__NES.deltaskin */,
 				EBAEB7B72DB1CEF5007C5BB4 /* dg__SNES.deltaskin */,
 				EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */,
@@ -2351,7 +2351,7 @@
 				EBBB19EA2D9982C6009C977A /* TutorialLong.storyboard in Resources */,
 				EBBB19EB2D9982C6009C977A /* TutorialSplit.storyboard in Resources */,
 				EBBB19EC2D9982C6009C977A /* OnBoarding.storyboard in Resources */,
-				EBC970E42DB273DD000CA9C1 /* dg_NES.deltaskin in Resources */,
+				EBC970E62DB27475000CA9C1 /* dg_NES.deltaskin in Resources */,
 				EBBB196E2D9971A8009C977A /* GothamRnd-Medium.otf in Resources */,
 				EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */,
 				EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */,
