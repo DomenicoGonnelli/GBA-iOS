@@ -23,7 +23,7 @@ class GamesViewController: BaseViewController
         }
     }
     
-    weak var activeEmulatorCore: EmulatorCore? {
+    var activeEmulatorCore: EmulatorCore? {
         didSet
         {
             let game = oldValue?.game as? Game
@@ -49,11 +49,7 @@ class GamesViewController: BaseViewController
     private var placeholderView: RSTPlaceholderView!
     private var pageControl: UIPageControl!
     
-    var presenter: UIViewController?{
-        didSet{
-            print("set")
-        }
-    }
+    var presenter: UIViewController?
     
     private let fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>
     

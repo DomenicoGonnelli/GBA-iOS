@@ -87,9 +87,10 @@ extension UIViewController {
                 }
             }
         } else {
-            LaunchViewController.push(from: self)
+            let vc = LaunchViewController.instance()
+            self.navigationController?.pushViewController(vc, animated: false)
             if var controllers = self.navigationController?.viewControllers{
-                controllers.removeAll(where: {!($0 is LaunchViewController)})
+                controllers.removeAll(where: {$0 != vc})
                 self.navigationController?.viewControllers = controllers
             }
         }

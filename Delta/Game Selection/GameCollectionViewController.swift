@@ -300,10 +300,12 @@ extension GameCollectionViewController
                 }
                 catch EmulatorCore.SaveStateError.doesNotExist
                 {
+                    print("GameCollectionViewController: catch on start game")
                     print("Save State does not exist.")
                 }
                 catch
                 {
+                    print("GameCollectionViewController: catch on start game")
                     print(error)
                 }
                 
@@ -623,7 +625,7 @@ private extension GameCollectionViewController
             catch
             {
                 self.isResumingGame = false
-                
+                print(error)
                 switch error
                 {
                 case .alreadyRunning:
