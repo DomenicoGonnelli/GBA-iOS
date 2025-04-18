@@ -331,8 +331,8 @@
 		EBAEB7B12DB1615A007C5BB4 /* RankingStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7AD2DB1615A007C5BB4 /* RankingStarView.xib */; };
 		EBAEB7B42DB162F9007C5BB4 /* SystemSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB7B32DB162E4007C5BB4 /* SystemSelection.swift */; };
 		EBAEB7B62DB163E5007C5BB4 /* SystemSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B52DB163E5007C5BB4 /* SystemSelection.xib */; };
-		EBAEB7B82DB1CEF5007C5BB4 /* dg_SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B72DB1CEF5007C5BB4 /* dg_SNES.deltaskin */; };
-		EBAEB7BA2DB1CFD7007C5BB4 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B92DB1CFD7007C5BB4 /* dg_NES.deltaskin */; };
+		EBAEB7B82DB1CEF5007C5BB4 /* dg__SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B72DB1CEF5007C5BB4 /* dg__SNES.deltaskin */; };
+		EBAEB7BA2DB1CFD7007C5BB4 /* dg__NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B92DB1CFD7007C5BB4 /* dg__NES.deltaskin */; };
 		EBB0FA942D96A16800CA8EB1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA932D96A16800CA8EB1 /* FirebaseAnalytics */; };
 		EBB0FA962D96A16800CA8EB1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA952D96A16800CA8EB1 /* FirebaseAuth */; };
 		EBB0FA982D96A16800CA8EB1 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA972D96A16800CA8EB1 /* FirebaseCore */; };
@@ -387,6 +387,8 @@
 		EBBB19F72D998826009C977A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EBBB19F62D998826009C977A /* GoogleSignInSwift */; };
 		EBBB1A072D9989F5009C977A /* LaunchScreenStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */; };
 		EBBB1A092D9AAA58009C977A /* efupdate.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A082D9AAA58009C977A /* efupdate.json */; };
+		EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */; };
+		EBC970E42DB273DD000CA9C1 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E32DB273DD000CA9C1 /* dg_NES.deltaskin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -787,8 +789,8 @@
 		EBAEB7AE2DB1615A007C5BB4 /* RankingStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStarView.swift; sourceTree = "<group>"; };
 		EBAEB7B32DB162E4007C5BB4 /* SystemSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSelection.swift; sourceTree = "<group>"; };
 		EBAEB7B52DB163E5007C5BB4 /* SystemSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemSelection.xib; sourceTree = "<group>"; };
-		EBAEB7B72DB1CEF5007C5BB4 /* dg_SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_SNES.deltaskin; sourceTree = "<group>"; };
-		EBAEB7B92DB1CFD7007C5BB4 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
+		EBAEB7B72DB1CEF5007C5BB4 /* dg__SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__SNES.deltaskin; sourceTree = "<group>"; };
+		EBAEB7B92DB1CFD7007C5BB4 /* dg__NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__NES.deltaskin; sourceTree = "<group>"; };
 		EBBB195A2D9971A8009C977A /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Bold.otf"; sourceTree = "<group>"; };
 		EBBB195B2D9971A8009C977A /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-BoldItal.otf"; sourceTree = "<group>"; };
 		EBBB195C2D9971A8009C977A /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
@@ -834,6 +836,8 @@
 		EBBB19F12D998613009C977A /* libGoogleSignIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleSignIn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBB1A042D9989F5009C977A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreenStart.storyboard; sourceTree = "<group>"; };
 		EBBB1A082D9AAA58009C977A /* efupdate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = efupdate.json; sourceTree = "<group>"; };
+		EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_SNES.deltaskin; sourceTree = "<group>"; };
+		EBC970E32DB273DD000CA9C1 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
 		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1616,8 +1620,10 @@
 		EB3EB55E2DA034DB004FFACF /* deltaskin */ = {
 			isa = PBXGroup;
 			children = (
-				EBAEB7B92DB1CFD7007C5BB4 /* dg_NES.deltaskin */,
-				EBAEB7B72DB1CEF5007C5BB4 /* dg_SNES.deltaskin */,
+				EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */,
+				EBC970E32DB273DD000CA9C1 /* dg_NES.deltaskin */,
+				EBAEB7B92DB1CFD7007C5BB4 /* dg__NES.deltaskin */,
+				EBAEB7B72DB1CEF5007C5BB4 /* dg__SNES.deltaskin */,
 				EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */,
 				EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */,
 				EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */,
@@ -2321,7 +2327,7 @@
 				EBBB19CB2D9977B4009C977A /* Login.storyboard in Resources */,
 				BF3540001C5DA3C500C1184C /* PausePresentationControllerContentView.xib in Resources */,
 				BF5E7F461B9A652600AE44F8 /* Settings.storyboard in Resources */,
-				EBAEB7B82DB1CEF5007C5BB4 /* dg_SNES.deltaskin in Resources */,
+				EBAEB7B82DB1CEF5007C5BB4 /* dg__SNES.deltaskin in Resources */,
 				BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */,
 				D53415A7298C78BC00FD67B1 /* Contributors.plist in Resources */,
 				EBBB19662D9971A8009C977A /* GothamRnd-MedItal.otf in Resources */,
@@ -2335,7 +2341,7 @@
 				EBBB19682D9971A8009C977A /* GothamRnd-Book.otf in Resources */,
 				EB3EB5762DA0719A004FFACF /* Dashboard.storyboard in Resources */,
 				EBBB19692D9971A8009C977A /* loaderPink.json in Resources */,
-				EBAEB7BA2DB1CFD7007C5BB4 /* dg_NES.deltaskin in Resources */,
+				EBAEB7BA2DB1CFD7007C5BB4 /* dg__NES.deltaskin in Resources */,
 				EBBB196A2D9971A8009C977A /* GothamRnd-Light.otf in Resources */,
 				EBBB196B2D9971A8009C977A /* GothamRnd-Bold.otf in Resources */,
 				EBBB196C2D9971A8009C977A /* GothamRnd-BoldItal.otf in Resources */,
@@ -2345,6 +2351,7 @@
 				EBBB19EA2D9982C6009C977A /* TutorialLong.storyboard in Resources */,
 				EBBB19EB2D9982C6009C977A /* TutorialSplit.storyboard in Resources */,
 				EBBB19EC2D9982C6009C977A /* OnBoarding.storyboard in Resources */,
+				EBC970E42DB273DD000CA9C1 /* dg_NES.deltaskin in Resources */,
 				EBBB196E2D9971A8009C977A /* GothamRnd-Medium.otf in Resources */,
 				EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */,
 				EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */,
@@ -2356,6 +2363,7 @@
 				EBBB1A072D9989F5009C977A /* LaunchScreenStart.storyboard in Resources */,
 				EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */,
 				EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */,
+				EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */,
 				EBA2BAC42D984792007A25A6 /* SwipableControllerCell.xib in Resources */,
 				EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */,
 				EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */,
