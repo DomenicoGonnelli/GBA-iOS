@@ -9,6 +9,10 @@
 //infoPlist
 
 "NSFaceIDUsageDescription" = "Utilizza il riconoscimento biometrico per rendere più sicuro l'accesso al tuo profilo";
-"NSPhotoLibraryAddUsageDescription" = "L'app utilizza l'accesso alle foto per darti la possibilità di seleziona un'immagine del profilo personalizzata";
-"NSPhotoLibraryUsageDescription" = "L'app utilizza l'accesso alle foto per darti la possibilità di seleziona un'immagine del profilo personalizzata";
-"NSUserTrackingUsageDescription" = "L'app utilizza i tuoi dati solamente al fine di monitorare la propria efficienza e rendere il sistema più sicuro e solido.";
+"NSPhotoLibraryAddUsageDescription" = "L'app utilizza l'accesso alle foto per darti la possibilità di seleziona un'immagine personalizzata";
+"NSPhotoLibraryUsageDescription" = "L'app utilizza l'accesso alle foto per darti la possibilità di seleziona un'immagine personalizzata";
+
+"NSUserTrackingUsageDescription" = "L'App utilizza i tuoi dati solo per monitorarne l'efficienza e rendere il sistema più sicuro. I dati registrati si riferiscono al telefono e non sono in alcun modo collegati all'utente. L'utilizzo di questi dati, tuttavia, ci consente di monitorare gli arresti anomali e migliorare la nostra efficienza";
+
+
+"NSCameraUsageDescription" = "L'applicazione usa l'accesso alla fotocamera per personalizzare i contenuti degli utenti";

@@ -16,25 +16,29 @@ class StorageHelper{
     }
     
     class func saveGame(gameName: String, path: URL, actualDate: Date?, completion: @escaping (Bool) ->()) {
-
-        guard let data = try? Data(contentsOf: path), let uid = FirestoreHelper.uid else {
-            completion(false)
-            return
-        }
-        let game_id = path.lastPathComponent
-        let path = "\(uid)/Games/\(game_id)"
         
-        let storageRef = Storage.storage().reference(withPath: path)
-        // Upload the file to the path "images/rivers.jpg"
-        _ = storageRef.putData(data, metadata: nil) { (metadata, error) in
-            guard metadata != nil else {
+        if LoginManager.shared.user?.isPremium == true {
+            guard let data = try? Data(contentsOf: path), let uid = FirestoreHelper.uid else {
                 completion(false)
                 return
             }
+            let game_id = path.lastPathComponent
+            let path = "\(uid)/Games/\(game_id)"
             
-            completion(true)
+            let storageRef = Storage.storage().reference(withPath: path)
+            // Upload the file to the path "images/rivers.jpg"
+            _ = storageRef.putData(data, metadata: nil) { (metadata, error) in
+                guard metadata != nil else {
+                    completion(false)
+                    return
+                }
+                
+                completion(true)
+            }
+            
+        } else {
+            completion(false)
         }
-        
     }
     
     class func deleteAllGames(completion: @escaping (Bool) ->()) {
@@ -101,31 +105,35 @@ class StorageHelper{
         
         
     class func getSave(path: URL,completion: @escaping (Data?, String?) -> ()) {
-        guard let uid = FirestoreHelper.uid else {
-            completion(nil, nil)
-            return
-        }
-        let game_id = path.lastPathComponent
-        let path = "\(uid)/Games/\(game_id)"
-        let storageRef = Storage.storage().reference(withPath: path)
-        
-        storageRef.getMetadata(){ metadata, error in
-            guard let modificationDate = metadata?.updated?.niceLabelAndHours() else {
-                completion(nil,nil)
+        if LoginManager.shared.user?.isPremium == true{
+            guard let uid = FirestoreHelper.uid else {
+                completion(nil, nil)
                 return
             }
-            storageRef.downloadURL(){ url, error in
-                if let downloadURL = url {
-                    URLSession.shared.dataTask(with: downloadURL) { (data, response, error) in
-                        DispatchQueue.main.async {
-                            completion(data, modificationDate)
-                            return
-                        }
-                    }.resume()
-                } else {
-                    completion(nil, nil)
+            let game_id = path.lastPathComponent
+            let path = "\(uid)/Games/\(game_id)"
+            let storageRef = Storage.storage().reference(withPath: path)
+            
+            storageRef.getMetadata(){ metadata, error in
+                guard let modificationDate = metadata?.updated?.niceLabelAndHours() else {
+                    completion(nil,nil)
+                    return
+                }
+                storageRef.downloadURL(){ url, error in
+                    if let downloadURL = url {
+                        URLSession.shared.dataTask(with: downloadURL) { (data, response, error) in
+                            DispatchQueue.main.async {
+                                completion(data, modificationDate)
+                                return
+                            }
+                        }.resume()
+                    } else {
+                        completion(nil, nil)
+                    }
                 }
             }
+        } else {
+            completion(nil, nil)
         }
     }
 

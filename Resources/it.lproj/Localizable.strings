@@ -37,7 +37,7 @@
 
 "Quick_Save" = "Salvataggio Rapido";
 "Quick_Load" = "Caricamento Rapido";
-"Fast_Forward" = "Imposta velocità";
+"Fast_Forward" = "Velocità Aumentata";
 "Screenshot" = "Esegui Screenshot";
 "closeGame" = "Chiudi gioco";
 "Cheat_Codes" = "Codici Cheat";
@@ -220,6 +220,14 @@
 "Generic_Error" = "Ops, vi è verificato un errore";
 "Generic_Error_text" = "Si è verificato un errore, riprova";
 
+"genericErrorTitle" = "Ops";
+"genericErrorDescription" = "Si è verificato un errore, riprova più tardi";
+"genericErrorButton" = "Ok";
+
+"loginErrorTitle" = "Ops";
+"loginErrorDescription" = "Si è verificato un errore durante la login. Riprova";
+"loginErrorButton" = "Ok";
+
 "code_format" = "Il Format del codice è %@";
 
 "space_auto"= "Gli spazi vengono inseriti automaticamente mentre scrivi";
@@ -361,7 +369,6 @@
 "Verifying_Database" = "Database in verifica";
 "Repaired_Database" = "Database Ripristinato";
 "Repaired_Database_test" = "Alcuni file di salvataggio erano corretti ed è stato necessario rimuoverli. Importali nuovamente dalla sezione apposita";
-//**"Some save files may still be corrupted and require you to restore an older version from the Delta Sync settings.\n\nA text file listing all affected games has been saved to “On My Device/Delta/Backups/conflicts.txt” in the Files app, alongside backups of any conflicted save files.**/
 
 "Review_Save_States" = "Rivedi Salvataggi Rapidi";
 "Past Month" = "Mese passato";
@@ -558,3 +565,76 @@
 "Remove" = "Rimuovi";
 "RulesTitle" = "Cosa è <AppName/>?";
 "Resuming" = "Riprendi";
+
+"InfoRules" = "Info e Riconoscimenti";
+"rules_info_app" = "<b><AppName/></b> è una <b>fan app</b> creata con passione per tutti gli amanti del retrogaming. Ti permette di giocare ai grandi classici delle console come <b>Game Boy</b>, <b>Game Boy Color</b>, <b>Game Boy Advance</b>, <b>NES</b>, <b>SNES</b> e <b>Nintendo 64</b>, direttamente dal tuo dispositivo, con la possibilità di <b>salvare i progressi su server</b> e riprendere la partita da dove l’hai lasciata, anche su altri dispositivi.
+
+Ci teniamo a precisare che <b><AppName/></b> <b>non è affiliata in alcun modo a <m>Nintendo Co., Ltd.</m></b>. Tutti i nomi, i marchi registrati e i loghi sono proprietà dei rispettivi titolari e vengono citati solo a <m>scopo descrittivo</m>.
+
+<b>Credits</b>  
+Un ringraziamento speciale a chi ha contribuito con talento e passione:
+
+• <b>Grant Gliner</b> (<m>@glinstagrant</m>) – <m>Pause Menu Icons</m>  
+• <b>Eric Lewis</b> (<m>github.com/ericlewis</m>) – <m>Dark Mode</m>  
+• <b>Chris Rittenhouse</b> (<m>litritt.com</m>) – <m>Genesis Skin</m>, <m>Show Status Bar</m>, <m>Game Screenshots</m>, <m>Toast Notifications</m>, <m>Alternate App Icons</m>  
+• <b>Noah Keck</b> (<m>github.com/noah978</m>) – <m>CheatBase</m>  
+• <b>Ian Clawson</b> (<m>github.com/ianclawson</m>) – <m>Local Multiplayer</m>  
+• <b>Domenico Gonnelli</b> – <m>Developer Apple 2025</m>  
+• <b>Freepik</b> – per alcune risorse grafiche utilizzate
+
+<b>Licenze</b>  
+L'app utilizza componenti software open source e librerie concesse in licenza, tra cui:
+
+• <b>SQLite.swift</b> di <m>Stephen Celis</m>  
+• <b>SDWebImage</b> di <m>Olivier Poitrey</m>  
+• <b>ZIPFoundation</b> di <m>Thomas Zoechling</m>  
+• <b>SwiftyDropbox</b> di <m>Dropbox Inc.</m>  
+• <b>Google API Objective-C Client</b> – <m>Licenza Apache 2.0</m>  
+• <b>SMCalloutView</b> di <m>Nick Farina</m> – <m>Licenza Apache 2.0</m>
+
+<b>Emulatori</b>  
+Questa app integra i seguenti core emulativi:
+
+Licenza <m>GNU GPL v3</m>:  
+• Nestopia  
+• mupen64plus  
+• Gambatte  
+• visualboyadvance-m  
+• DeSmuME  
+• melonDS
+
+Licenze specifiche:  
+• Snes9x  
+• Genesis Plus GX
+
+<b>Artwork</b>  
+Le immagini dei giochi vengono gestite in automatico grazie al supporto di <m>OpenVGDB</m>.
+
+Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferiti!
+";
+
+
+"accountDeletedTitle" = "Account Eliminato";
+"accountDeletedDescription" = "Account eliminato correttamente. Speriamo di riverderti presto";
+"accountDeletedFirstButton" = "Chiudi";
+
+"needLoginDescription" = "Per motivi di sicurezza è necessario effettuare nuovamente la login.";
+"needLoginAlertButton" = "Elimina account";
+"needLoginAlertCancel" = "Annulla";
+
+"noCorrectUserTitle" = "Errore";
+"noCorrectUserDescription" = "Stai provando ad autenticarti con un'utenza errata. Verrai inidirizzato nuovamente alla pagina di Login. Riprova";
+"noCorrectUserButton" = "Vai a Login";
+
+"needPremiumTitle" = "Non sei Premium";
+"needPremiumDescription" = "Questa funzionalità è disponibile solamente per gli utenti premium.\n\nDiventa Premium per continuare";
+"needPremiumFirstButton" = "Scopri Premium";
+"needPremiumSecondButton" = "Annulla";
+
+"noCameraPermissionErrorTitle" = "Permesso Necessario";
+"noCameraPermissionErrorDescription" = "L'Applicazione necessita del permesso di utilizzare la fotocamera per poter inquadrare il caricare un'immagine in app";
+"noCameraPermissionErrorButton" = "Impostazioni";
+"noCameraPermissionErrorClose" = "Chiudi";
+
+"close_game_title" = "Vuoi chiudere il gioco?";
+"close_game_message" = "I progressi non salvati andranno persi";

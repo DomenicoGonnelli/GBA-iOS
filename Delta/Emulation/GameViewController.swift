@@ -14,7 +14,7 @@ import GBADeltaCore
 import N64DeltaCore
 import MelonDSDeltaCore
 import Systems
-
+import Network
 import Roxas
 
 private var kvoContext = 0
@@ -87,8 +87,46 @@ private extension GameViewController
     }
 }
 
-class GameViewController: DeltaCore.GameViewController
+
+
+
+class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
 {
+    
+    func startServer(){
+        let game = self.game as? Game
+        if game?.type == .gba {
+            //requestLocalNetworkPermission()
+            GBAEmulatorBridge.shared.startServer()
+        }
+    }
+    
+    func startClient(){
+        let game = self.game as? Game
+        if game?.type == .gba {
+            GBAEmulatorBridge.shared.startClient("192.168.1.135")
+        } else {
+           
+        }
+    }
+    
+    
+    func tryConnection(){
+        let game = self.game as? Game
+        if game?.type == .gba {
+            GBAEmulatorBridge.shared.tryConncection()
+        }
+    }
+    
+    func startLink(){
+        let game = self.game as? Game
+        if game?.type == .gba {
+            GBAEmulatorBridge.shared.startLink()
+        }
+    }
+    
+    
+    
     /// Assumed to be Delta.Game instance
     override var game: GameProtocol? {
         willSet {
@@ -120,6 +158,60 @@ class GameViewController: DeltaCore.GameViewController
     }
     
     var controller: UIViewController?
+    var alertView: AlertView?
+    
+    func showAlert(alertTypology: AlertViewTypology, frame: CGRect? = nil){
+       
+        if alertView == nil {
+            DispatchQueue.main.async { [weak self] in
+                self?.alertView = AlertView.createAlert(viewController: self, frame: frame)
+                self?.alertView?.alertType = alertTypology
+                self?.alertView?.delegate = self
+                self?.alertView?.isHidden = false
+            }
+        } else {
+            alertView?.alertType = alertTypology
+            alertView?.delegate = self
+        }
+    }
+    
+    func removeAlert(){
+        self.alertView?.removeView(){
+            self.alertView?.removeFromSuperview()
+            self.alertView = nil
+        }
+    }
+    
+    func firstButtonAction(_ type: AlertViewTypology?) {
+        if type == .needLogin || type == .retryFaceID{
+           
+            LoginManager.shared.logout(){ logout in
+                if type == .retryFaceID {
+                    LoginManager.isFaceIDEnabled = false
+                }
+                self.goToLogin()
+            }
+        }
+        
+        if type == .faceIdUnavailable {
+            if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+            }
+        } else {
+            removeAlert()
+        }
+    }
+    
+    func secondButtonAction(_ type: AlertViewTypology?) {
+        if type == .faceIdUnavailable {
+            LoginManager.shared.logout(){ logout in
+                LoginManager.isFaceIDEnabled = false
+                self.goToLogin()
+            }
+        } else {
+            removeAlert()
+        }
+    }
     
     private var isGameScene: Bool {
         let gameScene = self.view.window?.windowScene as? GameScene
@@ -372,7 +464,7 @@ class GameViewController: DeltaCore.GameViewController
             case .toggleFastForward: break
             case .reverseScreens: break
             case .screenshot: break
-            case .close: self.closeGame()
+            case .close:  self.quitEmulation()
             }
         }
     }
@@ -535,7 +627,7 @@ extension GameViewController
                 
                 self.emulatorCore?.saveSaveState(to: fileURL)
             }
-
+            
             guard let gameController = sender as? GameController else {
                 fatalError("sender for pauseSegue must be the game controller that pressed the Menu button")
             }
@@ -549,10 +641,19 @@ extension GameViewController
             pauseViewController.cheatsViewControllerDelegate = self
             pauseViewController.closeButtonTitle = self.isGameScene ? "Close".localizable : "Main_menu".localizable
             pauseViewController.closeGameItem?.action = { [unowned self] item in
-                self.pauseViewController?.showAlerCustomCancel(title: "Vuoi chiudere il Gioco?", message: "I progressi non salvati andranno persi", firtButtonText: "Chiudi"){
-                        self.quitEmulation()
+                self.pauseViewController?.showAlerCustomCancel(title: "close_game_title".localizable, message: "close_game_message".localizable, firtButtonText: "Close".localizable){
+                    self.quitEmulation()
                 }
-                
+            }
+            pauseViewController.cheatCodesItem?.action = { [unowned self] item in
+                if LoginManager.shared.user?.isPremium == true {
+                    self.pauseViewController?.goToCheat()
+                } else {
+                    
+                    self.pauseViewController?.showAlerCustomCancel(title: "needPremiumTitle".localizable, message: "needPremiumDescription".localizable, firtButtonText: "needPremiumFirstButton".localizable){
+                        PremiumSubscriptionViewController.present(presenter: self.pauseViewController, delegate: nil)
+                    }
+                }
             }
             
             if let traits = self.controllerView.controllerSkinTraits, let menuInsets = self.controllerView.controllerSkin?.menuInsets(for: traits)

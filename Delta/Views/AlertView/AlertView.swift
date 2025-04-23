@@ -72,11 +72,11 @@ class AlertView: BaseView{
         })
     }
     
-    static func createAlert(viewController: UIViewController?) -> AlertView?{
+    static func createAlert(viewController: UIViewController?, frame: CGRect? = nil) -> AlertView?{
         guard let viewController = viewController else {
             return nil
         }
-        let alertView = AlertView.init(frame: viewController.view.frame)
+        let alertView = AlertView.init(frame: frame ?? UIScreen.main.bounds)
         viewController.view.addSubview(alertView)
         viewController.view.bringSubviewToFront(alertView)
         return alertView
@@ -98,7 +98,7 @@ protocol AlertViewDelegate{
 }
 
 enum AlertViewTypology {
-    case genericError, loginError, logout, noProductsError, accountDeletion, accountDeleted, needLogin, noCorrectUser, teamCreation, videoError, videoErrorReview, teamDeletion, notOnFirst, noWinVoucher, noTeamAvailable, noQuizAvailable, needPremium,needPremiumOrPay, voucherGeneration, noCameraPermission, leagueCreation, notValidQRCode, addedQRCode, leaveLeague, needTeam, removeFromLeague, completed, friendBonusNotAvailable, friendBonusActive, noFriendsInvited, faceIdUnavailable, retryFaceID, newConfiguration, noTwitter
+    case genericError, loginError, logout, noProductsError, accountDeletion, accountDeleted, needLogin, noCorrectUser, videoError, needPremium, needPremiumOrPay, noCameraPermission, faceIdUnavailable, retryFaceID, newConfiguration, noTwitter
     var isToDelete: Bool {
         return self == .logout || self == .accountDeletion || self == .accountDeleted
     }
@@ -145,44 +145,11 @@ enum AlertViewTypology {
             newAlert.description = "noCorrectUserTitle".localizable
             newAlert.description = "noCorrectUserDescription".localizable
             newAlert.firstButtonTitle = "noCorrectUserButton".localizable
-        case .teamCreation:
-            newAlert.imageName = "premiumCoins"
-            newAlert.title = "teamCreationAlertTitle".localizable
-            newAlert.description = String(format: "teamCreationAlertDescription".localizable, premiumPrice)
-            newAlert.firstButtonTitle = "teamCreationlertButton".localizable
-            newAlert.secondButtonTitle = "teamCreationAlertCancel".localizable
+       
         case .videoError:
             newAlert.description = String(format: "videoErrorAlertDescription".localizable, premiumPrice)
             newAlert.firstButtonTitle = "videoErrorButton".localizable
-        case .videoErrorReview:
-            newAlert.description = String(format: "videoErrorAlertDescriptionReview".localizable, premiumPrice)
-            newAlert.firstButtonTitle = "videoErrorButton".localizable
-        case .teamDeletion:
-            newAlert.imageName = "deleteAccount"
-            newAlert.title = "teamDeletionTitle".localizable
-            newAlert.description = String(format: "teamDeletionDescription2".localizable, "_")
-            newAlert.firstButtonTitle = "teamDeletionFirstButton".localizable
-            newAlert.secondButtonTitle = "teamDeletionSecondButton".localizable
-        case .notOnFirst:
-            newAlert.imageName = "notOnFirst"
-            newAlert.title = "notOnFirstTitle".localizable
-            newAlert.description = String(format: "notOnFirstDescription".localizable, "_")
-            newAlert.firstButtonTitle = "notOnFirstFirstButton".localizable
-        case .noWinVoucher:
-            newAlert.imageName = "amazon"
-            newAlert.title = "noWinVoucherTitle".localizable
-            newAlert.description = "noWinVoucherDescription".localizable
-            newAlert.firstButtonTitle = "noWinVoucherButton".localizable
-        case .noTeamAvailable:
-            newAlert.title = "noTeamAvailableTitle".localizable
-            newAlert.description = "noTeamAvailablerDescription".localizable
-            newAlert.firstButtonTitle = "noTeamAvailableButton".localizable
-        case .noQuizAvailable:
-            newAlert.imageName = "noQuiz"
-            newAlert.imageColor = .secondaryColor
-            newAlert.title = "noQuizAvailableTitle".localizable
-            newAlert.description = "noQuizAvailableDescription".localizable
-            newAlert.firstButtonTitle = "noQuizAvailableFirstButton".localizable
+
         case .needPremium:
             newAlert.imageName = "premiumCoins"
             newAlert.title = "needPremiumTitle".localizable
@@ -195,69 +162,11 @@ enum AlertViewTypology {
             newAlert.description = String(format: "needPremiumOrPayDescription".localizable, changeTeamPrice)
             newAlert.firstButtonTitle = "needPremiumOrPayFirstButton".localizable
             newAlert.secondButtonTitle = String(format: "needPremiumOrPaySecondButton".localizable, changeTeamPrice)
-        case .voucherGeneration:
-            newAlert.imageName = "amazon"
-            newAlert.title = "voucherGenerationTitle".localizable
-            newAlert.description = "voucherGenerationDescription".localizable
-            newAlert.firstButtonTitle = "voucherGenerationButtonOk".localizable
-            newAlert.secondButtonTitle = "voucherGenerationButtonCancel".localizable
-        case .leagueCreation:
-            newAlert.imageName = "leagueIcon"
-            newAlert.title = "leagueCreationAlertTitle".localizable
-            newAlert.description = "leagueCreationAlertMessage".localizable
-            newAlert.firstButtonTitle = "leagueCreationAlertFirstButton".localizable
         case .noCameraPermission:
             newAlert.title = "noCameraPermissionErrorTitle".localizable
             newAlert.description = "noCameraPermissionErrorDescription".localizable
             newAlert.firstButtonTitle = "noCameraPermissionErrorButton".localizable
             newAlert.secondButtonTitle = "noCameraPermissionErrorClose".localizable
-        case .notValidQRCode:
-            newAlert.title = "notValidQRCodeErrorTitle".localizable
-            newAlert.description = "notValidQRCodeErrorDescription".localizable
-            newAlert.firstButtonTitle = "notValidQRCodeErrorButton".localizable
-        case .addedQRCode:
-            newAlert.imageName = "leagueIcon"
-            newAlert.title = "addedQRCodeTitle".localizable
-            newAlert.description = "addedQRCodeDescription".localizable
-            newAlert.firstButtonTitle = "addedQRCodeButton".localizable
-        case .leaveLeague:
-            newAlert.imageName = "leagueIcon"
-            newAlert.title = "leaveLeagueTitle".localizable
-            newAlert.description = "leaveLeagueDescription".localizable
-            newAlert.firstButtonTitle = "leaveLeagueButton".localizable
-            newAlert.secondButtonTitle = "leaveLeagueButtonCancel".localizable
-        case .needTeam:
-            newAlert.title = "needTeamAlertTitle".localizable
-            newAlert.description = "needTeamAlertDescription".localizable
-            newAlert.firstButtonTitle = "needTeamAlertButton".localizable
-        case .removeFromLeague:
-            newAlert.title = "removeFromLeagueTitle".localizable
-            newAlert.description = "removeFromLeagueDescription".localizable
-            newAlert.firstButtonTitle = "removeFromLeagueButton".localizable
-            newAlert.secondButtonTitle = "removeFromLeagueButtonCancel".localizable
-        case .completed:
-            newAlert.title = "completedActionTitle".localizable
-            newAlert.description = "completedActionDescription".localizable
-            newAlert.firstButtonTitle = "completedActionButton".localizable
-            
-        case .friendBonusNotAvailable:
-            newAlert.imageName = "trofeo1_win"
-            newAlert.title = "friendBonusNotAvailableTitle".localizable
-            newAlert.description = "friendBonusNotAvailableDescription".localizable
-            newAlert.firstButtonTitle = "friendBonusNotAvailableButton".localizable
-        
-        case .friendBonusActive:
-            newAlert.imageName = "trofeo1_win"
-            newAlert.title = "friendBonusAvailableTitle".localizable
-            newAlert.description = "friendBonusAvailableDescription".localizable
-            newAlert.firstButtonTitle = "friendBonusAvailableButton".localizable
-        
-        case .noFriendsInvited:
-            newAlert.imageName = "trofeo1"
-            newAlert.title = "noFriendsInvitedTitle".localizable
-            newAlert.description = "noFriendsInvitedDescription".localizable
-            newAlert.firstButtonTitle = "noFriendsInvitedButton".localizable
-            
         case .faceIdUnavailable:
             newAlert.imageName = UserProfileMenuItem.biometricImageName
             newAlert.title = String(format: "faceIdUnavailableAlertTitle".localizable , UserProfileMenuItem.biometricName)

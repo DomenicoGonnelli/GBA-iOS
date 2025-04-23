@@ -401,11 +401,11 @@ extension SettingsViewController
         let section = Section(rawValue: sectionIndex)!
         switch section
         {
-        case .controllers: return 4
+        case .controllers: return 1
         case .controllerSkins: return System.registeredSystems.count
         case .airPlay:
             var numberOfRows = 1
-            
+            return numberOfRows
             if Settings.supportsExternalDisplays
             {
                 // Show additional options if primary setting is enabled.
@@ -422,7 +422,8 @@ extension SettingsViewController
             }
             
             return numberOfRows
-            
+        case .credits:
+            return 1
         default:
             if isSectionHidden(section)
             {
@@ -487,18 +488,7 @@ extension SettingsViewController
         case .cores: self.performSegue(withIdentifier: Segue.dsSettings.rawValue, sender: cell)
         case .controllerOpacity, .gameAudio, .multitasking, .hapticFeedback, .gestures, .airPlay, .hapticTouch: break
         case .credits:
-            let row = CreditsRow(rawValue: indexPath.row)!
-            switch row
-            {
-            
-            case .contributors:
-                guard #available(iOS 14, *) else { return }
-                self.showContributors()
-            case .friendZonePatrons, .softwareLicenses: break
-            default:
-                break
-            }
-            
+            TutorialLongViewController.present(from: self)
         case .support:
             let row = SupportRow.allCases[indexPath.row]
             switch row
@@ -547,30 +537,6 @@ extension SettingsViewController
             case .topScreenOnly, .layoutHorizontally: return UITableView.automaticDimension
             case .displayFullScreen: break primary
             }
-            
-            
-        case .credits:
-            let row = CreditsRow(rawValue: indexPath.row)!
-            switch row
-            {
-            case .grant:
-                // Hide row on iOS 14 and above
-                guard #available(iOS 14, *) else { break primary }
-                return 0.0
-                
-            case .litRitt:
-                // Hide row on iOS 14 and above
-                guard #available(iOS 14, *) else { break primary }
-                return 0.0
-                
-            case .contributors:
-                // Hide row on iOS 13 and below
-                guard #unavailable(iOS 14) else { break primary }
-                return 0.0
-                
-            default: break
-            }
-            
         default: break
         }
         

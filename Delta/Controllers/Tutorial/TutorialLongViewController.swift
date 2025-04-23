@@ -27,6 +27,7 @@ class TutorialLongViewController: BaseViewController{
 //            self.hideLoader()
 //            showAlert(alertTypology: .genericError)
 //        }
+        rulesLabel.localizedKey = "rules_info_app"
         setNeedsStatusBarAppearanceUpdate()
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {

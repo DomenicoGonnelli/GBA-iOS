@@ -207,9 +207,11 @@
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_altserver._tcp</string>
+		<string>_http._tcp</string>
+		<string>_gba-multiplayer._udp</string>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>GBA uses the local network to communicate with AltServer and enable JIT.</string>
+	<string>GBA uses the local network to communicate with other device to game link connection</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>GBA uses your microphone to emulate the Nintendo DS microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

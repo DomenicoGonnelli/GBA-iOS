@@ -10,7 +10,7 @@ import UIKit
 
 import DeltaCore
 
-class PauseViewController: UIViewController, PauseInfoProviding
+class PauseViewController: BaseViewController, PauseInfoProviding
 {
     var emulatorCore: EmulatorCore? {
         didSet {
@@ -113,6 +113,7 @@ class PauseViewController: UIViewController, PauseInfoProviding
         self.pauseNavigationController.view.setNeedsLayout()
         self.pauseNavigationController.view.layoutIfNeeded()
     }
+
 }
 
 extension PauseViewController
@@ -164,7 +165,6 @@ extension PauseViewController
             let cheatsViewController = segue.destination as! CheatsViewController
             cheatsViewController.delegate = self.cheatsViewControllerDelegate
             cheatsViewController.game = self.emulatorCore?.game as? Game
-            
         default: break
         }
     }
@@ -190,6 +190,10 @@ extension PauseViewController: UINavigationControllerDelegate
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool)
     {
         self.updateSafeAreaInsets()
+    }
+    
+    func goToCheat(){
+        self.performSegue(withIdentifier: "cheats", sender: self)
     }
 }
 
@@ -218,7 +222,7 @@ private extension PauseViewController
         })
         
         self.cheatCodesItem = MenuItem(text:"Cheat_Codes".localizable, image: #imageLiteral(resourceName: "CheatCodes"), action: { [unowned self] _ in
-            self.performSegue(withIdentifier: "cheats", sender: self)
+           
         })
         
         self.fastForwardItem = MenuItem(text: "Fast_Forward".localizable, image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
@@ -233,6 +237,8 @@ private extension PauseViewController
         }
        
     }
+    
+   
     
     func updateSafeAreaInsets()
     {

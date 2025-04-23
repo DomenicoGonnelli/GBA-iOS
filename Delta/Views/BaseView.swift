@@ -30,7 +30,7 @@ class BaseView: UIView, GenericCustomViewProtocol{
         super.init(frame: frame)
         
         guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
+        view.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
         self.addSubview(view)
         contentView = view
     }

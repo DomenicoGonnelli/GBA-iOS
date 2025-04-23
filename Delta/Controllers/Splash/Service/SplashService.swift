@@ -19,7 +19,11 @@ class SplashService {
         } else {
             FirestoreHelper.getUserData(){ user in
                 LoginManager.shared.user = user
-                completion(user != nil)
+                
+                FirestoreHelper.getPremiumrData(){ premium in
+                    LoginManager.shared.user?.premium = premium
+                    completion(user != nil)
+                }
             }
         }
     }

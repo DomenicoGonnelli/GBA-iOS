@@ -29,12 +29,15 @@ class PremiumPointCell: UITableViewCell{
         didSet{
             titleLabel.localizedKey = benefit?.title
             messageLabel.setAttributedWithTag(text: benefit?.decription, boldSize: 10)
-            
-            if let imageUrl = benefit?.image, let url = URL(string: imageUrl) {
-                imagePoint.kf.setImage(with: url, completionHandler:  { result in
-                    let imageResult = try? result.get().image
-                    self.imagePoint.image = imageResult
-                })
+            if let imageUrl = benefit?.image {
+                if let img = UIImage(named: imageUrl) {
+                    self.imagePoint.image = img
+                } else if let url = URL(string: imageUrl) {
+                    imagePoint.kf.setImage(with: url, completionHandler:  { result in
+                        let imageResult = try? result.get().image
+                        self.imagePoint.image = imageResult
+                    })
+                }
             }
         }
     }

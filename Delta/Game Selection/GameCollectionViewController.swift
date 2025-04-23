@@ -109,6 +109,7 @@ class GameCollectionViewController: BaseViewController, UICollectionViewDelegate
             
         }
     }
+    var selectedIndexPath : IndexPath?
     
     var theme: Theme = .opaque {
         didSet {
@@ -155,6 +156,19 @@ class GameCollectionViewController: BaseViewController, UICollectionViewDelegate
         
         self.prepareDataSource()
     }
+    
+    override func actionAfterLoadingInterstitial() {
+        showADB()
+    }
+    
+    override func completionAD() {
+        self.hideLoader()
+        if let indexPath = self.selectedIndexPath {
+            self.launchGame(at: indexPath, clearScreen: true)
+        } else {
+            self.showAlert(alertTypology: .genericError)
+        }
+    }
 }
 
 //MARK: - UIViewController -
@@ -164,6 +178,8 @@ extension GameCollectionViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        PremiumServices.getAllPremium(){ _ in }
         
         self.collectionView?.dataSource = self.dataSource
         self.collectionView?.prefetchDataSource = self.dataSource
@@ -208,6 +224,8 @@ extension GameCollectionViewController
         
         self.update()
     }
+    
+    
 }
 
 //MARK: - Segues -
@@ -617,7 +635,9 @@ private extension GameCollectionViewController
                 showLoader()
                 getOnlineSave(game){
                     self.hideLoader()
-                    self.performSegue(withIdentifier: "unwindFromGames", sender: game)
+                    DispatchQueue.main.async{
+                        self.performSegue(withIdentifier: "unwindFromGames", sender: game)
+                    }
                 }
                 
                 
@@ -1400,7 +1420,10 @@ extension GameCollectionViewController
     {
         guard self.gameCollection?.identifier != GameType.unknown.rawValue else { return }
         
-        self.launchGame(at: indexPath, clearScreen: true)
+        
+        self.selectedIndexPath = indexPath
+        showLoader()
+        self.refreshInterstitial()
     }
 }
 

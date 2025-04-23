@@ -150,8 +150,8 @@ public enum language: String, CaseIterable {
     case pt = "pt"
    // case zh = "zh"
    // case ru = "ru"
-    case de = "de"
-    case fr = "fr"
+    //case de = "de"
+    //case fr = "fr"
     
     static var list : [language] {
         
@@ -159,7 +159,7 @@ public enum language: String, CaseIterable {
         let selectedLang = DeviceManager.getLang()
         
         all.removeAll(where: {$0 == selectedLang})
-        all.insert(selectedLang, at: 3)
+        all.insert(selectedLang, at: language.allCases.count/2)
     
         return all
     }
@@ -176,10 +176,10 @@ public enum language: String, CaseIterable {
             "🇬🇧 English"
         case .pt:
             "🇵🇹 Português"
-        case .de:
-            "🇩🇪 Deutsch"
-        case .fr:
-            "🇫🇷 Français"
+//        case .de:
+//            "🇩🇪 Deutsch"
+//        case .fr:
+//            "🇫🇷 Français"
         }
     }
     

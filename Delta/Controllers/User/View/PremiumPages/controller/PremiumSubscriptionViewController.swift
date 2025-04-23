@@ -42,7 +42,6 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
     }
     
     func callServices(isNewSubscription: Bool){
-        
         FirestoreHelper.getPremiumrData() { premium in
             let user = LoginManager.shared.user
             self.hideLoader()
@@ -102,16 +101,18 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
     func paymentOk(identifier: String) {
         
         let p = PremiumUser(value: [:])
-        p.type = selectedSubscription?.subscriptionId
+        p.iosKey = selectedSubscription?.iosKey
         p.registrationDate = Date()
         
         let oggi = Date()
-        if let dataTra12Mesi = Calendar.current.date(byAdding: .month, value: 12, to: oggi) {
+        if identifier == IAPProduct.premiumAnnual.rawValue, let dataTra12Mesi = Calendar.current.date(byAdding: .month, value: 12, to: oggi) {
             p.expirationDate = dataTra12Mesi
+        } else if let dataTra3Mesi = Calendar.current.date(byAdding: .month, value: 3, to: oggi) {
+            p.expirationDate = dataTra3Mesi
         }
-        
         self.delegate?.didBecomePremium()
         FirestoreHelper.updatePremiumUsers(user: p)
+        self.callServices(isNewSubscription: true)
     }
     
     func paymentKO() {

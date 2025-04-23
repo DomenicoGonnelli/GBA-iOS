@@ -40,7 +40,7 @@ class UserProfileViewController: LoginViewController {
     
     
     func setHelmetPremium(){
-        if let premium = LoginManager.shared.user?.premium?.type, let helmet = AppManager.shared.premiumSubscriptions.first(where: {$0.subscriptionId == premium})?.helmetLink, let url  = URL(string: helmet) {
+        if let premium = LoginManager.shared.user?.premium?.iosKey, let helmet = AppManager.shared.premiumSubscriptions.first(where: {$0.iosKey == premium})?.helmetLink, let url  = URL(string: helmet) {
             premiumUserImage.kf.setImage(with: url)
         } else {
             premiumUserImage.image = UIImage(named: "defaultPremiumHelmet")
@@ -175,29 +175,6 @@ class UserProfileViewController: LoginViewController {
             }
         } else if type == .needLogin {
             self.newAuthentication(type: LoginManager.shared.user?.loginMode)
-        } else if type == .teamCreation {
-            if IAPHelper.canMakePayments(), let product = AppManager.shared.products.first{
-                showLoader()
-                IAPProduct.store.buyProduct(product)
-            } else {
-                showAlert(alertTypology: .genericError)
-            }
-            super.firstButtonAction(type)
-        } else if type == .teamDeletion{
-//            UserService.deleteTeam(){ deleted in
-//                if deleted {
-//                    NotificationManager.shared.scheduleNotification(notification: .teamDeleted)
-//                    self.controller?.refreshHome()
-////                    self.deleteTeamButton.isHidden = true
-//                    LoginManager.shared.team = nil
-//                    self.setString()
-//                    
-//                } else {
-//                    self.showAlert(alertTypology: .genericError)
-//                }
-//                super.firstButtonAction(type)
-//                
-//            }
         } else if type == .newConfiguration {
             if selectedItem == .changeLanguage {
                 setAppLanguage(to: selectedLanguage.rawValue)
@@ -275,7 +252,7 @@ class UserProfileViewController: LoginViewController {
 
 extension UserProfileViewController: PremiumSubscriptionDelegate {
     func didBecomePremium() {
-        print("aggiorna")
+        hideLoader()
     }
 }
 
@@ -336,7 +313,7 @@ extension UserProfileViewController: UITableViewDataSource, UITableViewDelegate{
                 self.popoverViewBG.isHidden = false
                 showShareView()
             case .deleteTeam:
-                showAlert(alertTypology: .teamDeletion)
+                print("")
             case .deleteAccount:
                 showAlert(alertTypology: .accountDeletion)
             case .logout:

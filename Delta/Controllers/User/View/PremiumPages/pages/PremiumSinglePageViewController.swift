@@ -43,6 +43,7 @@ class PremiumSinglePageViewController: UIViewController {
             bg.kf.setImage(with: url, completionHandler:  { result in
                 let imageResult = try? result.get().image
                 self.bg.image = imageResult
+                self.bg.blurEffect()
             })
         }
         
@@ -86,7 +87,7 @@ class PremiumSinglePageViewController: UIViewController {
         let user = LoginManager.shared.user
         expirationLabel.isHidden = true
         if user?.isPremium == true{
-            if user?.premium?.type == item?.subscriptionId {
+            if user?.premium?.iosKey == item?.iosKey {
                 if isNew {
                     startAnimation()
                 }

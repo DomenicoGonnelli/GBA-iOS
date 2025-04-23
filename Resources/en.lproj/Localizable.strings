@@ -5,3 +5,593 @@
   Created by Domenico Gonnelli on 26/03/25.
   Copyright © 2025 Riley Testut. All rights reserved.
 */
+
+"Appname" = "GemBoyAdvance";
+"WelcomeMessage" = "Welcome back to\n<b><AppName/></b>";
+"SplashRulesMessage" = "Have you already read the rules?";
+"SplashAccessMessage" = "What are you waiting for?\n\n<m>Sign up</m> to always have your save states with you and access <b>exclusive content</b>";
+
+"update_title" = "Update Required";
+"update_message" = "An update to the App has been released.\nTo continue, you need to download the new version of <b><AppName/></b>";
+"update_button" = "Update";
+
+
+"Tutorial_1_title" = "Nostalgic for GBA/GBC games?";
+"Tutorial_1_message" = "Load your games into the App and immerse yourself in the world of GemBoy Advance";
+"Tutorial_1_button1" = "Continue";
+"Tutorial_1_button2" = "Skip";
+
+"Tutorial_2_title" = "Select the '+' button and choose a file with the .gba, .gbc, .gb extension";
+"Tutorial_2_message" = "With the search functionality, you can search for them directly online";
+"Tutorial_2_button1" = "Continue";
+"Tutorial_2_button2" = "Skip";
+
+"Tutorial_3_title" = "Register in the App to always carry your save states with you, even on different devices";
+"Tutorial_3_message" = "";
+"Tutorial_3_button1" = "Continue";
+"Tutorial_3_button2" = "Skip";
+
+"Tutorial_4_title" = "Will you be able to win the Leg?";
+"Tutorial_4_message" = "Discover all the initiatives";
+"Tutorial_4_button1" = "Start";
+
+
+"Quick_Save" = "Quick Save";
+"Quick_Load" = "Quick Load";
+"Fast_Forward" = "Fast Forward";
+"Screenshot" = "Take Screenshot";
+"closeGame" = "Close Game";
+"Cheat_Codes" = "Cheat Codes";
+
+"Handoff Failed" = "Handoff connection failed";
+"identifier_missing" = "Game identifier missing!";
+"launh_failed" = "Unable to launch <AppName/>, please try again later";
+"Retry" = "Retry";
+"No_Games" = "You don't have any games yet 🎮";
+"import_games_label" = "You can import new games by pressing the '+' button at the top right";
+"Resume" = "Resume";
+"import" = "Import from:";
+"Settings" = "Settings";
+"No_Games_Found" = "No games found";
+"No_Games_Found_text" = "Make sure the name is correct or try searching for another game";
+"Games" = "Games";
+
+"Game_Already_Running" = "Game already open";
+"Downloading_Save_File" = "Downloading save file";
+"Missing_Required_DS_Files" = "Missing required DS files";
+"System_Already_Running" = "The system is already running";
+"Active_Multiplayer_Game" = "Active Multiplayer Game";
+
+
+"Game_Already_Running_text" = "<AppName/> can only open one copy of the game at a time";
+"Downloading_Save_File_text" = "Wait for the download to finish before proceeding to avoid losing saved data";
+"Missing_Required_DS_Files_text" = "Please import the necessary files to <AppName/> to play Nintendo DS games";
+"System_Already_Running_text" = "<AppName/> can only run one game per Platform. Close the game or select another platform";
+"Active_Multiplayer_Game_text" = "You are currently playing online at @%. Close the game before opening a new one";
+"a game" = "a game";
+"Quit Game" = "Quit Game";
+
+"Unable_to_Launch_Game" = "Unable to Launch Game";
+"GamePaused" = "Game Paused";
+"GamePaused_text" = "Do you want to continue playing or restart the game? (unsaved data will be lost)";
+
+"Cancel" = "Cancel";
+"Restart" = "Restart";
+"Import_Files" = "Import Files";
+"Open_in_New_Window" = "Open in a new window";
+"Rename"= "Rename";
+"Change_Artwork" = "Change Artwork";
+"Share" = "Share";
+"Game_Settings" = "Game Settings";
+"View Save States" = "View Save States";
+"Import Save File" = "Import Save File";
+"Export Save File" = "Export Save File";
+"DeleteGame" = "Delete Game";
+"Manage_Save_File" = "Manage Save File";
+"DeleteGame_title" = "Are you sure you want to delete the game?";
+"DeleteGame_mess" = "All data associated with the game, including saves, cheats, and quick saves, will be lost.";
+"insert_name" = "Enter new name";
+"changeAW_error_title" = "Unable to change artwork";
+"changeAW_error_mess" = "The image may be corrupted or in an unsupported format";
+"Could Not Share Game" = "Could Not Share Game";
+"import_failed" = "File import failed";
+"export_failed" = "File export failed";
+"Select_Hold_Down" = "Select the buttons to 'lock'";
+"menu_press_stop" = "Press the menu when finished";
+"Resuming" = "Loading...";
+"Close" = "Close";
+"Main_menu" = "Main Menu";
+"Game_Data_Saved" = "Game Data Saved";
+"Game_Data_Saved_online" = "Game Data Saved on the server";
+"Game_Data_Loaded" = "Game Data Loaded";
+"Fast_Forward_enabled" = "Fast Forward ON";
+"Fast_Forward_disabled" = "Fast Forward OFF";
+"saved_screen_to_photo" = "Screenshot saved to Photos";
+"not_saved_screen_to_photo" = "Unable to save screenshot";
+"speedMaxDS" = "You can increase the speed up to a maximum of 3x";
+"JIT Compilation Enabled" = "JIT Compilation Enabled";
+"Restart_Required" = "Game restart required";
+"Restart_Required_text" = "Restart the game to apply the changes";
+"Later" = "Later";
+"Autorotation_disabled_title" = "Auto-rotation - Disabled";
+"Autorotation_disabled_mess" = "Pause the game to rotate the screen";
+
+"WFC_server" = "Select a WFC server";
+"WFC_server_text" = "You need to use a third-party WFC server to use the online functionality of Nintendo DS";
+"WFC_server_select" = "Select Server";
+"WFC_server_connect" = "Connecting to Nintendo WFC";
+"WFC_server_connect_text" = "Some features may be disabled during online play";
+"WFC_server_disconnect" = "Disconnected from WFC server";
+"troublehooting_multiplayer" = "⚠️ Tap to consult the connection guide";
+
+"Hold_Buttons" = "Hold Buttons";
+"change_speed_text" = "Change the speed for this platform";
+
+"Maximum" = "Maximum";
+
+"Info" = "Info";
+"Auto Save" = "Auto Save";
+"General" = "General";
+"Locked" = "Locked";
+
+"Name" = "Name";
+"Date" = "Date";
+"Compatible" = "Compatible";
+"Incompatible" = "Incompatible";
+
+"Quick_Save_text" = "Create a new quick save by pressing the '+' button at the top right";
+
+"Quick_Load_text" = "Start the game from a quick save by resuming from where you left off by selecting a quick save from the menu";
+
+"Incompatible_Save_States" = "Incompatible Quick Save";
+"Incompatible_Save_States_text" = "This version of <AppName/> is not compatible with previous versions of quick saves for Nintendo DS\n\nYou can find the previous Saves in the menu options";
+
+"No_Save_States" = "No quick saves";
+"No_Save_States_valid" = "Some quick saves are not compatible with this version of <AppName/>";
+
+"View_Incompatible_Save_States" = "View incompatible save states";
+"View_compatible_Save_States" = "View compatible save states";
+
+"Sort_by" = "Sort by";
+
+"quick_save_export_error" = "There are quick saves that are not compatible with this version of <AppName/>. You can export them and play with previous versions";
+
+"Learn_More" = "Learn More";
+
+"Delete_Save_State" = "Do you want to delete this quick save?";
+"Delete_Save_State_text" = "Are you sure you want to proceed with the deletion? You won't be able to restore it once deleted";
+
+"Delete" = "Delete";
+
+"Rename_Save_State" = "Rename quick save";
+
+"Change_save_state_after_press" = "The quick save preview is loaded every time you long-press the game from the main menu. Do you really want to change it?";
+
+"Change_Preview_Save_State" = "Do you want to change the quick save preview?";
+
+"Change" = "Change";
+
+"quick_save_import_fail" = "Unable to import quick save";
+"quick_save_export_fail" = "Unable to export quick save";
+
+"Set_as_preview" = "Set as preview";
+"remove_preview" = "Remove preview";
+"Mark_as_Compatible" = "Mark as compatible";
+"Mark_as_not_Compatible" = "Mark as not compatible";
+"Lock" = "Lock";
+"Unlock" = "Unlock";
+"Import" = "Import";
+"Export" = "Export";
+
+"Incompatible_Save_States_message" = "This quick save is not compatible with <AppName/>";
+
+"OK" = "Ok";
+
+"Error_editing_lock_save" = "You cannot edit a protected save";
+"Error_editing_lock_save_text" = "This save must be unlocked before proceeding with the modification";
+
+"Cheats" = "Cheats";
+"No_Cheats" = "No Cheats";
+"add_cheat_info" = "You can add new codes by pressing the '+' button at the top right";
+
+"Search_CheatBase" = "Search CheatBase Codes";
+"No_CheatBase" = "No CheatBase Codes";
+"New_Cheat" = "New Cheat";
+"no_added_cheat" = "Unable to add Cheat";
+
+"Clipboard" = "Clipboard";
+
+"Edit" = "Edit";
+
+"Copy Code" = "Copy Code";
+"Cheat" = "Cheat";
+
+"invalid_code" = "Invalid code";
+"invalid_code_text" = "Make sure the code you are entering is valid and try again";
+
+"invalid_name" = "Invalid name";
+"invalid_name_text" = "Rename the code and try again";
+
+"duplicate_code" = "Code already exists";
+"duplicate_code_text" = "This code has already been entered, please enter a new code";
+
+"duplicate_name" = "Name already exists";
+"duplicate_name_text" = "It is not possible to have two codes with the same name. Please rename it and try again";
+
+"Generic_Error" = "Oops, an error occurred";
+"Generic_Error_text" = "An error occurred, please try again";
+
+"genericErrorTitle" = "Oops";
+"genericErrorDescription" = "An error occurred, please try again later";
+"genericErrorButton" = "Ok";
+
+"loginErrorTitle" = "Oops";
+"loginErrorDescription" = "An error occurred during login. Please try again";
+"loginErrorButton" = "Ok";
+
+"code_format" = "The code format is %@";
+
+"space_auto"= "Spaces are inserted automatically while typing";
+"dash_auto"= "'-' are inserted automatically while typing";
+"dash_space_auto"= "The code is automatically formatted correctly while typing";
+
+"cheat_error_format" = "The code is not in the correct format";
+"cheat_error_name" = "The cheat name is not valid";
+"cheat_error_game" = "There are no games associated with this code";
+"cheat_error_exist_name" = "Another cheat with this name already exists";
+"cheat_error_exist_code" = "This code has been previously entered";
+"cheat_error_support" = "The code is not supported by the App";
+
+"app_version" = "v. %@";
+"Unknown" = "Unknown";
+"Cannot_Send_Mail" = "Cannot send mail";
+
+"external_display" = "AirPlay / External Displays";
+"3D_Touch" = "3D Touch";
+
+"customize_appearence" = "Customize appearance for each platform";
+
+"airPLay_messase_1" = "When using AirPlay, games are not available in full screen";
+"airPLay_messase_2" = "When playing DS games via AirPlay, only the top screen will be displayed on the external display";
+"airPLay_messase_3" = "When playing DS games via AirPlay, both screens will be shown vertically on the external display.";
+"airPLay_messase_4" = "When playing DS games via AirPlay, both screens will be placed side by side on the external display.";
+
+"opacityFooter" = "Determines the transparency of the controllers, if the selected skin supports transparency";
+"gameAudioFooter"= "If active, <AppName/> only plays audio if the device is not in silent mode";
+"hapticFeedbackFooter"= "If active, your device will vibrate when touching buttons, improving the gaming experience";
+"gameGesturesFooter"= "Use gestures while playing to activate the following actions:\n• Menu + Horizontal Swipe: Increase Speed\n• Menu + Controller input: Lock Button\n• Menu + Double tap: Quick Save\n• Menu + Long-press: Quick Load";
+"gameCoresFooter"= "Manage settings for specific emulator";
+"hapticTouchFooter"= "Preview games while using the contextual menu on Home";
+
+"settingsControllersHeader" = "Controllers";
+"settingsControllerSkinHeader" = "Customize Skin Appearance";
+"settingsOpacitysHeader" = "Skin Opacity";
+"settingsAudioHeader" = "Audio";
+"settingsHapticFeedbackHeader" = "Vibrate on Touch";
+"settingsGestureHeader" = "Gestures";
+"settingsAirPlayHeader" = "AirPlay";
+"settingsHapticTouchHeader" = "Game Preview";
+"settingsCreditHeader" = "Credits";
+"settingsSupportHeader" = "Support";
+"settingsCoresHeader" = "Additional Settings";
+
+"DS_size" = "The size of %@ cannot be determined";
+
+"DS_checksum_match" = "The checksum of %@ does not match the expected value:\n\nChecksum:\n%@;\n\nExpected Value:\n%@";
+
+"DS_not_compatible_version" = "%@ is not compatible with this version of <AppName/>.\n\nChecksum:\n%@";
+"DS_expected_size" = "%@ is %@, but the expected size is %@";
+"DS_expected_size_between" = "%@ is %@, but the expected size is between %@ and %@";
+
+"DS_bios_file" = "Please choose a different BIOS file";
+
+"Optional" = "Optional";
+
+"WFC_reset" = "Are you sure you want to reset your WFC configuration?";
+"WFC_text" = "You will need to re-register every friend you previously added";
+"WFC_reset_button" = "Reset WFC Configuration";
+
+"DSi" = "DSi";
+"DS" = "DS";
+
+"bios_required" = "<AppName/> requires the following BIOS files to emulate Nintendo %@ features";
+
+"Delta requires these BIOS files to emulate certain Nintendo \(systemName) features.";
+
+"DS_not_import" = "Unable to import %@";
+//** SHORTCUTS  **//
+"no_shortcut" = "No shortcuts on Home";
+"no_shortcut_text" = "You can customize the shortcuts with the games that will appear by long-pressing the App icon on your device's Home screen";
+
+"games_shortcut_recent" = "Recently played games";
+"Shortcuts" = "Shortcuts";
+"shortcut_home" = "The games you've played most recently appear by long-pressing the App icon on your phone's Home screen";
+
+"shortcut_home_games" = "The games you've selected will appear by long-pressing the App icon on your phone's Home screen";
+
+"shortcut_no_game" = "You haven't played any games recently";
+"shortcut_max" = "You can select a maximum of 4 games";
+
+"Remove" = "Remove";
+
+"Player" = "Player %@";
+"None" = "None";
+
+"Customize_Controls" = "Customize controls";
+"This_Device" = "This Device";
+"Game_Controllers" = "External Controllers";
+
+"Game_System" = "Game System";
+"reset_controls" = "Reset controls to default";
+
+"Press Button" = "Press Button";
+"Touch" = "Touch";
+"TouchScreen" = "TouchScreen";
+
+"Full Screen" = "Full Screen";
+"Standard" = "Standard";
+"Stage Manager" = "Stage Manager";
+"Split View" = "Split View";
+"Game Controller" = "Game Controller";
+"Import_Controller_Skin" = "Import Controller Skin";
+"Reset_Controller_Skin" = "Error importing Controller Skin";
+"Reset_Controller_Skin" = "Reset Controller Skin to default";
+"Designed_for_iPhone" = "Designed for iPhone";
+
+"Respect_silent" = "Respect Silent Mode";
+"pause_inactive" = "Pause when inactive";
+"Buttons" = "Buttons";
+"Control_Stick" = "Control Stick";
+"Menu_gesture" = "Game Gestures";
+
+"top_screen_only" = "Top screen only";
+"arrange_screen_h" = "Arrange screens horizontally";
+
+"home_screen_shortcut" = "Games on Home";
+"game_preview_menu" = "Game Preview";
+
+"not_exist_file" = "The file does not exist";
+"not_valide_file" = "The file is not valid";
+"not_unsopport_file" = "The file is not supported by the App";
+
+"Home_Screen" = "Home";
+"Home_Screen_DSI" = "Home (DSi)";
+
+"Contributors" = "Contributors";
+"database_not_found" = "The app database was not found";
+
+"Games_Database" = "Games Database";
+"Games_Database_text" = "To find the database, search for a game name in the search bar";
+
+"Games_Database_no_game" = "No games found";
+"Games_Database_no_game_text" = "Verify that the name is correct or try searching for another game";
+"Search" = "Search";
+
+"Verifying_Database" = "Verifying Database";
+"Repaired_Database" = "Database Repaired";
+"Repaired_Database_test" = "Some save files were corrupted and had to be removed. Re-import them from the appropriate section";
+
+"Review_Save_States" = "Review Quick Saves";
+"Past Month" = "Past Month";
+"All Time" = "All Time";
+"Filter" = "Filter";
+
+"error_on_saved" = "Quick saves have been recently modified and associated with the wrong game! Verify the correct associations with the game";
+
+"Choose WFC Server" = "Choose WFC Server";
+"Choose Game" = "Choose Game";
+"Unknown System" = "Unknown System";
+"Files" = "Files";
+
+"iTunes" = "iTunes";
+"itunes_import" = "Do you want to import from iTunes?";
+"itunes_import_text" = "<AppName/> will import games and Skins directly from iTunes";
+
+"Photo Library" = "Photo Library";
+
+"Nintendo" = "Nintendo";
+"Super Nintendo" = "Super Nintendo";
+"Nintendo 64"= "Nintendo 64";
+"Game Boy Color" = "Game Boy Color";
+"Game Boy Advance" = "Game Boy Advance";
+"Nintendo DS" = "Nintendo DS";
+"Sega Genesis" = "Sega Genesis";
+
+"Nintendo_s" = "NES";
+"Super Nintendo_s" = "SNES";
+"Nintendo 64_s"= "N64";
+"Game Boy Color_s" = "GBC";
+"Game Boy Advance_s" = "GBA";
+"Nintendo DS_s" = "DS";
+"Sega Genesis_s" = "Genesis";
+
+
+"melonDS" = "melonDS";
+"Arisotura" = "Arisotura";
+"GitHub" = "GitHub";
+"donate" = "Donate";
+
+"game_not_exist" = "This game does not exist in your library";
+
+"copy_deep_link" = "Copy deep link";
+"import_game_error" = "Unable to import “%@”";
+
+"Error_Importing_Games" = "Error importing games";
+"Error_Importing_Skins" = "Error importing game skins";
+
+"error_specific_games" = "Unable to import the following games:";
+"error_specific_skins" = "Unable to import the following Skins:";
+
+"import_game_later" = "<AppName/> failed to import the games. Please try again later";
+"import_skin_later" = "<AppName/> failed to import the Skins. Please try again later";
+
+"save_img_permission_denied" = "<AppName/> does not have permission to save images to Photos";
+
+"Game Screenshots" = "Game Screenshots";
+
+"Game_Screenshots_not_found" = "Unable to load the 'Game Screenshots' album";
+"Game_Screenshots_not_add" = "Unable to add the screenshot to the 'Game Screenshots' album";
+
+
+"Undefined" = "Undefined";
+"Debug" = "Debug";
+"Notice" = "Notice";
+"Error" = "Error";
+"Fault" = "Fault";
+
+"AirPlay" = "AirPlay";
+"AirPlay_second_screen" = "The game is being displayed on a second screen";
+
+"offline_game_mode" = "You are playing offline, make sure you are online to save data to the server";
+"online_game_mode" = "You are online again";
+
+"syncDataTitle" = "Online save found!";
+"syncDataMessage" = "A different version of '%@' was found on the server compared to the one on this device:\n\nLocal Save: %@\nServer Save: %@";
+"syncDataOnline" = "Use Online Save";
+"syncDataLocal" = "Use local save and overwrite online data";
+
+
+"importOnlineDataTitle" = "Online save found!";
+"importOnlineDataMessage" = "A version of '%@' was found on the server with the last modified date %@";
+"importOnlineDataButton" = "Import Online Save";
+"importOnlineDataRestart" = "Restart game and overwrite online data";
+"close_action" = "Cancel";
+
+"UserProfileMessage" = "<b>Personal Area</b>\n\nHello, welcome to your personal area.\nHere you can see some information related to your account:";
+
+"PremiumDetailUser" = "Premium Detail";
+
+"loginMethodUserProfileTitle" = "Login Method - Login %@";
+"biometricLoginTIUserProfileTitle" = "Login with Touch ID";
+"biometricLoginFIUserProfileTitle" = "Login with Face ID";
+"teamDetailUserProfileTitle" = "Team Details";
+"changeLanguageUserProfileTitle" = "Change Language";
+"changePaletteColorUserProfileTitle" = "Customize App Theme";
+"instagramPageUserProfileTitle" = "Follow us on Instagram";
+"contactUsUserProfileTitle" = "Contact Us";
+"deleteTeamUserProfileTitle" = "Delete Team";
+"deleteAccountUserProfileTitle" = "Delete Account";
+"logoutUserProfileTitle" = "Logout";
+"settingsUserProfileTitle" = "Advanced Settings";
+"emptyUserProfileTitle" = "";
+
+"changeConfigurationTitle" = "Change configuration";
+"changeConfigurationDescription" = "You are about to change the App configuration, restart the app to save the changes";
+"changeConfigurationButton" = "Restart";
+"changeConfigurationButton2" = "Cancel";
+
+"newConfigurationNotificationTitle" = "New configuration saved";
+"newConfigurationNotificationMessage" = "Configuration changed successfully. Click to open Formula Fantasy again";
+
+"loginMode" = "Login Mode";
+"configuration" = "App Customization";
+"contactUS" = "Contact Us";
+"clear" = "Account Management";
+
+"faceIdUnavailableAlertTitle" = "%@ not available";
+"faceIdUnavailableAlertDescription" = "To log in with %@, you need to enable the functionality in the settings";
+"faceIdUnavailableAlertGoSetting" = "Settings";
+"faceIdUnavailableAlertGoLogin" = "New Login";
+
+"retryFaceIDAlertTitle" = "We didn't recognize you";
+"retryFaceIDAlertDescription" = "It was not possible to authenticate you with %@, the functionality will be disabled. You need to log in again";
+"retryFaceIDAlertGoLogin" = "New Login";
+
+"userProfileBiometricPageTitleActive" = "Login with %@ is <m>active</m>. To disable the functionality, press the icon";
+"userProfileBiometricPageTitleUnactive" = "Login with %@ has been <m>disabled</m>. To enable the functionality again, press the icon below";
+"close" = "Close";
+
+"mailMessageBody" = "*Describe the problem you are experiencing*<br><br><br><br><br><bt>Below is some additional information to help us with the analysis:<br><b>• mail:</b> %@<br><b>• Language:</b> %@";
+
+"itPalette" = "Schumacher Palette";
+"esPalette" = "Vettel Palette";
+"enPalette" = "Massa Palette";
+"ptPalette" = "Barrichello Palette";
+"dePalette" = "Häkkinen Palette";
+"frPalette" = "Stewart Palette";
+
+"changeThemeAppTile" = "Customize the <b><AppName/></b> App:\nChoose a new color palette or change the App icon";
+"changeIconAppTile" = "Change the main App icon";
+
+
+"pushUserProfileTitle" = "User Notifications";
+"teamDetailUserProfileTitle" = "Team Detail";
+"userInfo" = "User Information";
+
+"pushNotificationEnded" = "<b>🍹</b>\n<m>Well Done!</m>\nYou don't have any notifications to read";
+"SaveButton" = "Save changes";
+
+"subscriptionPageTitle" = "Select Subscription";
+"subscriptionIdButton" = "Subscribe to %@ subscription";
+"subscribedPremium" = "ACTIVE Subscription";
+"expirationPremiumLabel" = "<m>Subscription Expiration: %@</m>";
+
+
+"paymentOkNotificationTitle" = "Payment Received";
+"paymentOkNotificationMessage" = "We have just received your payment";
+
+"subscritionSuccessNotificationTitle" = "Premium User";
+"subscritionSuccessNotificationMessage" = "Congratulations, you are now a premium user. Discover all the benefits of your subscription";
+
+"subscritionExpiringNotificationTitle" = "Subscription Expiring";
+"subscritionExpiringNotificationMessage" = "Your subscription is about to expire, renew it from the Profile section";
+
+"logoutSuccessNotificationTitle" = "Logout Successful";
+"logoutSuccessNotificationMessage" = "Logout performed successfully";
+
+
+"shareAppUserProfileTitle" = "Share app";
+"SOCIAL_WHATSAPP" = "Whatsapp";
+"SOCIAL_SMS" = "Sms";
+"SOCIAL_EMAIL" = "E-mail";
+"SOCIAL_GMAIL" = "Gmail";
+"SOCIAL_TELEGRAM" = "Telegram";
+"SOCIAL_INSTAGRAM" = "Instagram Story";
+"SOCIAL_OTHER" = "Other";
+
+"shareButton" = "Share or\nCreate a Story";
+"shareMessage" = "Hi, I'm playing %@!, an App that emulates consoles like GBA, GBC and much more.\nDownload the app and immerse yourself in the world of Nintendo games too\n%@";
+
+
+"accountDeletionTitle" = "Do you want to delete the account?";
+"accountDeletionFirstButton" = "Delete Account";
+"accountDeletionSecondButton" = "Cancel";
+"accountDeletionDescription2" = "By continuing, you will permanently delete your account.\n\nBy deleting the account, you will lose any premium benefits and all online and on-device saves.\nThe games on the device will be kept, but you will need to restart them";
+
+"logoutAlertTitle" = "Logout";
+"logoutAlertDescription" = "Do you want to log out and exit the Application?";
+"logoutAlertButton" = "Exit";
+"logoutAlertCancel" = "Cancel";
+
+"Remove" = "Remove";
+"RulesTitle" = "What is <AppName/>?";
+"Resuming" = "Resuming";
+
+"InfoRules" = "Info and Credits";
+"rules_info_app" = "<b><AppName/></b> is a <b>fan app</b> created with passion for all retrogaming lovers. It allows you to play the great classics of consoles such as <b>Game Boy</b>, <b>Game Boy Color</b>, <b>Game Boy Advance</b>, <b>NES</b>, <b>SNES</b> and <b>Nintendo 64</b>, directly from your device, with the ability to <b>save progress on servers</b> and resume the game from where you left off, even on other devices.\n\nWe would like to clarify that <b><AppName/></b> is <b>not affiliated in any way with <m>Nintendo Co., Ltd.</m></b>. All names, registered trademarks and logos are the property of their respective owners and are mentioned for <m>descriptive purposes</m> only.\n\n<b>Credits</b>\nA special thanks to those who contributed with talent and passion:\n\n• <b>Grant Gliner</b> (<m>@glinstagrant</m>) – <m>Pause Menu Icons</m>\n• <b>Eric Lewis</b> (<m>github.com/ericlewis</m>) – <m>Dark Mode</m>\n• <b>Chris Rittenhouse</b> (<m>litritt.com</m>) – <m>Genesis Skin</m>, <m>Show Status Bar</m>, <m>Game Screenshots</m>, <m>Toast Notifications</m>, <m>Alternate App Icons</m>\n• <b>Noah Keck</b> (<m>github.com/noah978</m>) – <m>CheatBase</m>\n• <b>Ian Clawson</b> (<m>github.com/ianclawson</m>) – <m>Local Multiplayer</m>\n• <b>Domenico Gonnelli</b> – <m>Developer Apple 2025</m>\n• <b>Freepik</b> – for some graphic resources used\n\n<b>Licenses</b>\nThe app uses open source software components and licensed libraries, including:\n\n• <b>SQLite.swift</b> by <m>Stephen Celis</m>\n• <b>SDWebImage</b> by <m>Olivier Poitrey</m>\n• <b>ZIPFoundation</b> by <m>Thomas Zoechling</m>\n• <b>SwiftyDropbox</b> by <m>Dropbox Inc.</m>\n• <b>Google API Objective-C Client</b> – <m>Apache License 2.0</m>\n• <b>SMCalloutView</b> by <m>Nick Farina</m> – <m>Apache License 2.0</m>\n\n<b>Emulators</b>\nThis app integrates the following emulation cores:\n\n<m>GNU GPL v3</m> license:\n• Nestopia\n• mupen64plus\n• Gambatte\n• visualboyadvance-m\n• DeSmuME\n• melonDS\n\nSpecific licenses:\n• Snes9x\n• Genesis Plus GX\n\n<b>Artwork</b>\nGame images are managed automatically thanks to the support of <m>OpenVGDB</m>.\n\nThank you for using <b><AppName/></b> and have fun with your favorite titles!";
+
+
+"accountDeletedTitle" = "Account Deleted";
+"accountDeletedDescription" = "Account deleted successfully. We hope to see you again soon";
+"accountDeletedFirstButton" = "Close";
+
+"needLoginDescription" = "For security reasons, you need to log in again.";
+"needLoginAlertButton" = "Delete account";
+"needLoginAlertCancel" = "Cancel";
+
+"noCorrectUserTitle" = "Error";
+"noCorrectUserDescription" = "You are trying to authenticate with an incorrect account. You will be redirected back to the Login page. Please try again";
+"noCorrectUserButton" = "Go to Login";
+
+"needPremiumTitle" = "You are not Premium";
+"needPremiumDescription" = "This feature is only available for premium users.\n\nBecome Premium to continue";
+"needPremiumFirstButton" = "Discover Premium";
+"needPremiumSecondButton" = "Cancel";
+
+"noCameraPermissionErrorTitle" = "Permission Required";
+"noCameraPermissionErrorDescription" = "The Application needs permission to use the camera to frame and upload an image in the app";
+"noCameraPermissionErrorButton" = "Settings";
+"noCameraPermissionErrorClose" = "Close";
+
+"close_game_title" = "Do you want to close the game?";
+"close_game_message" = "Unsaved progress will be lost";

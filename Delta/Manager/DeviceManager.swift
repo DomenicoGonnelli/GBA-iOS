@@ -53,6 +53,22 @@ class DeviceManager {
         }
     }
     
+    static var isConsentADObtained: Bool  {
+        set{
+            if let sharedDefaults = UserDefaults(suiteName: group) {
+                sharedDefaults.set(newValue, forKey: "consentADRequired")
+                sharedDefaults.synchronize()
+            }
+        }
+        get {
+            if let sharedDefaults = UserDefaults(suiteName: group) {
+                return sharedDefaults.bool(forKey: "consentADRequired")
+            }
+            return false
+        }
+        
+    }
+    
     public static func storeLang(lang: String){
         
         let fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: group)?.appendingPathComponent("lang")

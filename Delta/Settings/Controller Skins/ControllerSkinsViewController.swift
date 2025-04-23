@@ -18,7 +18,7 @@ protocol ControllerSkinsViewControllerDelegate: AnyObject
     func controllerSkinsViewControllerDidResetControllerSkin(_ controllerSkinsViewController: ControllerSkinsViewController)
 }
 
-class ControllerSkinsViewController: UITableViewController
+class ControllerSkinsViewController: BaseTableViewController
 {
     weak var delegate: ControllerSkinsViewControllerDelegate?
     
@@ -47,6 +47,15 @@ class ControllerSkinsViewController: UITableViewController
         super.init(coder: aDecoder)
         
         self.prepareDataSource()
+    }
+    override func firstButtonAction(_ type: AlertViewTypology?) {
+        switch type {
+        case .needPremium:
+            PremiumSubscriptionViewController.present(presenter: self, delegate: nil)
+        default:
+            print("action not implemented")
+        }
+        super.firstButtonAction(type)
     }
 }
 
@@ -159,10 +168,15 @@ private extension ControllerSkinsViewController
     
     @IBAction private func importControllerSkin()
     {
-        let importController = ImportController(documentTypes: ["com.rileytestut.delta.skin"])
-        importController.delegate = self
-        self.present(importController, animated: true, completion: nil)
+        if LoginManager.shared.user?.isPremium == true {
+            let importController = ImportController(documentTypes: ["com.rileytestut.delta.skin"])
+            importController.delegate = self
+            self.present(importController, animated: true, completion: nil)
+        } else {
+            showAlert(alertTypology: .needPremium)
+        }
     }
+    
 }
 
 extension ControllerSkinsViewController

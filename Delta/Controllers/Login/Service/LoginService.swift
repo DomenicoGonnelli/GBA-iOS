@@ -32,7 +32,10 @@ class LoginService {
             
             FirestoreHelper.getUserData(){ user in
                 if let user = user {
-                    completion(user)
+                    FirestoreHelper.getPremiumrData(){ premium in
+                        user.premium = premium
+                        completion(user)
+                    }
                 } else {
                     let newUser = UserModel()
                     newUser.loginMode = loginMode

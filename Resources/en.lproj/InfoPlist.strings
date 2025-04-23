@@ -6,7 +6,9 @@
   
 */
 
-"NSFaceIDUsageDescription" = "Uses biometric recognition to enhance the security of accessing your profile";
-"NSPhotoLibraryAddUsageDescription" = "The app uses photo access to allow you to select a custom profile image";
-"NSPhotoLibraryUsageDescription" = "The app uses photo access to allow you to select a custom profile image";
-"NSUserTrackingUsageDescription" = "The app uses your data solely for the purpose of monitoring its efficiency and making the system more secure and robust.";
+"NSFaceIDUsageDescription" = "Uses biometric recognition to make your profile access more secure";
+"NSPhotoLibraryAddUsageDescription" = "The app uses photo access to allow you to select a custom image";
+"NSPhotoLibraryUsageDescription" = "The app uses photo access to allow you to select a custom image";
+"NSUserTrackingUsageDescription" = "The app uses your data only to monitor its performance and enhance system security. The recorded data refers to the phone and is not linked to the user in any way. However, using this data allows us to monitor crashes and improve our efficiency";
+"NSCameraUsageDescription" = "The app uses camera access to personalize user content";
+

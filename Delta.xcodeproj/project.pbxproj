@@ -202,12 +202,9 @@
 		D5AE76C62C2B7F3D0086471B /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5AE76C52C2B7F3D0086471B /* Icons.xcassets */; };
 		D5AE76CA2C2B809C0086471B /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5AE76C52C2B7F3D0086471B /* Icons.xcassets */; };
 		D5AE76CB2C2B81000086471B /* OSLog+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCCC32A85765900E22131 /* OSLog+Delta.swift */; };
-		D5AE76CD2C2B81870086471B /* AltIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5AE76CC2C2B81870086471B /* AltIcons.plist */; };
-		D5AE76CE2C2B81870086471B /* AltIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5AE76CC2C2B81870086471B /* AltIcons.plist */; };
 		D5AE76D12C2BA5B70086471B /* Delta8ToDelta9.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D5AE76D02C2BA5B70086471B /* Delta8ToDelta9.xcmappingmodel */; };
 		D5AE78832BEAAD6100ED25DC /* GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE78822BEAAD6100ED25DC /* GameSceneDelegate.swift */; };
 		D5B4235C2BD9C24000093054 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4235B2BD9C24000093054 /* RoundedImageView.swift */; };
-		D5BE1BD72D0B9CBE00D2142E /* PatreonAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5BE1BD62D0B9CBE00D2142E /* PatreonAPI.plist */; };
 		D5CDCCEF2A859E5300E22131 /* OSLog+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCCC32A85765900E22131 /* OSLog+Delta.swift */; };
 		D5CDCCF02A859E5500E22131 /* UserDefaults+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCCEA2A8593FC00E22131 /* UserDefaults+Delta.swift */; };
 		D5CDCCF12A859E7500E22131 /* ReviewSaveStatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1375A2A7D8F2600AB1372 /* ReviewSaveStatesViewController.swift */; };
@@ -387,6 +384,7 @@
 		EBBB19F72D998826009C977A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EBBB19F62D998826009C977A /* GoogleSignInSwift */; };
 		EBBB1A072D9989F5009C977A /* LaunchScreenStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */; };
 		EBBB1A092D9AAA58009C977A /* efupdate.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A082D9AAA58009C977A /* efupdate.json */; };
+		EBC3E7152DB630D1006B1CBC /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3E7142DB630C1006B1CBC /* BaseTableViewController.swift */; };
 		EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */; };
 		EBC970E62DB27475000CA9C1 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */; };
 /* End PBXBuildFile section */
@@ -668,11 +666,9 @@
 		D5AE76BC2C2B53FC0086471B /* _PatreonAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _PatreonAccount.swift; sourceTree = "<group>"; };
 		D5AE76C32C2B59360086471B /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		D5AE76C52C2B7F3D0086471B /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
-		D5AE76CC2C2B81870086471B /* AltIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AltIcons.plist; sourceTree = "<group>"; };
 		D5AE76D02C2BA5B70086471B /* Delta8ToDelta9.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Delta8ToDelta9.xcmappingmodel; sourceTree = "<group>"; };
 		D5AE78822BEAAD6100ED25DC /* GameSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneDelegate.swift; sourceTree = "<group>"; };
 		D5B4235B2BD9C24000093054 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
-		D5BE1BD62D0B9CBE00D2142E /* PatreonAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PatreonAPI.plist; sourceTree = "<group>"; };
 		D5CDCCC32A85765900E22131 /* OSLog+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Delta.swift"; sourceTree = "<group>"; };
 		D5CDCCEA2A8593FC00E22131 /* UserDefaults+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Delta.swift"; sourceTree = "<group>"; };
 		D5D39E782AF2D624004BE3F7 /* GameView+AirPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView+AirPlay.swift"; sourceTree = "<group>"; };
@@ -836,6 +832,12 @@
 		EBBB19F12D998613009C977A /* libGoogleSignIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleSignIn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBB1A042D9989F5009C977A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreenStart.storyboard; sourceTree = "<group>"; };
 		EBBB1A082D9AAA58009C977A /* efupdate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = efupdate.json; sourceTree = "<group>"; };
+		EBC3E7142DB630C1006B1CBC /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		EBC3E7622DB7E38D006B1CBC /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EBC3E7632DB7E390006B1CBC /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EBC3E7642DB7E392006B1CBC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBC3E7652DB7E393006B1CBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EBC3E7662DB7E395006B1CBC /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_SNES.deltaskin; sourceTree = "<group>"; };
 		EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
 		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1338,12 +1340,10 @@
 				EBBB19652D9971A8009C977A /* Json */,
 				BF6BB2451BB73FE800CCF94A /* Assets.xcassets */,
 				D5AE76C52C2B7F3D0086471B /* Icons.xcassets */,
-				D5AE76CC2C2B81870086471B /* AltIcons.plist */,
 				BF02D5D91DDEBB3000A5E131 /* openvgdb.sqlite */,
 				D5D797E7298DC9E200738869 /* cheatbase.zip */,
 				D53415A6298C78BC00FD67B1 /* Contributors.plist */,
 				D5E12AEC2D01163A000C7531 /* Profanity.txt */,
-				D5BE1BD62D0B9CBE00D2142E /* PatreonAPI.plist */,
 				EB8E0D542D947537004BFB1F /* Localizable.strings */,
 			);
 			path = Resources;
@@ -1831,6 +1831,7 @@
 				EBBB19C02D9977A0009C977A /* Splash */,
 				EBBB19B82D997796009C977A /* Update */,
 				EBBB19872D9972E7009C977A /* BaseViewController.swift */,
+				EBC3E7142DB630C1006B1CBC /* BaseTableViewController.swift */,
 				EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */,
 			);
 			path = Controllers;
@@ -2320,7 +2321,6 @@
 				EBAEB7B12DB1615A007C5BB4 /* RankingStarView.xib in Resources */,
 				BFFA71E21AAC406100EE9DD1 /* Main.storyboard in Resources */,
 				D5AE76C62C2B7F3D0086471B /* Icons.xcassets in Resources */,
-				D5AE76CD2C2B81870086471B /* AltIcons.plist in Resources */,
 				EBBB19BA2D997796009C977A /* Update.storyboard in Resources */,
 				BF6BF3211EB82362008E83CD /* GamesDatabase.storyboard in Resources */,
 				D5E12AED2D011640000C7531 /* Profanity.txt in Resources */,
@@ -2368,7 +2368,6 @@
 				EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */,
 				EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */,
 				BF27CC8E1BC9FEA200A20D89 /* Assets.xcassets in Resources */,
-				D5BE1BD72D0B9CBE00D2142E /* PatreonAPI.plist in Resources */,
 				EB3EB55C2DA00793004FFACF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2378,7 +2377,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AE76CA2C2B809C0086471B /* Icons.xcassets in Resources */,
-				D5AE76CE2C2B81870086471B /* AltIcons.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2521,6 +2519,7 @@
 				BF525EEA1FF6CD12004AA849 /* DeepLink.swift in Sources */,
 				AC1C991029F8B8C30020E6E4 /* ToastNotificationOptions.swift in Sources */,
 				BF59427E1E09BC830051894B /* Game.swift in Sources */,
+				EBC3E7152DB630D1006B1CBC /* BaseTableViewController.swift in Sources */,
 				D5011C48281B6E8B00A0760B /* CharacterSet+Filename.swift in Sources */,
 				BFE593CC21F3F8C2003412A6 /* _GameSave.swift in Sources */,
 				D5147EC82A817B4A00D6CD64 /* ReviewSaveStatesOptions.swift in Sources */,
@@ -2845,6 +2844,11 @@
 			children = (
 				EB7D1A432D9AE1DA004B4D94 /* InfoPlist.strings */,
 				EB7D1A442D9AE1DA004B4D94 /* InfoPlist.strings */,
+				EBC3E7622DB7E38D006B1CBC /* pt-BR */,
+				EBC3E7632DB7E390006B1CBC /* pt-PT */,
+				EBC3E7642DB7E392006B1CBC /* es */,
+				EBC3E7652DB7E393006B1CBC /* es-419 */,
+				EBC3E7662DB7E395006B1CBC /* es-US */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

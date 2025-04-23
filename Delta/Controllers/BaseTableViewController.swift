@@ -1,8 +1,8 @@
 //
-//  BaseViewController.swift
-//  SanremoFantasy
+//  BaseTableViewController.swift
+//  Delta
 //
-//  Created by EGONNEDGJ on 11/01/23.
+//  Created by Domenico Gonnelli on 21/04/25.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import GoogleMobileAds
 import LocalAuthentication
 import UserMessagingPlatform
 
-class BaseViewController: UIViewController, AlertViewDelegate {
+class BaseTableViewController: UITableViewController, AlertViewDelegate {
     
     @IBOutlet weak var navigationBar : CustomNavigationBar?
     @IBOutlet weak var scrollViewBaseHeigth: NSLayoutConstraint?
@@ -38,7 +38,6 @@ class BaseViewController: UIViewController, AlertViewDelegate {
     var social =  SharingHelper.avaiableSocials()
     
     override func viewDidLoad() {
-        autorefrashInterstial = false
         super.viewDidLoad()
         setNavigationBar()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
@@ -70,7 +69,7 @@ class BaseViewController: UIViewController, AlertViewDelegate {
     }
     
     func setNavigationBar(){
-        navigationBar?.controller = self
+        //navigationBar?.controller = self
         if isToPresent {
             navigationBar?.backImage.isHidden = true
             navigationBar?.backButton.isEnabled = false
@@ -95,10 +94,6 @@ class BaseViewController: UIViewController, AlertViewDelegate {
         
     }
     
-    func completionAD(){
-        
-    }
-    
     func hideLoader(){
         DispatchQueue.main.async { [weak self] in
             self?.view.isUserInteractionEnabled = true
@@ -109,11 +104,11 @@ class BaseViewController: UIViewController, AlertViewDelegate {
         }
     }
     
-    func showAlert(alertTypology: AlertViewTypology, frame: CGRect? = nil){
-       
+    func showAlert(alertTypology: AlertViewTypology){
+        
         if alertView == nil {
             DispatchQueue.main.async { [weak self] in
-                self?.alertView = AlertView.createAlert(viewController: self, frame: frame)
+                self?.alertView = AlertView.createAlert(viewController: self)
                 self?.alertView?.alertType = alertTypology
                 self?.alertView?.delegate = self
                 self?.alertView?.isHidden = false
@@ -341,37 +336,12 @@ class BaseViewController: UIViewController, AlertViewDelegate {
 //        hideQuizView()
 //    }
 
-    @IBAction func hideShareView(_ sender: Any){
-        guard let originalRect = shareView?.bounds else {return}
-        var rect = CGRect(x: 0, y: originalRect.y + originalRect.height, width: originalRect.width, height: 0)
-
-        UIView.animate(withDuration: 0.5){
-            self.shareView?.frame = rect
-            self.shareView?.isHidden = true
-            self.shareViewDark?.isHidden = true
-        }
-    }
-    
-    @IBAction func shareWithSocial(_ sender: UIButton){
-        if let index = socialButton?.firstIndex(of: sender){
-            if index < social.count {
-                let name = AppManager.shared.homeData?.iosConfig?.appName ?? "GemBoy Advance"
-                let shareMessage = String(format: "shareMessage".localizable, name, AppManager.shared.webUrl)
-                hideShareView(self)
-                SharingHelper.share(social: social[index], subject: name, text: shareMessage, image: nil, vc: self){ success in
-                    
-                }
-            }
-        }
-        
-    }
-    
     
     
 }
 
 
-extension BaseViewController : UIGestureRecognizerDelegate {
+extension BaseTableViewController : UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
@@ -399,49 +369,46 @@ extension BaseViewController : UIGestureRecognizerDelegate {
     }
 }
 
-extension BaseViewController: FullScreenContentDelegate {
+extension BaseTableViewController: FullScreenContentDelegate {
     
     func refreshInterstitial() {
         if LoginManager.shared.user?.isPremium == false {
-            requestConsent() {
-                DeviceManager.isConsentADObtained = true
-                self.showLoader()
-                let request = Request()
-                
-                RewardedAd.load(with: AppManager.shared.GADID,
-                                request: request,
-                                completionHandler: { [self] ad, error in
-                    self.hideLoader()
-                    if let error = error {
-                        print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                        self.actionAfterLoadingInterstitial()
-                        return
-                    }
-                    isAdbPressd = false
-                    interstitial = ad
-                    interstitial?.fullScreenContentDelegate = self
-                    self.actionAfterLoadingInterstitial()
-                })
-            }
+            showLoader()
+            let request = Request()
+            
+            RewardedAd.load(with: AppManager.shared.GADID,
+                               request: request,
+                               completionHandler: { [self] ad, error in
+                self.hideLoader()
+                if let error = error {
+                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                    return
+                }
+                isAdbPressd = false
+                interstitial = ad
+                interstitial?.fullScreenContentDelegate = self
+                self.actionAfterLoadingInterstitial()
+            })
         } else {
             self.actionAfterLoadingInterstitial()
         }
     }
     
     
-    func showADB(){
+    func showADB(completion: @escaping (()->Void)){
         guard let interstitial = interstitial else {
-            completionAD()
+            completion()
             return
         }
         
         interstitial.present(from: self, userDidEarnRewardHandler: {
-//            if let vc = self.presentedViewController?.view {
-//                let viw = UIButton(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 400))
-//                viw.addTarget(self, action: #selector(self.closeAD(_:)), for: .touchUpInside)
-//                vc.addSubview(viw )
-//                vc.bringSubviewToFront(viw)
-//            }
+            if let vc = self.presentedViewController?.view {
+                let viw = UIButton(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 400))
+                viw.addTarget(self, action: #selector(self.closeAD(_:)), for: .touchUpInside)
+                vc.addSubview(viw )
+                vc.bringSubviewToFront(viw)
+            }
+            completion()
         })
     }
     
@@ -454,7 +421,6 @@ extension BaseViewController: FullScreenContentDelegate {
                     if self?.autorefrashInterstial == true {
                         self?.refreshInterstitial()
                     }
-                    self?.completionAD()
                 }
             }
         }
@@ -468,16 +434,7 @@ extension BaseViewController: FullScreenContentDelegate {
 //    private func ad(_ ad: FullScreenPresentin, didFailToPresentFullScreenContentWithError error: Error) {
 //        refreshInterstitial()
 //    }
-
 //
-    func adDidDismissFullScreenContent(_ ad: FullScreenPresentingAd){
-            print("Interstitial ad was dismissed.")
-            self.interstitial = nil
-            self.completionAD()
-            // Qui puoi eseguire il codice che vuoi quando l'utente chiude la pubblicità
-            // Ad esempio, sbloccare funzionalità, caricare il prossimo livello, ecc.
-        }
-    
     
     /// Tells the delegate that an interstitial will be presented.
     func interstitialWillPresentScreen(_ ad: RewardedInterstitialAd) {
@@ -499,52 +456,37 @@ extension BaseViewController: FullScreenContentDelegate {
 }
 
 
-protocol KeyboardDelegate {
-    func onKeyBoardAppear(withSize: CGSize)
-    func onKeyBoardDisappear()
-}
-
-extension BaseViewController {
-    func requestConsent(completion: @escaping ()->Void) {
-        
-        
-        if !DeviceManager.isConsentADObtained{
-           // Carica lo stato del consenso
-           UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: UMPRequestParameters()) { error in
-               if let error = error {
-                   print("Errore nell'aggiornamento del consenso: \(error.localizedDescription)")
-                   completion()
-                   return
-               }
-               
-               // Controlla se il form è disponibile
-               if UMPConsentInformation.sharedInstance.formStatus == .available {
-                   UMPConsentForm.load { form, error in
-                       if error != nil || form == nil {
-                           print("Errore nel caricamento del form: \(error?.localizedDescription)")
-                           completion()
-                           return
-                       }
-                       
-                       // Mostra il form del consenso
-                       form?.present(from: self) { dismissError in
-                           if let dismissError = dismissError {
-                               print("Errore nella visualizzazione del form: \(dismissError.localizedDescription)")
-                           }
-                           
-                           // Dopo che il form è stato chiuso, verifica lo stato del consenso
-                           let consentStatus = UMPConsentInformation.sharedInstance.consentStatus
-                           print("Stato del consenso aggiornato: \(consentStatus)")
-                           completion()
-                       }
-                   }
-               } else {
-                   completion()
-               }
-           }
-       } else {
-           completion()
-       }
+extension BaseTableViewController {
+    func requestConsent() {
+        // Carica lo stato del consenso
+        UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: UMPRequestParameters()) { error in
+            if let error = error {
+                print("Errore nell'aggiornamento del consenso: \(error.localizedDescription)")
+                return
+            }
+            
+            // Controlla se il form è disponibile
+            if UMPConsentInformation.sharedInstance.formStatus == .available {
+                UMPConsentForm.load { form, error in
+                    if let error = error {
+                        print("Errore nel caricamento del form: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    // Mostra il form del consenso
+                    form?.present(from: UIApplication.shared.windows.first!.rootViewController!) { dismissError in
+                        if let dismissError = dismissError {
+                            print("Errore nella visualizzazione del form: \(dismissError.localizedDescription)")
+                        }
+                        
+                        // Dopo che il form è stato chiuso, verifica lo stato del consenso
+                        let consentStatus = UMPConsentInformation.sharedInstance.consentStatus
+                        print("Stato del consenso aggiornato: \(consentStatus)")
+                    }
+                }
+            }
+        }
     }
     
 }
+
