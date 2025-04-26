@@ -245,8 +245,8 @@
 		EB21EA452DB935C500B6B1F4 /* StartGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */; };
 		EB21EA472DB937F700B6B1F4 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */; };
 		EB21EA492DB93F0E00B6B1F4 /* StartGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */; };
+		EB21EA592DBCFD3300B6B1F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA582DBCFD3300B6B1F4 /* GoogleService-Info.plist */; };
 		EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */; };
-		EB3EB55C2DA00793004FFACF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55B2DA00793004FFACF /* GoogleService-Info.plist */; };
 		EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */; };
 		EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */; };
 		EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */; };
@@ -713,6 +713,7 @@
 		EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartGame.storyboard; sourceTree = "<group>"; };
 		EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameCell.swift; sourceTree = "<group>"; };
+		EB21EA582DBCFD3300B6B1F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReachabilitySwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3EB55B2DA00793004FFACF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBA.deltaskin; sourceTree = "<group>"; };
@@ -1367,6 +1368,7 @@
 				D53415A6298C78BC00FD67B1 /* Contributors.plist */,
 				D5E12AEC2D01163A000C7531 /* Profanity.txt */,
 				EB8E0D542D947537004BFB1F /* Localizable.strings */,
+				EB21EA582DBCFD3300B6B1F4 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2409,6 +2411,7 @@
 				D5E12AED2D011640000C7531 /* Profanity.txt in Resources */,
 				EBBB19CB2D9977B4009C977A /* Login.storyboard in Resources */,
 				BF3540001C5DA3C500C1184C /* PausePresentationControllerContentView.xib in Resources */,
+				EB21EA592DBCFD3300B6B1F4 /* GoogleService-Info.plist in Resources */,
 				BF5E7F461B9A652600AE44F8 /* Settings.storyboard in Resources */,
 				EBAEB7B82DB1CEF5007C5BB4 /* dg__SNES.deltaskin in Resources */,
 				BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */,
@@ -2452,7 +2455,6 @@
 				EB21EA452DB935C500B6B1F4 /* StartGame.storyboard in Resources */,
 				EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */,
 				BF27CC8E1BC9FEA200A20D89 /* Assets.xcassets in Resources */,
-				EB3EB55C2DA00793004FFACF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3135,16 +3137,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "Delta/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Advance";
+				INFOPLIST_KEY_CFBundleDisplayName = "Farm Sound";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"-ObjC",
@@ -3186,7 +3188,7 @@
 					"\"JavaScriptCore\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
 				PRODUCT_NAME = "GemBoy Advance";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3213,22 +3215,22 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "Delta/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Advance";
+				INFOPLIST_KEY_CFBundleDisplayName = "Farm Sound";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"${inherited}",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
 				PRODUCT_NAME = "GemBoy Advance";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3415,7 +3417,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator.Notification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -3457,7 +3459,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator.Notification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
