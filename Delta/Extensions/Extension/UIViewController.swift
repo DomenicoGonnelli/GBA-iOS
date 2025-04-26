@@ -70,11 +70,7 @@ extension UIViewController {
             getFaceID() { success, available in
                 if let vc = self as? BaseViewController {
                     if success {
-                        LaunchViewController.push(from: self)
-                        if var controllers = self.navigationController?.viewControllers{
-                            controllers.removeAll(where: {!($0 is LaunchViewController)})
-                            self.navigationController?.viewControllers = controllers
-                        }
+                        self.openApp(goOnTabar: AppManager.shared.inReview)
                         print("goHome")
                     }
                     if !success && available {
@@ -87,10 +83,21 @@ extension UIViewController {
                 }
             }
         } else {
-            let vc = LaunchViewController.instance()
-            self.navigationController?.pushViewController(vc, animated: false)
+            openApp(goOnTabar: AppManager.shared.inReview)
+        }
+    }
+    
+    func openApp(goOnTabar: Bool){
+        if goOnTabar {
+            TabBarViewController.push(from: self)
             if var controllers = self.navigationController?.viewControllers{
-                controllers.removeAll(where: {$0 != vc})
+                controllers.removeAll(where: {!($0 is TabBarViewController)})
+                self.navigationController?.viewControllers = controllers
+            }
+        } else {
+            LaunchViewController.push(from: self)
+            if var controllers = self.navigationController?.viewControllers{
+                controllers.removeAll(where: {!($0 is LaunchViewController)})
                 self.navigationController?.viewControllers = controllers
             }
         }

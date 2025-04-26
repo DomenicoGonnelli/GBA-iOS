@@ -44,6 +44,12 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     var screenshotItem: MenuItem?
     var closeGameItem: MenuItem?
     
+    var connectItem: MenuItem?
+    var serverConnectItem: MenuItem?
+    var clientConnectItem: MenuItem?
+    var deviceConnection: MenuItem?
+    var startConnectionServer: MenuItem?
+    
     /// PauseInfoProviding
     var pauseText: String?
     

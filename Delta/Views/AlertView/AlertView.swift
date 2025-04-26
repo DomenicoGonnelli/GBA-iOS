@@ -39,6 +39,19 @@ class AlertView: BaseView{
         }
     }
     
+    var alert: AlertModel?{
+        didSet{
+            if let alert = self.alert {
+                setItem(view: sadImage, text: alert.imageName)
+                setItem(view: titleLabel, text: alert.title)
+                setItem(view: descriptionLabel, text: alert.description)
+                setItem(view: actionButton, text: alert.firstButtonTitle)
+                setItem(view: cancelButton, text: alert.secondButtonTitle)
+                actionButton.backgroundColor = UIColor.secondaryColor
+            }
+        }
+    }
+    
     private func setItem(view: UIView, text: String?){
         if let text = text {
             if let label = view as? UILabel {

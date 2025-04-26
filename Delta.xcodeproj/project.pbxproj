@@ -234,6 +234,17 @@
 		D5F702FD2C24CE5300DCD271 /* UISceneSession+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */; };
 		D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
 		D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
+		EB21EA382DB92D8E00B6B1F4 /* StatisticsUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */; };
+		EB21EA392DB92D8E00B6B1F4 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */; };
+		EB21EA3B2DB92D8E00B6B1F4 /* StatisticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA292DB92D8E00B6B1F4 /* StatisticsService.swift */; };
+		EB21EA3C2DB92D8E00B6B1F4 /* MedalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA2D2DB92D8E00B6B1F4 /* MedalsCollectionViewCell.swift */; };
+		EB21EA3D2DB92D8E00B6B1F4 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA262DB92D8E00B6B1F4 /* ChartModel.swift */; };
+		EB21EA3F2DB92D8E00B6B1F4 /* StatisticsUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA352DB92D8E00B6B1F4 /* StatisticsUserViewController.swift */; };
+		EB21EA412DB92D8E00B6B1F4 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA282DB92D8E00B6B1F4 /* StatisticsViewController.swift */; };
+		EB21EA432DB92D8E00B6B1F4 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA2A2DB92D8E00B6B1F4 /* ChartCell.swift */; };
+		EB21EA452DB935C500B6B1F4 /* StartGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */; };
+		EB21EA472DB937F700B6B1F4 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */; };
+		EB21EA492DB93F0E00B6B1F4 /* StartGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */; };
 		EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */; };
 		EB3EB55C2DA00793004FFACF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55B2DA00793004FFACF /* GoogleService-Info.plist */; };
 		EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */; };
@@ -691,6 +702,17 @@
 		D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneSession+Delta.swift"; sourceTree = "<group>"; };
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		EB21EA262DB92D8E00B6B1F4 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
+		EB21EA282DB92D8E00B6B1F4 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		EB21EA292DB92D8E00B6B1F4 /* StatisticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsService.swift; sourceTree = "<group>"; };
+		EB21EA2A2DB92D8E00B6B1F4 /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
+		EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		EB21EA2D2DB92D8E00B6B1F4 /* MedalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalsCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB21EA352DB92D8E00B6B1F4 /* StatisticsUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsUserViewController.swift; sourceTree = "<group>"; };
+		EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticsUser.storyboard; sourceTree = "<group>"; };
+		EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartGame.storyboard; sourceTree = "<group>"; };
+		EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameCell.swift; sourceTree = "<group>"; };
 		EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReachabilitySwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3EB55B2DA00793004FFACF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBA.deltaskin; sourceTree = "<group>"; };
@@ -1617,6 +1639,63 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EB21EA0C2DB9293100B6B1F4 /* startGame */ = {
+			isa = PBXGroup;
+			children = (
+				EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */,
+				EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */,
+				EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */,
+			);
+			path = startGame;
+			sourceTree = "<group>";
+		};
+		EB21EA0D2DB9294600B6B1F4 /* statistics */ = {
+			isa = PBXGroup;
+			children = (
+				EB21EA372DB92D8E00B6B1F4 /* View */,
+			);
+			path = statistics;
+			sourceTree = "<group>";
+		};
+		EB21EA272DB92D8E00B6B1F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB21EA262DB92D8E00B6B1F4 /* ChartModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB21EA2C2DB92D8E00B6B1F4 /* stat */ = {
+			isa = PBXGroup;
+			children = (
+				EB21EA272DB92D8E00B6B1F4 /* Model */,
+				EB21EA282DB92D8E00B6B1F4 /* StatisticsViewController.swift */,
+				EB21EA292DB92D8E00B6B1F4 /* StatisticsService.swift */,
+				EB21EA2A2DB92D8E00B6B1F4 /* ChartCell.swift */,
+				EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */,
+			);
+			path = stat;
+			sourceTree = "<group>";
+		};
+		EB21EA2E2DB92D8E00B6B1F4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB21EA2D2DB92D8E00B6B1F4 /* MedalsCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EB21EA372DB92D8E00B6B1F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB21EA2C2DB92D8E00B6B1F4 /* stat */,
+				EB21EA2E2DB92D8E00B6B1F4 /* Cell */,
+				EB21EA352DB92D8E00B6B1F4 /* StatisticsUserViewController.swift */,
+				EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EB3EB55E2DA034DB004FFACF /* deltaskin */ = {
 			isa = PBXGroup;
 			children = (
@@ -1821,6 +1900,8 @@
 		EBA2BA992D984778007A25A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EB21EA0D2DB9294600B6B1F4 /* statistics */,
+				EB21EA0C2DB9293100B6B1F4 /* startGame */,
 				EB3EB5E02DA0738D004FFACF /* User */,
 				EB3EB5712DA07143004FFACF /* home */,
 				EBBB1A062D9989F5009C977A /* Launchscreen */,
@@ -2323,6 +2404,8 @@
 				D5AE76C62C2B7F3D0086471B /* Icons.xcassets in Resources */,
 				EBBB19BA2D997796009C977A /* Update.storyboard in Resources */,
 				BF6BF3211EB82362008E83CD /* GamesDatabase.storyboard in Resources */,
+				EB21EA382DB92D8E00B6B1F4 /* StatisticsUser.storyboard in Resources */,
+				EB21EA392DB92D8E00B6B1F4 /* Statistics.storyboard in Resources */,
 				D5E12AED2D011640000C7531 /* Profanity.txt in Resources */,
 				EBBB19CB2D9977B4009C977A /* Login.storyboard in Resources */,
 				BF3540001C5DA3C500C1184C /* PausePresentationControllerContentView.xib in Resources */,
@@ -2366,6 +2449,7 @@
 				EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */,
 				EBA2BAC42D984792007A25A6 /* SwipableControllerCell.xib in Resources */,
 				EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */,
+				EB21EA452DB935C500B6B1F4 /* StartGame.storyboard in Resources */,
 				EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */,
 				BF27CC8E1BC9FEA200A20D89 /* Assets.xcassets in Resources */,
 				EB3EB55C2DA00793004FFACF /* GoogleService-Info.plist in Resources */,
@@ -2544,6 +2628,7 @@
 				EB8E0D382D946055004BFB1F /* UICollectionView.swift in Sources */,
 				EB8E0D392D946055004BFB1F /* UIView.swift in Sources */,
 				EB8E0D3A2D946055004BFB1F /* CGRect.swift in Sources */,
+				EB21EA492DB93F0E00B6B1F4 /* StartGameCell.swift in Sources */,
 				BF5942801E09BC830051894B /* SaveState.swift in Sources */,
 				BF59428E1E09BCFB0051894B /* ImportController.swift in Sources */,
 				BF13A7581D5D2FD9000BB055 /* EmulatorCore+Delta.swift in Sources */,
@@ -2660,6 +2745,12 @@
 				BF7AE80A1C2E8C7600B1B5BC /* UIColor+Delta.swift in Sources */,
 				ACF7E30F29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift in Sources */,
 				BF797A2D1C2D339F00F1A000 /* UILabel+FontSize.swift in Sources */,
+				EB21EA3B2DB92D8E00B6B1F4 /* StatisticsService.swift in Sources */,
+				EB21EA3C2DB92D8E00B6B1F4 /* MedalsCollectionViewCell.swift in Sources */,
+				EB21EA3D2DB92D8E00B6B1F4 /* ChartModel.swift in Sources */,
+				EB21EA3F2DB92D8E00B6B1F4 /* StatisticsUserViewController.swift in Sources */,
+				EB21EA412DB92D8E00B6B1F4 /* StatisticsViewController.swift in Sources */,
+				EB21EA432DB92D8E00B6B1F4 /* ChartCell.swift in Sources */,
 				BF80E1D21F13117000847008 /* ControllerInputsViewController.swift in Sources */,
 				BF5942641E09BBB10051894B /* LoadControllerSkinImageOperation.swift in Sources */,
 				D5A98CE2284EF14B00E023E5 /* SceneDelegate.swift in Sources */,
@@ -2695,6 +2786,7 @@
 				EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */,
 				BFD097211D3A01B8005A44C2 /* SaveStatesViewController.swift in Sources */,
 				BF6EE5EB1F7C5F8F0051AD6C /* GameControllerInputMapping.swift in Sources */,
+				EB21EA472DB937F700B6B1F4 /* StartGameViewController.swift in Sources */,
 				BF8A333421A484A000A42FD4 /* BadgedTableViewCell.swift in Sources */,
 				EB69AB272D97828D00311D39 /* ColorPickerManager.swift in Sources */,
 				EB3EB6302DA18664004FFACF /* LocalGameProtocol.swift in Sources */,

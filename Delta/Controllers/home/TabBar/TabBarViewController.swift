@@ -26,18 +26,34 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
         super.viewDidLoad()
         var vc : [UIViewController] = []
         
+        
     
+        let stat = StatisticsViewController.instance()
+        stat.tabBarItem = UITabBarItem(title: "classificationTab".localizable, image: UIImage(named: "classification"), selectedImage: UIImage(named: "classificationSelected"))
+        stat.tabBarItem.badgeColor = .white
+        vc.append(stat)
         
-        let classification = LaunchViewController.instance()
-        classification.tabBarItem = UITabBarItem(title: "classificationTab".localizable, image: UIImage(named: "classification"), selectedImage: UIImage(named: "classificationSelected"))
-        classification.tabBarItem.badgeColor = .white
-        vc.append(classification)
+        let challenge = StatisticsUserViewController.instance()
+        challenge.tabBarItem = UITabBarItem(title: "challengeTab".localizable, image: UIImage(named: "gp"), selectedImage: UIImage(named: "pgSelected"))
+        challenge.tabBarItem.badgeColor = .white
+        vc.append(challenge)
+//
+        let home = StartGameViewController.instance()
+        home.tabBarItem = UITabBarItem(title: "homeTab".localizable, image: UIImage(named: "home"), selectedImage: UIImage(named: "homeSelected"))
+        home.tabBarItem.badgeColor = .white
+        home.controller = self
+        vc.append(home)
+        
+        let tutorialVC = TutorialLongViewController.instance()
+        //userVC.tabController = self
+        tutorialVC.tabBarItem = UITabBarItem(title: "rulesTab".localizable, image: UIImage(named: "rules"), selectedImage: UIImage(named: "rulesSelected"))
+        vc.append(tutorialVC)
         
         
-//        let userVC = UserProfileViewController.instance2()
-//        //userVC.tabController = self
-//        userVC.tabBarItem = UITabBarItem(title: "userTab".localizable, image: UIImage(named: "user"), selectedImage: UIImage(named: "userSelected"))
-//        vc.append(userVC)
+        let userVC = UserProfileViewController.instance2()
+        userVC.tabController = self
+        userVC.tabBarItem = UITabBarItem(title: "userTab".localizable, image: UIImage(named: "user"), selectedImage: UIImage(named: "userSelected"))
+        vc.append(userVC)
         
         
         self.vc = vc
@@ -47,7 +63,7 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
         self.setNeedsStatusBarAppearanceUpdate()
         self.updateView()
         let bg = UIColor.getGradientColor(startColor: .primaryColor, endColor: .primaryColorLight, frame: view.frame) ?? .secondaryColor
-        self.tabController?.setStarerGraphic(backgrounColor: bg, tintColor: .white, circleColor: .clear)
+        self.tabController?.setStarerGraphic(backgrounColor: bg, tintColor: .purpleColor, circleColor: .secondaryColor)
         
         self.updateView()
         self.goToHomePage()
@@ -57,6 +73,9 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
         tabController?.tabBar.addShadow()
     }
     
+    func goToLunch(){
+        self.openApp(goOnTabar: false)
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         
@@ -112,8 +131,8 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
     }
     
     func goToHomePage(){
-        if let userVC = viewControllers?.first(where: {$0 is LaunchViewController}){
-            tabController?.selectedViewController = userVC
+        if let vc = viewControllers?.first(where: {$0 is StartGameViewController}){
+            tabController?.selectedViewController = vc
         }
     }
     

@@ -37,6 +37,7 @@ class UserProfileViewController: LoginViewController {
     var loginController: BaseViewController?
     var backcontroller: UIViewController?
     var selectedItem : UserProfileMenuItem?
+    var tabController: TabBarViewController?
     
     
     func setHelmetPremium(){
@@ -125,7 +126,7 @@ class UserProfileViewController: LoginViewController {
             
         }
     }
-  
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -150,13 +151,8 @@ class UserProfileViewController: LoginViewController {
     
     override func firstButtonAction(_ type: AlertViewTypology?) {
         if type == .logout {
-            LoginManager.shared.logout(){ _ in
-                self.dismiss(animated: true){
-                    NotificationManager.shared.scheduleNotification(notification: .logoutSuccess)
-                    self.backcontroller?.goToLogin()
-                    super.firstButtonAction(type)
-                }
-            }
+            logoutFisical()
+            NotificationManager.shared.scheduleNotification(notification: .logoutSuccess)
         } else if type == .accountDeletion{
             LoginManager.shared.deleteAccount(){ error in
                 if error == false {
@@ -166,13 +162,7 @@ class UserProfileViewController: LoginViewController {
                 }
             }
         } else if type == .accountDeleted || type == .noCorrectUser{
-            LoginManager.shared.logout(){ _ in
-                self.dismiss(animated: true){
-                    self.controller?.firstButtonAction(.genericError)
-                    self.backcontroller?.goToLogin()
-                    super.firstButtonAction(type)
-                }
-            }
+            logoutFisical()
         } else if type == .needLogin {
             self.newAuthentication(type: LoginManager.shared.user?.loginMode)
         } else if type == .newConfiguration {
@@ -184,6 +174,21 @@ class UserProfileViewController: LoginViewController {
         }
         else {
             super.firstButtonAction(type)
+        }
+    }
+
+    
+    func logoutFisical(){
+        LoginManager.shared.logout(){ _ in
+            if self.tabController != nil {
+                self.tabController?.goToLogin()
+                return
+            }
+            self.dismiss(animated: true){
+                self.controller?.firstButtonAction(.genericError)
+                self.backcontroller?.goToLogin()
+                self.firstButtonAction(.genericError)
+            }
         }
     }
     

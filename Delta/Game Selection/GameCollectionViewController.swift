@@ -179,8 +179,6 @@ extension GameCollectionViewController
     {
         super.viewDidLoad()
         
-        PremiumServices.getAllPremium(){ _ in }
-        
         self.collectionView?.dataSource = self.dataSource
         self.collectionView?.prefetchDataSource = self.dataSource
         self.collectionView?.delegate = self
@@ -510,7 +508,7 @@ private extension GameCollectionViewController
         switch self.traitCollection.horizontalSizeClass
         {
         case .regular:
-            layout.itemWidth = 150
+            layout.itemWidth = 120
             layout.minimumInteritemSpacing = 25 // 30 == only 3 games per line for iPad mini 6 in portrait
             
         case .unspecified, .compact:

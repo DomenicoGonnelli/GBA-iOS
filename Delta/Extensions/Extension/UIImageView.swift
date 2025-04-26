@@ -17,6 +17,10 @@ extension UIImageView {
         self.tintColor = color
     }
     
+    func removeColor(){
+        let templateImage = self.image?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        self.image = templateImage
+    }
     
 }
 

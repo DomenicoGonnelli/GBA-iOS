@@ -594,3 +594,29 @@
 
 "close_game_title" = "Você quer fechar o jogo?";
 "close_game_message" = "O progresso não salvo será perdido";
+
+"classificationTab" = "Estatísticas";
+"challengeTab" = "Desafio";
+"homeTab" = "Jogos";
+"rulesTab" = "Regras";
+"userTab" = "Perfil";
+
+"textMedalsTitle" = "Medalha Inicial";
+"premiumMedalsTitle" = "Medalha Premium";
+"quiz5MedalsTitle" = "Medalha Noob";
+"quiz20MedalsTitle" = "Medalha Gamer";
+"quiz50MedalsTitle" = "Medalha Expert";
+"trashMedalsTitle" = "Medalha Cheat";
+"coverMedalsTitle" = "Medalha Skin";
+"youngMedalsTitle" = "Medalha de Conexão";
+"socialMedalsTitle" = "Medalha Compartilhada";
+
+"textMedalsCondition" = "Para ganhar a <m>%@</m>, inicie um dia no <AppName/>";
+"premiumMedalsCondition" = "Para ganhar a <m>%@</m>, é necessário ser um usuário premium";
+"quiz5MedalsCondition" = "Adicione 5 jogos para ganhar a <m>%@</m>";
+"quiz20MedalsCondition" = "Adicione 15 jogos para ganhar a <m>%@</m>";
+"quiz50MedalsCondition" = "É um gamer experiente? Então jogue 40 jogos para ganhar a <m>%@</m>";
+"trashMedalsCondition" = "Para ganhar a <m>%@</m>, é necessário inserir códigos na APP";
+"coverMedalsCondition" = "Para ganhar a <m>%@</m>, altere pelo menos uma SKIN";
+"youngMedalsCondition" = "Você ganha a <m>%@</m> conectando dois dispositivos com o emulador GBA";
+"socialMedalsCondition" = "Para desbloquear a <m>%@</m>, compartilhe o app com seus amigos";

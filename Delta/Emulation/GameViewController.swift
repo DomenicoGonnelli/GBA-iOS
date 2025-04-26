@@ -125,8 +125,6 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
         }
     }
     
-    
-    
     /// Assumed to be Delta.Game instance
     override var game: GameProtocol? {
         willSet {
@@ -478,7 +476,7 @@ extension GameViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        PremiumServices.getAllPremium(){ _ in }
         // Lays out self.gameView, so we can pin self.sustainButtonsContentView to it without resulting in a temporary "cannot satisfy constraints".
         self.view.layoutIfNeeded()
         

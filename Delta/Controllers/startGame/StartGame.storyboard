@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Game View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="StartGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StartGameViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="6vN-wI-Hfr">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-bi-vB4">
+                                <rect key="frame" x="0.0" y="109" width="393" height="649"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StartGameCell" rowHeight="50" id="bfh-Hu-BTQ" customClass="StartGameCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfh-Hu-BTQ" id="uqi-MM-A9i">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-xz-mHW">
+                                                    <rect key="frame" x="16" y="8" width="30" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="aUD-xz-mHW" secondAttribute="height" id="TgE-eR-sLw"/>
+                                                        <constraint firstAttribute="width" constant="30" id="bgt-HW-hE4"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTV-0R-zcH">
+                                                    <rect key="frame" x="66" y="11" width="287" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                    <color key="textColor" name="buttonTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UTV-0R-zcH" secondAttribute="bottom" id="4fX-Fo-EVX"/>
+                                                <constraint firstAttribute="bottom" secondItem="aUD-xz-mHW" secondAttribute="bottom" constant="8" id="LbU-fl-HDK"/>
+                                                <constraint firstItem="aUD-xz-mHW" firstAttribute="top" secondItem="uqi-MM-A9i" secondAttribute="top" constant="8" id="PYG-i5-1qt"/>
+                                                <constraint firstItem="aUD-xz-mHW" firstAttribute="leading" secondItem="uqi-MM-A9i" secondAttribute="leading" constant="16" id="T7h-C6-oUz"/>
+                                                <constraint firstItem="UTV-0R-zcH" firstAttribute="top" secondItem="uqi-MM-A9i" secondAttribute="topMargin" id="lWZ-zx-bZH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UTV-0R-zcH" secondAttribute="trailing" constant="20" id="nzf-tB-iZl"/>
+                                                <constraint firstItem="UTV-0R-zcH" firstAttribute="leading" secondItem="aUD-xz-mHW" secondAttribute="trailing" constant="20" id="w9O-J0-npX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="gameImg" destination="aUD-xz-mHW" id="G5X-Qt-sfb"/>
+                                            <outlet property="titleLabel" destination="UTV-0R-zcH" id="gQD-r0-N83"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="cyi-PU-kUv"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Etx-ni-FWU"/>
+                                </connections>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neZ-nI-PCL" customClass="CustomNavigationBar" customModule="GemBoy_Advance" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IRU-5h-Qd8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" name="buttonTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-rb-Hny">
+                                <rect key="frame" x="96.666666666666686" y="758" width="200" height="40"/>
+                                <color key="backgroundColor" name="buttonTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="N1L-ZB-fsQ"/>
+                                    <constraint firstAttribute="width" constant="200" id="bF1-CJ-vmu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Go Game">
+                                    <color key="titleColor" name="primaryColorFix"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goToGame:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="naM-R4-jTO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="primaryColorFix"/>
+                        <constraints>
+                            <constraint firstItem="H9i-bi-vB4" firstAttribute="top" secondItem="neZ-nI-PCL" secondAttribute="bottom" id="4KN-iL-RCs"/>
+                            <constraint firstItem="neZ-nI-PCL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DY3-is-LO6"/>
+                            <constraint firstItem="g7M-rb-Hny" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="HGv-7n-AwH"/>
+                            <constraint firstItem="H9i-bi-vB4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Hpi-nS-haU"/>
+                            <constraint firstItem="6vN-wI-Hfr" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="L2U-eR-16d"/>
+                            <constraint firstItem="g7M-rb-Hny" firstAttribute="top" secondItem="H9i-bi-vB4" secondAttribute="bottom" id="P5s-hV-nAF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="neZ-nI-PCL" secondAttribute="trailing" id="SCh-bi-1f1"/>
+                            <constraint firstAttribute="trailing" secondItem="6vN-wI-Hfr" secondAttribute="trailing" id="Vvv-Wm-HQW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="H9i-bi-vB4" secondAttribute="bottom" constant="60" id="fJm-lP-QOi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="H9i-bi-vB4" secondAttribute="trailing" id="hWw-y0-pbh"/>
+                            <constraint firstItem="neZ-nI-PCL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="my9-Bh-snO"/>
+                            <constraint firstItem="6vN-wI-Hfr" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="oaG-4U-y2Z"/>
+                            <constraint firstAttribute="bottom" secondItem="6vN-wI-Hfr" secondAttribute="bottom" id="scR-6F-TQf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="neZ-nI-PCL" id="Jgu-ie-nuS"/>
+                        <outlet property="tableView" destination="H9i-bi-vB4" id="Oj3-xw-BNq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginBG" width="624" height="1003"/>
+        <namedColor name="buttonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="primaryColorFix">
+            <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

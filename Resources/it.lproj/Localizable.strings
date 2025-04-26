@@ -638,3 +638,31 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 
 "close_game_title" = "Vuoi chiudere il gioco?";
 "close_game_message" = "I progressi non salvati andranno persi";
+
+
+"classificationTab" = "Statistiche";
+"challengeTab" = "Challenge";
+"homeTab" = "Giochi";
+"rulesTab" = "Regole";
+"userTab" = "Profilo";
+
+
+"textMedalsTitle" = "Starter Medal";
+"premiumMedalsTitle" = "Premium Medal";
+"quiz5MedalsTitle" = "Noob Medal";
+"quiz20MedalsTitle" = "Gamer Medal";
+"quiz50MedalsTitle" = "Expert Medal";
+"trashMedalsTitle" = "Cheat Medal";
+"coverMedalsTitle" = "Skin Medal";
+"youngMedalsTitle" = "Connection Medal";
+"socialMedalsTitle" = "Share Medal";
+
+"textMedalsCondition" = "Per ottenere la <m>%@</m>, devi avviare un giorno su <AppName/>";
+"premiumMedalsCondition" = "Per ottenere la <m>%@</m>, devi essere un utente premium";
+"quiz5MedalsCondition" = "Aggiungi 5 giochi per ottenere la <m>%@</m>";
+"quiz20MedalsCondition" = "Ottieni 15 giochi per ottenere la <m>%@</m>";
+"quiz50MedalsCondition" = "Sei un esperto gamer? Allora dovrai giocare a 40 giochi per ottenere la <m>%@</m>";
+"trashMedalsCondition" = "Per ottenere la <m>%@</m>, è necessario introdurre codici in APP";
+"coverMedalsCondition" = "Per ottenere la <m>%@</m>, devi modificare almeno una SKIN ";
+"youngMedalsCondition" = "La <m>%@</m> si ottiene connettendo due dispositivi con emulatore GBA";
+"socialMedalsCondition" = "Per sbloccare <m>%@</m>, condividi l'app con i tuoi amici";

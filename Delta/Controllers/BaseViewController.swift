@@ -124,6 +124,20 @@ class BaseViewController: UIViewController, AlertViewDelegate {
         }
     }
     
+    func showAlert(alert: AlertModel?){
+        if alertView == nil {
+            DispatchQueue.main.async { [weak self] in
+                self?.alertView = AlertView.createAlert(viewController: self)
+                self?.alertView?.alert = alert
+                self?.alertView?.delegate = self
+                self?.alertView?.isHidden = false
+            }
+        } else {
+            alertView?.alert = alert
+            alertView?.delegate = self
+        }
+    }
+    
     func removeAlert(){
         self.alertView?.removeView(){
             self.alertView?.removeFromSuperview()
