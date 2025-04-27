@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import DeltaFeatures
+import GemBoyFeatures
 
 struct PlayWithLuOptions {
     // Hidden option to track if welcome message was shown

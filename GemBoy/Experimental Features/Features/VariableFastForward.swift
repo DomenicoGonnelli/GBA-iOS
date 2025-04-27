@@ -9,7 +9,7 @@
 import SwiftUI
 
 import DeltaCore
-import DeltaFeatures
+import GemBoyFeatures
 
 struct FastForwardSpeed: RawRepresentable
 {

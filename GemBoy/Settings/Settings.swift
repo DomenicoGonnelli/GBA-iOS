@@ -9,7 +9,7 @@
 import Foundation
 
 import DeltaCore
-import DeltaFeatures
+import GemBoyFeatures
 import MelonDSDeltaCore
 
 import Roxas

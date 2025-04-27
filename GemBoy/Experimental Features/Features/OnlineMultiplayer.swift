@@ -9,7 +9,7 @@
 import SwiftUI
 import SafariServices
 
-import DeltaFeatures
+import GemBoyFeatures
 
 private struct InstructionsWebView: UIViewControllerRepresentable
 {

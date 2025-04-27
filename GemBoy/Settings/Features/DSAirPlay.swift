@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-import DeltaFeatures
+import GemBoyFeatures
 import DeltaCore
 
 extension TouchControllerSkin.LayoutAxis: OptionValue {}

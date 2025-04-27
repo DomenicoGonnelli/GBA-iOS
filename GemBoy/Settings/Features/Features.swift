@@ -6,7 +6,7 @@
 //  Copyright © 2023 Riley Testut. All rights reserved.
 //
 
-import DeltaFeatures
+import GemBoyFeatures
 
 extension Settings
 {

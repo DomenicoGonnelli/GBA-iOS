@@ -6,7 +6,7 @@
 //  Copyright © 2024 Riley Testut. All rights reserved.
 //
 
-import DeltaFeatures
+import GemBoyFeatures
 
 struct SkinDebuggingOptions
 {

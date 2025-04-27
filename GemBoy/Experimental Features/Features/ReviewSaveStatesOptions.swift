@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-import DeltaFeatures
+import GemBoyFeatures
 
 struct ReviewSaveStatesView: UIViewControllerRepresentable
 {
