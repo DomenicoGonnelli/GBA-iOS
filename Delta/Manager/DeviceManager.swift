@@ -8,6 +8,9 @@
 
 import Foundation
 import UIKit
+import Foundation
+import SystemConfiguration.CaptiveNetwork
+import Network
 
 class DeviceManager {
     
@@ -155,4 +158,36 @@ enum DevicesType : Int {
     case unspecified
     case phone // iPhone and iPod touch style UI
     case pad   // iPad style UI (also includes macOS Catalyst)
+}
+
+
+extension DeviceManager {
+
+    static func getWiFiAddress() -> String? {
+        var address: String?
+
+        // Cerchiamo l'indirizzo IP della connessione WiFi
+        var ifaddr: UnsafeMutablePointer<ifaddrs>? = nil
+        if getifaddrs(&ifaddr) == 0 {
+            var ptr = ifaddr
+            while ptr != nil {
+                defer { ptr = ptr?.pointee.ifa_next }
+                
+                guard let interface = ptr?.pointee else { continue }
+                let addrFamily = interface.ifa_addr.pointee.sa_family
+                if addrFamily == UInt8(AF_INET) { // solo IPv4
+                    let name = String(cString: interface.ifa_name)
+                    if name == "en0" { // "en0" è WiFi su iPhone/iPad
+                        var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
+                        getnameinfo(interface.ifa_addr, socklen_t(interface.ifa_addr.pointee.sa_len),
+                                    &hostname, socklen_t(hostname.count),
+                                    nil, socklen_t(0), NI_NUMERICHOST)
+                        address = String(cString: hostname)
+                    }
+                }
+            }
+            freeifaddrs(ifaddr)
+        }
+        return address
+    }
 }

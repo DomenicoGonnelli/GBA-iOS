@@ -666,3 +666,7 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "coverMedalsCondition" = "Per ottenere la <m>%@</m>, devi modificare almeno una SKIN ";
 "youngMedalsCondition" = "La <m>%@</m> si ottiene connettendo due dispositivi con emulatore GBA";
 "socialMedalsCondition" = "Per sbloccare <m>%@</m>, condividi l'app con i tuoi amici";
+
+
+"server_connect_title" = "Server Avviato";
+"server_connect_message" = "Il server è stato avviato correttamente. Assicurati che il secondo dispositivo sia collegato alla stessa rete e premi 'Connetti'; dopo aver selezionato 'Client' inserisci il seguente IP:\n\n%@";

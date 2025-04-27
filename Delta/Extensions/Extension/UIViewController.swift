@@ -133,6 +133,22 @@ extension UIViewController {
         self.present(alertController, animated: true)
     }
     
+    
+    func showAlerCustomMoreButtons(title: String, message: String, buttons: [ (text: String, onTap: (() -> Void)?)] ){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        for button in buttons {
+            let okAction = UIAlertAction(title: button.text, style: .destructive, handler: { action in
+                DispatchQueue.main.async {
+                    alertController.dismiss(animated: true, completion: nil)
+                    button.onTap?()
+                }
+            })
+            alertController.addAction(okAction)
+        }
+        self.present(alertController, animated: true)
+    }
+    
     func showAlerCustom(title: String, message: String, firtButtonText: String, cancelText: String, onOkTap: (() -> Void)? = nil, onCancelTap: (() -> Void)? = nil ){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: firtButtonText, style: .default, handler: { action in

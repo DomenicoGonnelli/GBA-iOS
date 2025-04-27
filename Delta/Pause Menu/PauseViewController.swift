@@ -19,7 +19,18 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     }
     
     var pauseItems: [MenuItem] {
-        return [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem, self.sustainButtonsItem, self.screenshotItem, self.closeGameItem].compactMap { $0 }
+        var list = [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem, self.sustainButtonsItem, self.screenshotItem, self.closeGameItem]
+        
+        if let type = emulatorCore?.game.type, type == .gba {
+            list.append(self.connectItem)
+            
+            if isConnectingMode {
+                list.append(self.deviceConnection)
+                list.append(self.startConnectionServer)
+            }
+        }
+            
+        return list.compactMap { $0 }
     }
     
     var closeButtonTitle: String = "Main_menu".localizable
@@ -45,8 +56,6 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     var closeGameItem: MenuItem?
     
     var connectItem: MenuItem?
-    var serverConnectItem: MenuItem?
-    var clientConnectItem: MenuItem?
     var deviceConnection: MenuItem?
     var startConnectionServer: MenuItem?
     
@@ -63,6 +72,7 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     
     private var pauseNavigationController: UINavigationController!
     
+    var isConnectingMode = false
     /// UIViewController
     override var preferredContentSize: CGSize {
         set { }
@@ -201,10 +211,15 @@ extension PauseViewController: UINavigationControllerDelegate
     func goToCheat(){
         self.performSegue(withIdentifier: "cheats", sender: self)
     }
-}
-
-private extension PauseViewController
-{
+    
+    func refreshMenuItems(){
+        if let gridMenuViewController = self.pauseNavigationController.topViewController as? GridMenuViewController{
+            gridMenuViewController.items = self.pauseItems
+            self.viewDidLayoutSubviews()
+        }
+        
+    }
+    
     func updatePauseItems()
     {
         self.saveStateItem = nil
@@ -235,6 +250,11 @@ private extension PauseViewController
         self.sustainButtonsItem = MenuItem(text: "Hold_Buttons".localizable, image: #imageLiteral(resourceName: "SustainButtons"), action: { _ in })
         self.screenshotItem = MenuItem(text: "Screenshot".localizable, image: #imageLiteral(resourceName: "Screenshot"), action: { _ in })
         self.closeGameItem = MenuItem(text: "closeGame".localizable, image: #imageLiteral(resourceName: "closeGame"), action: { _ in })
+     
+        self.connectItem = MenuItem(text: "connect".localizable, image: #imageLiteral(resourceName: "Link"), action: { _ in
+        })
+        self.deviceConnection = MenuItem(text: "linkDevice".localizable, image: #imageLiteral(resourceName: "changeTeamIcon"), action: { _ in })
+        self.startConnectionServer = MenuItem(text: "startConnection".localizable, image: #imageLiteral(resourceName: "Link"), action: { _ in })
 
         if ExperimentalFeatures.shared.variableFastForward.isEnabled
         {
@@ -243,8 +263,10 @@ private extension PauseViewController
         }
        
     }
-    
-   
+}
+
+private extension PauseViewController
+{
     
     func updateSafeAreaInsets()
     {

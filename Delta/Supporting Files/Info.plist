@@ -206,7 +206,6 @@
 	<false/>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_altserver._tcp</string>
 		<string>_http._tcp</string>
 		<string>_gba-multiplayer._udp</string>
 	</array>

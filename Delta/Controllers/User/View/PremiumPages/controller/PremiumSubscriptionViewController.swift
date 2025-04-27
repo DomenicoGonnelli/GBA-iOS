@@ -99,7 +99,10 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
 extension PremiumSubscriptionViewController: IAPHelperDelegate{
     
     func paymentOk(identifier: String) {
-        
+        becamePremium(with: identifier)
+    }
+    
+    func becamePremium(with identifier: String){
         let p = PremiumUser(value: [:])
         p.iosKey = selectedSubscription?.iosKey
         p.registrationDate = Date()
@@ -118,6 +121,7 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
     func paymentKO() {
         self.showAlert(alertTypology: .genericError)
         self.hideLoader()
+       
         
     }
     

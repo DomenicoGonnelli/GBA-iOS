@@ -266,6 +266,16 @@ private extension ControllerInputsViewController
                 text = "closeGame".localizable
                 
             case .toggleFastForward, .reverseScreens: continue
+                
+            case .connect:
+                image = #imageLiteral(resourceName: "Link")
+                text = "connect".localizable
+            case .linkDevice:
+                image = #imageLiteral(resourceName: "Link")
+                text = "linkDevice".localizable
+            case .startConnection:
+                image = #imageLiteral(resourceName: "Link")
+                text = "startConnection".localizable
             }
             
             let item = MenuItem(text: text, image: image) { [unowned self] (item) in
