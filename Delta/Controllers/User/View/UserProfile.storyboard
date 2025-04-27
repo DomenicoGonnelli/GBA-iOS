@@ -27,12 +27,12 @@
         <!--User Profile View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="UserProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="UserProfileViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="UserProfileViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7T-3s-q2a" customClass="DynamicView" customModule="GemBoy_Advance" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7T-3s-q2a" customClass="DynamicView" customModule="Purple_Emulator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="544" width="390" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Chq-qZ-Ll0">
@@ -315,7 +315,7 @@ gfggg
                                 <rect key="frame" x="0.0" y="382.33333333333326" width="390" height="461.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserProfileMenuItemCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileMenuItemCell" rowHeight="60" id="oSa-7u-J0v" customClass="UserProfileMenuItemCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserProfileMenuItemCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileMenuItemCell" rowHeight="60" id="oSa-7u-J0v" customClass="UserProfileMenuItemCell" customModule="Purple_Emulator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oSa-7u-J0v" id="EDG-ZD-Q3j">
@@ -354,7 +354,7 @@ gfggg
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jga-0V-cXr">
                                                             <rect key="frame" x="70" y="5" width="259.33333333333331" height="40"/>
                                                             <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
-                                                            <color key="textColor" name="invertedPrimaryColor"/>
+                                                            <color key="textColor" name="buttonTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="deh-YE-c4Y">
@@ -368,7 +368,7 @@ gfggg
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="setTintColor">
-                                                                    <color key="value" name="invertedPrimaryColor"/>
+                                                                    <color key="value" name="buttonTextColor"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
@@ -436,7 +436,7 @@ gfggg
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pop-i5-vNu">
                                                 <rect key="frame" x="0.0" y="0.0" width="216.66666666666666" height="70"/>
                                                 <subviews>
-                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FH-rr-XRP" customClass="DynamicView" customModule="GemBoy_Advance" customModuleProvider="target">
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FH-rr-XRP" customClass="DynamicView" customModule="Purple_Emulator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="10" width="206.66666666666666" height="50"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="captain" translatesAutoresizingMaskIntoConstraints="NO" id="XqM-xv-Q2y">
@@ -693,7 +693,7 @@ gfggg
                                                     <constraint firstItem="Oea-Gl-fvA" firstAttribute="height" secondItem="bRS-kz-ymO" secondAttribute="height" multiplier="1.1" id="ztj-qN-n1E"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-G9-1V5" userLabel="teamDetail" customClass="AutoshrinkLabel" customModule="GemBoy_Advance" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-G9-1V5" userLabel="teamDetail" customClass="AutoshrinkLabel" customModule="Purple_Emulator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="297.66666666666669"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YCU-dc-Fhh">

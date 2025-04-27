@@ -34,7 +34,7 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
         vc.append(stat)
         
         let challenge = StatisticsUserViewController.instance()
-        challenge.tabBarItem = UITabBarItem(title: "challengeTab".localizable, image: UIImage(named: "gp"), selectedImage: UIImage(named: "pgSelected"))
+        challenge.tabBarItem = UITabBarItem(title: "challengeTab".localizable, image: UIImage(named: "gp"), selectedImage: UIImage(named: "gpSelected"))
         challenge.tabBarItem.badgeColor = .white
         vc.append(challenge)
 //
@@ -62,8 +62,8 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
     
         self.setNeedsStatusBarAppearanceUpdate()
         self.updateView()
-        let bg = UIColor.getGradientColor(startColor: .primaryColor, endColor: .primaryColorLight, frame: view.frame) ?? .secondaryColor
-        self.tabController?.setStarerGraphic(backgrounColor: bg, tintColor: .purpleColor, circleColor: .secondaryColor)
+        let bg = UIColor.getGradientColor(startColor: .primaryColor, endColor: .secondaryColor, frame: view.frame) ?? .secondaryColor
+        self.tabController?.setStarerGraphic(backgrounColor: bg, tintColor: .white, circleColor: .white)
         
         self.updateView()
         self.goToHomePage()

@@ -291,6 +291,7 @@
 		EB69AB272D97828D00311D39 /* ColorPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB252D97828D00311D39 /* ColorPickerManager.swift */; };
 		EB69AB282D97828D00311D39 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB262D97828D00311D39 /* SharingManager.swift */; };
 		EB69AB292D97828D00311D39 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB242D97828D00311D39 /* AppStoreReviewManager.swift */; };
+		EB6EB3DB2DBE303C00EAC356 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6EB3DA2DBE303900EAC356 /* MenuCell.swift */; };
 		EB7CB6962D96949400CA27FC /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CB6952D96949400CA27FC /* UIAlertController.swift */; };
 		EB7D1A462D9AE1DA004B4D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB7D1A452D9AE1DA004B4D94 /* InfoPlist.strings */; };
 		EB8E0D292D946055004BFB1F /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D272D946055004BFB1F /* SKProduct.swift */; };
@@ -609,7 +610,7 @@
 		BFEF24F21F7DD4FB00454C62 /* SaveStateMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveStateMigrationPolicy.swift; sourceTree = "<group>"; };
 		BFF0742B1E9DC17500ACDF4A /* GBCDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GBCDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA4C081E8A24D600D87934 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
-		BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GemBoy Advance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFA71D71AAC406100EE9DD1 /* Purple Emulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Purple Emulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA71DB1AAC406100EE9DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFA71DC1AAC406100EE9DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFA71E11AAC406100EE9DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -753,6 +754,7 @@
 		EB69AB242D97828D00311D39 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		EB69AB252D97828D00311D39 /* ColorPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerManager.swift; sourceTree = "<group>"; };
 		EB69AB262D97828D00311D39 /* SharingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingManager.swift; sourceTree = "<group>"; };
+		EB6EB3DA2DBE303900EAC356 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		EB7CB6952D96949400CA27FC /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		EB7D1A432D9AE1DA004B4D94 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB7D1A442D9AE1DA004B4D94 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1211,6 +1213,7 @@
 		BF7AE7FA1C2E851F00B1B5BC /* Pause Menu */ = {
 			isa = PBXGroup;
 			children = (
+				EB6EB3DA2DBE303900EAC356 /* MenuCell.swift */,
 				BF353FF41C5D837600C1184C /* PauseMenu.storyboard */,
 				BF353FF11C5D7FB000C1184C /* PauseViewController.swift */,
 				BF7AE8041C2E858400B1B5BC /* GridMenuViewController.swift */,
@@ -1414,7 +1417,7 @@
 		BFFA71D81AAC406100EE9DD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */,
+				BFFA71D71AAC406100EE9DD1 /* Purple Emulator.app */,
 				D5D7C1F129E60DFF00663793 /* libDeltaFeatures.a */,
 				D539102F29E88B6B0006B350 /* DeltaPreviews.framework */,
 				EB8E0D612D947655004BFB1F /* Notification.appex */,
@@ -2253,7 +2256,7 @@
 				EBBB19F62D998826009C977A /* GoogleSignInSwift */,
 			);
 			productName = Delta;
-			productReference = BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */;
+			productReference = BFFA71D71AAC406100EE9DD1 /* Purple Emulator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D539102E29E88B6B0006B350 /* DeltaPreviews */ = {
@@ -2730,6 +2733,7 @@
 				D5AA0F122CE3F4FB0015D134 /* ManagedPatron.swift in Sources */,
 				D54E46D02BED714F00780713 /* NSUserActivity+Delta.swift in Sources */,
 				BFFC464C1D5998D600AF2CC6 /* CheatTableViewCell.swift in Sources */,
+				EB6EB3DB2DBE303C00EAC356 /* MenuCell.swift in Sources */,
 				D5B4235C2BD9C24000093054 /* RoundedImageView.swift in Sources */,
 				BF5942941E09BD1A0051894B /* NSManagedObject+Conveniences.swift in Sources */,
 				EB3EB5FA2DA07626004FFACF /* TabBarItemViewController.swift in Sources */,
@@ -3138,7 +3142,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "Delta/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Advance";
+				INFOPLIST_KEY_CFBundleDisplayName = "Purple Emulator";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3187,7 +3191,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator;
-				PRODUCT_NAME = "GemBoy Advance";
+				PRODUCT_NAME = "Purple Emulator";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -3216,7 +3220,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "Delta/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Advance";
+				INFOPLIST_KEY_CFBundleDisplayName = "Purple Emulator";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3229,7 +3233,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.gba.emulator;
-				PRODUCT_NAME = "GemBoy Advance";
+				PRODUCT_NAME = "Purple Emulator";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;

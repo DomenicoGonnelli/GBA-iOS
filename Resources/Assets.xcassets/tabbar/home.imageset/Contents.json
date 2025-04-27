@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "home.png",
+      "filename" : "game-controller 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "home@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

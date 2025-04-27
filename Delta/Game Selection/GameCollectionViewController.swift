@@ -403,7 +403,7 @@ extension GameCollectionViewController
     }
     
     func showAlertForOnlineSav(onlineData: Data, name: String, date: String, gameURL: URL, gameSaveURL: URL, completion: @escaping ()->()){
-        self.showAlerCustom(title: "importOnlineDataTitle".localizable, message: String(format: "importOnlineDatMessage".localizable, name, date), firtButtonText: "importOnlineDataButton".localizable, cancelText: "importOnlineDataRestart".localizable, onOkTap: {
+        self.showAlerCustom(title: "importOnlineDataTitle".localizable, message: String(format: "importOnlineDataMessage".localizable, name, date), firtButtonText: "importOnlineDataButton".localizable, cancelText: "importOnlineDataRestart".localizable, onOkTap: {
             do {
                 try onlineData.write(to: gameURL)
                 try onlineData.write(to: gameSaveURL)

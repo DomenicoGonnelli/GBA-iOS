@@ -38,14 +38,17 @@ class GridMenuViewController: UICollectionViewController
     
     override var preferredContentSize: CGSize {
         set { }
-        get { return self.collectionView?.contentSize ?? CGSize.zero }
+        get {
+            let itemsRows =  Int(ceil(self.view.frame.width / 110))
+            let n_row = Int(ceil(CGFloat(dataSource.items.count) / CGFloat(itemsRows)))
+            return CGSize(width: self.view.frame.width, height: CGFloat(n_row * 120 + 20))
+        }
     }
     
     private let dataSource = RSTArrayCollectionViewDataSource<MenuItem>(items: [])
     
     private var prototypeCellWidthConstraint: NSLayoutConstraint!
     
-    private var prototypeCell = GridCollectionViewCell()
     private var previousIndexPath: IndexPath? = nil
     
     private var registeredKVOObservers = Set<NSKeyValueObservation>()
@@ -78,20 +81,10 @@ extension GridMenuViewController
     {
         super.viewDidLoad()
         
-        self.collectionView?.register(GridCollectionViewCell.self, forCellWithReuseIdentifier: RSTCellContentGenericCellIdentifier)
-        
-        self.dataSource.cellConfigurationHandler = { [unowned self] (cell, item, indexPath) in
-            self.configure(cell as! GridCollectionViewCell, for: indexPath)
-        }
-        self.collectionView?.dataSource = self.dataSource
-                
         let collectionViewLayout = self.collectionViewLayout as! GridCollectionViewLayout
         collectionViewLayout.itemWidth = 90
         collectionViewLayout.usesEqualHorizontalSpacingDistributionForSingleRow = true
         
-        // Manually update prototype cell properties
-        self.prototypeCellWidthConstraint = self.prototypeCell.contentView.widthAnchor.constraint(equalToConstant: collectionViewLayout.itemWidth)
-        self.prototypeCellWidthConstraint.isActive = true
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -110,36 +103,16 @@ extension GridMenuViewController
 
 private extension GridMenuViewController
 {
-    func configure(_ cell: GridCollectionViewCell, for indexPath: IndexPath)
+    func configure(_ cell: MenuCell, for indexPath: IndexPath)
     {
         let pauseItem = self.items[indexPath.item]
         
-        cell.maximumImageSize = CGSize(width: 60, height: 60)
+        cell.configureCell(item: pauseItem)
         
-        cell.imageView.contentMode = .center
-        cell.imageView.layer.borderWidth = 2
-        cell.imageView.layer.borderColor = self.view.tintColor.cgColor
-        cell.imageView.layer.cornerRadius = 10
+        cell.selection(isSelected: pauseItem.isSelected)
         
-        cell.textLabel.text = pauseItem.text
-        cell.textLabel.textColor = self.view.tintColor
-        
-        if pauseItem.isSelected
-        {
-            cell.imageView.image = pauseItem.image?.withRenderingMode(.alwaysTemplate)
-            cell.imageView.tintColor = UIColor.black
-            cell.imageView.backgroundColor = self.view.tintColor
-        }
-        else
-        {
-            
-            cell.imageView.image = pauseItem.image
-            cell.imageView.tintColor = self.view.tintColor
-            cell.imageView.backgroundColor = UIColor.clear
-        }
-        
-        cell.isImageViewVibrancyEnabled = self.isVibrancyEnabled
-        cell.isTextLabelVibrancyEnabled = self.isVibrancyEnabled
+//        cell.isImageViewVibrancyEnabled = self.isVibrancyEnabled
+//        cell.isTextLabelVibrancyEnabled = self.isVibrancyEnabled
     }
     
     func updateItems()
@@ -151,7 +124,7 @@ private extension GridMenuViewController
             let observer = item.observe(\.isSelected, changeHandler: { [unowned self] (item, change) in
                 let indexPath = IndexPath(item: index, section: 0)
                 
-                if let cell = self.collectionView?.cellForItem(at: indexPath) as? GridCollectionViewCell
+                if let cell = self.collectionView?.cellForItem(at: indexPath) as? MenuCell
                 {
                     self.configure(cell, for: indexPath)
                 }
@@ -166,9 +139,8 @@ extension GridMenuViewController: UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        self.configure(self.prototypeCell, for: indexPath)
         
-        let size = self.prototypeCell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        let size = CGSize(width: 90, height: 110)
         return size
     }
 }
@@ -195,6 +167,20 @@ extension GridMenuViewController
         item.isSelected = !item.isSelected
         item.action(item)
     }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.itemCount
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuCell
+        
+        self.configure(cell , for: indexPath)
+        return cell
+        
+    }
 }
 
 extension GridMenuViewController
@@ -210,7 +196,7 @@ extension GridMenuViewController
     override func collectionView(_ collectionView: UICollectionView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview?
     {
         guard let indexPath = configuration.identifier as? IndexPath else { return nil }
-        guard let cell = collectionView.cellForItem(at: indexPath) as? GridCollectionViewCell else { return nil }
+        guard let cell = collectionView.cellForItem(at: indexPath) as? MenuCell else { return nil }
         
         let parameters = UIPreviewParameters()
         parameters.backgroundColor = .clear

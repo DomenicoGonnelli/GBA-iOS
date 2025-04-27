@@ -52,7 +52,7 @@ class StatisticsUserViewController: BaseViewController {
         if show {
             showLoader()
         }
-        userInfoLabel.text = "Games: 0\nSaved Games: 0\nOnline Games: 0\nMedals: 0"
+        userInfoLabel.text = "Games: 0\n\nSaved Games: 0\n\nOnline Games: 0\n\nMedals: 0"
         
 //        self.enableButton = LoginManager.shared.user?.isPremium == false
 //        self.deleteTeamButton.isHidden = true
@@ -124,7 +124,7 @@ extension StatisticsUserViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let height = collectionView.frame.height - 60
+        let height = collectionView.frame.height / 2.2
         
         let witdht = height * 2/3
         

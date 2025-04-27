@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <!--Pause View Controller-->
         <scene sceneID="Wst-Dv-TjM">
             <objects>
-                <viewController id="Dt0-nV-isV" customClass="PauseViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dt0-nV-isV" customClass="PauseViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nE7-eK-lGa"/>
                         <viewControllerLayoutGuide type="bottom" id="gF0-0U-kR7"/>
@@ -82,25 +83,86 @@
         <!--Paused-->
         <scene sceneID="1md-hu-g0J">
             <objects>
-                <collectionViewController id="0jA-NY-mvB" customClass="GridMenuViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="0jA-NY-mvB" customClass="GridMenuViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" id="scc-uc-vaJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="yXv-zl-idO" customClass="GridCollectionViewLayout" customModule="GemBoy_Advance" customModuleProvider="target">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="yXv-zl-idO" customClass="GridCollectionViewLayout" customModule="Purple_Emulator" customModuleProvider="target">
                             <size key="itemSize" width="60" height="80"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6XS-Ne-nGZ" customClass="GridCollectionViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="6XS-Ne-nGZ" customClass="MenuCell" customModule="Purple_Emulator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="60" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oy-0y-7q5">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vez-S6-iEQ" customClass="DynamicView" customModule="Purple_Emulator" customModuleProvider="target">
+                                                    <rect key="frame" x="6" y="4" width="48" height="48"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="vez-S6-iEQ" secondAttribute="height" id="WM9-HL-h2a"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="primaryColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheatCodes" translatesAutoresizingMaskIntoConstraints="NO" id="Coo-wS-wQk">
+                                                    <rect key="frame" x="17" y="15" width="26" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Coo-wS-wQk" secondAttribute="height" id="p5s-uk-6Ef"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHo-Lx-ePJ">
+                                                    <rect key="frame" x="4" y="58" width="52" height="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="buttonTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Coo-wS-wQk" firstAttribute="centerX" secondItem="vez-S6-iEQ" secondAttribute="centerX" id="3CQ-ab-aFJ"/>
+                                                <constraint firstItem="aHo-Lx-ePJ" firstAttribute="leading" secondItem="5oy-0y-7q5" secondAttribute="leading" constant="4" id="KX2-Dj-Cio"/>
+                                                <constraint firstItem="vez-S6-iEQ" firstAttribute="width" secondItem="5oy-0y-7q5" secondAttribute="width" multiplier="0.8" id="XuK-44-Ua6"/>
+                                                <constraint firstAttribute="trailing" secondItem="aHo-Lx-ePJ" secondAttribute="trailing" constant="4" id="YAb-bG-Opt"/>
+                                                <constraint firstItem="vez-S6-iEQ" firstAttribute="centerX" secondItem="5oy-0y-7q5" secondAttribute="centerX" id="eHV-jw-PiX"/>
+                                                <constraint firstItem="vez-S6-iEQ" firstAttribute="top" secondItem="5oy-0y-7q5" secondAttribute="top" constant="4" id="hGK-gB-tM4"/>
+                                                <constraint firstItem="Coo-wS-wQk" firstAttribute="centerY" secondItem="vez-S6-iEQ" secondAttribute="centerY" id="hVo-GY-hGe"/>
+                                                <constraint firstItem="aHo-Lx-ePJ" firstAttribute="top" secondItem="vez-S6-iEQ" secondAttribute="bottom" constant="6" id="k8r-nN-aFb"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aHo-Lx-ePJ" secondAttribute="bottom" constant="4" id="qqB-Am-1m0"/>
+                                                <constraint firstItem="Coo-wS-wQk" firstAttribute="width" secondItem="vez-S6-iEQ" secondAttribute="width" multiplier="0.55" id="s24-VN-oGh"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="5oy-0y-7q5" firstAttribute="top" secondItem="6XS-Ne-nGZ" secondAttribute="top" id="BST-B6-xUO"/>
+                                    <constraint firstAttribute="bottom" secondItem="5oy-0y-7q5" secondAttribute="bottom" id="IBk-Lw-ZMK"/>
+                                    <constraint firstAttribute="trailing" secondItem="5oy-0y-7q5" secondAttribute="trailing" id="UgO-L9-dfy"/>
+                                    <constraint firstItem="5oy-0y-7q5" firstAttribute="leading" secondItem="6XS-Ne-nGZ" secondAttribute="leading" id="y1r-S1-p9G"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="image" destination="Coo-wS-wQk" id="7JY-Lu-8hs"/>
+                                    <outlet property="imageRound" destination="vez-S6-iEQ" id="Fov-nd-gW8"/>
+                                    <outlet property="text" destination="aHo-Lx-ePJ" id="1cb-tg-kDa"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -128,24 +190,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Fb-9R-sRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="WU3-gG-BA5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2385" y="657"/>
+            <point key="canvasLocation" x="2384.8000000000002" y="656.22188905547227"/>
         </scene>
         <!--Save State-->
         <scene sceneID="9Fi-Ti-W8T">
             <objects>
-                <collectionViewController storyboardIdentifier="saveStatesViewController" id="OOk-k7-INg" customClass="SaveStatesViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="saveStatesViewController" id="OOk-k7-INg" customClass="SaveStatesViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="XgF-OF-CVf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="tvW-q1-PD8" customClass="GridCollectionViewLayout" customModule="GemBoy_Advance" customModuleProvider="target">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="tvW-q1-PD8" customClass="GridCollectionViewLayout" customModule="Purple_Emulator" customModuleProvider="target">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="c3N-1A-ryV" customClass="GridCollectionViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="c3N-1A-ryV" customClass="GridCollectionViewCell" customModule="Purple_Emulator" customModuleProvider="target">
                                 <rect key="frame" x="20" y="60" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -154,7 +216,7 @@
                                 </view>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="YeY-W9-CC6" customClass="SaveStatesCollectionHeaderView" customModule="GemBoy_Advance" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="YeY-W9-CC6" customClass="SaveStatesCollectionHeaderView" customModule="Purple_Emulator" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>
@@ -185,13 +247,13 @@
         <!--Cheats-->
         <scene sceneID="vHb-xC-JLG">
             <objects>
-                <tableViewController id="wb8-5o-1jE" customClass="CheatsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wb8-5o-1jE" customClass="CheatsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="f5S-hV-1yV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="e8g-ZW-5lQ" customClass="CheatTableViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="e8g-ZW-5lQ" customClass="CheatTableViewCell" customModule="Purple_Emulator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e8g-ZW-5lQ" id="AHE-Jk-ULE">
@@ -257,7 +319,7 @@
         <!--Cheat-->
         <scene sceneID="SMZ-Ah-CVb">
             <objects>
-                <tableViewController storyboardIdentifier="editCheatViewController" id="jTR-Oe-YUJ" customClass="EditCheatViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="editCheatViewController" id="jTR-Oe-YUJ" customClass="EditCheatViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="BV9-ff-x83">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,7 +392,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="XXXXXXXX YYYYYYYY" translatesAutoresizingMaskIntoConstraints="NO" id="a17-LB-QXD" customClass="CheatTextView" customModule="GemBoy_Advance" customModuleProvider="target">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="XXXXXXXX YYYYYYYY" translatesAutoresizingMaskIntoConstraints="NO" id="a17-LB-QXD" customClass="CheatTextView" customModule="Purple_Emulator" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="26"/>
@@ -394,7 +456,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CheatCodes" width="128" height="128"/>
         <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="buttonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

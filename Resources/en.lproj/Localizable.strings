@@ -611,12 +611,16 @@
 "youngMedalsTitle" = "Connection Medal";
 "socialMedalsTitle" = "Share Medal";
 
-"textMedalsCondition" = "To earn the <m>%@</m>, start a session on <AppName/> for one day";
-"premiumMedalsCondition" = "To earn the <m>%@</m>, you must be a premium user";
-"quiz5MedalsCondition" = "Add 5 games to earn the <m>%@</m>";
-"quiz20MedalsCondition" = "Add 15 games to earn the <m>%@</m>";
-"quiz50MedalsCondition" = "Are you a pro gamer? Then you must play 40 games to earn the <m>%@</m>";
-"trashMedalsCondition" = "To earn the <m>%@</m>, you must enter cheat codes in the app";
-"coverMedalsCondition" = "To earn the <m>%@</m>, change at least one SKIN";
-"youngMedalsCondition" = "You get the <m>%@</m> by connecting two devices with the GBA emulator";
-"socialMedalsCondition" = "To unlock <m>%@</m>, share the app with your friends";
+"textMedalsCondition" = "To earn the %@, start a session on <AppName/> for one day";
+"premiumMedalsCondition" = "To earn the %@, you must be a premium user";
+"quiz5MedalsCondition" = "Add 5 games to earn the %@";
+"quiz20MedalsCondition" = "Add 15 games to earn the %@";
+"quiz50MedalsCondition" = "Are you a pro gamer? Then you must play 40 games to earn the %@";
+"trashMedalsCondition" = "To earn the %@, you must enter cheat codes in the app";
+"coverMedalsCondition" = "To earn the %@, change at least one SKIN";
+"youngMedalsCondition" = "You get the %@ by connecting two devices with the GBA emulator";
+"socialMedalsCondition" = "To unlock %@, share the app with your friends";
+
+
+"StatisticsTitle" = "Scopri le sfide riservate a te!\nRiuscirai a conquistare tutte le medaglie?";
+"Medals" = "Le mie medaglie";

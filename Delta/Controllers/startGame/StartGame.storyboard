@@ -12,7 +12,7 @@
         <!--Start Game View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="StartGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StartGameViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StartGameViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,11 +20,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="6vN-wI-Hfr">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2tutorial" translatesAutoresizingMaskIntoConstraints="NO" id="2Ir-ft-kcK">
+                                <rect key="frame" x="0.0" y="144.33333333333337" width="393" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Ir-ft-kcK" secondAttribute="height" id="ZiG-vc-v9f"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-bi-vB4">
                                 <rect key="frame" x="0.0" y="109" width="393" height="649"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StartGameCell" rowHeight="50" id="bfh-Hu-BTQ" customClass="StartGameCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StartGameCell" rowHeight="50" id="bfh-Hu-BTQ" customClass="StartGameCell" customModule="Purple_Emulator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfh-Hu-BTQ" id="uqi-MM-A9i">
@@ -68,7 +74,7 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="Etx-ni-FWU"/>
                                 </connections>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neZ-nI-PCL" customClass="CustomNavigationBar" customModule="GemBoy_Advance" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neZ-nI-PCL" customClass="CustomNavigationBar" customModule="Purple_Emulator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -107,6 +113,9 @@
                         <constraints>
                             <constraint firstItem="H9i-bi-vB4" firstAttribute="top" secondItem="neZ-nI-PCL" secondAttribute="bottom" id="4KN-iL-RCs"/>
                             <constraint firstItem="neZ-nI-PCL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DY3-is-LO6"/>
+                            <constraint firstItem="2Ir-ft-kcK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EKc-0E-sP0"/>
+                            <constraint firstItem="2Ir-ft-kcK" firstAttribute="centerY" secondItem="6vN-wI-Hfr" secondAttribute="centerY" multiplier="0.8" id="Evc-h9-GrJ"/>
+                            <constraint firstItem="2Ir-ft-kcK" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Gu1-Z9-zAM"/>
                             <constraint firstItem="g7M-rb-Hny" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="HGv-7n-AwH"/>
                             <constraint firstItem="H9i-bi-vB4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Hpi-nS-haU"/>
                             <constraint firstItem="6vN-wI-Hfr" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="L2U-eR-16d"/>
@@ -131,6 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2tutorial" width="1000" height="1000"/>
         <image name="loginBG" width="624" height="1003"/>
         <namedColor name="buttonTextColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

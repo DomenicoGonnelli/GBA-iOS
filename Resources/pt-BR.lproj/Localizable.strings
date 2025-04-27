@@ -620,3 +620,5 @@
 "coverMedalsCondition" = "Para ganhar a <m>%@</m>, altere pelo menos uma SKIN";
 "youngMedalsCondition" = "Você ganha a <m>%@</m> conectando dois dispositivos com o emulador GBA";
 "socialMedalsCondition" = "Para desbloquear a <m>%@</m>, compartilhe o app com seus amigos";
+"StatisticsTitle" = "Descubra os desafios reservados para você!\nSerá que você conseguirá conquistar todas as medalhas?";
+"Medals" = "Minhas Medalhas";

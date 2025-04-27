@@ -206,16 +206,15 @@
 	<false/>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_altserver._tcp</string>
 		<string>_http._tcp</string>
 		<string>_gba-multiplayer._udp</string>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>GBA uses the local network to communicate with other device to game link connection</string>
+	<string>APP uses the local network to communicate with other device to game link connection</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>GBA uses your microphone to emulate the Nintendo DS microphone.</string>
+	<string>APP uses your microphone to emulate the Nintendo DS microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Press "OK" to allow Delta to use images from your Photo Library as game artwork.</string>
+	<string>Press "OK" to allow App to use images from your Photo Library as game artwork.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>com.rileytestut.Delta.PlayGame</string>

@@ -159,6 +159,7 @@ extension PauseViewController
             }
             
             gridMenuViewController.items = self.pauseItems
+            gridMenuViewController.collectionView.reloadData()
             
         case "saveStates":
             let saveStatesViewController = segue.destination as! SaveStatesViewController

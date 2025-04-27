@@ -16,9 +16,6 @@
         <array key="GothamRnd-Book.otf">
             <string>GothamRounded-Book</string>
         </array>
-        <array key="GothamRnd-Light.otf">
-            <string>GothamRounded-Light</string>
-        </array>
         <array key="GothamRnd-Medium.otf">
             <string>GothamRounded-Medium</string>
         </array>
@@ -27,7 +24,7 @@
         <!--Statistics User View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="StatisticsUserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StatisticsUserViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticsUserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StatisticsUserViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +32,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZk-7Z-0ah">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMV-1W-9X8" customClass="GradientView" customModule="GemBoy_Advance" customModuleProvider="target">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMV-1W-9X8" customClass="GradientView" customModule="Purple_Emulator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="386"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Personale" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnf-gQ-xHp">
@@ -50,8 +47,8 @@
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2T-pJ-gh5">
                                                 <rect key="frame" x="16" y="108" width="358" height="218"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userBGCard" translatesAutoresizingMaskIntoConstraints="NO" id="mqa-Tb-ERI">
-                                                        <rect key="frame" x="0.0" y="109" width="358" height="109"/>
+                                                    <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoxArt" translatesAutoresizingMaskIntoConstraints="NO" id="mqa-Tb-ERI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="218"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="0.0"/>
@@ -59,14 +56,14 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMi-Si-oga">
-                                                        <rect key="frame" x="138" y="30" width="175.33333333333337" height="13"/>
+                                                        <rect key="frame" x="138" y="30.000000000000004" width="171" height="15.666666666666668"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-ar-HSR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="175.33333333333334" height="13"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="15.666666666666666"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data di nascita: 27/06/1994" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS8-rT-WqR">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="175.33333333333334" height="13"/>
-                                                                        <fontDescription key="fontDescription" name="GothamRounded-Light" family="Gotham Rounded" pointSize="13"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="15.666666666666666"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                                         <color key="textColor" name="primaryColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -100,10 +97,10 @@
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kMi-Si-oga" secondAttribute="trailing" constant="10" id="JF0-hx-qZv"/>
                                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kMi-Si-oga" secondAttribute="bottom" constant="20" id="K0x-J7-Fu4"/>
                                                     <constraint firstAttribute="bottom" secondItem="mqa-Tb-ERI" secondAttribute="bottom" id="Les-zv-Ca7"/>
-                                                    <constraint firstItem="mqa-Tb-ERI" firstAttribute="height" secondItem="P2T-pJ-gh5" secondAttribute="height" multiplier="0.5" id="NNb-Zr-AVY"/>
                                                     <constraint firstAttribute="trailing" secondItem="mqa-Tb-ERI" secondAttribute="trailing" id="PBT-bN-Awf"/>
                                                     <constraint firstItem="LqG-9a-Rm8" firstAttribute="top" secondItem="P2T-pJ-gh5" secondAttribute="top" constant="20" id="Wgu-Nj-aDV"/>
                                                     <constraint firstItem="kMi-Si-oga" firstAttribute="top" secondItem="P2T-pJ-gh5" secondAttribute="top" constant="30" id="XzE-Ys-Rfw"/>
+                                                    <constraint firstItem="mqa-Tb-ERI" firstAttribute="top" secondItem="P2T-pJ-gh5" secondAttribute="top" id="aDm-FV-SrX"/>
                                                     <constraint firstItem="LqG-9a-Rm8" firstAttribute="leading" secondItem="P2T-pJ-gh5" secondAttribute="leading" constant="20" id="dMe-Lj-eJ8"/>
                                                     <constraint firstItem="mqa-Tb-ERI" firstAttribute="leading" secondItem="P2T-pJ-gh5" secondAttribute="leading" id="y6O-bB-Nkx"/>
                                                 </constraints>
@@ -153,7 +150,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MedalsCollectionViewCell" reuseIdentifier="MedalsCollectionViewCell" id="Ssf-9r-m8I" customClass="MedalsCollectionViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MedalsCollectionViewCell" reuseIdentifier="MedalsCollectionViewCell" id="Ssf-9r-m8I" customClass="MedalsCollectionViewCell" customModule="Purple_Emulator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Fo8-Xa-MTd">
@@ -204,6 +201,9 @@
                                         <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="20"/>
                                         <color key="textColor" name="primaryColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="Medals"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="invertedPrimaryColor"/>
@@ -245,7 +245,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="userBGCard" width="349" height="205"/>
+        <image name="BoxArt" width="564" height="433"/>
         <image name="userProfile" width="256" height="256"/>
         <namedColor name="buttonTextColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

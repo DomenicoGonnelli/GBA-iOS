@@ -657,12 +657,15 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "youngMedalsTitle" = "Connection Medal";
 "socialMedalsTitle" = "Share Medal";
 
-"textMedalsCondition" = "Per ottenere la <m>%@</m>, devi avviare un giorno su <AppName/>";
-"premiumMedalsCondition" = "Per ottenere la <m>%@</m>, devi essere un utente premium";
-"quiz5MedalsCondition" = "Aggiungi 5 giochi per ottenere la <m>%@</m>";
-"quiz20MedalsCondition" = "Ottieni 15 giochi per ottenere la <m>%@</m>";
-"quiz50MedalsCondition" = "Sei un esperto gamer? Allora dovrai giocare a 40 giochi per ottenere la <m>%@</m>";
-"trashMedalsCondition" = "Per ottenere la <m>%@</m>, è necessario introdurre codici in APP";
-"coverMedalsCondition" = "Per ottenere la <m>%@</m>, devi modificare almeno una SKIN ";
-"youngMedalsCondition" = "La <m>%@</m> si ottiene connettendo due dispositivi con emulatore GBA";
-"socialMedalsCondition" = "Per sbloccare <m>%@</m>, condividi l'app con i tuoi amici";
+"textMedalsCondition" = "Per ottenere la %@, devi avviare un giorno su <AppName/>";
+"premiumMedalsCondition" = "Per ottenere la %@, devi essere un utente premium";
+"quiz5MedalsCondition" = "Aggiungi 5 giochi per ottenere la %@";
+"quiz20MedalsCondition" = "Ottieni 15 giochi per ottenere la %@";
+"quiz50MedalsCondition" = "Sei un esperto gamer? Allora dovrai giocare a 40 giochi per ottenere la %@";
+"trashMedalsCondition" = "Per ottenere la %@, è necessario introdurre codici in APP";
+"coverMedalsCondition" = "Per ottenere la %@, devi modificare almeno una SKIN ";
+"youngMedalsCondition" = "La %@ si ottiene connettendo due dispositivi con emulatore GBA";
+"socialMedalsCondition" = "Per sbloccare %@, condividi l'app con i tuoi amici";
+
+"StatisticsTitle" = "Discover the challenges reserved for you!\nWill you be able to earn all the medals?";
+"Medals" = "My Medals";
