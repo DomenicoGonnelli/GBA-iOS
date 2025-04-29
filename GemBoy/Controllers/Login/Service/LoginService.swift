@@ -44,6 +44,7 @@ class LoginService {
                     newUser.registrationDate = Date()
                     FirestoreHelper.updateUser(user: newUser)
                     LoginManager.storeUID()
+                    LoginManager.shared.user = newUser
                     completion(newUser)
                 }
             }

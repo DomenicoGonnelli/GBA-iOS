@@ -173,11 +173,27 @@
 				<string>delta</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.284423097387-jth29al2cu2hrth6djpmu6k42hipiavc</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.284423097387-fi4etkhptvd5il7vf4gs6ltu5lpaue6h</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-5791654562344514~4249868638</string>
+	<string>ca-app-pub-5791654562344514~4101545318</string>
 	<key>GCSupportedGameControllers</key>
 	<array>
 		<dict>

@@ -229,6 +229,7 @@
 		D5F702FD2C24CE5300DCD271 /* UISceneSession+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */; };
 		D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
 		D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
+		EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */; };
 		EB21EA382DB92D8E00B6B1F4 /* StatisticsUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */; };
 		EB21EA392DB92D8E00B6B1F4 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */; };
 		EB21EA3B2DB92D8E00B6B1F4 /* StatisticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA292DB92D8E00B6B1F4 /* StatisticsService.swift */; };
@@ -292,7 +293,6 @@
 		EB6EB41B2DBED21C00EAC356 /* PausePresentationControllerContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4142DBED21C00EAC356 /* PausePresentationControllerContentView.xib */; };
 		EB6EB41C2DBED21C00EAC356 /* PauseMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4132DBED21C00EAC356 /* PauseMenu.storyboard */; };
 		EB6EB41D2DBED21C00EAC356 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4152DBED21C00EAC356 /* Settings.storyboard */; };
-		EB6EB41F2DBED3FA00EAC356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB41E2DBED3FA00EAC356 /* GoogleService-Info.plist */; };
 		EB7CB6962D96949400CA27FC /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CB6952D96949400CA27FC /* UIAlertController.swift */; };
 		EB7D1A462D9AE1DA004B4D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB7D1A452D9AE1DA004B4D94 /* InfoPlist.strings */; };
 		EB8E0D292D946055004BFB1F /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D272D946055004BFB1F /* SKProduct.swift */; };
@@ -698,6 +698,7 @@
 		D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneSession+Delta.swift"; sourceTree = "<group>"; };
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB21EA262DB92D8E00B6B1F4 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		EB21EA282DB92D8E00B6B1F4 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		EB21EA292DB92D8E00B6B1F4 /* StatisticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsService.swift; sourceTree = "<group>"; };
@@ -1366,6 +1367,7 @@
 				D53415A6298C78BC00FD67B1 /* Contributors.plist */,
 				D5E12AEC2D01163A000C7531 /* Profanity.txt */,
 				EB8E0D542D947537004BFB1F /* Localizable.strings */,
+				EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2413,7 +2415,6 @@
 				D5E12AED2D011640000C7531 /* Profanity.txt in Resources */,
 				EBBB19CB2D9977B4009C977A /* Login.storyboard in Resources */,
 				EBAEB7B82DB1CEF5007C5BB4 /* dg__SNES.deltaskin in Resources */,
-				EB6EB41F2DBED3FA00EAC356 /* GoogleService-Info.plist in Resources */,
 				BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */,
 				D53415A7298C78BC00FD67B1 /* Contributors.plist in Resources */,
 				EBBB19662D9971A8009C977A /* GothamRnd-MedItal.otf in Resources */,
@@ -2450,6 +2451,7 @@
 				EB8E0D562D947537004BFB1F /* Localizable.strings in Resources */,
 				EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */,
 				EBBB1A072D9989F5009C977A /* LaunchScreenStart.storyboard in Resources */,
+				EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */,
 				EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */,
 				EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */,
 				EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */,
@@ -3152,7 +3154,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Purple Emulator";
@@ -3161,7 +3163,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.1;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"-ObjC",
@@ -3203,7 +3205,7 @@
 					"\"JavaScriptCore\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.purple.emulator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
 				PRODUCT_NAME = "Purple Emulator";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3233,7 +3235,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Purple Emulator";
@@ -3242,13 +3244,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.1;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"${inherited}",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.purple.emulator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
 				PRODUCT_NAME = "Purple Emulator";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3438,7 +3440,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.purple.emulator.Notification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -3480,7 +3482,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico.gonnelli.purple.emulator.Notification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
