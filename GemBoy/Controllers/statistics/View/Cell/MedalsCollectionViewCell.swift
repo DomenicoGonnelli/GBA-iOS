@@ -85,7 +85,7 @@ enum Medals: CaseIterable{
     
     var isEnabled: Bool{
         
-        return .random()
+        return false //.random()
         
     }
     

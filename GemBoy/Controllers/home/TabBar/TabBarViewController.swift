@@ -1,3 +1,4 @@
+
 //
 //  TabBarViewController.swift
 //  SanremoFantasy
@@ -62,7 +63,7 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
     
         self.setNeedsStatusBarAppearanceUpdate()
         self.updateView()
-        let bg = UIColor.getGradientColor(startColor: .primaryColor, endColor: .secondaryColor, frame: view.frame) ?? .secondaryColor
+        let bg = UIColor.getGradientColor(startColor: .primaryColorFix, endColor: .secondaryColor, frame: view.frame) ?? .secondaryColor
         self.tabController?.setStarerGraphic(backgrounColor: bg, tintColor: .white, circleColor: .white)
         
         self.updateView()

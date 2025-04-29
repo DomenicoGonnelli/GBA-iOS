@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>203596877918-s2mtttd83bjslmeck44j06l2du9ps00b.apps.googleusercontent.com</string>
+	<string>203596877918-9p5ei7o9mdvuthcrapgi8qtp0lrov43m.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.203596877918-s2mtttd83bjslmeck44j06l2du9ps00b</string>
+	<string>com.googleusercontent.apps.203596877918-9p5ei7o9mdvuthcrapgi8qtp0lrov43m</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAJnFR0nT5w3yeH1-XVdiNE7TPdv_0nsOE</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.domenico.gonnelli.purple.emulator</string>
+	<string>com.domenico.gonnelli.gba.emulator</string>
 	<key>PROJECT_ID</key>
 	<string>gemboyadvance-d0331</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:203596877918:ios:216f829f4f1d8d4ef9a4cf</string>
+	<string>1:203596877918:ios:e829d3b2af1e4609f9a4cf</string>
 </dict>
 </plist>

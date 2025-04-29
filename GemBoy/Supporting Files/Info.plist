@@ -209,6 +209,8 @@
 		<string>_http._tcp</string>
 		<string>_gba-multiplayer._udp</string>
 	</array>
+	<key>NSFaceIDUsageDescription</key>
+	<string>App use face id to impreve security of your data</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>APP uses the local network to communicate with other device to game link connection</string>
 	<key>NSMicrophoneUsageDescription</key>
@@ -219,6 +221,8 @@
 	<array>
 		<string>com.rileytestut.Delta.PlayGame</string>
 	</array>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>NSUserTrackingUsageDescription</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
