@@ -11,6 +11,12 @@ import Roxas
 
 class GridMenuViewController: UICollectionViewController
 {
+    
+    var cellWidht: CGFloat = 90
+    var cellHeight: CGFloat {
+        cellWidht*1.1
+    }
+    
     var items: [MenuItem] {
         get { return self.dataSource.items }
         set {
@@ -39,9 +45,10 @@ class GridMenuViewController: UICollectionViewController
     override var preferredContentSize: CGSize {
         set { }
         get {
-            let itemsRows =  Int(ceil(self.view.frame.width / 110))
+
+            let itemsRows =  Int(floor(self.view.frame.width / (cellWidht*1.2) ))
             let n_row = Int(ceil(CGFloat(dataSource.items.count) / CGFloat(itemsRows)))
-            return CGSize(width: self.view.frame.width, height: CGFloat(n_row * 120 + 20))
+            return CGSize(width: self.view.frame.width, height: CGFloat(n_row * 120 + 30))
         }
     }
     
@@ -56,9 +63,11 @@ class GridMenuViewController: UICollectionViewController
     init()
     {
         let collectionViewLayout = GridCollectionViewLayout()
-        collectionViewLayout.itemSize = CGSize(width: 60, height: 80)
-        collectionViewLayout.minimumLineSpacing = 20
-        collectionViewLayout.minimumInteritemSpacing = 10
+        let cellWidht: CGFloat = 90
+        let cellHeight = cellWidht * 1.1
+        collectionViewLayout.itemSize = CGSize(width: cellWidht, height: cellHeight)
+        collectionViewLayout.minimumLineSpacing = 0
+        collectionViewLayout.minimumInteritemSpacing = 0
         
         super.init(collectionViewLayout: collectionViewLayout)
     }
@@ -82,7 +91,7 @@ extension GridMenuViewController
         super.viewDidLoad()
         
         let collectionViewLayout = self.collectionViewLayout as! GridCollectionViewLayout
-        collectionViewLayout.itemWidth = 90
+        collectionViewLayout.itemWidth = cellWidht
         collectionViewLayout.usesEqualHorizontalSpacingDistributionForSingleRow = true
         
     }
@@ -140,7 +149,7 @@ extension GridMenuViewController: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         
-        let size = CGSize(width: 90, height: 110)
+        let size = CGSize(width: cellWidht, height: cellHeight)
         return size
     }
 }
