@@ -50,8 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         NotificationHelper.registerToTopic(topic: .iOS)
     
         
-        MobileAds.shared.requestConfiguration.testDeviceIdentifiers = [ "d08658dede3b6e06610cf905bb419cce" ]
-        
         // Deep Links
         if let shortcut = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem
         {
