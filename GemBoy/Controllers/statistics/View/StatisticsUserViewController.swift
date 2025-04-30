@@ -52,7 +52,11 @@ class StatisticsUserViewController: BaseViewController {
         if show {
             showLoader()
         }
-        userInfoLabel.text = "Games: 0\n\nSaved Games: 0\n\nOnline Games: 0\n\nMedals: 0"
+        let total = AppManager.shared.totalGames
+        let medals = Medals.allCases.filter({$0.isEnabled}).count
+        let saved = DatabaseManager.userGameDirectoryURL.countFilesInURLDirectory()
+        
+        userInfoLabel.text = "Games: \(total)\n\nSaved Games: \(saved)\n\nMedals: \(medals)"
         
 //        self.enableButton = LoginManager.shared.user?.isPremium == false
 //        self.deleteTeamButton.isHidden = true
@@ -91,6 +95,11 @@ class StatisticsUserViewController: BaseViewController {
         let vc = instance()
         vc.controller = prensenter
         prensenter.present(vc, animated: true)
+    }
+    
+    static func push(from nav: UIViewController) {
+        let vc = instance()
+        nav.navigationController?.pushViewController(vc, animated: true)
     }
 
     

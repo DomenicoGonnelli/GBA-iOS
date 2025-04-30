@@ -41,6 +41,8 @@ class AppManager {
     
     var links: StorageLinksModel?
     
+    var totalGames: Int = 0
+    
     func retrieveProduct(completion: @escaping ((Bool)->Void)){
         DispatchQueue(label: "background").async {
             autoreleasepool {
@@ -148,6 +150,34 @@ class AppManager {
     static var whatNewsVersion : String?{
         set {UserDefaults.standard.set(newValue, forKey: "whatNewsVersion")}
         get{ return UserDefaults.standard.string(forKey: "whatNewsVersion")}
+    }
+    
+    static var id_key: String{
+        FirestoreHelper.uid ?? "__"
+    }
+    
+    static var isStartedGame : Bool{
+        set {UserDefaults.standard.set(newValue, forKey: "isStartedGame_\(id_key)")}
+        get{ return UserDefaults.standard.bool(forKey: "isStartedGame_\(id_key)")}
+    }
+    
+    static var isCheatInserted : Bool{
+        set {UserDefaults.standard.set(newValue, forKey: "isCheatInserted_\(id_key)")}
+        get{ return UserDefaults.standard.bool(forKey: "isCheatInserted_\(id_key)")}
+    }
+    
+    static var addedNewSkin : Bool{
+        set {UserDefaults.standard.set(newValue, forKey: "addedNewSkin\(id_key)")}
+        get{ return UserDefaults.standard.bool(forKey: "addedNewSkin\(id_key)")}
+    }
+    static var connectDevice : Bool{
+        set {UserDefaults.standard.set(newValue, forKey: "connectDevice\(id_key)")}
+        get{ return UserDefaults.standard.bool(forKey: "connectDevice\(id_key)")}
+    }
+    
+    static var shareWithocial : Bool{
+        set {UserDefaults.standard.set(newValue, forKey: "shareWithocial\(id_key)")}
+        get{ return UserDefaults.standard.bool(forKey: "shareWithocial\(id_key)")}
     }
     
     

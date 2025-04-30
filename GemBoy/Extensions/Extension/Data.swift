@@ -18,3 +18,17 @@ extension Data {
         return try? JSONSerialization.jsonObject(with: self, options: []) as? Dictionary<String,Any>
     }
 }
+
+extension URL{
+
+    func countFilesInURLDirectory() -> Int {
+        let fileManager = FileManager.default
+            do {
+                let files = try fileManager.contentsOfDirectory(at: self, includingPropertiesForKeys: nil, options: [])
+                return files.count
+            } catch {
+                print("Errore nel recuperare i file dalla cartella: \(error)")
+                return 0
+            }
+    }
+}

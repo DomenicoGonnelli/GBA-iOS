@@ -120,7 +120,6 @@
                                             <constraint firstItem="gnf-gQ-xHp" firstAttribute="leading" secondItem="RMV-1W-9X8" secondAttribute="leading" constant="24" id="VDm-b8-jbB"/>
                                             <constraint firstAttribute="bottom" secondItem="P2T-pJ-gh5" secondAttribute="bottom" constant="60" id="WGq-0Y-Z3G"/>
                                             <constraint firstItem="P2T-pJ-gh5" firstAttribute="leading" secondItem="RMV-1W-9X8" secondAttribute="leading" constant="16" id="wSi-bR-lRg"/>
-                                            <constraint firstItem="gnf-gQ-xHp" firstAttribute="top" secondItem="RMV-1W-9X8" secondAttribute="top" constant="60" id="xoh-ru-yTo"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
@@ -227,6 +226,7 @@
                         <color key="backgroundColor" name="invertedPrimaryColor"/>
                         <constraints>
                             <constraint firstItem="cZk-7Z-0ah" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="9Pk-9c-vMx"/>
+                            <constraint firstItem="gnf-gQ-xHp" firstAttribute="top" secondItem="iqV-WZ-ZFb" secondAttribute="top" constant="13" id="Ehq-vQ-zLa"/>
                             <constraint firstItem="iqV-WZ-ZFb" firstAttribute="trailing" secondItem="cZk-7Z-0ah" secondAttribute="trailing" id="Jgb-0x-yyB"/>
                             <constraint firstItem="cZk-7Z-0ah" firstAttribute="leading" secondItem="iqV-WZ-ZFb" secondAttribute="leading" id="hqJ-ka-aD9"/>
                             <constraint firstAttribute="bottom" secondItem="cZk-7Z-0ah" secondAttribute="bottom" id="nde-Fa-P7i"/>

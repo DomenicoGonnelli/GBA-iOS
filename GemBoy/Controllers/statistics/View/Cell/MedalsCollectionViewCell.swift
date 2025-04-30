@@ -30,27 +30,27 @@ class MedalsCollectionViewCell: UICollectionViewCell {
 }
 
 enum Medals: CaseIterable{
-    case giovani,social, premium, quiz5, quiz20, quiz50, trash, cover, text
+    case connect, social, premium, game5, game20, game50, cheat, skin, start
     
     
     var title: String{
         
         switch self {
-        case .text:
+        case .start:
             return "textMedalsTitle".localizable
         case .premium:
             return "premiumMedalsTitle".localizable
-        case .quiz5:
+        case .game5:
             return "quiz5MedalsTitle".localizable
-        case .quiz20:
+        case .game20:
             return "quiz20MedalsTitle".localizable
-        case .quiz50:
+        case .game50:
             return "quiz50MedalsTitle".localizable
-        case .trash:
+        case .cheat:
             return "trashMedalsTitle".localizable
-        case .cover:
+        case .skin:
             return "coverMedalsTitle".localizable
-        case .giovani:
+        case .connect:
             return "youngMedalsTitle".localizable
         case .social:
             return "socialMedalsTitle".localizable
@@ -61,21 +61,21 @@ enum Medals: CaseIterable{
     var desc: String?{
         
         switch self {
-        case .text:
+        case .start:
             return  String(format: "textMedalsCondition".localizable, self.title)
         case .premium:
             return String(format: "premiumMedalsCondition".localizable, self.title)
-        case .quiz5:
+        case .game5:
             return String(format: "quiz5MedalsCondition".localizable, self.title)
-        case .quiz20:
+        case .game20:
             return String(format: "quiz20MedalsCondition".localizable, self.title)
-        case .quiz50:
+        case .game50:
             return String(format: "quiz50MedalsCondition".localizable, self.title)
-        case .trash:
+        case .cheat:
             return String(format: "trashMedalsCondition".localizable, self.title)
-        case .cover:
+        case .skin:
             return String(format: "coverMedalsCondition".localizable, self.title)
-        case .giovani:
+        case .connect:
             return String(format: "youngMedalsCondition".localizable, self.title)
         case .social:
             return String(format: "socialMedalsCondition".localizable, self.title)
@@ -85,7 +85,26 @@ enum Medals: CaseIterable{
     
     var isEnabled: Bool{
         
-        return false //.random()
+        switch self {
+        case .start:
+            return AppManager.isStartedGame
+        case .premium:
+            return LoginManager.shared.user?.isPremium ?? false
+        case .game5:
+            return AppManager.shared.totalGames >= 5
+        case .game20:
+            return AppManager.shared.totalGames >= 15
+        case .game50:
+            return AppManager.shared.totalGames >= 40
+        case .cheat:
+            return AppManager.isCheatInserted
+        case .skin:
+            return AppManager.addedNewSkin
+        case .connect:
+            return AppManager.connectDevice
+        case .social:
+            return AppManager.shareWithocial
+        }
         
     }
     
@@ -93,21 +112,21 @@ enum Medals: CaseIterable{
         
         var img = ""
         switch self {
-        case .text:
+        case .start:
             img = "medagliaText"
         case .premium:
             img = "premiumMed"
-        case .quiz5:
+        case .game5:
             img = "medagliaQuiz_5"
-        case .quiz20:
+        case .game20:
             img = "medagliaQuiz_20"
-        case .quiz50:
+        case .game50:
             img = "medagliaQuiz_50"
-        case .trash:
+        case .cheat:
             img = "medagliaTrash"
-        case .cover:
+        case .skin:
             img = "medagliaCover"
-        case .giovani:
+        case .connect:
             img = "medagliaGiovani"
         case .social:
             img = "medagliaSocial"

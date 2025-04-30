@@ -133,6 +133,7 @@ extension LaunchViewController
             }) { (finished) in
                 self.gameViewController.viewDidAppear(true)
                 self.gameViewController.startEmulation()
+                
             }
         }
         else

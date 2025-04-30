@@ -83,6 +83,7 @@ class GamesViewController: BaseViewController
     required init?(coder aDecoder: NSCoder)
     {
         let fetchRequest = GameCollection.rst_fetchRequest()
+        
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(GameCollection.index), ascending: true)]
                 
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: DatabaseManager.shared.viewContext, sectionNameKeyPath: nil, cacheName: nil)
@@ -348,6 +349,8 @@ private extension GamesViewController
         let sections = self.fetchedResultsController.sections?.first?.numberOfObjects ?? 0
         self.pageControl.numberOfPages = sections
         
+        
+        
         var resetPageViewController = false
         
         if let viewController = self.pageViewController.viewControllers?.first as? GameCollectionViewController, let gameCollection = viewController.gameCollection
@@ -428,6 +431,7 @@ private extension GamesViewController
             stack.removeArrangedSubview(view)
             view.removeFromSuperview() // 🔥 importante!
         }
+        var total_games = 0
         if let game = self.fetchedResultsController.fetchedObjects {
             stackWidth.constant = CGFloat(70 * game.count)
             for i in 0..<game.count {
@@ -435,9 +439,10 @@ private extension GamesViewController
                     let sys = SystemSelection(frame: CGRect (x: 70*i, y: 0, width: 70, height: 70))
                     sys.setSystem(system: g.system, delegate: self)
                     stack.addArrangedSubview(sys)
+                    total_games += g.games.count
                 }
-                
             }
+            AppManager.shared.totalGames = total_games
             stack.layoutIfNeeded()
         }
     }

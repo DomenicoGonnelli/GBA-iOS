@@ -253,7 +253,7 @@ extension GameCollectionViewController
             
         case "unwindFromGames":
             let destinationViewController = segue.destination as! GameViewController
-            
+            AppManager.isStartedGame = true
             let game: Game
             if let cell = sender as? UICollectionViewCell, let indexPath = self.collectionView?.indexPath(for: cell)
             {

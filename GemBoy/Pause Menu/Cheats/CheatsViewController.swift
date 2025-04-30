@@ -214,6 +214,7 @@ private extension CheatsViewController
                 self.delegate?.cheatsViewController(self, activateCheat: cheat)
                 
                 try context.save()
+                AppManager.isCheatInserted = true
             }
             catch
             {

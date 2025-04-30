@@ -621,6 +621,8 @@
 "youngMedalsCondition" = "You get the %@ by connecting two devices with the GBA emulator";
 "socialMedalsCondition" = "To unlock %@, share the app with your friends";
 
+"StatisticsTitle" = "Discover the challenges reserved for you!\nWill you be able to earn all the medals?";
+"Medals" = "My Medals";
 
 "StatisticsTitle" = "Scopri le sfide riservate a te!\nRiuscirai a conquistare tutte le medaglie?";
 "Medals" = "Le mie medaglie";

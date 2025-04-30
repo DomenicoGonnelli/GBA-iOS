@@ -519,6 +519,7 @@ extension DatabaseManager
                     try FileManager.default.moveItem(at: url, to: controllerSkin.fileURL)
                     
                     identifiers.insert(controllerSkin.identifier)
+                    AppManager.addedNewSkin = true
                 }
                 catch let error as NSError
                 {
@@ -692,6 +693,17 @@ extension DatabaseManager
         let gamesDirectoryURL = DatabaseManager.defaultDirectoryURL().appendingPathComponent("Games")
         self.createDirectory(at: gamesDirectoryURL)
         return gamesDirectoryURL
+    }
+    
+    class var userGameDirectoryURL: URL
+    {
+        if let uid = FirestoreHelper.uid {
+            let gamesDirectoryURL = DatabaseManager.defaultDirectoryURL().appendingPathComponent("Games").appendingPathComponent(uid)
+            self.createDirectory(at: gamesDirectoryURL)
+            return gamesDirectoryURL
+        } else {
+            return gamesDirectoryURL
+        }
     }
     
     

@@ -329,6 +329,10 @@ extension UserProfileViewController: UITableViewDataSource, UITableViewDelegate{
                 print("nothing to do")
             case .settings:
                 SettingsViewController.push(from: self)
+            case .medals:
+                StatisticsUserViewController.push(from: self)
+            case .statistics:
+                StatisticsViewController.push(prensenter: self, image: nil)
             }
         }
     }

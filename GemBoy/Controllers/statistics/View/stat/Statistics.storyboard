@@ -24,27 +24,18 @@
         <!--Statistics View Controller-->
         <scene sceneID="co1-9w-Oak">
             <objects>
-                <viewController storyboardIdentifier="StatisticsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MQS-zc-Oco" customClass="StatisticsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MQS-zc-Oco" customClass="StatisticsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8UO-zE-3mx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJS-00-Hfp" customClass="CustomNavigationBar" customModule="GemBoy_Advance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                        <color key="value" name="primaryColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i9J-lr-cbf">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChartCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChartCell" id="Ae3-hQ-pMQ" customClass="ChartCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChartCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChartCell" id="Ae3-hQ-pMQ" customClass="ChartCell" customModule="Purple_Emulator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ae3-hQ-pMQ" id="ESO-hr-1YP">
@@ -362,18 +353,13 @@
                         <viewLayoutGuide key="safeArea" id="XV4-3S-Baj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MJS-00-Hfp" firstAttribute="top" secondItem="XV4-3S-Baj" secondAttribute="top" id="58p-zL-SIO"/>
                             <constraint firstAttribute="trailing" secondItem="i9J-lr-cbf" secondAttribute="trailing" id="6q9-2D-dOw"/>
-                            <constraint firstItem="i9J-lr-cbf" firstAttribute="top" secondItem="MJS-00-Hfp" secondAttribute="bottom" id="UVi-34-uBV"/>
-                            <constraint firstItem="XV4-3S-Baj" firstAttribute="trailing" secondItem="MJS-00-Hfp" secondAttribute="trailing" id="WxR-Ba-ucp"/>
-                            <constraint firstItem="i9J-lr-cbf" firstAttribute="top" secondItem="XV4-3S-Baj" secondAttribute="top" constant="50" id="dgv-es-FKT"/>
+                            <constraint firstItem="i9J-lr-cbf" firstAttribute="top" secondItem="XV4-3S-Baj" secondAttribute="top" id="dgv-es-FKT"/>
                             <constraint firstItem="i9J-lr-cbf" firstAttribute="leading" secondItem="8UO-zE-3mx" secondAttribute="leading" id="ps9-bO-8aE"/>
-                            <constraint firstItem="MJS-00-Hfp" firstAttribute="leading" secondItem="XV4-3S-Baj" secondAttribute="leading" id="tse-LI-KkZ"/>
                             <constraint firstItem="XV4-3S-Baj" firstAttribute="bottom" secondItem="i9J-lr-cbf" secondAttribute="bottom" id="xlg-Y2-2gj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="navigationBar" destination="MJS-00-Hfp" id="fRn-pD-WIm"/>
                         <outlet property="tableView" destination="i9J-lr-cbf" id="Npc-mQ-aW8"/>
                     </connections>
                 </viewController>

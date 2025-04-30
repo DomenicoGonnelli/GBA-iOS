@@ -373,7 +373,7 @@ class BaseViewController: UIViewController, AlertViewDelegate {
                 let shareMessage = String(format: "shareMessage".localizable, name, AppManager.shared.webUrl)
                 hideShareView(self)
                 SharingHelper.share(social: social[index], subject: name, text: shareMessage, image: nil, vc: self){ success in
-                    
+                    AppManager.shareWithocial = true
                 }
             }
         }

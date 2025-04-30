@@ -4,7 +4,6 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.domenico.gonnelli.gba.emulator</string>
 		<string>group.com.DomenicoGonnelli.FarmSound</string>
 	</array>
 </dict>

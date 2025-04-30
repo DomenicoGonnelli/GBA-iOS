@@ -667,5 +667,9 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "youngMedalsCondition" = "La %@ si ottiene connettendo due dispositivi con emulatore GBA";
 "socialMedalsCondition" = "Per sbloccare %@, condividi l'app con i tuoi amici";
 
-"StatisticsTitle" = "Discover the challenges reserved for you!\nWill you be able to earn all the medals?";
-"Medals" = "My Medals";
+
+"StatisticsTitle" = "Scopri le sfide riservate a te!\nRiuscirai a conquistare tutte le medaglie?";
+"Medals" = "Le mie medaglie";
+
+"medalsUserProfileTitle" = "Le mie medaglie";
+"statisticsUserProfileTitle" = "Statistiche";
