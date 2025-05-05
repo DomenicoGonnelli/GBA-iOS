@@ -66,7 +66,7 @@ class IOSConfig: DatabaseModelProtocolGet{
         lastAppVersion = value["lastAppVersion"] as? String
         appName = value["appName"] as? String
         versionForRequireUpdate = value["versionForRequireUpdate"] as? String
-        GADid = value["GADid_Davide"] as? String
+        GADid = value["GADid_new"] as? String ?? value["GADid"] as? String
         appStoreURL = value["appStoreURL"] as? String
         secretKey = value["secretKey"] as? String
         if let values = value["maintenanceMode"] as? [String:Any]{

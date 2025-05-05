@@ -121,8 +121,8 @@ public enum LoginMode: String{
 
 extension UserModel {
     
-    func saveInJson(key: String = "user.json"){
-        let fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: DeviceManager.group)?.appendingPathComponent(key)
+    func saveInJson(key: String){
+        let fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: DeviceManager.group)?.appendingPathComponent("\(key).json")
         if let fileURL = fileURL {
             do {
                 try JSONSerialization.data(withJSONObject: self.datafile).write(to: fileURL)
@@ -132,9 +132,9 @@ extension UserModel {
         }
     }
     
-    static func readJson(key: String = "user.json") -> UserModel?{
+    static func readJson(key: String) -> UserModel?{
         do {
-            guard let fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: DeviceManager.group)?.appendingPathComponent(key)
+            guard let fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: DeviceManager.group)?.appendingPathComponent("\(key).json")
             else {
                 return nil
             }

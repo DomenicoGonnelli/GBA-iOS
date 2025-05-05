@@ -32,6 +32,15 @@ class FirestoreHelper{
         return Auth.auth().currentUser?.uid
     }
     
+    class var user_key: String {
+        let uid_current = uid ?? ""
+        return "current_user_\(uid_current)"
+    }
+    class var premium_user_key: String {
+        let uid_current = uid ?? ""
+        return "current_premium_\(uid_current)"
+    }
+    
     class func getLinkStorage( _ completion: @escaping (StorageLinksModel?) -> ()){
         
         let child = getStorageLinks().document("configLinks")
@@ -50,6 +59,7 @@ class FirestoreHelper{
     class func updateUser(user: UserModel?){
         guard let uid = uid, let user = user else { return}
         getUser().document(uid).setData(user.datafile)
+        user.saveInJson(key: user_key)
     }
     
     class func deleteUser(){
@@ -61,6 +71,7 @@ class FirestoreHelper{
     class func updatePremiumUsers(user: PremiumUser?){
         guard let uid = uid, let user = user else { return}
         getPremiumUsers().document(uid).setData(user.datafile)
+        user.datafile.saveInJson(fileName: premium_user_key)
     }
     
     class func deletePremiumUser(){
@@ -74,12 +85,22 @@ class FirestoreHelper{
             return
         }
         
-        let child = getPremiumUsers().document(uid)
+        if let user = Dictionary<String,Any>.readJson(premium_user_key), user.count > 0{
+            let premium = PremiumUser(value: user)
+            LoginManager.shared.user?.premium = premium
+            
+            if premium.isActive {
+                completion(premium)
+                return
+            }
+        }
         
+        let child = getPremiumUsers().document(uid)
         child.getDocument(){ document, error in
             if let child = document?.data(){
                 let premium = PremiumUser(value: child)
                 LoginManager.shared.user?.premium = premium
+                premium.datafile.saveInJson(fileName: premium_user_key)
                 completion(premium)
             } else{
                 completion(nil)
@@ -94,12 +115,20 @@ class FirestoreHelper{
             return
         }
         
+        if let user = Dictionary<String,Any>.readJson(user_key), user.count > 0{
+            let user = UserModel(value: user)
+            LoginManager.shared.user =  user
+            completion(user)
+            return
+        }
+        
         let child = getUser().document(uid)
         
         child.getDocument(){ document, error in
             if let child = document?.data(){
                 let user = UserModel(value: child)
                 LoginManager.shared.user = user
+                user.saveInJson(key: user_key)
                 completion(user)
             } else{
                 completion(nil)

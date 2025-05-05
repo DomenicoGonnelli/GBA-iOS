@@ -104,7 +104,7 @@ extension GamesViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-                
+        AppStoreReviewManager.requestReviewIfAppropriate()
         self.placeholderView = RSTPlaceholderView(frame: self.view.bounds)
         self.placeholderView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.placeholderView.textLabel.text = "No_Games".localizable

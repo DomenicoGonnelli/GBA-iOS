@@ -31,9 +31,7 @@ class SplashService {
     static func getAppConfig(_ completion: @escaping (HomeServiceModel?)->Void){
         
         FirestoreHelper.getLinkStorage(){ links in
-            
-            
-            let jsonUrl = AppManager.shared.links?.appConfig ?? "https://firebasestorage.googleapis.com/v0/b/sanremofantasy2024.appspot.com/o/Json%2F2025%2FappConfig.json?alt=media&token=efb4deb0-b640-4ff2-a07c-908d0814bd53"
+            let jsonUrl = AppManager.shared.links?.appConfig ?? "https://www.dropbox.com/scl/fi/xd73zfiyo8nuxpgl8qp3b/appConfig.json?rlkey=ag9r993y84hswt4pjijcqkrp3&dl=1"
             ServiceHelper.instance.driveService(url: jsonUrl, request: nil, method: .get) { resp in
                 if let resp = resp {
                     let homeConfig = HomeServiceModel(value: resp)
