@@ -28,6 +28,7 @@ class UserProfileViewController: LoginViewController {
     @IBOutlet weak var biometricLoginBar: UIView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var pickerViewContainer: UIView!
+    @IBOutlet weak var stackView: UIStackView!
     
     @IBOutlet weak var teamDetailViewContainer: UIView!
     @IBOutlet weak var teamDetailLabel: UILabel!
@@ -125,6 +126,18 @@ class UserProfileViewController: LoginViewController {
             }
             
         }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        coordinator.animate(alongsideTransition: { _ in
+            if UIDevice.current.orientation.isLandscape {
+                self.stackView.axis = .horizontal
+            } else if UIDevice.current.orientation.isPortrait {
+                self.stackView.axis = .vertical
+            }
+        })
     }
     
     
