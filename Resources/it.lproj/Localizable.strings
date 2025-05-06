@@ -668,6 +668,10 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "socialMedalsCondition" = "Per sbloccare %@, condividi l'app con i tuoi amici";
 
 
+"server_connect_title" = "Server Avviato";
+"server_connect_message" = "Il server è stato avviato correttamente. Assicurati che il secondo dispositivo sia collegato alla stessa rete e premi 'Connetti'; dopo aver selezionato 'Client' inserisci il seguente IP:\n\n%@";
+
+
 "StatisticsTitle" = "Scopri le sfide riservate a te!\nRiuscirai a conquistare tutte le medaglie?";
 "Medals" = "Le mie medaglie";
 

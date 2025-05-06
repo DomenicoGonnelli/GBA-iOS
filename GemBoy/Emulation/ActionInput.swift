@@ -22,6 +22,9 @@ enum ActionInput: String
     case reverseScreens
     case screenshot
     case close
+    case connect
+    case linkDevice
+    case startConnection
 }
 
 extension ActionInput: Input

@@ -87,24 +87,67 @@ private extension GameViewController
     }
 }
 
-
+enum ConnectionLinkType {
+    case server, client, null
+}
 
 
 class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
 {
+    var connectionLinkType : ConnectionLinkType = .null
+    
     
     func startServer(){
         let game = self.game as? Game
         if game?.type == .gba {
-            //requestLocalNetworkPermission()
-            GBAEmulatorBridge.shared.startServer()
+            DispatchQueue.main.async(){
+                GBAEmulatorBridge.shared.startServer()
+                if let ip = DeviceManager.getWiFiAddress() {
+                    self.pauseViewController?.showAlerOk(title: "server_connect_title".localizable, message: String(format: "server_connect_message".localizable, ip), onOk: {
+                        self.connectionLinkType = .server
+                        self.pauseViewController?.isConnectingMode = true
+                        self.pauseViewController?.refreshMenuItems()
+                    })
+                }
+            }
         }
+    }
+    
+    func showIPAlert(on viewController: UIViewController?, completion: @escaping (String?) -> Void) {
+        let alert = UIAlertController(title: "client_ip_title".localizable, message: "client_ip_message".localizable, preferredStyle: .alert)
+
+        alert.addTextField { textField in
+            textField.placeholder = "275.164.5.17"
+            textField.keyboardType = .numbersAndPunctuation
+        }
+
+        let cancelAction = UIAlertAction(title: "Annulla", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            let ipText = alert.textFields?.first?.text
+            completion(ipText)
+        }
+
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+
+        viewController?.present(alert, animated: true, completion: nil)
     }
     
     func startClient(){
         let game = self.game as? Game
         if game?.type == .gba {
-            GBAEmulatorBridge.shared.startClient("192.168.1.135")
+            showIPAlert(on: self.pauseViewController){ ip in
+                if let ip = ip {
+                    DispatchQueue.main.async(){
+                        GBAEmulatorBridge.shared.startClient(ip)
+                        self.connectionLinkType = .client
+                        self.pauseViewController?.isConnectingMode = true
+                        self.pauseViewController?.refreshMenuItems()
+                    }
+                } else {
+                    self.pauseViewController?.showAlerOk(title: "generic_error_title".localizable, message: "generic_error_message".localizable)
+                }
+            }
         } else {
            
         }
@@ -406,6 +449,12 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
                 self.performFastForwardAction(activate: !isFastForwarding)
             case .close:
                 print("close")
+            case .connect:
+                print("connect")
+            case .startConnection:
+                print("startConnection")
+            case .linkDevice:
+                print("linkDevice")
             }
             
                 
@@ -463,6 +512,9 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             case .reverseScreens: break
             case .screenshot: break
             case .close:  self.quitEmulation()
+            case .connect: break
+            case .linkDevice: break
+            case .startConnection: break
             }
         }
     }
@@ -476,7 +528,7 @@ extension GameViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        PremiumServices.getAllPremium(){ _ in }
+        PremiumServices.getAllPremium(){ _ in }
         // Lays out self.gameView, so we can pin self.sustainButtonsContentView to it without resulting in a temporary "cannot satisfy constraints".
         self.view.layoutIfNeeded()
         
@@ -643,6 +695,22 @@ extension GameViewController
                     self.quitEmulation()
                 }
             }
+            pauseViewController.isConnectingMode = connectionLinkType != .null
+            
+            pauseViewController.connectItem?.action = { [unowned self] item in
+                self.pauseViewController?.showAlerCustomMoreButtons(title: "select_connection_type_title".localizable, message: "select_connection_type_message".localizable, buttons: [
+                    (text: "server", onTap: {
+                        self.startServer()
+                    }),
+                    (text: "client", onTap: { self.startClient()}),
+                    (text: "cancel", onTap: {
+                        self.connectionLinkType = .null
+                        self.pauseViewController?.isConnectingMode = false
+                        self.pauseViewController?.refreshMenuItems()
+                    })
+                ])
+            }
+            
             pauseViewController.cheatCodesItem?.action = { [unowned self] item in
                 if LoginManager.shared.user?.isPremium == true {
                     self.pauseViewController?.goToCheat()
