@@ -110,7 +110,7 @@ class GameCollectionViewController: BaseViewController, UICollectionViewDelegate
         }
     }
     var selectedIndexPath : IndexPath?
-    
+    var showed = false
     var theme: Theme = .opaque {
         didSet {
             // self.collectionView?.reloadData()
@@ -188,7 +188,23 @@ extension GameCollectionViewController
             self.collectionView?.dragDelegate = self
         }
         
+        showPremiumPage()
+        
         self.update()
+    }
+    
+    func showPremiumPage(){
+        if !self.showed && AppManager.isNewPremium == false{
+            self.showed = true
+            AppManager.setIsNewPremium()
+            PremiumSubscriptionViewController.present(presenter: self, delegate: nil)
+        }
+        
+
+        if LoginManager.shared.user?.premiumState == .expired, AppManager.premiumExpired == false{
+            NotificationManager.shared.scheduleNotification(notification: .subscritionExpired)
+            AppManager.premiumExpired = true
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool)

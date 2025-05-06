@@ -112,6 +112,7 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
         }
         self.delegate?.didBecomePremium()
         FirestoreHelper.updatePremiumUsers(user: p)
+        AppManager.premiumExpired = false
         self.callServices(isNewSubscription: true)
     }
     

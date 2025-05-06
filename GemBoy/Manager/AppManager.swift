@@ -181,6 +181,28 @@ class AppManager {
     }
     
     
+    static var isNewPremium : Bool?{
+        return UserDefaults.standard.bool(forKey: "isNewPremium_\(AppManager.shared.actualAppVersion)")
+    }
+    
+    static func setIsNewPremium(){
+        UserDefaults.standard.set(true, forKey: "isNewPremium_\(AppManager.shared.actualAppVersion)")
+    }
+    
+    static var isPremiumExpiring : Bool?{
+        return UserDefaults.standard.bool(forKey: "isPremiumExpiring_\(id_key)")
+    }
+    
+    static func setIsPremiumExpiring(){
+        UserDefaults.standard.set(true, forKey: "isPremiumExpiring_\(id_key)")
+    }
+    
+    static var premiumExpired : Bool{
+        set { UserDefaults.standard.set(newValue, forKey: "premiumExpired_\(id_key)")}
+        get{ return UserDefaults.standard.bool(forKey: "premiumExpired_\(id_key)")}
+    }
+    
+    
     static func goSetting(){
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
             return
