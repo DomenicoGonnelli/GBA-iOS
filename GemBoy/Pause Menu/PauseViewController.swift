@@ -24,9 +24,11 @@ class PauseViewController: BaseViewController, PauseInfoProviding
         if let type = emulatorCore?.game.type, type == .gba {
             list.append(self.connectItem)
             
-            if isConnectingMode {
+            if isConnectingMode == .client {
                 list.append(self.deviceConnection)
                 list.append(self.startConnectionServer)
+            } else if isConnectingMode == .server {
+                list.append(self.deviceConnection)
             }
         }
             
@@ -72,7 +74,7 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     
     private var pauseNavigationController: UINavigationController!
     
-    var isConnectingMode = false
+    var isConnectingMode : ConnectionLinkType = .null
     /// UIViewController
     override var preferredContentSize: CGSize {
         set { }
@@ -217,6 +219,7 @@ extension PauseViewController: UINavigationControllerDelegate
         if let gridMenuViewController = self.pauseNavigationController.topViewController as? GridMenuViewController{
             gridMenuViewController.items = self.pauseItems
             self.viewDidLayoutSubviews()
+            self.view.setNeedsLayout()
             gridMenuViewController.collectionView.reloadData()
         }
         

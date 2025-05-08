@@ -626,3 +626,18 @@
 
 "StatisticsTitle" = "Scopri le sfide riservate a te!\nRiuscirai a conquistare tutte le medaglie?";
 "Medals" = "Le mie medaglie";
+
+"connect" = "Connetti/Scambia";
+"select_connection_type_title" = "Avvia Connessione";
+"select_connection_type_message" = "Per avviare una connessione occorre che i dispositivi siano connessi alla stessa rete. Seleziona 'Utente Server' su un dispositivo e 'Utente Client' sull'altro.";
+"client" = "Utente Client";
+"server" = "Utente Server";
+"cancel" = "Annulla";
+
+
+"unconnect" = "Chiudi Connessione";
+"select_unconnection_type_title" = "Chiudi Connessione";
+"select_unconnection_type_message" = "Stai per chiudere la connessione tra i dispositivi";
+
+
+

@@ -87,29 +87,60 @@ private extension GameViewController
     }
 }
 
-enum ConnectionLinkType {
+enum ConnectionLinkType: String {
     case server, client, null
 }
 
 
 class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
 {
+ 
+    var connectionState : ConnectionLinkState = .Link_needs_update
     var connectionLinkType : ConnectionLinkType = .null
+    {
+        didSet {
+            self.pauseViewController?.isConnectingMode = connectionLinkType
+        }
+    }
     
+//    func triggerLocalNetworkAlert() {
+//        let host = NWEndpoint.Host("192.168.0.1") // qualunque IP valido locale
+//        let port = NWEndpoint.Port(integerLiteral: 12345)
+//        let connection = NWConnection(host: host, port: port, using: .udp) // o .tcp
+//        connection.stateUpdateHandler = { state in
+//            // solo per forzare l'alert, chiudiamo subito
+//            connection.cancel()
+//        }
+//        connection.start(queue: .main)
+//    }
     
     func startServer(){
         let game = self.game as? Game
         if game?.type == .gba {
             DispatchQueue.main.async(){
-                GBAEmulatorBridge.shared.startServer()
-                if let ip = DeviceManager.getWiFiAddress() {
-                    self.pauseViewController?.showAlerOk(title: "server_connect_title".localizable, message: String(format: "server_connect_message".localizable, ip), onOk: {
-                        self.connectionLinkType = .server
-                        self.pauseViewController?.isConnectingMode = true
-                        self.pauseViewController?.refreshMenuItems()
-                    })
+                self.startLocal()
+                let code = GBAEmulatorBridge.shared.startServer()
+                let connectionState = ConnectionLinkState.state(forIndex: Int(code))
+                self.connectionState = connectionState
+                if self.connectionState == .Link_needs_update {
+                    self.showServerAlert()
+                } else {
+                    self.showConnectErrorAlert()
                 }
             }
+        }
+    }
+    
+    func showConnectErrorAlert(){
+        self.pauseViewController?.showAlerOk(title: "connectionErrorRestart_title".localizable, message: "connectionErrorRestart_message".localizable)
+    }
+    
+    func showServerAlert(){
+        if let ip = DeviceManager.getWiFiAddress() {
+            self.pauseViewController?.showAlerOk(title: "server_connect_title".localizable, message: String(format: "server_connect_message".localizable, ip), onOk: {
+                self.connectionLinkType = .server
+                self.pauseViewController?.refreshMenuItems()
+            })
         }
     }
     
@@ -121,7 +152,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             textField.keyboardType = .numbersAndPunctuation
         }
 
-        let cancelAction = UIAlertAction(title: "Annulla", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel".localizable, style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             let ipText = alert.textFields?.first?.text
             completion(ipText)
@@ -132,17 +163,44 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
 
         viewController?.present(alert, animated: true, completion: nil)
     }
+    var noLocalConnection = false
+    
+    func startLocal(){
+        let parameters = NWParameters.udp
+        let browser = NWBrowser(for: .bonjour(type: "_http._tcp", domain: nil), using: parameters)
+
+        browser.stateUpdateHandler = { newState in
+            switch newState {
+            case .failed(let error):
+                self.presentGameExperimentalToastView("local_connection_ko".localizable)
+                self.noLocalConnection = true
+            case .ready:
+                self.presentGameExperimentalToastView("local_connection_ok".localizable)
+            default:
+                break
+            }
+        }
+        browser.start(queue: .main)
+    }
     
     func startClient(){
         let game = self.game as? Game
         if game?.type == .gba {
+            startLocal()
             showIPAlert(on: self.pauseViewController){ ip in
                 if let ip = ip {
                     DispatchQueue.main.async(){
-                        GBAEmulatorBridge.shared.startClient(ip)
-                        self.connectionLinkType = .client
-                        self.pauseViewController?.isConnectingMode = true
-                        self.pauseViewController?.refreshMenuItems()
+                        let code = GBAEmulatorBridge.shared.startClient(ip)
+                        let connectionState = ConnectionLinkState.state(forIndex: Int(code))
+                        self.connectionState = connectionState
+                        
+                        if connectionState == .Link_needs_update {
+                            self.connectionLinkType = .client
+                            self.pauseViewController?.refreshMenuItems()
+                            self.presentGameExperimentalToastView("Client: \(ConnectionLinkState.Link_needs_update.textValue)")
+                        } else {
+                            self.showConnectErrorAlert()
+                        }
                     }
                 } else {
                     self.pauseViewController?.showAlerOk(title: "generic_error_title".localizable, message: "generic_error_message".localizable)
@@ -156,15 +214,65 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     
     func tryConnection(){
         let game = self.game as? Game
+        
+        if connectionState == .Link_Ok{
+            self.presentGameExperimentalToastView("Server/Client: \(connectionState.textValue)")
+            return
+        }
+        
+        if connectionState != .Link_needs_update {
+            showConnectErrorAlert()
+            return
+        }
+        
         if game?.type == .gba {
-            GBAEmulatorBridge.shared.tryConncection()
+            let code = GBAEmulatorBridge.shared.tryConncection()
+            let connectionState = ConnectionLinkState.state(forIndex: Int(code))
+            self.connectionState = connectionState
+            if connectionLinkType == .server {
+                self.pauseViewController?.showAlerOk(title: "linkDevice_title_server".localizable, message: "linkDevice_message_server".localizable){
+                    self.presentGameExperimentalToastView("Server: \(connectionState.textValue)")
+                }
+               
+            } else if connectionLinkType == .client {
+                let text = String(format: "linkDevice_message_client".localizable, String(GBAEmulatorBridge.shared.getLinkID()+1))
+                self.pauseViewController?.showAlerOk(title: "linkDevice_title_client".localizable, message: text){
+                    self.presentGameExperimentalToastView("Client: \(connectionState.textValue)")
+                }
+            }
         }
     }
     
     func startLink(){
         let game = self.game as? Game
-        if game?.type == .gba {
-            GBAEmulatorBridge.shared.startLink()
+        
+        if connectionState == .Link_Ok{
+            self.presentGameExperimentalToastView("Client: \(connectionState.textValue)")
+            return
+        }
+        
+        if game?.type == .gba && connectionLinkType == .client {
+            if connectionLinkType == .client {
+                let code = GBAEmulatorBridge.shared.tryConncection()
+                let connectionState = ConnectionLinkState.state(forIndex: Int(code))
+                self.connectionState = connectionState
+                if connectionState == .Link_Ok {
+                    self.pauseViewController?.showAlerOk(title: "startConnection_title".localizable, message: "startConnection_message".localizable){
+                        self.presentGameExperimentalToastView("Client: \(connectionState.textValue)")
+                    }
+                } else {
+                    self.showConnectErrorAlert()
+                    
+                }
+            }
+        }
+    }
+    
+    func presentGameExperimentalToastView(_ text: String, duration: Double? = nil){
+        if let pausePresentedViewController = pausePresentedViewController{
+            pausePresentedViewController.presentExperimentalToastView(text, duration: duration)
+        } else {
+            self.presentExperimentalToastView(text, duration: duration)
         }
     }
     
@@ -261,6 +369,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     
     //MARK: - Private Properties -
     private var pauseViewController: PauseViewController?
+    private var pausePresentedViewController: PausePresentationController?
     private var pausingGameController: GameController?
     
     // Prevents the same save state from being saved multiple times
@@ -684,6 +793,10 @@ extension GameViewController
             
             self.pausingGameController = gameController
             
+            if let seguePause = segue as? PauseStoryboardSegue {
+                self.pausePresentedViewController = seguePause.presentationController
+            }
+            
             let pauseViewController = segue.destination as! PauseViewController
             pauseViewController.pauseText = (self.game as? Game)?.name ?? "Appname".localizable
             pauseViewController.emulatorCore = self.emulatorCore
@@ -695,20 +808,40 @@ extension GameViewController
                     self.quitEmulation()
                 }
             }
-            pauseViewController.isConnectingMode = connectionLinkType != .null
+            pauseViewController.isConnectingMode = connectionLinkType
             
             pauseViewController.connectItem?.action = { [unowned self] item in
-                self.pauseViewController?.showAlerCustomMoreButtons(title: "select_connection_type_title".localizable, message: "select_connection_type_message".localizable, buttons: [
-                    (text: "server", onTap: {
-                        self.startServer()
-                    }),
-                    (text: "client", onTap: { self.startClient()}),
-                    (text: "cancel", onTap: {
-                        self.connectionLinkType = .null
-                        self.pauseViewController?.isConnectingMode = false
-                        self.pauseViewController?.refreshMenuItems()
-                    })
-                ])
+                if connectionLinkType == .null {
+                    self.pauseViewController?.showAlerCustomMoreButtons(title: "select_connection_type_title".localizable, message: "select_connection_type_message".localizable, buttons: [
+                        (text: "server".localizable, onTap: {
+                            self.startServer()
+                        }),
+                        (text: "client".localizable, onTap: { self.startClient()}),
+                        (text: "cancel".localizable, onTap: {
+                            self.connectionLinkType = .null
+                            self.pauseViewController?.refreshMenuItems()
+                        })
+                    ])
+                } else {
+                    if connectionLinkType == .server && connectionState != .Link_Ok {
+                        self.showServerAlert()
+                    } else {
+                        self.presentGameExperimentalToastView("\(connectionLinkType.rawValue): \(ConnectionLinkState.Link_needs_update.textValue)")
+                    }
+                    
+                }
+            }
+            
+            pauseViewController.deviceConnection?.action = { [unowned self] item in
+                if self.connectionLinkType != .null{
+                    self.tryConnection()
+                }
+            }
+            
+            pauseViewController.startConnectionServer?.action = { [unowned self] item in
+                if self.connectionLinkType == .client{
+                    self.startLink()
+                }
             }
             
             pauseViewController.cheatCodesItem?.action = { [unowned self] item in
@@ -785,6 +918,7 @@ extension GameViewController
     {
         self.pauseViewController = nil
         self.pausingGameController = nil
+        self.pausePresentedViewController = nil
         
         guard let identifier = segue.identifier else { return }
         
@@ -1235,11 +1369,11 @@ private extension GameViewController
                 
                 try context.save()
                 try Data(contentsOf: game.gameSaveURL).write(to: game.localSaveURL)
-                self.presentExperimentalToastView("Game_Data_Saved".localizable)
+                self.presentGameExperimentalToastView("Game_Data_Saved".localizable)
                 DatabaseManager.userGamesDirectoryURL()
                 StorageHelper.saveGame(gameName: game.name, path: game.gameSaveURL, actualDate: actualDate){ success in
                     if success {
-                        self.presentExperimentalToastView("Game_Data_Saved_online".localizable)
+                        self.presentGameExperimentalToastView("Game_Data_Saved_online".localizable)
                     }
                 }
             }
@@ -1364,7 +1498,7 @@ extension GameViewController: SaveStatesViewControllerDelegate
         if ExperimentalFeatures.shared.toastNotifications.stateSaveEnabled,
            saveState.type != .auto
         {
-            self.presentExperimentalToastView("Game_Data_Saved".localizable)
+            self.presentGameExperimentalToastView("Game_Data_Saved".localizable)
         }
         
         if isRunning
@@ -1417,7 +1551,7 @@ extension GameViewController: SaveStatesViewControllerDelegate
             
             if ExperimentalFeatures.shared.toastNotifications.stateLoadEnabled
             {
-                self.presentExperimentalToastView("Game_Data_Loaded".localizable)
+                self.presentGameExperimentalToastView("Game_Data_Loaded".localizable)
             }
         }
         catch EmulatorCore.SaveStateError.doesNotExist
@@ -1616,7 +1750,7 @@ extension GameViewController
             
             if ExperimentalFeatures.shared.toastNotifications.fastForwardEnabled
             {
-                self.presentExperimentalToastView("Fast_Forward_enabled".localizable)
+                self.presentGameExperimentalToastView("Fast_Forward_enabled".localizable)
             }
         }
         else
@@ -1625,7 +1759,7 @@ extension GameViewController
             
             if ExperimentalFeatures.shared.toastNotifications.fastForwardEnabled
             {
-                self.presentExperimentalToastView("Fast_Forward_disabled".localizable)
+                self.presentGameExperimentalToastView("Fast_Forward_disabled".localizable)
             }
         }
     }

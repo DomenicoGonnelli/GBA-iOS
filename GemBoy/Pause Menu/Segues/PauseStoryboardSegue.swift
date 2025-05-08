@@ -11,7 +11,7 @@ import UIKit
 class PauseStoryboardSegue: UIStoryboardSegue
 {
     private let animator: UIViewPropertyAnimator
-    private let presentationController: PausePresentationController
+    let presentationController: PausePresentationController
     
     override init(identifier: String?, source: UIViewController, destination: UIViewController)
     {
@@ -22,6 +22,7 @@ class PauseStoryboardSegue: UIStoryboardSegue
         
         super.init(identifier: identifier, source: source, destination: destination)
     }
+    
     
     override func perform()
     {

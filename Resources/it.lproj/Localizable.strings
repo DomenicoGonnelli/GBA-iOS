@@ -669,11 +669,52 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 
 
 "server_connect_title" = "Server Avviato";
-"server_connect_message" = "Il server è stato avviato correttamente. Assicurati che il secondo dispositivo sia collegato alla stessa rete e premi 'Connetti'; dopo aver selezionato 'Client' inserisci il seguente IP:\n\n%@";
-
+"server_connect_message" = "Server è stato avviato correttamente: adesso è possibile attivare la connessione sul secondo device come 'Utente Client' utilizando il seguente IP:\n\n%@";
 
 "StatisticsTitle" = "Scopri le sfide riservate a te!\nRiuscirai a conquistare tutte le medaglie?";
 "Medals" = "Le mie medaglie";
 
 "medalsUserProfileTitle" = "Le mie medaglie";
 "statisticsUserProfileTitle" = "Statistiche";
+
+"connect" = "Connetti/Scambia";
+"select_connection_type_title" = "Connetti Dispositivi";
+"select_connection_type_message" = "Per avviare una connessione occorre che i dispositivi siano connessi alla stessa rete.\nSeleziona 'Utente Server' su un dispositivo e 'Utente Client' sull'altro.";
+"client" = "Utente Client";
+"server" = "Utente Server";
+"cancel" = "Annulla";
+
+"unconnect" = "Chiudi Connessione";
+"select_unconnection_type_title" = "Chiudi Connessione";
+"select_unconnection_type_message" = "Stai per chiudere la connessione tra i dispositivi, sei sicuro di voler continuare?";
+
+"client_ip_title" = "Avvia Client";
+"client_ip_message" = "Per avviare il client è necessario connettere i dispositivi alla stessa rete e inserire l'indirizzo IP fornito dal Server";
+
+"client_started_title" = "Client Avviato";
+"client_started_message" = "I dispositivi sono connessi alla stessa rete: per avviare la connessione premi 'Avvia Connessione' sul device Server.";
+
+"linkDevice" = "Connetti Device";
+"linkDevice_title_server" = "In attesa di altri giocatori";
+"linkDevice_message_server" = "Hai avviato correttamente la connessione. Attendi il completamento della procedura lato client";
+
+"linkDevice_title_client" = "Connessione Device";
+"linkDevice_message_client" = "Complimenti, ti sei connetto come utente Client #%@. Premi 'Avvia Connessione' per completare il processo";
+"linkDevice_message_2_client" = "In attesa che altri %@ utenti si colleghino. Quanto tutti gli utenti saranno connessi, premere il pulsante '' ";
+
+"startConnection" = "Avvia Connessione";
+"startConnection_title" = "Connessione avvenuta con successo";
+"startConnection_message" = "Siete pronti alla connessione GBA via cavo: è importante che i dispositivi rimangano connessi e l'emulatore non vada in pausa.";
+
+
+"link_OK_text" = "Connessione OK";
+"link_Error_text"= "Errore di Connessione";
+"link_Update_text"= "Connessione in Corso, continua la procedura";
+"link_Abort_text"= "Connessione Interrotta";
+
+"local_connection_ok" = "Connesso alla rete locale";
+"local_connection_ko" = "Non sei connesso alla rete locale";
+
+"connectionErrorRestart_title" = "Errore nella connessione";
+"connectionErrorRestart_message" = "Qualcosa è andato storto durante la connessione! Premi 'Interrompi Connessione' sia sul Client che sul Server e riprova";
+

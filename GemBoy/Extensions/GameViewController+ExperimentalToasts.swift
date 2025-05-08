@@ -25,3 +25,23 @@ extension UIViewController
         }
     }
 }
+
+extension UIPresentationController
+{
+    func presentExperimentalToastView(_ text: String, duration: Double? = nil)
+    {
+        let time = duration ?? ExperimentalFeatures.shared.toastNotifications.duration
+        guard ExperimentalFeatures.shared.toastNotifications.isEnabled else { return }
+        
+        DispatchQueue.main.async {
+            let toastView = RSTToastView(text: text, detailText: nil)
+            toastView.edgeOffset.vertical = 8
+            toastView.textLabel.textAlignment = .center
+            toastView.presentationEdge = .top
+            if let cv = self.containerView {
+                toastView.show(in: cv, duration: time)
+            }
+        }
+    }
+}
+

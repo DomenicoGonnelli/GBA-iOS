@@ -229,6 +229,7 @@
 		D5F702FD2C24CE5300DCD271 /* UISceneSession+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */; };
 		D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
 		D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
+		EB04DE172DCCB31800ED4ADE /* ConnectionLinkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */; };
 		EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */; };
 		EB21EA382DB92D8E00B6B1F4 /* StatisticsUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */; };
 		EB21EA392DB92D8E00B6B1F4 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */; };
@@ -698,6 +699,7 @@
 		D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneSession+Delta.swift"; sourceTree = "<group>"; };
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLinkState.swift; sourceTree = "<group>"; };
 		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB21EA262DB92D8E00B6B1F4 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		EB21EA282DB92D8E00B6B1F4 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -1645,6 +1647,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EB04DE152DCCB2DD00ED4ADE /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		EB21EA0C2DB9293100B6B1F4 /* startGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -1883,6 +1893,7 @@
 		EB8E0D3F2D94642D004BFB1F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EB04DE152DCCB2DD00ED4ADE /* Enum */,
 				EB69AB1D2D9781A500311D39 /* Protocols */,
 				EB69AB202D9781A500311D39 /* User */,
 				EB8E0D402D946445004BFB1F /* Utils */,
@@ -2712,6 +2723,7 @@
 				BF1DAD5D1D9F576000E752A7 /* PreferredControllerSkinsViewController.swift in Sources */,
 				BFE022A01F5B57FF0052D888 /* PopoverMenuButton.swift in Sources */,
 				EBA2BADE2D98490C007A25A6 /* LoginManager.swift in Sources */,
+				EB04DE172DCCB31800ED4ADE /* ConnectionLinkState.swift in Sources */,
 				BF6BF31C1EB821A0008E83CD /* GamesDatabaseImportOption.swift in Sources */,
 				D5AA0F142CE3F5040015D134 /* _ManagedPatron.swift in Sources */,
 				D51D8EC82D49CA26002649C2 /* Delta10ToDelta11.xcmappingmodel in Sources */,
