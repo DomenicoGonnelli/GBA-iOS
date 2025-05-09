@@ -276,6 +276,9 @@ private extension ControllerInputsViewController
             case .startConnection:
                 image = #imageLiteral(resourceName: "Link")
                 text = "startConnection".localizable
+            case .abortConnection:
+                image = #imageLiteral(resourceName: "Link")
+                text = "startConnection".localizable
             }
             
             let item = MenuItem(text: text, image: image) { [unowned self] (item) in

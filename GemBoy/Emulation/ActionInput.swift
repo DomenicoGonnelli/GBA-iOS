@@ -25,6 +25,7 @@ enum ActionInput: String
     case connect
     case linkDevice
     case startConnection
+    case abortConnection
 }
 
 extension ActionInput: Input

@@ -12,7 +12,7 @@ import Roxas
 class GridMenuViewController: UICollectionViewController
 {
     
-    var cellWidht: CGFloat = 90
+    var cellWidht: CGFloat = 80
     var cellHeight: CGFloat {
         cellWidht*1.1
     }
@@ -45,10 +45,9 @@ class GridMenuViewController: UICollectionViewController
     override var preferredContentSize: CGSize {
         set { }
         get {
-
             let itemsRows =  Int(floor(self.view.frame.width / (cellWidht*1.2) ))
             let n_row = Int(ceil(CGFloat(dataSource.items.count) / CGFloat(itemsRows)))
-            return CGSize(width: self.view.frame.width, height: CGFloat(n_row * 120 + 30))
+            return CGSize(width: self.view.frame.width, height: CGFloat(n_row * 120 + 50))
         }
     }
     

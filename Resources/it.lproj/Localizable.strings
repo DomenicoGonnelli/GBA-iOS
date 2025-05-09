@@ -692,7 +692,7 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "client_ip_message" = "Per avviare il client è necessario connettere i dispositivi alla stessa rete e inserire l'indirizzo IP fornito dal Server";
 
 "client_started_title" = "Client Avviato";
-"client_started_message" = "I dispositivi sono connessi alla stessa rete: per avviare la connessione premi 'Avvia Connessione' sul device Server.";
+"client_started_message" = "I dispositivi sono connessi alla stessa rete: per avviare la connessione premi 'Connetti Device' sul device Server";
 
 "linkDevice" = "Connetti Device";
 "linkDevice_title_server" = "In attesa di altri giocatori";
@@ -706,7 +706,6 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "startConnection_title" = "Connessione avvenuta con successo";
 "startConnection_message" = "Siete pronti alla connessione GBA via cavo: è importante che i dispositivi rimangano connessi e l'emulatore non vada in pausa.";
 
-
 "link_OK_text" = "Connessione OK";
 "link_Error_text"= "Errore di Connessione";
 "link_Update_text"= "Connessione in Corso, continua la procedura";
@@ -716,5 +715,4 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "local_connection_ko" = "Non sei connesso alla rete locale";
 
 "connectionErrorRestart_title" = "Errore nella connessione";
-"connectionErrorRestart_message" = "Qualcosa è andato storto durante la connessione! Premi 'Interrompi Connessione' sia sul Client che sul Server e riprova";
-
+"connectionErrorRestart_message" = "Ops, si è verificato un errore e non è possibile procedere con la connessione! Premi 'Chiudi Connessione' sia sul Client che sul Server e riprova. Se il problema persiste, riavvia l'App";

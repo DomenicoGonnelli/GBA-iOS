@@ -114,6 +114,21 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
 //        connection.start(queue: .main)
 //    }
     
+    func closeConnection(){
+        let game = self.game as? Game
+        if game?.type == .gba {
+            self.pauseViewController?.showAlerCustom(title: "select_unconnection_type_title".localizable, message: "select_unconnection_type_message".localizable, firtButtonText: "unconnect".localizable, cancelText: "Cancel".localizable, onOkTap: {
+                let code = GBAEmulatorBridge.shared.closeConnection()
+                let connectionState = ConnectionLinkState.state(forIndex: Int(code))
+                self.connectionState = connectionState
+                self.presentGameExperimentalToastView("\(self.connectionLinkType.rawValue): \(connectionState.textValue)")
+                self.connectionLinkType = .null
+                self.pauseViewController?.refreshMenuItems()
+            })
+        }
+        
+    }
+    
     func startServer(){
         let game = self.game as? Game
         if game?.type == .gba {
@@ -122,7 +137,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
                 let code = GBAEmulatorBridge.shared.startServer()
                 let connectionState = ConnectionLinkState.state(forIndex: Int(code))
                 self.connectionState = connectionState
-                if self.connectionState == .Link_needs_update {
+                if self.connectionState == .Link_needs_update || self.connectionState == .Link_abort{
                     self.showServerAlert()
                 } else {
                     self.showConnectErrorAlert()
@@ -141,6 +156,8 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
                 self.connectionLinkType = .server
                 self.pauseViewController?.refreshMenuItems()
             })
+        } else {
+            showConnectErrorAlert()
         }
     }
     
@@ -197,7 +214,9 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
                         if connectionState == .Link_needs_update {
                             self.connectionLinkType = .client
                             self.pauseViewController?.refreshMenuItems()
-                            self.presentGameExperimentalToastView("Client: \(ConnectionLinkState.Link_needs_update.textValue)")
+                            self.presentGameExperimentalToastView("Client: \(self.connectionState .textValue)")
+                            
+                            self.pauseViewController?.showAlerOk(title: "client_started_title".localizable, message: "client_started_message".localizable)
                         } else {
                             self.showConnectErrorAlert()
                         }
@@ -216,7 +235,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
         let game = self.game as? Game
         
         if connectionState == .Link_Ok{
-            self.presentGameExperimentalToastView("Server/Client: \(connectionState.textValue)")
+            self.presentGameExperimentalToastView("\(connectionLinkType.rawValue): \(connectionState.textValue)")
             return
         }
         
@@ -564,6 +583,8 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
                 print("startConnection")
             case .linkDevice:
                 print("linkDevice")
+            case .abortConnection:
+                print("abortConnection")
             }
             
                 
@@ -624,6 +645,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             case .connect: break
             case .linkDevice: break
             case .startConnection: break
+            case .abortConnection: break
             }
         }
     }
@@ -826,10 +848,13 @@ extension GameViewController
                     if connectionLinkType == .server && connectionState != .Link_Ok {
                         self.showServerAlert()
                     } else {
-                        self.presentGameExperimentalToastView("\(connectionLinkType.rawValue): \(ConnectionLinkState.Link_needs_update.textValue)")
+                        self.presentGameExperimentalToastView("\(connectionLinkType.rawValue): \(connectionState.textValue)")
                     }
-                    
                 }
+            }
+            
+            pauseViewController.unconnectItem?.action = { [unowned self] item in
+                self.closeConnection()
             }
             
             pauseViewController.deviceConnection?.action = { [unowned self] item in

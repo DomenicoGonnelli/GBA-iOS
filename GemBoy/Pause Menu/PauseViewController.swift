@@ -27,8 +27,10 @@ class PauseViewController: BaseViewController, PauseInfoProviding
             if isConnectingMode == .client {
                 list.append(self.deviceConnection)
                 list.append(self.startConnectionServer)
+                list.append(self.unconnectItem)
             } else if isConnectingMode == .server {
                 list.append(self.deviceConnection)
+                list.append(self.unconnectItem)
             }
         }
             
@@ -58,6 +60,7 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     var closeGameItem: MenuItem?
     
     var connectItem: MenuItem?
+    var unconnectItem: MenuItem?
     var deviceConnection: MenuItem?
     var startConnectionServer: MenuItem?
     
@@ -256,10 +259,10 @@ extension PauseViewController: UINavigationControllerDelegate
         self.screenshotItem = MenuItem(text: "Screenshot".localizable, image: #imageLiteral(resourceName: "Screenshot"), action: { _ in })
         self.closeGameItem = MenuItem(text: "closeGame".localizable, image: #imageLiteral(resourceName: "closeGame"), action: { _ in })
      
-        self.connectItem = MenuItem(text: "connect".localizable, image: #imageLiteral(resourceName: "Link"), action: { _ in
-        })
+        self.connectItem = MenuItem(text: "connect".localizable, image: #imageLiteral(resourceName: "Link"), action: { _ in })
+        self.unconnectItem = MenuItem(text: "unconnect".localizable, image: #imageLiteral(resourceName: "unconnect"), action: { _ in })
         self.deviceConnection = MenuItem(text: "linkDevice".localizable, image: #imageLiteral(resourceName: "changeTeamIcon"), action: { _ in })
-        self.startConnectionServer = MenuItem(text: "startConnection".localizable, image: #imageLiteral(resourceName: "Link"), action: { _ in })
+        self.startConnectionServer = MenuItem(text: "startConnection".localizable, image: #imageLiteral(resourceName: "client_start"), action: { _ in })
 
         if ExperimentalFeatures.shared.variableFastForward.isEnabled
         {
