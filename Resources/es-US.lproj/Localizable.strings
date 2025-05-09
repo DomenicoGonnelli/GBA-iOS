@@ -623,3 +623,46 @@
 
 "StatisticsTitle" = "¡Descubre los desafíos reservados para ti!\n¿Lograrás conquistar todas las medallas?";
 "Medals" = "Mis Medallas";
+
+"medalsUserProfileTitle" = "Mis Medallas";
+"statisticsUserProfileTitle" = "Estadísticas";
+
+"connect" = "Conectar/Intercambiar";
+"select_connection_type_title" = "Conectar Dispositivos";
+"select_connection_type_message" = "Para iniciar una conexión, los dispositivos deben estar en la misma red.\nSelecciona 'Usuario Servidor' en un dispositivo y 'Usuario Cliente' en el otro.";
+"client" = "Usuario Cliente";
+"server" = "Usuario Servidor";
+"cancel" = "Cancelar";
+
+"unconnect" = "Cerrar Conexión";
+"select_unconnection_type_title" = "Cerrar Conexión";
+"select_unconnection_type_message" = "Estás a punto de cerrar la conexión entre los dispositivos. ¿Estás seguro de que deseas continuar?";
+
+"client_ip_title" = "Iniciar Cliente";
+"client_ip_message" = "Para iniciar el cliente, los dispositivos deben estar en la misma red e ingresar la dirección IP proporcionada por el Servidor";
+
+"client_started_title" = "Cliente Iniciado";
+"client_started_message" = "Los dispositivos están en la misma red: para iniciar la conexión, presiona 'Conectar Dispositivo' en el dispositivo Servidor";
+
+"linkDevice" = "Conectar Dispositivo";
+"linkDevice_title_server" = "Esperando otros jugadores";
+"linkDevice_message_server" = "Conexión iniciada con éxito. Espera a que el cliente complete el procedimiento";
+
+"linkDevice_title_client" = "Conexión de Dispositivo";
+"linkDevice_message_client" = "Felicidades, estás conectado como Usuario Cliente #%@. Presiona 'Iniciar Conexión' para completar el proceso";
+"linkDevice_message_2_client" = "Esperando que se conecten %@ usuarios más. Una vez que todos estén conectados, presiona el botón ''";
+
+"startConnection" = "Iniciar Conexión";
+"startConnection_title" = "Conexión exitosa";
+"startConnection_message" = "Estás listo para la conexión GBA por cable: asegúrate de que los dispositivos permanezcan conectados y que el emulador no se pause.";
+
+"link_OK_text" = "Conexión OK";
+"link_Error_text" = "Error de Conexión";
+"link_Update_text" = "Conexión en curso, continúa el procedimiento";
+"link_Abort_text" = "Conexión Interrumpida";
+
+"local_connection_ok" = "Conectado a la red local";
+"local_connection_ko" = "No estás conectado a la red local";
+
+"connectionErrorRestart_title" = "Error de Conexión";
+"connectionErrorRestart_message" = "¡Ups! Ocurrió un error y no se puede continuar con la conexión. Pulsa 'Cerrar Conexión' tanto en el Cliente como en el Servidor e intenta nuevamente. Si el problema persiste, reinicia la aplicación.";

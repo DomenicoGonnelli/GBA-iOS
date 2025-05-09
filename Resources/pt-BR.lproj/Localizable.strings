@@ -622,3 +622,46 @@
 "socialMedalsCondition" = "Para desbloquear a <m>%@</m>, compartilhe o app com seus amigos";
 "StatisticsTitle" = "Descubra os desafios reservados para você!\nSerá que você conseguirá conquistar todas as medalhas?";
 "Medals" = "Minhas Medalhas";
+
+"medalsUserProfileTitle" = "Minhas Medalhas";
+"statisticsUserProfileTitle" = "Estatísticas";
+
+"connect" = "Conectar/Trocar";
+"select_connection_type_title" = "Conectar Dispositivos";
+"select_connection_type_message" = "Para iniciar uma conexão, os dispositivos devem estar na mesma rede.\nSelecione 'Usuário Servidor' em um dispositivo e 'Usuário Cliente' no outro.";
+"client" = "Usuário Cliente";
+"server" = "Usuário Servidor";
+"cancel" = "Cancelar";
+
+"unconnect" = "Desconectar";
+"select_unconnection_type_title" = "Desconectar";
+"select_unconnection_type_message" = "Você está prestes a encerrar a conexão entre os dispositivos. Tem certeza de que deseja continuar?";
+
+"client_ip_title" = "Iniciar Cliente";
+"client_ip_message" = "Para iniciar o cliente, os dispositivos devem estar na mesma rede e inserir o endereço IP fornecido pelo Servidor";
+
+"client_started_title" = "Cliente Iniciado";
+"client_started_message" = "Os dispositivos estão na mesma rede: para iniciar a conexão, pressione 'Conectar Dispositivo' no dispositivo Servidor";
+
+"linkDevice" = "Conectar Dispositivo";
+"linkDevice_title_server" = "Aguardando outros jogadores";
+"linkDevice_message_server" = "Conexão iniciada com sucesso. Aguarde a conclusão do procedimento pelo cliente";
+
+"linkDevice_title_client" = "Conexão de Dispositivo";
+"linkDevice_message_client" = "Parabéns, você está conectado como Usuário Cliente #%@. Pressione 'Iniciar Conexão' para completar o processo";
+"linkDevice_message_2_client" = "Aguardando mais %@ usuários se conectarem. Quando todos estiverem conectados, pressione o botão ''";
+
+"startConnection" = "Iniciar Conexão";
+"startConnection_title" = "Conexão bem-sucedida";
+"startConnection_message" = "Pronto para a conexão GBA via cabo: é importante que os dispositivos permaneçam conectados e o emulador não fique em pausa.";
+
+"link_OK_text" = "Conexão OK";
+"link_Error_text" = "Erro de Conexão";
+"link_Update_text" = "Conexão em andamento, continue o procedimento";
+"link_Abort_text" = "Conexão Interrompida";
+
+"local_connection_ok" = "Conectado à rede local";
+"local_connection_ko" = "Você não está conectado à rede local";
+
+"connectionErrorRestart_title" = "Erro de Conexão";
+"connectionErrorRestart_message" = "Ops, ocorreu um erro e não foi possível continuar com a conexão! Pressione 'Desconectar' tanto no Cliente quanto no Servidor e tente novamente. Se o problema persistir, reinicie o aplicativo.";

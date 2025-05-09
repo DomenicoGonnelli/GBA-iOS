@@ -624,20 +624,45 @@
 "StatisticsTitle" = "Discover the challenges reserved for you!\nWill you be able to earn all the medals?";
 "Medals" = "My Medals";
 
-"StatisticsTitle" = "Scopri le sfide riservate a te!\nRiuscirai a conquistare tutte le medaglie?";
-"Medals" = "Le mie medaglie";
+"medalsUserProfileTitle" = "My Medals";
+"statisticsUserProfileTitle" = "Statistics";
 
-"connect" = "Connetti/Scambia";
-"select_connection_type_title" = "Avvia Connessione";
-"select_connection_type_message" = "Per avviare una connessione occorre che i dispositivi siano connessi alla stessa rete. Seleziona 'Utente Server' su un dispositivo e 'Utente Client' sull'altro.";
-"client" = "Utente Client";
-"server" = "Utente Server";
-"cancel" = "Annulla";
+"connect" = "Connect/Trade";
+"select_connection_type_title" = "Connect Devices";
+"select_connection_type_message" = "To start a connection, devices must be on the same network.\nSelect 'Server User' on one device and 'Client User' on the other.";
+"client" = "Client User";
+"server" = "Server User";
+"cancel" = "Cancel";
 
+"unconnect" = "Disconnect";
+"select_unconnection_type_title" = "Disconnect";
+"select_unconnection_type_message" = "You are about to disconnect the devices. Are you sure you want to continue?";
 
-"unconnect" = "Chiudi Connessione";
-"select_unconnection_type_title" = "Chiudi Connessione";
-"select_unconnection_type_message" = "Stai per chiudere la connessione tra i dispositivi";
+"client_ip_title" = "Start Client";
+"client_ip_message" = "To start the client, devices must be on the same network and the IP address provided by the Server must be entered";
 
+"client_started_title" = "Client Started";
+"client_started_message" = "Devices are on the same network: to start the connection, press 'Connect Device' on the Server device";
 
+"linkDevice" = "Connect Device";
+"linkDevice_title_server" = "Waiting for other players";
+"linkDevice_message_server" = "Connection started successfully. Please wait for the client to complete the procedure";
 
+"linkDevice_title_client" = "Device Connection";
+"linkDevice_message_client" = "Congrats, you are connected as Client User #%@. Press 'Start Connection' to complete the process";
+"linkDevice_message_2_client" = "Waiting for %@ more users to connect. Once all users are connected, press the '' button";
+
+"startConnection" = "Start Connection";
+"startConnection_title" = "Connection successful";
+"startConnection_message" = "You are ready for GBA cable link: make sure devices stay connected and the emulator is not paused.";
+
+"link_OK_text" = "Connection OK";
+"link_Error_text" = "Connection Error";
+"link_Update_text" = "Connection in progress, continue the procedure";
+"link_Abort_text" = "Connection Aborted";
+
+"local_connection_ok" = "Connected to local network";
+"local_connection_ko" = "Not connected to local network";
+
+"connectionErrorRestart_title" = "Connection Error";
+"connectionErrorRestart_message" = "Oops, an error occurred and the connection can’t proceed! Press 'Disconnect' on both Client and Server and try again. If the issue persists, restart the app.";

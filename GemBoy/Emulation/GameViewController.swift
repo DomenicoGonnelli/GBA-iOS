@@ -251,6 +251,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             if connectionLinkType == .server {
                 self.pauseViewController?.showAlerOk(title: "linkDevice_title_server".localizable, message: "linkDevice_message_server".localizable){
                     self.presentGameExperimentalToastView("Server: \(connectionState.textValue)")
+                    AppManager.connectDevice = true
                 }
                
             } else if connectionLinkType == .client {
@@ -278,6 +279,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
                 if connectionState == .Link_Ok {
                     self.pauseViewController?.showAlerOk(title: "startConnection_title".localizable, message: "startConnection_message".localizable){
                         self.presentGameExperimentalToastView("Client: \(connectionState.textValue)")
+                        AppManager.connectDevice = true
                     }
                 } else {
                     self.showConnectErrorAlert()
