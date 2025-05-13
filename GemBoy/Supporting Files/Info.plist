@@ -193,7 +193,7 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-5791654562344514~4249868638</string>
+	<string>ca-app-pub-5791654562344514~4101545318</string>
 	<key>GCSupportedGameControllers</key>
 	<array>
 		<dict>
