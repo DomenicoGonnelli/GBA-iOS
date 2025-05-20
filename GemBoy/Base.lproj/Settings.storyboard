@@ -14,7 +14,7 @@
         <!--Settings-->
         <scene sceneID="N30-Sa-dHo">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsViewController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eHi-aO-uGS" customClass="SettingsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsViewController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eHi-aO-uGS" customClass="SettingsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hRw-wV-lch">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="3400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -938,7 +938,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Controls-->
         <scene sceneID="Gi9-m1-y9x">
             <objects>
-                <viewController title="Controls" id="x1g-pH-DnF" customClass="ControllerInputsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Controls" id="x1g-pH-DnF" customClass="ControllerInputsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cH1-gu-g2u"/>
                         <viewControllerLayoutGuide type="bottom" id="Z6c-bc-h6l"/>
@@ -1018,7 +1018,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Controllers-->
         <scene sceneID="swa-DT-VKS">
             <objects>
-                <tableViewController id="uBz-mm-mXr" customClass="ControllersSettingsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="uBz-mm-mXr" customClass="ControllersSettingsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="hLd-Z5-I3b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1082,7 +1082,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Preferred Controller Skins View Controller-->
         <scene sceneID="pkL-Te-puh">
             <objects>
-                <tableViewController storyboardIdentifier="preferredControllerSkins" id="56e-ul-z6v" customClass="PreferredControllerSkinsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="preferredControllerSkins" id="56e-ul-z6v" customClass="PreferredControllerSkinsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fdQ-n7-kUL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1170,7 +1170,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Home Screen Shortcuts-->
         <scene sceneID="e9N-fv-yuQ">
             <objects>
-                <tableViewController id="yXS-6u-1AN" customClass="AppIconShortcutsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yXS-6u-1AN" customClass="AppIconShortcutsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="97" sectionHeaderHeight="18" sectionFooterHeight="18" id="BGy-Nh-8Yd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1214,13 +1214,13 @@ Menu + Long-Press: Quick Load</string>
         <!--Controller Skins-->
         <scene sceneID="IN0-an-SWm">
             <objects>
-                <tableViewController title="Controller Skins" id="pG9-hI-tRE" customClass="ControllerSkinsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Controller Skins" id="pG9-hI-tRE" customClass="ControllerSkinsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="150" sectionHeaderHeight="18" sectionFooterHeight="18" id="WiB-mC-9xS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kK3-bl-qxv" customClass="ControllerSkinTableViewCell" customModule="Purple_Emulator" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kK3-bl-qxv" customClass="ControllerSkinTableViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kK3-bl-qxv" id="7Vt-Nl-Sfx">
@@ -1280,7 +1280,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Alt App Icons View Controller-->
         <scene sceneID="GyB-rQ-UAg">
             <objects>
-                <collectionViewController id="3dI-qS-gTg" customClass="AltAppIconsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="3dI-qS-gTg" customClass="AltAppIconsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="j1R-PT-yrg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1333,18 +1333,18 @@ Menu + Long-Press: Quick Load</string>
         <!--Grid Menu View Controller-->
         <scene sceneID="Lgi-Ii-M1W">
             <objects>
-                <collectionViewController id="Jpj-e9-6XW" customClass="GridMenuViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="Jpj-e9-6XW" customClass="GridMenuViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yGk-jU-wZQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tLr-UM-1BH" customClass="GridCollectionViewLayout" customModule="Purple_Emulator" customModuleProvider="target">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tLr-UM-1BH" customClass="GridCollectionViewLayout" customModule="GemBoy_Advance" customModuleProvider="target">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Hef-IR-nMO" customClass="GridCollectionViewCell" customModule="Purple_Emulator" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="Hef-IR-nMO" customClass="MenuCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1362,7 +1362,7 @@ Menu + Long-Press: Quick Load</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRg-BA-3KK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4858" y="-931"/>
+            <point key="canvasLocation" x="5007" y="146"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="qAz-yz-iOc">
@@ -1380,7 +1380,7 @@ Menu + Long-Press: Quick Load</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQK-ch-9AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4858" y="-244"/>
+            <point key="canvasLocation" x="5006" y="-590"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bwW-s2-fcE">
@@ -1405,7 +1405,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Syncing Service-->
         <scene sceneID="8nM-uV-t0b">
             <objects>
-                <tableViewController title="Syncing Service" id="R9m-rV-VgV" customClass="SyncingServicesViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Syncing Service" id="R9m-rV-VgV" customClass="SyncingServicesViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Zsb-6q-tLe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1551,12 +1551,12 @@ Menu + Long-Press: Quick Load</string>
         <!--Sync Status-->
         <scene sceneID="IYe-DI-U7i">
             <objects>
-                <tableViewController title="Sync Status" id="vVg-ci-JRa" customClass="SyncStatusViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Sync Status" id="vVg-ci-JRa" customClass="SyncStatusViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Nza-ON-XbS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="AWh-ik-Gvu" style="IBUITableViewCellStyleDefault" id="wpv-cf-duw" customClass="BadgedTableViewCell" customModule="Purple_Emulator" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="AWh-ik-Gvu" style="IBUITableViewCellStyleDefault" id="wpv-cf-duw" customClass="BadgedTableViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="16" y="55.5" width="343" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wpv-cf-duw" id="ehC-Qx-Zx4">
@@ -1619,7 +1619,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Game Sync Status View Controller-->
         <scene sceneID="iQk-cq-qsQ">
             <objects>
-                <tableViewController id="OnX-sX-bHK" customClass="GameSyncStatusViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="OnX-sX-bHK" customClass="GameSyncStatusViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="AFt-Hn-fzR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1659,7 +1659,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Record Sync Status View Controller-->
         <scene sceneID="GG8-80-sV4">
             <objects>
-                <tableViewController storyboardIdentifier="recordSyncStatusViewController" id="kBh-Lp-rBr" customClass="RecordSyncStatusViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="recordSyncStatusViewController" id="kBh-Lp-rBr" customClass="RecordSyncStatusViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="k6O-hT-4zC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1871,7 +1871,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Versions-->
         <scene sceneID="xaH-AW-NqP">
             <objects>
-                <tableViewController id="PGW-Yp-czd" customClass="RecordVersionsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="PGW-Yp-czd" customClass="RecordVersionsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="9fJ-qb-tfO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1966,7 +1966,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Licenses-->
         <scene sceneID="x0a-yZ-xix">
             <objects>
-                <viewController id="Vew-Fv-phU" customClass="LicensesViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vew-Fv-phU" customClass="LicensesViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFY-Qi-vAX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2096,7 +2096,7 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
         <!--DS Settings-->
         <scene sceneID="rRC-R2-Ico">
             <objects>
-                <tableViewController storyboardIdentifier="dsSettingsViewController" title="DS Settings" id="OwL-4c-EEA" customClass="MelonDSCoreSettingsViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="dsSettingsViewController" title="DS Settings" id="OwL-4c-EEA" customClass="MelonDSCoreSettingsViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ops-m1-tlV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1098"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2493,7 +2493,7 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
         <!--Friend Zone Patrons-->
         <scene sceneID="vxf-6s-Sqp">
             <objects>
-                <collectionViewController id="4DO-Ey-uDN" customClass="PatreonViewController" customModule="Purple_Emulator" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="4DO-Ey-uDN" customClass="PatreonViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="DK6-vp-wGV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2506,7 +2506,7 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
                             <inset key="sectionInset" minX="20" minY="8" maxX="20" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mqY-Rp-jLe" customClass="PatronCollectionViewCell" customModule="Purple_Emulator" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="mqY-Rp-jLe" customClass="PatronCollectionViewCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="20" y="8" width="157" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -2572,16 +2572,16 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

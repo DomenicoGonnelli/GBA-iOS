@@ -180,7 +180,7 @@ private extension ControllerInputsViewController
         }
         
         // Update controller view's controller skin.
-        self.gameViewController.controllerView.controllerSkin = DeltaCore.ControllerSkin.standardControllerSkin(for: self.system.gameType)
+        self.gameViewController.controllerView.controllerSkin = ControllerSkin.dg_controller(system: self.system)
         self.gameViewController.view.setNeedsUpdateConstraints()
         
         // Fetch input mapping if it hasn't already been fetched.

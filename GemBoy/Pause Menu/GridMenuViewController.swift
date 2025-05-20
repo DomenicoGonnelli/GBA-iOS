@@ -34,7 +34,7 @@ class GridMenuViewController: UICollectionViewController
             let layout = self.collectionViewLayout as! GridCollectionViewLayout
             layout.itemWidth = newValue
             
-            self.prototypeCellWidthConstraint.constant = newValue
+            self.prototypeCellWidthConstraint?.constant = newValue
             
             self.collectionViewLayout.invalidateLayout()
         }
@@ -53,7 +53,7 @@ class GridMenuViewController: UICollectionViewController
     
     private let dataSource = RSTArrayCollectionViewDataSource<MenuItem>(items: [])
     
-    private var prototypeCellWidthConstraint: NSLayoutConstraint!
+    private var prototypeCellWidthConstraint: NSLayoutConstraint?
     
     private var previousIndexPath: IndexPath? = nil
     

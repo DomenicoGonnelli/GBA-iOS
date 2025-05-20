@@ -74,7 +74,7 @@ class GamesViewController: BaseViewController
 
     @IBOutlet private var selectedRoundedView: UIView!
     
-    private var orderedSystem : [System] = [.gba, .gbc, .nes, .snes, .n64]
+    private var orderedSystem : [System] = [.gba, .gbc, .nes, .snes, .n64, .ds]
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         fatalError("initWithNibName: not implemented")

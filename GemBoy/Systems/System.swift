@@ -30,7 +30,7 @@ enum System: CaseIterable
     case ds
     
     static var DGITems: [System] {
-        return [.nes,.snes,.n64, .gbc, .gba]
+        return [.nes,.snes,.n64, .gbc, .gba, .ds]
     }
     
     static var registeredSystems: [System] {
