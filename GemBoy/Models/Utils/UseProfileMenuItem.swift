@@ -27,7 +27,7 @@ public enum UserProfileMenuItem {
         return [
             "loginMode": loginMode,
             "configuration":[.settings,.changeLanguage],
-            //"contactUS":[.contactUs],
+            "contactUS": [.contactUs],
             "userInfo" : [.push, .medals, .statistics, .shareApp],
             "clear":[.deleteAccount,.logout]
         ]
@@ -35,7 +35,7 @@ public enum UserProfileMenuItem {
     
     static var sectionNames: [String] {
         return ["loginMode","configuration",
-                //"contactUS",
+                "contactUS",
                 "userInfo","clear"]
     }
     

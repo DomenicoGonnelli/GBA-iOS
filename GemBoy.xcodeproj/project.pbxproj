@@ -870,6 +870,25 @@
 		EBC3E7662DB7E395006B1CBC /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_SNES.deltaskin; sourceTree = "<group>"; };
 		EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
+		EBD8B2182DE23E39008A2AEA /* GBCEmulatorBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCEmulatorBridge.h; sourceTree = "<group>"; };
+		EBD8B2192DE23E39008A2AEA /* GBCEmulatorBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GBCEmulatorBridge.mm; sourceTree = "<group>"; };
+		EBD8B21A2DE23E39008A2AEA /* GBCSoundDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCSoundDriver.h; sourceTree = "<group>"; };
+		EBD8B21B2DE23E39008A2AEA /* GBCSoundDriver.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GBCSoundDriver.mm; sourceTree = "<group>"; };
+		EBD8B21D2DE23E39008A2AEA /* info.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = info.json; sourceTree = "<group>"; };
+		EBD8B21E2DE23E39008A2AEA /* ipad_landscape.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ipad_landscape.pdf; sourceTree = "<group>"; };
+		EBD8B21F2DE23E39008A2AEA /* ipad_landscape_splitview.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ipad_landscape_splitview.pdf; sourceTree = "<group>"; };
+		EBD8B2202DE23E39008A2AEA /* ipad_portrait.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ipad_portrait.pdf; sourceTree = "<group>"; };
+		EBD8B2212DE23E39008A2AEA /* iphone_edgetoedge_landscape.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_edgetoedge_landscape.pdf; sourceTree = "<group>"; };
+		EBD8B2222DE23E39008A2AEA /* iphone_edgetoedge_portrait.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_edgetoedge_portrait.pdf; sourceTree = "<group>"; };
+		EBD8B2232DE23E39008A2AEA /* iphone_landscape.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_landscape.pdf; sourceTree = "<group>"; };
+		EBD8B2242DE23E39008A2AEA /* iphone_portrait.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_portrait.pdf; sourceTree = "<group>"; };
+		EBD8B2252DE23E39008A2AEA /* Standard.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = Standard.deltaskin; sourceTree = "<group>"; };
+		EBD8B2272DE23E39008A2AEA /* GBCTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCTypes.h; sourceTree = "<group>"; };
+		EBD8B2282DE23E39008A2AEA /* GBCTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCTypes.m; sourceTree = "<group>"; };
+		EBD8B22A2DE23E39008A2AEA /* GBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBC.swift; sourceTree = "<group>"; };
+		EBD8B22B2DE23E39008A2AEA /* GBCDeltaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCDeltaCore.h; sourceTree = "<group>"; };
+		EBD8B22C2DE23E39008A2AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBD8B22D2DE23E39008A2AEA /* Standard.deltamapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.deltamapping; sourceTree = "<group>"; };
 		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1262,6 +1281,7 @@
 		BF9F4FCD1AAD7B25004C9500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBD8B22E2DE23E39008A2AEA /* GBCDeltaCore */,
 				EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */,
 				EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */,
 				EBBB19F12D998613009C977A /* libGoogleSignIn.a */,
@@ -2207,6 +2227,57 @@
 				EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */,
 			);
 			path = Launchscreen;
+			sourceTree = "<group>";
+		};
+		EBD8B21C2DE23E39008A2AEA /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				EBD8B2182DE23E39008A2AEA /* GBCEmulatorBridge.h */,
+				EBD8B2192DE23E39008A2AEA /* GBCEmulatorBridge.mm */,
+				EBD8B21A2DE23E39008A2AEA /* GBCSoundDriver.h */,
+				EBD8B21B2DE23E39008A2AEA /* GBCSoundDriver.mm */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		EBD8B2262DE23E39008A2AEA /* Controller Skin */ = {
+			isa = PBXGroup;
+			children = (
+				EBD8B21D2DE23E39008A2AEA /* info.json */,
+				EBD8B21E2DE23E39008A2AEA /* ipad_landscape.pdf */,
+				EBD8B21F2DE23E39008A2AEA /* ipad_landscape_splitview.pdf */,
+				EBD8B2202DE23E39008A2AEA /* ipad_portrait.pdf */,
+				EBD8B2212DE23E39008A2AEA /* iphone_edgetoedge_landscape.pdf */,
+				EBD8B2222DE23E39008A2AEA /* iphone_edgetoedge_portrait.pdf */,
+				EBD8B2232DE23E39008A2AEA /* iphone_landscape.pdf */,
+				EBD8B2242DE23E39008A2AEA /* iphone_portrait.pdf */,
+				EBD8B2252DE23E39008A2AEA /* Standard.deltaskin */,
+			);
+			path = "Controller Skin";
+			sourceTree = "<group>";
+		};
+		EBD8B2292DE23E39008A2AEA /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EBD8B2272DE23E39008A2AEA /* GBCTypes.h */,
+				EBD8B2282DE23E39008A2AEA /* GBCTypes.m */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EBD8B22E2DE23E39008A2AEA /* GBCDeltaCore */ = {
+			isa = PBXGroup;
+			children = (
+				EBD8B21C2DE23E39008A2AEA /* Bridge */,
+				EBD8B2262DE23E39008A2AEA /* Controller Skin */,
+				EBD8B2292DE23E39008A2AEA /* Types */,
+				EBD8B22A2DE23E39008A2AEA /* GBC.swift */,
+				EBD8B22B2DE23E39008A2AEA /* GBCDeltaCore.h */,
+				EBD8B22C2DE23E39008A2AEA /* Info.plist */,
+				EBD8B22D2DE23E39008A2AEA /* Standard.deltamapping */,
+			);
+			name = GBCDeltaCore;
+			path = Cores/GBADeltaCore/GBCDeltaCore;
 			sourceTree = "<group>";
 		};
 		FD1E8AE87FA2DB8793F7B937 /* Pods */ = {
@@ -3170,7 +3241,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Emulator";
@@ -3179,7 +3250,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.5;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"-ObjC",
@@ -3251,7 +3322,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Emulator";
@@ -3260,7 +3331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.5;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"${inherited}",
@@ -3437,7 +3508,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -3453,7 +3524,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
@@ -3481,7 +3552,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -3496,7 +3567,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.5;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";

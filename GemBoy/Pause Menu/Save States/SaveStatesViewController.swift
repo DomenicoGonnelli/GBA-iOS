@@ -818,6 +818,9 @@ private extension SaveStatesViewController
             }
             
             try FileManager.default.copyItem(at: fileURL, to: saveState.fileURL, shouldReplace: true)
+            
+            self.showAlerOk(title: "import_success".localizable, message: "import_success_message".localizable)
+            
         }
         catch
         {

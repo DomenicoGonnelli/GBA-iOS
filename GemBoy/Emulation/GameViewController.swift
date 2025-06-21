@@ -19,6 +19,15 @@ import Roxas
 
 private var kvoContext = 0
 
+
+public extension GameProtocol{
+    
+    func showLink() -> Bool{
+        return type == .gba || type == .gbc
+    }
+    
+}
+
 private extension DeltaCore.ControllerSkin
 {
     func hasTouchScreen(for traits: DeltaCore.ControllerSkin.Traits) -> Bool
@@ -116,7 +125,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     
     func closeConnection(){
         let game = self.game as? Game
-        if game?.type == .gba {
+        if game?.showLink() == true {
             self.pauseViewController?.showAlerCustom(title: "select_unconnection_type_title".localizable, message: "select_unconnection_type_message".localizable, firtButtonText: "unconnect".localizable, cancelText: "Cancel".localizable, onOkTap: {
                 let code = GBAEmulatorBridge.shared.closeConnection()
                 let connectionState = ConnectionLinkState.state(forIndex: Int(code))
@@ -131,7 +140,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     
     func startServer(){
         let game = self.game as? Game
-        if game?.type == .gba {
+        if game?.showLink() == true {
             DispatchQueue.main.async(){
                 self.startLocal()
                 let code = GBAEmulatorBridge.shared.startServer()
@@ -202,7 +211,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     
     func startClient(){
         let game = self.game as? Game
-        if game?.type == .gba {
+        if game?.showLink() == true {
             startLocal()
             showIPAlert(on: self.pauseViewController){ ip in
                 if let ip = ip {
@@ -244,7 +253,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             return
         }
         
-        if game?.type == .gba {
+        if game?.showLink() == true {
             let code = GBAEmulatorBridge.shared.tryConncection()
             let connectionState = ConnectionLinkState.state(forIndex: Int(code))
             self.connectionState = connectionState
@@ -271,7 +280,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             return
         }
         
-        if game?.type == .gba && connectionLinkType == .client {
+        if game?.showLink() == true && connectionLinkType == .client {
             if connectionLinkType == .client {
                 let code = GBAEmulatorBridge.shared.tryConncection()
                 let connectionState = ConnectionLinkState.state(forIndex: Int(code))
@@ -1375,7 +1384,7 @@ private extension GameViewController
             {
                 let game = context.object(with: game.objectID) as! Game
 
-                let hash = try RSTHasher.sha1HashOfFile(at: game.gameSaveURL)
+                let hash = try? RSTHasher.sha1HashOfFile(at: game.gameSaveURL)
                 let previousHash = game.gameSave?.sha1
                 guard hash != previousHash else { return }
                 let actualDate = Date()

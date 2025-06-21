@@ -10,7 +10,7 @@ import DeltaCore
 
 import SNESDeltaCore
 import GBADeltaCore
-import GBCDeltaCore
+//import GBCDeltaCore
 import NESDeltaCore
 import N64DeltaCore
 import MelonDSDeltaCore
@@ -39,7 +39,7 @@ enum System: CaseIterable
     }
     
     static var allCores: [DeltaCoreProtocol] {
-        return [NES.core, SNES.core, N64.core, GBC.core, GBA.core]
+        return [NES.core, SNES.core, N64.core, GBA.coreGBC, GBA.core, MelonDS.core]
     }
     
     
@@ -132,7 +132,7 @@ extension System
         case .nes: return NES.core
         case .snes: return SNES.core
         case .n64: return N64.core
-        case .gbc: return GBC.core
+        case .gbc: return GBA.coreGBC
         case .gba: return GBA.core
         case .ds: return Settings.preferredCore(for: .ds) ?? MelonDS.core
         case .genesis: return GPGX.core

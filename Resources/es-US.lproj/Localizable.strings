@@ -621,6 +621,10 @@
 "youngMedalsCondition" = "Obtén la %@</m> conectando dos dispositivos con el emulador GBA";
 "socialMedalsCondition" = "Para desbloquear la %@, comparte la app con tus amigos";
 
+"server_connect_title" = "Server Started";
+"server_connect_message" = "The server has been started successfully: you can now activate the connection on the second device as 'Client User' using the following IP:\n\n%@";
+
+
 "StatisticsTitle" = "¡Descubre los desafíos reservados para ti!\n¿Lograrás conquistar todas las medallas?";
 "Medals" = "Mis Medallas";
 
@@ -666,3 +670,7 @@
 
 "connectionErrorRestart_title" = "Error de Conexión";
 "connectionErrorRestart_message" = "¡Ups! Ocurrió un error y no se puede continuar con la conexión. Pulsa 'Cerrar Conexión' tanto en el Cliente como en el Servidor e intenta nuevamente. Si el problema persiste, reinicia la aplicación.";
+
+"import_success" = "Importación realizada con éxito";
+"import_success_message" = "El archivo que importaste se cargó correctamente";
+"export_success" = "Exportación realizada con éxito";

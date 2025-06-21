@@ -21,7 +21,7 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     var pauseItems: [MenuItem] {
         var list = [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem, self.sustainButtonsItem, self.screenshotItem, self.closeGameItem]
         
-        if let type = emulatorCore?.game.type, type == .gba {
+        if emulatorCore?.game.showLink() == true {
             list.append(self.connectItem)
             
             if isConnectingMode == .client {

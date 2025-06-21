@@ -624,6 +624,11 @@
 "StatisticsTitle" = "Descubra os desafios reservados para você!\nSerá que você conseguirá conquistar todas as medalhas?";
 "Medals" = "Minhas Medalhas";
 
+"server_connect_title" = "Servidor Iniciado";
+"server_connect_message" = "O servidor foi iniciado com sucesso: agora você pode ativar a conexão no segundo dispositivo como 'Usuário Cliente' usando o seguinte IP:\n\n%@";
+
+
+
 "medalsUserProfileTitle" = "Minhas Medalhas";
 "statisticsUserProfileTitle" = "Estatísticas";
 
@@ -666,3 +671,7 @@
 
 "connectionErrorRestart_title" = "Erro de Conexão";
 "connectionErrorRestart_message" = "Ops, ocorreu um erro e não foi possível continuar com a conexão! Pressione 'Desconectar' tanto no Cliente quanto no Servidor e tente novamente. Se o problema persistir, reinicie o aplicativo.";
+
+"import_success" = "Importação concluída com sucesso";
+"import_success_message" = "O arquivo que você importou foi carregado com sucesso";
+"export_success" = "Exportação concluída com sucesso";

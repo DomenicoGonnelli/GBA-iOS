@@ -622,7 +622,7 @@ private extension GameCollectionViewController
         cell.maximumImageSize = CGSize(width: layout.itemWidth, height: layout.itemWidth)
         
         cell.textLabel.text = game.name
-        cell.textLabel.textColor = UIColor.gray
+        cell.textLabel.textColor = UIColor.lightGray
         cell.tintColor = cell.textLabel.textColor
     }
     
@@ -1196,6 +1196,8 @@ private extension GameCollectionViewController
                 if let fileURL = fileURL
                 {
                     try FileManager.default.copyItem(at: fileURL, to: game.localSaveURL, shouldReplace: true)
+                    
+                    self.showAlerOk(title: "import_success".localizable, message: "import_success_message".localizable)
                 }
             }
             catch

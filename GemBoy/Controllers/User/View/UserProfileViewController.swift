@@ -406,7 +406,7 @@ extension UserProfileViewController: MFMailComposeViewControllerDelegate {
         mailComposer.mailComposeDelegate = self
 
         // Imposta il destinatario invisibile
-        mailComposer.setToRecipients(["domenico.gonnelli@outlook.it"])
+        mailComposer.setToRecipients(["gemboyadvanceemulator@gmail.com"])
         // Opzionalmente, puoi impostare un oggetto predefinito
         let id = LoginManager.shared.user?.id ?? ""
         mailComposer.setSubject("Segnalazione utente \(id)")

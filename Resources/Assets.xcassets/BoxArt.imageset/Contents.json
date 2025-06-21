@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "BoxArt.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "BoxArt@2x.pdf",
+      "filename" : "icon_reduced.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "BoxArt@3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

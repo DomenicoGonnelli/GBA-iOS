@@ -10,7 +10,7 @@ import DeltaCore
 
 import NESDeltaCore
 import SNESDeltaCore
-import GBCDeltaCore
+//import GBCDeltaCore
 import GBADeltaCore
 import N64DeltaCore
 import MelonDSDeltaCore
@@ -76,7 +76,7 @@ extension DeltaCoreProtocol
     private var maximumFastForwardSpeed: Double {
         switch self
         {
-        case NES.core, SNES.core, GBC.core: return 4
+        case NES.core, SNES.core, GBA.coreGBC: return 4
         case GBA.core: return 3
         case N64.core where UIDevice.current.hasA11ProcessorOrBetter: return 3
         case N64.core where UIDevice.current.hasA9ProcessorOrBetter: return 1.5

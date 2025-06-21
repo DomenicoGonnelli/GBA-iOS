@@ -716,3 +716,8 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 
 "connectionErrorRestart_title" = "Errore nella connessione";
 "connectionErrorRestart_message" = "Ops, si è verificato un errore e non è possibile procedere con la connessione! Premi 'Chiudi Connessione' sia sul Client che sul Server e riprova. Se il problema persiste, riavvia l'App";
+
+
+"import_success" = "Import avvenuto con sucesso";
+"import_success_message" = "Il file da te importato è stato caricato con successo";
+"export_success" = "Export avvenuto con sucesso";

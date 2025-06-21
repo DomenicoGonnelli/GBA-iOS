@@ -8,8 +8,6 @@ target 'GemBoy' do
     pod 'SQLite.swift', '~> 0.12.0'
     pod 'SDWebImage', '~> 3.8'
     pod 'SMCalloutView', '~> 2.1.0'
-    
-    
    # pod 'GoogleSignIn'
     pod 'lottie-ios'
     pod 'Alamofire'

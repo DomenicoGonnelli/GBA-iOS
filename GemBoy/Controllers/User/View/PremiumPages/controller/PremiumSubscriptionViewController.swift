@@ -110,7 +110,7 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
         let oggi = Date()
         if identifier == IAPProduct.premiumAnnual.rawValue, let dataTra12Mesi = Calendar.current.date(byAdding: .month, value: 12, to: oggi) {
             p.expirationDate = dataTra12Mesi
-        } else if let dataTra3Mesi = Calendar.current.date(byAdding: .month, value: 3, to: oggi) {
+        } else if let dataTra3Mesi = Calendar.current.date(byAdding: .month, value: 1, to: oggi) {
             p.expirationDate = dataTra3Mesi
         }
         self.delegate?.didBecomePremium()
