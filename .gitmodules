@@ -9,13 +9,10 @@
 	url = git@github.com:rileytestut/Roxas.git
 [submodule "Cores/GBADeltaCore"]
 	path = Cores/GBADeltaCore
-	url = git@github.com:rileytestut/GBADeltaCore.git
+	url = git@github.com:DomenicoGonnelli/GBADeltaCore.git
 [submodule "Cores/GBCDeltaCore"]
 	path = Cores/GBCDeltaCore
 	url = git@github.com:rileytestut/GBCDeltaCore.git
-[submodule "External/Harmony"]
-	path = External/Harmony
-	url = https://github.com/rileytestut/Harmony.git
 [submodule "Cores/NESDeltaCore"]
 	path = Cores/NESDeltaCore
 	url = git@github.com:rileytestut/NESDeltaCore.git

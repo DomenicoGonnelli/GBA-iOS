@@ -79,7 +79,7 @@ extension Date{
         }
         
         if dateFormat.firstIndex(of: "a") != nil {
-            var dateFormatter = DateFormatter()
+            let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: DeviceManager.getLang().rawValue)
             dateFormatter.dateFormat = "dd MMMM yyyy - h:mm a"
             let p = dateFormatter.string(from: self)
