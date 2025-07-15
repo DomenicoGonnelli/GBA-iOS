@@ -30,6 +30,7 @@ extension ControllerSkin
         guard let fileURL = Bundle.main.url(forResource: "dg_\(s.localizableShortName)", withExtension: "deltaskin") else { return DeltaCore.ControllerSkin.standardControllerSkin(for: s.gameType) }
         
         let controllerSkin = DeltaCore.ControllerSkin(fileURL: fileURL)
+        print(controllerSkin)
         return controllerSkin
     }
     

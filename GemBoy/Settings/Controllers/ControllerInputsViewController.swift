@@ -31,10 +31,14 @@ class ControllerInputsViewController: UIViewController
     private lazy var managedObjectContext: NSManagedObjectContext = DatabaseManager.shared.newBackgroundContext()
     private var inputMappings = [System: GameControllerInputMapping]()
     
-    private let supportedActionInputs: [ActionInput] = [.quickSave, .quickLoad, .fastForward, .screenshot, .close]
+    private let supportedActionInputs: [ActionInput] = [.quickSave, .quickLoad, .fastForward, .screenshot]
     
-    private var gameViewController: DeltaCore.GameViewController!
-    private var actionsMenuViewController: GridMenuViewController!
+    private var gameViewController: GameViewController? {
+        didSet{
+            gameViewController?.forceShowSkin = true
+        }
+    }
+    private var actionsMenuViewController: GridMenuViewController?
     
     private var calloutViews = [AnyInput: InputCalloutView]()
     
@@ -65,7 +69,7 @@ class ControllerInputsViewController: UIViewController
     {
         super.viewDidLoad()
         
-        self.gameViewController.controllerView.addReceiver(self)
+        self.gameViewController?.controllerView.addReceiver(self)
         
         if let navigationController = self.navigationController, #available(iOS 13, *)
         {
@@ -77,7 +81,9 @@ class ControllerInputsViewController: UIViewController
             self.navigationController?.navigationBar.barStyle = .black
         }
         
-        NSLayoutConstraint.activate([self.gameViewController.gameView.centerYAnchor.constraint(equalTo: self.actionsMenuViewController.view.centerYAnchor)])
+        if let gameViewController = self.gameViewController,let actionsMenuViewController = self.actionsMenuViewController{
+            NSLayoutConstraint.activate([gameViewController.gameView.centerYAnchor.constraint(equalTo: actionsMenuViewController.view.centerYAnchor)])
+        }
         
         self.preparePopoverMenuController()
         self.updateSystem()
@@ -87,9 +93,9 @@ class ControllerInputsViewController: UIViewController
     {
         super.viewDidLayoutSubviews()
         
-        if self.actionsMenuViewController.preferredContentSize.height > 0
+        if let actionsMenuViewController = self.actionsMenuViewController, actionsMenuViewController.preferredContentSize.height > 0
         {
-            self.actionsMenuViewControllerHeightConstraint.constant = self.actionsMenuViewController.preferredContentSize.height
+            self.actionsMenuViewControllerHeightConstraint.constant = actionsMenuViewController.preferredContentSize.height
         }
         
         if let window = self.view.window, !_didLayoutSubviews
@@ -103,8 +109,9 @@ class ControllerInputsViewController: UIViewController
                 traits.device = .iphone
                 traits.displayType = .standard
             }
+
             
-            self.gameViewController.controllerView.overrideControllerSkinTraits = traits
+            self.gameViewController?.controllerView.overrideControllerSkinTraits = traits
             
             _didLayoutSubviews = true
         }
@@ -120,19 +127,20 @@ class ControllerInputsViewController: UIViewController
         }
         
         // controllerView must be first responder to receive keyboard presses.
-        self.gameViewController.controllerView.becomeFirstResponder()
+        self.gameViewController?.controllerView.becomeFirstResponder()
     }
 }
 
 extension ControllerInputsViewController
 {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    @objc override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         guard let identifier = segue.identifier else { return }
         
         switch identifier
         {
-        case "embedGameViewController": self.gameViewController = segue.destination as? DeltaCore.GameViewController
+        case "embedGameViewController":
+            self.gameViewController = segue.destination as? GameViewController
         case "embedActionsMenuViewController":
             self.actionsMenuViewController = segue.destination as? GridMenuViewController
             self.prepareActionsMenuViewController()
@@ -180,8 +188,8 @@ private extension ControllerInputsViewController
         }
         
         // Update controller view's controller skin.
-        self.gameViewController.controllerView.controllerSkin = ControllerSkin.dg_controller(system: self.system)
-        self.gameViewController.view.setNeedsUpdateConstraints()
+        self.gameViewController?.controllerView.controllerSkin = ControllerSkin.dg_controller(system: self.system)
+        self.gameViewController?.view.setNeedsUpdateConstraints()
         
         // Fetch input mapping if it hasn't already been fetched.
         if let gameController = self.gameController, self.inputMappings[self.system] == nil
@@ -222,6 +230,7 @@ private extension ControllerInputsViewController
         self.navigationItem.popoverMenuController = popoverMenuController
         
         let items = System.allCases.filter { Delta.core(for: $0.gameType) != nil }.map { [unowned self, weak popoverMenuController, weak listMenuViewController] system -> MenuItem in
+            
             let item = MenuItem(text: system.localizableShortName, image: #imageLiteral(resourceName: "CheatCodes")) { [weak popoverMenuController, weak listMenuViewController] item in
                 listMenuViewController?.items.forEach { $0.isSelected = ($0 == item) }
                 popoverMenuController?.isActive = false
@@ -232,11 +241,14 @@ private extension ControllerInputsViewController
             
             return item
         }
+
         listMenuViewController.items = items
     }
     
     func prepareActionsMenuViewController()
     {
+        
+        actionsMenuViewController?.cellWidht = 70
         var items = [MenuItem]()
         
         for input in self.supportedActionInputs
@@ -289,27 +301,27 @@ private extension ControllerInputsViewController
             items.append(item)
         }
         
-        self.actionsMenuViewController.loadViewIfNeeded()
+        self.actionsMenuViewController?.loadViewIfNeeded()
         
-        let collectionViewLayout = self.actionsMenuViewController.collectionViewLayout as! GridCollectionViewLayout
+        let collectionViewLayout = self.actionsMenuViewController?.collectionViewLayout as! GridCollectionViewLayout
         collectionViewLayout.minimumLineSpacing = 10
         collectionViewLayout.sectionInset.left += 10
         collectionViewLayout.sectionInset.right += 10
         collectionViewLayout.usesEqualHorizontalSpacingDistributionForSingleRow = true
         
         // Assign actionsMenuViewController's itemWidth so it can adjust layout correctly.
-        self.actionsMenuViewController.itemWidth = 70 // BARELY fits 4 icons inside DS skin.
+        self.actionsMenuViewController?.itemWidth = 70 // BARELY fits 4 icons inside DS skin.
         
-        self.actionsMenuViewController.items = items
-        self.actionsMenuViewController.isVibrancyEnabled = false
+        self.actionsMenuViewController?.items = items
+        self.actionsMenuViewController?.isVibrancyEnabled = false
         
-        self.actionsMenuViewController.collectionView.backgroundColor = nil
+        self.actionsMenuViewController?.collectionView.backgroundColor = nil
     }
     
     func prepareCallouts()
     {
         guard
-            let controllerView = self.gameViewController.controllerView,
+            let controllerView = self.gameViewController?.controllerView,
             let traits = controllerView.controllerSkinTraits,
             let items = controllerView.controllerSkin?.items(for: traits),
             let controllerViewInputMapping = controllerView.defaultInputMapping,
@@ -420,7 +432,7 @@ private extension ControllerInputsViewController
         
         if let input = self.calloutViews.first(where: { $0.value == calloutView })?.key, let index = self.supportedActionInputs.firstIndex(where: { $0 == input })
         {
-            menuItem = self.actionsMenuViewController.items[index]
+            menuItem = self.actionsMenuViewController?.items[index]
         }
         else
         {
@@ -524,7 +536,7 @@ private extension ControllerInputsViewController
         guard let input = self.calloutViews.first(where: { $0.value == calloutView })?.key else { return nil }
         
         guard
-            let controllerView = self.gameViewController.controllerView,
+            let controllerView = self.gameViewController?.controllerView,
             let traits = controllerView.controllerSkinTraits,
             let items = controllerView.controllerSkin?.items(for: traits)
         else { return nil }
@@ -585,9 +597,9 @@ private extension ControllerInputsViewController
             
             let indexPath = IndexPath(item: index, section: 0)
             
-            if let attributes = self.actionsMenuViewController.collectionViewLayout.layoutAttributesForItem(at: indexPath)
+            if let actionsMenuViewController = self.actionsMenuViewController, let attributes = actionsMenuViewController.collectionViewLayout.layoutAttributesForItem(at: indexPath)
             {
-                let presentationFrame = self.view.convert(attributes.frame, from: self.actionsMenuViewController.view)
+                let presentationFrame = self.view.convert(attributes.frame, from: actionsMenuViewController.view)
                 return presentationFrame
             }
         }
@@ -608,7 +620,7 @@ extension ControllerInputsViewController: GameControllerReceiver
         
         switch gameController
         {
-        case self.gameViewController.controllerView:
+        case self.gameViewController?.controllerView:
             if let calloutView = self.calloutViews[AnyInput(controllerInput)]
             {
                 if controllerInput.isContinuous

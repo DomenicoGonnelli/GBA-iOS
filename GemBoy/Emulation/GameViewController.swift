@@ -35,6 +35,7 @@ private extension DeltaCore.ControllerSkin
         let hasTouchScreen = self.items(for: traits)?.contains(where: { $0.kind == .touchScreen }) ?? false
         return hasTouchScreen
     }
+    
 }
 
 private extension GameViewController
@@ -111,6 +112,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             self.pauseViewController?.isConnectingMode = connectionLinkType
         }
     }
+    var forceShowSkin = false
     
 //    func triggerLocalNetworkAlert() {
 //        let host = NWEndpoint.Host("192.168.0.1") // qualunque IP valido locale
@@ -360,6 +362,8 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             self.alertView = nil
         }
     }
+    
+    
     
     func firstButtonAction(_ type: AlertViewTypology?) {
         if type == .needLogin || type == .retryFaceID{
@@ -757,6 +761,8 @@ extension GameViewController
             // We have priority, so replace whatever is currently on external display.
             self.connectExternalDisplay(for: scene)
         }
+        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
@@ -783,6 +789,13 @@ extension GameViewController
     
     // MARK: - Segues
     /// KVO
+    ///
+    ///
+  
+    
+    func pushtoSlider(){ //type: GameType){
+        MenuSliderViewController.presentInNewWindow()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -880,6 +893,12 @@ extension GameViewController
                 }
             }
             
+            pauseViewController.fastForwardSetItem?.action = { [unowned self] item in
+                //ExperimentalFeatures.shared.variableFastForward
+                self.pushtoSlider()
+               
+            }
+            
             pauseViewController.cheatCodesItem?.action = { [unowned self] item in
                 if LoginManager.shared.user?.isPremium == true {
                     self.pauseViewController?.goToCheat()
@@ -897,6 +916,7 @@ extension GameViewController
             }
                         
             pauseViewController.fastForwardItem?.isSelected = (self.emulatorCore?.rate != self.emulatorCore?.deltaCore.supportedRates.lowerBound)
+            
             pauseViewController.fastForwardItem?.action = { [unowned self] item in
                 self.performFastForwardAction(activate: item.isSelected)
             }
@@ -1153,7 +1173,7 @@ private extension GameViewController
             }
             else if let game = self.game,
                     let traits = self.controllerView.controllerSkinTraits,
-                    let controllerSkin = DeltaCore.ControllerSkin.standardControllerSkin(for: game.type),
+                    let controllerSkin = ControllerSkin.dg_controller(system: System(gameType: game.type)),
                     controllerSkin.hasTouchScreen(for: traits)
             {
                 self.controllerView.isHidden = false
@@ -1161,7 +1181,7 @@ private extension GameViewController
             }
             else
             {
-                self.controllerView.isHidden = true
+                self.controllerView.isHidden = !forceShowSkin
                 self.controllerView.playerIndex = nil
             }
 

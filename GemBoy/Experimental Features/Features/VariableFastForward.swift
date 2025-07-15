@@ -26,7 +26,7 @@ struct FastForwardSpeed: RawRepresentable
         
         if ExperimentalFeatures.shared.variableFastForward.allowUnrestrictedSpeeds
         {
-            range = 1.0...8.0
+            range = 1.0...10.0
         }
         
         // .dropFirst() to remove 1x speed.

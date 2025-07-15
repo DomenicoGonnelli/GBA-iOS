@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         NotificationManager.shared.registerToPushNotification()
         MobileAds.shared.start(completionHandler: nil)
         ExperimentalFeatures.shared.toastNotifications.isEnabled = true
+        ExperimentalFeatures.shared.variableFastForward.isEnabled = true
         setReachability()
         DeviceManager.resetNotificationCounter()
         UIApplication.shared.applicationIconBadgeNumber = 0

@@ -30,7 +30,7 @@ enum System: CaseIterable
     case ds
     
     static var DGITems: [System] {
-        return [.nes,.snes,.n64, .gbc, .gba, .ds]
+        return [.gbc, .gba, .ds, .nes, .snes,.n64 ]
     }
     
     static var registeredSystems: [System] {
@@ -39,7 +39,7 @@ enum System: CaseIterable
     }
     
     static var allCores: [DeltaCoreProtocol] {
-        return [NES.core, SNES.core, N64.core, GBA.coreGBC, GBA.core, MelonDS.core]
+        return [GBA.coreGBC, GBA.core, MelonDS.core, NES.core, SNES.core, N64.core,]
     }
     
     

@@ -318,6 +318,9 @@
 		EB8E0D442D946518004BFB1F /* NotificationInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D432D946518004BFB1F /* NotificationInApp.swift */; };
 		EB8E0D562D947537004BFB1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0D542D947537004BFB1F /* Localizable.strings */; };
 		EB8E0D682D947655004BFB1F /* Notification.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EB8E0D612D947655004BFB1F /* Notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EB9D83D22E1A45E1006ED231 /* GridMenuViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D83D12E1A45E1006ED231 /* GridMenuViewControllerOld.swift */; };
+		EB9D83FA2E1A5B7D006ED231 /* AutoshrinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D83F92E1A5B77006ED231 /* AutoshrinkLabel.swift */; };
+		EB9D840B2E1AD17E006ED231 /* best_games.json in Resources */ = {isa = PBXBuildFile; fileRef = EB9D840A2E1AD17E006ED231 /* best_games.json */; };
 		EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BA9F2D984792007A25A6 /* AlertView.xib */; };
 		EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */; };
@@ -343,8 +346,6 @@
 		EBAEB7B12DB1615A007C5BB4 /* RankingStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7AD2DB1615A007C5BB4 /* RankingStarView.xib */; };
 		EBAEB7B42DB162F9007C5BB4 /* SystemSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB7B32DB162E4007C5BB4 /* SystemSelection.swift */; };
 		EBAEB7B62DB163E5007C5BB4 /* SystemSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B52DB163E5007C5BB4 /* SystemSelection.xib */; };
-		EBAEB7B82DB1CEF5007C5BB4 /* dg__SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B72DB1CEF5007C5BB4 /* dg__SNES.deltaskin */; };
-		EBAEB7BA2DB1CFD7007C5BB4 /* dg__NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B92DB1CFD7007C5BB4 /* dg__NES.deltaskin */; };
 		EBB0FA942D96A16800CA8EB1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA932D96A16800CA8EB1 /* FirebaseAnalytics */; };
 		EBB0FA962D96A16800CA8EB1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA952D96A16800CA8EB1 /* FirebaseAuth */; };
 		EBB0FA982D96A16800CA8EB1 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EBB0FA972D96A16800CA8EB1 /* FirebaseCore */; };
@@ -402,6 +403,8 @@
 		EBC3E7152DB630D1006B1CBC /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3E7142DB630C1006B1CBC /* BaseTableViewController.swift */; };
 		EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */; };
 		EBC970E62DB27475000CA9C1 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */; };
+		EBD680312E11476F00A92584 /* MenuSlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD680302E11476F00A92584 /* MenuSlider.storyboard */; };
+		EBD680332E11477E00A92584 /* MenuSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD680322E11477700A92584 /* MenuSliderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -791,6 +794,9 @@
 		EB8E0D5B2D947593004BFB1F /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EB8E0D5C2D94759B004BFB1F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EB8E0D612D947655004BFB1F /* Notification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Notification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9D83D12E1A45E1006ED231 /* GridMenuViewControllerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridMenuViewControllerOld.swift; sourceTree = "<group>"; };
+		EB9D83F92E1A5B77006ED231 /* AutoshrinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoshrinkLabel.swift; sourceTree = "<group>"; };
+		EB9D840A2E1AD17E006ED231 /* best_games.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = best_games.json; sourceTree = "<group>"; };
 		EBA2BA9E2D984792007A25A6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		EBA2BA9F2D984792007A25A6 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		EBA2BAA12D984792007A25A6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -815,8 +821,6 @@
 		EBAEB7AE2DB1615A007C5BB4 /* RankingStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStarView.swift; sourceTree = "<group>"; };
 		EBAEB7B32DB162E4007C5BB4 /* SystemSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSelection.swift; sourceTree = "<group>"; };
 		EBAEB7B52DB163E5007C5BB4 /* SystemSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemSelection.xib; sourceTree = "<group>"; };
-		EBAEB7B72DB1CEF5007C5BB4 /* dg__SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__SNES.deltaskin; sourceTree = "<group>"; };
-		EBAEB7B92DB1CFD7007C5BB4 /* dg__NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__NES.deltaskin; sourceTree = "<group>"; };
 		EBBB195A2D9971A8009C977A /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Bold.otf"; sourceTree = "<group>"; };
 		EBBB195B2D9971A8009C977A /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-BoldItal.otf"; sourceTree = "<group>"; };
 		EBBB195C2D9971A8009C977A /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
@@ -870,6 +874,8 @@
 		EBC3E7662DB7E395006B1CBC /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_SNES.deltaskin; sourceTree = "<group>"; };
 		EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
+		EBD680302E11476F00A92584 /* MenuSlider.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSlider.storyboard; sourceTree = "<group>"; };
+		EBD680322E11477700A92584 /* MenuSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSliderViewController.swift; sourceTree = "<group>"; };
 		EBD8B2182DE23E39008A2AEA /* GBCEmulatorBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCEmulatorBridge.h; sourceTree = "<group>"; };
 		EBD8B2192DE23E39008A2AEA /* GBCEmulatorBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GBCEmulatorBridge.mm; sourceTree = "<group>"; };
 		EBD8B21A2DE23E39008A2AEA /* GBCSoundDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCSoundDriver.h; sourceTree = "<group>"; };
@@ -1241,6 +1247,7 @@
 				EB6EB3DA2DBE303900EAC356 /* MenuCell.swift */,
 				BF353FF11C5D7FB000C1184C /* PauseViewController.swift */,
 				BF7AE8041C2E858400B1B5BC /* GridMenuViewController.swift */,
+				EB9D83D12E1A45E1006ED231 /* GridMenuViewControllerOld.swift */,
 				BF353FF81C5D870B00C1184C /* MenuItem.swift */,
 				BF3540031C5DA6D800C1184C /* Save States */,
 				BFC9B7371CEFCD08008629BB /* Cheats */,
@@ -1450,6 +1457,7 @@
 		BFFA71D91AAC406100EE9DD1 /* GemBoy */ = {
 			isa = PBXGroup;
 			children = (
+				EB9D84092E1AD172006ED231 /* json */,
 				EB6EB4122DBED21C00EAC356 /* GamesDatabase.storyboard */,
 				EB6EB4132DBED21C00EAC356 /* PauseMenu.storyboard */,
 				EB6EB4142DBED21C00EAC356 /* PausePresentationControllerContentView.xib */,
@@ -1740,8 +1748,6 @@
 				EB04DE362DD2214A00ED4ADE /* dg_DS.deltaskin */,
 				EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */,
 				EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */,
-				EBAEB7B92DB1CFD7007C5BB4 /* dg__NES.deltaskin */,
-				EBAEB7B72DB1CEF5007C5BB4 /* dg__SNES.deltaskin */,
 				EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */,
 				EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */,
 				EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */,
@@ -1937,9 +1943,18 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		EB9D84092E1AD172006ED231 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				EB9D840A2E1AD17E006ED231 /* best_games.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
 		EBA2BA992D984778007A25A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EBD6802F2E11475500A92584 /* sliderForFast */,
 				EB21EA0D2DB9294600B6B1F4 /* statistics */,
 				EB21EA0C2DB9293100B6B1F4 /* startGame */,
 				EB3EB5E02DA0738D004FFACF /* User */,
@@ -2023,6 +2038,7 @@
 		EBA2BABE2D984792007A25A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EB9D83F92E1A5B77006ED231 /* AutoshrinkLabel.swift */,
 				EBAEB7B22DB162C8007C5BB4 /* tabSelectSystem */,
 				EBAEB7AF2DB1615A007C5BB4 /* StarRanking */,
 				EBBB19802D9972DB009C977A /* onBoarding */,
@@ -2227,6 +2243,15 @@
 				EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */,
 			);
 			path = Launchscreen;
+			sourceTree = "<group>";
+		};
+		EBD6802F2E11475500A92584 /* sliderForFast */ = {
+			isa = PBXGroup;
+			children = (
+				EBD680322E11477700A92584 /* MenuSliderViewController.swift */,
+				EBD680302E11476F00A92584 /* MenuSlider.storyboard */,
+			);
+			path = sliderForFast;
 			sourceTree = "<group>";
 		};
 		EBD8B21C2DE23E39008A2AEA /* Bridge */ = {
@@ -2500,7 +2525,6 @@
 				D5E12AED2D011640000C7531 /* Profanity.txt in Resources */,
 				EB04DE372DD2214A00ED4ADE /* dg_DS.deltaskin in Resources */,
 				EBBB19CB2D9977B4009C977A /* Login.storyboard in Resources */,
-				EBAEB7B82DB1CEF5007C5BB4 /* dg__SNES.deltaskin in Resources */,
 				BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */,
 				D53415A7298C78BC00FD67B1 /* Contributors.plist in Resources */,
 				EBBB19662D9971A8009C977A /* GothamRnd-MedItal.otf in Resources */,
@@ -2514,7 +2538,6 @@
 				EBBB19682D9971A8009C977A /* GothamRnd-Book.otf in Resources */,
 				EB3EB5762DA0719A004FFACF /* Dashboard.storyboard in Resources */,
 				EBBB19692D9971A8009C977A /* loaderPink.json in Resources */,
-				EBAEB7BA2DB1CFD7007C5BB4 /* dg__NES.deltaskin in Resources */,
 				EBBB196A2D9971A8009C977A /* GothamRnd-Light.otf in Resources */,
 				EBBB196B2D9971A8009C977A /* GothamRnd-Bold.otf in Resources */,
 				EBBB196C2D9971A8009C977A /* GothamRnd-BoldItal.otf in Resources */,
@@ -2529,8 +2552,10 @@
 				EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */,
 				EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */,
 				EBBB1A092D9AAA58009C977A /* efupdate.json in Resources */,
+				EBD680312E11476F00A92584 /* MenuSlider.storyboard in Resources */,
 				BF71CF8A1FE904B1001F1613 /* GameTableViewCell.xib in Resources */,
 				EB6EB41A2DBED21C00EAC356 /* GamesDatabase.storyboard in Resources */,
+				EB9D840B2E1AD17E006ED231 /* best_games.json in Resources */,
 				EB6EB41B2DBED21C00EAC356 /* PausePresentationControllerContentView.xib in Resources */,
 				EB6EB41C2DBED21C00EAC356 /* PauseMenu.storyboard in Resources */,
 				EB6EB41D2DBED21C00EAC356 /* Settings.storyboard in Resources */,
@@ -2729,6 +2754,7 @@
 				BF13A7581D5D2FD9000BB055 /* EmulatorCore+Delta.swift in Sources */,
 				D552DE3A2D39C5A500E737BE /* WFCServersView.swift in Sources */,
 				EB69AB1A2D977FC800311D39 /* IAPHelper.swift in Sources */,
+				EBD680332E11477E00A92584 /* MenuSliderViewController.swift in Sources */,
 				EB69AB1B2D977FC800311D39 /* IAPProduct.swift in Sources */,
 				D5A9C01D29DE058C00A8D610 /* VariableFastForward.swift in Sources */,
 				BFE593CA21F3F8B7003412A6 /* GameSave.swift in Sources */,
@@ -2808,6 +2834,7 @@
 				EBBB19B92D997796009C977A /* UpdateViewController.swift in Sources */,
 				D5A2CAC02D69660800FBA4E4 /* WFCManager.swift in Sources */,
 				BF8DDD241F4F6C880088A21B /* InputCalloutView.swift in Sources */,
+				EB9D83D22E1A45E1006ED231 /* GridMenuViewControllerOld.swift in Sources */,
 				D50CA1572D419E7100F54920 /* GameSettingsView.swift in Sources */,
 				BF5942701E09BC5D0051894B /* GamesDatabase.swift in Sources */,
 				BF34FA071CF0F510006624C7 /* EditCheatViewController.swift in Sources */,
@@ -2825,6 +2852,7 @@
 				BF353FFF1C5DA3C500C1184C /* PausePresentationController.swift in Sources */,
 				D5AA0F122CE3F4FB0015D134 /* ManagedPatron.swift in Sources */,
 				D54E46D02BED714F00780713 /* NSUserActivity+Delta.swift in Sources */,
+				EB9D83FA2E1A5B7D006ED231 /* AutoshrinkLabel.swift in Sources */,
 				BFFC464C1D5998D600AF2CC6 /* CheatTableViewCell.swift in Sources */,
 				EB6EB3DB2DBE303C00EAC356 /* MenuCell.swift in Sources */,
 				D5B4235C2BD9C24000093054 /* RoundedImageView.swift in Sources */,
@@ -3241,7 +3269,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Emulator";
@@ -3250,7 +3278,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.5;
+				MARKETING_VERSION = 3.6;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"-ObjC",
@@ -3322,7 +3350,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Emulator";
@@ -3331,7 +3359,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.5;
+				MARKETING_VERSION = 3.6;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"${inherited}",
@@ -3508,7 +3536,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -3524,7 +3552,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.5;
+				MARKETING_VERSION = 3.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
@@ -3552,7 +3580,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -3567,7 +3595,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.5;
+				MARKETING_VERSION = 3.6;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
