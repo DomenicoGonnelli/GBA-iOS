@@ -1,0 +1,1335 @@
+{
+  "NDS": [
+    {
+      "id": 1,
+      "data": {
+        "it": {
+          "name": "New Super Mario Bros.",
+          "link": "https://www.retrostic.com/it/roms/nds/new-super-mario-bros-e-supremacy-82998"
+        },
+        "en": {
+          "name": "New Super Mario Bros.",
+          "link": "https://www.retrostic.com/it/roms/nds/new-super-mario-bros-e-supremacy-82998"
+        },
+        "es": {
+          "name": "New Super Mario Bros.",
+          "link": "https://www.retrostic.com/it/roms/nds/new-super-mario-bros-e-supremacy-82998"
+        },
+        "pt": {
+          "name": "New Super Mario Bros.",
+          "link": "https://www.retrostic.com/it/roms/nds/new-super-mario-bros-e-supremacy-82998"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/246547-new-super-mario-bros-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 2,
+      "data": {
+        "it": {
+          "name": "Pokémon Diamante",
+          "link": "https://www.retrostic.com/it/roms/nds/pokemon-diamond-version-v1-13-81871"
+        },
+        "en": {
+          "name": "Pokémon Diamond",
+          "link": "https://www.retrostic.com/it/roms/nds/pokemon-diamond-version-v1-13-81871"
+        },
+        "es": {
+          "name": "Pokémon Diamante",
+          "link": "https://www.retrostic.com/it/roms/nds/pokemon-diamond-version-v1-13-81871"
+        },
+        "pt": {
+          "name": "Pokémon Diamante",
+          "link": "https://www.retrostic.com/it/roms/nds/pokemon-diamond-version-v1-13-81871"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/245675-pokemon-diamond-version-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 3,
+      "data": {
+        "it": {
+          "name": "Mario Kart DS",
+          "link": "https://www.retrostic.com/it/roms/nds/mario-kart-ds-e-82989"
+        },
+        "en": {
+          "name": "Mario Kart DS",
+          "link": "https://www.retrostic.com/it/roms/nds/mario-kart-ds-e-82989"
+        },
+        "es": {
+          "name": "Mario Kart DS",
+          "link": "https://www.retrostic.com/it/roms/nds/mario-kart-ds-e-82989"
+        },
+        "pt": {
+          "name": "Mario Kart DS",
+          "link": "https://www.retrostic.com/it/roms/nds/mario-kart-ds-e-82989"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/162221-mario-kart-ds-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 4,
+      "data": {
+        "it": {
+          "name": "The Legend of Zelda: Phantom Hourglass",
+          "link": "https://www.emulatorgames.net/roms/nintendo-ds/legend-of-zelda-phantom-hourglass-the/"
+        },
+        "en": {
+          "name": "The Legend of Zelda: Phantom Hourglass",
+          "link": "https://www.emulatorgames.net/roms/nintendo-ds/legend-of-zelda-phantom-hourglass-the/"
+        },
+        "es": {
+          "name": "The Legend of Zelda: Phantom Hourglass",
+          "link": "https://www.emulatorgames.net/roms/nintendo-ds/legend-of-zelda-phantom-hourglass-the/"
+        },
+        "pt": {
+          "name": "The Legend of Zelda: Phantom Hourglass",
+          "link": "https://www.emulatorgames.net/roms/nintendo-ds/legend-of-zelda-phantom-hourglass-the/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/161547-the-legend-of-zelda-phantom-hourglass-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 5,
+      "data": {
+        "it": {
+          "name": "Animal Crossing: Wild World",
+          "link": "https://www.retrostic.com/it/roms/nds/animal-crossing-wild-world-74733"
+        },
+        "en": {
+          "name": "Animal Crossing: Wild World",
+          "link": "https://www.retrostic.com/it/roms/nds/animal-crossing-wild-world-74733"
+        },
+        "es": {
+          "name": "Animal Crossing: Wild World",
+          "link": "https://www.retrostic.com/it/roms/nds/animal-crossing-wild-world-74733"
+        },
+        "pt": {
+          "name": "Animal Crossing: Wild World",
+          "link": "https://www.retrostic.com/it/roms/nds/animal-crossing-wild-world-74733"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/142535-animal-crossing-wild-world-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 6,
+      "data": {
+        "it": {
+          "name": "Pokémon SoulSilver",
+          "link": "https://www.retrostic.com/it/roms/nds/pokemon-soulsilver-version-v10-81862"
+        },
+        "en": {
+          "name": "Pokémon SoulSilver",
+          "link": "https://www.retrostic.com/it/roms/nds/pokemon-soulsilver-version-81848"
+        },
+        "es": {
+          "name": "Pokémon SoulSilver",
+          "link": "https://www.retrostic.com/it/roms/nds/pokemon-soulsilver-version-v10-81862"
+        },
+        "pt": {
+          "name": "Pokémon SoulSilver",
+          "link": "https://www.retrostic.com/it/roms/nds/pokemon-soulsilver-version-v10-81862"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/190553-pokemon-soulsilver-version-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 7,
+      "data": {
+        "it": {
+          "name": "Brain Training del Dr. Kawashima",
+          "link": "https://www.retrostic.com/it/roms/nds/dr-kawashima-s-brain-training-how-old-is-your-brain-75079"
+        },
+        "en": {
+          "name": "Brain Age: Train Your Brain in Minutes a Day!",
+          "link": "https://www.retrostic.com/it/roms/nds/dr-kawashima-s-brain-training-how-old-is-your-brain-75079"
+        },
+        "es": {
+          "name": "Brain Training del Dr. Kawashima",
+          "link": "https://www.retrostic.com/it/roms/nds/dr-kawashima-s-brain-training-how-old-is-your-brain-75079"
+        },
+        "pt": {
+          "name": "Brain Training do Dr. Kawashima",
+          "link": "https://www.retrostic.com/it/roms/nds/dr-kawashima-s-brain-training-how-old-is-your-brain-75079"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/149299-brain-age-train-your-brain-in-minutes-a-day-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 8,
+      "data": {
+        "it": {
+          "name": "Professor Layton e il Paese dei Misteri",
+          "link": "https://www.retrostic.com/it/roms/nds/professor-layton-and-the-curious-village-74869"
+        },
+        "en": {
+          "name": "Professor Layton and the Curious Village",
+          "link": "https://www.retrostic.com/it/roms/nds/professor-layton-and-the-curious-village-74869"
+        },
+        "es": {
+          "name": "El Profesor Layton y la Villa Misteriosa",
+          "link": "https://www.retrostic.com/it/roms/nds/professor-layton-and-the-curious-village-74869"
+        },
+        "pt": {
+          "name": "Professor Layton e a Vila Misteriosa",
+          "link": "https://www.retrostic.com/it/roms/nds/professor-layton-and-the-curious-village-74869"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/139319-professor-layton-and-the-curious-village-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 9,
+      "data": {
+        "it": {
+          "name": "Nintendogs",
+          "link": "https://www.retrostic.com/it/roms/nds/nintendogs-dalmatian-friends-75070"
+        },
+        "en": {
+          "name": "Nintendogs",
+          "link": "https://www.retrostic.com/it/roms/nds/nintendogs-dalmatian-friends-75070"
+        },
+        "es": {
+          "name": "Nintendogs",
+          "link": "https://www.retrostic.com/it/roms/nds/nintendogs-dalmatian-friends-75070"
+        },
+        "pt": {
+          "name": "Nintendogs",
+          "link": "https://www.retrostic.com/it/roms/nds/nintendogs-dalmatian-friends-75070"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/175117-nintendogs-lab-friends-nintendo-ds-front-cover.jpg"
+    },
+    {
+      "id": 10,
+      "data": {
+        "it": {
+          "name": "Super Mario 64 DS",
+          "link": "https://www.retrostic.com/it/roms/nds/super-mario-64-ds-e-82981"
+        },
+        "en": {
+          "name": "Super Mario 64 DS",
+          "link": "https://www.retrostic.com/it/roms/nds/super-mario-64-ds-e-82981"
+        },
+        "es": {
+          "name": "Super Mario 64 DS",
+          "link": "https://www.retrostic.com/it/roms/nds/super-mario-64-ds-e-82981"
+        },
+        "pt": {
+          "name": "Super Mario 64 DS",
+          "link": "https://www.retrostic.com/it/roms/nds/super-mario-64-ds-e-82981"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/141732-super-mario-64-ds-nintendo-ds-front-cover.jpg"
+    }
+  ],
+  "GBA": [
+    {
+      "id": 1,
+      "data": {
+        "it": {
+          "name": "Pokémon Smeraldo",
+          "link": "https://www.retrostic.com/it/roms/gba/pokemon-versione-smeraldo-pokemon-rapers-italy-82566"
+        },
+        "en": {
+          "name": "Pokémon Emerald",
+          "link": "https://www.retrostic.com/it/roms/gba/pokemon-emerald-version-82328"
+        },
+        "es": {
+          "name": "Pokémon Esmeralda",
+          "link": "https://www.retrostic.com/it/roms/gba/pokemon-emerald-version-82328"
+        },
+        "pt": {
+          "name": "Pokémon Esmeralda",
+          "link": "https://www.retrostic.com/it/roms/gba/pokemon-emerald-version-82328"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/55079-pokemon-emerald-version-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 2,
+      "data": {
+        "it": {
+          "name": "The Legend of Zelda: The Minish Cap",
+          "link": "https://www.retrostic.com/it/roms/gba/the-legend-of-zelda-the-minish-cap-e-82589"
+        },
+        "en": {
+          "name": "The Legend of Zelda: The Minish Cap",
+          "link": "https://www.retrostic.com/it/roms/gba/legend-of-zelda-the-the-minish-cap-82488"
+        },
+        "es": {
+          "name": "The Legend of Zelda: The Minish Cap",
+          "link": "https://www.retrostic.com/it/roms/gba/the-legend-of-zelda-the-minish-cap-e-82589"
+        },
+        "pt": {
+          "name": "The Legend of Zelda: The Minish Cap",
+          "link": "https://www.retrostic.com/it/roms/gba/the-legend-of-zelda-the-minish-cap-e-82589"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/42041-the-legend-of-zelda-the-minish-cap-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 3,
+      "data": {
+        "it": {
+          "name": "Mario Kart: Super Circuit",
+          "link": "https://www.retrostic.com/it/roms/gba/mario-kart-super-circuit-cezar-e-82618"
+        },
+        "en": {
+          "name": "Mario Kart: Super Circuit",
+          "link": "https://www.retrostic.com/it/roms/gba/mario-kart-super-circuit-cezar-e-82618"
+        },
+        "es": {
+          "name": "Mario Kart: Super Circuit",
+          "link": "https://www.retrostic.com/it/roms/gba/mario-kart-super-circuit-cezar-e-82618"
+        },
+        "pt": {
+          "name": "Mario Kart: Super Circuit",
+          "link": "https://www.retrostic.com/it/roms/gba/mario-kart-super-circuit-cezar-e-82618"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/22605-mario-kart-super-circuit-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 4,
+      "data": {
+        "it": {
+          "name": "Pokémon Rosso Fuoco",
+          "link": "https://www.retrostic.com/it/roms/gba/pokemon-rosso-fuoco-italy-82502"
+        },
+        "en": {
+          "name": "Pokémon FireRed",
+          "link": "https://www.retrostic.com/it/roms/gba/pokemon-fire-red-version-v1-1-82327"
+        },
+        "es": {
+          "name": "Pokémon Rojo Fuego",
+          "link": "https://www.retrostic.com/it/roms/gba/pokemon-fire-red-version-v1-1-82327"
+        },
+        "pt": {
+          "name": "Pokémon FireRed",
+          "link": "https://www.retrostic.com/it/roms/gba/pokemon-fire-red-version-v1-1-82327"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/46489-pokemon-firered-version-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 5,
+      "data": {
+        "it": {
+          "name": "Metroid Fusion",
+          "link": "https://www.retrostic.com/it/roms/gba/metroid-fusion-82569"
+        },
+        "en": {
+          "name": "Metroid Fusion",
+          "link": "https://www.retrostic.com/it/roms/gba/metroid-fusion-82569"
+        },
+        "es": {
+          "name": "Metroid Fusion",
+          "link": "https://www.retrostic.com/it/roms/gba/metroid-fusion-82569"
+        },
+        "pt": {
+          "name": "Metroid Fusion",
+          "link": "https://www.retrostic.com/it/roms/gba/metroid-fusion-82569"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/30644-metroid-fusion-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 6,
+      "data": {
+        "it": {
+          "name": "Super Mario Advance 4: Super Mario Bros. 3",
+          "link": "https://www.retrostic.com/it/roms/gba/super-mario-advance-4-super-mario-bros-3-v1-1-82482"
+        },
+        "en": {
+          "name": "Super Mario Advance 4: Super Mario Bros. 3",
+          "link": "https://www.retrostic.com/it/roms/gba/super-mario-advance-4-super-mario-bros-3-v1-1-82482"
+        },
+        "es": {
+          "name": "Super Mario Advance 4: Super Mario Bros. 3",
+          "link": "https://www.retrostic.com/it/roms/gba/super-mario-advance-4-super-mario-bros-3-v1-1-82482"
+        },
+        "pt": {
+          "name": "Super Mario Advance 4: Super Mario Bros. 3",
+          "link": "https://www.retrostic.com/it/roms/gba/super-mario-advance-4-super-mario-bros-3-v1-1-82482"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/175144-super-mario-advance-4-super-mario-bros-3-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 7,
+      "data": {
+        "it": {
+          "name": "Final Fantasy Tactics Advance",
+          "link": "https://www.retrostic.com/it/roms/gba/final-fantasy-tactics-advance-11756"
+        },
+        "en": {
+          "name": "Final Fantasy Tactics Advance",
+          "link": "https://www.retrostic.com/it/roms/gba/final-fantasy-tactics-advance-11756"
+        },
+        "es": {
+          "name": "Final Fantasy Tactics Advance",
+          "link": "https://www.retrostic.com/it/roms/gba/final-fantasy-tactics-advance-11756"
+        },
+        "pt": {
+          "name": "Final Fantasy Tactics Advance",
+          "link": "https://www.retrostic.com/it/roms/gba/final-fantasy-tactics-advance-11756"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/26133-final-fantasy-tactics-advance-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 8,
+      "data": {
+        "it": {
+          "name": "Advance Wars",
+          "link": "https://www.retrostic.com/it/roms/gba/advance-wars-11779"
+        },
+        "en": {
+          "name": "Advance Wars",
+          "link": "https://www.retrostic.com/it/roms/gba/advance-wars-11779"
+        },
+        "es": {
+          "name": "Advance Wars",
+          "link": "https://www.retrostic.com/it/roms/gba/advance-wars-11779"
+        },
+        "pt": {
+          "name": "Advance Wars",
+          "link": "https://www.retrostic.com/it/roms/gba/advance-wars-11779"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/23402-advance-wars-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 9,
+      "data": {
+        "it": {
+          "name": "Castlevania: Aria of Sorrow",
+          "link": "https://www.retrostic.com/it/roms/gba/castlevania-aria-of-sorrow-11803"
+        },
+        "en": {
+          "name": "Castlevania: Aria of Sorrow",
+          "link": "https://www.retrostic.com/it/roms/gba/castlevania-aria-of-sorrow-11803"
+        },
+        "es": {
+          "name": "Castlevania: Aria of Sorrow",
+          "link": "https://www.retrostic.com/it/roms/gba/castlevania-aria-of-sorrow-11803"
+        },
+        "pt": {
+          "name": "Castlevania: Aria of Sorrow",
+          "link": "https://www.retrostic.com/it/roms/gba/castlevania-aria-of-sorrow-11803"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/34276-castlevania-aria-of-sorrow-game-boy-advance-front-cover.jpg"
+    },
+    {
+      "id": 10,
+      "data": {
+        "it": {
+          "name": "Golden Sun",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-advance/golden-sun-italy/12944.html"
+        },
+        "en": {
+          "name": "Golden Sun",
+          "link": "https://www.retrostic.com/it/roms/gba/golden-sun-82508"
+        },
+        "es": {
+          "name": "Golden Sun",
+          "link": "https://www.retrostic.com/it/roms/gba/golden-sun-82508"
+        },
+        "pt": {
+          "name": "Golden Sun",
+          "link": "https://www.retrostic.com/it/roms/gba/golden-sun-82508"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/22635-golden-sun-game-boy-advance-front-cover.jpg"
+    }
+  ],
+  "GBC/GB": [
+    {
+      "id": 1,
+      "data": {
+        "it": {
+          "name": "Pokémon Oro",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/pok%25C3%2583%25C2%25A9mon-versione-oro-italy/11387.html"
+        },
+        "en": {
+          "name": "Pokémon Gold",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/pokemon-gold-version/"
+        },
+        "es": {
+          "name": "Pokémon Oro",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/pokemon-gold-version/"
+        },
+        "pt": {
+          "name": "Pokémon Ouro",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/pokemon-gold-version/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/13515-pokemon-gold-version-game-boy-color-front-cover.jpg"
+    },
+    {
+      "id": 2,
+      "data": {
+        "it": {
+          "name": "The Legend of Zelda: Link's Awakening DX",
+          "link": "https://www.gbarl.it/index.php?autocom=downloads&showfile=474"
+        },
+        "en": {
+          "name": "The Legend of Zelda: Link's Awakening DX",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/legend-of-zelda-the-links-awakening-dx/"
+        },
+        "es": {
+          "name": "The Legend of Zelda: Link's Awakening DX",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/legend-of-zelda-the-links-awakening-dx/"
+        },
+        "pt": {
+          "name": "The Legend of Zelda: Link's Awakening DX",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/legend-of-zelda-the-links-awakening-dx/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/84447-the-legend-of-zelda-link-s-awakening-dx-game-boy-color-front-cover.jpg"
+    },
+    {
+      "id": 3,
+      "data": {
+        "it": {
+          "name": "Pokémon Rosso",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy/pokemon-versione-rossa-italy-sgb-enhanced/9924.html"
+        },
+        "en": {
+          "name": "Pokémon Red",
+          "link": "https://www.retrostic.com/it/roms/gb/pokemon-red-83381"
+        },
+        "es": {
+          "name": "Pokémon Rojo",
+          "link": "https://www.retrostic.com/it/roms/gb/pokemon-red-83381"
+        },
+        "pt": {
+          "name": "Pokémon Vermelho",
+          "link": "https://www.retrostic.com/it/roms/gb/pokemon-red-83381"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/13493-pokemon-red-version-game-boy-front-cover.jpg"
+    },
+    {
+      "id": 4,
+      "data": {
+        "it": {
+          "name": "Super Mario Land 2: 6 Golden Coins",
+          "link": "https://www.retrostic.com/it/roms/gb/super-mario-land-2-6-golden-coins-v1-2-83377"
+        },
+        "en": {
+          "name": "Super Mario Land 2: 6 Golden Coins",
+          "link": "https://www.retrostic.com/it/roms/gb/super-mario-land-2-6-golden-coins-v1-2-83377"
+        },
+        "es": {
+          "name": "Super Mario Land 2: 6 Golden Coins",
+          "link": "https://www.retrostic.com/it/roms/gb/super-mario-land-2-6-golden-coins-v1-2-83377"
+        },
+        "pt": {
+          "name": "Super Mario Land 2: 6 Golden Coins",
+          "link": "https://www.retrostic.com/it/roms/gb/super-mario-land-2-6-golden-coins-v1-2-83377"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/19795-super-mario-land-2-6-golden-coins-game-boy-front-cover.jpg"
+    },
+    {
+      "id": 5,
+      "data": {
+        "it": {
+          "name": "Tetris",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/tetris/"
+        },
+        "en": {
+          "name": "Tetris",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/tetris/"
+        },
+        "es": {
+          "name": "Tetris",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/tetris/"
+        },
+        "pt": {
+          "name": "Tetris",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/tetris/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/24536-tetris-game-boy-front-cover.jpg"
+    },
+    {
+      "id": 6,
+      "data": {
+        "it": {
+          "name": "The Legend of Zelda: Oracle of Ages",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/the-legend-of-zelda-oracle-of-ages-europe/11076.html"
+        },
+        "en": {
+          "name": "The Legend of Zelda: Oracle of Ages",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/the-legend-of-zelda-oracle-of-ages-europe/11076.html"
+        },
+        "es": {
+          "name": "The Legend of Zelda: Oracle of Ages",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/the-legend-of-zelda-oracle-of-ages-europe/11076.html"
+        },
+        "pt": {
+          "name": "The Legend of Zelda: Oracle of Ages",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/the-legend-of-zelda-oracle-of-ages-europe/11076.html"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/22166-the-legend-of-zelda-oracle-of-ages-game-boy-color-front-cover.jpg"
+    },
+    {
+      "id": 7,
+      "data": {
+        "it": {
+          "name": "Pokémon Cristallo",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/pok%25C3%2583%25C2%25A9mon-versione-cristallo-italy/11386.html"
+        },
+        "en": {
+          "name": "Pokémon Crystal",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/pokemon-crystal-version-v11/"
+        },
+        "es": {
+          "name": "Pokémon Cristal",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/pokemon-crystal-version-v11/"
+        },
+        "pt": {
+          "name": "Pokémon Cristal",
+          "link": "https://www.emulatorgames.net/roms/gameboy-color/pokemon-crystal-version-v11/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/15198-pokemon-crystal-version-game-boy-color-front-cover.jpg"
+    },
+    {
+      "id": 8,
+      "data": {
+        "it": {
+          "name": "Wario Land 3",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/wario-land-3/11787.html"
+        },
+        "en": {
+          "name": "Wario Land 3",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/wario-land-3/11787.html"
+        },
+        "es": {
+          "name": "Wario Land 3",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/wario-land-3/11787.html"
+        },
+        "pt": {
+          "name": "Wario Land 3",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy-color/wario-land-3/11787.html"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/19985-wario-land-3-game-boy-color-front-cover.jpg"
+    },
+    {
+      "id": 9,
+      "data": {
+        "it": {
+          "name": "Super Mario Land",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy/super-mario-land-world/10202.html"
+        },
+        "en": {
+          "name": "Super Mario Land",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy/super-mario-land-world/10202.html"
+        },
+        "es": {
+          "name": "Super Mario Land",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy/super-mario-land-world/10202.html"
+        },
+        "pt": {
+          "name": "Super Mario Land",
+          "link": "https://wowroms.com/en/roms/nintendo-gameboy/super-mario-land-world/10202.html"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/19794-super-mario-land-game-boy-front-cover.jpg"
+    },
+    {
+      "id": 10,
+      "data": {
+        "it": {
+          "name": "Metroid II: Return of Samus",
+          "link": "https://www.romsgames.net/gameboy-rom-metroid-ii-return-of-samus/"
+        },
+        "en": {
+          "name": "Metroid II: Return of Samus",
+          "link": "https://www.romsgames.net/gameboy-rom-metroid-ii-return-of-samus/"
+        },
+        "es": {
+          "name": "Metroid II: Return of Samus",
+          "link": "https://www.romsgames.net/gameboy-rom-metroid-ii-return-of-samus/"
+        },
+        "pt": {
+          "name": "Metroid II: Return of Samus",
+          "link": "https://www.romsgames.net/gameboy-rom-metroid-ii-return-of-samus/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/46773-metroid-ii-return-of-samus-game-boy-front-cover.jpg"
+    }
+  ],
+  "NES": [
+    {
+      "id": 1,
+      "data": {
+        "it": {
+          "name": "Super Mario Bros. 3",
+          "link": "https://wowroms.com/en/roms/nintendo-entertainment-system/super-mario-bros.-3/23769.html"
+        },
+        "en": {
+          "name": "Super Mario Bros. 3",
+          "link": "https://wowroms.com/en/roms/nintendo-entertainment-system/super-mario-bros.-3/23769.html"
+        },
+        "es": {
+          "name": "Super Mario Bros. 3",
+          "link": "https://wowroms.com/en/roms/nintendo-entertainment-system/super-mario-bros.-3/23769.html"
+        },
+        "pt": {
+          "name": "Super Mario Bros. 3",
+          "link": "https://wowroms.com/en/roms/nintendo-entertainment-system/super-mario-bros.-3/23769.html"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/35590-super-mario-bros-3-nes-front-cover.jpg"
+    },
+    {
+      "id": 2,
+      "data": {
+        "it": {
+          "name": "The Legend of Zelda",
+          "link": "https://www.emulatorgames.net/roms/nintendo/zelda-the-legend-of-zelda/"
+        },
+        "en": {
+          "name": "The Legend of Zelda",
+          "link": "https://www.emulatorgames.net/roms/nintendo/zelda-the-legend-of-zelda/"
+        },
+        "es": {
+          "name": "The Legend of Zelda",
+          "link": "https://www.emulatorgames.net/roms/nintendo/zelda-the-legend-of-zelda/"
+        },
+        "pt": {
+          "name": "The Legend of Zelda",
+          "link": "https://www.emulatorgames.net/roms/nintendo/zelda-the-legend-of-zelda/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/32874-the-legend-of-zelda-nes-front-cover.jpg"
+    },
+    {
+      "id": 3,
+      "data": {
+        "it": {
+          "name": "Super Mario Bros.",
+          "link": "https://www.emulatorgames.net/roms/nintendo/super-mario-bros/"
+        },
+        "en": {
+          "name": "Super Mario Bros.",
+          "link": "https://www.emulatorgames.net/roms/nintendo/super-mario-bros/"
+        },
+        "es": {
+          "name": "Super Mario Bros.",
+          "link": "https://www.emulatorgames.net/roms/nintendo/super-mario-bros/"
+        },
+        "pt": {
+          "name": "Super Mario Bros.",
+          "link": "https://www.emulatorgames.net/roms/nintendo/super-mario-bros/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/64682-super-mario-bros-nes-front-cover.jpg"
+    },
+    {
+      "id": 4,
+      "data": {
+        "it": {
+          "name": "Mega Man 2",
+          "link": "https://www.emulatorgames.net/roms/nintendo/mega-man-2/"
+        },
+        "en": {
+          "name": "Mega Man 2",
+          "link": "https://www.emulatorgames.net/roms/nintendo/mega-man-2/"
+        },
+        "es": {
+          "name": "Mega Man 2",
+          "link": "https://www.emulatorgames.net/roms/nintendo/mega-man-2/"
+        },
+        "pt": {
+          "name": "Mega Man 2",
+          "link": "https://www.emulatorgames.net/roms/nintendo/mega-man-2/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/10611-mega-man-2-nes-front-cover.jpg"
+    },
+    {
+      "id": 5,
+      "data": {
+        "it": {
+          "name": "Metroid",
+          "link": "https://www.emulatorgames.net/roms/nintendo/metroid/"
+        },
+        "en": {
+          "name": "Metroid",
+          "link": "https://www.emulatorgames.net/roms/nintendo/metroid/"
+        },
+        "es": {
+          "name": "Metroid",
+          "link": "https://www.emulatorgames.net/roms/nintendo/metroid/"
+        },
+        "pt": {
+          "name": "Metroid",
+          "link": "https://www.emulatorgames.net/roms/nintendo/metroid/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/16953-metroid-nes-front-cover.jpg"
+    },
+    {
+      "id": 6,
+      "data": {
+        "it": {
+          "name": "Castlevania",
+          "link": "https://www.emulatorgames.net/roms/nintendo/castlevania/"
+        },
+        "en": {
+          "name": "Castlevania",
+          "link": "https://www.emulatorgames.net/roms/nintendo/castlevania/"
+        },
+        "es": {
+          "name": "Castlevania",
+          "link": "https://www.emulatorgames.net/roms/nintendo/castlevania/"
+        },
+        "pt": {
+          "name": "Castlevania",
+          "link": "https://www.emulatorgames.net/roms/nintendo/castlevania/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/145936-castlevania-nes-front-cover.jpg"
+    },
+    {
+      "id": 7,
+      "data": {
+        "it": {
+          "name": "Zelda II: The Adventure of Link",
+          "link": "https://www.emulatorgames.net/roms/nintendo/zelda-2-the-adventure-of-link/"
+        },
+        "en": {
+          "name": "Zelda II: The Adventure of Link",
+          "link": "https://www.emulatorgames.net/roms/nintendo/zelda-2-the-adventure-of-link/"
+        },
+        "es": {
+          "name": "Zelda II: The Adventure of Link",
+          "link": "https://www.emulatorgames.net/roms/nintendo/zelda-2-the-adventure-of-link/"
+        },
+        "pt": {
+          "name": "Zelda II: The Adventure of Link",
+          "link": "https://www.emulatorgames.net/roms/nintendo/zelda-2-the-adventure-of-link/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/32875-zelda-ii-the-adventure-of-link-nes-front-cover.jpg"
+    },
+    {
+      "id": 8,
+      "data": {
+        "it": {
+          "name": "Kirby's Adventure",
+          "link": "https://www.emulatorgames.net/roms/nintendo/kirbys-adventure/"
+        },
+        "en": {
+          "name": "Kirby's Adventure",
+          "link": "https://www.emulatorgames.net/roms/nintendo/kirbys-adventure/"
+        },
+        "es": {
+          "name": "Kirby's Adventure",
+          "link": "https://www.emulatorgames.net/roms/nintendo/kirbys-adventure/"
+        },
+        "pt": {
+          "name": "Kirby's Adventure",
+          "link": "https://www.emulatorgames.net/roms/nintendo/kirbys-adventure/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/33864-kirby-s-adventure-nes-front-cover.jpg"
+    },
+    {
+      "id": 9,
+      "data": {
+        "it": {
+          "name": "Final Fantasy",
+          "link": "https://www.emulatorgames.net/roms/nintendo/final-fantasy/"
+        },
+        "en": {
+          "name": "Final Fantasy",
+          "link": "https://www.emulatorgames.net/roms/nintendo/final-fantasy/"
+        },
+        "es": {
+          "name": "Final Fantasy",
+          "link": "https://www.emulatorgames.net/roms/nintendo/final-fantasy/"
+        },
+        "pt": {
+          "name": "Final Fantasy",
+          "link": "https://www.emulatorgames.net/roms/nintendo/final-fantasy/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/32214-final-fantasy-nes-front-cover.jpg"
+    },
+    {
+      "id": 10,
+      "data": {
+        "it": {
+          "name": "Super Mario Bros. 2",
+          "link": "https://www.emulatorgames.net/roms/nintendo/super-mario-bros-2/"
+        },
+        "en": {
+          "name": "Super Mario Bros. 2",
+          "link": "https://www.emulatorgames.net/roms/nintendo/super-mario-bros-2/"
+        },
+        "es": {
+          "name": "Super Mario Bros. 2",
+          "link": "https://www.emulatorgames.net/roms/nintendo/super-mario-bros-2/"
+        },
+        "pt": {
+          "name": "Super Mario Bros. 2",
+          "link": "https://www.emulatorgames.net/roms/nintendo/super-mario-bros-2/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/16855-super-mario-bros-2-nes-front-cover.jpg"
+    }
+  ],
+  "SNES": [
+    {
+      "id": 1,
+      "data": {
+        "it": {
+          "name": "Super Mario World",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-world/"
+        },
+        "en": {
+          "name": "Super Mario World",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-world/"
+        },
+        "es": {
+          "name": "Super Mario World",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-world/"
+        },
+        "pt": {
+          "name": "Super Mario World",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-world/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/63517-super-mario-world-snes-front-cover.jpg"
+    },
+    {
+      "id": 2,
+      "data": {
+        "it": {
+          "name": "The Legend of Zelda: A Link to the Past",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/legend-of-zelda-the-a-link-to-the-past/"
+        },
+        "en": {
+          "name": "The Legend of Zelda: A Link to the Past",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/legend-of-zelda-the-a-link-to-the-past/"
+        },
+        "es": {
+          "name": "The Legend of Zelda: A Link to the Past",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/legend-of-zelda-the-a-link-to-the-past/"
+        },
+        "pt": {
+          "name": "The Legend of Zelda: A Link to the Past",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/legend-of-zelda-the-a-link-to-the-past/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/55163-the-legend-of-zelda-a-link-to-the-past-snes-front-cover.jpg"
+    },
+    {
+      "id": 3,
+      "data": {
+        "it": {
+          "name": "Chrono Trigger",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/chrono-trigger/"
+        },
+        "en": {
+          "name": "Chrono Trigger",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/chrono-trigger/"
+        },
+        "es": {
+          "name": "Chrono Trigger",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/chrono-trigger/"
+        },
+        "pt": {
+          "name": "Chrono Trigger",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/chrono-trigger/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/35371-chrono-trigger-snes-front-cover.jpg"
+    },
+    {
+      "id": 4,
+      "data": {
+        "it": {
+          "name": "Super Metroid",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-metroid/"
+        },
+        "en": {
+          "name": "Super Metroid",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-metroid/"
+        },
+        "es": {
+          "name": "Super Metroid",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-metroid/"
+        },
+        "pt": {
+          "name": "Super Metroid",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-metroid/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/14765-super-metroid-snes-front-cover.jpg"
+    },
+    {
+      "id": 5,
+      "data": {
+        "it": {
+          "name": "Final Fantasy VI",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/final-fantasy-vi/"
+        },
+        "en": {
+          "name": "Final Fantasy III (US)",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/final-fantasy-vi/"
+        },
+        
+        "es": {
+          "name": "Final Fantasy VI",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/final-fantasy-vi/"
+        },
+        "pt": {
+          "name": "Final Fantasy VI",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/final-fantasy-vi/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/16430-final-fantasy-iii-snes-front-cover.jpg"
+    },
+    {
+      "id": 6,
+      "data": {
+        "it": {
+          "name": "Super Mario Kart",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-kart/"
+        },
+        "en": {
+          "name": "Super Mario Kart",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-kart/"
+        },
+        "es": {
+          "name": "Super Mario Kart",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-kart/"
+        },
+        "pt": {
+          "name": "Super Mario Kart",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-kart/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/15033-super-mario-kart-snes-front-cover.jpg"
+    },
+    {
+      "id": 7,
+      "data": {
+        "it": {
+          "name": "Donkey Kong Country",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/donkey-kong-country-v12/"
+        },
+        "en": {
+          "name": "Donkey Kong Country",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/donkey-kong-country-v12/"
+        },
+        "es": {
+          "name": "Donkey Kong Country",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/donkey-kong-country-v12/"
+        },
+        "pt": {
+          "name": "Donkey Kong Country",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/donkey-kong-country-v12/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/13831-donkey-kong-country-snes-front-cover.jpg"
+    },
+    {
+      "id": 8,
+      "data": {
+        "it": {
+          "name": "EarthBound",
+          "link": "https://wowroms.com/en/roms/super-nintendo/earthbound-usa/27491.html"
+        },
+        "en": {
+          "name": "EarthBound",
+          "link": "https://wowroms.com/en/roms/super-nintendo/earthbound-usa/27491.html"
+        },
+        "es": {
+          "name": "EarthBound",
+          "link": "https://wowroms.com/en/roms/super-nintendo/earthbound-usa/27491.html"
+        },
+        "pt": {
+          "name": "EarthBound",
+          "link": "https://wowroms.com/en/roms/super-nintendo/earthbound-usa/27491.html"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/57399-earthbound-snes-front-cover.jpg"
+    },
+    {
+      "id": 9,
+      "data": {
+        "it": {
+          "name": "Mega Man X",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/mega-man-x/"
+        },
+        "en": {
+          "name": "Mega Man X",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/mega-man-x/"
+        },
+        "es": {
+          "name": "Mega Man X",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/mega-man-x/"
+        },
+        "pt": {
+          "name": "Mega Man X",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/mega-man-x/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/39400-mega-man-x-snes-front-cover.jpg"
+    },
+    {
+      "id": 10,
+      "data": {
+        "it": {
+          "name": "Super Mario RPG: Legend of the Seven Stars",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-rpg-legend-of-the-seven-stars/"
+        },
+        "en": {
+          "name": "Super Mario RPG: Legend of the Seven Stars",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-rpg-legend-of-the-seven-stars/"
+        },
+        "es": {
+          "name": "Super Mario RPG: Legend of the Seven Stars",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-rpg-legend-of-the-seven-stars/"
+        },
+        "pt": {
+          "name": "Super Mario RPG: Legend of the Seven Stars",
+          "link": "https://www.emulatorgames.net/roms/super-nintendo/super-mario-rpg-legend-of-the-seven-stars/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/45031-super-mario-rpg-legend-of-the-seven-stars-snes-front-cover.jpg"
+    }
+  ],
+  "N64": [
+    {
+      "id": 1,
+      "data": {
+        "it": {
+          "name": "The Legend of Zelda: Ocarina of Time",
+          "link": "https://wowroms.com/en/roms/nintendo-64/the-legend-of-zelda-ocarina-of-time-europe/24622.html"
+        },
+        "en": {
+          "name": "The Legend of Zelda: Ocarina of Time",
+          "link": "https://wowroms.com/en/roms/nintendo-64/the-legend-of-zelda-ocarina-of-time-europe/24622.html"
+        },
+        "es": {
+          "name": "The Legend of Zelda: Ocarina of Time",
+          "link": "https://wowroms.com/en/roms/nintendo-64/the-legend-of-zelda-ocarina-of-time-europe/24622.html"
+        },
+        "pt": {
+          "name": "The Legend of Zelda: Ocarina of Time",
+          "link": "https://wowroms.com/en/roms/nintendo-64/the-legend-of-zelda-ocarina-of-time-europe/24622.html"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/15581-the-legend-of-zelda-ocarina-of-time-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 2,
+      "data": {
+        "it": {
+          "name": "Super Mario 64",
+          "link": "https://wowroms.com/en/roms/nintendo-64/download-super-mario-64-europe/24976.html"
+        },
+        "en": {
+          "name": "Super Mario 64",
+          "link": "https://wowroms.com/en/roms/nintendo-64/download-super-mario-64-europe/24976.html"
+        },
+        "es": {
+          "name": "Super Mario 64",
+          "link": "https://wowroms.com/en/roms/nintendo-64/download-super-mario-64-europe/24976.html"
+        },
+        "pt": {
+          "name": "Super Mario 64",
+          "link": "https://wowroms.com/en/roms/nintendo-64/download-super-mario-64-europe/24976.html"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/18006-super-mario-64-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 3,
+      "data": {
+        "it": {
+          "name": "Mario Kart 64",
+          "link": "https://wowroms.com/en/roms/nintendo-64/mario-kart-64-europe/24659.html"
+        },
+        "en": {
+          "name": "Mario Kart 64",
+          "link": "https://wowroms.com/en/roms/nintendo-64/mario-kart-64-europe/24659.html"
+        },
+        "es": {
+          "name": "Mario Kart 64",
+          "link": "https://wowroms.com/en/roms/nintendo-64/mario-kart-64-europe/24659.html"
+        },
+        "pt": {
+          "name": "Mario Kart 64",
+          "link": "https://wowroms.com/en/roms/nintendo-64/mario-kart-64-europe/24659.html"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/11518-mario-kart-64-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 4,
+      "data": {
+        "it": {
+          "name": "The Legend of Zelda: Majora's Mask",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/legend-of-zelda-the-majoras-mask/"
+        },
+        "en": {
+          "name": "The Legend of Zelda: Majora's Mask",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/legend-of-zelda-the-majoras-mask/"
+        },
+        "es": {
+          "name": "The Legend of Zelda: Majora's Mask",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/legend-of-zelda-the-majoras-mask/"
+        },
+        "pt": {
+          "name": "The Legend of Zelda: Majora's Mask",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/legend-of-zelda-the-majoras-mask/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/15582-the-legend-of-zelda-majora-s-mask-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 5,
+      "data": {
+        "it": {
+          "name": "GoldenEye 007",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/007-golden-eye/"
+        },
+        "en": {
+          "name": "GoldenEye 007",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/007-golden-eye/"
+        },
+        "es": {
+          "name": "GoldenEye 007",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/007-golden-eye/"
+        },
+        "pt": {
+          "name": "GoldenEye 007",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/007-golden-eye/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/12068-goldeneye-007-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 6,
+      "data": {
+        "it": {
+          "name": "Super Smash Bros.",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/super-smash-bros/"
+        },
+        "en": {
+          "name": "Super Smash Bros.",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/super-smash-bros/"
+        },
+        "es": {
+          "name": "Super Smash Bros.",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/super-smash-bros/"
+        },
+        "pt": {
+          "name": "Super Smash Bros.",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/super-smash-bros/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/14691-super-smash-bros-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 7,
+      "data": {
+        "it": {
+          "name": "Banjo-Kazooie",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/banjo-kazooie/"
+        },
+        "en": {
+          "name": "Banjo-Kazooie",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/banjo-kazooie/"
+        },
+        "es": {
+          "name": "Banjo-Kazooie",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/banjo-kazooie/"
+        },
+        "pt": {
+          "name": "Banjo-Kazooie",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/banjo-kazooie/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/11426-banjo-kazooie-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 8,
+      "data": {
+        "it": {
+          "name": "Star Fox 64",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/star-fox-64-v11/"
+        },
+        "en": {
+          "name": "Star Fox 64",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/star-fox-64-v11/"
+        },
+        "es": {
+          "name": "Star Fox 64",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/star-fox-64-v11/"
+        },
+        "pt": {
+          "name": "Star Fox 64",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/star-fox-64-v11/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/26138-star-fox-64-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 9,
+      "data": {
+        "it": {
+          "name": "Paper Mario",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/paper-mario/"
+        },
+        "en": {
+          "name": "Paper Mario",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/paper-mario/"
+        },
+        "es": {
+          "name": "Paper Mario",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/paper-mario/"
+        },
+        "pt": {
+          "name": "Paper Mario",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/paper-mario/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/15144-paper-mario-nintendo-64-front-cover.jpg"
+    },
+    {
+      "id": 10,
+      "data": {
+        "it": {
+          "name": "Pokémon Stadium",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/pokemon-stadium-v11/"
+        },
+        "en": {
+          "name": "Pokémon Stadium",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/pokemon-stadium-v11/"
+        },
+        "es": {
+          "name": "Pokémon Stadium",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/pokemon-stadium-v11/"
+        },
+        "pt": {
+          "name": "Pokémon Stadium",
+          "link": "https://www.emulatorgames.net/roms/nintendo-64/pokemon-stadium-v11/"
+        }
+      },
+      "imgLink": "https://www.mobygames.com/images/covers/l/14033-pokemon-stadium-nintendo-64-front-cover.jpg"
+    }
+  ]
+}

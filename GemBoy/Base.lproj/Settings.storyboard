@@ -1344,13 +1344,74 @@ Menu + Long-Press: Quick Load</string>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="Hef-IR-nMO" customClass="MenuCell" customModule="GemBoy_Advance" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="Y96-lo-GFn" customClass="MenuCell" customModule="GemBoy_Advance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyS-6E-OR7">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMy-Xw-R3V" customClass="DynamicView" customModule="GemBoy_Advance" customModuleProvider="target">
+                                                    <rect key="frame" x="5" y="4" width="40" height="36"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="cMy-Xw-R3V" secondAttribute="height" id="XCe-SA-bmS"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="primaryColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheatCodes" translatesAutoresizingMaskIntoConstraints="NO" id="ORf-mB-aNc">
+                                                    <rect key="frame" x="14" y="11" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ORf-mB-aNc" secondAttribute="height" id="mLb-GX-ePS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="jfhbdjhgfrhjgbfh" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1nc-i2-UNc">
+                                                    <rect key="frame" x="4" y="46" width="42" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="buttonTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="cMy-Xw-R3V" firstAttribute="centerX" secondItem="gyS-6E-OR7" secondAttribute="centerX" id="5DA-xe-BPt"/>
+                                                <constraint firstItem="ORf-mB-aNc" firstAttribute="centerX" secondItem="cMy-Xw-R3V" secondAttribute="centerX" id="67V-a5-t9i"/>
+                                                <constraint firstItem="cMy-Xw-R3V" firstAttribute="top" secondItem="gyS-6E-OR7" secondAttribute="top" constant="4" id="Amb-fE-5xb"/>
+                                                <constraint firstItem="1nc-i2-UNc" firstAttribute="leading" secondItem="gyS-6E-OR7" secondAttribute="leading" constant="4" id="BvV-oY-Itz"/>
+                                                <constraint firstItem="cMy-Xw-R3V" firstAttribute="width" secondItem="gyS-6E-OR7" secondAttribute="width" multiplier="0.8" id="Bz1-Mk-TgW"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1nc-i2-UNc" secondAttribute="bottom" constant="4" id="TXy-1K-Nsr"/>
+                                                <constraint firstItem="ORf-mB-aNc" firstAttribute="width" secondItem="cMy-Xw-R3V" secondAttribute="width" multiplier="0.55" id="XPi-Wf-NNa"/>
+                                                <constraint firstItem="ORf-mB-aNc" firstAttribute="centerY" secondItem="cMy-Xw-R3V" secondAttribute="centerY" id="gEb-WR-Kkw"/>
+                                                <constraint firstAttribute="trailing" secondItem="1nc-i2-UNc" secondAttribute="trailing" constant="4" id="hv7-eF-Idt"/>
+                                                <constraint firstItem="1nc-i2-UNc" firstAttribute="top" secondItem="cMy-Xw-R3V" secondAttribute="bottom" constant="6" id="kXU-PJ-7IX"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="gyS-6E-OR7" firstAttribute="top" secondItem="Y96-lo-GFn" secondAttribute="top" id="Bh9-2P-NLv"/>
+                                    <constraint firstItem="gyS-6E-OR7" firstAttribute="leading" secondItem="Y96-lo-GFn" secondAttribute="leading" id="j4g-LU-5Gv"/>
+                                    <constraint firstAttribute="trailing" secondItem="gyS-6E-OR7" secondAttribute="trailing" id="s3q-HK-21T"/>
+                                    <constraint firstAttribute="bottom" secondItem="gyS-6E-OR7" secondAttribute="bottom" id="s6h-zP-MkY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="image" destination="ORf-mB-aNc" id="tjm-dZ-Ydk"/>
+                                    <outlet property="imageRound" destination="cMy-Xw-R3V" id="Ccg-hU-kLZ"/>
+                                    <outlet property="text" destination="1nc-i2-UNc" id="HLx-2S-GjR"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -1367,7 +1428,7 @@ Menu + Long-Press: Quick Load</string>
         <!--Game View Controller-->
         <scene sceneID="qAz-yz-iOc">
             <objects>
-                <viewController id="LIv-AL-s86" customClass="GameViewController" customModule="DeltaCore" sceneMemberID="viewController">
+                <viewController id="LIv-AL-s86" customClass="GameViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9u3-RP-Qcj"/>
                         <viewControllerLayoutGuide type="bottom" id="XGZ-ro-kQv"/>
@@ -1380,7 +1441,7 @@ Menu + Long-Press: Quick Load</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQK-ch-9AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5006" y="-590"/>
+            <point key="canvasLocation" x="5006" y="-679"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bwW-s2-fcE">
@@ -2562,11 +2623,18 @@ Delta uses OpenVGDB to provide automatic artwork for imported games.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="CheatCodes" width="128" height="128"/>
         <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
         <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <namedColor name="Purple">
             <color red="0.83921568627450982" green="0.090196078431372548" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="buttonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

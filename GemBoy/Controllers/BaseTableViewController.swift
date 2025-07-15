@@ -459,33 +459,33 @@ extension BaseTableViewController: FullScreenContentDelegate {
 extension BaseTableViewController {
     func requestConsent() {
         // Carica lo stato del consenso
-        UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: UMPRequestParameters()) { error in
-            if let error = error {
-                print("Errore nell'aggiornamento del consenso: \(error.localizedDescription)")
-                return
-            }
-            
-            // Controlla se il form è disponibile
-            if UMPConsentInformation.sharedInstance.formStatus == .available {
-                UMPConsentForm.load { form, error in
-                    if let error = error {
-                        print("Errore nel caricamento del form: \(error.localizedDescription)")
-                        return
-                    }
-                    
-                    // Mostra il form del consenso
-                    form?.present(from: UIApplication.shared.windows.first!.rootViewController!) { dismissError in
-                        if let dismissError = dismissError {
-                            print("Errore nella visualizzazione del form: \(dismissError.localizedDescription)")
-                        }
-                        
-                        // Dopo che il form è stato chiuso, verifica lo stato del consenso
-                        let consentStatus = UMPConsentInformation.sharedInstance.consentStatus
-                        print("Stato del consenso aggiornato: \(consentStatus)")
-                    }
-                }
-            }
-        }
+        ConsentInformation.shared.requestConsentInfoUpdate(with: RequestParameters()) { error in
+           if let error = error {
+               print("Errore nell'aggiornamento del consenso: \(error.localizedDescription)")
+               return
+           }
+           
+           // Controlla se il form è disponibile
+           if ConsentInformation.shared.formStatus == .available {
+               ConsentForm.load { form, error in
+                   if error != nil || form == nil {
+                       print("Errore nel caricamento del form: \(error?.localizedDescription)")
+                       return
+                   }
+                   
+                   // Mostra il form del consenso
+                   form?.present(from: self) { dismissError in
+                       if let dismissError = dismissError {
+                           print("Errore nella visualizzazione del form: \(dismissError.localizedDescription)")
+                       }
+                       
+                       // Dopo che il form è stato chiuso, verifica lo stato del consenso
+                       let consentStatus = ConsentInformation.shared.consentStatus
+                       print("Stato del consenso aggiornato: \(consentStatus)")
+                   }
+               }
+           }
+       }
     }
     
 }

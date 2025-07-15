@@ -8,7 +8,7 @@ import UIKit
 import Foundation
 
 class MenuCell : UICollectionViewCell {
-    
+     
     @IBOutlet weak var image: UIImageView?
     @IBOutlet weak var text: UILabel?
     @IBOutlet weak var imageRound: DynamicView?
@@ -32,10 +32,5 @@ class MenuCell : UICollectionViewCell {
         }
         
         imageRound?.layoutSubviews()
-        
     }
-    
-    
-    
-    
 }

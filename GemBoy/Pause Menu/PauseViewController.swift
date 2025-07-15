@@ -12,6 +12,11 @@ import DeltaCore
 
 class PauseViewController: BaseViewController, PauseInfoProviding
 {
+    
+    @IBOutlet weak var sliderContainerView: UIView!
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var sliderValue: UILabel!
+    
     var emulatorCore: EmulatorCore? {
         didSet {
             self.updatePauseItems()
@@ -19,7 +24,14 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     }
     
     var pauseItems: [MenuItem] {
-        var list = [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem, self.sustainButtonsItem, self.screenshotItem, self.closeGameItem]
+        var list = [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem]
+        
+        if ExperimentalFeatures.shared.variableFastForward.isEnabled {
+            list.append(self.fastForwardSetItem)
+            
+        }
+        
+        list.append(contentsOf: [self.sustainButtonsItem, self.screenshotItem, self.closeGameItem])
         
         if emulatorCore?.game.showLink() == true {
             list.append(self.connectItem)
@@ -55,6 +67,7 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     var loadStateItem: MenuItem?
     var cheatCodesItem: MenuItem?
     var fastForwardItem: MenuItem?
+    var fastForwardSetItem: MenuItem?
     var sustainButtonsItem: MenuItem?
     var screenshotItem: MenuItem?
     var closeGameItem: MenuItem?
@@ -110,7 +123,7 @@ class PauseViewController: BaseViewController, PauseInfoProviding
         
         if let gridMenuViewController = self.navigationController?.topViewController as? GridMenuViewController
         {
-            gridMenuViewController.closeButton.title = self.closeButtonTitle
+            gridMenuViewController.closeButton?.title = self.closeButtonTitle
             
             if UIApplication.shared.supportsMultipleScenes
             {
@@ -119,10 +132,11 @@ class PauseViewController: BaseViewController, PauseInfoProviding
                 }
                 
                 let menu = UIMenu(children: [openNewMainWindowAction])
-                gridMenuViewController.closeButton.menu = menu
+                gridMenuViewController.closeButton?.menu = menu
             }
         }
     }
+    
     
     override func viewDidLayoutSubviews()
     {
@@ -235,6 +249,7 @@ extension PauseViewController: UINavigationControllerDelegate
         self.cheatCodesItem = nil
         self.sustainButtonsItem = nil
         self.fastForwardItem = nil
+        self.fastForwardSetItem = nil
         self.screenshotItem = nil
         self.closeGameItem = nil
         
@@ -255,6 +270,11 @@ extension PauseViewController: UINavigationControllerDelegate
         })
         
         self.fastForwardItem = MenuItem(text: "Fast_Forward".localizable, image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
+        
+        if ExperimentalFeatures.shared.variableFastForward.isEnabled {
+            self.fastForwardSetItem = MenuItem(text: "Fast_Forward_Set".localizable, image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
+        }
+        
         self.sustainButtonsItem = MenuItem(text: "Hold_Buttons".localizable, image: #imageLiteral(resourceName: "SustainButtons"), action: { _ in })
         self.screenshotItem = MenuItem(text: "Screenshot".localizable, image: #imageLiteral(resourceName: "Screenshot"), action: { _ in })
         self.closeGameItem = MenuItem(text: "closeGame".localizable, image: #imageLiteral(resourceName: "closeGame"), action: { _ in })
@@ -264,11 +284,8 @@ extension PauseViewController: UINavigationControllerDelegate
         self.deviceConnection = MenuItem(text: "linkDevice".localizable, image: #imageLiteral(resourceName: "changeTeamIcon"), action: { _ in })
         self.startConnectionServer = MenuItem(text: "startConnection".localizable, image: #imageLiteral(resourceName: "client_start"), action: { _ in })
 
-        if ExperimentalFeatures.shared.variableFastForward.isEnabled
-        {
-            let menu = self.makeFastForwardMenu(for: emulatorCore.game)
-            self.fastForwardItem?.menu = menu
-        }
+        
+        
        
     }
 }
