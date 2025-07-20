@@ -32,8 +32,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		05EF6BDEE6C1AC8A92642B10 /* libPods-GemBoy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5507B25B552431548D97A6 /* libPods-GemBoy.a */; };
-		91216657969D0BFC464ABAE9 /* libPods-GemBoyPreviews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4513EA4A379492D8F7CE9A8 /* libPods-GemBoyPreviews.a */; };
+		18FC1AC87F15A17F1455F781 /* libPods-GemBoy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D9DD38E1537031D2BBBFA1 /* libPods-GemBoy.a */; };
 		AC1C991029F8B8C30020E6E4 /* ToastNotificationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C990F29F8B8C30020E6E4 /* ToastNotificationOptions.swift */; };
 		AC1C992729F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C992629F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift */; };
 		ACF7E30F29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF7E30E29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift */; };
@@ -94,10 +93,8 @@
 		BF647A6A22FB8FCE0061D76D /* Bundle+SwizzleBundleID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF647A6922FB8FCE0061D76D /* Bundle+SwizzleBundleID.swift */; };
 		BF6866171DCAC8B900BF2D06 /* ControllerSkin+Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6866161DCAC8B900BF2D06 /* ControllerSkin+Configuring.swift */; };
 		BF696B801D9B2B02009639E0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF696B7F1D9B2B02009639E0 /* Theme.swift */; };
-		BF69FBA223E375A20051BEEA /* libVBA-M.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69FBA123E375A20051BEEA /* libVBA-M.a */; };
 		BF69FBA823E396860051BEEA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69FBA723E3967B0051BEEA /* libz.tbd */; };
 		BF69FBAA23E399AA0051BEEA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69FBA923E399AA0051BEEA /* CoreMotion.framework */; };
-		BF69FBC923E3A8380051BEEA /* libNestopia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69FBC823E3A8380051BEEA /* libNestopia.a */; };
 		BF6BF3131EB7E47F008E83CD /* ImportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BF3121EB7E47F008E83CD /* ImportOption.swift */; };
 		BF6BF3181EB82111008E83CD /* iTunesImportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BF3171EB82111008E83CD /* iTunesImportOption.swift */; };
 		BF6BF31A1EB82146008E83CD /* ClipboardImportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BF3191EB82146008E83CD /* ClipboardImportOption.swift */; };
@@ -126,8 +123,6 @@
 		BFC3628021ADE2BA00EF2BE6 /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3627F21ADE2BA00EF2BE6 /* UIAlertController+Error.swift */; };
 		BFC6F7B81F435BC500221B96 /* Input+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6F7B71F435BC500221B96 /* Input+Display.swift */; };
 		BFC9B7391CEFCD34008629BB /* CheatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9B7381CEFCD34008629BB /* CheatsViewController.swift */; };
-		BFCADF1E25D22FE2008D78FB /* Systems.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6E70C225D22F7600E41CD1 /* Systems.framework */; };
-		BFCADF1F25D22FE2008D78FB /* Systems.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF6E70C225D22F7600E41CD1 /* Systems.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BFCEA67E1D56FF640061A534 /* UIViewControllerContextTransitioning+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEA67D1D56FF640061A534 /* UIViewControllerContextTransitioning+Conveniences.swift */; };
 		BFD097211D3A01B8005A44C2 /* SaveStatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3540041C5DA70400C1184C /* SaveStatesViewController.swift */; };
 		BFD1EF402336BD8800D197CF /* UIDevice+Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1EF3F2336BD8800D197CF /* UIDevice+Processor.swift */; };
@@ -149,9 +144,6 @@
 		BFFC46201D59823500AF2CC6 /* InitialGamesStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC461D1D59823500AF2CC6 /* InitialGamesStoryboardSegue.swift */; };
 		BFFC46231D5984A000AF2CC6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC46221D5984A000AF2CC6 /* LaunchViewController.swift */; };
 		BFFC464C1D5998D600AF2CC6 /* CheatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC464B1D5998D600AF2CC6 /* CheatTableViewCell.swift */; };
-		BFFDF03723E3BB2600931B96 /* libSnes9x.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF03623E3BB2600931B96 /* libSnes9x.a */; };
-		BFFDF03F23E3C28A00931B96 /* libGambatte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF03D23E3C0F000931B96 /* libGambatte.a */; };
-		BFFDF04623E3D3A600931B96 /* libMupen64Plus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF04523E3D3A600931B96 /* libMupen64Plus.a */; };
 		C6F24AD72D64B452002F939F /* Lu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F24AD62D64B452002F939F /* Lu.swift */; };
 		D5011C48281B6E8B00A0760B /* CharacterSet+Filename.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5011C47281B6E8B00A0760B /* CharacterSet+Filename.swift */; };
 		D50CA1572D419E7100F54920 /* GameSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50CA1562D419E7100F54920 /* GameSettingsView.swift */; };
@@ -243,7 +235,6 @@
 		EB21EA452DB935C500B6B1F4 /* StartGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */; };
 		EB21EA472DB937F700B6B1F4 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */; };
 		EB21EA492DB93F0E00B6B1F4 /* StartGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */; };
-		EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */; };
 		EB3EB55C2DA00793004FFACF /* GoogleService-Info_gemboy.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55B2DA00793004FFACF /* GoogleService-Info_gemboy.plist */; };
 		EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */; };
 		EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */; };
@@ -270,7 +261,6 @@
 		EB3EB5F62DA0738D004FFACF /* ColorPalette.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C32DA0738D004FFACF /* ColorPalette.storyboard */; };
 		EB3EB5F72DA0738D004FFACF /* PremiumSinglePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C92DA0738D004FFACF /* PremiumSinglePage.storyboard */; };
 		EB3EB5FA2DA07626004FFACF /* TabBarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */; };
-		EB3EB5FE2DA0799D004FFACF /* libCircleBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */; };
 		EB3EB6262DA0BA1E004FFACF /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D412D946451004BFB1F /* PushNotification.swift */; };
 		EB3EB6272DA0BA2A004FFACF /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D3D2D9462CA004BFB1F /* DeviceManager.swift */; };
 		EB3EB6282DA0BA9C004FFACF /* NotificationInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D432D946518004BFB1F /* NotificationInApp.swift */; };
@@ -321,7 +311,6 @@
 		EB9D83D22E1A45E1006ED231 /* GridMenuViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D83D12E1A45E1006ED231 /* GridMenuViewControllerOld.swift */; };
 		EB9D83FA2E1A5B7D006ED231 /* AutoshrinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D83F92E1A5B77006ED231 /* AutoshrinkLabel.swift */; };
 		EB9D840B2E1AD17E006ED231 /* best_games.json in Resources */ = {isa = PBXBuildFile; fileRef = EB9D840A2E1AD17E006ED231 /* best_games.json */; };
-		EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BA9F2D984792007A25A6 /* AlertView.xib */; };
 		EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */; };
 		EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB82D984792007A25A6 /* UserProfile.xib */; };
@@ -363,8 +352,6 @@
 		EBBB196E2D9971A8009C977A /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19612D9971A8009C977A /* GothamRnd-Medium.otf */; };
 		EBBB19722D997269009C977A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB196F2D997269009C977A /* Loader.swift */; };
 		EBBB19732D997269009C977A /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19702D997269009C977A /* Loader.xib */; };
-		EBBB19752D99727D009C977A /* libKingfisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19742D99727D009C977A /* libKingfisher.a */; };
-		EBBB19772D99727D009C977A /* liblottie-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19762D99727D009C977A /* liblottie-ios.a */; };
 		EBBB19812D9972DB009C977A /* OnBoardingPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB197E2D9972DB009C977A /* OnBoardingPagerViewController.swift */; };
 		EBBB19822D9972DB009C977A /* OnBoardingItemViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19792D9972DB009C977A /* OnBoardingItemViewProtocol.swift */; };
 		EBBB19832D9972DB009C977A /* OnBoardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB197C2D9972DB009C977A /* OnBoardingItemView.swift */; };
@@ -394,8 +381,6 @@
 		EBBB19EA2D9982C6009C977A /* TutorialLong.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19DE2D9982C6009C977A /* TutorialLong.storyboard */; };
 		EBBB19EB2D9982C6009C977A /* TutorialSplit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19DA2D9982C6009C977A /* TutorialSplit.storyboard */; };
 		EBBB19EC2D9982C6009C977A /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19E32D9982C6009C977A /* OnBoarding.storyboard */; };
-		EBBB19EE2D9985BB009C977A /* libCollectionViewPagingLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19ED2D9985BB009C977A /* libCollectionViewPagingLayout.a */; };
-		EBBB19F02D9985CF009C977A /* libAlamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19EF2D9985CF009C977A /* libAlamofire.a */; };
 		EBBB19F52D998826009C977A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EBBB19F42D998826009C977A /* GoogleSignIn */; };
 		EBBB19F72D998826009C977A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EBBB19F62D998826009C977A /* GoogleSignInSwift */; };
 		EBBB1A072D9989F5009C977A /* LaunchScreenStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */; };
@@ -438,7 +423,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BFCADF1F25D22FE2008D78FB /* Systems.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,21 +450,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1FC472D0CE8F1DABCC4D91CD /* Pods-GemBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoy/Pods-GemBoy.debug.xcconfig"; sourceTree = "<group>"; };
-		22506DA00971C4300AF90A35 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E9C7C16BC517D412965A72B /* Pods-GemBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoy/Pods-GemBoy.release.xcconfig"; sourceTree = "<group>"; };
-		8ECE6641DE30D01EA30FE7F6 /* Pods-DeltaPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeltaPreviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeltaPreviews/Pods-DeltaPreviews.release.xcconfig"; sourceTree = "<group>"; };
-		A01281C7023C0041B25963BE /* Pods-DeltaPreviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeltaPreviews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeltaPreviews/Pods-DeltaPreviews.debug.xcconfig"; sourceTree = "<group>"; };
-		A19FF50F55441BC2B2248241 /* Pods-Delta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.release.xcconfig"; sourceTree = "<group>"; };
+		285035F4DB73554044EB3901 /* Pods-GemBoyPreviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.debug.xcconfig"; path = "Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.debug.xcconfig"; sourceTree = "<group>"; };
+		4714063B3E758616A1487910 /* Pods-GemBoyPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.release.xcconfig"; path = "Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.release.xcconfig"; sourceTree = "<group>"; };
+		763ED0C28580E859BAA0753D /* Pods-GemBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoy.debug.xcconfig"; path = "Target Support Files/Pods-GemBoy/Pods-GemBoy.debug.xcconfig"; sourceTree = "<group>"; };
+		8845AED12F3E628722600EBA /* Pods-GemBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoy.release.xcconfig"; path = "Target Support Files/Pods-GemBoy/Pods-GemBoy.release.xcconfig"; sourceTree = "<group>"; };
 		AC1C990F29F8B8C30020E6E4 /* ToastNotificationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastNotificationOptions.swift; sourceTree = "<group>"; };
 		AC1C992629F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+ExperimentalToasts.swift"; sourceTree = "<group>"; };
 		ACF7E30E29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Screenshots.swift"; sourceTree = "<group>"; };
-		B4513EA4A379492D8F7CE9A8 /* libPods-GemBoyPreviews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyPreviews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF00BEA525B758AA00C8607D /* SystemBIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemBIOS.swift; sourceTree = "<group>"; };
 		BF02D5D91DDEBB3000A5E131 /* openvgdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openvgdb.sqlite; sourceTree = "<group>"; };
-		BF0418131D01E93400E85BCF /* GBADeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GBADeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF04E6FE1DB8625C000F35D3 /* ControllerSkinsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerSkinsViewController.swift; sourceTree = "<group>"; };
-		BF07200E219A3A9500F05DA4 /* ZIPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0758DE2202827C005110F2 /* Delta 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Delta 4.xcdatamodel"; sourceTree = "<group>"; };
 		BF090CF11B490D8300DCAB45 /* Delta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Delta-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF1020E21F95B05B00313182 /* DeltaToDelta2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = DeltaToDelta2.xcmappingmodel; sourceTree = "<group>"; };
@@ -494,10 +473,7 @@
 		BF1F45AC21AF57BA00EF9895 /* HarmonyMetadataKey+Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HarmonyMetadataKey+Keys.swift"; sourceTree = "<group>"; };
 		BF1F45BE21AF676F00EF9895 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		BF27CC861BC9E3C600A20D89 /* Delta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Delta.entitlements; sourceTree = "<group>"; };
-		BF27CC8A1BC9FE4D00A20D89 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-appletvos/Pods.framework"; sourceTree = "<group>"; };
-		BF27CC941BCB7B7A00A20D89 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		BF2B98E51C97E32F00F6D57D /* SaveStatesCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveStatesCollectionHeaderView.swift; sourceTree = "<group>"; };
-		BF30AC25244E88BE00F0C744 /* libMelonDSDeltaCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMelonDSDeltaCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF31878A1D489AAA00BD020D /* CheatValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatValidator.swift; sourceTree = "<group>"; };
 		BF34FA061CF0F510006624C7 /* EditCheatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCheatViewController.swift; sourceTree = "<group>"; };
 		BF34FA101CF1899D006624C7 /* CheatTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatTextView.swift; sourceTree = "<group>"; };
@@ -539,7 +515,6 @@
 		BF5942901E09BD1A0051894B /* NSFetchedResultsController+Conveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+Conveniences.m"; sourceTree = "<group>"; };
 		BF5942911E09BD1A0051894B /* NSManagedObject+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Conveniences.swift"; sourceTree = "<group>"; };
 		BF5942921E09BD1A0051894B /* NSManagedObjectContext+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Conveniences.swift"; sourceTree = "<group>"; };
-		BF5ACE3823E23D6500BD0F20 /* libVBA-M.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libVBA-M.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5E7F431B9A650B00AE44F8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BF616A121F08184A0077F8B2 /* ControllerInputsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerInputsViewController.swift; sourceTree = "<group>"; };
 		BF63BDE91D389EEB00FCB040 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -548,10 +523,8 @@
 		BF647A6922FB8FCE0061D76D /* Bundle+SwizzleBundleID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+SwizzleBundleID.swift"; sourceTree = "<group>"; };
 		BF6866161DCAC8B900BF2D06 /* ControllerSkin+Configuring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ControllerSkin+Configuring.swift"; sourceTree = "<group>"; };
 		BF696B7F1D9B2B02009639E0 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		BF69FBA123E375A20051BEEA /* libVBA-M.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libVBA-M.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF69FBA723E3967B0051BEEA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		BF69FBA923E399AA0051BEEA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		BF69FBC823E3A8380051BEEA /* libNestopia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libNestopia.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6B82A41F7CC2A300042BFB /* GameControllerInputMappingTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerInputMappingTransformer.swift; sourceTree = "<group>"; };
 		BF6BB2451BB73FE800CCF94A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF6BF3121EB7E47F008E83CD /* ImportOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportOption.swift; sourceTree = "<group>"; };
@@ -559,15 +532,12 @@
 		BF6BF3191EB82146008E83CD /* ClipboardImportOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardImportOption.swift; sourceTree = "<group>"; };
 		BF6BF31B1EB821A0008E83CD /* GamesDatabaseImportOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesDatabaseImportOption.swift; sourceTree = "<group>"; };
 		BF6BF3261EB87EB8008E83CD /* PhotoLibraryImportOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryImportOption.swift; sourceTree = "<group>"; };
-		BF6E70C225D22F7600E41CD1 /* Systems.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Systems.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6EE5E81F7C5F860051AD6C /* _GameControllerInputMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _GameControllerInputMapping.swift; sourceTree = "<group>"; };
 		BF6EE5EA1F7C5F8F0051AD6C /* GameControllerInputMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerInputMapping.swift; sourceTree = "<group>"; };
-		BF70798B1B6B464B0019077C /* ZipZap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF713C0722499ED3004A1A2B /* Harmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Harmony.xcdatamodel; sourceTree = "<group>"; };
 		BF71CF861FE90006001F1613 /* AppIconShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconShortcutsViewController.swift; sourceTree = "<group>"; };
 		BF71CF891FE904B1001F1613 /* GameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
 		BF797A2C1C2D339F00F1A000 /* UILabel+FontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+FontSize.swift"; sourceTree = "<group>"; };
-		BF79966C224C075A009B094F /* N64DeltaCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = N64DeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7AE8041C2E858400B1B5BC /* GridMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridMenuViewController.swift; sourceTree = "<group>"; };
 		BF7AE8091C2E8C7600B1B5BC /* UIColor+Delta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Delta.swift"; sourceTree = "<group>"; };
 		BF8A333321A484A000A42FD4 /* BadgedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgedTableViewCell.swift; sourceTree = "<group>"; };
@@ -575,29 +545,19 @@
 		BF8DDD231F4F6C880088A21B /* InputCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCalloutView.swift; sourceTree = "<group>"; };
 		BF95E2761E4977BF0030E7AD /* GameMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMetadata.swift; sourceTree = "<group>"; };
 		BF95E2781E4982A10030E7AD /* GamesDatabaseBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesDatabaseBrowserViewController.swift; sourceTree = "<group>"; };
-		BF98C9812204D9A1006B95AC /* NESDeltaCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NESDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF99A5961DC2F9C400468E9E /* ControllerSkinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerSkinTableViewCell.swift; sourceTree = "<group>"; };
-		BF9F4FCE1AAD7B87004C9500 /* DeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAA1FEC1B8AA4FA00495943 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		BFB359412278FD6700CFD920 /* N64DeltaCore_Video.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = N64DeltaCore_Video.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFB359422278FD6800CFD920 /* N64DeltaCore_RSP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = N64DeltaCore_RSP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB3645723245A6000CD0EB1 /* LicensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
 		BFBAB2E21EB685A2004E0B0E /* DeltaCoreProtocol+Delta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeltaCoreProtocol+Delta.swift"; sourceTree = "<group>"; };
-		BFC134E01AAD82460087AD7B /* SNESDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SNESDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC1F2CB22F9515F00606A45 /* CopyDeepLinkActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyDeepLinkActivity.swift; sourceTree = "<group>"; };
 		BFC3627F21ADE2BA00EF2BE6 /* UIAlertController+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Error.swift"; sourceTree = "<group>"; };
 		BFC6F7B71F435BC500221B96 /* Input+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Input+Display.swift"; sourceTree = "<group>"; };
 		BFC9B7381CEFCD34008629BB /* CheatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatsViewController.swift; sourceTree = "<group>"; };
 		BFCEA67D1D56FF640061A534 /* UIViewControllerContextTransitioning+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewControllerContextTransitioning+Conveniences.swift"; sourceTree = "<group>"; };
 		BFD1EF3F2336BD8800D197CF /* UIDevice+Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Processor.swift"; sourceTree = "<group>"; };
-		BFDCA1E5244EBAA900B8FBDB /* liblibDeSmuME.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibDeSmuME.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDCA1E7244F7DB100B8FBDB /* Delta 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Delta 6.xcdatamodel"; sourceTree = "<group>"; };
 		BFDCA1E8244F7E1000B8FBDB /* Delta5ToDelta6.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Delta5ToDelta6.xcmappingmodel; sourceTree = "<group>"; };
 		BFDD04F01D5E2C27002D450E /* GameCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionViewController.swift; sourceTree = "<group>"; };
-		BFDE2CC6222DF345008038E0 /* Harmony_Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Harmony_Dropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDE2CC7222DF345008038E0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDE2CC8222DF345008038E0 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFDF71DA22F94CDF0074D92E /* DSDeltaCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DSDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE0229F1F5B577D0052D888 /* PopoverMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverMenuButton.swift; sourceTree = "<group>"; };
 		BFE4269D1D9C68E600DC913F /* SaveStatesStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveStatesStoryboardSegue.swift; sourceTree = "<group>"; };
 		BFE4275223EDF75300E6B417 /* Delta 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Delta 5.xcdatamodel"; sourceTree = "<group>"; };
@@ -605,10 +565,8 @@
 		BFE593C921F3F8B7003412A6 /* GameSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSave.swift; sourceTree = "<group>"; };
 		BFE593CB21F3F8C2003412A6 /* _GameSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _GameSave.swift; sourceTree = "<group>"; };
 		BFE9907F24451E15006409A7 /* MelonDSCoreSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelonDSCoreSettingsViewController.swift; sourceTree = "<group>"; };
-		BFEC732C1AAECC4A00650035 /* Roxas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Roxas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE943C23F2180200CDA07D /* Delta4ToDelta5.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Delta4ToDelta5.xcmappingmodel; sourceTree = "<group>"; };
 		BFEF24F21F7DD4FB00454C62 /* SaveStateMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveStateMigrationPolicy.swift; sourceTree = "<group>"; };
-		BFF0742B1E9DC17500ACDF4A /* GBCDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GBCDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA4C081E8A24D600D87934 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GemBoy Advance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA71DB1AAC406100EE9DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -618,12 +576,7 @@
 		BFFC461D1D59823500AF2CC6 /* InitialGamesStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialGamesStoryboardSegue.swift; sourceTree = "<group>"; };
 		BFFC46221D5984A000AF2CC6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		BFFC464B1D5998D600AF2CC6 /* CheatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatTableViewCell.swift; sourceTree = "<group>"; };
-		BFFDF03623E3BB2600931B96 /* libSnes9x.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnes9x.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFFDF03D23E3C0F000931B96 /* libGambatte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGambatte.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFFDF04523E3D3A600931B96 /* libMupen64Plus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMupen64Plus.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1C7ED01297432ED7A249A12 /* Pods-GemBoyPreviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.debug.xcconfig"; sourceTree = "<group>"; };
 		C6F24AD62D64B452002F939F /* Lu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lu.swift; sourceTree = "<group>"; };
-		C786AF1D2DDB6223BE2063CC /* Pods-Delta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.debug.xcconfig"; sourceTree = "<group>"; };
 		D5011C47281B6E8B00A0760B /* CharacterSet+Filename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Filename.swift"; sourceTree = "<group>"; };
 		D50CA1562D419E7100F54920 /* GameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsView.swift; sourceTree = "<group>"; };
 		D510BC742A5CA9F500450CC0 /* Delta6ToDelta7.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Delta6ToDelta7.xcmappingmodel; sourceTree = "<group>"; };
@@ -703,6 +656,7 @@
 		D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneSession+Delta.swift"; sourceTree = "<group>"; };
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		D8D9DD38E1537031D2BBBFA1 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLinkState.swift; sourceTree = "<group>"; };
 		EB04DE362DD2214A00ED4ADE /* dg_DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_DS.deltaskin; sourceTree = "<group>"; };
 		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -717,7 +671,6 @@
 		EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartGame.storyboard; sourceTree = "<group>"; };
 		EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameCell.swift; sourceTree = "<group>"; };
-		EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReachabilitySwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3EB55B2DA00793004FFACF /* GoogleService-Info_gemboy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info_gemboy.plist"; sourceTree = "<group>"; };
 		EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBA.deltaskin; sourceTree = "<group>"; };
 		EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_N64.deltaskin; sourceTree = "<group>"; };
@@ -744,7 +697,6 @@
 		EB3EB5DD2DA0738D004FFACF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		EB3EB5DE2DA0738D004FFACF /* PremiumServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumServices.swift; sourceTree = "<group>"; };
 		EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewController.swift; sourceTree = "<group>"; };
-		EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCircleBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3EB62F2DA1865A004FFACF /* LocalGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGameProtocol.swift; sourceTree = "<group>"; };
 		EB69AB072D977F1B00311D39 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationManagar.swift; sourceTree = "<group>"; };
@@ -832,8 +784,6 @@
 		EBBB19632D9971A8009C977A /* loaderPink.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loaderPink.json; sourceTree = "<group>"; };
 		EBBB196F2D997269009C977A /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		EBBB19702D997269009C977A /* Loader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
-		EBBB19742D99727D009C977A /* libKingfisher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libKingfisher.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBBB19762D99727D009C977A /* liblottie-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBB19782D9972DB009C977A /* OnBoardingBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingBaseViewController.swift; sourceTree = "<group>"; };
 		EBBB19792D9972DB009C977A /* OnBoardingItemViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingItemViewProtocol.swift; sourceTree = "<group>"; };
 		EBBB197B2D9972DB009C977A /* OnBoardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingButton.swift; sourceTree = "<group>"; };
@@ -861,9 +811,6 @@
 		EBBB19E12D9982C6009C977A /* OnBoardingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingDataSource.swift; sourceTree = "<group>"; };
 		EBBB19E22D9982C6009C977A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		EBBB19E32D9982C6009C977A /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
-		EBBB19ED2D9985BB009C977A /* libCollectionViewPagingLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCollectionViewPagingLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBBB19EF2D9985CF009C977A /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBBB19F12D998613009C977A /* libGoogleSignIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleSignIn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBB1A042D9989F5009C977A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreenStart.storyboard; sourceTree = "<group>"; };
 		EBBB1A082D9AAA58009C977A /* efupdate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = efupdate.json; sourceTree = "<group>"; };
 		EBC3E7142DB630C1006B1CBC /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -876,27 +823,6 @@
 		EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
 		EBD680302E11476F00A92584 /* MenuSlider.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSlider.storyboard; sourceTree = "<group>"; };
 		EBD680322E11477700A92584 /* MenuSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSliderViewController.swift; sourceTree = "<group>"; };
-		EBD8B2182DE23E39008A2AEA /* GBCEmulatorBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCEmulatorBridge.h; sourceTree = "<group>"; };
-		EBD8B2192DE23E39008A2AEA /* GBCEmulatorBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GBCEmulatorBridge.mm; sourceTree = "<group>"; };
-		EBD8B21A2DE23E39008A2AEA /* GBCSoundDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCSoundDriver.h; sourceTree = "<group>"; };
-		EBD8B21B2DE23E39008A2AEA /* GBCSoundDriver.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GBCSoundDriver.mm; sourceTree = "<group>"; };
-		EBD8B21D2DE23E39008A2AEA /* info.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = info.json; sourceTree = "<group>"; };
-		EBD8B21E2DE23E39008A2AEA /* ipad_landscape.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ipad_landscape.pdf; sourceTree = "<group>"; };
-		EBD8B21F2DE23E39008A2AEA /* ipad_landscape_splitview.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ipad_landscape_splitview.pdf; sourceTree = "<group>"; };
-		EBD8B2202DE23E39008A2AEA /* ipad_portrait.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ipad_portrait.pdf; sourceTree = "<group>"; };
-		EBD8B2212DE23E39008A2AEA /* iphone_edgetoedge_landscape.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_edgetoedge_landscape.pdf; sourceTree = "<group>"; };
-		EBD8B2222DE23E39008A2AEA /* iphone_edgetoedge_portrait.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_edgetoedge_portrait.pdf; sourceTree = "<group>"; };
-		EBD8B2232DE23E39008A2AEA /* iphone_landscape.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_landscape.pdf; sourceTree = "<group>"; };
-		EBD8B2242DE23E39008A2AEA /* iphone_portrait.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iphone_portrait.pdf; sourceTree = "<group>"; };
-		EBD8B2252DE23E39008A2AEA /* Standard.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = Standard.deltaskin; sourceTree = "<group>"; };
-		EBD8B2272DE23E39008A2AEA /* GBCTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCTypes.h; sourceTree = "<group>"; };
-		EBD8B2282DE23E39008A2AEA /* GBCTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCTypes.m; sourceTree = "<group>"; };
-		EBD8B22A2DE23E39008A2AEA /* GBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBC.swift; sourceTree = "<group>"; };
-		EBD8B22B2DE23E39008A2AEA /* GBCDeltaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCDeltaCore.h; sourceTree = "<group>"; };
-		EBD8B22C2DE23E39008A2AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBD8B22D2DE23E39008A2AEA /* Standard.deltamapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.deltamapping; sourceTree = "<group>"; };
-		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -931,36 +857,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D7C1FA29E60EDE00663793 /* libGemBoyFeatures.a in Frameworks */,
-				EB3EB5FE2DA0799D004FFACF /* libCircleBar.a in Frameworks */,
-				EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */,
-				EBBB19F02D9985CF009C977A /* libAlamofire.a in Frameworks */,
-				EBBB19EE2D9985BB009C977A /* libCollectionViewPagingLayout.a in Frameworks */,
-				EBBB19752D99727D009C977A /* libKingfisher.a in Frameworks */,
-				EBBB19772D99727D009C977A /* liblottie-ios.a in Frameworks */,
 				D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */,
 				EBBB19F52D998826009C977A /* GoogleSignIn in Frameworks */,
 				BF69FBA823E396860051BEEA /* libz.tbd in Frameworks */,
 				D52CB8C82CE2B7C800B04458 /* StoreKit.framework in Frameworks */,
-				EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */,
 				BF69FBAA23E399AA0051BEEA /* CoreMotion.framework in Frameworks */,
-				BF69FBA223E375A20051BEEA /* libVBA-M.a in Frameworks */,
 				EBB0FA942D96A16800CA8EB1 /* FirebaseAnalytics in Frameworks */,
 				EBB0FA982D96A16800CA8EB1 /* FirebaseCore in Frameworks */,
-				BFFDF04623E3D3A600931B96 /* libMupen64Plus.a in Frameworks */,
 				D5AE76C22C2B59240086471B /* KeychainAccess in Frameworks */,
-				BFCADF1E25D22FE2008D78FB /* Systems.framework in Frameworks */,
-				BF69FBC923E3A8380051BEEA /* libNestopia.a in Frameworks */,
 				D5E76AAD2BE199890078C0C5 /* ShowTouches in Frameworks */,
 				EBB0FA962D96A16800CA8EB1 /* FirebaseAuth in Frameworks */,
 				EBBB198B2D99734B009C977A /* GoogleMobileAds in Frameworks */,
-				BFFDF03F23E3C28A00931B96 /* libGambatte.a in Frameworks */,
 				EBBB19F72D998826009C977A /* GoogleSignInSwift in Frameworks */,
 				EBBB19D92D997C99009C977A /* FirebaseStorage in Frameworks */,
-				BFFDF03723E3BB2600931B96 /* libSnes9x.a in Frameworks */,
 				EBB0FA9A2D96A16800CA8EB1 /* FirebaseCrashlytics in Frameworks */,
-				05EF6BDEE6C1AC8A92642B10 /* libPods-GemBoy.a in Frameworks */,
 				EBB0FA9E2D96A16800CA8EB1 /* FirebaseMessaging in Frameworks */,
 				EBB0FA9C2D96A16800CA8EB1 /* FirebaseFirestore in Frameworks */,
+				18FC1AC87F15A17F1455F781 /* libPods-GemBoy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,7 +882,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D51CB7A129EDC01400B59678 /* libGemBoyFeatures.a in Frameworks */,
-				91216657969D0BFC464ABAE9 /* libPods-GemBoyPreviews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1288,47 +1200,11 @@
 		BF9F4FCD1AAD7B25004C9500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EBD8B22E2DE23E39008A2AEA /* GBCDeltaCore */,
-				EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */,
-				EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */,
-				EBBB19F12D998613009C977A /* libGoogleSignIn.a */,
-				EBBB19EF2D9985CF009C977A /* libAlamofire.a */,
-				EBBB19ED2D9985BB009C977A /* libCollectionViewPagingLayout.a */,
-				EBBB19742D99727D009C977A /* libKingfisher.a */,
-				EBBB19762D99727D009C977A /* liblottie-ios.a */,
 				D52CB8C72CE2B7C800B04458 /* StoreKit.framework */,
 				D5FB042B2C5AF40A008329DD /* libresolv.tbd */,
-				BF6E70C225D22F7600E41CD1 /* Systems.framework */,
-				BFDCA1E5244EBAA900B8FBDB /* liblibDeSmuME.a */,
-				BF30AC25244E88BE00F0C744 /* libMelonDSDeltaCore.a */,
-				BFFDF04523E3D3A600931B96 /* libMupen64Plus.a */,
-				BFFDF03D23E3C0F000931B96 /* libGambatte.a */,
-				BFFDF03623E3BB2600931B96 /* libSnes9x.a */,
-				BF69FBC823E3A8380051BEEA /* libNestopia.a */,
 				BF69FBA923E399AA0051BEEA /* CoreMotion.framework */,
 				BF69FBA723E3967B0051BEEA /* libz.tbd */,
-				BF69FBA123E375A20051BEEA /* libVBA-M.a */,
-				BF5ACE3823E23D6500BD0F20 /* libVBA-M.a */,
-				BFDF71DA22F94CDF0074D92E /* DSDeltaCore.framework */,
-				BFB359412278FD6700CFD920 /* N64DeltaCore_Video.framework */,
-				BFB359422278FD6800CFD920 /* N64DeltaCore_RSP.framework */,
-				BF79966C224C075A009B094F /* N64DeltaCore.framework */,
-				BFDE2CC6222DF345008038E0 /* Harmony_Dropbox.framework */,
-				BFDE2CC8222DF345008038E0 /* SwiftyDropbox.framework */,
-				BFDE2CC7222DF345008038E0 /* Alamofire.framework */,
-				BF98C9812204D9A1006B95AC /* NESDeltaCore.framework */,
-				BF07200E219A3A9500F05DA4 /* ZIPFoundation.framework */,
-				BFF0742B1E9DC17500ACDF4A /* GBCDeltaCore.framework */,
-				BF0418131D01E93400E85BCF /* GBADeltaCore.framework */,
-				BF27CC941BCB7B7A00A20D89 /* GameController.framework */,
-				BF27CC8A1BC9FE4D00A20D89 /* Pods.framework */,
-				BF70798B1B6B464B0019077C /* ZipZap.framework */,
-				BFEC732C1AAECC4A00650035 /* Roxas.framework */,
-				BF9F4FCE1AAD7B87004C9500 /* DeltaCore.framework */,
-				BFC134E01AAD82460087AD7B /* SNESDeltaCore.framework */,
-				22506DA00971C4300AF90A35 /* Pods.framework */,
-				EC5507B25B552431548D97A6 /* libPods-GemBoy.a */,
-				B4513EA4A379492D8F7CE9A8 /* libPods-GemBoyPreviews.a */,
+				D8D9DD38E1537031D2BBBFA1 /* libPods-GemBoy.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1439,7 +1315,7 @@
 				EB8E0D622D947655004BFB1F /* Notification */,
 				BF9F4FCD1AAD7B25004C9500 /* Frameworks */,
 				BFFA71D81AAC406100EE9DD1 /* Products */,
-				FD1E8AE87FA2DB8793F7B937 /* Pods */,
+				DB18538557EF852D9363E82C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1675,6 +1551,17 @@
 				D5D7C20929E61FA600663793 /* OptionToggleView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DB18538557EF852D9363E82C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				763ED0C28580E859BAA0753D /* Pods-GemBoy.debug.xcconfig */,
+				8845AED12F3E628722600EBA /* Pods-GemBoy.release.xcconfig */,
+				285035F4DB73554044EB3901 /* Pods-GemBoyPreviews.debug.xcconfig */,
+				4714063B3E758616A1487910 /* Pods-GemBoyPreviews.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		EB04DE152DCCB2DD00ED4ADE /* Enum */ = {
@@ -2254,72 +2141,6 @@
 			path = sliderForFast;
 			sourceTree = "<group>";
 		};
-		EBD8B21C2DE23E39008A2AEA /* Bridge */ = {
-			isa = PBXGroup;
-			children = (
-				EBD8B2182DE23E39008A2AEA /* GBCEmulatorBridge.h */,
-				EBD8B2192DE23E39008A2AEA /* GBCEmulatorBridge.mm */,
-				EBD8B21A2DE23E39008A2AEA /* GBCSoundDriver.h */,
-				EBD8B21B2DE23E39008A2AEA /* GBCSoundDriver.mm */,
-			);
-			path = Bridge;
-			sourceTree = "<group>";
-		};
-		EBD8B2262DE23E39008A2AEA /* Controller Skin */ = {
-			isa = PBXGroup;
-			children = (
-				EBD8B21D2DE23E39008A2AEA /* info.json */,
-				EBD8B21E2DE23E39008A2AEA /* ipad_landscape.pdf */,
-				EBD8B21F2DE23E39008A2AEA /* ipad_landscape_splitview.pdf */,
-				EBD8B2202DE23E39008A2AEA /* ipad_portrait.pdf */,
-				EBD8B2212DE23E39008A2AEA /* iphone_edgetoedge_landscape.pdf */,
-				EBD8B2222DE23E39008A2AEA /* iphone_edgetoedge_portrait.pdf */,
-				EBD8B2232DE23E39008A2AEA /* iphone_landscape.pdf */,
-				EBD8B2242DE23E39008A2AEA /* iphone_portrait.pdf */,
-				EBD8B2252DE23E39008A2AEA /* Standard.deltaskin */,
-			);
-			path = "Controller Skin";
-			sourceTree = "<group>";
-		};
-		EBD8B2292DE23E39008A2AEA /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				EBD8B2272DE23E39008A2AEA /* GBCTypes.h */,
-				EBD8B2282DE23E39008A2AEA /* GBCTypes.m */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
-		EBD8B22E2DE23E39008A2AEA /* GBCDeltaCore */ = {
-			isa = PBXGroup;
-			children = (
-				EBD8B21C2DE23E39008A2AEA /* Bridge */,
-				EBD8B2262DE23E39008A2AEA /* Controller Skin */,
-				EBD8B2292DE23E39008A2AEA /* Types */,
-				EBD8B22A2DE23E39008A2AEA /* GBC.swift */,
-				EBD8B22B2DE23E39008A2AEA /* GBCDeltaCore.h */,
-				EBD8B22C2DE23E39008A2AEA /* Info.plist */,
-				EBD8B22D2DE23E39008A2AEA /* Standard.deltamapping */,
-			);
-			name = GBCDeltaCore;
-			path = Cores/GBADeltaCore/GBCDeltaCore;
-			sourceTree = "<group>";
-		};
-		FD1E8AE87FA2DB8793F7B937 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C786AF1D2DDB6223BE2063CC /* Pods-Delta.debug.xcconfig */,
-				A19FF50F55441BC2B2248241 /* Pods-Delta.release.xcconfig */,
-				A01281C7023C0041B25963BE /* Pods-DeltaPreviews.debug.xcconfig */,
-				8ECE6641DE30D01EA30FE7F6 /* Pods-DeltaPreviews.release.xcconfig */,
-				1FC472D0CE8F1DABCC4D91CD /* Pods-GemBoy.debug.xcconfig */,
-				5E9C7C16BC517D412965A72B /* Pods-GemBoy.release.xcconfig */,
-				C1C7ED01297432ED7A249A12 /* Pods-GemBoyPreviews.debug.xcconfig */,
-				FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2337,13 +2158,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFFA71F61AAC406100EE9DD1 /* Build configuration list for PBXNativeTarget "GemBoy" */;
 			buildPhases = (
-				DBD91E7D7EC2729786B4C5B1 /* [CP] Check Pods Manifest.lock */,
+				CF57A4B6FDB247F18BF210E4 /* [CP] Check Pods Manifest.lock */,
 				BFFA71D31AAC406100EE9DD1 /* Sources */,
 				BFFA71D41AAC406100EE9DD1 /* Frameworks */,
 				BF08DC3325CE07C3007A9CF4 /* Embed Frameworks */,
 				BFFA71D51AAC406100EE9DD1 /* Resources */,
-				0E0279E4F38215820BB0C9A0 /* [CP] Copy Pods Resources */,
 				EB8E0D6D2D947655004BFB1F /* Embed Foundation Extensions */,
+				6B8686C4BF6A7320675D4A6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2378,12 +2199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D539103729E88B6C0006B350 /* Build configuration list for PBXNativeTarget "GemBoyPreviews" */;
 			buildPhases = (
-				92EDD9C0CE3127182B2AF907 /* [CP] Check Pods Manifest.lock */,
+				CA186877A5111ED86AADB00A /* [CP] Check Pods Manifest.lock */,
 				D539102A29E88B6B0006B350 /* Headers */,
 				D539102B29E88B6B0006B350 /* Sources */,
 				D539102C29E88B6B0006B350 /* Frameworks */,
 				D539102D29E88B6B0006B350 /* Resources */,
-				CA9C6F6BA1C90E8127A301EC /* [CP] Copy Pods Resources */,
+				C5C146039344E79E8EDB5C1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2594,7 +2415,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E0279E4F38215820BB0C9A0 /* [CP] Copy Pods Resources */ = {
+		6B8686C4BF6A7320675D4A6C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2609,28 +2430,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoy/Pods-GemBoy-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		92EDD9C0CE3127182B2AF907 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GemBoyPreviews-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF14D8981DE7A519002CA1BE /* mogenerator */ = {
@@ -2664,7 +2463,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Manually build Systems.framework to prevent conflicts between Cocoapods' and SwiftPM's DeltaCore.\n\ncd $SRCROOT/Systems\n./build.sh\n";
 		};
-		CA9C6F6BA1C90E8127A301EC /* [CP] Copy Pods Resources */ = {
+		C5C146039344E79E8EDB5C1D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2681,16 +2480,42 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DBD91E7D7EC2729786B4C5B1 /* [CP] Check Pods Manifest.lock */ = {
+		CA186877A5111ED86AADB00A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GemBoyPreviews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF57A4B6FDB247F18BF210E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GemBoy-checkManifestLockResult.txt",
 			);
@@ -3259,7 +3084,7 @@
 		};
 		BFFA71F71AAC406100EE9DD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FC472D0CE8F1DABCC4D91CD /* Pods-GemBoy.debug.xcconfig */;
+			baseConfigurationReference = 763ED0C28580E859BAA0753D /* Pods-GemBoy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -3280,44 +3105,47 @@
 				);
 				MARKETING_VERSION = 3.6;
 				OTHER_LDFLAGS = (
-					"-ld64",
+					"$(inherited)",
 					"-ObjC",
+					"-Wl,-exported_symbol,_Video_PluginStartup,-exported_symbol,_Video_PluginShutdown,-exported_symbol,_Video_PluginGetVersion,-exported_symbol,_Video_RomOpen,-exported_symbol,_Video_RomClosed,-exported_symbol,_ConfigGetSharedDataFilepath,-exported_symbol,_ConfigGetUserConfigPath,-exported_symbol,_ConfigGetUserCachePath,-exported_symbol,_ConfigGetUserDataPath,-exported_symbol,_ConfigOpenSection,-exported_symbol,_ConfigDeleteSection,-exported_symbol,_ConfigSaveSection,-exported_symbol,_ConfigSaveFile,-exported_symbol,_ConfigSetDefaultInt,-exported_symbol,_ConfigSetDefaultFloat,-exported_symbol,_ConfigSetDefaultBool,-exported_symbol,_ConfigSetDefaultString,-exported_symbol,_ConfigGetParamInt,-exported_symbol,_ConfigGetParamFloat,-exported_symbol,_ConfigGetParamBool,-exported_symbol,_ConfigGetParamString,-exported_symbol,_ConfigExternalGetParameter,-exported_symbol,_ConfigExternalOpen,-exported_symbol,_ConfigExternalClose,-exported_symbol,_VidExt_Init,-exported_symbol,_VidExt_Quit,-exported_symbol,_VidExt_ListFullscreenModes,-exported_symbol,_VidExt_SetVideoMode,-exported_symbol,_VidExt_SetCaption,-exported_symbol,_VidExt_ToggleFullScreen,-exported_symbol,_VidExt_ResizeWindow,-exported_symbol,_VidExt_GL_GetProcAddress,-exported_symbol,_VidExt_GL_SetAttribute,-exported_symbol,_VidExt_GL_GetAttribute,-exported_symbol,_VidExt_GL_SwapBuffers,-exported_symbol,_ChangeWindow,-exported_symbol,_InitiateGFX,-exported_symbol,_MoveScreen,-exported_symbol,_ProcessDList,-exported_symbol,_ProcessRDPList,-exported_symbol,_ShowCFB,-exported_symbol,_UpdateScreen,-exported_symbol,_ViStatusChanged,-exported_symbol,_ViWidthChanged,-exported_symbol,_ReadScreen2,-exported_symbol,_SetRenderingCallback,-exported_symbol,_FBRead,-exported_symbol,_FBWrite,-exported_symbol,_FBGetFrameBufferInfo,-exported_symbol,_ResizeVideoOutput,-exported_symbol,_RSP_PluginStartup,-exported_symbol,_RSP_PluginShutdown,-exported_symbol,_RSP_PluginGetVersion,-exported_symbol,_DoRspCycles,-exported_symbol,_InitiateRSP,-exported_symbol,_RSP_RomClosed,-exported_symbol,_CoreGetAPIVersions,-exported_symbol,_ConfigGetParameter,-exported_symbol,_ConfigSetParameter,-exported_symbol,_CoreDoCommand",
+					"-l\"Alamofire\"",
+					"-l\"CircleBar\"",
+					"-l\"CollectionViewPagingLayout\"",
 					"-l\"GBADeltaCore\"",
 					"-l\"GBCDeltaCore\"",
+					"-l\"Kingfisher\"",
 					"-l\"MelonDSDeltaCore\"",
 					"-l\"N64DeltaCore\"",
 					"-l\"NESDeltaCore\"",
+					"-l\"ReachabilitySwift\"",
 					"-l\"Roxas\"",
 					"-l\"SDWebImage\"",
 					"-l\"SMCalloutView\"",
 					"-l\"SNESDeltaCore\"",
 					"-l\"SQLite.swift\"",
 					"-l\"ZIPFoundation\"",
+					"-l\"lottie-ios\"",
 					"-l\"sqlite3\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
 					"-framework",
 					"\"CoreGraphics\"",
 					"-framework",
-					"\"CoreText\"",
-					"-framework",
-					"\"Foundation\"",
+					"\"CoreTelephony\"",
 					"-framework",
 					"\"ImageIO\"",
 					"-framework",
-					"\"LocalAuthentication\"",
-					"-framework",
-					"\"SafariServices\"",
-					"-framework",
-					"\"Security\"",
+					"\"QuartzCore\"",
 					"-framework",
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-framework",
-					"\"WebKit\"",
 					"-weak_framework",
-					"\"AuthenticationServices\"",
-					"-framework",
-					"\"JavaScriptCore\"",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
@@ -3340,7 +3168,7 @@
 		};
 		BFFA71F81AAC406100EE9DD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E9C7C16BC517D412965A72B /* Pods-GemBoy.release.xcconfig */;
+			baseConfigurationReference = 8845AED12F3E628722600EBA /* Pods-GemBoy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -3361,8 +3189,47 @@
 				);
 				MARKETING_VERSION = 3.6;
 				OTHER_LDFLAGS = (
-					"-ld64",
-					"${inherited}",
+					"$(inherited)",
+					"-ObjC",
+					"-Wl,-exported_symbol,_Video_PluginStartup,-exported_symbol,_Video_PluginShutdown,-exported_symbol,_Video_PluginGetVersion,-exported_symbol,_Video_RomOpen,-exported_symbol,_Video_RomClosed,-exported_symbol,_ConfigGetSharedDataFilepath,-exported_symbol,_ConfigGetUserConfigPath,-exported_symbol,_ConfigGetUserCachePath,-exported_symbol,_ConfigGetUserDataPath,-exported_symbol,_ConfigOpenSection,-exported_symbol,_ConfigDeleteSection,-exported_symbol,_ConfigSaveSection,-exported_symbol,_ConfigSaveFile,-exported_symbol,_ConfigSetDefaultInt,-exported_symbol,_ConfigSetDefaultFloat,-exported_symbol,_ConfigSetDefaultBool,-exported_symbol,_ConfigSetDefaultString,-exported_symbol,_ConfigGetParamInt,-exported_symbol,_ConfigGetParamFloat,-exported_symbol,_ConfigGetParamBool,-exported_symbol,_ConfigGetParamString,-exported_symbol,_ConfigExternalGetParameter,-exported_symbol,_ConfigExternalOpen,-exported_symbol,_ConfigExternalClose,-exported_symbol,_VidExt_Init,-exported_symbol,_VidExt_Quit,-exported_symbol,_VidExt_ListFullscreenModes,-exported_symbol,_VidExt_SetVideoMode,-exported_symbol,_VidExt_SetCaption,-exported_symbol,_VidExt_ToggleFullScreen,-exported_symbol,_VidExt_ResizeWindow,-exported_symbol,_VidExt_GL_GetProcAddress,-exported_symbol,_VidExt_GL_SetAttribute,-exported_symbol,_VidExt_GL_GetAttribute,-exported_symbol,_VidExt_GL_SwapBuffers,-exported_symbol,_ChangeWindow,-exported_symbol,_InitiateGFX,-exported_symbol,_MoveScreen,-exported_symbol,_ProcessDList,-exported_symbol,_ProcessRDPList,-exported_symbol,_ShowCFB,-exported_symbol,_UpdateScreen,-exported_symbol,_ViStatusChanged,-exported_symbol,_ViWidthChanged,-exported_symbol,_ReadScreen2,-exported_symbol,_SetRenderingCallback,-exported_symbol,_FBRead,-exported_symbol,_FBWrite,-exported_symbol,_FBGetFrameBufferInfo,-exported_symbol,_ResizeVideoOutput,-exported_symbol,_RSP_PluginStartup,-exported_symbol,_RSP_PluginShutdown,-exported_symbol,_RSP_PluginGetVersion,-exported_symbol,_DoRspCycles,-exported_symbol,_InitiateRSP,-exported_symbol,_RSP_RomClosed,-exported_symbol,_CoreGetAPIVersions,-exported_symbol,_ConfigGetParameter,-exported_symbol,_ConfigSetParameter,-exported_symbol,_CoreDoCommand",
+					"-l\"Alamofire\"",
+					"-l\"CircleBar\"",
+					"-l\"CollectionViewPagingLayout\"",
+					"-l\"GBADeltaCore\"",
+					"-l\"GBCDeltaCore\"",
+					"-l\"Kingfisher\"",
+					"-l\"MelonDSDeltaCore\"",
+					"-l\"N64DeltaCore\"",
+					"-l\"NESDeltaCore\"",
+					"-l\"ReachabilitySwift\"",
+					"-l\"Roxas\"",
+					"-l\"SDWebImage\"",
+					"-l\"SMCalloutView\"",
+					"-l\"SNESDeltaCore\"",
+					"-l\"SQLite.swift\"",
+					"-l\"ZIPFoundation\"",
+					"-l\"lottie-ios\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
@@ -3385,7 +3252,7 @@
 		};
 		D539103829E88B6C0006B350 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1C7ED01297432ED7A249A12 /* Pods-GemBoyPreviews.debug.xcconfig */;
+			baseConfigurationReference = 285035F4DB73554044EB3901 /* Pods-GemBoyPreviews.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -3433,7 +3300,7 @@
 		};
 		D539103929E88B6C0006B350 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */;
+			baseConfigurationReference = 4714063B3E758616A1487910 /* Pods-GemBoyPreviews.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
