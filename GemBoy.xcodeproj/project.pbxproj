@@ -278,6 +278,12 @@
 		EB3EB62A2DA13E36004FFACF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D202D946055004BFB1F /* Date.swift */; };
 		EB3EB62B2DA13E53004FFACF /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D182D946055004BFB1F /* Dictionary.swift */; };
 		EB3EB6302DA18664004FFACF /* LocalGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB62F2DA1865A004FFACF /* LocalGameProtocol.swift */; };
+		EB52BD0B2E4BD33C002CBE49 /* DownloadRomOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD012E4BD33C002CBE49 /* DownloadRomOption.swift */; };
+		EB52BD0C2E4BD33C002CBE49 /* GameDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD042E4BD33C002CBE49 /* GameDownloadService.swift */; };
+		EB52BD0D2E4BD33C002CBE49 /* GameDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD022E4BD33C002CBE49 /* GameDownloadModel.swift */; };
+		EB52BD0E2E4BD33C002CBE49 /* DownlaodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD062E4BD33C002CBE49 /* DownlaodCell.swift */; };
+		EB52BD0F2E4BD33C002CBE49 /* GameDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */; };
+		EB52BD102E4BD33C002CBE49 /* GameDownload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */; };
 		EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
 		EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
 		EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
@@ -746,6 +752,12 @@
 		EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewController.swift; sourceTree = "<group>"; };
 		EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCircleBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3EB62F2DA1865A004FFACF /* LocalGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGameProtocol.swift; sourceTree = "<group>"; };
+		EB52BD012E4BD33C002CBE49 /* DownloadRomOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadRomOption.swift; sourceTree = "<group>"; };
+		EB52BD022E4BD33C002CBE49 /* GameDownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDownloadModel.swift; sourceTree = "<group>"; };
+		EB52BD042E4BD33C002CBE49 /* GameDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDownloadService.swift; sourceTree = "<group>"; };
+		EB52BD062E4BD33C002CBE49 /* DownlaodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownlaodCell.swift; sourceTree = "<group>"; };
+		EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameDownload.storyboard; sourceTree = "<group>"; };
+		EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDownloadViewController.swift; sourceTree = "<group>"; };
 		EB69AB072D977F1B00311D39 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationManagar.swift; sourceTree = "<group>"; };
 		EB69AB092D977F1B00311D39 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -1854,6 +1866,43 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		EB52BD032E4BD33C002CBE49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB52BD012E4BD33C002CBE49 /* DownloadRomOption.swift */,
+				EB52BD022E4BD33C002CBE49 /* GameDownloadModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB52BD052E4BD33C002CBE49 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EB52BD042E4BD33C002CBE49 /* GameDownloadService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EB52BD092E4BD33C002CBE49 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				EB52BD062E4BD33C002CBE49 /* DownlaodCell.swift */,
+				EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */,
+				EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		EB52BD0A2E4BD33C002CBE49 /* GameDownload */ = {
+			isa = PBXGroup;
+			children = (
+				EB52BD032E4BD33C002CBE49 /* Model */,
+				EB52BD052E4BD33C002CBE49 /* Service */,
+				EB52BD092E4BD33C002CBE49 /* vc */,
+			);
+			path = GameDownload;
+			sourceTree = "<group>";
+		};
 		EB69AB192D977FC800311D39 /* IAP */ = {
 			isa = PBXGroup;
 			children = (
@@ -1954,6 +2003,7 @@
 		EBA2BA992D984778007A25A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EB52BD0A2E4BD33C002CBE49 /* GameDownload */,
 				EBD6802F2E11475500A92584 /* sliderForFast */,
 				EB21EA0D2DB9294600B6B1F4 /* statistics */,
 				EB21EA0C2DB9293100B6B1F4 /* startGame */,
@@ -2566,6 +2616,7 @@
 				EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */,
 				EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */,
 				EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */,
+				EB52BD102E4BD33C002CBE49 /* GameDownload.storyboard in Resources */,
 				EBA2BAC42D984792007A25A6 /* SwipableControllerCell.xib in Resources */,
 				EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */,
 				EB6EB4042DBECB9200EAC356 /* Main.storyboard in Resources */,
@@ -2786,6 +2837,11 @@
 				EBBB19CA2D9977B4009C977A /* LoginService.swift in Sources */,
 				EBA2BAD52D984792007A25A6 /* GradientView.swift in Sources */,
 				EBA2BAD62D984792007A25A6 /* CustomNavigationBar.swift in Sources */,
+				EB52BD0B2E4BD33C002CBE49 /* DownloadRomOption.swift in Sources */,
+				EB52BD0C2E4BD33C002CBE49 /* GameDownloadService.swift in Sources */,
+				EB52BD0D2E4BD33C002CBE49 /* GameDownloadModel.swift in Sources */,
+				EB52BD0E2E4BD33C002CBE49 /* DownlaodCell.swift in Sources */,
+				EB52BD0F2E4BD33C002CBE49 /* GameDownloadViewController.swift in Sources */,
 				D552DE3D2D39DB2A00E737BE /* WFCServer.swift in Sources */,
 				D5D78AE529F9BC3700E064F0 /* DSAirPlay.swift in Sources */,
 				EB7CB6962D96949400CA27FC /* UIAlertController.swift in Sources */,
@@ -3278,7 +3334,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.6;
+				MARKETING_VERSION = 3.8;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"-ObjC",
@@ -3359,7 +3415,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.6;
+				MARKETING_VERSION = 3.8;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"${inherited}",
@@ -3552,7 +3608,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.6;
+				MARKETING_VERSION = 3.8;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
@@ -3595,7 +3651,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.6;
+				MARKETING_VERSION = 3.8;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";

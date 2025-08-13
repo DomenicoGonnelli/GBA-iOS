@@ -60,15 +60,29 @@ class ViewController: BaseViewController {
                     
                 } else {
                     SplashService.autologin(){ isLogged in
-                        self.hideLoader()
-                        if isLogged{
-                            self.goHome(fromLogin: true)
-                        } else {
-                            self.goToLogin()
+                        SplashService.getWhatNews() { news in
+                            if news.count > 0 {
+                                var vcs = OnBoardingDataSource.getControllers(items: news)
+                                OnBoardingViewController.present(presenter: self, controllers: vcs) {
+                                    AppManager.whatNewsVersion = self.appVersion
+                                    self.actionAfterLogin(isLogged: isLogged)
+                                }
+                            } else {
+                                self.actionAfterLogin(isLogged: isLogged)
+                            }
                         }
                     }
                 }
             }
+        }
+    }
+    
+    func actionAfterLogin(isLogged : Bool){
+        hideLoader()
+        if isLogged{
+            goHome(fromLogin: true)
+        } else {
+            goToLogin()
         }
     }
     

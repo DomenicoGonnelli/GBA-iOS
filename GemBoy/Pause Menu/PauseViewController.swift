@@ -13,15 +13,14 @@ import DeltaCore
 class PauseViewController: BaseViewController, PauseInfoProviding
 {
     
-    @IBOutlet weak var sliderContainerView: UIView!
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var sliderValue: UILabel!
+    var secondaryWindow: UIWindow?
     
     var emulatorCore: EmulatorCore? {
         didSet {
             self.updatePauseItems()
         }
     }
+    
     
     var pauseItems: [MenuItem] {
         var list = [self.saveStateItem, self.loadStateItem, self.cheatCodesItem, self.fastForwardItem]
@@ -148,6 +147,40 @@ class PauseViewController: BaseViewController, PauseInfoProviding
         self.pauseNavigationController.view.setNeedsLayout()
         self.pauseNavigationController.view.layoutIfNeeded()
     }
+    
+    func getActiveWindowScene() -> UIWindowScene? {
+        return UIApplication.shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first { $0.activationState == .foregroundActive }
+    }
+    
+    func presentOnNewWindow(viewController: UIViewController) {
+        guard var windowScene = getActiveWindowScene() else {
+            print("No active window scene found")
+            return
+        }
+        
+        if let scene = view.window?.windowScene ?? UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            print("trovata") //Usa questa scene
+            windowScene = scene
+        }
+        
+        let newWindow = UIWindow(windowScene: windowScene)
+        newWindow.frame = self.view.frame
+        newWindow.windowLevel = .alert + 1 // al di sopra di tutto
+        newWindow.backgroundColor = .clear
+        
+        let vcToPresent = viewController
+        vcToPresent.modalPresentationStyle = .fullScreen
+        
+        newWindow.rootViewController = vcToPresent
+        newWindow.makeKeyAndVisible()
+        
+        self.secondaryWindow = newWindow
+        
+    }
+  
 
 }
 
@@ -272,7 +305,7 @@ extension PauseViewController: UINavigationControllerDelegate
         self.fastForwardItem = MenuItem(text: "Fast_Forward".localizable, image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
         
         if ExperimentalFeatures.shared.variableFastForward.isEnabled {
-            self.fastForwardSetItem = MenuItem(text: "Fast_Forward_Set".localizable, image: #imageLiteral(resourceName: "FastForward"), action: { _ in })
+            self.fastForwardSetItem = MenuItem(text: "Fast_Forward_Set".localizable, image: #imageLiteral(resourceName: "setSpeed"), action: { _ in })
         }
         
         self.sustainButtonsItem = MenuItem(text: "Hold_Buttons".localizable, image: #imageLiteral(resourceName: "SustainButtons"), action: { _ in })

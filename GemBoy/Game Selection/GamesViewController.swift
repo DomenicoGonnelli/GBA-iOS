@@ -487,9 +487,11 @@ extension GamesViewController: ImportControllerDelegate
         
         let itunesImportOption = iTunesImportOption(presentingViewController: self)
         
+        let downloadImportOption = DownloadRomOption(presentingViewController: self)
+        
         let importController = ImportController(documentTypes: documentTypes)
         importController.delegate = self
-        importController.importOptions = [itunesImportOption]
+        importController.importOptions = [itunesImportOption, downloadImportOption]
         
         return importController
     }
@@ -517,6 +519,7 @@ extension GamesViewController: ImportControllerDelegate
             if games.count > 0
             {
                 print("Imported Games:", games.map { $0.name })
+                self.presentExperimentalToastView("import_success_message".localizable)
             }
         }
         
@@ -531,6 +534,7 @@ extension GamesViewController: ImportControllerDelegate
             if controllerSkins.count > 0
             {
                 print("Imported Controller Skins:", controllerSkins.map { $0.name })
+                self.presentExperimentalToastView("import_success_message".localizable)
             }
         }
     }

@@ -622,7 +622,7 @@
 "socialMedalsCondition" = "To unlock %@, share the app with your friends";
 
 "server_connect_title" = "Server Started";
-"server_connect_message" = "The server has been started successfully: you can now activate the connection on the second device as 'Client User' using the following IP:\n\n%@";
+"server_connect_message" = "The server has been started successfully: you can now activate the connection on the second device as 'Client User' using the following:\n\n%@";
 
 
 "StatisticsTitle" = "Discover the challenges reserved for you!\nWill you be able to earn all the medals?";
@@ -674,3 +674,15 @@
 "import_success" = "Import successful";
 "import_success_message" = "The file you imported was loaded successfully";
 "export_success" = "Export successful";
+
+
+"set_emulator_speed" = "Change your emulator speed!\nOnce you’ve set your desired speed, close the page and reactivate super speed from the menu";
+"slider_value_text" = "Current speed: %@X";
+"download_rom" = "Download Game";
+
+"dowload_new_roms" = "Download new games";
+"downloadGamesUserProfileTitle" = "Download new games";
+
+"subscritionExpiredNotificationTitle" = "Subscription Expired ❌";
+"subscritionExpiredNotificationMessage" = "Your subscription has expired, renew it from the Profile section";
+

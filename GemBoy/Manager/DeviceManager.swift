@@ -164,40 +164,53 @@ enum DevicesType : Int {
 
 extension DeviceManager {
 
-    static func getWiFiAddress() -> String? {
-            var address: String?
+    static func getWiFiAndCellularAddresses() -> [String: String] {
+        var result: [String: String] = [:]
 
-            var ifaddr: UnsafeMutablePointer<ifaddrs>?
-            guard getifaddrs(&ifaddr) == 0 else { return nil }
-            guard let firstAddr = ifaddr else { return nil }
+        var ifaddr: UnsafeMutablePointer<ifaddrs>?
+        guard getifaddrs(&ifaddr) == 0, let firstAddr = ifaddr else {
+            return result
+        }
 
-            for ptr in sequence(first: firstAddr, next: { $0.pointee.ifa_next }) {
-                let interface = ptr.pointee
-                let addrFamily = interface.ifa_addr.pointee.sa_family
+        for ptr in sequence(first: firstAddr, next: { $0.pointee.ifa_next }) {
+            let interface = ptr.pointee
+            let addrFamily = interface.ifa_addr.pointee.sa_family
 
-                if addrFamily == UInt8(AF_INET) {
-                    let name = String(cString: interface.ifa_name)
-                    // Filtra loopback (lo0) e link-local (169.254.x.x)
-                    if name != "lo0" {
-                        var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
-                        getnameinfo(interface.ifa_addr,
-                                    socklen_t(interface.ifa_addr.pointee.sa_len),
-                                    &hostname,
-                                    socklen_t(hostname.count),
-                                    nil,
-                                    socklen_t(0),
-                                    NI_NUMERICHOST)
-                        let ip = String(cString: hostname)
-                        if !ip.hasPrefix("169.254") {
-                            address = ip
-                            break
-                        }
-                    }
-                }
+            guard addrFamily == UInt8(AF_INET) else { continue }
+
+            let name = String(cString: interface.ifa_name)
+
+            // Mappa interfaccia → tipo di rete
+            let type: String?
+            switch name {
+            case "en0":
+                type = "wifi"
+            case "pdp_ip0":
+                type = "cellular"
+            default:
+                type = nil
             }
 
-            freeifaddrs(ifaddr)
-            return address
+            guard let key = type else { continue }
+
+            var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
+            getnameinfo(interface.ifa_addr,
+                        socklen_t(interface.ifa_addr.pointee.sa_len),
+                        &hostname,
+                        socklen_t(hostname.count),
+                        nil,
+                        0,
+                        NI_NUMERICHOST)
+
+            let ip = String(cString: hostname)
+            if !ip.hasPrefix("169.254") {
+                result[key] = ip
+            }
         }
+
+        freeifaddrs(ifaddr)
+        return result
+    }
+
 
 }

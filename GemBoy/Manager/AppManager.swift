@@ -202,7 +202,6 @@ class AppManager {
         get{ return UserDefaults.standard.bool(forKey: "premiumExpired_\(id_key)")}
     }
     
-    
     static func goSetting(){
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
             return

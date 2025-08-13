@@ -346,6 +346,8 @@ extension UserProfileViewController: UITableViewDataSource, UITableViewDelegate{
                 StatisticsUserViewController.push(from: self)
             case .statistics:
                 StatisticsViewController.push(prensenter: self, image: nil)
+            case .downloadGames:
+                GameDownloadViewController.push(prensenter: self)
             }
         }
     }

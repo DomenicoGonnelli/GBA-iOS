@@ -20,7 +20,7 @@ public extension Game
 }
 
 @objc(Game)
-public class Game: _Game, LocalGameProtocol
+public class Game: _Game, GameProtocol
 {
     public var fileURL: URL {
         var fileURL: URL!

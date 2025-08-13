@@ -5,7 +5,7 @@
   Created by Domenico Gonnelli on 26/03/25.
   Copyright © 2025 Domenico Gonnelli. All rights reserved.
 */
-"Appname" = "GemBoyAdvace";
+"Appname" = "GemBoyAdvance";
 "WelcomeMessage" = "Bentornato su\n<b><AppName/></b>";
 "SplashRulesMessage" = "Hai già letto il regolamento?";
 "SplashAccessMessage" = "Cosa aspetti?\n\n<m>Iscriviti</m> per avere i tuoi salvataggi sempre con te e accedere a <b>contenuti esclusivi</b>";
@@ -669,7 +669,7 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 
 
 "server_connect_title" = "Server Avviato";
-"server_connect_message" = "Server è stato avviato correttamente: adesso è possibile attivare la connessione sul secondo device come 'Utente Client' utilizando il seguente IP:\n\n%@";
+"server_connect_message" = "Server è stato avviato correttamente: adesso è possibile attivare la connessione sul secondo device come 'Utente Client' utilizando:\n\n%@";
 
 "StatisticsTitle" = "Scopri le sfide riservate a te!\nRiuscirai a conquistare tutte le medaglie?";
 "Medals" = "Le mie medaglie";
@@ -721,3 +721,20 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "import_success" = "Import avvenuto con sucesso";
 "import_success_message" = "Il file da te importato è stato caricato con successo";
 "export_success" = "Export avvenuto con sucesso";
+
+"set_emulator_speed" = "Modifica la velocità del tuo emulatore!\nUna volta impostata la velocità che desideri, chiudi la pagina e riattiva la super velocità dal menù";
+"slider_value_text" = "Velocità attuale: %@X";
+"download_rom" = "Scarica Gioco";
+
+"dowload_new_roms" = "Scarica nuovi giochi";
+"downloadGamesUserProfileTitle" = "Scarica nuovi giochi";
+
+"subscritionExpiredNotificationTitle" = "Abbonamento Scaduto ❌";
+"subscritionExpiredNotificationMessage" = "Il tuo abbonamento è scaduto, rinnovalo dalla sezione Profilo";
+
+
+"WhatNewsTitle" = "Novità su\n<b><AppName/></b>";
+"wifi" = "Wi-Fi";
+"cellular" = "rete telefono";
+
+"Fast_Forward_Set" = "Imposta velocità";

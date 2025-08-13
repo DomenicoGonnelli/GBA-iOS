@@ -26,6 +26,31 @@ public extension GameProtocol{
         return type == .gba || type == .gbc
     }
     
+    var localSaveURL: URL {
+        let fileExtension = Delta.core(for: self.type)?.gameSaveFileExtension ?? "sav"
+        
+        let fileName = self.fileURL.deletingPathExtension().lastPathComponent
+        var gameURL = self.fileURL.deletingLastPathComponent()
+        if !LoginManager.shared.isAnonymous, let uid = FirestoreHelper.uid{
+            gameURL = gameURL.appendingPathComponent(uid)
+        }
+        gameURL = gameURL.appendingPathComponent(fileName)
+        let gameSaveURL = gameURL.appendingPathExtension(fileExtension)
+        print(gameSaveURL.absoluteString)
+        
+        return gameSaveURL
+    }
+    
+    var gameSpeed : Double{
+        set {
+            UserDefaults.standard.set(newValue, forKey: "game_speed_\(self.type)")}
+        get{
+            let speed = UserDefaults.standard.double(forKey: "game_speed_\(self.type)")
+            print("game_speed_\(self.type)")
+            return speed > 0 ? speed : 4
+        }
+    }
+    
 }
 
 private extension DeltaCore.ControllerSkin
@@ -104,7 +129,8 @@ enum ConnectionLinkType: String {
 
 class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
 {
- 
+    
+    var secondaryWindow: UIWindow?
     var connectionState : ConnectionLinkState = .Link_needs_update
     var connectionLinkType : ConnectionLinkType = .null
     {
@@ -162,14 +188,21 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     }
     
     func showServerAlert(){
-        if let ip = DeviceManager.getWiFiAddress() {
-            self.pauseViewController?.showAlerOk(title: "server_connect_title".localizable, message: String(format: "server_connect_message".localizable, ip), onOk: {
-                self.connectionLinkType = .server
-                self.pauseViewController?.refreshMenuItems()
-            })
-        } else {
+        let data = DeviceManager.getWiFiAndCellularAddresses()
+        
+        guard data.count > 0 else {
             showConnectErrorAlert()
+            return
         }
+        var ip = ""
+        for (key,value) in data {
+            ip += "IP \(key.localizable): \(value)\n"
+        }
+        
+        self.pauseViewController?.showAlerOk(title: "server_connect_title".localizable, message: String(format: "server_connect_message".localizable, ip), onOk: {
+            self.connectionLinkType = .server
+            self.pauseViewController?.refreshMenuItems()
+        })
     }
     
     func showIPAlert(on viewController: UIViewController?, completion: @escaping (String?) -> Void) {
@@ -583,7 +616,6 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
             case .quickSave: self.performQuickSaveAction()
             case .quickLoad: self.performQuickLoadAction()
             case .fastForward:
-                print("select speed")
                 self.performFastForwardAction(activate: true)
             case .reverseScreens: self.performReverseScreensAction()
             case .screenshot: self.performScreenshotAction()
@@ -791,10 +823,16 @@ extension GameViewController
     /// KVO
     ///
     ///
-  
+    ///
+
+    
     
     func pushtoSlider(){ //type: GameType){
-        MenuSliderViewController.presentInNewWindow()
+        
+        let vc = MenuSliderViewController.instance(controller: pauseViewController)
+        vc.gameProtocol = game
+        
+        pauseViewController?.presentOnNewWindow(viewController: vc)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -894,7 +932,8 @@ extension GameViewController
             }
             
             pauseViewController.fastForwardSetItem?.action = { [unowned self] item in
-                //ExperimentalFeatures.shared.variableFastForward
+                pauseViewController.fastForwardItem?.isSelected = false
+                pauseViewController.fastForwardSetItem?.isSelected = false
                 self.pushtoSlider()
                
             }
@@ -1793,16 +1832,19 @@ extension GameViewController
         
         if activate
         {
-            if ExperimentalFeatures.shared.variableFastForward.isEnabled,
-               let preferredSpeed = ExperimentalFeatures.shared.variableFastForward[emulatorCore.game.type],
-               (preferredSpeed.rawValue <= emulatorCore.deltaCore.supportedRates.upperBound || ExperimentalFeatures.shared.variableFastForward.allowUnrestrictedSpeeds)
-            {
-                emulatorCore.rate = preferredSpeed.rawValue
-            }
-            else
-            {
-                emulatorCore.rate = emulatorCore.deltaCore.supportedRates.upperBound
-            }
+//            if ExperimentalFeatures.shared.variableFastForward.isEnabled,
+//               let preferredSpeed = ExperimentalFeatures.shared.variableFastForward[emulatorCore.game.type],
+//               (preferredSpeed.rawValue <= emulatorCore.deltaCore.supportedRates.upperBound || ExperimentalFeatures.shared.variableFastForward.allowUnrestrictedSpeeds)
+//            {
+//                emulatorCore.rate = preferredSpeed.rawValue
+//            }
+//            else
+//            {
+//                emulatorCore.rate = emulatorCore.deltaCore.supportedRates.upperBound
+//            }
+            
+            emulatorCore.rate = emulatorCore.game.gameSpeed
+        
             
             if ExperimentalFeatures.shared.toastNotifications.fastForwardEnabled
             {

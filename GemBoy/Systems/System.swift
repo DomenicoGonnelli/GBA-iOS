@@ -19,7 +19,7 @@ import UIKit
 
 
 
-enum System: CaseIterable
+enum System: String, CaseIterable
 {
     case nes
     case genesis

@@ -267,7 +267,7 @@ private extension ControllerInputsViewController
                 text = "Quick_Load".localizable
                 
             case .fastForward:
-                image = #imageLiteral(resourceName: "FastForward")
+                image = #imageLiteral(resourceName: "setSpeed")
                 text = "Fast_Forward".localizable
                 
             case .screenshot:

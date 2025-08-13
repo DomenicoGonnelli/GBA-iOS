@@ -30,17 +30,6 @@ class PausePresentationController: UIPresentationController
     @IBOutlet private var stackView: UIStackView!
     
     
-    @IBOutlet private var stackViewSpeed: UIStackView!
-    @IBOutlet private var sliderSpeed: UISlider!
-    @IBOutlet private var actualSpeed: UILabel!
-    @IBOutlet private var container: UIView!
-    
-    
-    func showSlider(show: Bool){
-        container.isHidden = !show
-        stackViewSpeed.isHidden = !show
-    }
-    
     
     override var frameOfPresentedViewInContainerView: CGRect
     {

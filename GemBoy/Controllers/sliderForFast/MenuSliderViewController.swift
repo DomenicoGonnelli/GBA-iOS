@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import DeltaCore
 
 class MenuSliderViewController: BaseViewController {
     
@@ -17,67 +18,78 @@ class MenuSliderViewController: BaseViewController {
     @IBOutlet weak var userTitleLabel: UILabel!
     
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var contentView: UIView!
     
-    var newWindow: UIWindow?
-
+    var controller : PauseViewController?
+    var gameProtocol: GameProtocol?
+    var currentSpeed: CGFloat = 1
+    
     deinit {
         // Quando il controller viene deallocato, rimuovi anche la finestra
-        newWindow = nil
+        controller?.secondaryWindow = nil
     }
    
     override func viewDidLoad() {
         isToPresent = true
         super.viewDidLoad()
-        guard let _ = LoginManager.shared.user else {
-            self.showAlert(alertTypology: .genericError)
-            return
+       
+        slider.minimumValue = 0.8
+        slider.maximumValue = 10
+        
+        slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+        
+        if let gameProtocol = gameProtocol{
+            currentSpeed = CGFloat(gameProtocol.gameSpeed)
         }
-
+        
+        slider.value = Float(currentSpeed)
+        sliderValueChanged(slider)
+        contentView.transform = CGAffineTransform.init(scaleX: CGFloat(0.01), y: CGFloat(0.01))
         setNeedsStatusBarAppearanceUpdate()
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.1){
+            self.contentView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    override func rightAction() {
+        view.window?.isHidden = true
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first?
+            .windows
+            .first?
+            .makeKeyAndVisible()
+        closeWindow()
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    static func instance() -> MenuSliderViewController{
+    @objc func sliderValueChanged(_ sender: UISlider) {
+        let roundedValue = round(sender.value * 10) / 10.0
+        currentSpeed = CGFloat(roundedValue)
+        userInfoLabel.text = String(format: "slider_value_text".localizable, "\(roundedValue)")
+    }
+    
+    static func instance(controller: UIViewController?) -> MenuSliderViewController{
         let vc = UIStoryboard(name: "MenuSlider", bundle: nil).instantiateViewController(withIdentifier: identifier) as! MenuSliderViewController
         vc.modalPresentationStyle = .fullScreen
+        vc.controller = controller as? PauseViewController
         return vc
     }
     
-    static func present(prensenter: UIViewController) {
-        let vc = instance()
-        prensenter.present(vc, animated: true)
-    }
-    
-    static func presentInNewWindow() {
-        let vc = instance()
-        
-        // Crea una nuova finestra con le dimensioni dello schermo
-        var window = UIWindow(frame: UIScreen.main.bounds)
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            window = UIWindow(windowScene: windowScene)
-        }
-        window.windowLevel = .alert + 1 // Per assicurarti che sia sopra altre finestre
-        window.rootViewController = vc
-        
-        // Salva il riferimento alla finestra (importante per mantenere la finestra in memoria)
-        vc.newWindow = window
-        
-        // Mostra la finestra
-        window.makeKeyAndVisible()
-    }
     
     func closeWindow() {
-        self.newWindow = nil
-    }
-    
-    static func push(from nav: UIViewController) {
-        let vc = instance()
-        nav.navigationController?.pushViewController(vc, animated: true)
+        if var gameProtocol = gameProtocol {
+            gameProtocol.gameSpeed = Double(currentSpeed)
+        }
+        controller?.secondaryWindow = nil
     }
 
     

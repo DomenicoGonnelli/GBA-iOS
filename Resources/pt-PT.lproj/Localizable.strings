@@ -625,7 +625,7 @@
 "Medals" = "Minhas Medalhas";
 
 "server_connect_title" = "Servidor Iniciado";
-"server_connect_message" = "O servidor foi iniciado com sucesso: agora você pode ativar a conexão no segundo dispositivo como 'Usuário Cliente' usando o seguinte IP:\n\n%@";
+"server_connect_message" = "O servidor foi iniciado com sucesso: agora você pode ativar a conexão no segundo dispositivo como 'Usuário Cliente' usando:\n\n%@";
 
 
 
@@ -675,3 +675,13 @@
 "import_success" = "Importação concluída com sucesso";
 "import_success_message" = "O arquivo que você importou foi carregado com sucesso";
 "export_success" = "Exportação concluída com sucesso";
+
+"set_emulator_speed" = "Altere a velocidade do seu emulador!\nDepois de definir a velocidade desejada, feche a página e reative a super velocidade no menu";
+"slider_value_text" = "Velocidade atual: %@X";
+"download_rom" = "Baixar jogo";
+
+"dowload_new_roms" = "Baixar novos jogos";
+"downloadGamesUserProfileTitle" = "Baixar novos jogos";
+
+"subscritionExpiredNotificationTitle" = "Assinatura Expirada ❌";
+"subscritionExpiredNotificationMessage" = "Sua assinatura expirou, renove-a na seção Perfil";

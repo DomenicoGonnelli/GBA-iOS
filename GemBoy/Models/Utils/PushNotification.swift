@@ -139,7 +139,7 @@ enum PushAction : String, CaseIterable {
 }
 
 enum PayloadKeys: String, CaseIterable {
-    case title_it, body_it, title_es, body_es, title_en, body_en, title_zh, body_zh, title_ja, body_ja, title_pt, body_pt, title_ru, body_ru, pushAction
+    case title_it, body_it, title_es, body_es, title_en, body_en, title_zh, body_zh, title_ja, body_ja, title_pt, body_pt, title_ru, body_ru, pushAction, title_fr, body_fr
 }
 
 public enum language: String, CaseIterable {
@@ -151,7 +151,7 @@ public enum language: String, CaseIterable {
    // case zh = "zh"
    // case ru = "ru"
     //case de = "de"
-    //case fr = "fr"
+    case fr = "fr"
     
     static var list : [language] {
         
@@ -178,8 +178,8 @@ public enum language: String, CaseIterable {
             "🇵🇹 Português"
 //        case .de:
 //            "🇩🇪 Deutsch"
-//        case .fr:
-//            "🇫🇷 Français"
+        case .fr:
+            "🇫🇷 Français"
         }
     }
     

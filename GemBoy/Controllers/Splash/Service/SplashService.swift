@@ -28,6 +28,30 @@ class SplashService {
         }
     }
     
+    static func getWhatNews(_ completion: @escaping ([OnBoardingGenericItem])->Void){
+        
+        ServiceHelper.instance.driveService(url: EnvHelper.whatNewsLink, request: nil, method: .get) { resp in
+            if let resp = resp?["list"] as? [Dictionary<String,Any>] {
+                var list : [OnBoardingGenericItem] = []
+                
+                let actual = AppManager.whatNewsVersion ?? "3.7"
+                for i in resp {
+                    list.append(OnBoardingGenericItem(value: i))
+                }
+                let filtered = list.filter({
+                    if let version = $0.version  {
+                        return actual.compare(version, options: .numeric) == .orderedAscending
+                    }
+                    return false
+                })
+                completion(filtered)
+            } else {
+                completion([])
+            }
+        }
+        
+    }
+    
     static func getAppConfig(_ completion: @escaping (HomeServiceModel?)->Void){
         
         FirestoreHelper.getLinkStorage(){ links in

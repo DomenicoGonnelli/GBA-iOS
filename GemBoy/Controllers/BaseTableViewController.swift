@@ -7,9 +7,10 @@
 
 import UIKit
 import Lottie
-import GoogleMobileAds
+import GoogleMobileAdsTarget
 import LocalAuthentication
 import UserMessagingPlatform
+import GoogleMobileAds
 
 class BaseTableViewController: UITableViewController, AlertViewDelegate {
     
@@ -457,34 +458,51 @@ extension BaseTableViewController: FullScreenContentDelegate {
 
 
 extension BaseTableViewController {
-    func requestConsent() {
-        // Carica lo stato del consenso
-        ConsentInformation.shared.requestConsentInfoUpdate(with: RequestParameters()) { error in
-           if let error = error {
-               print("Errore nell'aggiornamento del consenso: \(error.localizedDescription)")
-               return
-           }
-           
-           // Controlla se il form è disponibile
-           if ConsentInformation.shared.formStatus == .available {
-               ConsentForm.load { form, error in
-                   if error != nil || form == nil {
-                       print("Errore nel caricamento del form: \(error?.localizedDescription)")
-                       return
-                   }
-                   
-                   // Mostra il form del consenso
-                   form?.present(from: self) { dismissError in
-                       if let dismissError = dismissError {
-                           print("Errore nella visualizzazione del form: \(dismissError.localizedDescription)")
-                       }
-                       
-                       // Dopo che il form è stato chiuso, verifica lo stato del consenso
-                       let consentStatus = ConsentInformation.shared.consentStatus
-                       print("Stato del consenso aggiornato: \(consentStatus)")
-                   }
-               }
-           }
+    func requestConsent(completion: @escaping ()->Void) {
+        if !DeviceManager.isConsentADObtained{
+            let parameters = UMPRequestParameters()
+                parameters.tagForUnderAgeOfConsent = false  // o true se necessario
+
+                // 2. Richiedi lo stato del consenso
+            UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) { error in
+                if let error = error {
+                    print("Errore nell'aggiornamento del consenso: \(error.localizedDescription)")
+                    completion()
+                    return
+                }
+                
+                // 3. Verifica se il form è disponibile
+                if UMPConsentInformation.sharedInstance.formStatus == .available {
+                    UMPConsentForm.load { form, loadError in
+                        if let loadError = loadError {
+                            print("Errore nel caricamento del form: \(loadError.localizedDescription)")
+                            completion()
+                            return
+                        }
+                        
+                        guard let form = form, let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
+                            print("Form o rootViewController non trovati")
+                            completion()
+                            return
+                        }
+                        
+                        // 4. Mostra il form
+                        form.present(from: rootViewController) { dismissError in
+                            if let dismissError = dismissError {
+                                print("Errore nella visualizzazione del form: \(dismissError.localizedDescription)")
+                            }
+                            
+                            // 5. Dopo la chiusura del form, controlla lo stato del consenso
+                            let status = UMPConsentInformation.sharedInstance.consentStatus
+                            print("Stato del consenso: \(status.rawValue)")
+                            completion()
+                        }
+                    }
+                }
+            }
+            
+       } else {
+           completion()
        }
     }
     

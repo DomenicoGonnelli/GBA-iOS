@@ -18,58 +18,110 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="MenuSliderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MenuSliderViewController" customModule="GemBoy_Advance" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" hidden="YES" contentMode="scaleToFill" id="xR5-4a-T04">
+                    <view key="view" contentMode="scaleToFill" id="xR5-4a-T04">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OoU-P4-dnf">
-                                <rect key="frame" x="32" y="234" width="256" height="100"/>
+                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlC-mf-Ond">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4r-Pn-jgO" customClass="DashedView" customModule="GemBoy_Advance" customModuleProvider="target">
+                                <rect key="frame" x="32" y="116" width="256" height="400"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imposta velocità" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAQ-0v-aJr">
-                                        <rect key="frame" x="61" y="0.0" width="134" height="16"/>
-                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.050000000000000003" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="Iei-e7-phy">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="400"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cN-rE-491" customClass="CustomNavigationBar" customModule="GemBoy_Advance" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="256" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ijb-S7-eta"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Imposta velocità" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAQ-0v-aJr">
+                                        <rect key="frame" x="30" y="75" width="196" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="14"/>
                                         <color key="textColor" name="buttonTextColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="set_emulator_speed"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-FA-bQP">
-                                        <rect key="frame" x="8" y="31" width="240" height="39"/>
-                                        <color key="minimumTrackTintColor" name="Purple"/>
-                                        <color key="maximumTrackTintColor" name="buttonTextColor"/>
-                                        <color key="thumbTintColor" name="secondaryColor"/>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="valore attuale: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7m-ym-vDE">
-                                        <rect key="frame" x="63" y="84" width="130" height="16"/>
-                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
-                                        <color key="textColor" name="buttonTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OoU-P4-dnf">
+                                        <rect key="frame" x="25.5" y="240" width="205" height="100"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-FA-bQP">
+                                                <rect key="frame" x="8" y="0.0" width="189" height="70"/>
+                                                <color key="minimumTrackTintColor" name="Purple"/>
+                                                <color key="maximumTrackTintColor" name="buttonTextColor"/>
+                                                <color key="thumbTintColor" name="secondaryColor"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="valore attuale: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7m-ym-vDE">
+                                                <rect key="frame" x="37.5" y="84" width="130" height="16"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
+                                                <color key="textColor" name="buttonTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tUx-FA-bQP" firstAttribute="leading" secondItem="OoU-P4-dnf" secondAttribute="leading" constant="10" id="2uG-uK-YyO"/>
+                                            <constraint firstAttribute="trailing" secondItem="tUx-FA-bQP" secondAttribute="trailing" constant="10" id="EvD-iF-mZY"/>
+                                            <constraint firstAttribute="height" constant="100" id="LEJ-3C-Pyo"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" name="primaryColorFix"/>
                                 <constraints>
-                                    <constraint firstItem="tUx-FA-bQP" firstAttribute="leading" secondItem="OoU-P4-dnf" secondAttribute="leading" constant="10" id="2uG-uK-YyO"/>
-                                    <constraint firstAttribute="trailing" secondItem="tUx-FA-bQP" secondAttribute="trailing" constant="10" id="EvD-iF-mZY"/>
-                                    <constraint firstAttribute="height" constant="100" id="LEJ-3C-Pyo"/>
+                                    <constraint firstItem="Iei-e7-phy" firstAttribute="top" secondItem="N4r-Pn-jgO" secondAttribute="top" id="DKd-6I-kUR"/>
+                                    <constraint firstItem="OoU-P4-dnf" firstAttribute="centerX" secondItem="N4r-Pn-jgO" secondAttribute="centerX" id="DTp-b6-Nf3"/>
+                                    <constraint firstItem="Iei-e7-phy" firstAttribute="leading" secondItem="N4r-Pn-jgO" secondAttribute="leading" id="HlX-l8-uz9"/>
+                                    <constraint firstItem="OoU-P4-dnf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LAQ-0v-aJr" secondAttribute="bottom" constant="30" id="KKD-VF-YGt"/>
+                                    <constraint firstAttribute="height" constant="400" id="Pg5-m4-DRg"/>
+                                    <constraint firstItem="9cN-rE-491" firstAttribute="top" secondItem="N4r-Pn-jgO" secondAttribute="top" constant="10" id="VQp-Bs-YWi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iei-e7-phy" secondAttribute="bottom" id="Xn9-kB-a2e"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iei-e7-phy" secondAttribute="trailing" id="ZaN-Nl-Yt0"/>
+                                    <constraint firstAttribute="bottom" secondItem="OoU-P4-dnf" secondAttribute="bottom" constant="60" id="bSu-e6-aXZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="9cN-rE-491" secondAttribute="trailing" id="i1v-8s-l3Q"/>
+                                    <constraint firstItem="9cN-rE-491" firstAttribute="leading" secondItem="N4r-Pn-jgO" secondAttribute="leading" id="kV8-Gh-UP5"/>
+                                    <constraint firstItem="LAQ-0v-aJr" firstAttribute="leading" secondItem="N4r-Pn-jgO" secondAttribute="leading" constant="30" id="mO2-9n-J8J"/>
+                                    <constraint firstAttribute="trailing" secondItem="LAQ-0v-aJr" secondAttribute="trailing" constant="30" id="mQf-Ob-89X"/>
+                                    <constraint firstItem="LAQ-0v-aJr" firstAttribute="top" secondItem="9cN-rE-491" secondAttribute="bottom" constant="30" id="pRN-0D-l7I"/>
+                                    <constraint firstItem="OoU-P4-dnf" firstAttribute="width" secondItem="N4r-Pn-jgO" secondAttribute="width" multiplier="0.8" id="wMR-Ox-65m"/>
                                 </constraints>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cN-rE-491" customClass="CustomNavigationBar" customModule="GemBoy_Advance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="320" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="ijb-S7-eta"/>
-                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dashColor">
+                                        <color key="value" name="buttonTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dashWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dashLength">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dashSpacing">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hfx-PN-xzr"/>
-                        <color key="backgroundColor" name="primaryColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OoU-P4-dnf" firstAttribute="centerX" secondItem="xR5-4a-T04" secondAttribute="centerX" id="2aL-oC-mJr"/>
-                            <constraint firstItem="OoU-P4-dnf" firstAttribute="width" secondItem="xR5-4a-T04" secondAttribute="width" multiplier="0.8" id="EeD-Xw-qaX"/>
-                            <constraint firstItem="9cN-rE-491" firstAttribute="top" secondItem="Hfx-PN-xzr" secondAttribute="top" id="Qx6-w4-JNq"/>
-                            <constraint firstItem="Hfx-PN-xzr" firstAttribute="trailing" secondItem="9cN-rE-491" secondAttribute="trailing" id="RAA-tb-RwU"/>
-                            <constraint firstItem="OoU-P4-dnf" firstAttribute="centerY" secondItem="xR5-4a-T04" secondAttribute="centerY" id="XfE-es-596"/>
-                            <constraint firstItem="9cN-rE-491" firstAttribute="leading" secondItem="Hfx-PN-xzr" secondAttribute="leading" id="xiF-3H-Ptx"/>
+                            <constraint firstItem="N4r-Pn-jgO" firstAttribute="centerY" secondItem="Hfx-PN-xzr" secondAttribute="centerY" id="1St-bQ-ZS5"/>
+                            <constraint firstItem="Hfx-PN-xzr" firstAttribute="trailing" secondItem="NlC-mf-Ond" secondAttribute="trailing" id="ILW-RD-vG2"/>
+                            <constraint firstItem="N4r-Pn-jgO" firstAttribute="width" secondItem="Hfx-PN-xzr" secondAttribute="width" multiplier="0.8" id="a8V-cr-gbE"/>
+                            <constraint firstItem="N4r-Pn-jgO" firstAttribute="centerX" secondItem="Hfx-PN-xzr" secondAttribute="centerX" id="bcb-Eh-r12"/>
+                            <constraint firstItem="NlC-mf-Ond" firstAttribute="top" secondItem="xR5-4a-T04" secondAttribute="top" id="oNS-QV-21S"/>
+                            <constraint firstItem="Hfx-PN-xzr" firstAttribute="bottom" secondItem="NlC-mf-Ond" secondAttribute="bottom" id="tUZ-zK-c2J"/>
+                            <constraint firstItem="NlC-mf-Ond" firstAttribute="leading" secondItem="Hfx-PN-xzr" secondAttribute="leading" id="zia-15-HsJ"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
+                        <outlet property="contentView" destination="N4r-Pn-jgO" id="tN1-N6-LHf"/>
                         <outlet property="navigationBar" destination="9cN-rE-491" id="Iw4-aY-UCU"/>
                         <outlet property="slider" destination="tUx-FA-bQP" id="z75-w2-Usr"/>
                         <outlet property="userInfoLabel" destination="w7m-ym-vDE" id="dCo-bg-bpd"/>
@@ -78,17 +130,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="51" y="4"/>
+            <point key="canvasLocation" x="50.625" y="3.1690140845070425"/>
         </scene>
     </scenes>
     <resources>
+        <image name="loginBG" width="624" height="1003"/>
         <namedColor name="Purple">
             <color red="0.83921568627450982" green="0.090196078431372548" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="buttonTextColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="primaryColor">
+        <namedColor name="primaryColorFix">
             <color red="0.13699999451637268" green="0.0" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondaryColor">
