@@ -1,10 +1,11 @@
-/* 
+/*
   infoPlist.strings
   Project
 
   Created by EGONNEDGJ on 26/12/23.
   
 */
+
 "NSFaceIDUsageDescription" = "Utilise la reconnaissance biométrique pour sécuriser l'accès à ton profil";
 "NSPhotoLibraryAddUsageDescription" = "L'application utilise l'accès à la photothèque pour te permettre de sélectionner une image personnalisée";
 "NSPhotoLibraryUsageDescription" = "L'application utilise l'accès à la photothèque pour te permettre de sélectionner une image personnalisée";
@@ -12,3 +13,5 @@
 "NSUserTrackingUsageDescription" = "L'application utilise tes données uniquement pour surveiller ses performances et rendre le système plus sûr. Les données enregistrées concernent le téléphone et ne sont en aucun cas liées à l'utilisateur. Cependant, l'utilisation de ces données nous permet de surveiller les plantages et d'améliorer notre efficacité";
 
 "NSCameraUsageDescription" = "L'application utilise l'accès à la caméra pour personnaliser le contenu utilisateur";
+
+

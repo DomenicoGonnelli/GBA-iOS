@@ -686,3 +686,9 @@
 "subscritionExpiredNotificationTitle" = "Subscription Expired ❌";
 "subscritionExpiredNotificationMessage" = "Your subscription has expired, renew it from the Profile section";
 
+"WhatNewsTitle" = "What's new on\n<b><AppName/></b>";
+"wifi" = "Wi-Fi";
+"cellular" = "cellular network";
+
+"Fast_Forward_Set" = "Set speed";
+"mutedItem" = "Mute Audio";

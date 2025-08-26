@@ -685,3 +685,10 @@
 
 "subscritionExpiredNotificationTitle" = "Assinatura Expirada ❌";
 "subscritionExpiredNotificationMessage" = "Sua assinatura expirou, renove-a na seção Perfil";
+
+"WhatNewsTitle" = "Novidades em\n<b><AppName/></b>";
+"wifi" = "Wi-Fi";
+"cellular" = "rede móvel";
+
+"Fast_Forward_Set" = "Definir velocidade";
+"mutedItem" = "Remover áudio";

@@ -714,3 +714,10 @@ Merci d'utiliser <b><AppName/></b> et amusez-vous bien avec vos titres préfér�
 
 "subscritionExpiredNotificationTitle" = "Abonnement expiré ❌";
 "subscritionExpiredNotificationMessage" = "Votre abonnement a expiré, renouvelez-le depuis la section Profil";
+
+"WhatNewsTitle" = "Nouveautés sur\n<b><AppName/></b>";
+"wifi" = "Wi-Fi";
+"cellular" = "réseau mobile";
+
+"Fast_Forward_Set" = "Régler la vitesse";
+"mutedItem" = "Couper le son";

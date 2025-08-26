@@ -684,3 +684,10 @@
 
 "subscritionExpiredNotificationTitle" = "Suscripción Caducada ❌";
 "subscritionExpiredNotificationMessage" = "Tu suscripción ha caducado, renuévala desde la sección Perfil";
+
+"WhatNewsTitle" = "Novedades en\n<b><AppName/></b>";
+"wifi" = "Wi-Fi";
+"cellular" = "red móvil";
+
+"Fast_Forward_Set" = "Ajustar velocidad";
+"mutedItem" = "Silenciar audio";
