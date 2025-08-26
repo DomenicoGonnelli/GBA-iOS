@@ -177,6 +177,7 @@ extension GameCollectionViewController
 {
     override func viewDidLoad()
     {
+        canManageNotification = true
         super.viewDidLoad()
         
         self.collectionView?.dataSource = self.dataSource
@@ -189,15 +190,15 @@ extension GameCollectionViewController
         }
         
         showPremiumPage()
-        
         self.update()
+        manageNotifition()
     }
     
     func showPremiumPage(){
         if !self.showed && AppManager.isNewPremium == false{
             self.showed = true
             AppManager.setIsNewPremium()
-            PremiumSubscriptionViewController.present(presenter: self, delegate: nil)
+            PremiumSubscriptionViewController.present(presenter: self, isCollaboration: false, delegate: nil)
         }
         
 

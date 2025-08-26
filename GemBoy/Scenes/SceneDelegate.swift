@@ -208,6 +208,10 @@ private extension SceneDelegate
                 {
                     _ = self.deepLinkController.handle(deepLink)
                 }
+                else if url.scheme?.lowercased() == "gemboy"
+                {
+                    DynamicLinksHelper.handleDeepLink(shortUrl: url)
+                }
             }
         }
     }

@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         MobileAds.shared.start(completionHandler: nil)
         ExperimentalFeatures.shared.toastNotifications.isEnabled = true
         ExperimentalFeatures.shared.variableFastForward.isEnabled = true
+
         setReachability()
         DeviceManager.resetNotificationCounter()
         UIApplication.shared.applicationIconBadgeNumber = 0
@@ -247,6 +248,11 @@ extension AppDelegate
         else if url.scheme?.lowercased() == "delta"
         {
             return self.deepLinkController.handle(.url(url))
+        }
+        
+        else if url.scheme?.lowercased() == "gemboy"
+        {
+            DynamicLinksHelper.handleDeepLink(shortUrl: url)
         }
         
         return false

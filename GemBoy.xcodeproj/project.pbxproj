@@ -230,7 +230,7 @@
 		D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
 		D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
 		EB04DE172DCCB31800ED4ADE /* ConnectionLinkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */; };
-		EB04DE372DD2214A00ED4ADE /* dg_DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg_DS.deltaskin */; };
+		EB04DE372DD2214A00ED4ADE /* dg__DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */; };
 		EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */; };
 		EB21EA382DB92D8E00B6B1F4 /* StatisticsUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */; };
 		EB21EA392DB92D8E00B6B1F4 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */; };
@@ -284,6 +284,7 @@
 		EB52BD0E2E4BD33C002CBE49 /* DownlaodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD062E4BD33C002CBE49 /* DownlaodCell.swift */; };
 		EB52BD0F2E4BD33C002CBE49 /* GameDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */; };
 		EB52BD102E4BD33C002CBE49 /* GameDownload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */; };
+		EB52BD942E5CB051002CBE49 /* dg_DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD932E5CB051002CBE49 /* dg_DS.deltaskin */; };
 		EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
 		EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
 		EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
@@ -710,7 +711,7 @@
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLinkState.swift; sourceTree = "<group>"; };
-		EB04DE362DD2214A00ED4ADE /* dg_DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_DS.deltaskin; sourceTree = "<group>"; };
+		EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__DS.deltaskin; sourceTree = "<group>"; };
 		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB21EA262DB92D8E00B6B1F4 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		EB21EA282DB92D8E00B6B1F4 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -758,6 +759,7 @@
 		EB52BD062E4BD33C002CBE49 /* DownlaodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownlaodCell.swift; sourceTree = "<group>"; };
 		EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameDownload.storyboard; sourceTree = "<group>"; };
 		EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDownloadViewController.swift; sourceTree = "<group>"; };
+		EB52BD932E5CB051002CBE49 /* dg_DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_DS.deltaskin; sourceTree = "<group>"; };
 		EB69AB072D977F1B00311D39 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationManagar.swift; sourceTree = "<group>"; };
 		EB69AB092D977F1B00311D39 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -1757,7 +1759,8 @@
 		EB3EB55E2DA034DB004FFACF /* defaultskin */ = {
 			isa = PBXGroup;
 			children = (
-				EB04DE362DD2214A00ED4ADE /* dg_DS.deltaskin */,
+				EB52BD932E5CB051002CBE49 /* dg_DS.deltaskin */,
+				EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */,
 				EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */,
 				EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */,
 				EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */,
@@ -2573,7 +2576,7 @@
 				EB21EA382DB92D8E00B6B1F4 /* StatisticsUser.storyboard in Resources */,
 				EB21EA392DB92D8E00B6B1F4 /* Statistics.storyboard in Resources */,
 				D5E12AED2D011640000C7531 /* Profanity.txt in Resources */,
-				EB04DE372DD2214A00ED4ADE /* dg_DS.deltaskin in Resources */,
+				EB04DE372DD2214A00ED4ADE /* dg__DS.deltaskin in Resources */,
 				EBBB19CB2D9977B4009C977A /* Login.storyboard in Resources */,
 				BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */,
 				D53415A7298C78BC00FD67B1 /* Contributors.plist in Resources */,
@@ -2617,6 +2620,7 @@
 				EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */,
 				EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */,
 				EB52BD102E4BD33C002CBE49 /* GameDownload.storyboard in Resources */,
+				EB52BD942E5CB051002CBE49 /* dg_DS.deltaskin in Resources */,
 				EBA2BAC42D984792007A25A6 /* SwipableControllerCell.xib in Resources */,
 				EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */,
 				EB6EB4042DBECB9200EAC356 /* Main.storyboard in Resources */,

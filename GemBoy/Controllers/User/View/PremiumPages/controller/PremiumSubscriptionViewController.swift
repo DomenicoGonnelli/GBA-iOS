@@ -22,38 +22,54 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
     var premiumType : PremiumStatus = .noPremium
     var selectedPremiumType : PremiumStatus = .noPremium
     var selectedSubscription : PremiumSubscriptionModel?
-    
+    var isCollaboration: Bool = false
     override func viewDidLoad() {
         isToPresent = true
         IAPProduct.store.delegate = self
         super.viewDidLoad()
         
         showLoader(bg: .primaryColorFix)
-        
-        PremiumServices.getAllPremium(){ subscriptions in
-            for subscription in subscriptions {
-                let vc = PremiumSinglePageViewController.instance(item: subscription, controller: self.pager)
-                self.subViews.append(vc)
-            }
-            self.callServices(isNewSubscription: false)
-        }
-        
+    
+        callServices(isNewSubscription: false)
         setNeedsStatusBarAppearanceUpdate()
     }
     
     func callServices(isNewSubscription: Bool){
         FirestoreHelper.getPremiumrData() { premium in
             let user = LoginManager.shared.user
-            self.hideLoader()
-            if !isNewSubscription {
-                self.pager?.orderedViewControllers = self.subViews
-                self.pager?.startView()
+            PremiumServices.getAllPremium(){ all in
+                self.hideLoader()
+                var subscriptions = all.filter({$0.subscriptionType == .always})
+                if self.isCollaboration {
+                    subscriptions = all.filter({$0.subscriptionType == .collaboration})
+                }
+                
+                for subscription in subscriptions {
+                    let vc = PremiumSinglePageViewController.instance(item: subscription, controller: self.pager)
+                    self.subViews.append(vc)
+                }
+                
+                if user?.isPremium == true {
+                    if let sub = user?.premiumSubscription, let key = sub.iosKey  {
+                        if !subscriptions.contains(where: {$0.iosKey == key}) {
+                            let vc = PremiumSinglePageViewController.instance(item: sub, controller: self.pager)
+                            self.subViews.append(vc)
+                        }
+                    }
+                }
+                
+                if !isNewSubscription {
+                    self.pager?.orderedViewControllers = self.subViews
+                    self.pager?.startView()
+                }
+                self.pager?.updateView(isNew: isNewSubscription)
+                if let id =  user?.premiumSubscription?.subscriptionId, let index = self.subViews.firstIndex(where: {$0.item?.subscriptionId == id}) {
+                    self.pager?.currentIndex = index
+                    self.pager?.moveToSpecificPage(nextViewController: self.subViews[index])
+                }
             }
-            self.pager?.updateView(isNew: isNewSubscription)
-            if let id =  user?.premiumSubscription?.subscriptionId, let index = self.subViews.firstIndex(where: {$0.item?.subscriptionId == id}) {
-                self.pager?.currentIndex = index
-                self.pager?.moveToSpecificPage(nextViewController: self.subViews[index])
-            }
+            
+            
         }
     }
     
@@ -88,8 +104,9 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
         return vc
     }
     
-    static func present(presenter: UIViewController?, delegate: PremiumSubscriptionDelegate?, completion: (() -> Void)? = nil){
+    static func present(presenter: UIViewController?, isCollaboration: Bool, delegate: PremiumSubscriptionDelegate?, completion: (() -> Void)? = nil){
         let vc = instance()
+        vc.isCollaboration = isCollaboration
         vc.delegate = delegate
         presenter?.present(vc, animated: true, completion: completion)
         
@@ -108,7 +125,7 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
         p.registrationDate = Date()
         
         let oggi = Date()
-        if identifier == IAPProduct.premiumAnnual.rawValue, let dataTra12Mesi = Calendar.current.date(byAdding: .month, value: 12, to: oggi) {
+        if let time = selectedSubscription?.periodMonth, let dataTra12Mesi = Calendar.current.date(byAdding: .month, value: time, to: oggi) {
             p.expirationDate = dataTra12Mesi
         } else if let dataTra3Mesi = Calendar.current.date(byAdding: .month, value: 1, to: oggi) {
             p.expirationDate = dataTra3Mesi

@@ -12,11 +12,13 @@ class PremiumSubscriptionModel: DatabaseModelProtocolGet{
     var subscriptionName: String?
     var subscriptionId: String?
     var periodMonth: Int = 1
+    var alphaBg: Int = 20
     var iosKey: String?
     var backgroundLink: String?
     var helmetLink: String?
     var period: String?
     var benefits: [PremiumBenefitModel] = []
+    var subscriptionType: PremiumSubscriptionTypology = .always
     
     init(){}
     
@@ -30,11 +32,18 @@ class PremiumSubscriptionModel: DatabaseModelProtocolGet{
         if let value = value["subscription_id"] as? String {
             subscriptionId = value
         }
+        if let value = value["typology"] as? String {
+            subscriptionType = PremiumSubscriptionTypology(rawValue: value) ?? .always
+        }
         
         periodMonth = value["period_month"] as? Int ?? 1
         
         if let value = value["ios_key"] as? String{
             iosKey = value
+        }
+        
+        if let value = value["alpha"] as? Int{
+            alphaBg = value
         }
         
         if let value = value["background"] as? String{
@@ -57,7 +66,6 @@ class PremiumSubscriptionModel: DatabaseModelProtocolGet{
             benefits = benefits.filter({$0.showReview})
         }
         
-        
         if let list = value["period"] as? [String:Any] {
             period = list[lg] as? String  ?? ""
         }
@@ -78,4 +86,8 @@ public class PremiumBenefitModel: DatabaseModelProtocolGet{
         image = value["image"] as? String
         showReview = value["showReview"] as? Bool ?? true
     }
+}
+
+enum PremiumSubscriptionTypology: String, CaseIterable {
+    case always, collaboration, momentary
 }

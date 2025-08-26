@@ -263,7 +263,7 @@ class UserProfileViewController: LoginViewController {
     
     
     @IBAction func goPremium(_ sender: Any){
-        PremiumSubscriptionViewController.present(presenter: self, delegate: self)
+        PremiumSubscriptionViewController.present(presenter: self, isCollaboration: false, delegate: self)
     }
     
 }

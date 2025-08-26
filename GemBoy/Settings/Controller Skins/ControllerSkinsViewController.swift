@@ -51,7 +51,7 @@ class ControllerSkinsViewController: BaseTableViewController
     override func firstButtonAction(_ type: AlertViewTypology?) {
         switch type {
         case .needPremium:
-            PremiumSubscriptionViewController.present(presenter: self, delegate: nil)
+            PremiumSubscriptionViewController.present(presenter: self, isCollaboration: false,  delegate: nil)
         default:
             print("action not implemented")
         }

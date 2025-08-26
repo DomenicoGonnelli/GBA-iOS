@@ -10,9 +10,14 @@ import Foundation
 public enum IAPProduct: String, CaseIterable {
     
     case premiumMonthly = "com.domenico.gonnelli.farm.gba.month",
-         premiumAnnual = "com.domenico.gonnelli.farm.gba.annual"
+         premiumAnnual = "com.domenico.gonnelli.farm.gba.annual",
+         premiumJFR = "com.domenico.gonnelli.farm.gba.jfr"
     
-    private static let productIdentifiers: Set<ProductIdentifier> = [IAPProduct.premiumMonthly.rawValue, IAPProduct.premiumAnnual.rawValue]
+    private static let productIdentifiers: Set<ProductIdentifier> = [
+        IAPProduct.premiumMonthly.rawValue,
+        IAPProduct.premiumAnnual.rawValue,
+        IAPProduct.premiumJFR.rawValue,
+    ]
     
     public static let store = IAPHelper(productIds: IAPProduct.productIdentifiers)
     

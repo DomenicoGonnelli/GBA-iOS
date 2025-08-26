@@ -151,6 +151,10 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
 //        connection.start(queue: .main)
 //    }
     
+    var isMuted : Bool {
+        self.emulatorCore?.audioManager.isMuted ?? false
+    }
+    
     func closeConnection(){
         let game = self.game as? Game
         if game?.showLink() == true {
@@ -226,7 +230,12 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     }
     var noLocalConnection = false
     
+    func enableSound(isMuted: Bool){
+        self.emulatorCore?.audioManager.isMuted = isMuted // || Settings.respectSilentMode
+    }
+    
     func startLocal(){
+        
         let parameters = NWParameters.udp
         let browser = NWBrowser(for: .bonjour(type: "_http._tcp", domain: nil), using: parameters)
 
@@ -276,7 +285,8 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     
     
     func tryConnection(){
-        let game = self.game as? Game
+        
+        self.emulatorCore?.audioManager.respectsSilentMode = true
         
         if connectionState == .Link_Ok{
             self.presentGameExperimentalToastView("\(connectionLinkType.rawValue): \(connectionState.textValue)")
@@ -308,6 +318,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
     }
     
     func startLink(){
+        
         let game = self.game as? Game
         
         if connectionState == .Link_Ok{
@@ -915,6 +926,11 @@ extension GameViewController
                 }
             }
             
+            pauseViewController.soundItem?.action = { [unowned self] item in
+                self.enableSound(isMuted: !isMuted)
+                
+            }
+            
             pauseViewController.unconnectItem?.action = { [unowned self] item in
                 self.closeConnection()
             }
@@ -944,7 +960,7 @@ extension GameViewController
                 } else {
                     
                     self.pauseViewController?.showAlerCustomCancel(title: "needPremiumTitle".localizable, message: "needPremiumDescription".localizable, firtButtonText: "needPremiumFirstButton".localizable){
-                        PremiumSubscriptionViewController.present(presenter: self.pauseViewController, delegate: nil)
+                        PremiumSubscriptionViewController.present(presenter: self.pauseViewController, isCollaboration: false,  delegate: nil)
                     }
                 }
             }
@@ -955,6 +971,9 @@ extension GameViewController
             }
                         
             pauseViewController.fastForwardItem?.isSelected = (self.emulatorCore?.rate != self.emulatorCore?.deltaCore.supportedRates.lowerBound)
+            
+            pauseViewController.soundItem?.isSelected = isMuted
+            
             
             pauseViewController.fastForwardItem?.action = { [unowned self] item in
                 self.performFastForwardAction(activate: item.isSelected)

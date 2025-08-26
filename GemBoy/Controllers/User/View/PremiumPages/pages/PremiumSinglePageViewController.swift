@@ -44,6 +44,7 @@ class PremiumSinglePageViewController: UIViewController {
                 let imageResult = try? result.get().image
                 self.bg.image = imageResult
                 self.bg.blurEffect()
+                self.bg.alpha = CGFloat(self.item?.alphaBg ?? 35)/100
             })
         }
         

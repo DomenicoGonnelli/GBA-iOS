@@ -27,10 +27,9 @@ class PauseViewController: BaseViewController, PauseInfoProviding
         
         if ExperimentalFeatures.shared.variableFastForward.isEnabled {
             list.append(self.fastForwardSetItem)
-            
         }
         
-        list.append(contentsOf: [self.sustainButtonsItem, self.screenshotItem, self.closeGameItem])
+        list.append(contentsOf: [self.sustainButtonsItem, self.screenshotItem, self.soundItem, self.closeGameItem])
         
         if emulatorCore?.game.showLink() == true {
             list.append(self.connectItem)
@@ -75,6 +74,8 @@ class PauseViewController: BaseViewController, PauseInfoProviding
     var unconnectItem: MenuItem?
     var deviceConnection: MenuItem?
     var startConnectionServer: MenuItem?
+    
+    var soundItem: MenuItem?
     
     /// PauseInfoProviding
     var pauseText: String?
@@ -316,6 +317,8 @@ extension PauseViewController: UINavigationControllerDelegate
         self.unconnectItem = MenuItem(text: "unconnect".localizable, image: #imageLiteral(resourceName: "unconnect"), action: { _ in })
         self.deviceConnection = MenuItem(text: "linkDevice".localizable, image: #imageLiteral(resourceName: "changeTeamIcon"), action: { _ in })
         self.startConnectionServer = MenuItem(text: "startConnection".localizable, image: #imageLiteral(resourceName: "client_start"), action: { _ in })
+        
+        self.soundItem = MenuItem(text: "mutedItem".localizable, image: #imageLiteral(resourceName: "mute"), action: { _ in })
 
         
         

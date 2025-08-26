@@ -212,33 +212,44 @@ class BaseViewController: UIViewController, AlertViewDelegate {
     }
     
     private func managerDynamicLinkAction(action: DynamicLinksType){
+        let info = DynamicLinksHelper.shared.linkInfo?.components(separatedBy: "=").last
         
-//        if let vc = self as? TabBarItemViewController{
-//            switch action {
-//            case .null:
-//                print("nothingToDo")
-//            case .discoverClassification:
-//                vc.controller?.goToClassificationPage()
-//            case .leaguesAccess:
-//                AppManager.setShowLeagues()
-//                if let league = self as? LeagueOverviewViewController {
-//                    league.checkDLAndCallServices()
-//                } else {
-//                    vc.controller?.goToLeague()
-//                }
-//            case .driverInvitation:
-//                if LoginManager.shared.team == nil {
-//                    vc.controller?.goToCreateTeam();
-//                } else {
-//                    if let url = DynamicLinksHelper.shared.linkInfo {
-//                        DynamicLinksHelper.setStoredLink(link: "")
-//                        let code = DynamicLinksHelper.decode(from: url, occorences: 7)
-//                        AppManager.friendLink = code
-//                        vc.controller?.showAlert(alertTypology: .friendBonusNotAvailable, delegate: vc)
-//                    }
-//                }
-//            }
-//        }
+        switch action {
+        case .premiumSubscription:
+            DynamicLinksHelper.shared.dynamicLink = .null
+            PremiumSubscriptionViewController.present(presenter: self, isCollaboration: true,  delegate: nil)
+        case .null:
+            print("nothing to do")
+        }
+        
+        
+        
+        //        if let vc = self as? TabBarItemViewController{
+        //            switch action {
+        //            case .null:
+        //                print("nothingToDo")
+        //            case .discoverClassification:
+        //                vc.controller?.goToClassificationPage()
+        //            case .leaguesAccess:
+        //                AppManager.setShowLeagues()
+        //                if let league = self as? LeagueOverviewViewController {
+        //                    league.checkDLAndCallServices()
+        //                } else {
+        //                    vc.controller?.goToLeague()
+        //                }
+        //            case .driverInvitation:
+        //                if LoginManager.shared.team == nil {
+        //                    vc.controller?.goToCreateTeam();
+        //                } else {
+        //                    if let url = DynamicLinksHelper.shared.linkInfo {
+        //                        DynamicLinksHelper.setStoredLink(link: "")
+        //                        let code = DynamicLinksHelper.decode(from: url, occorences: 7)
+        //                        AppManager.friendLink = code
+        //                        vc.controller?.showAlert(alertTypology: .friendBonusNotAvailable, delegate: vc)
+        //                    }
+        //                }
+        //            }
+        //        }
     }
     
     
