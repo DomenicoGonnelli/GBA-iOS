@@ -45,7 +45,7 @@
 "launh_failed" = "Impossible de lancer <AppName/>, réessayez plus tard";
 "Retry" = "Réessayer";
 "No_Games" = "Vous n'avez encore aucun jeu 🎮";
-"import_games_label" = "Vous pouvez importer de nouveaux jeux en appuyant sur le bouton '+' en haut à droite";
+"import_games_label" = "Vous pouvez importer de nouveaux jeux en appuyant sur le bouton '+' en à droite";
 "Resume" = "Reprendre";
 "import" = "Importer depuis :";
 "Settings" = "Paramètres";

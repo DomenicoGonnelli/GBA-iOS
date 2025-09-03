@@ -32,8 +32,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		05EF6BDEE6C1AC8A92642B10 /* libPods-GemBoy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5507B25B552431548D97A6 /* libPods-GemBoy.a */; };
+		4D6394A9A0424E127DAC20D4 /* libPods-GemBoyShared-GemBoy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0EDF80737AC4DBFA8CCA32 /* libPods-GemBoyShared-GemBoy.a */; };
 		91216657969D0BFC464ABAE9 /* libPods-GemBoyPreviews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4513EA4A379492D8F7CE9A8 /* libPods-GemBoyPreviews.a */; };
+		97949505A6EFA9683125D107 /* libPods-GemBoyShared-GemBoyNew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E146C3105B0305E8B73650 /* libPods-GemBoyShared-GemBoyNew.a */; };
 		AC1C991029F8B8C30020E6E4 /* ToastNotificationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C990F29F8B8C30020E6E4 /* ToastNotificationOptions.swift */; };
 		AC1C992729F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C992629F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift */; };
 		ACF7E30F29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF7E30E29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift */; };
@@ -232,6 +233,363 @@
 		EB04DE172DCCB31800ED4ADE /* ConnectionLinkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */; };
 		EB04DE372DD2214A00ED4ADE /* dg__DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */; };
 		EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */; };
+		EB1E5D222E63050E00305D33 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3645723245A6000CD0EB1 /* LicensesViewController.swift */; };
+		EB1E5D232E63050E00305D33 /* RankingStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB7AE2DB1615A007C5BB4 /* RankingStarView.swift */; };
+		EB1E5D242E63050E00305D33 /* Input+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6F7B71F435BC500221B96 /* Input+Display.swift */; };
+		EB1E5D252E63050E00305D33 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942681E09BBD00051894B /* GridCollectionViewCell.swift */; };
+		EB1E5D262E63050E00305D33 /* iTunesImportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BF3171EB82111008E83CD /* iTunesImportOption.swift */; };
+		EB1E5D272E63050E00305D33 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19872D9972E7009C977A /* BaseViewController.swift */; };
+		EB1E5D282E63050E00305D33 /* Bundle+SwizzleBundleID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF647A6922FB8FCE0061D76D /* Bundle+SwizzleBundleID.swift */; };
+		EB1E5D292E63050E00305D33 /* GameControllerInputMappingTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B82A41F7CC2A300042BFB /* GameControllerInputMappingTransformer.swift */; };
+		EB1E5D2A2E63050E00305D33 /* Cheat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942771E09BC830051894B /* Cheat.swift */; };
+		EB1E5D2B2E63050E00305D33 /* DeltaCoreProtocol+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBAB2E21EB685A2004E0B0E /* DeltaCoreProtocol+Delta.swift */; };
+		EB1E5D2C2E63050E00305D33 /* Delta9ToDelta10.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D5D45CF42D0CDDF600BADDF5 /* Delta9ToDelta10.xcmappingmodel */; };
+		EB1E5D2D2E63050E00305D33 /* RepairDatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A137442A7D814000AB1372 /* RepairDatabaseViewController.swift */; };
+		EB1E5D2E2E63050E00305D33 /* PauseTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3540071C5DAFAD00C1184C /* PauseTransitionCoordinator.swift */; };
+		EB1E5D2F2E63050E00305D33 /* Delta8ToDelta9.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D5AE76D02C2BA5B70086471B /* Delta8ToDelta9.xcmappingmodel */; };
+		EB1E5D302E63050E00305D33 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF525EE91FF6CD12004AA849 /* DeepLink.swift */; };
+		EB1E5D312E63050E00305D33 /* ToastNotificationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C990F29F8B8C30020E6E4 /* ToastNotificationOptions.swift */; };
+		EB1E5D322E63050E00305D33 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942791E09BC830051894B /* Game.swift */; };
+		EB1E5D332E63050E00305D33 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3E7142DB630C1006B1CBC /* BaseTableViewController.swift */; };
+		EB1E5D342E63050E00305D33 /* CharacterSet+Filename.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5011C47281B6E8B00A0760B /* CharacterSet+Filename.swift */; };
+		EB1E5D352E63050E00305D33 /* _GameSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE593CB21F3F8C2003412A6 /* _GameSave.swift */; };
+		EB1E5D362E63050E00305D33 /* ReviewSaveStatesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5147EC72A817B4A00D6CD64 /* ReviewSaveStatesOptions.swift */; };
+		EB1E5D372E63050E00305D33 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA1FEC1B8AA4FA00495943 /* Settings.swift */; };
+		EB1E5D382E63050E00305D33 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63BDE91D389EEB00FCB040 /* GameViewController.swift */; };
+		EB1E5D392E63050E00305D33 /* _SaveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942851E09BC8B0051894B /* _SaveState.swift */; };
+		EB1E5D3A2E63050E00305D33 /* CopyDeepLinkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1F2CB22F9515F00606A45 /* CopyDeepLinkActivity.swift */; };
+		EB1E5D3B2E63050E00305D33 /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D272D946055004BFB1F /* SKProduct.swift */; };
+		EB1E5D3C2E63050E00305D33 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D182D946055004BFB1F /* Dictionary.swift */; };
+		EB1E5D3D2E63050E00305D33 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D252D946055004BFB1F /* Optional.swift */; };
+		EB1E5D3E2E63050E00305D33 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1B2D946055004BFB1F /* String.swift */; };
+		EB1E5D3F2E63050E00305D33 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D222D946055004BFB1F /* Data.swift */; };
+		EB1E5D402E63050E00305D33 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D202D946055004BFB1F /* Date.swift */; };
+		EB1E5D412E63050E00305D33 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1C2D946055004BFB1F /* UIViewController.swift */; };
+		EB1E5D422E63050E00305D33 /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D242D946055004BFB1F /* Arrays.swift */; };
+		EB1E5D432E63050E00305D33 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D192D946055004BFB1F /* UILabel.swift */; };
+		EB1E5D442E63050E00305D33 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1E2D946055004BFB1F /* UIButton.swift */; };
+		EB1E5D452E63050E00305D33 /* StringExtensionCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1A2D946055004BFB1F /* StringExtensionCommon.swift */; };
+		EB1E5D462E63050E00305D33 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1F2D946055004BFB1F /* UIImageView.swift */; };
+		EB1E5D472E63050E00305D33 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D412D946451004BFB1F /* PushNotification.swift */; };
+		EB1E5D482E63050E00305D33 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D232D946055004BFB1F /* UIColor.swift */; };
+		EB1E5D492E63050E00305D33 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D262D946055004BFB1F /* UICollectionView.swift */; };
+		EB1E5D4A2E63050E00305D33 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1D2D946055004BFB1F /* UIView.swift */; };
+		EB1E5D4B2E63050E00305D33 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D212D946055004BFB1F /* CGRect.swift */; };
+		EB1E5D4C2E63050E00305D33 /* StartGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */; };
+		EB1E5D4D2E63050E00305D33 /* SaveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59427B1E09BC830051894B /* SaveState.swift */; };
+		EB1E5D4E2E63050E00305D33 /* ImportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59428D1E09BCFB0051894B /* ImportController.swift */; };
+		EB1E5D4F2E63050E00305D33 /* EmulatorCore+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13A7571D5D2FD9000BB055 /* EmulatorCore+Delta.swift */; };
+		EB1E5D502E63050E00305D33 /* WFCServersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552DE392D39C5A500E737BE /* WFCServersView.swift */; };
+		EB1E5D512E63050E00305D33 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB172D977FC800311D39 /* IAPHelper.swift */; };
+		EB1E5D522E63050E00305D33 /* MenuSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD680322E11477700A92584 /* MenuSliderViewController.swift */; };
+		EB1E5D532E63050E00305D33 /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB182D977FC800311D39 /* IAPProduct.swift */; };
+		EB1E5D542E63050E00305D33 /* VariableFastForward.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A9C01C29DE058C00A8D610 /* VariableFastForward.swift */; };
+		EB1E5D552E63050E00305D33 /* GameSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE593C921F3F8B7003412A6 /* GameSave.swift */; };
+		EB1E5D562E63050E00305D33 /* ListMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6424821F5B8F3F00D6AB44 /* ListMenuViewController.swift */; };
+		EB1E5D572E63050E00305D33 /* DeltaToDelta2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = BF1020E21F95B05B00313182 /* DeltaToDelta2.xcmappingmodel */; };
+		EB1E5D582E63050E00305D33 /* ImportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BF3121EB7E47F008E83CD /* ImportOption.swift */; };
+		EB1E5D592E63050E00305D33 /* Delta4ToDelta5.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = BFEE943C23F2180200CDA07D /* Delta4ToDelta5.xcmappingmodel */; };
+		EB1E5D5A2E63050E00305D33 /* CheatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31878A1D489AAA00BD020D /* CheatValidator.swift */; };
+		EB1E5D5B2E63050E00305D33 /* Stream+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EB601A2C0E6190007C543C /* Stream+Conveniences.swift */; };
+		EB1E5D5C2E63050E00305D33 /* ExternalDisplaySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560BD8529EDC45600289847 /* ExternalDisplaySceneDelegate.swift */; };
+		EB1E5D5D2E63050E00305D33 /* InitialGamesStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC461D1D59823500AF2CC6 /* InitialGamesStoryboardSegue.swift */; };
+		EB1E5D5E2E63050E00305D33 /* UserDefaults+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCCEA2A8593FC00E22131 /* UserDefaults+Delta.swift */; };
+		EB1E5D5F2E63050E00305D33 /* ActionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15AF831F54B43B009B6AAB /* ActionInput.swift */; };
+		EB1E5D602E63050E00305D33 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAA12D984792007A25A6 /* RoundedButton.swift */; };
+		EB1E5D612E63050E00305D33 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BABC2D984792007A25A6 /* DashedView.swift */; };
+		EB1E5D622E63050E00305D33 /* DynamicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BABD2D984792007A25A6 /* DynamicView.swift */; };
+		EB1E5D632E63050E00305D33 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAB72D984792007A25A6 /* UserProfile.swift */; };
+		EB1E5D642E63050E00305D33 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BA9E2D984792007A25A6 /* AlertView.swift */; };
+		EB1E5D652E63050E00305D33 /* SwipableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAB42D984792007A25A6 /* SwipableController.swift */; };
+		EB1E5D662E63050E00305D33 /* SwipableControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAB12D984792007A25A6 /* SwipableControllerCell.swift */; };
+		EB1E5D672E63050E00305D33 /* CustomCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BABB2D984792007A25A6 /* CustomCornerView.swift */; };
+		EB1E5D682E63050E00305D33 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BABA2D984792007A25A6 /* BaseView.swift */; };
+		EB1E5D692E63050E00305D33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19C72D9977B4009C977A /* LoginViewController.swift */; };
+		EB1E5D6A2E63050E00305D33 /* TutorialSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19DC2D9982C6009C977A /* TutorialSplitViewController.swift */; };
+		EB1E5D6B2E63050E00305D33 /* TutorialLongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19DF2D9982C6009C977A /* TutorialLongViewController.swift */; };
+		EB1E5D6C2E63050E00305D33 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19E22D9982C6009C977A /* OnBoardingViewController.swift */; };
+		EB1E5D6D2E63050E00305D33 /* TutorialSplitContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19DB2D9982C6009C977A /* TutorialSplitContainerViewController.swift */; };
+		EB1E5D6E2E63050E00305D33 /* OnBoardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19E12D9982C6009C977A /* OnBoardingDataSource.swift */; };
+		EB1E5D6F2E63050E00305D33 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19C42D9977B4009C977A /* LoginService.swift */; };
+		EB1E5D702E63050E00305D33 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAA62D984792007A25A6 /* GradientView.swift */; };
+		EB1E5D712E63050E00305D33 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAA32D984792007A25A6 /* CustomNavigationBar.swift */; };
+		EB1E5D722E63050E00305D33 /* DownloadRomOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD012E4BD33C002CBE49 /* DownloadRomOption.swift */; };
+		EB1E5D732E63050E00305D33 /* GameDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD042E4BD33C002CBE49 /* GameDownloadService.swift */; };
+		EB1E5D742E63050E00305D33 /* GameDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD022E4BD33C002CBE49 /* GameDownloadModel.swift */; };
+		EB1E5D752E63050E00305D33 /* DownlaodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD062E4BD33C002CBE49 /* DownlaodCell.swift */; };
+		EB1E5D762E63050E00305D33 /* GameDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */; };
+		EB1E5D772E63050E00305D33 /* WFCServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552DE3C2D39DB2700E737BE /* WFCServer.swift */; };
+		EB1E5D782E63050E00305D33 /* DSAirPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D78AE429F9BC3700E064F0 /* DSAirPlay.swift */; };
+		EB1E5D792E63050E00305D33 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7CB6952D96949400CA27FC /* UIAlertController.swift */; };
+		EB1E5D7A2E63050E00305D33 /* Delta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF4828811F9027B600028B97 /* Delta.xcdatamodeld */; };
+		EB1E5D7B2E63050E00305D33 /* UISceneSession+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */; };
+		EB1E5D7C2E63050E00305D33 /* Delta6ToDelta7.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D510BC742A5CA9F500450CC0 /* Delta6ToDelta7.xcmappingmodel */; };
+		EB1E5D7D2E63050E00305D33 /* NSManagedObjectContext+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942921E09BD1A0051894B /* NSManagedObjectContext+Conveniences.swift */; };
+		EB1E5D7E2E63050E00305D33 /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC3627F21ADE2BA00EF2BE6 /* UIAlertController+Error.swift */; };
+		EB1E5D7F2E63050E00305D33 /* OnBoardingPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB197E2D9972DB009C977A /* OnBoardingPagerViewController.swift */; };
+		EB1E5D802E63050E00305D33 /* OnBoardingItemViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19792D9972DB009C977A /* OnBoardingItemViewProtocol.swift */; };
+		EB1E5D812E63050E00305D33 /* OnBoardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB197C2D9972DB009C977A /* OnBoardingItemView.swift */; };
+		EB1E5D822E63050E00305D33 /* OnBoardingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19782D9972DB009C977A /* OnBoardingBaseViewController.swift */; };
+		EB1E5D832E63050E00305D33 /* OnBoardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB197B2D9972DB009C977A /* OnBoardingButton.swift */; };
+		EB1E5D842E63050E00305D33 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF353FF81C5D870B00C1184C /* MenuItem.swift */; };
+		EB1E5D852E63050E00305D33 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D797E5298D946200738869 /* Contributor.swift */; };
+		EB1E5D862E63050E00305D33 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADD12129F33FBF00CE0560 /* Features.swift */; };
+		EB1E5D872E63050E00305D33 /* UIAlertController+Importing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18B61E1E2985F900F70067 /* UIAlertController+Importing.swift */; };
+		EB1E5D882E63050E00305D33 /* CheatBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586497129774ABD0081477E /* CheatBase.swift */; };
+		EB1E5D892E63050E00305D33 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD04F01D5E2C27002D450E /* GameCollectionViewController.swift */; };
+		EB1E5D8A2E63050E00305D33 /* SaveStatesStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4269D1D9C68E600DC913F /* SaveStatesStoryboardSegue.swift */; };
+		EB1E5D8B2E63050E00305D33 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5722DA0719A004FFACF /* TabBarViewController.swift */; };
+		EB1E5D8C2E63050E00305D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFA71DC1AAC406100EE9DD1 /* AppDelegate.swift */; };
+		EB1E5D8D2E63050E00305D33 /* DeepLinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF525EE71FF5F370004AA849 /* DeepLinkController.swift */; };
+		EB1E5D8E2E63050E00305D33 /* GridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942691E09BBD00051894B /* GridCollectionViewLayout.swift */; };
+		EB1E5D8F2E63050E00305D33 /* UIView+ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6424841F5CBDC900D6AB44 /* UIView+ParentViewController.swift */; };
+		EB1E5D902E63050E00305D33 /* ControllerSkinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04E6FE1DB8625C000F35D3 /* ControllerSkinsViewController.swift */; };
+		EB1E5D912E63050E00305D33 /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53415A4298C782A00FD67B1 /* ContributorsView.swift */; };
+		EB1E5D922E63050E00305D33 /* _GameCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942841E09BC8B0051894B /* _GameCollection.swift */; };
+		EB1E5D932E63050E00305D33 /* CheatTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34FA101CF1899D006624C7 /* CheatTextView.swift */; };
+		EB1E5D942E63050E00305D33 /* NotificationInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D432D946518004BFB1F /* NotificationInApp.swift */; };
+		EB1E5D952E63050E00305D33 /* CheatDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF27629884F8600F21ACF /* CheatDevice.swift */; };
+		EB1E5D962E63050E00305D33 /* HarmonyMetadataKey+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F45AC21AF57BA00EF9895 /* HarmonyMetadataKey+Keys.swift */; };
+		EB1E5D972E63050E00305D33 /* UIDevice+Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD1EF3F2336BD8800D197CF /* UIDevice+Processor.swift */; };
+		EB1E5D982E63050E00305D33 /* AppIconShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71CF861FE90006001F1613 /* AppIconShortcutsViewController.swift */; };
+		EB1E5D992E63050E00305D33 /* PreferredControllerSkinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5265A7F2D48489C0002C6CE /* PreferredControllerSkinsView.swift */; };
+		EB1E5D9A2E63050E00305D33 /* PreferredControllerSkinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DAD5C1D9F576000E752A7 /* PreferredControllerSkinsViewController.swift */; };
+		EB1E5D9B2E63050E00305D33 /* PopoverMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0229F1F5B577D0052D888 /* PopoverMenuButton.swift */; };
+		EB1E5D9C2E63050E00305D33 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BADD2D98490C007A25A6 /* LoginManager.swift */; };
+		EB1E5D9D2E63050E00305D33 /* ConnectionLinkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */; };
+		EB1E5D9E2E63050E00305D33 /* GamesDatabaseImportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BF31B1EB821A0008E83CD /* GamesDatabaseImportOption.swift */; };
+		EB1E5D9F2E63050E00305D33 /* _ManagedPatron.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA0F132CE3F5040015D134 /* _ManagedPatron.swift */; };
+		EB1E5DA02E63050E00305D33 /* Delta10ToDelta11.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D51D8EC72D49CA26002649C2 /* Delta10ToDelta11.xcmappingmodel */; };
+		EB1E5DA12E63050E00305D33 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFA4C081E8A24D600D87934 /* GameTableViewCell.swift */; };
+		EB1E5DA22E63050E00305D33 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC46221D5984A000AF2CC6 /* LaunchViewController.swift */; };
+		EB1E5DA32E63050E00305D33 /* CheatMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586496F297734280081477E /* CheatMetadata.swift */; };
+		EB1E5DA42E63050E00305D33 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19B62D997796009C977A /* UpdateViewController.swift */; };
+		EB1E5DA52E63050E00305D33 /* WFCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2CABF2D69660800FBA4E4 /* WFCManager.swift */; };
+		EB1E5DA62E63050E00305D33 /* InputCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DDD231F4F6C880088A21B /* InputCalloutView.swift */; };
+		EB1E5DA72E63050E00305D33 /* GridMenuViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D83D12E1A45E1006ED231 /* GridMenuViewControllerOld.swift */; };
+		EB1E5DA82E63050E00305D33 /* GameSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50CA1562D419E7100F54920 /* GameSettingsView.swift */; };
+		EB1E5DA92E63050E00305D33 /* GamesDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59426E1E09BC5D0051894B /* GamesDatabase.swift */; };
+		EB1E5DAA2E63050E00305D33 /* EditCheatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34FA061CF0F510006624C7 /* EditCheatViewController.swift */; };
+		EB1E5DAB2E63050E00305D33 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE76C32C2B59360086471B /* Keychain.swift */; };
+		EB1E5DAC2E63050E00305D33 /* Delta3ToDelta4.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = BF3D6C52220286750083E05A /* Delta3ToDelta4.xcmappingmodel */; };
+		EB1E5DAD2E63050E00305D33 /* ReviewSaveStatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1375A2A7D8F2600AB1372 /* ReviewSaveStatesViewController.swift */; };
+		EB1E5DAE2E63050E00305D33 /* _Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942831E09BC8B0051894B /* _Game.swift */; };
+		EB1E5DAF2E63050E00305D33 /* GameControllerInputMappingMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF56450C220239B800A8EA26 /* GameControllerInputMappingMigrationPolicy.swift */; };
+		EB1E5DB02E63050E00305D33 /* GameMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95E2761E4977BF0030E7AD /* GameMetadata.swift */; };
+		EB1E5DB12E63050E00305D33 /* GamesStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC461C1D59823500AF2CC6 /* GamesStoryboardSegue.swift */; };
+		EB1E5DB22E63050E00305D33 /* SaveStatesCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B98E51C97E32F00F6D57D /* SaveStatesCollectionHeaderView.swift */; };
+		EB1E5DB32E63050E00305D33 /* CheatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9B7381CEFCD34008629BB /* CheatsViewController.swift */; };
+		EB1E5DB42E63050E00305D33 /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A137662A7DB37200AB1372 /* GamePickerViewController.swift */; };
+		EB1E5DB52E63050E00305D33 /* CheatBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5864977297756CE0081477E /* CheatBaseView.swift */; };
+		EB1E5DB62E63050E00305D33 /* PausePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF353FFD1C5DA3C500C1184C /* PausePresentationController.swift */; };
+		EB1E5DB72E63050E00305D33 /* ManagedPatron.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA0F112CE3F4FB0015D134 /* ManagedPatron.swift */; };
+		EB1E5DB82E63050E00305D33 /* NSUserActivity+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E46CF2BED714F00780713 /* NSUserActivity+Delta.swift */; };
+		EB1E5DB92E63050E00305D33 /* AutoshrinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D83F92E1A5B77006ED231 /* AutoshrinkLabel.swift */; };
+		EB1E5DBA2E63050E00305D33 /* CheatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC464B1D5998D600AF2CC6 /* CheatTableViewCell.swift */; };
+		EB1E5DBB2E63050E00305D33 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6EB3DA2DBE303900EAC356 /* MenuCell.swift */; };
+		EB1E5DBC2E63050E00305D33 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4235B2BD9C24000093054 /* RoundedImageView.swift */; };
+		EB1E5DBD2E63050E00305D33 /* NSManagedObject+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942911E09BD1A0051894B /* NSManagedObject+Conveniences.swift */; };
+		EB1E5DBE2E63050E00305D33 /* TabBarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5F92DA07626004FFACF /* TabBarItemViewController.swift */; };
+		EB1E5DBF2E63050E00305D33 /* DatabaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB1C2D9781A500311D39 /* DatabaseModelProtocol.swift */; };
+		EB1E5DC02E63050E00305D33 /* PremiumSubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB1E2D9781A500311D39 /* PremiumSubscriptionModel.swift */; };
+		EB1E5DC12E63050E00305D33 /* EnvHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19CC2D997893009C977A /* EnvHelper.swift */; };
+		EB1E5DC22E63050E00305D33 /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19CF2D997893009C977A /* ServiceHelper.swift */; };
+		EB1E5DC32E63050E00305D33 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19D12D997893009C977A /* Services.swift */; };
+		EB1E5DC42E63050E00305D33 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB1F2D9781A500311D39 /* UserModel.swift */; };
+		EB1E5DC52E63050E00305D33 /* SplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19BB2D9977A0009C977A /* SplashService.swift */; };
+		EB1E5DC62E63050E00305D33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19BD2D9977A0009C977A /* ViewController.swift */; };
+		EB1E5DC72E63050E00305D33 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F45BE21AF676F00EF9895 /* Box.swift */; };
+		EB1E5DC82E63050E00305D33 /* UIColor+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7AE8091C2E8C7600B1B5BC /* UIColor+Delta.swift */; };
+		EB1E5DC92E63050E00305D33 /* PHPhotoLibrary+Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF7E30E29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift */; };
+		EB1E5DCA2E63050E00305D33 /* UILabel+FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF797A2C1C2D339F00F1A000 /* UILabel+FontSize.swift */; };
+		EB1E5DCB2E63050E00305D33 /* StatisticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA292DB92D8E00B6B1F4 /* StatisticsService.swift */; };
+		EB1E5DCC2E63050E00305D33 /* MedalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA2D2DB92D8E00B6B1F4 /* MedalsCollectionViewCell.swift */; };
+		EB1E5DCD2E63050E00305D33 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA262DB92D8E00B6B1F4 /* ChartModel.swift */; };
+		EB1E5DCE2E63050E00305D33 /* StatisticsUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA352DB92D8E00B6B1F4 /* StatisticsUserViewController.swift */; };
+		EB1E5DCF2E63050E00305D33 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA282DB92D8E00B6B1F4 /* StatisticsViewController.swift */; };
+		EB1E5DD02E63050E00305D33 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA2A2DB92D8E00B6B1F4 /* ChartCell.swift */; };
+		EB1E5DD12E63050E00305D33 /* ControllerInputsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF616A121F08184A0077F8B2 /* ControllerInputsViewController.swift */; };
+		EB1E5DD22E63050E00305D33 /* LoadControllerSkinImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942611E09BBB10051894B /* LoadControllerSkinImageOperation.swift */; };
+		EB1E5DD32E63050E00305D33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A98CE1284EF14B00E023E5 /* SceneDelegate.swift */; };
+		EB1E5DD42E63050E00305D33 /* UIImage+SymbolFallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE56E1823EB7BE00014FECD /* UIImage+SymbolFallback.swift */; };
+		EB1E5DD52E63050E00305D33 /* UseProfileMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAD92D9848AE007A25A6 /* UseProfileMenuItem.swift */; };
+		EB1E5DD62E63050E00305D33 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAD72D9848AE007A25A6 /* AlertModel.swift */; };
+		EB1E5DD72E63050E00305D33 /* HomeServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA2BAD82D9848AE007A25A6 /* HomeServiceModel.swift */; };
+		EB1E5DD82E63050E00305D33 /* GameViewController+ExperimentalToasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C992629F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift */; };
+		EB1E5DD92E63050E00305D33 /* String+Profanity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E12AEA2D011579000C7531 /* String+Profanity.swift */; };
+		EB1E5DDA2E63050E00305D33 /* _GameControllerInputMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EE5E81F7C5F860051AD6C /* _GameControllerInputMapping.swift */; };
+		EB1E5DDB2E63050E00305D33 /* _ControllerSkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942821E09BC8B0051894B /* _ControllerSkin.swift */; };
+		EB1E5DDC2E63050E00305D33 /* PremiumSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5CD2DA0738D004FFACF /* PremiumSubscriptionViewController.swift */; };
+		EB1E5DDD2E63050E00305D33 /* NewIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C62DA0738D004FFACF /* NewIconCell.swift */; };
+		EB1E5DDE2E63050E00305D33 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5D82DA0738D004FFACF /* UserProfileViewController.swift */; };
+		EB1E5DDF2E63050E00305D33 /* ColorPaletteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C52DA0738D004FFACF /* ColorPaletteCell.swift */; };
+		EB1E5DE02E63050E00305D33 /* UserProfileMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5DA2DA0738D004FFACF /* UserProfileMenuItemCell.swift */; };
+		EB1E5DE12E63050E00305D33 /* PremiumSinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C82DA0738D004FFACF /* PremiumSinglePageViewController.swift */; };
+		EB1E5DE22E63050E00305D33 /* ColorPaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C42DA0738D004FFACF /* ColorPaletteViewController.swift */; };
+		EB1E5DE32E63050E00305D33 /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5BF2DA0738D004FFACF /* NotificationListViewController.swift */; };
+		EB1E5DE42E63050E00305D33 /* PremiumDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5D02DA0738D004FFACF /* PremiumDataSource.swift */; };
+		EB1E5DE52E63050E00305D33 /* PremiumPointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5CB2DA0738D004FFACF /* PremiumPointCell.swift */; };
+		EB1E5DE62E63050E00305D33 /* PremiumSubscriptionPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5CA2DA0738D004FFACF /* PremiumSubscriptionPagerViewController.swift */; };
+		EB1E5DE72E63050E00305D33 /* PremiumServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5DE2DA0738D004FFACF /* PremiumServices.swift */; };
+		EB1E5DE82E63050E00305D33 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5DD2DA0738D004FFACF /* UserService.swift */; };
+		EB1E5DE92E63050E00305D33 /* NotificationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5C12DA0738D004FFACF /* NotificationListCell.swift */; };
+		EB1E5DEA2E63050E00305D33 /* GamesDatabaseBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95E2781E4982A10030E7AD /* GamesDatabaseBrowserViewController.swift */; };
+		EB1E5DEB2E63050E00305D33 /* _PatreonAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE76BC2C2B53FC0086471B /* _PatreonAccount.swift */; };
+		EB1E5DEC2E63050E00305D33 /* ProcessInfo+JIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D524F4A2273DE9C000D500B2 /* ProcessInfo+JIT.swift */; };
+		EB1E5DED2E63050E00305D33 /* Delta5ToDelta6.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = BFDCA1E8244F7E1000B8FBDB /* Delta5ToDelta6.xcmappingmodel */; };
+		EB1E5DEE2E63050E00305D33 /* ExperimentalFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A817B229DF6C6C00904AFE /* ExperimentalFeatures.swift */; };
+		EB1E5DEF2E63050E00305D33 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
+		EB1E5DF02E63050E00305D33 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
+		EB1E5DF12E63050E00305D33 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
+		EB1E5DF22E63050E00305D33 /* SaveStatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3540041C5DA70400C1184C /* SaveStatesViewController.swift */; };
+		EB1E5DF32E63050E00305D33 /* GameControllerInputMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EE5EA1F7C5F8F0051AD6C /* GameControllerInputMapping.swift */; };
+		EB1E5DF42E63050E00305D33 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */; };
+		EB1E5DF52E63050E00305D33 /* BadgedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A333321A484A000A42FD4 /* BadgedTableViewCell.swift */; };
+		EB1E5DF62E63050E00305D33 /* ColorPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB252D97828D00311D39 /* ColorPickerManager.swift */; };
+		EB1E5DF72E63050E00305D33 /* LocalGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB62F2DA1865A004FFACF /* LocalGameProtocol.swift */; };
+		EB1E5DF82E63050E00305D33 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB262D97828D00311D39 /* SharingManager.swift */; };
+		EB1E5DF92E63050E00305D33 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB242D97828D00311D39 /* AppStoreReviewManager.swift */; };
+		EB1E5DFA2E63050E00305D33 /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
+		EB1E5DFB2E63050E00305D33 /* PauseStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3540011C5DA3D500C1184C /* PauseStoryboardSegue.swift */; };
+		EB1E5DFC2E63050E00305D33 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF107EC31BF413F000E0C32C /* GamesViewController.swift */; };
+		EB1E5DFD2E63050E00305D33 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D3D2D9462CA004BFB1F /* DeviceManager.swift */; };
+		EB1E5DFE2E63050E00305D33 /* Lu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F24AD62D64B452002F939F /* Lu.swift */; };
+		EB1E5DFF2E63050E00305D33 /* Delta2ToDelta3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = BF3D6C502202865F0083E05A /* Delta2ToDelta3.xcmappingmodel */; };
+		EB1E5E002E63050E00305D33 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59426D1E09BC5D0051894B /* DatabaseManager.swift */; };
+		EB1E5E012E63050E00305D33 /* OSLog+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCCC32A85765900E22131 /* OSLog+Delta.swift */; };
+		EB1E5E022E63050E00305D33 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4828851F9028F500028B97 /* System.swift */; };
+		EB1E5E032E63050E00305D33 /* PreviewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13A7551D5D29B0000BB055 /* PreviewGameViewController.swift */; };
+		EB1E5E042E63050E00305D33 /* ControllerSkin+Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6866161DCAC8B900BF2D06 /* ControllerSkin+Configuring.swift */; };
+		EB1E5E052E63050E00305D33 /* PreviousHarmony.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF713C0622499ED3004A1A2B /* PreviousHarmony.xcdatamodeld */; };
+		EB1E5E062E63050E00305D33 /* ControllerSkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942781E09BC830051894B /* ControllerSkin.swift */; };
+		EB1E5E072E63050E00305D33 /* SkinDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A287242C23A1AC009883C3 /* SkinDebugging.swift */; };
+		EB1E5E082E63050E00305D33 /* AttributedHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56F7ABB2B05988700490ACB /* AttributedHeaderFooterView.swift */; };
+		EB1E5E092E63050E00305D33 /* UIViewControllerContextTransitioning+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEA67D1D56FF640061A534 /* UIViewControllerContextTransitioning+Conveniences.swift */; };
+		EB1E5E0A2E63050E00305D33 /* LocalDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55917D92B51D097007B7DC0 /* LocalDeviceController.swift */; };
+		EB1E5E0B2E63050E00305D33 /* ControllersSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11734F1DA32CF600047DF8 /* ControllersSettingsViewController.swift */; };
+		EB1E5E0C2E63050E00305D33 /* GamesPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC461B1D59823500AF2CC6 /* GamesPresentationController.swift */; };
+		EB1E5E0D2E63050E00305D33 /* ControllerSkinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF99A5961DC2F9C400468E9E /* ControllerSkinTableViewCell.swift */; };
+		EB1E5E0E2E63050E00305D33 /* MelonDSCoreSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE9907F24451E15006409A7 /* MelonDSCoreSettingsViewController.swift */; };
+		EB1E5E0F2E63050E00305D33 /* _Cheat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942811E09BC8B0051894B /* _Cheat.swift */; };
+		EB1E5E102E63050E00305D33 /* SystemSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB7B32DB162E4007C5BB4 /* SystemSelection.swift */; };
+		EB1E5E112E63050E00305D33 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E7F431B9A650B00AE44F8 /* SettingsViewController.swift */; };
+		EB1E5E122E63050E00305D33 /* PopoverMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CA9351F5F651900499FDD /* PopoverMenuController.swift */; };
+		EB1E5E132E63050E00305D33 /* GameView+AirPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D39E782AF2D624004BE3F7 /* GameView+AirPlay.swift */; };
+		EB1E5E142E63050E00305D33 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB196F2D997269009C977A /* Loader.swift */; };
+		EB1E5E152E63050E00305D33 /* SaveStateMigrationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEF24F21F7DD4FB00454C62 /* SaveStateMigrationPolicy.swift */; };
+		EB1E5E162E63050E00305D33 /* GameSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = D5265A7D2D4845C90002C6CE /* GameSetting.m */; };
+		EB1E5E172E63050E00305D33 /* NSFetchedResultsController+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5942901E09BD1A0051894B /* NSFetchedResultsController+Conveniences.m */; };
+		EB1E5E182E63050E00305D33 /* StorageLinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB19B42D9976F2009C977A /* StorageLinksModel.swift */; };
+		EB1E5E192E63050E00305D33 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4828871F90290F00028B97 /* Action.swift */; };
+		EB1E5E1A2E63050E00305D33 /* PhotoLibraryImportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BF3261EB87EB8008E83CD /* PhotoLibraryImportOption.swift */; };
+		EB1E5E1B2E63050E00305D33 /* LoadImageURLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5942631E09BBB10051894B /* LoadImageURLOperation.swift */; };
+		EB1E5E1C2E63050E00305D33 /* GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE78822BEAAD6100ED25DC /* GameSceneDelegate.swift */; };
+		EB1E5E1D2E63050E00305D33 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF353FF11C5D7FB000C1184C /* PauseViewController.swift */; };
+		EB1E5E1E2E63050E00305D33 /* SystemBIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00BEA525B758AA00C8607D /* SystemBIOS.swift */; };
+		EB1E5E1F2E63050E00305D33 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF696B7F1D9B2B02009639E0 /* Theme.swift */; };
+		EB1E5E202E63050E00305D33 /* Delta7ToDelta8.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = D59B50B62C06666A00FDC53A /* Delta7ToDelta8.xcmappingmodel */; };
+		EB1E5E212E63050E00305D33 /* GridMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7AE8041C2E858400B1B5BC /* GridMenuViewController.swift */; };
+		EB1E5E222E63050E00305D33 /* ClipboardImportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BF3191EB82146008E83CD /* ClipboardImportOption.swift */; };
+		EB1E5E232E63050E00305D33 /* OnlineMultiplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54529CD2D0CF41100E6EBDD /* OnlineMultiplayer.swift */; };
+		EB1E5E242E63050E00305D33 /* GameCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59427A1E09BC830051894B /* GameCollection.swift */; };
+		EB1E5E262E63050E00305D33 /* libGemBoyFeatures.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D7C1F129E60DFF00663793 /* libGemBoyFeatures.a */; };
+		EB1E5E272E63050E00305D33 /* libCircleBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5FD2DA0799D004FFACF /* libCircleBar.a */; };
+		EB1E5E282E63050E00305D33 /* libReachabilitySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */; };
+		EB1E5E292E63050E00305D33 /* libAlamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19EF2D9985CF009C977A /* libAlamofire.a */; };
+		EB1E5E2A2E63050E00305D33 /* libCollectionViewPagingLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19ED2D9985BB009C977A /* libCollectionViewPagingLayout.a */; };
+		EB1E5E2B2E63050E00305D33 /* libKingfisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19742D99727D009C977A /* libKingfisher.a */; };
+		EB1E5E2C2E63050E00305D33 /* liblottie-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBB19762D99727D009C977A /* liblottie-ios.a */; };
+		EB1E5E2D2E63050E00305D33 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
+		EB1E5E2E2E63050E00305D33 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D1D2E63050E00305D33 /* GoogleSignIn */; };
+		EB1E5E2F2E63050E00305D33 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69FBA723E3967B0051BEEA /* libz.tbd */; };
+		EB1E5E302E63050E00305D33 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52CB8C72CE2B7C800B04458 /* StoreKit.framework */; };
+		EB1E5E322E63050E00305D33 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69FBA923E399AA0051BEEA /* CoreMotion.framework */; };
+		EB1E5E332E63050E00305D33 /* libVBA-M.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69FBA123E375A20051BEEA /* libVBA-M.a */; };
+		EB1E5E342E63050E00305D33 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D132E63050E00305D33 /* FirebaseAnalytics */; };
+		EB1E5E352E63050E00305D33 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D162E63050E00305D33 /* FirebaseCore */; };
+		EB1E5E362E63050E00305D33 /* libMupen64Plus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF04523E3D3A600931B96 /* libMupen64Plus.a */; };
+		EB1E5E372E63050E00305D33 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D0F2E63050E00305D33 /* KeychainAccess */; };
+		EB1E5E382E63050E00305D33 /* Systems.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6E70C225D22F7600E41CD1 /* Systems.framework */; };
+		EB1E5E392E63050E00305D33 /* libNestopia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69FBC823E3A8380051BEEA /* libNestopia.a */; };
+		EB1E5E3A2E63050E00305D33 /* ShowTouches in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D112E63050E00305D33 /* ShowTouches */; };
+		EB1E5E3B2E63050E00305D33 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D152E63050E00305D33 /* FirebaseAuth */; };
+		EB1E5E3C2E63050E00305D33 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D1A2E63050E00305D33 /* GoogleMobileAds */; };
+		EB1E5E3D2E63050E00305D33 /* libGambatte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF03D23E3C0F000931B96 /* libGambatte.a */; };
+		EB1E5E3E2E63050E00305D33 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D1F2E63050E00305D33 /* GoogleSignInSwift */; };
+		EB1E5E3F2E63050E00305D33 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D1C2E63050E00305D33 /* FirebaseStorage */; };
+		EB1E5E402E63050E00305D33 /* libSnes9x.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDF03623E3BB2600931B96 /* libSnes9x.a */; };
+		EB1E5E412E63050E00305D33 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D172E63050E00305D33 /* FirebaseCrashlytics */; };
+		EB1E5E432E63050E00305D33 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D192E63050E00305D33 /* FirebaseMessaging */; };
+		EB1E5E442E63050E00305D33 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EB1E5D182E63050E00305D33 /* FirebaseFirestore */; };
+		EB1E5E462E63050E00305D33 /* Systems.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF6E70C225D22F7600E41CD1 /* Systems.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB1E5E482E63050E00305D33 /* cheatbase.zip in Resources */ = {isa = PBXBuildFile; fileRef = D5D797E7298DC9E200738869 /* cheatbase.zip */; };
+		EB1E5E492E63050E00305D33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB7D1A452D9AE1DA004B4D94 /* InfoPlist.strings */; };
+		EB1E5E4A2E63050E00305D33 /* OnBoardingPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB197F2D9972DB009C977A /* OnBoardingPages.storyboard */; };
+		EB1E5E4B2E63050E00305D33 /* RankingStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7AD2DB1615A007C5BB4 /* RankingStarView.xib */; };
+		EB1E5E4D2E63050E00305D33 /* Update.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19B72D997796009C977A /* Update.storyboard */; };
+		EB1E5E4E2E63050E00305D33 /* StatisticsUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */; };
+		EB1E5E4F2E63050E00305D33 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */; };
+		EB1E5E502E63050E00305D33 /* Profanity.txt in Resources */ = {isa = PBXBuildFile; fileRef = D5E12AEC2D01163A000C7531 /* Profanity.txt */; };
+		EB1E5E512E63050E00305D33 /* dg__DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */; };
+		EB1E5E522E63050E00305D33 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19C62D9977B4009C977A /* Login.storyboard */; };
+		EB1E5E532E63050E00305D33 /* openvgdb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BF02D5D91DDEBB3000A5E131 /* openvgdb.sqlite */; };
+		EB1E5E542E63050E00305D33 /* Contributors.plist in Resources */ = {isa = PBXBuildFile; fileRef = D53415A6298C78BC00FD67B1 /* Contributors.plist */; };
+		EB1E5E552E63050E00305D33 /* GothamRnd-MedItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19602D9971A8009C977A /* GothamRnd-MedItal.otf */; };
+		EB1E5E562E63050E00305D33 /* PremiumSubscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5CE2DA0738D004FFACF /* PremiumSubscription.storyboard */; };
+		EB1E5E572E63050E00305D33 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5D92DA0738D004FFACF /* UserProfile.storyboard */; };
+		EB1E5E582E63050E00305D33 /* NotificationList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C02DA0738D004FFACF /* NotificationList.storyboard */; };
+		EB1E5E592E63050E00305D33 /* ColorPalette.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C32DA0738D004FFACF /* ColorPalette.storyboard */; };
+		EB1E5E5A2E63050E00305D33 /* PremiumSinglePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5C92DA0738D004FFACF /* PremiumSinglePage.storyboard */; };
+		EB1E5E5B2E63050E00305D33 /* SystemSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB7B52DB163E5007C5BB4 /* SystemSelection.xib */; };
+		EB1E5E5C2E63050E00305D33 /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195D2D9971A8009C977A /* GothamRnd-BookItal.otf */; };
+		EB1E5E5D2E63050E00305D33 /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195C2D9971A8009C977A /* GothamRnd-Book.otf */; };
+		EB1E5E5E2E63050E00305D33 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5742DA0719A004FFACF /* Dashboard.storyboard */; };
+		EB1E5E5F2E63050E00305D33 /* loaderPink.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19632D9971A8009C977A /* loaderPink.json */; };
+		EB1E5E602E63050E00305D33 /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195E2D9971A8009C977A /* GothamRnd-Light.otf */; };
+		EB1E5E612E63050E00305D33 /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195A2D9971A8009C977A /* GothamRnd-Bold.otf */; };
+		EB1E5E622E63050E00305D33 /* GothamRnd-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195B2D9971A8009C977A /* GothamRnd-BoldItal.otf */; };
+		EB1E5E632E63050E00305D33 /* GothamRnd-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB195F2D9971A8009C977A /* GothamRnd-LightItal.otf */; };
+		EB1E5E642E63050E00305D33 /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19702D997269009C977A /* Loader.xib */; };
+		EB1E5E652E63050E00305D33 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19BF2D9977A0009C977A /* Splash.storyboard */; };
+		EB1E5E662E63050E00305D33 /* TutorialLong.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19DE2D9982C6009C977A /* TutorialLong.storyboard */; };
+		EB1E5E672E63050E00305D33 /* TutorialSplit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19DA2D9982C6009C977A /* TutorialSplit.storyboard */; };
+		EB1E5E682E63050E00305D33 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19E32D9982C6009C977A /* OnBoarding.storyboard */; };
+		EB1E5E692E63050E00305D33 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */; };
+		EB1E5E6A2E63050E00305D33 /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19612D9971A8009C977A /* GothamRnd-Medium.otf */; };
+		EB1E5E6B2E63050E00305D33 /* dg_GBA.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */; };
+		EB1E5E6C2E63050E00305D33 /* dg_N64.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */; };
+		EB1E5E6D2E63050E00305D33 /* efupdate.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A082D9AAA58009C977A /* efupdate.json */; };
+		EB1E5E6E2E63050E00305D33 /* MenuSlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD680302E11476F00A92584 /* MenuSlider.storyboard */; };
+		EB1E5E6F2E63050E00305D33 /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF71CF891FE904B1001F1613 /* GameTableViewCell.xib */; };
+		EB1E5E702E63050E00305D33 /* GamesDatabase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4122DBED21C00EAC356 /* GamesDatabase.storyboard */; };
+		EB1E5E712E63050E00305D33 /* best_games.json in Resources */ = {isa = PBXBuildFile; fileRef = EB9D840A2E1AD17E006ED231 /* best_games.json */; };
+		EB1E5E722E63050E00305D33 /* PausePresentationControllerContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4142DBED21C00EAC356 /* PausePresentationControllerContentView.xib */; };
+		EB1E5E732E63050E00305D33 /* PauseMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4132DBED21C00EAC356 /* PauseMenu.storyboard */; };
+		EB1E5E742E63050E00305D33 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4152DBED21C00EAC356 /* Settings.storyboard */; };
+		EB1E5E752E63050E00305D33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0D542D947537004BFB1F /* Localizable.strings */; };
+		EB1E5E762E63050E00305D33 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BA9F2D984792007A25A6 /* AlertView.xib */; };
+		EB1E5E772E63050E00305D33 /* LaunchScreenStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */; };
+		EB1E5E792E63050E00305D33 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */; };
+		EB1E5E7A2E63050E00305D33 /* UserProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB82D984792007A25A6 /* UserProfile.xib */; };
+		EB1E5E7B2E63050E00305D33 /* dg_SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */; };
+		EB1E5E7C2E63050E00305D33 /* GameDownload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */; };
+		EB1E5E7D2E63050E00305D33 /* dg_DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD932E5CB051002CBE49 /* dg_DS.deltaskin */; };
+		EB1E5E7E2E63050E00305D33 /* SwipableControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB22D984792007A25A6 /* SwipableControllerCell.xib */; };
+		EB1E5E7F2E63050E00305D33 /* dg_GBC.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */; };
+		EB1E5E802E63050E00305D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4022DBECB9200EAC356 /* Main.storyboard */; };
+		EB1E5E812E63050E00305D33 /* StartGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */; };
+		EB1E5E822E63050E00305D33 /* SwipableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB52D984792007A25A6 /* SwipableController.xib */; };
+		EB1E5E902E63072800305D33 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D412D946451004BFB1F /* PushNotification.swift */; };
+		EB1E5E912E63072800305D33 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D202D946055004BFB1F /* Date.swift */; };
+		EB1E5E922E63072800305D33 /* StringExtensionCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D1A2D946055004BFB1F /* StringExtensionCommon.swift */; };
+		EB1E5E932E63072800305D33 /* NotificationInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D432D946518004BFB1F /* NotificationInApp.swift */; };
+		EB1E5E942E63072800305D33 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D182D946055004BFB1F /* Dictionary.swift */; };
+		EB1E5E952E63072800305D33 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E0D3D2D9462CA004BFB1F /* DeviceManager.swift */; };
+		EB1E5EA02E630EA100305D33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1E5E9F2E630EA100305D33 /* GoogleService-Info.plist */; };
+		EB1E5ECA2E63115600305D33 /* GoogleService-Info_gemboy.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1E5EC92E63115600305D33 /* GoogleService-Info_gemboy.plist */; };
+		EB1E5ECE2E6317B600305D33 /* Icons 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1E5ECB2E6317B600305D33 /* Icons 2.xcassets */; };
+		EB1E5EE62E63230900305D33 /* NotificationNew.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EB1E5E9B2E63072800305D33 /* NotificationNew.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EB1E5EEC2E64A54C00305D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6BB2451BB73FE800CCF94A /* Assets.xcassets */; };
 		EB21EA382DB92D8E00B6B1F4 /* StatisticsUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */; };
 		EB21EA392DB92D8E00B6B1F4 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */; };
 		EB21EA3B2DB92D8E00B6B1F4 /* StatisticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA292DB92D8E00B6B1F4 /* StatisticsService.swift */; };
@@ -244,7 +602,6 @@
 		EB21EA472DB937F700B6B1F4 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */; };
 		EB21EA492DB93F0E00B6B1F4 /* StartGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */; };
 		EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */; };
-		EB3EB55C2DA00793004FFACF /* GoogleService-Info_gemboy.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55B2DA00793004FFACF /* GoogleService-Info_gemboy.plist */; };
 		EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */; };
 		EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */; };
 		EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */; };
@@ -328,7 +685,6 @@
 		EB9D83D22E1A45E1006ED231 /* GridMenuViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D83D12E1A45E1006ED231 /* GridMenuViewControllerOld.swift */; };
 		EB9D83FA2E1A5B7D006ED231 /* AutoshrinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D83F92E1A5B77006ED231 /* AutoshrinkLabel.swift */; };
 		EB9D840B2E1AD17E006ED231 /* best_games.json in Resources */ = {isa = PBXBuildFile; fileRef = EB9D840A2E1AD17E006ED231 /* best_games.json */; };
-		EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		EBA2BABF2D984792007A25A6 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BA9F2D984792007A25A6 /* AlertView.xib */; };
 		EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */; };
 		EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB82D984792007A25A6 /* UserProfile.xib */; };
@@ -429,6 +785,27 @@
 			remoteGlobalIDString = D5D7C1F029E60DFF00663793;
 			remoteInfo = DeltaFeatures;
 		};
+		EB1E5D0A2E63050E00305D33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFFA71CF1AAC406100EE9DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF6E70B925D2187800E41CD1;
+			remoteInfo = Systems;
+		};
+		EB1E5D0C2E63050E00305D33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFFA71CF1AAC406100EE9DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5D7C1F029E60DFF00663793;
+			remoteInfo = DeltaFeatures;
+		};
+		EB1E5EE72E63230900305D33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFFA71CF1AAC406100EE9DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB1E5E8E2E63072800305D33;
+			remoteInfo = NotificationNew;
+		};
 		EB8E0D662D947655004BFB1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFFA71CF1AAC406100EE9DD1 /* Project object */;
@@ -459,6 +836,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB1E5E452E63050E00305D33 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EB1E5E462E63050E00305D33 /* Systems.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1E5EE92E63230900305D33 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EB1E5EE62E63230900305D33 /* NotificationNew.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB8E0D6D2D947655004BFB1F /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,12 +872,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A0EDF80737AC4DBFA8CCA32 /* libPods-GemBoyShared-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyShared-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC472D0CE8F1DABCC4D91CD /* Pods-GemBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoy/Pods-GemBoy.debug.xcconfig"; sourceTree = "<group>"; };
 		22506DA00971C4300AF90A35 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31D33FD6D50EFE1EA34FABF1 /* Pods-GemBoyShared-GemBoyNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoyNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoyNew/Pods-GemBoyShared-GemBoyNew.release.xcconfig"; sourceTree = "<group>"; };
+		43E146C3105B0305E8B73650 /* libPods-GemBoyShared-GemBoyNew.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyShared-GemBoyNew.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9C7C16BC517D412965A72B /* Pods-GemBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoy/Pods-GemBoy.release.xcconfig"; sourceTree = "<group>"; };
 		8ECE6641DE30D01EA30FE7F6 /* Pods-DeltaPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeltaPreviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeltaPreviews/Pods-DeltaPreviews.release.xcconfig"; sourceTree = "<group>"; };
 		A01281C7023C0041B25963BE /* Pods-DeltaPreviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeltaPreviews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeltaPreviews/Pods-DeltaPreviews.debug.xcconfig"; sourceTree = "<group>"; };
 		A19FF50F55441BC2B2248241 /* Pods-Delta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.release.xcconfig"; sourceTree = "<group>"; };
+		A35CB1BEA015024306651634 /* Pods-GemBoyShared-GemBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy.release.xcconfig"; sourceTree = "<group>"; };
 		AC1C990F29F8B8C30020E6E4 /* ToastNotificationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastNotificationOptions.swift; sourceTree = "<group>"; };
 		AC1C992629F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+ExperimentalToasts.swift"; sourceTree = "<group>"; };
 		ACF7E30E29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Screenshots.swift"; sourceTree = "<group>"; };
@@ -631,6 +1034,7 @@
 		C1C7ED01297432ED7A249A12 /* Pods-GemBoyPreviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.debug.xcconfig"; sourceTree = "<group>"; };
 		C6F24AD62D64B452002F939F /* Lu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lu.swift; sourceTree = "<group>"; };
 		C786AF1D2DDB6223BE2063CC /* Pods-Delta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.debug.xcconfig"; sourceTree = "<group>"; };
+		D19610C5D9B69219F0AEB398 /* Pods-GemBoyShared-GemBoyNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoyNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoyNew/Pods-GemBoyShared-GemBoyNew.debug.xcconfig"; sourceTree = "<group>"; };
 		D5011C47281B6E8B00A0760B /* CharacterSet+Filename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Filename.swift"; sourceTree = "<group>"; };
 		D50CA1562D419E7100F54920 /* GameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsView.swift; sourceTree = "<group>"; };
 		D510BC742A5CA9F500450CC0 /* Delta6ToDelta7.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Delta6ToDelta7.xcmappingmodel; sourceTree = "<group>"; };
@@ -710,9 +1114,15 @@
 		D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneSession+Delta.swift"; sourceTree = "<group>"; };
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		DC4D89BE21D4092119127BDC /* Pods-GemBoyShared-GemBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy.debug.xcconfig"; sourceTree = "<group>"; };
 		EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLinkState.swift; sourceTree = "<group>"; };
 		EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__DS.deltaskin; sourceTree = "<group>"; };
 		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB1E5E8B2E63050E00305D33 /* Darlion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darlion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1E5E9B2E63072800305D33 /* NotificationNew.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationNew.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1E5E9F2E630EA100305D33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB1E5EC92E63115600305D33 /* GoogleService-Info_gemboy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info_gemboy.plist"; sourceTree = "<group>"; };
+		EB1E5ECB2E6317B600305D33 /* Icons 2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Icons 2.xcassets"; sourceTree = "<group>"; };
 		EB21EA262DB92D8E00B6B1F4 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		EB21EA282DB92D8E00B6B1F4 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		EB21EA292DB92D8E00B6B1F4 /* StatisticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsService.swift; sourceTree = "<group>"; };
@@ -725,7 +1135,6 @@
 		EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameCell.swift; sourceTree = "<group>"; };
 		EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReachabilitySwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB3EB55B2DA00793004FFACF /* GoogleService-Info_gemboy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info_gemboy.plist"; sourceTree = "<group>"; };
 		EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBA.deltaskin; sourceTree = "<group>"; };
 		EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_N64.deltaskin; sourceTree = "<group>"; };
 		EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBC.deltaskin; sourceTree = "<group>"; };
@@ -781,7 +1190,6 @@
 		EB6EB4172DBED21C00EAC356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PauseMenu.storyboard; sourceTree = "<group>"; };
 		EB6EB4182DBED21C00EAC356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		EB6EB4192DBED21C00EAC356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GamesDatabase.storyboard; sourceTree = "<group>"; };
-		EB6EB41E2DBED3FA00EAC356 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB7CB6952D96949400CA27FC /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		EB7D1A432D9AE1DA004B4D94 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB7D1A442D9AE1DA004B4D94 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -913,11 +1321,17 @@
 		EBD8B22B2DE23E39008A2AEA /* GBCDeltaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCDeltaCore.h; sourceTree = "<group>"; };
 		EBD8B22C2DE23E39008A2AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBD8B22D2DE23E39008A2AEA /* Standard.deltamapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.deltamapping; sourceTree = "<group>"; };
-		EC5507B25B552431548D97A6 /* libPods-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EB1E5E9C2E63072800305D33 /* Exceptions for "Notification" folder in "NotificationNew" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EB1E5E8E2E63072800305D33 /* NotificationNew */;
+		};
 		EB8E0D692D947655004BFB1F /* Exceptions for "Notification" folder in "Notification" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -937,6 +1351,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				EB8E0D692D947655004BFB1F /* Exceptions for "Notification" folder in "Notification" target */,
+				EB1E5E9C2E63072800305D33 /* Exceptions for "Notification" folder in "NotificationNew" target */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -959,7 +1374,6 @@
 				EBBB19F52D998826009C977A /* GoogleSignIn in Frameworks */,
 				BF69FBA823E396860051BEEA /* libz.tbd in Frameworks */,
 				D52CB8C82CE2B7C800B04458 /* StoreKit.framework in Frameworks */,
-				EBA2BA8B2D9804D4007A25A6 /* (null) in Frameworks */,
 				BF69FBAA23E399AA0051BEEA /* CoreMotion.framework in Frameworks */,
 				BF69FBA223E375A20051BEEA /* libVBA-M.a in Frameworks */,
 				EBB0FA942D96A16800CA8EB1 /* FirebaseAnalytics in Frameworks */,
@@ -976,9 +1390,9 @@
 				EBBB19D92D997C99009C977A /* FirebaseStorage in Frameworks */,
 				BFFDF03723E3BB2600931B96 /* libSnes9x.a in Frameworks */,
 				EBB0FA9A2D96A16800CA8EB1 /* FirebaseCrashlytics in Frameworks */,
-				05EF6BDEE6C1AC8A92642B10 /* libPods-GemBoy.a in Frameworks */,
 				EBB0FA9E2D96A16800CA8EB1 /* FirebaseMessaging in Frameworks */,
 				EBB0FA9C2D96A16800CA8EB1 /* FirebaseFirestore in Frameworks */,
+				4D6394A9A0424E127DAC20D4 /* libPods-GemBoyShared-GemBoy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +1406,50 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D5D7C1EE29E60DFF00663793 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1E5E252E63050E00305D33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1E5E262E63050E00305D33 /* libGemBoyFeatures.a in Frameworks */,
+				EB1E5E272E63050E00305D33 /* libCircleBar.a in Frameworks */,
+				EB1E5E282E63050E00305D33 /* libReachabilitySwift.a in Frameworks */,
+				EB1E5E292E63050E00305D33 /* libAlamofire.a in Frameworks */,
+				EB1E5E2A2E63050E00305D33 /* libCollectionViewPagingLayout.a in Frameworks */,
+				EB1E5E2B2E63050E00305D33 /* libKingfisher.a in Frameworks */,
+				EB1E5E2C2E63050E00305D33 /* liblottie-ios.a in Frameworks */,
+				EB1E5E2D2E63050E00305D33 /* libresolv.tbd in Frameworks */,
+				EB1E5E2E2E63050E00305D33 /* GoogleSignIn in Frameworks */,
+				EB1E5E2F2E63050E00305D33 /* libz.tbd in Frameworks */,
+				EB1E5E302E63050E00305D33 /* StoreKit.framework in Frameworks */,
+				EB1E5E322E63050E00305D33 /* CoreMotion.framework in Frameworks */,
+				EB1E5E332E63050E00305D33 /* libVBA-M.a in Frameworks */,
+				EB1E5E342E63050E00305D33 /* FirebaseAnalytics in Frameworks */,
+				EB1E5E352E63050E00305D33 /* FirebaseCore in Frameworks */,
+				EB1E5E362E63050E00305D33 /* libMupen64Plus.a in Frameworks */,
+				EB1E5E372E63050E00305D33 /* KeychainAccess in Frameworks */,
+				EB1E5E382E63050E00305D33 /* Systems.framework in Frameworks */,
+				EB1E5E392E63050E00305D33 /* libNestopia.a in Frameworks */,
+				EB1E5E3A2E63050E00305D33 /* ShowTouches in Frameworks */,
+				EB1E5E3B2E63050E00305D33 /* FirebaseAuth in Frameworks */,
+				EB1E5E3C2E63050E00305D33 /* GoogleMobileAds in Frameworks */,
+				EB1E5E3D2E63050E00305D33 /* libGambatte.a in Frameworks */,
+				EB1E5E3E2E63050E00305D33 /* GoogleSignInSwift in Frameworks */,
+				EB1E5E3F2E63050E00305D33 /* FirebaseStorage in Frameworks */,
+				EB1E5E402E63050E00305D33 /* libSnes9x.a in Frameworks */,
+				EB1E5E412E63050E00305D33 /* FirebaseCrashlytics in Frameworks */,
+				EB1E5E432E63050E00305D33 /* FirebaseMessaging in Frameworks */,
+				EB1E5E442E63050E00305D33 /* FirebaseFirestore in Frameworks */,
+				97949505A6EFA9683125D107 /* libPods-GemBoyShared-GemBoyNew.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1E5E962E63072800305D33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1345,8 +1803,9 @@
 				BF9F4FCE1AAD7B87004C9500 /* DeltaCore.framework */,
 				BFC134E01AAD82460087AD7B /* SNESDeltaCore.framework */,
 				22506DA00971C4300AF90A35 /* Pods.framework */,
-				EC5507B25B552431548D97A6 /* libPods-GemBoy.a */,
 				B4513EA4A379492D8F7CE9A8 /* libPods-GemBoyPreviews.a */,
+				0A0EDF80737AC4DBFA8CCA32 /* libPods-GemBoyShared-GemBoy.a */,
+				43E146C3105B0305E8B73650 /* libPods-GemBoyShared-GemBoyNew.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1411,6 +1870,7 @@
 				EBBB19652D9971A8009C977A /* Json */,
 				BF6BB2451BB73FE800CCF94A /* Assets.xcassets */,
 				D5AE76C52C2B7F3D0086471B /* Icons.xcassets */,
+				EB1E5ECB2E6317B600305D33 /* Icons 2.xcassets */,
 				BF02D5D91DDEBB3000A5E131 /* openvgdb.sqlite */,
 				D5D797E7298DC9E200738869 /* cheatbase.zip */,
 				D53415A6298C78BC00FD67B1 /* Contributors.plist */,
@@ -1468,6 +1928,8 @@
 				D5D7C1F129E60DFF00663793 /* libGemBoyFeatures.a */,
 				D539102F29E88B6B0006B350 /* GemBoyPreviews.framework */,
 				EB8E0D612D947655004BFB1F /* Notification.appex */,
+				EB1E5E8B2E63050E00305D33 /* Darlion.app */,
+				EB1E5E9B2E63072800305D33 /* NotificationNew.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1505,8 +1967,6 @@
 				BF696B7E1D9B2AE6009639E0 /* Theming */,
 				BF090CEE1B490C1A00DCAB45 /* Extensions */,
 				BFFA71DA1AAC406100EE9DD1 /* Supporting Files */,
-				EB3EB55B2DA00793004FFACF /* GoogleService-Info_gemboy.plist */,
-				EB6EB41E2DBED3FA00EAC356 /* GoogleService-Info.plist */,
 			);
 			path = GemBoy;
 			sourceTree = "<group>";
@@ -1517,6 +1977,8 @@
 				BF090CF11B490D8300DCAB45 /* Delta-Bridging-Header.h */,
 				BF27CC861BC9E3C600A20D89 /* Delta.entitlements */,
 				BFFA71DB1AAC406100EE9DD1 /* Info.plist */,
+				EB1E5E9F2E630EA100305D33 /* GoogleService-Info.plist */,
+				EB1E5EC92E63115600305D33 /* GoogleService-Info_gemboy.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -2373,6 +2835,10 @@
 				5E9C7C16BC517D412965A72B /* Pods-GemBoy.release.xcconfig */,
 				C1C7ED01297432ED7A249A12 /* Pods-GemBoyPreviews.debug.xcconfig */,
 				FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */,
+				DC4D89BE21D4092119127BDC /* Pods-GemBoyShared-GemBoy.debug.xcconfig */,
+				A35CB1BEA015024306651634 /* Pods-GemBoyShared-GemBoy.release.xcconfig */,
+				D19610C5D9B69219F0AEB398 /* Pods-GemBoyShared-GemBoyNew.debug.xcconfig */,
+				31D33FD6D50EFE1EA34FABF1 /* Pods-GemBoyShared-GemBoyNew.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2467,6 +2933,67 @@
 			productName = DeltaFeatures;
 			productReference = D5D7C1F129E60DFF00663793 /* libGemBoyFeatures.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		EB1E5D082E63050E00305D33 /* Darlion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB1E5E882E63050E00305D33 /* Build configuration list for PBXNativeTarget "Darlion" */;
+			buildPhases = (
+				EB1E5D202E63050E00305D33 /* [CP] Check Pods Manifest.lock */,
+				EB1E5D212E63050E00305D33 /* Sources */,
+				EB1E5E252E63050E00305D33 /* Frameworks */,
+				EB1E5E452E63050E00305D33 /* Embed Frameworks */,
+				EB1E5E472E63050E00305D33 /* Resources */,
+				EB1E5E852E63050E00305D33 /* [CP] Copy Pods Resources */,
+				EB1E5EE92E63230900305D33 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB1E5D092E63050E00305D33 /* PBXTargetDependency */,
+				EB1E5D0B2E63050E00305D33 /* PBXTargetDependency */,
+				EB1E5EE82E63230900305D33 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EB69AB162D977F6D00311D39 /* FirebaseHelper */,
+			);
+			name = Darlion;
+			packageProductDependencies = (
+				EB1E5D0F2E63050E00305D33 /* KeychainAccess */,
+				EB1E5D112E63050E00305D33 /* ShowTouches */,
+				EB1E5D132E63050E00305D33 /* FirebaseAnalytics */,
+				EB1E5D152E63050E00305D33 /* FirebaseAuth */,
+				EB1E5D162E63050E00305D33 /* FirebaseCore */,
+				EB1E5D172E63050E00305D33 /* FirebaseCrashlytics */,
+				EB1E5D182E63050E00305D33 /* FirebaseFirestore */,
+				EB1E5D192E63050E00305D33 /* FirebaseMessaging */,
+				EB1E5D1A2E63050E00305D33 /* GoogleMobileAds */,
+				EB1E5D1C2E63050E00305D33 /* FirebaseStorage */,
+				EB1E5D1D2E63050E00305D33 /* GoogleSignIn */,
+				EB1E5D1F2E63050E00305D33 /* GoogleSignInSwift */,
+			);
+			productName = Delta;
+			productReference = EB1E5E8B2E63050E00305D33 /* Darlion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB1E5E8E2E63072800305D33 /* NotificationNew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB1E5E982E63072800305D33 /* Build configuration list for PBXNativeTarget "NotificationNew" */;
+			buildPhases = (
+				EB1E5E8F2E63072800305D33 /* Sources */,
+				EB1E5E962E63072800305D33 /* Frameworks */,
+				EB1E5E972E63072800305D33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EB8E0D622D947655004BFB1F /* Notification */,
+			);
+			name = NotificationNew;
+			productName = Notification;
+			productReference = EB1E5E9B2E63072800305D33 /* NotificationNew.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		EB8E0D602D947655004BFB1F /* Notification */ = {
 			isa = PBXNativeTarget;
@@ -2564,6 +3091,8 @@
 				D539102E29E88B6B0006B350 /* GemBoyPreviews */,
 				D5D7C1F029E60DFF00663793 /* GemBoyFeatures */,
 				EB8E0D602D947655004BFB1F /* Notification */,
+				EB1E5D082E63050E00305D33 /* Darlion */,
+				EB1E5E8E2E63072800305D33 /* NotificationNew */,
 			);
 		};
 /* End PBXProject section */
@@ -2626,6 +3155,7 @@
 				EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */,
 				EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */,
 				EB52BD102E4BD33C002CBE49 /* GameDownload.storyboard in Resources */,
+				EB1E5ECA2E63115600305D33 /* GoogleService-Info_gemboy.plist in Resources */,
 				EB52BD942E5CB051002CBE49 /* dg_DS.deltaskin in Resources */,
 				EBA2BAC42D984792007A25A6 /* SwipableControllerCell.xib in Resources */,
 				EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */,
@@ -2633,7 +3163,6 @@
 				EB21EA452DB935C500B6B1F4 /* StartGame.storyboard in Resources */,
 				EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */,
 				BF27CC8E1BC9FEA200A20D89 /* Assets.xcassets in Resources */,
-				EB3EB55C2DA00793004FFACF /* GoogleService-Info_gemboy.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2642,6 +3171,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AE76CA2C2B809C0086471B /* Icons.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1E5E472E63050E00305D33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1E5E482E63050E00305D33 /* cheatbase.zip in Resources */,
+				EB1E5E492E63050E00305D33 /* InfoPlist.strings in Resources */,
+				EB1E5E4A2E63050E00305D33 /* OnBoardingPages.storyboard in Resources */,
+				EB1E5E4B2E63050E00305D33 /* RankingStarView.xib in Resources */,
+				EB1E5E4D2E63050E00305D33 /* Update.storyboard in Resources */,
+				EB1E5E4E2E63050E00305D33 /* StatisticsUser.storyboard in Resources */,
+				EB1E5E4F2E63050E00305D33 /* Statistics.storyboard in Resources */,
+				EB1E5E502E63050E00305D33 /* Profanity.txt in Resources */,
+				EB1E5E512E63050E00305D33 /* dg__DS.deltaskin in Resources */,
+				EB1E5E522E63050E00305D33 /* Login.storyboard in Resources */,
+				EB1E5E532E63050E00305D33 /* openvgdb.sqlite in Resources */,
+				EB1E5E542E63050E00305D33 /* Contributors.plist in Resources */,
+				EB1E5E552E63050E00305D33 /* GothamRnd-MedItal.otf in Resources */,
+				EB1E5E562E63050E00305D33 /* PremiumSubscription.storyboard in Resources */,
+				EB1E5E572E63050E00305D33 /* UserProfile.storyboard in Resources */,
+				EB1E5E582E63050E00305D33 /* NotificationList.storyboard in Resources */,
+				EB1E5E592E63050E00305D33 /* ColorPalette.storyboard in Resources */,
+				EB1E5E5A2E63050E00305D33 /* PremiumSinglePage.storyboard in Resources */,
+				EB1E5E5B2E63050E00305D33 /* SystemSelection.xib in Resources */,
+				EB1E5E5C2E63050E00305D33 /* GothamRnd-BookItal.otf in Resources */,
+				EB1E5E5D2E63050E00305D33 /* GothamRnd-Book.otf in Resources */,
+				EB1E5E5E2E63050E00305D33 /* Dashboard.storyboard in Resources */,
+				EB1E5E5F2E63050E00305D33 /* loaderPink.json in Resources */,
+				EB1E5E602E63050E00305D33 /* GothamRnd-Light.otf in Resources */,
+				EB1E5E612E63050E00305D33 /* GothamRnd-Bold.otf in Resources */,
+				EB1E5E622E63050E00305D33 /* GothamRnd-BoldItal.otf in Resources */,
+				EB1E5E632E63050E00305D33 /* GothamRnd-LightItal.otf in Resources */,
+				EB1E5E642E63050E00305D33 /* Loader.xib in Resources */,
+				EB1E5E652E63050E00305D33 /* Splash.storyboard in Resources */,
+				EB1E5E662E63050E00305D33 /* TutorialLong.storyboard in Resources */,
+				EB1E5E672E63050E00305D33 /* TutorialSplit.storyboard in Resources */,
+				EB1E5E682E63050E00305D33 /* OnBoarding.storyboard in Resources */,
+				EB1E5EA02E630EA100305D33 /* GoogleService-Info.plist in Resources */,
+				EB1E5ECE2E6317B600305D33 /* Icons 2.xcassets in Resources */,
+				EB1E5EEC2E64A54C00305D33 /* Assets.xcassets in Resources */,
+				EB1E5E692E63050E00305D33 /* dg_NES.deltaskin in Resources */,
+				EB1E5E6A2E63050E00305D33 /* GothamRnd-Medium.otf in Resources */,
+				EB1E5E6B2E63050E00305D33 /* dg_GBA.deltaskin in Resources */,
+				EB1E5E6C2E63050E00305D33 /* dg_N64.deltaskin in Resources */,
+				EB1E5E6D2E63050E00305D33 /* efupdate.json in Resources */,
+				EB1E5E6E2E63050E00305D33 /* MenuSlider.storyboard in Resources */,
+				EB1E5E6F2E63050E00305D33 /* GameTableViewCell.xib in Resources */,
+				EB1E5E702E63050E00305D33 /* GamesDatabase.storyboard in Resources */,
+				EB1E5E712E63050E00305D33 /* best_games.json in Resources */,
+				EB1E5E722E63050E00305D33 /* PausePresentationControllerContentView.xib in Resources */,
+				EB1E5E732E63050E00305D33 /* PauseMenu.storyboard in Resources */,
+				EB1E5E742E63050E00305D33 /* Settings.storyboard in Resources */,
+				EB1E5E752E63050E00305D33 /* Localizable.strings in Resources */,
+				EB1E5E762E63050E00305D33 /* AlertView.xib in Resources */,
+				EB1E5E772E63050E00305D33 /* LaunchScreenStart.storyboard in Resources */,
+				EB1E5E792E63050E00305D33 /* CustomNavigationBar.xib in Resources */,
+				EB1E5E7A2E63050E00305D33 /* UserProfile.xib in Resources */,
+				EB1E5E7B2E63050E00305D33 /* dg_SNES.deltaskin in Resources */,
+				EB1E5E7C2E63050E00305D33 /* GameDownload.storyboard in Resources */,
+				EB1E5E7D2E63050E00305D33 /* dg_DS.deltaskin in Resources */,
+				EB1E5E7E2E63050E00305D33 /* SwipableControllerCell.xib in Resources */,
+				EB1E5E7F2E63050E00305D33 /* dg_GBC.deltaskin in Resources */,
+				EB1E5E802E63050E00305D33 /* Main.storyboard in Resources */,
+				EB1E5E812E63050E00305D33 /* StartGame.storyboard in Resources */,
+				EB1E5E822E63050E00305D33 /* SwipableController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1E5E972E63072800305D33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2661,15 +3264,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GemBoy/Pods-GemBoy-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GemBoy/Pods-GemBoy-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoy/Pods-GemBoy-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92EDD9C0CE3127182B2AF907 /* [CP] Check Pods Manifest.lock */ = {
@@ -2753,11 +3356,46 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GemBoy-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GemBoyShared-GemBoy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB1E5D202E63050E00305D33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GemBoyShared-GemBoyNew-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB1E5E852E63050E00305D33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoyNew/Pods-GemBoyShared-GemBoyNew-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoyNew/Pods-GemBoyShared-GemBoyNew-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoyNew/Pods-GemBoyShared-GemBoyNew-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3061,6 +3699,285 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB1E5D212E63050E00305D33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1E5D222E63050E00305D33 /* LicensesViewController.swift in Sources */,
+				EB1E5D232E63050E00305D33 /* RankingStarView.swift in Sources */,
+				EB1E5D242E63050E00305D33 /* Input+Display.swift in Sources */,
+				EB1E5D252E63050E00305D33 /* GridCollectionViewCell.swift in Sources */,
+				EB1E5D262E63050E00305D33 /* iTunesImportOption.swift in Sources */,
+				EB1E5D272E63050E00305D33 /* BaseViewController.swift in Sources */,
+				EB1E5D282E63050E00305D33 /* Bundle+SwizzleBundleID.swift in Sources */,
+				EB1E5D292E63050E00305D33 /* GameControllerInputMappingTransformer.swift in Sources */,
+				EB1E5D2A2E63050E00305D33 /* Cheat.swift in Sources */,
+				EB1E5D2B2E63050E00305D33 /* DeltaCoreProtocol+Delta.swift in Sources */,
+				EB1E5D2C2E63050E00305D33 /* Delta9ToDelta10.xcmappingmodel in Sources */,
+				EB1E5D2D2E63050E00305D33 /* RepairDatabaseViewController.swift in Sources */,
+				EB1E5D2E2E63050E00305D33 /* PauseTransitionCoordinator.swift in Sources */,
+				EB1E5D2F2E63050E00305D33 /* Delta8ToDelta9.xcmappingmodel in Sources */,
+				EB1E5D302E63050E00305D33 /* DeepLink.swift in Sources */,
+				EB1E5D312E63050E00305D33 /* ToastNotificationOptions.swift in Sources */,
+				EB1E5D322E63050E00305D33 /* Game.swift in Sources */,
+				EB1E5D332E63050E00305D33 /* BaseTableViewController.swift in Sources */,
+				EB1E5D342E63050E00305D33 /* CharacterSet+Filename.swift in Sources */,
+				EB1E5D352E63050E00305D33 /* _GameSave.swift in Sources */,
+				EB1E5D362E63050E00305D33 /* ReviewSaveStatesOptions.swift in Sources */,
+				EB1E5D372E63050E00305D33 /* Settings.swift in Sources */,
+				EB1E5D382E63050E00305D33 /* GameViewController.swift in Sources */,
+				EB1E5D392E63050E00305D33 /* _SaveState.swift in Sources */,
+				EB1E5D3A2E63050E00305D33 /* CopyDeepLinkActivity.swift in Sources */,
+				EB1E5D3B2E63050E00305D33 /* SKProduct.swift in Sources */,
+				EB1E5D3C2E63050E00305D33 /* Dictionary.swift in Sources */,
+				EB1E5D3D2E63050E00305D33 /* Optional.swift in Sources */,
+				EB1E5D3E2E63050E00305D33 /* String.swift in Sources */,
+				EB1E5D3F2E63050E00305D33 /* Data.swift in Sources */,
+				EB1E5D402E63050E00305D33 /* Date.swift in Sources */,
+				EB1E5D412E63050E00305D33 /* UIViewController.swift in Sources */,
+				EB1E5D422E63050E00305D33 /* Arrays.swift in Sources */,
+				EB1E5D432E63050E00305D33 /* UILabel.swift in Sources */,
+				EB1E5D442E63050E00305D33 /* UIButton.swift in Sources */,
+				EB1E5D452E63050E00305D33 /* StringExtensionCommon.swift in Sources */,
+				EB1E5D462E63050E00305D33 /* UIImageView.swift in Sources */,
+				EB1E5D472E63050E00305D33 /* PushNotification.swift in Sources */,
+				EB1E5D482E63050E00305D33 /* UIColor.swift in Sources */,
+				EB1E5D492E63050E00305D33 /* UICollectionView.swift in Sources */,
+				EB1E5D4A2E63050E00305D33 /* UIView.swift in Sources */,
+				EB1E5D4B2E63050E00305D33 /* CGRect.swift in Sources */,
+				EB1E5D4C2E63050E00305D33 /* StartGameCell.swift in Sources */,
+				EB1E5D4D2E63050E00305D33 /* SaveState.swift in Sources */,
+				EB1E5D4E2E63050E00305D33 /* ImportController.swift in Sources */,
+				EB1E5D4F2E63050E00305D33 /* EmulatorCore+Delta.swift in Sources */,
+				EB1E5D502E63050E00305D33 /* WFCServersView.swift in Sources */,
+				EB1E5D512E63050E00305D33 /* IAPHelper.swift in Sources */,
+				EB1E5D522E63050E00305D33 /* MenuSliderViewController.swift in Sources */,
+				EB1E5D532E63050E00305D33 /* IAPProduct.swift in Sources */,
+				EB1E5D542E63050E00305D33 /* VariableFastForward.swift in Sources */,
+				EB1E5D552E63050E00305D33 /* GameSave.swift in Sources */,
+				EB1E5D562E63050E00305D33 /* ListMenuViewController.swift in Sources */,
+				EB1E5D572E63050E00305D33 /* DeltaToDelta2.xcmappingmodel in Sources */,
+				EB1E5D582E63050E00305D33 /* ImportOption.swift in Sources */,
+				EB1E5D592E63050E00305D33 /* Delta4ToDelta5.xcmappingmodel in Sources */,
+				EB1E5D5A2E63050E00305D33 /* CheatValidator.swift in Sources */,
+				EB1E5D5B2E63050E00305D33 /* Stream+Conveniences.swift in Sources */,
+				EB1E5D5C2E63050E00305D33 /* ExternalDisplaySceneDelegate.swift in Sources */,
+				EB1E5D5D2E63050E00305D33 /* InitialGamesStoryboardSegue.swift in Sources */,
+				EB1E5D5E2E63050E00305D33 /* UserDefaults+Delta.swift in Sources */,
+				EB1E5D5F2E63050E00305D33 /* ActionInput.swift in Sources */,
+				EB1E5D602E63050E00305D33 /* RoundedButton.swift in Sources */,
+				EB1E5D612E63050E00305D33 /* DashedView.swift in Sources */,
+				EB1E5D622E63050E00305D33 /* DynamicView.swift in Sources */,
+				EB1E5D632E63050E00305D33 /* UserProfile.swift in Sources */,
+				EB1E5D642E63050E00305D33 /* AlertView.swift in Sources */,
+				EB1E5D652E63050E00305D33 /* SwipableController.swift in Sources */,
+				EB1E5D662E63050E00305D33 /* SwipableControllerCell.swift in Sources */,
+				EB1E5D672E63050E00305D33 /* CustomCornerView.swift in Sources */,
+				EB1E5D682E63050E00305D33 /* BaseView.swift in Sources */,
+				EB1E5D692E63050E00305D33 /* LoginViewController.swift in Sources */,
+				EB1E5D6A2E63050E00305D33 /* TutorialSplitViewController.swift in Sources */,
+				EB1E5D6B2E63050E00305D33 /* TutorialLongViewController.swift in Sources */,
+				EB1E5D6C2E63050E00305D33 /* OnBoardingViewController.swift in Sources */,
+				EB1E5D6D2E63050E00305D33 /* TutorialSplitContainerViewController.swift in Sources */,
+				EB1E5D6E2E63050E00305D33 /* OnBoardingDataSource.swift in Sources */,
+				EB1E5D6F2E63050E00305D33 /* LoginService.swift in Sources */,
+				EB1E5D702E63050E00305D33 /* GradientView.swift in Sources */,
+				EB1E5D712E63050E00305D33 /* CustomNavigationBar.swift in Sources */,
+				EB1E5D722E63050E00305D33 /* DownloadRomOption.swift in Sources */,
+				EB1E5D732E63050E00305D33 /* GameDownloadService.swift in Sources */,
+				EB1E5D742E63050E00305D33 /* GameDownloadModel.swift in Sources */,
+				EB1E5D752E63050E00305D33 /* DownlaodCell.swift in Sources */,
+				EB1E5D762E63050E00305D33 /* GameDownloadViewController.swift in Sources */,
+				EB1E5D772E63050E00305D33 /* WFCServer.swift in Sources */,
+				EB1E5D782E63050E00305D33 /* DSAirPlay.swift in Sources */,
+				EB1E5D792E63050E00305D33 /* UIAlertController.swift in Sources */,
+				EB1E5D7A2E63050E00305D33 /* Delta.xcdatamodeld in Sources */,
+				EB1E5D7B2E63050E00305D33 /* UISceneSession+Delta.swift in Sources */,
+				EB1E5D7C2E63050E00305D33 /* Delta6ToDelta7.xcmappingmodel in Sources */,
+				EB1E5D7D2E63050E00305D33 /* NSManagedObjectContext+Conveniences.swift in Sources */,
+				EB1E5D7E2E63050E00305D33 /* UIAlertController+Error.swift in Sources */,
+				EB1E5D7F2E63050E00305D33 /* OnBoardingPagerViewController.swift in Sources */,
+				EB1E5D802E63050E00305D33 /* OnBoardingItemViewProtocol.swift in Sources */,
+				EB1E5D812E63050E00305D33 /* OnBoardingItemView.swift in Sources */,
+				EB1E5D822E63050E00305D33 /* OnBoardingBaseViewController.swift in Sources */,
+				EB1E5D832E63050E00305D33 /* OnBoardingButton.swift in Sources */,
+				EB1E5D842E63050E00305D33 /* MenuItem.swift in Sources */,
+				EB1E5D852E63050E00305D33 /* Contributor.swift in Sources */,
+				EB1E5D862E63050E00305D33 /* Features.swift in Sources */,
+				EB1E5D872E63050E00305D33 /* UIAlertController+Importing.swift in Sources */,
+				EB1E5D882E63050E00305D33 /* CheatBase.swift in Sources */,
+				EB1E5D892E63050E00305D33 /* GameCollectionViewController.swift in Sources */,
+				EB1E5D8A2E63050E00305D33 /* SaveStatesStoryboardSegue.swift in Sources */,
+				EB1E5D8B2E63050E00305D33 /* TabBarViewController.swift in Sources */,
+				EB1E5D8C2E63050E00305D33 /* AppDelegate.swift in Sources */,
+				EB1E5D8D2E63050E00305D33 /* DeepLinkController.swift in Sources */,
+				EB1E5D8E2E63050E00305D33 /* GridCollectionViewLayout.swift in Sources */,
+				EB1E5D8F2E63050E00305D33 /* UIView+ParentViewController.swift in Sources */,
+				EB1E5D902E63050E00305D33 /* ControllerSkinsViewController.swift in Sources */,
+				EB1E5D912E63050E00305D33 /* ContributorsView.swift in Sources */,
+				EB1E5D922E63050E00305D33 /* _GameCollection.swift in Sources */,
+				EB1E5D932E63050E00305D33 /* CheatTextView.swift in Sources */,
+				EB1E5D942E63050E00305D33 /* NotificationInApp.swift in Sources */,
+				EB1E5D952E63050E00305D33 /* CheatDevice.swift in Sources */,
+				EB1E5D962E63050E00305D33 /* HarmonyMetadataKey+Keys.swift in Sources */,
+				EB1E5D972E63050E00305D33 /* UIDevice+Processor.swift in Sources */,
+				EB1E5D982E63050E00305D33 /* AppIconShortcutsViewController.swift in Sources */,
+				EB1E5D992E63050E00305D33 /* PreferredControllerSkinsView.swift in Sources */,
+				EB1E5D9A2E63050E00305D33 /* PreferredControllerSkinsViewController.swift in Sources */,
+				EB1E5D9B2E63050E00305D33 /* PopoverMenuButton.swift in Sources */,
+				EB1E5D9C2E63050E00305D33 /* LoginManager.swift in Sources */,
+				EB1E5D9D2E63050E00305D33 /* ConnectionLinkState.swift in Sources */,
+				EB1E5D9E2E63050E00305D33 /* GamesDatabaseImportOption.swift in Sources */,
+				EB1E5D9F2E63050E00305D33 /* _ManagedPatron.swift in Sources */,
+				EB1E5DA02E63050E00305D33 /* Delta10ToDelta11.xcmappingmodel in Sources */,
+				EB1E5DA12E63050E00305D33 /* GameTableViewCell.swift in Sources */,
+				EB1E5DA22E63050E00305D33 /* LaunchViewController.swift in Sources */,
+				EB1E5DA32E63050E00305D33 /* CheatMetadata.swift in Sources */,
+				EB1E5DA42E63050E00305D33 /* UpdateViewController.swift in Sources */,
+				EB1E5DA52E63050E00305D33 /* WFCManager.swift in Sources */,
+				EB1E5DA62E63050E00305D33 /* InputCalloutView.swift in Sources */,
+				EB1E5DA72E63050E00305D33 /* GridMenuViewControllerOld.swift in Sources */,
+				EB1E5DA82E63050E00305D33 /* GameSettingsView.swift in Sources */,
+				EB1E5DA92E63050E00305D33 /* GamesDatabase.swift in Sources */,
+				EB1E5DAA2E63050E00305D33 /* EditCheatViewController.swift in Sources */,
+				EB1E5DAB2E63050E00305D33 /* Keychain.swift in Sources */,
+				EB1E5DAC2E63050E00305D33 /* Delta3ToDelta4.xcmappingmodel in Sources */,
+				EB1E5DAD2E63050E00305D33 /* ReviewSaveStatesViewController.swift in Sources */,
+				EB1E5DAE2E63050E00305D33 /* _Game.swift in Sources */,
+				EB1E5DAF2E63050E00305D33 /* GameControllerInputMappingMigrationPolicy.swift in Sources */,
+				EB1E5DB02E63050E00305D33 /* GameMetadata.swift in Sources */,
+				EB1E5DB12E63050E00305D33 /* GamesStoryboardSegue.swift in Sources */,
+				EB1E5DB22E63050E00305D33 /* SaveStatesCollectionHeaderView.swift in Sources */,
+				EB1E5DB32E63050E00305D33 /* CheatsViewController.swift in Sources */,
+				EB1E5DB42E63050E00305D33 /* GamePickerViewController.swift in Sources */,
+				EB1E5DB52E63050E00305D33 /* CheatBaseView.swift in Sources */,
+				EB1E5DB62E63050E00305D33 /* PausePresentationController.swift in Sources */,
+				EB1E5DB72E63050E00305D33 /* ManagedPatron.swift in Sources */,
+				EB1E5DB82E63050E00305D33 /* NSUserActivity+Delta.swift in Sources */,
+				EB1E5DB92E63050E00305D33 /* AutoshrinkLabel.swift in Sources */,
+				EB1E5DBA2E63050E00305D33 /* CheatTableViewCell.swift in Sources */,
+				EB1E5DBB2E63050E00305D33 /* MenuCell.swift in Sources */,
+				EB1E5DBC2E63050E00305D33 /* RoundedImageView.swift in Sources */,
+				EB1E5DBD2E63050E00305D33 /* NSManagedObject+Conveniences.swift in Sources */,
+				EB1E5DBE2E63050E00305D33 /* TabBarItemViewController.swift in Sources */,
+				EB1E5DBF2E63050E00305D33 /* DatabaseModelProtocol.swift in Sources */,
+				EB1E5DC02E63050E00305D33 /* PremiumSubscriptionModel.swift in Sources */,
+				EB1E5DC12E63050E00305D33 /* EnvHelper.swift in Sources */,
+				EB1E5DC22E63050E00305D33 /* ServiceHelper.swift in Sources */,
+				EB1E5DC32E63050E00305D33 /* Services.swift in Sources */,
+				EB1E5DC42E63050E00305D33 /* UserModel.swift in Sources */,
+				EB1E5DC52E63050E00305D33 /* SplashService.swift in Sources */,
+				EB1E5DC62E63050E00305D33 /* ViewController.swift in Sources */,
+				EB1E5DC72E63050E00305D33 /* Box.swift in Sources */,
+				EB1E5DC82E63050E00305D33 /* UIColor+Delta.swift in Sources */,
+				EB1E5DC92E63050E00305D33 /* PHPhotoLibrary+Screenshots.swift in Sources */,
+				EB1E5DCA2E63050E00305D33 /* UILabel+FontSize.swift in Sources */,
+				EB1E5DCB2E63050E00305D33 /* StatisticsService.swift in Sources */,
+				EB1E5DCC2E63050E00305D33 /* MedalsCollectionViewCell.swift in Sources */,
+				EB1E5DCD2E63050E00305D33 /* ChartModel.swift in Sources */,
+				EB1E5DCE2E63050E00305D33 /* StatisticsUserViewController.swift in Sources */,
+				EB1E5DCF2E63050E00305D33 /* StatisticsViewController.swift in Sources */,
+				EB1E5DD02E63050E00305D33 /* ChartCell.swift in Sources */,
+				EB1E5DD12E63050E00305D33 /* ControllerInputsViewController.swift in Sources */,
+				EB1E5DD22E63050E00305D33 /* LoadControllerSkinImageOperation.swift in Sources */,
+				EB1E5DD32E63050E00305D33 /* SceneDelegate.swift in Sources */,
+				EB1E5DD42E63050E00305D33 /* UIImage+SymbolFallback.swift in Sources */,
+				EB1E5DD52E63050E00305D33 /* UseProfileMenuItem.swift in Sources */,
+				EB1E5DD62E63050E00305D33 /* AlertModel.swift in Sources */,
+				EB1E5DD72E63050E00305D33 /* HomeServiceModel.swift in Sources */,
+				EB1E5DD82E63050E00305D33 /* GameViewController+ExperimentalToasts.swift in Sources */,
+				EB1E5DD92E63050E00305D33 /* String+Profanity.swift in Sources */,
+				EB1E5DDA2E63050E00305D33 /* _GameControllerInputMapping.swift in Sources */,
+				EB1E5DDB2E63050E00305D33 /* _ControllerSkin.swift in Sources */,
+				EB1E5DDC2E63050E00305D33 /* PremiumSubscriptionViewController.swift in Sources */,
+				EB1E5DDD2E63050E00305D33 /* NewIconCell.swift in Sources */,
+				EB1E5DDE2E63050E00305D33 /* UserProfileViewController.swift in Sources */,
+				EB1E5DDF2E63050E00305D33 /* ColorPaletteCell.swift in Sources */,
+				EB1E5DE02E63050E00305D33 /* UserProfileMenuItemCell.swift in Sources */,
+				EB1E5DE12E63050E00305D33 /* PremiumSinglePageViewController.swift in Sources */,
+				EB1E5DE22E63050E00305D33 /* ColorPaletteViewController.swift in Sources */,
+				EB1E5DE32E63050E00305D33 /* NotificationListViewController.swift in Sources */,
+				EB1E5DE42E63050E00305D33 /* PremiumDataSource.swift in Sources */,
+				EB1E5DE52E63050E00305D33 /* PremiumPointCell.swift in Sources */,
+				EB1E5DE62E63050E00305D33 /* PremiumSubscriptionPagerViewController.swift in Sources */,
+				EB1E5DE72E63050E00305D33 /* PremiumServices.swift in Sources */,
+				EB1E5DE82E63050E00305D33 /* UserService.swift in Sources */,
+				EB1E5DE92E63050E00305D33 /* NotificationListCell.swift in Sources */,
+				EB1E5DEA2E63050E00305D33 /* GamesDatabaseBrowserViewController.swift in Sources */,
+				EB1E5DEB2E63050E00305D33 /* _PatreonAccount.swift in Sources */,
+				EB1E5DEC2E63050E00305D33 /* ProcessInfo+JIT.swift in Sources */,
+				EB1E5DED2E63050E00305D33 /* Delta5ToDelta6.xcmappingmodel in Sources */,
+				EB1E5DEE2E63050E00305D33 /* ExperimentalFeatures.swift in Sources */,
+				EB1E5DEF2E63050E00305D33 /* NotificationManager.swift in Sources */,
+				EB1E5DF02E63050E00305D33 /* LocalAuthenticationManagar.swift in Sources */,
+				EB1E5DF12E63050E00305D33 /* AppManager.swift in Sources */,
+				EB1E5DF22E63050E00305D33 /* SaveStatesViewController.swift in Sources */,
+				EB1E5DF32E63050E00305D33 /* GameControllerInputMapping.swift in Sources */,
+				EB1E5DF42E63050E00305D33 /* StartGameViewController.swift in Sources */,
+				EB1E5DF52E63050E00305D33 /* BadgedTableViewCell.swift in Sources */,
+				EB1E5DF62E63050E00305D33 /* ColorPickerManager.swift in Sources */,
+				EB1E5DF72E63050E00305D33 /* LocalGameProtocol.swift in Sources */,
+				EB1E5DF82E63050E00305D33 /* SharingManager.swift in Sources */,
+				EB1E5DF92E63050E00305D33 /* AppStoreReviewManager.swift in Sources */,
+				EB1E5DFA2E63050E00305D33 /* LegacySearchBar.swift in Sources */,
+				EB1E5DFB2E63050E00305D33 /* PauseStoryboardSegue.swift in Sources */,
+				EB1E5DFC2E63050E00305D33 /* GamesViewController.swift in Sources */,
+				EB1E5DFD2E63050E00305D33 /* DeviceManager.swift in Sources */,
+				EB1E5DFE2E63050E00305D33 /* Lu.swift in Sources */,
+				EB1E5DFF2E63050E00305D33 /* Delta2ToDelta3.xcmappingmodel in Sources */,
+				EB1E5E002E63050E00305D33 /* DatabaseManager.swift in Sources */,
+				EB1E5E012E63050E00305D33 /* OSLog+Delta.swift in Sources */,
+				EB1E5E022E63050E00305D33 /* System.swift in Sources */,
+				EB1E5E032E63050E00305D33 /* PreviewGameViewController.swift in Sources */,
+				EB1E5E042E63050E00305D33 /* ControllerSkin+Configuring.swift in Sources */,
+				EB1E5E052E63050E00305D33 /* PreviousHarmony.xcdatamodeld in Sources */,
+				EB1E5E062E63050E00305D33 /* ControllerSkin.swift in Sources */,
+				EB1E5E072E63050E00305D33 /* SkinDebugging.swift in Sources */,
+				EB1E5E082E63050E00305D33 /* AttributedHeaderFooterView.swift in Sources */,
+				EB1E5E092E63050E00305D33 /* UIViewControllerContextTransitioning+Conveniences.swift in Sources */,
+				EB1E5E0A2E63050E00305D33 /* LocalDeviceController.swift in Sources */,
+				EB1E5E0B2E63050E00305D33 /* ControllersSettingsViewController.swift in Sources */,
+				EB1E5E0C2E63050E00305D33 /* GamesPresentationController.swift in Sources */,
+				EB1E5E0D2E63050E00305D33 /* ControllerSkinTableViewCell.swift in Sources */,
+				EB1E5E0E2E63050E00305D33 /* MelonDSCoreSettingsViewController.swift in Sources */,
+				EB1E5E0F2E63050E00305D33 /* _Cheat.swift in Sources */,
+				EB1E5E102E63050E00305D33 /* SystemSelection.swift in Sources */,
+				EB1E5E112E63050E00305D33 /* SettingsViewController.swift in Sources */,
+				EB1E5E122E63050E00305D33 /* PopoverMenuController.swift in Sources */,
+				EB1E5E132E63050E00305D33 /* GameView+AirPlay.swift in Sources */,
+				EB1E5E142E63050E00305D33 /* Loader.swift in Sources */,
+				EB1E5E152E63050E00305D33 /* SaveStateMigrationPolicy.swift in Sources */,
+				EB1E5E162E63050E00305D33 /* GameSetting.m in Sources */,
+				EB1E5E172E63050E00305D33 /* NSFetchedResultsController+Conveniences.m in Sources */,
+				EB1E5E182E63050E00305D33 /* StorageLinksModel.swift in Sources */,
+				EB1E5E192E63050E00305D33 /* Action.swift in Sources */,
+				EB1E5E1A2E63050E00305D33 /* PhotoLibraryImportOption.swift in Sources */,
+				EB1E5E1B2E63050E00305D33 /* LoadImageURLOperation.swift in Sources */,
+				EB1E5E1C2E63050E00305D33 /* GameSceneDelegate.swift in Sources */,
+				EB1E5E1D2E63050E00305D33 /* PauseViewController.swift in Sources */,
+				EB1E5E1E2E63050E00305D33 /* SystemBIOS.swift in Sources */,
+				EB1E5E1F2E63050E00305D33 /* Theme.swift in Sources */,
+				EB1E5E202E63050E00305D33 /* Delta7ToDelta8.xcmappingmodel in Sources */,
+				EB1E5E212E63050E00305D33 /* GridMenuViewController.swift in Sources */,
+				EB1E5E222E63050E00305D33 /* ClipboardImportOption.swift in Sources */,
+				EB1E5E232E63050E00305D33 /* OnlineMultiplayer.swift in Sources */,
+				EB1E5E242E63050E00305D33 /* GameCollection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1E5E8F2E63072800305D33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1E5E902E63072800305D33 /* PushNotification.swift in Sources */,
+				EB1E5E912E63072800305D33 /* Date.swift in Sources */,
+				EB1E5E922E63072800305D33 /* StringExtensionCommon.swift in Sources */,
+				EB1E5E932E63072800305D33 /* NotificationInApp.swift in Sources */,
+				EB1E5E942E63072800305D33 /* Dictionary.swift in Sources */,
+				EB1E5E952E63072800305D33 /* DeviceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB8E0D5D2D947655004BFB1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3086,6 +4003,21 @@
 			isa = PBXTargetDependency;
 			target = D5D7C1F029E60DFF00663793 /* GemBoyFeatures */;
 			targetProxy = D5D7C1FB29E60EDE00663793 /* PBXContainerItemProxy */;
+		};
+		EB1E5D092E63050E00305D33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF6E70B925D2187800E41CD1 /* Systems */;
+			targetProxy = EB1E5D0A2E63050E00305D33 /* PBXContainerItemProxy */;
+		};
+		EB1E5D0B2E63050E00305D33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5D7C1F029E60DFF00663793 /* GemBoyFeatures */;
+			targetProxy = EB1E5D0C2E63050E00305D33 /* PBXContainerItemProxy */;
+		};
+		EB1E5EE82E63230900305D33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB1E5E8E2E63072800305D33 /* NotificationNew */;
+			targetProxy = EB1E5EE72E63230900305D33 /* PBXContainerItemProxy */;
 		};
 		EB8E0D672D947655004BFB1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3329,7 +4261,7 @@
 		};
 		BFFA71F71AAC406100EE9DD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FC472D0CE8F1DABCC4D91CD /* Pods-GemBoy.debug.xcconfig */;
+			baseConfigurationReference = DC4D89BE21D4092119127BDC /* Pods-GemBoyShared-GemBoy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -3339,7 +4271,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Emulator";
@@ -3348,7 +4280,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.10;
+				MARKETING_VERSION = 3.11;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"-ObjC",
@@ -3410,7 +4342,7 @@
 		};
 		BFFA71F81AAC406100EE9DD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E9C7C16BC517D412965A72B /* Pods-GemBoy.release.xcconfig */;
+			baseConfigurationReference = A35CB1BEA015024306651634 /* Pods-GemBoyShared-GemBoy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -3420,7 +4352,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Emulator";
@@ -3429,7 +4361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.10;
+				MARKETING_VERSION = 3.11;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"${inherited}",
@@ -3591,6 +4523,215 @@
 			};
 			name = Release;
 		};
+		EB1E5E892E63050E00305D33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D19610C5D9B69219F0AEB398 /* Pods-GemBoyShared-GemBoyNew.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_MODULES_AUTOLINK = NO;
+				CODE_SIGN_ENTITLEMENTS = GemBoy/Purple.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S797C2F3U5;
+				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Darlion;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-ld64",
+					"-ObjC",
+					"-l\"GBADeltaCore\"",
+					"-l\"GBCDeltaCore\"",
+					"-l\"MelonDSDeltaCore\"",
+					"-l\"N64DeltaCore\"",
+					"-l\"NESDeltaCore\"",
+					"-l\"Roxas\"",
+					"-l\"SDWebImage\"",
+					"-l\"SMCalloutView\"",
+					"-l\"SNESDeltaCore\"",
+					"-l\"SQLite.swift\"",
+					"-l\"ZIPFoundation\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-weak_framework",
+					"\"AuthenticationServices\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.GemboyAdvance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = BETA;
+				SWIFT_INCLUDE_PATHS = "$(inherited) \"$(SRCROOT)/Cores/GPGXDeltaCore/Sources/GPGXBridge\"";
+				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB1E5E8A2E63050E00305D33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31D33FD6D50EFE1EA34FABF1 /* Pods-GemBoyShared-GemBoyNew.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_MODULES_AUTOLINK = NO;
+				CODE_SIGN_ENTITLEMENTS = GemBoy/Purple.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S797C2F3U5;
+				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Darlion;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-ld64",
+					"${inherited}",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.GemboyAdvance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "$(inherited) \"$(SRCROOT)/Cores/GPGXDeltaCore/Sources/GPGXBridge\"";
+				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EB1E5E992E63072800305D33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Notification/Notification.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S797C2F3U5;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Notification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Notification;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.GemboyAdvance.Notification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB1E5E9A2E63072800305D33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Notification/Notification.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S797C2F3U5;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Notification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Notification;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.GemboyAdvance.Notification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EB8E0D6B2D947655004BFB1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3606,7 +4747,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 26;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -3614,7 +4755,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notification/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Notification;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Riley Testut. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3622,7 +4762,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.10;
+				MARKETING_VERSION = 3.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
@@ -3650,14 +4790,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notification/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Notification;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Riley Testut. All rights reserved.";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3665,7 +4804,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.10;
+				MARKETING_VERSION = 3.11;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3733,6 +4872,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		EB1E5E882E63050E00305D33 /* Build configuration list for PBXNativeTarget "Darlion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB1E5E892E63050E00305D33 /* Debug */,
+				EB1E5E8A2E63050E00305D33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB1E5E982E63072800305D33 /* Build configuration list for PBXNativeTarget "NotificationNew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB1E5E992E63072800305D33 /* Debug */,
+				EB1E5E9A2E63072800305D33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EB8E0D6A2D947655004BFB1F /* Build configuration list for PBXNativeTarget "Notification" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3759,6 +4916,46 @@
 			requirement = {
 				branch = master;
 				kind = branch;
+			};
+		};
+		EB1E5D102E63050E00305D33 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+		EB1E5D122E63050E00305D33 /* XCRemoteSwiftPackageReference "ShowTouches" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Cyberbeni/ShowTouches.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		EB1E5D142E63050E00305D33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
+		EB1E5D1B2E63050E00305D33 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+		EB1E5D1E2E63050E00305D33 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
 			};
 		};
 		EBB0FA922D96A16800CA8EB1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -3797,6 +4994,66 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D5E76AAB2BE199890078C0C5 /* XCRemoteSwiftPackageReference "ShowTouches" */;
 			productName = ShowTouches;
+		};
+		EB1E5D0F2E63050E00305D33 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D102E63050E00305D33 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		EB1E5D112E63050E00305D33 /* ShowTouches */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D122E63050E00305D33 /* XCRemoteSwiftPackageReference "ShowTouches" */;
+			productName = ShowTouches;
+		};
+		EB1E5D132E63050E00305D33 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D142E63050E00305D33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EB1E5D152E63050E00305D33 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D142E63050E00305D33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		EB1E5D162E63050E00305D33 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D142E63050E00305D33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		EB1E5D172E63050E00305D33 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D142E63050E00305D33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		EB1E5D182E63050E00305D33 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D142E63050E00305D33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EB1E5D192E63050E00305D33 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D142E63050E00305D33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		EB1E5D1A2E63050E00305D33 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D1B2E63050E00305D33 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		EB1E5D1C2E63050E00305D33 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D142E63050E00305D33 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		EB1E5D1D2E63050E00305D33 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D1E2E63050E00305D33 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		EB1E5D1F2E63050E00305D33 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1E5D1E2E63050E00305D33 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 		EBB0FA932D96A16800CA8EB1 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

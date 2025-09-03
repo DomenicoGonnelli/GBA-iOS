@@ -49,4 +49,17 @@ extension Dictionary {
         return nil
     }
     
+    func deleteJson(_ key: String) -> Bool{
+        do {
+            guard let fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: DeviceManager.group)?.appendingPathComponent("\(key).json") else {
+                return false
+            }
+            try FileManager.default.removeItem(at: fileURL)
+            return true
+        } catch {
+            print(error)
+            return false
+        }
+    }
+    
 }

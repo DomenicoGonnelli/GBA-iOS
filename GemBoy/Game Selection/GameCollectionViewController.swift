@@ -110,7 +110,7 @@ class GameCollectionViewController: BaseViewController, UICollectionViewDelegate
         }
     }
     var selectedIndexPath : IndexPath?
-    var showed = false
+    
     var theme: Theme = .opaque {
         didSet {
             // self.collectionView?.reloadData()
@@ -177,7 +177,7 @@ extension GameCollectionViewController
 {
     override func viewDidLoad()
     {
-        canManageNotification = true
+        //canManageNotification = true
         super.viewDidLoad()
         
         self.collectionView?.dataSource = self.dataSource
@@ -189,23 +189,7 @@ extension GameCollectionViewController
             self.collectionView?.dragDelegate = self
         }
         
-        showPremiumPage()
         self.update()
-        manageNotifition()
-    }
-    
-    func showPremiumPage(){
-        if !self.showed && AppManager.isNewPremium == false{
-            self.showed = true
-            AppManager.setIsNewPremium()
-            PremiumSubscriptionViewController.present(presenter: self, isCollaboration: false, delegate: nil)
-        }
-        
-
-        if LoginManager.shared.user?.premiumState == .expired, AppManager.premiumExpired == false{
-            NotificationManager.shared.scheduleNotification(notification: .subscritionExpired)
-            AppManager.premiumExpired = true
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool)
@@ -597,7 +581,7 @@ private extension GameCollectionViewController
         }
         
         cell.imageView.shouldAlignBaselines = true
-        cell.imageView.image = #imageLiteral(resourceName: "BoxArt")
+        cell.imageView.image = game.gameCollection?.system?.imageLine?.withTintColor(.white) ?? UIImage(named: "BoxArt")
         
         if game.identifier == Game.melonDSBIOSIdentifier || game.identifier == Game.melonDSDSiBIOSIdentifier
         {

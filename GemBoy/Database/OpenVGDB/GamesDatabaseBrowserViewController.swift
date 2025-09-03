@@ -166,7 +166,7 @@ private extension GamesDatabaseBrowserViewController
         cell.backgroundColor = UIColor.deltaDarkGray
         
         cell.nameLabel.text = metadata.name ?? "Unknown".localizable
-        cell.artworkImageView.image = #imageLiteral(resourceName: "BoxArt")
+        cell.artworkImageView.image = UIImage(named: "BoxArt")
         
         cell.artworkImageViewLeadingConstraint.constant = 15
         cell.artworkImageViewTrailingConstraint.constant = 15

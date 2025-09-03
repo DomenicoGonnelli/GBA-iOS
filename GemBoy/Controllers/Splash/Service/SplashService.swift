@@ -34,7 +34,7 @@ class SplashService {
             if let resp = resp?["list"] as? [Dictionary<String,Any>] {
                 var list : [OnBoardingGenericItem] = []
                 
-                let actual = AppManager.whatNewsVersion ?? "3.7"
+                let actual = AppManager.whatNewsVersion ?? "1.0"
                 for i in resp {
                     list.append(OnBoardingGenericItem(value: i))
                 }

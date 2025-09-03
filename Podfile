@@ -1,49 +1,72 @@
 platform :ios, '14.0'
-
 inhibit_all_warnings!
 
-target 'GemBoy' do
-    use_modular_headers!
+# ---- PODS CONDIVISI TRA GemBoy e GemBoyNew ----
+abstract_target 'GemBoyShared' do
+  use_modular_headers!
 
-    pod 'SQLite.swift', '~> 0.12.0'
-    pod 'SDWebImage', '~> 3.8'
-    pod 'SMCalloutView', '~> 2.1.0'
-   # pod 'GoogleSignIn'
-    pod 'lottie-ios'
-    pod 'Alamofire'
-    pod 'Kingfisher','~>5.15.7'
-    pod 'CircleBar', :git => 'https://github.com/DomenicoGonnelli/CircleBar.git', :branch => 'General'
-    pod 'CollectionViewPagingLayout'
-    pod 'ReachabilitySwift'
+  pod 'SQLite.swift', '~> 0.12.0'
+  pod 'SDWebImage', '~> 3.8'
+  pod 'SMCalloutView', '~> 2.1.0'
+  # pod 'GoogleSignIn'
+  pod 'lottie-ios'
+  pod 'Alamofire'
+  pod 'Kingfisher','~> 5.15.7'
+  pod 'CircleBar', :git => 'https://github.com/DomenicoGonnelli/CircleBar.git', :branch => 'General'
+  pod 'CollectionViewPagingLayout'
+  pod 'ReachabilitySwift'
 
-    pod 'DeltaCore', :path => 'Cores/DeltaCore'
-    pod 'NESDeltaCore', :path => 'Cores/NESDeltaCore'
-    pod 'SNESDeltaCore', :path => 'Cores/SNESDeltaCore'
-    pod 'N64DeltaCore', :path => 'Cores/N64DeltaCore'
-    pod 'GBCDeltaCore', :path => 'Cores/GBCDeltaCore'
-    pod 'GBADeltaCore', :path => 'Cores/GBADeltaCore'
-    pod 'MelonDSDeltaCore', :path => 'Cores/MelonDSDeltaCore'
-    pod 'Roxas', :path => 'External/Roxas'
+  # Cores locali
+  pod 'DeltaCore',       :path => 'Cores/DeltaCore'
+  pod 'NESDeltaCore',    :path => 'Cores/NESDeltaCore'
+  pod 'SNESDeltaCore',   :path => 'Cores/SNESDeltaCore'
+  pod 'N64DeltaCore',    :path => 'Cores/N64DeltaCore'
+  pod 'GBCDeltaCore',    :path => 'Cores/GBCDeltaCore'
+  pod 'GBADeltaCore',    :path => 'Cores/GBADeltaCore'
+  pod 'MelonDSDeltaCore',:path => 'Cores/MelonDSDeltaCore'
+
+  pod 'Roxas', :path => 'External/Roxas'
+
+  # I due target che devono essere identici
+  target 'GemBoy' do
+  end
+
+  target 'GemBoyNew' do
+  end
 end
 
+# ---- TARGET DI PREVIEW (non eredita i pods condivisi) ----
 target 'GemBoyPreviews' do
-    use_modular_headers!
-
-    pod 'DeltaCore', :path => 'Cores/DeltaCore'
-    pod 'Roxas', :path => 'External/Roxas'
+  use_modular_headers!
+  pod 'DeltaCore', :path => 'Cores/DeltaCore'
+  pod 'Roxas',     :path => 'External/Roxas'
 end
 
-# Unlink DeltaCore to prevent conflicts with Systems.framework
+# ---- POST INSTALL: rimuove -l"DeltaCore" dagli OTHER_LDFLAGS per evitare conflitti con Systems.framework ----
 post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        if target.name == "Pods-GemBoy"
-            puts "Updating #{target.name} OTHER_LDFLAGS"
-            target.build_configurations.each do |config|
-                xcconfig_path = config.base_configuration_reference.real_path
-                xcconfig = File.read(xcconfig_path)
-                new_xcconfig = xcconfig.sub('-l"DeltaCore"', '')
-                File.open(xcconfig_path, "w") { |file| file << new_xcconfig }
-            end
+  targets_to_patch = ["Pods-GemBoy", "Pods-GemBoyNew"]
+
+  installer.pods_project.targets.each do |t|
+    next unless targets_to_patch.include?(t.name)
+
+    puts "Patching OTHER_LDFLAGS for #{t.name}"
+    t.build_configurations.each do |config|
+      # Se esiste un file xcconfig, operiamo lì
+      if config.base_configuration_reference && config.base_configuration_reference.real_path
+        xcconfig_path = config.base_configuration_reference.real_path
+        xcconfig = File.read(xcconfig_path)
+        # rimuove ogni occorrenza di -l"DeltaCore"
+        new_xcconfig = xcconfig.gsub(/\s*-l"DeltaCore"\b/, '')
+        File.open(xcconfig_path, "w") { |f| f << new_xcconfig }
+      else
+        # Fallback: operiamo direttamente su OTHER_LDFLAGS in memoria
+        flags = config.build_settings['OTHER_LDFLAGS']
+        if flags.is_a?(Array)
+          config.build_settings['OTHER_LDFLAGS'] = flags - ['-l"DeltaCore"']
+        elsif flags.is_a?(String)
+          config.build_settings['OTHER_LDFLAGS'] = flags.gsub(/\s*-l"DeltaCore"\b/, '')
         end
+      end
     end
+  end
 end

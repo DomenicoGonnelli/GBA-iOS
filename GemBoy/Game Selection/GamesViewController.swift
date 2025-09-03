@@ -22,7 +22,7 @@ class GamesViewController: BaseViewController
             self.updateTheme()
         }
     }
-    
+    var showed = false
     var activeEmulatorCore: EmulatorCore? {
         didSet
         {
@@ -95,6 +95,10 @@ class GamesViewController: BaseViewController
         NotificationCenter.default.addObserver(self, selector: #selector(GamesViewController.settingsDidChange(_:)), name: Settings.didChangeNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GamesViewController.emulationDidQuit(_:)), name: EmulatorCore.emulationDidQuitNotification, object: nil)
     }
+    
+    @IBAction func addGame(){
+        
+    }
 }
 
 //MARK: - UIViewController -
@@ -103,6 +107,7 @@ extension GamesViewController
 {
     override func viewDidLoad()
     {
+        canManageNotification = true
         super.viewDidLoad()
         AppStoreReviewManager.requestReviewIfAppropriate()
         self.placeholderView = RSTPlaceholderView(frame: self.view.bounds)
@@ -133,33 +138,35 @@ extension GamesViewController
             self.setToolbarItems([.flexibleSpace(), resumeButton], animated: false)
         }
         
-        if let navigationController = self.navigationController
-        {
-            if #available(iOS 13.0, *)
-            {
-                navigationController.overrideUserInterfaceStyle = .dark
-                
-                let navigationBarAppearance = navigationController.navigationBar.standardAppearance.copy()
-                navigationBarAppearance.backgroundEffect = UIBlurEffect(style: .dark)
-                navigationController.navigationBar.standardAppearance = navigationBarAppearance
-                navigationController.navigationBar.scrollEdgeAppearance = navigationBarAppearance
-                
-                let toolbarAppearance = navigationController.toolbar.standardAppearance.copy()
-                toolbarAppearance.backgroundEffect = UIBlurEffect(style: .dark)
-                navigationController.toolbar.standardAppearance = toolbarAppearance
-                
-                if #available(iOS 15, *)
-                {
-                    navigationController.toolbar.scrollEdgeAppearance = toolbarAppearance
-                }
-            }
-            else
-            {
-                navigationController.navigationBar.barStyle = .blackTranslucent
-                navigationController.toolbar.barStyle = .blackTranslucent
-            }            
-        }
-        
+//        if let navigationController = self.navigationController
+//        {
+//            if #available(iOS 13.0, *)
+//            {
+//                navigationController.overrideUserInterfaceStyle = .dark
+//                
+//                let navigationBarAppearance = navigationController.navigationBar.standardAppearance.copy()
+//                navigationBarAppearance.backgroundEffect = UIBlurEffect(style: .dark)
+//                navigationController.navigationBar.standardAppearance = navigationBarAppearance
+//                navigationController.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+//                
+//                let toolbarAppearance = navigationController.toolbar.standardAppearance.copy()
+//                toolbarAppearance.backgroundEffect = UIBlurEffect(style: .dark)
+//                navigationController.toolbar.standardAppearance = toolbarAppearance
+//                
+//                if #available(iOS 15, *)
+//                {
+//                    navigationController.toolbar.scrollEdgeAppearance = toolbarAppearance
+//                }
+//            }
+//            else
+//            {
+//                navigationController.navigationBar.barStyle = .blackTranslucent
+//                navigationController.toolbar.barStyle = .blackTranslucent
+//            }
+//            
+//
+//        }
+//        
         if #available(iOS 14, *)
         {
             self.importController.presentingViewController = self
@@ -181,11 +188,27 @@ extension GamesViewController
         self.prepareSearchController()
         
         self.updateTheme()
+        
+        showPremiumPage()
+    }
+    
+    func showPremiumPage(){
+        if !self.showed && AppManager.isNewPremium == false{
+            self.showed = true
+            AppManager.setIsNewPremium()
+            PremiumSubscriptionViewController.present(presenter: self, isCollaboration: false, delegate: nil)
+        }
+
+        if LoginManager.shared.user?.premiumState == .expired, AppManager.premiumExpired == false{
+            NotificationManager.shared.scheduleNotification(notification: .subscritionExpired)
+            AppManager.premiumExpired = true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         
         if self.fetchedResultsController.performFetchIfNeeded()
         {
@@ -198,6 +221,11 @@ extension GamesViewController
                 activeEmulatorCore.stop()
             }
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @IBAction func goToSetting(_ sender: Any){
@@ -433,10 +461,10 @@ private extension GamesViewController
         }
         var total_games = 0
         if let game = self.fetchedResultsController.fetchedObjects {
-            stackWidth.constant = CGFloat(70 * game.count)
+            stackWidth.constant = CGFloat(50 * game.count)
             for i in 0..<game.count {
                 if let g = game[i] as? GameCollection {
-                    let sys = SystemSelection(frame: CGRect (x: 70*i, y: 0, width: 70, height: 70))
+                    let sys = SystemSelection(frame: CGRect (x: 50*i, y: 0, width: 50, height: 50))
                     sys.setSystem(system: g.system, delegate: self)
                     stack.addArrangedSubview(sys)
                     total_games += g.games.count
@@ -444,6 +472,9 @@ private extension GamesViewController
             }
             AppManager.shared.totalGames = total_games
             stack.layoutIfNeeded()
+            stack.superview?.isHidden = game.count == 0
+        } else {
+            stack.superview?.isHidden = true
         }
     }
     
@@ -495,6 +526,7 @@ extension GamesViewController: ImportControllerDelegate
         
         return importController
     }
+    
     
     @IBAction private func importFiles()
     {

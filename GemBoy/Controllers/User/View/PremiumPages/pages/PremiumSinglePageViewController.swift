@@ -52,7 +52,7 @@ class PremiumSinglePageViewController: UIViewController {
         priceLabelPeriod.localizedKey = item?.period
         subscriptionButton.localizedKey = String(format: "subscriptionIdButton".localizable, item?.subscriptionId ?? "")
         
-        if let id = item?.iosKey {
+        if let id = item?.iosKeyShort {
             priceLabel.text = AppManager.shared.getProduct(productId: id)?.premiumProductPrize
             
             if let period = item?.periodMonth {
@@ -88,7 +88,7 @@ class PremiumSinglePageViewController: UIViewController {
         let user = LoginManager.shared.user
         expirationLabel.isHidden = true
         if user?.isPremium == true{
-            if user?.premium?.iosKey == item?.iosKey {
+            if user?.premium?.iosKeyShort == item?.iosKeyShort {
                 if isNew {
                     startAnimation()
                 }

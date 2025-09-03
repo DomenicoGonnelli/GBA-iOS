@@ -71,14 +71,20 @@ class AppManager {
     var products : [SKProduct] = []
     
     var premiumProduct: SKProduct?{
-        return getProduct(productId: IAPProduct.premiumMonthly.rawValue)
+        
+        if let id1 = premiumSubscriptions.first(where: {$0.period == "1"})?.iosKeyShort {
+            getProduct(productId: id1)
+        }
+        
+        return getProduct(productId: "month")
     }
     var premiumProductAnnual: SKProduct?{
-        return getProduct(productId: IAPProduct.premiumAnnual.rawValue)
+        return getProduct(productId: "annual")
     }
     
     func getProduct(productId: String) -> SKProduct? {
-        return AppManager.shared.products.first(where: {$0.productIdentifier == productId})
+        return AppManager.shared.products.first(where: {
+            $0.productIdentifier.split(separator: ".").last! == productId})
     }
     
     var premiumProductPrize : String?{
@@ -87,20 +93,7 @@ class AppManager {
         }
         return nil
     }
-    var annualProductPrize : String?{
-        if let productPrice = premiumProductAnnual?.price, let textPrice = IAPHelper.priceFormatter.string(from: productPrice) {
-            return textPrice
-        }
-        return nil
-    }
     
-    var premiumProductPrizeAllMonth : String?{
-        if let productPrice = premiumProduct?.price {
-            let textPrice = productPrice.doubleValue * 9
-            return IAPHelper.priceFormatter.string(from: NSNumber(value: textPrice))
-        }
-        return nil
-    }
     
     var inReview: Bool = false
     

@@ -38,9 +38,8 @@ class ViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showLoader()
-        
-        AppManager.shared.retrieveProduct(){ withProducts in
-            self.checkForUpdate(){
+        self.checkForUpdate(){
+            AppManager.shared.retrieveProduct(){ withProducts in
                 if !AppManager.showTutorial {
                     AppManager.setShowTutorial()
                     self.hideLoader()

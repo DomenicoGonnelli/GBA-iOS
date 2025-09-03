@@ -47,7 +47,7 @@
 "launh_failed" = "No se pudo iniciar <AppName/>, inténtalo de nuevo más tarde";
 "Retry" = "Reintentar";
 "No_Games" = "Aún no tienes ningún juego 🎮";
-"import_games_label" = "Puedes importar nuevos juegos pulsando el botón '+' en la parte superior derecha";
+"import_games_label" = "Puedes importar nuevos juegos pulsando el botón '+' en la parte inferior derecha";
 "Resume" = "Reanudar";
 "import" = "Importar desde:";
 "Settings" = "Ajustes";

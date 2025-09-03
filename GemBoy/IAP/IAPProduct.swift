@@ -13,11 +13,20 @@ public enum IAPProduct: String, CaseIterable {
          premiumAnnual = "com.domenico.gonnelli.farm.gba.annual",
          premiumJFR = "com.domenico.gonnelli.farm.gba.jfr"
     
-    private static let productIdentifiers: Set<ProductIdentifier> = [
-        IAPProduct.premiumMonthly.rawValue,
-        IAPProduct.premiumAnnual.rawValue,
-        IAPProduct.premiumJFR.rawValue,
-    ]
+    private static var productIdentifiers: Set<ProductIdentifier> {
+        var ids : Set<ProductIdentifier> = []
+        
+        if let allID = AppManager.shared.homeData?.premiumConfig?.premiumListId {
+            for id in allID {
+                ids.insert(id)
+            }
+        } else {
+            for id in IAPProduct.allCases {
+                ids.insert(id.rawValue)
+            }
+        }
+        return ids
+    }
     
     public static let store = IAPHelper(productIds: IAPProduct.productIdentifiers)
     

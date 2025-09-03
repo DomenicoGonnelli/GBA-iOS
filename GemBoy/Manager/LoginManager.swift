@@ -16,8 +16,16 @@ class LoginManager {
     
     func reset(){
         NotificationHelper.unregisterToTopic(topic: .premiumUser)
+        LoginManager.resetStoredDate()
         LoginManager.shared = LoginManager()
         AppManager.shared.saveUserMail()
+        
+    }
+    
+    static func resetStoredDate(){
+        let empty : Dictionary<String,Any> = [:]
+        empty.deleteJson(FirestoreHelper.premium_user_key)
+        empty.deleteJson(FirestoreHelper.user_key)
     }
     
     public static func randomNonceString(length: Int = 32) -> String {

@@ -64,7 +64,7 @@ class IOSConfig: DatabaseModelProtocolGet{
     
     required init(value: [String : Any]) {
         lastAppVersion = value["lastAppVersion"] as? String
-        appName = value["appName"] as? String
+        appName = value["appNameNew"] as? String
         versionForRequireUpdate = value["versionForRequireUpdate"] as? String
         GADid = value["GADid_new"] as? String ?? value["GADid"] as? String
         appStoreURL = value["appStoreURL"] as? String
@@ -139,6 +139,8 @@ class PremiumConfig: DatabaseModelProtocolGet{
     var expirationDate: Date?
     var showPremiumBonusExpiration: Bool = false
     var annualExpirationDate : Date?
+    var premiumListId: [String]?
+    
     
     init(){}
     
@@ -149,6 +151,12 @@ class PremiumConfig: DatabaseModelProtocolGet{
         
         if let expirationDate = value["annualExpirationDateString"] as? String {
             self.annualExpirationDate = Date(date: expirationDate)
+        }
+        
+        if let premiumData = value["premiumListId"] as? Dictionary<String, Any> {
+            if let bundleID = Bundle.main.bundleIdentifier,  let ids = premiumData[bundleID] as? [String] {
+                premiumListId = ids
+            }
         }
         showPremiumBonusExpiration = value["showPremiumBonusExpiration"] as? Bool ?? false
     }

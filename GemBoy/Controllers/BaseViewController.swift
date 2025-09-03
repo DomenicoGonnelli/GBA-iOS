@@ -46,6 +46,7 @@ class BaseViewController: UIViewController, AlertViewDelegate {
         loader?.isHidden = true
         shareView?.isHidden = true
         instagramView?.isHidden = !Social.instagram.isAvailable
+        manageNotifition()
     }
     
     func manageNotifition(){

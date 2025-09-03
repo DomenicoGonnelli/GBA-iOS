@@ -13,12 +13,16 @@ class PremiumSubscriptionModel: DatabaseModelProtocolGet{
     var subscriptionId: String?
     var periodMonth: Int = 1
     var alphaBg: Int = 20
-    var iosKey: String?
+    private var iosKey: String?
     var backgroundLink: String?
     var helmetLink: String?
     var period: String?
     var benefits: [PremiumBenefitModel] = []
     var subscriptionType: PremiumSubscriptionTypology = .always
+    
+    var iosKeyShort: String?{
+        return iosKey?.components(separatedBy: ".").last
+    }
     
     init(){}
     

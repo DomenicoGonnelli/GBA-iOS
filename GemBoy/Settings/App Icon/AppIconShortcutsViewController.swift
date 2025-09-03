@@ -138,7 +138,7 @@ private extension AppIconShortcutsViewController
         }
                 
         cell.nameLabel.text = game.name
-        cell.artworkImageView.image = #imageLiteral(resourceName: "BoxArt")
+        cell.artworkImageView.image = game.gameCollection?.system?.imageLine?.withTintColor(.white) ?? UIImage(named: "BoxArt")
         
         cell.artworkImageViewLeadingConstraint.constant = 15
         cell.artworkImageViewTrailingConstraint.constant = 15

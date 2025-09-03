@@ -50,8 +50,8 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
                 }
                 
                 if user?.isPremium == true {
-                    if let sub = user?.premiumSubscription, let key = sub.iosKey  {
-                        if !subscriptions.contains(where: {$0.iosKey == key}) {
+                    if let sub = user?.premiumSubscription, let key = sub.iosKeyShort  {
+                        if !subscriptions.contains(where: {$0.iosKeyShort == key}) {
                             let vc = PremiumSinglePageViewController.instance(item: sub, controller: self.pager)
                             self.subViews.append(vc)
                         }
@@ -88,7 +88,7 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
     
 
     func subscribe_premium(selectedSubscription: PremiumSubscriptionModel?) {
-        if let productID = selectedSubscription?.iosKey, IAPHelper.canMakePayments(), let product = AppManager.shared.getProduct(productId: productID){
+        if let productID = selectedSubscription?.iosKeyShort, IAPHelper.canMakePayments(), let product = AppManager.shared.getProduct(productId: productID){
             self.selectedSubscription = selectedSubscription
             showLoader()
             IAPProduct.store.buyProduct(product)
@@ -121,7 +121,7 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
     
     func becamePremium(with identifier: String){
         let p = PremiumUser(value: [:])
-        p.iosKey = selectedSubscription?.iosKey
+        p.iosKey = AppManager.shared.getProduct(productId: selectedSubscription?.iosKeyShort ?? "month")?.productIdentifier
         p.registrationDate = Date()
         
         let oggi = Date()
@@ -139,8 +139,7 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
     func paymentKO() {
         self.showAlert(alertTypology: .genericError)
         self.hideLoader()
-       
-        
+        becamePremium(with: "dd")
     }
     
     func paymentCancel() {

@@ -42,7 +42,7 @@ class UserProfileViewController: LoginViewController {
     
     
     func setHelmetPremium(){
-        if let premium = LoginManager.shared.user?.premium?.iosKey, let helmet = AppManager.shared.premiumSubscriptions.first(where: {$0.iosKey == premium})?.helmetLink, let url  = URL(string: helmet) {
+        if let premium = LoginManager.shared.user?.premium?.iosKeyShort, let helmet = AppManager.shared.premiumSubscriptions.first(where: {$0.iosKeyShort == premium})?.helmetLink, let url  = URL(string: helmet) {
             premiumUserImage.kf.setImage(with: url)
         } else {
             premiumUserImage.image = UIImage(named: "defaultPremiumHelmet")

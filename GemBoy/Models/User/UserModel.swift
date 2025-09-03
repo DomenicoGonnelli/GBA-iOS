@@ -21,7 +21,7 @@ class UserModel : DatabaseModelProtocol{
     var premium : PremiumUser?
     
     var premiumSubscription: PremiumSubscriptionModel?{
-        return AppManager.shared.premiumSubscriptions.first(where: {$0.iosKey == premium?.iosKey})
+        return AppManager.shared.premiumSubscriptions.first(where: {$0.iosKeyShort == premium?.iosKeyShort})
     }
     
     var premiumState: PremiumStatus {
@@ -33,19 +33,15 @@ class UserModel : DatabaseModelProtocol{
             return .expired
         }
         
-        if premium.iosKey == IAPProduct.premiumAnnual.rawValue && premium.isActive {
-            return .annualPremium
-        }
-        
         if premium.isActive {
-            return .monthlyPremium
+            return .active
         }
         
         return .noPremium
     }
     
     var isPremium : Bool {
-        premiumState == .monthlyPremium || premiumState == .annualPremium
+        premiumState == .active
     }
     
     init(){}
@@ -157,7 +153,7 @@ class PremiumUser: DatabaseModelProtocol {
     var isActive: Bool {
         let date = Date()
         if let exp = expirationDate?.millisecondsSince1970 {
-            return date.millisecondsSince1970 < exp
+            return date.millisecondsSince1970 <= exp
         }
         return false
         
@@ -171,19 +167,28 @@ class PremiumUser: DatabaseModelProtocol {
         }
         return iosKey != nil
     }
+    
     var expirationDate: Date?
+    var iosKeyShort: String?{
+        return iosKey?.components(separatedBy: ".").last
+    }
     
     required init(value: [String : Any]) {
     
         iosKey = value["iosKey"] as? String
         
-        if let registrationDate = value["registrationDate"] as? Int{
+        if let registrationDate = value["registrationDate"] as? String{
+            self.registrationDate = Date(date: registrationDate)
+        } else if let registrationDate = value["registrationDate"] as? Int{
             self.registrationDate = Date(milliseconds: registrationDate)
         }
         
-        if let expirationDate = value["expirationDate"] as? Int{
+        if let expirationDate = value["expirationDate"] as? String{
+            self.expirationDate = Date(date: expirationDate)
+        } else if let expirationDate = value["expirationDate"] as? Int{
             self.expirationDate = Date(milliseconds: expirationDate)
         }
+        
     }
     
     var datafile: Dictionary<String, Any> {
@@ -191,13 +196,13 @@ class PremiumUser: DatabaseModelProtocol {
         var returnData : [String : Any] = [:]
         
         if let registrationDate = registrationDate {
-            returnData["registrationDate"] = registrationDate.millisecondsSince1970
+            returnData["registrationDate"] = registrationDate.jsonData()
         }
         
         if let expirationDate = expirationDate {
-            returnData["expirationDate"] = expirationDate.millisecondsSince1970
+            returnData["expirationDate"] = expirationDate.jsonData()
         }
-        
+       
         if let iosKey = iosKey {
             returnData["iosKey"] = iosKey
         }
@@ -208,35 +213,5 @@ class PremiumUser: DatabaseModelProtocol {
 }
 
 public enum PremiumStatus: CaseIterable {
-    case noPremium, monthlyPremium, threemonth,  annualPremium, expired
-    
-    var premiumName: String {
-        switch self {
-        case .noPremium:
-            return "STANDARD"
-        case .monthlyPremium:
-            return ""
-        case .annualPremium:
-            return "SENNA"
-        case .expired:
-            return "expiredSubscriptionName".localizable
-        case .threemonth:
-            return "LAUDA"
-        }
-    }
-    
-    var numberOfLeagues: Int {
-        switch self {
-        case .noPremium:
-            return 1
-        case .monthlyPremium:
-            return 3
-        case .threemonth:
-            return 3
-        case .annualPremium:
-            return 5
-        case .expired:
-            return 1
-        }
-    }
+    case noPremium, expired, active
 }
