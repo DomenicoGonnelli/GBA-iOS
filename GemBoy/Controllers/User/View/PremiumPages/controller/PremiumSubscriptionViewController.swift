@@ -139,7 +139,6 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
     func paymentKO() {
         self.showAlert(alertTypology: .genericError)
         self.hideLoader()
-        becamePremium(with: "dd")
     }
     
     func paymentCancel() {

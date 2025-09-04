@@ -95,7 +95,7 @@ class ImportController: NSObject
         
         if actions.count > 1
         {
-            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            let alertController = UIAlertController(title: "import".localizable, message: nil, preferredStyle: .alert)
             alertController.addAction(UIAlertAction.cancel)
             
             let alertActions = actions.map { UIAlertAction($0) }
@@ -113,6 +113,7 @@ class ImportController: NSObject
             {
                 alertController.popoverPresentationController?.barButtonItem = self.barButtonItem
             }
+            
             
             self.presentedViewController = alertController
             self.presentingViewController?.present(alertController, animated: true, completion: nil)
