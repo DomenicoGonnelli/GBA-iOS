@@ -243,6 +243,10 @@ extension AppDelegate
             else if url.pathExtension.lowercased() == "deltaskin"
             {
                 return self.importControllerSkin(at: url)
+            } 
+            else if url.pathExtension.lowercased() == "dgskin"
+            {
+                return self.importControllerSkin(at: url)
             }
         }
         else if url.scheme?.lowercased() == "delta"

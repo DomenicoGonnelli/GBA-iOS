@@ -27,7 +27,7 @@ extension ControllerSkin
     static func dg_controller(system: System?) -> DeltaCore.ControllerSkin?
     {
         guard let s = system else { return nil}
-        guard let fileURL = Bundle.main.url(forResource: "dg_\(s.localizableShortName)", withExtension: "deltaskin") else { return DeltaCore.ControllerSkin.standardControllerSkin(for: s.gameType) }
+        guard let fileURL = Bundle.main.url(forResource: "dg_\(s.localizableShortName)", withExtension: "dgskin") else { return DeltaCore.ControllerSkin.standardControllerSkin(for: s.gameType) }
         
         let controllerSkin = DeltaCore.ControllerSkin(fileURL: fileURL)
         print(controllerSkin)

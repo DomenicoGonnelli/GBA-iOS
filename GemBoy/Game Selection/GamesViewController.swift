@@ -540,7 +540,7 @@ extension GamesViewController: ImportControllerDelegate
             print(error)
         }
         
-        let gameURLs = urls.filter { $0.pathExtension.lowercased() != "deltaskin" }
+        let gameURLs = urls.filter { $0.pathExtension.lowercased() != "dgskin" && $0.pathExtension.lowercased() != "deltaskin" }
         DatabaseManager.shared.importGames(at: Set(gameURLs)) { (games, errors) in
             if errors.count > 0
             {
@@ -555,7 +555,7 @@ extension GamesViewController: ImportControllerDelegate
             }
         }
         
-        let controllerSkinURLs = urls.filter { $0.pathExtension.lowercased() == "deltaskin" }
+        let controllerSkinURLs = urls.filter { $0.pathExtension.lowercased() == "dgskin" || $0.pathExtension.lowercased() == "deltaskin" }
         DatabaseManager.shared.importControllerSkins(at: Set(controllerSkinURLs)) { (controllerSkins, errors) in
             if errors.count > 0
             {

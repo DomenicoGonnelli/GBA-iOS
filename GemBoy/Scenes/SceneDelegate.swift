@@ -202,6 +202,9 @@ private extension SceneDelegate
                     else if url.pathExtension.lowercased() == "deltaskin"
                     {
                         self.importControllerSkin(at: url)
+                    }else if url.pathExtension.lowercased() == "dgskin"
+                    {
+                        self.importControllerSkin(at: url)
                     }
                 }
                 else if url.scheme?.lowercased() == "delta"

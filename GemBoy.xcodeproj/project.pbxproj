@@ -231,7 +231,7 @@
 		D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
 		D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
 		EB04DE172DCCB31800ED4ADE /* ConnectionLinkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */; };
-		EB04DE372DD2214A00ED4ADE /* dg__DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */; };
+		EB04DE372DD2214A00ED4ADE /* dg__DS.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.dgskin */; };
 		EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */; };
 		EB112F042E69CBF700637F9E /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F032E69CBF600637F9E /* CheckModel.swift */; };
 		EB112F052E69CBF700637F9E /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F032E69CBF600637F9E /* CheckModel.swift */; };
@@ -582,7 +582,7 @@
 		EB1E5E4E2E63050E00305D33 /* StatisticsUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA362DB92D8E00B6B1F4 /* StatisticsUser.storyboard */; };
 		EB1E5E4F2E63050E00305D33 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA2B2DB92D8E00B6B1F4 /* Statistics.storyboard */; };
 		EB1E5E502E63050E00305D33 /* Profanity.txt in Resources */ = {isa = PBXBuildFile; fileRef = D5E12AEC2D01163A000C7531 /* Profanity.txt */; };
-		EB1E5E512E63050E00305D33 /* dg__DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */; };
+		EB1E5E512E63050E00305D33 /* dg__DS.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.dgskin */; };
 		EB1E5E522E63050E00305D33 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19C62D9977B4009C977A /* Login.storyboard */; };
 		EB1E5E532E63050E00305D33 /* openvgdb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BF02D5D91DDEBB3000A5E131 /* openvgdb.sqlite */; };
 		EB1E5E542E63050E00305D33 /* Contributors.plist in Resources */ = {isa = PBXBuildFile; fileRef = D53415A6298C78BC00FD67B1 /* Contributors.plist */; };
@@ -606,10 +606,10 @@
 		EB1E5E662E63050E00305D33 /* TutorialLong.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19DE2D9982C6009C977A /* TutorialLong.storyboard */; };
 		EB1E5E672E63050E00305D33 /* TutorialSplit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19DA2D9982C6009C977A /* TutorialSplit.storyboard */; };
 		EB1E5E682E63050E00305D33 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19E32D9982C6009C977A /* OnBoarding.storyboard */; };
-		EB1E5E692E63050E00305D33 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */; };
+		EB1E5E692E63050E00305D33 /* dg_NES.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.dgskin */; };
 		EB1E5E6A2E63050E00305D33 /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBBB19612D9971A8009C977A /* GothamRnd-Medium.otf */; };
-		EB1E5E6B2E63050E00305D33 /* dg_GBA.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */; };
-		EB1E5E6C2E63050E00305D33 /* dg_N64.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */; };
+		EB1E5E6B2E63050E00305D33 /* dg_GBA.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.dgskin */; };
+		EB1E5E6C2E63050E00305D33 /* dg_N64.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.dgskin */; };
 		EB1E5E6D2E63050E00305D33 /* efupdate.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A082D9AAA58009C977A /* efupdate.json */; };
 		EB1E5E6E2E63050E00305D33 /* MenuSlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD680302E11476F00A92584 /* MenuSlider.storyboard */; };
 		EB1E5E6F2E63050E00305D33 /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF71CF891FE904B1001F1613 /* GameTableViewCell.xib */; };
@@ -623,11 +623,11 @@
 		EB1E5E772E63050E00305D33 /* LaunchScreenStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */; };
 		EB1E5E792E63050E00305D33 /* CustomNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAA42D984792007A25A6 /* CustomNavigationBar.xib */; };
 		EB1E5E7A2E63050E00305D33 /* UserProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB82D984792007A25A6 /* UserProfile.xib */; };
-		EB1E5E7B2E63050E00305D33 /* dg_SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */; };
+		EB1E5E7B2E63050E00305D33 /* dg_SNES.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.dgskin */; };
 		EB1E5E7C2E63050E00305D33 /* GameDownload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */; };
-		EB1E5E7D2E63050E00305D33 /* dg_DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD932E5CB051002CBE49 /* dg_DS.deltaskin */; };
+		EB1E5E7D2E63050E00305D33 /* dg_DS.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD932E5CB051002CBE49 /* dg_DS.dgskin */; };
 		EB1E5E7E2E63050E00305D33 /* SwipableControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB22D984792007A25A6 /* SwipableControllerCell.xib */; };
-		EB1E5E7F2E63050E00305D33 /* dg_GBC.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */; };
+		EB1E5E7F2E63050E00305D33 /* dg_GBC.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56F2DA04821004FFACF /* dg_GBC.dgskin */; };
 		EB1E5E802E63050E00305D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6EB4022DBECB9200EAC356 /* Main.storyboard */; };
 		EB1E5E812E63050E00305D33 /* StartGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */; };
 		EB1E5E822E63050E00305D33 /* SwipableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA2BAB52D984792007A25A6 /* SwipableController.xib */; };
@@ -654,9 +654,9 @@
 		EB21EA472DB937F700B6B1F4 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */; };
 		EB21EA492DB93F0E00B6B1F4 /* StartGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */; };
 		EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */; };
-		EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */; };
-		EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */; };
-		EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */; };
+		EB3EB5662DA037D4004FFACF /* dg_GBA.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.dgskin */; };
+		EB3EB56E2DA047DF004FFACF /* dg_N64.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.dgskin */; };
+		EB3EB5702DA04821004FFACF /* dg_GBC.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56F2DA04821004FFACF /* dg_GBC.dgskin */; };
 		EB3EB5752DA0719A004FFACF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5722DA0719A004FFACF /* TabBarViewController.swift */; };
 		EB3EB5762DA0719A004FFACF /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB5742DA0719A004FFACF /* Dashboard.storyboard */; };
 		EB3EB5E12DA0738D004FFACF /* PremiumSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EB5CD2DA0738D004FFACF /* PremiumSubscriptionViewController.swift */; };
@@ -693,7 +693,7 @@
 		EB52BD0E2E4BD33C002CBE49 /* DownlaodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD062E4BD33C002CBE49 /* DownlaodCell.swift */; };
 		EB52BD0F2E4BD33C002CBE49 /* GameDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */; };
 		EB52BD102E4BD33C002CBE49 /* GameDownload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */; };
-		EB52BD942E5CB051002CBE49 /* dg_DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD932E5CB051002CBE49 /* dg_DS.deltaskin */; };
+		EB52BD942E5CB051002CBE49 /* dg_DS.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD932E5CB051002CBE49 /* dg_DS.dgskin */; };
 		EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
 		EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
 		EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
@@ -816,8 +816,8 @@
 		EBBB1A072D9989F5009C977A /* LaunchScreenStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A052D9989F5009C977A /* LaunchScreenStart.storyboard */; };
 		EBBB1A092D9AAA58009C977A /* efupdate.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB1A082D9AAA58009C977A /* efupdate.json */; };
 		EBC3E7152DB630D1006B1CBC /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3E7142DB630C1006B1CBC /* BaseTableViewController.swift */; };
-		EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */; };
-		EBC970E62DB27475000CA9C1 /* dg_NES.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */; };
+		EBC970E22DB27311000CA9C1 /* dg_SNES.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E12DB27311000CA9C1 /* dg_SNES.dgskin */; };
+		EBC970E62DB27475000CA9C1 /* dg_NES.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.dgskin */; };
 		EBD680312E11476F00A92584 /* MenuSlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD680302E11476F00A92584 /* MenuSlider.storyboard */; };
 		EBD680332E11477E00A92584 /* MenuSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD680322E11477700A92584 /* MenuSliderViewController.swift */; };
 /* End PBXBuildFile section */
@@ -1168,7 +1168,7 @@
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		DC4D89BE21D4092119127BDC /* Pods-GemBoyShared-GemBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy.debug.xcconfig"; sourceTree = "<group>"; };
 		EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLinkState.swift; sourceTree = "<group>"; };
-		EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__DS.deltaskin; sourceTree = "<group>"; };
+		EB04DE362DD2214A00ED4ADE /* dg__DS.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__DS.dgskin; sourceTree = "<group>"; };
 		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB112F032E69CBF600637F9E /* CheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
 		EB112F1B2E6AEB2700637F9E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -1213,9 +1213,9 @@
 		EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameCell.swift; sourceTree = "<group>"; };
 		EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReachabilitySwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBA.deltaskin; sourceTree = "<group>"; };
-		EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_N64.deltaskin; sourceTree = "<group>"; };
-		EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBC.deltaskin; sourceTree = "<group>"; };
+		EB3EB55F2DA037D4004FFACF /* dg_GBA.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBA.dgskin; sourceTree = "<group>"; };
+		EB3EB56D2DA047DF004FFACF /* dg_N64.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_N64.dgskin; sourceTree = "<group>"; };
+		EB3EB56F2DA04821004FFACF /* dg_GBC.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBC.dgskin; sourceTree = "<group>"; };
 		EB3EB5722DA0719A004FFACF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EB3EB5742DA0719A004FFACF /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		EB3EB5BF2DA0738D004FFACF /* NotificationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewController.swift; sourceTree = "<group>"; };
@@ -1246,7 +1246,7 @@
 		EB52BD062E4BD33C002CBE49 /* DownlaodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownlaodCell.swift; sourceTree = "<group>"; };
 		EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameDownload.storyboard; sourceTree = "<group>"; };
 		EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDownloadViewController.swift; sourceTree = "<group>"; };
-		EB52BD932E5CB051002CBE49 /* dg_DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_DS.deltaskin; sourceTree = "<group>"; };
+		EB52BD932E5CB051002CBE49 /* dg_DS.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_DS.dgskin; sourceTree = "<group>"; };
 		EB52BDBC2E5DFFD6002CBE49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB52BDBD2E5DFFD6002CBE49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB52BDBE2E5DFFE2002CBE49 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -1376,8 +1376,8 @@
 		EBC3E7642DB7E392006B1CBC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EBC3E7652DB7E393006B1CBC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EBC3E7662DB7E395006B1CBC /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_SNES.deltaskin; sourceTree = "<group>"; };
-		EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.deltaskin; sourceTree = "<group>"; };
+		EBC970E12DB27311000CA9C1 /* dg_SNES.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_SNES.dgskin; sourceTree = "<group>"; };
+		EBC970E52DB27475000CA9C1 /* dg_NES.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.dgskin; sourceTree = "<group>"; };
 		EBD680302E11476F00A92584 /* MenuSlider.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSlider.storyboard; sourceTree = "<group>"; };
 		EBD680322E11477700A92584 /* MenuSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSliderViewController.swift; sourceTree = "<group>"; };
 		EBD8B2182DE23E39008A2AEA /* GBCEmulatorBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCEmulatorBridge.h; sourceTree = "<group>"; };
@@ -2406,13 +2406,13 @@
 		EB3EB55E2DA034DB004FFACF /* defaultskin */ = {
 			isa = PBXGroup;
 			children = (
-				EB52BD932E5CB051002CBE49 /* dg_DS.deltaskin */,
-				EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */,
-				EBC970E52DB27475000CA9C1 /* dg_NES.deltaskin */,
-				EBC970E12DB27311000CA9C1 /* dg_SNES.deltaskin */,
-				EB3EB55F2DA037D4004FFACF /* dg_GBA.deltaskin */,
-				EB3EB56D2DA047DF004FFACF /* dg_N64.deltaskin */,
-				EB3EB56F2DA04821004FFACF /* dg_GBC.deltaskin */,
+				EB52BD932E5CB051002CBE49 /* dg_DS.dgskin */,
+				EB04DE362DD2214A00ED4ADE /* dg__DS.dgskin */,
+				EBC970E52DB27475000CA9C1 /* dg_NES.dgskin */,
+				EBC970E12DB27311000CA9C1 /* dg_SNES.dgskin */,
+				EB3EB55F2DA037D4004FFACF /* dg_GBA.dgskin */,
+				EB3EB56D2DA047DF004FFACF /* dg_N64.dgskin */,
+				EB3EB56F2DA04821004FFACF /* dg_GBC.dgskin */,
 			);
 			path = defaultskin;
 			sourceTree = "<group>";
@@ -3295,7 +3295,7 @@
 				EB21EA382DB92D8E00B6B1F4 /* StatisticsUser.storyboard in Resources */,
 				EB21EA392DB92D8E00B6B1F4 /* Statistics.storyboard in Resources */,
 				D5E12AED2D011640000C7531 /* Profanity.txt in Resources */,
-				EB04DE372DD2214A00ED4ADE /* dg__DS.deltaskin in Resources */,
+				EB04DE372DD2214A00ED4ADE /* dg__DS.dgskin in Resources */,
 				EBBB19CB2D9977B4009C977A /* Login.storyboard in Resources */,
 				BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */,
 				D53415A7298C78BC00FD67B1 /* Contributors.plist in Resources */,
@@ -3323,10 +3323,10 @@
 				EBBB19EA2D9982C6009C977A /* TutorialLong.storyboard in Resources */,
 				EBBB19EB2D9982C6009C977A /* TutorialSplit.storyboard in Resources */,
 				EBBB19EC2D9982C6009C977A /* OnBoarding.storyboard in Resources */,
-				EBC970E62DB27475000CA9C1 /* dg_NES.deltaskin in Resources */,
+				EBC970E62DB27475000CA9C1 /* dg_NES.dgskin in Resources */,
 				EBBB196E2D9971A8009C977A /* GothamRnd-Medium.otf in Resources */,
-				EB3EB5662DA037D4004FFACF /* dg_GBA.deltaskin in Resources */,
-				EB3EB56E2DA047DF004FFACF /* dg_N64.deltaskin in Resources */,
+				EB3EB5662DA037D4004FFACF /* dg_GBA.dgskin in Resources */,
+				EB3EB56E2DA047DF004FFACF /* dg_N64.dgskin in Resources */,
 				EBBB1A092D9AAA58009C977A /* efupdate.json in Resources */,
 				EBD680312E11476F00A92584 /* MenuSlider.storyboard in Resources */,
 				BF71CF8A1FE904B1001F1613 /* GameTableViewCell.xib in Resources */,
@@ -3341,12 +3341,12 @@
 				EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */,
 				EBA2BAC22D984792007A25A6 /* CustomNavigationBar.xib in Resources */,
 				EBA2BAC32D984792007A25A6 /* UserProfile.xib in Resources */,
-				EBC970E22DB27311000CA9C1 /* dg_SNES.deltaskin in Resources */,
+				EBC970E22DB27311000CA9C1 /* dg_SNES.dgskin in Resources */,
 				EB52BD102E4BD33C002CBE49 /* GameDownload.storyboard in Resources */,
 				EB1E5ECA2E63115600305D33 /* GoogleService-Info_gemboy.plist in Resources */,
-				EB52BD942E5CB051002CBE49 /* dg_DS.deltaskin in Resources */,
+				EB52BD942E5CB051002CBE49 /* dg_DS.dgskin in Resources */,
 				EBA2BAC42D984792007A25A6 /* SwipableControllerCell.xib in Resources */,
-				EB3EB5702DA04821004FFACF /* dg_GBC.deltaskin in Resources */,
+				EB3EB5702DA04821004FFACF /* dg_GBC.dgskin in Resources */,
 				EB6EB4042DBECB9200EAC356 /* Main.storyboard in Resources */,
 				EB21EA452DB935C500B6B1F4 /* StartGame.storyboard in Resources */,
 				EBA2BAC52D984792007A25A6 /* SwipableController.xib in Resources */,
@@ -3377,7 +3377,7 @@
 				EB112F4E2E6AEDFB00637F9E /* AnimalRoulette.storyboard in Resources */,
 				EB112F4F2E6AEDFB00637F9E /* AllAnimal.storyboard in Resources */,
 				EB1E5E502E63050E00305D33 /* Profanity.txt in Resources */,
-				EB1E5E512E63050E00305D33 /* dg__DS.deltaskin in Resources */,
+				EB1E5E512E63050E00305D33 /* dg__DS.dgskin in Resources */,
 				EB1E5E522E63050E00305D33 /* Login.storyboard in Resources */,
 				EB1E5E532E63050E00305D33 /* openvgdb.sqlite in Resources */,
 				EB1E5E542E63050E00305D33 /* Contributors.plist in Resources */,
@@ -3404,10 +3404,10 @@
 				EB1E5EA02E630EA100305D33 /* GoogleService-Info.plist in Resources */,
 				EB1E5ECE2E6317B600305D33 /* Icons 2.xcassets in Resources */,
 				EB1E5EEC2E64A54C00305D33 /* Assets.xcassets in Resources */,
-				EB1E5E692E63050E00305D33 /* dg_NES.deltaskin in Resources */,
+				EB1E5E692E63050E00305D33 /* dg_NES.dgskin in Resources */,
 				EB1E5E6A2E63050E00305D33 /* GothamRnd-Medium.otf in Resources */,
-				EB1E5E6B2E63050E00305D33 /* dg_GBA.deltaskin in Resources */,
-				EB1E5E6C2E63050E00305D33 /* dg_N64.deltaskin in Resources */,
+				EB1E5E6B2E63050E00305D33 /* dg_GBA.dgskin in Resources */,
+				EB1E5E6C2E63050E00305D33 /* dg_N64.dgskin in Resources */,
 				EB1E5E6D2E63050E00305D33 /* efupdate.json in Resources */,
 				EB1E5E6E2E63050E00305D33 /* MenuSlider.storyboard in Resources */,
 				EB1E5E6F2E63050E00305D33 /* GameTableViewCell.xib in Resources */,
@@ -3422,11 +3422,11 @@
 				EB112F222E6AEB2700637F9E /* MainHome.storyboard in Resources */,
 				EB1E5E792E63050E00305D33 /* CustomNavigationBar.xib in Resources */,
 				EB1E5E7A2E63050E00305D33 /* UserProfile.xib in Resources */,
-				EB1E5E7B2E63050E00305D33 /* dg_SNES.deltaskin in Resources */,
+				EB1E5E7B2E63050E00305D33 /* dg_SNES.dgskin in Resources */,
 				EB1E5E7C2E63050E00305D33 /* GameDownload.storyboard in Resources */,
-				EB1E5E7D2E63050E00305D33 /* dg_DS.deltaskin in Resources */,
+				EB1E5E7D2E63050E00305D33 /* dg_DS.dgskin in Resources */,
 				EB1E5E7E2E63050E00305D33 /* SwipableControllerCell.xib in Resources */,
-				EB1E5E7F2E63050E00305D33 /* dg_GBC.deltaskin in Resources */,
+				EB1E5E7F2E63050E00305D33 /* dg_GBC.dgskin in Resources */,
 				EB1E5E802E63050E00305D33 /* Main.storyboard in Resources */,
 				EB1E5E812E63050E00305D33 /* StartGame.storyboard in Resources */,
 				EB1E5E822E63050E00305D33 /* SwipableController.xib in Resources */,
@@ -4515,7 +4515,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GBoy;
@@ -4596,7 +4596,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GBoy;
@@ -4991,7 +4991,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 29;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -5034,7 +5034,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
