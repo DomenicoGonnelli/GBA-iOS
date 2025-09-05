@@ -692,3 +692,12 @@
 
 "Fast_Forward_Set" = "Set speed";
 "mutedItem" = "Mute Audio";
+
+"rouletteTitle" = "SPIN ROULETTE";
+"puzzleTitle" = "PUZZLE GAME";
+"questionTitle" = "GUESS THE ANIMAL";
+"listTitle" = "ANIMALS\nLIST";
+"tutorial_text" = "Click the Press button to start roulette";
+"rotation_button" = "PRESS";
+
+"other_Title" = "Other games";

@@ -235,6 +235,56 @@
 		EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */; };
 		EB112F042E69CBF700637F9E /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F032E69CBF600637F9E /* CheckModel.swift */; };
 		EB112F052E69CBF700637F9E /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F032E69CBF600637F9E /* CheckModel.swift */; };
+		EB112F202E6AEB2700637F9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F1B2E6AEB2700637F9E /* HomeViewController.swift */; };
+		EB112F212E6AEB2700637F9E /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F1E2E6AEB2700637F9E /* HomeCell.swift */; };
+		EB112F222E6AEB2700637F9E /* MainHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB112F1D2E6AEB2700637F9E /* MainHome.storyboard */; };
+		EB112F232E6AEB2700637F9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F1B2E6AEB2700637F9E /* HomeViewController.swift */; };
+		EB112F242E6AEB2700637F9E /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F1E2E6AEB2700637F9E /* HomeCell.swift */; };
+		EB112F252E6AEB2700637F9E /* MainHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB112F1D2E6AEB2700637F9E /* MainHome.storyboard */; };
+		EB112F272E6AEDC100637F9E /* AnimalBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F262E6AEDBC00637F9E /* AnimalBase.swift */; };
+		EB112F282E6AEDC100637F9E /* AnimalBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F262E6AEDBC00637F9E /* AnimalBase.swift */; };
+		EB112F422E6AEDFB00637F9E /* BallBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F372E6AEDFB00637F9E /* BallBehavior.swift */; };
+		EB112F432E6AEDFB00637F9E /* RouletteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F2F2E6AEDFB00637F9E /* RouletteCell.swift */; };
+		EB112F442E6AEDFB00637F9E /* AllAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F3E2E6AEDFB00637F9E /* AllAnimalViewController.swift */; };
+		EB112F452E6AEDFB00637F9E /* AllAnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F3B2E6AEDFB00637F9E /* AllAnimalCell.swift */; };
+		EB112F462E6AEDFB00637F9E /* RouletteViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F332E6AEDFB00637F9E /* RouletteViewLayout.swift */; };
+		EB112F472E6AEDFB00637F9E /* AnimalRouletteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F322E6AEDFB00637F9E /* AnimalRouletteVC.swift */; };
+		EB112F482E6AEDFB00637F9E /* AnimalGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F362E6AEDFB00637F9E /* AnimalGameViewController.swift */; };
+		EB112F492E6AEDFB00637F9E /* PlayingBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F392E6AEDFB00637F9E /* PlayingBallView.swift */; };
+		EB112F4B2E6AEDFB00637F9E /* PlayingBallCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F382E6AEDFB00637F9E /* PlayingBallCollection.swift */; };
+		EB112F4C2E6AEDFB00637F9E /* GameBall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB112F352E6AEDFB00637F9E /* GameBall.storyboard */; };
+		EB112F4E2E6AEDFB00637F9E /* AnimalRoulette.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB112F312E6AEDFB00637F9E /* AnimalRoulette.storyboard */; };
+		EB112F4F2E6AEDFB00637F9E /* AllAnimal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB112F3D2E6AEDFB00637F9E /* AllAnimal.storyboard */; };
+		EB112F522E6AEDFB00637F9E /* BallBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F372E6AEDFB00637F9E /* BallBehavior.swift */; };
+		EB112F532E6AEDFB00637F9E /* RouletteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F2F2E6AEDFB00637F9E /* RouletteCell.swift */; };
+		EB112F542E6AEDFB00637F9E /* AllAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F3E2E6AEDFB00637F9E /* AllAnimalViewController.swift */; };
+		EB112F552E6AEDFB00637F9E /* AllAnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F3B2E6AEDFB00637F9E /* AllAnimalCell.swift */; };
+		EB112F562E6AEDFB00637F9E /* RouletteViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F332E6AEDFB00637F9E /* RouletteViewLayout.swift */; };
+		EB112F572E6AEDFB00637F9E /* AnimalRouletteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F322E6AEDFB00637F9E /* AnimalRouletteVC.swift */; };
+		EB112F582E6AEDFB00637F9E /* AnimalGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F362E6AEDFB00637F9E /* AnimalGameViewController.swift */; };
+		EB112F592E6AEDFB00637F9E /* PlayingBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F392E6AEDFB00637F9E /* PlayingBallView.swift */; };
+		EB112F5B2E6AEDFB00637F9E /* PlayingBallCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F382E6AEDFB00637F9E /* PlayingBallCollection.swift */; };
+		EB112F5C2E6AEDFB00637F9E /* GameBall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB112F352E6AEDFB00637F9E /* GameBall.storyboard */; };
+		EB112F5E2E6AEDFB00637F9E /* AnimalRoulette.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB112F312E6AEDFB00637F9E /* AnimalRoulette.storyboard */; };
+		EB112F5F2E6AEDFB00637F9E /* AllAnimal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB112F3D2E6AEDFB00637F9E /* AllAnimal.storyboard */; };
+		EB112F672E6AEEBD00637F9E /* Enumerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F622E6AEEBD00637F9E /* Enumerators.swift */; };
+		EB112F6A2E6AEEBD00637F9E /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F612E6AEEBD00637F9E /* AnimalModel.swift */; };
+		EB112F6C2E6AEEBD00637F9E /* Enumerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F622E6AEEBD00637F9E /* Enumerators.swift */; };
+		EB112F6F2E6AEEBD00637F9E /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F612E6AEEBD00637F9E /* AnimalModel.swift */; };
+		EB112F762E6AEFE900637F9E /* AnimalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F752E6AEFE900637F9E /* AnimalManager.swift */; };
+		EB112F772E6AEFE900637F9E /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F742E6AEFE900637F9E /* SettingManager.swift */; };
+		EB112F782E6AEFE900637F9E /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F732E6AEFE900637F9E /* ImageManager.swift */; };
+		EB112F792E6AEFE900637F9E /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F722E6AEFE900637F9E /* SoundManager.swift */; };
+		EB112F7A2E6AEFE900637F9E /* AnimalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F752E6AEFE900637F9E /* AnimalManager.swift */; };
+		EB112F7B2E6AEFE900637F9E /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F742E6AEFE900637F9E /* SettingManager.swift */; };
+		EB112F7C2E6AEFE900637F9E /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F732E6AEFE900637F9E /* ImageManager.swift */; };
+		EB112F7D2E6AEFE900637F9E /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F722E6AEFE900637F9E /* SoundManager.swift */; };
+		EB112F7F2E6AF10600637F9E /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F7E2E6AF10600637F9E /* CellProtocol.swift */; };
+		EB112F802E6AF10600637F9E /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F7E2E6AF10600637F9E /* CellProtocol.swift */; };
+		EB112F822E6AF21000637F9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F812E6AF21000637F9E /* Extensions.swift */; };
+		EB112F832E6AF21000637F9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F812E6AF21000637F9E /* Extensions.swift */; };
+		EB112F852E6AF66500637F9E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F842E6AF66500637F9E /* Parser.swift */; };
+		EB112F862E6AF66500637F9E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F842E6AF66500637F9E /* Parser.swift */; };
 		EB1E5D222E63050E00305D33 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3645723245A6000CD0EB1 /* LicensesViewController.swift */; };
 		EB1E5D232E63050E00305D33 /* RankingStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB7AE2DB1615A007C5BB4 /* RankingStarView.swift */; };
 		EB1E5D242E63050E00305D33 /* Input+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6F7B71F435BC500221B96 /* Input+Display.swift */; };
@@ -1022,7 +1072,7 @@
 		BFEF24F21F7DD4FB00454C62 /* SaveStateMigrationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveStateMigrationPolicy.swift; sourceTree = "<group>"; };
 		BFF0742B1E9DC17500ACDF4A /* GBCDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GBCDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA4C081E8A24D600D87934 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
-		BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GemBoy Advance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFA71D71AAC406100EE9DD1 /* GBoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA71DB1AAC406100EE9DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFA71DC1AAC406100EE9DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFC461B1D59823500AF2CC6 /* GamesPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesPresentationController.swift; sourceTree = "<group>"; };
@@ -1121,6 +1171,31 @@
 		EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__DS.deltaskin; sourceTree = "<group>"; };
 		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB112F032E69CBF600637F9E /* CheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
+		EB112F1B2E6AEB2700637F9E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EB112F1C2E6AEB2700637F9E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/MainHome.storyboard; sourceTree = "<group>"; };
+		EB112F1E2E6AEB2700637F9E /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		EB112F262E6AEDBC00637F9E /* AnimalBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalBase.swift; sourceTree = "<group>"; };
+		EB112F2F2E6AEDFB00637F9E /* RouletteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteCell.swift; sourceTree = "<group>"; };
+		EB112F312E6AEDFB00637F9E /* AnimalRoulette.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimalRoulette.storyboard; sourceTree = "<group>"; };
+		EB112F322E6AEDFB00637F9E /* AnimalRouletteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRouletteVC.swift; sourceTree = "<group>"; };
+		EB112F332E6AEDFB00637F9E /* RouletteViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewLayout.swift; sourceTree = "<group>"; };
+		EB112F352E6AEDFB00637F9E /* GameBall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameBall.storyboard; sourceTree = "<group>"; };
+		EB112F362E6AEDFB00637F9E /* AnimalGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGameViewController.swift; sourceTree = "<group>"; };
+		EB112F372E6AEDFB00637F9E /* BallBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallBehavior.swift; sourceTree = "<group>"; };
+		EB112F382E6AEDFB00637F9E /* PlayingBallCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingBallCollection.swift; sourceTree = "<group>"; };
+		EB112F392E6AEDFB00637F9E /* PlayingBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingBallView.swift; sourceTree = "<group>"; };
+		EB112F3B2E6AEDFB00637F9E /* AllAnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimalCell.swift; sourceTree = "<group>"; };
+		EB112F3D2E6AEDFB00637F9E /* AllAnimal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AllAnimal.storyboard; sourceTree = "<group>"; };
+		EB112F3E2E6AEDFB00637F9E /* AllAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimalViewController.swift; sourceTree = "<group>"; };
+		EB112F612E6AEEBD00637F9E /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		EB112F622E6AEEBD00637F9E /* Enumerators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerators.swift; sourceTree = "<group>"; };
+		EB112F722E6AEFE900637F9E /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		EB112F732E6AEFE900637F9E /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		EB112F742E6AEFE900637F9E /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
+		EB112F752E6AEFE900637F9E /* AnimalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalManager.swift; sourceTree = "<group>"; };
+		EB112F7E2E6AF10600637F9E /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		EB112F812E6AF21000637F9E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EB112F842E6AF66500637F9E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		EB1E5E8B2E63050E00305D33 /* Darlion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darlion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1E5E9B2E63072800305D33 /* NotificationNew.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationNew.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1E5E9F2E630EA100305D33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -1927,7 +2002,7 @@
 		BFFA71D81AAC406100EE9DD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */,
+				BFFA71D71AAC406100EE9DD1 /* GBoy.app */,
 				D5D7C1F129E60DFF00663793 /* libGemBoyFeatures.a */,
 				D539102F29E88B6B0006B350 /* GemBoyPreviews.framework */,
 				EB8E0D612D947655004BFB1F /* Notification.appex */,
@@ -2166,6 +2241,109 @@
 				EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		EB112F1A2E6AEAFB00637F9E /* RouletteAnimals */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F812E6AF21000637F9E /* Extensions.swift */,
+				EB112F712E6AEFDD00637F9E /* Managers */,
+				EB112F662E6AEEBD00637F9E /* Models */,
+				EB112F402E6AEDFB00637F9E /* Section */,
+				EB112F262E6AEDBC00637F9E /* AnimalBase.swift */,
+				EB112F1F2E6AEB2700637F9E /* Home */,
+			);
+			path = RouletteAnimals;
+			sourceTree = "<group>";
+		};
+		EB112F1F2E6AEB2700637F9E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F1B2E6AEB2700637F9E /* HomeViewController.swift */,
+				EB112F1D2E6AEB2700637F9E /* MainHome.storyboard */,
+				EB112F1E2E6AEB2700637F9E /* HomeCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EB112F302E6AEDFB00637F9E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F2F2E6AEDFB00637F9E /* RouletteCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EB112F342E6AEDFB00637F9E /* AnimalRoulette */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F302E6AEDFB00637F9E /* Cell */,
+				EB112F312E6AEDFB00637F9E /* AnimalRoulette.storyboard */,
+				EB112F322E6AEDFB00637F9E /* AnimalRouletteVC.swift */,
+				EB112F332E6AEDFB00637F9E /* RouletteViewLayout.swift */,
+			);
+			path = AnimalRoulette;
+			sourceTree = "<group>";
+		};
+		EB112F3A2E6AEDFB00637F9E /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F352E6AEDFB00637F9E /* GameBall.storyboard */,
+				EB112F362E6AEDFB00637F9E /* AnimalGameViewController.swift */,
+				EB112F372E6AEDFB00637F9E /* BallBehavior.swift */,
+				EB112F382E6AEDFB00637F9E /* PlayingBallCollection.swift */,
+				EB112F392E6AEDFB00637F9E /* PlayingBallView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		EB112F3C2E6AEDFB00637F9E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F3B2E6AEDFB00637F9E /* AllAnimalCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EB112F3F2E6AEDFB00637F9E /* AllAnimal */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F3C2E6AEDFB00637F9E /* Cell */,
+				EB112F3D2E6AEDFB00637F9E /* AllAnimal.storyboard */,
+				EB112F3E2E6AEDFB00637F9E /* AllAnimalViewController.swift */,
+			);
+			path = AllAnimal;
+			sourceTree = "<group>";
+		};
+		EB112F402E6AEDFB00637F9E /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F342E6AEDFB00637F9E /* AnimalRoulette */,
+				EB112F3A2E6AEDFB00637F9E /* Game */,
+				EB112F3F2E6AEDFB00637F9E /* AllAnimal */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		EB112F662E6AEEBD00637F9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F7E2E6AF10600637F9E /* CellProtocol.swift */,
+				EB112F612E6AEEBD00637F9E /* AnimalModel.swift */,
+				EB112F622E6AEEBD00637F9E /* Enumerators.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB112F712E6AEFDD00637F9E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EB112F722E6AEFE900637F9E /* SoundManager.swift */,
+				EB112F732E6AEFE900637F9E /* ImageManager.swift */,
+				EB112F742E6AEFE900637F9E /* SettingManager.swift */,
+				EB112F752E6AEFE900637F9E /* AnimalManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		EB21EA0C2DB9293100B6B1F4 /* startGame */ = {
@@ -2476,6 +2654,8 @@
 		EBA2BA992D984778007A25A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EB112F842E6AF66500637F9E /* Parser.swift */,
+				EB112F1A2E6AEAFB00637F9E /* RouletteAnimals */,
 				EB52BD0A2E4BD33C002CBE49 /* GameDownload */,
 				EBD6802F2E11475500A92584 /* sliderForFast */,
 				EB21EA0D2DB9294600B6B1F4 /* statistics */,
@@ -2898,7 +3078,7 @@
 				EBBB19F62D998826009C977A /* GoogleSignInSwift */,
 			);
 			productName = Delta;
-			productReference = BFFA71D71AAC406100EE9DD1 /* GemBoy Advance.app */;
+			productReference = BFFA71D71AAC406100EE9DD1 /* GBoy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D539102E29E88B6B0006B350 /* GemBoyPreviews */ = {
@@ -3132,9 +3312,13 @@
 				EBBB19692D9971A8009C977A /* loaderPink.json in Resources */,
 				EBBB196A2D9971A8009C977A /* GothamRnd-Light.otf in Resources */,
 				EBBB196B2D9971A8009C977A /* GothamRnd-Bold.otf in Resources */,
+				EB112F5C2E6AEDFB00637F9E /* GameBall.storyboard in Resources */,
+				EB112F5E2E6AEDFB00637F9E /* AnimalRoulette.storyboard in Resources */,
+				EB112F5F2E6AEDFB00637F9E /* AllAnimal.storyboard in Resources */,
 				EBBB196C2D9971A8009C977A /* GothamRnd-BoldItal.otf in Resources */,
 				EBBB196D2D9971A8009C977A /* GothamRnd-LightItal.otf in Resources */,
 				EBBB19732D997269009C977A /* Loader.xib in Resources */,
+				EB112F252E6AEB2700637F9E /* MainHome.storyboard in Resources */,
 				EBBB19C32D9977A0009C977A /* Splash.storyboard in Resources */,
 				EBBB19EA2D9982C6009C977A /* TutorialLong.storyboard in Resources */,
 				EBBB19EB2D9982C6009C977A /* TutorialSplit.storyboard in Resources */,
@@ -3189,6 +3373,9 @@
 				EB1E5E4D2E63050E00305D33 /* Update.storyboard in Resources */,
 				EB1E5E4E2E63050E00305D33 /* StatisticsUser.storyboard in Resources */,
 				EB1E5E4F2E63050E00305D33 /* Statistics.storyboard in Resources */,
+				EB112F4C2E6AEDFB00637F9E /* GameBall.storyboard in Resources */,
+				EB112F4E2E6AEDFB00637F9E /* AnimalRoulette.storyboard in Resources */,
+				EB112F4F2E6AEDFB00637F9E /* AllAnimal.storyboard in Resources */,
 				EB1E5E502E63050E00305D33 /* Profanity.txt in Resources */,
 				EB1E5E512E63050E00305D33 /* dg__DS.deltaskin in Resources */,
 				EB1E5E522E63050E00305D33 /* Login.storyboard in Resources */,
@@ -3232,6 +3419,7 @@
 				EB1E5E752E63050E00305D33 /* Localizable.strings in Resources */,
 				EB1E5E762E63050E00305D33 /* AlertView.xib in Resources */,
 				EB1E5E772E63050E00305D33 /* LaunchScreenStart.storyboard in Resources */,
+				EB112F222E6AEB2700637F9E /* MainHome.storyboard in Resources */,
 				EB1E5E792E63050E00305D33 /* CustomNavigationBar.xib in Resources */,
 				EB1E5E7A2E63050E00305D33 /* UserProfile.xib in Resources */,
 				EB1E5E7B2E63050E00305D33 /* dg_SNES.deltaskin in Resources */,
@@ -3493,6 +3681,8 @@
 				EB52BD0C2E4BD33C002CBE49 /* GameDownloadService.swift in Sources */,
 				EB52BD0D2E4BD33C002CBE49 /* GameDownloadModel.swift in Sources */,
 				EB52BD0E2E4BD33C002CBE49 /* DownlaodCell.swift in Sources */,
+				EB112F672E6AEEBD00637F9E /* Enumerators.swift in Sources */,
+				EB112F6A2E6AEEBD00637F9E /* AnimalModel.swift in Sources */,
 				EB52BD0F2E4BD33C002CBE49 /* GameDownloadViewController.swift in Sources */,
 				D552DE3D2D39DB2A00E737BE /* WFCServer.swift in Sources */,
 				D5D78AE529F9BC3700E064F0 /* DSAirPlay.swift in Sources */,
@@ -3536,6 +3726,10 @@
 				BF6BF31C1EB821A0008E83CD /* GamesDatabaseImportOption.swift in Sources */,
 				D5AA0F142CE3F5040015D134 /* _ManagedPatron.swift in Sources */,
 				EB112F042E69CBF700637F9E /* CheckModel.swift in Sources */,
+				EB112F7A2E6AEFE900637F9E /* AnimalManager.swift in Sources */,
+				EB112F7B2E6AEFE900637F9E /* SettingManager.swift in Sources */,
+				EB112F7C2E6AEFE900637F9E /* ImageManager.swift in Sources */,
+				EB112F7D2E6AEFE900637F9E /* SoundManager.swift in Sources */,
 				D51D8EC82D49CA26002649C2 /* Delta10ToDelta11.xcmappingmodel in Sources */,
 				BFFA4C091E8A24D600D87934 /* GameTableViewCell.swift in Sources */,
 				BFFC46231D5984A000AF2CC6 /* LaunchViewController.swift in Sources */,
@@ -3566,6 +3760,7 @@
 				EB6EB3DB2DBE303C00EAC356 /* MenuCell.swift in Sources */,
 				D5B4235C2BD9C24000093054 /* RoundedImageView.swift in Sources */,
 				BF5942941E09BD1A0051894B /* NSManagedObject+Conveniences.swift in Sources */,
+				EB112F862E6AF66500637F9E /* Parser.swift in Sources */,
 				EB3EB5FA2DA07626004FFACF /* TabBarItemViewController.swift in Sources */,
 				EB69AB212D9781A500311D39 /* DatabaseModelProtocol.swift in Sources */,
 				EB69AB222D9781A500311D39 /* PremiumSubscriptionModel.swift in Sources */,
@@ -3593,15 +3788,19 @@
 				EBA2BADB2D9848AE007A25A6 /* AlertModel.swift in Sources */,
 				EBA2BADC2D9848AE007A25A6 /* HomeServiceModel.swift in Sources */,
 				AC1C992729F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift in Sources */,
+				EB112F232E6AEB2700637F9E /* HomeViewController.swift in Sources */,
+				EB112F242E6AEB2700637F9E /* HomeCell.swift in Sources */,
 				D5E12AEB2D01157F000C7531 /* String+Profanity.swift in Sources */,
 				BF6EE5E91F7C5F860051AD6C /* _GameControllerInputMapping.swift in Sources */,
 				BF5942871E09BC8B0051894B /* _ControllerSkin.swift in Sources */,
+				EB112F7F2E6AF10600637F9E /* CellProtocol.swift in Sources */,
 				EB3EB5E12DA0738D004FFACF /* PremiumSubscriptionViewController.swift in Sources */,
 				EB3EB5E22DA0738D004FFACF /* NewIconCell.swift in Sources */,
 				EB3EB5E32DA0738D004FFACF /* UserProfileViewController.swift in Sources */,
 				EB3EB5E42DA0738D004FFACF /* ColorPaletteCell.swift in Sources */,
 				EB3EB5E52DA0738D004FFACF /* UserProfileMenuItemCell.swift in Sources */,
 				EB3EB5E72DA0738D004FFACF /* PremiumSinglePageViewController.swift in Sources */,
+				EB112F282E6AEDC100637F9E /* AnimalBase.swift in Sources */,
 				EB3EB5E92DA0738D004FFACF /* ColorPaletteViewController.swift in Sources */,
 				EB3EB5EA2DA0738D004FFACF /* NotificationListViewController.swift in Sources */,
 				EB3EB5EB2DA0738D004FFACF /* PremiumDataSource.swift in Sources */,
@@ -3646,6 +3845,7 @@
 				BF1173501DA32CF600047DF8 /* ControllersSettingsViewController.swift in Sources */,
 				BFFC461E1D59823500AF2CC6 /* GamesPresentationController.swift in Sources */,
 				BF99A5971DC2F9C400468E9E /* ControllerSkinTableViewCell.swift in Sources */,
+				EB112F822E6AF21000637F9E /* Extensions.swift in Sources */,
 				BFE9908024451E15006409A7 /* MelonDSCoreSettingsViewController.swift in Sources */,
 				BF5942861E09BC8B0051894B /* _Cheat.swift in Sources */,
 				EBAEB7B42DB162F9007C5BB4 /* SystemSelection.swift in Sources */,
@@ -3669,6 +3869,15 @@
 				BF6BF31A1EB82146008E83CD /* ClipboardImportOption.swift in Sources */,
 				D54529CE2D0CF41B00E6EBDD /* OnlineMultiplayer.swift in Sources */,
 				BF59427F1E09BC830051894B /* GameCollection.swift in Sources */,
+				EB112F522E6AEDFB00637F9E /* BallBehavior.swift in Sources */,
+				EB112F532E6AEDFB00637F9E /* RouletteCell.swift in Sources */,
+				EB112F542E6AEDFB00637F9E /* AllAnimalViewController.swift in Sources */,
+				EB112F552E6AEDFB00637F9E /* AllAnimalCell.swift in Sources */,
+				EB112F562E6AEDFB00637F9E /* RouletteViewLayout.swift in Sources */,
+				EB112F572E6AEDFB00637F9E /* AnimalRouletteVC.swift in Sources */,
+				EB112F582E6AEDFB00637F9E /* AnimalGameViewController.swift in Sources */,
+				EB112F592E6AEDFB00637F9E /* PlayingBallView.swift in Sources */,
+				EB112F5B2E6AEDFB00637F9E /* PlayingBallCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3792,6 +4001,8 @@
 				EB1E5D732E63050E00305D33 /* GameDownloadService.swift in Sources */,
 				EB1E5D742E63050E00305D33 /* GameDownloadModel.swift in Sources */,
 				EB1E5D752E63050E00305D33 /* DownlaodCell.swift in Sources */,
+				EB112F6C2E6AEEBD00637F9E /* Enumerators.swift in Sources */,
+				EB112F6F2E6AEEBD00637F9E /* AnimalModel.swift in Sources */,
 				EB1E5D762E63050E00305D33 /* GameDownloadViewController.swift in Sources */,
 				EB1E5D772E63050E00305D33 /* WFCServer.swift in Sources */,
 				EB1E5D782E63050E00305D33 /* DSAirPlay.swift in Sources */,
@@ -3835,6 +4046,10 @@
 				EB1E5D9E2E63050E00305D33 /* GamesDatabaseImportOption.swift in Sources */,
 				EB1E5D9F2E63050E00305D33 /* _ManagedPatron.swift in Sources */,
 				EB112F052E69CBF700637F9E /* CheckModel.swift in Sources */,
+				EB112F762E6AEFE900637F9E /* AnimalManager.swift in Sources */,
+				EB112F772E6AEFE900637F9E /* SettingManager.swift in Sources */,
+				EB112F782E6AEFE900637F9E /* ImageManager.swift in Sources */,
+				EB112F792E6AEFE900637F9E /* SoundManager.swift in Sources */,
 				EB1E5DA02E63050E00305D33 /* Delta10ToDelta11.xcmappingmodel in Sources */,
 				EB1E5DA12E63050E00305D33 /* GameTableViewCell.swift in Sources */,
 				EB1E5DA22E63050E00305D33 /* LaunchViewController.swift in Sources */,
@@ -3865,6 +4080,7 @@
 				EB1E5DBB2E63050E00305D33 /* MenuCell.swift in Sources */,
 				EB1E5DBC2E63050E00305D33 /* RoundedImageView.swift in Sources */,
 				EB1E5DBD2E63050E00305D33 /* NSManagedObject+Conveniences.swift in Sources */,
+				EB112F852E6AF66500637F9E /* Parser.swift in Sources */,
 				EB1E5DBE2E63050E00305D33 /* TabBarItemViewController.swift in Sources */,
 				EB1E5DBF2E63050E00305D33 /* DatabaseModelProtocol.swift in Sources */,
 				EB1E5DC02E63050E00305D33 /* PremiumSubscriptionModel.swift in Sources */,
@@ -3892,15 +4108,19 @@
 				EB1E5DD62E63050E00305D33 /* AlertModel.swift in Sources */,
 				EB1E5DD72E63050E00305D33 /* HomeServiceModel.swift in Sources */,
 				EB1E5DD82E63050E00305D33 /* GameViewController+ExperimentalToasts.swift in Sources */,
+				EB112F202E6AEB2700637F9E /* HomeViewController.swift in Sources */,
+				EB112F212E6AEB2700637F9E /* HomeCell.swift in Sources */,
 				EB1E5DD92E63050E00305D33 /* String+Profanity.swift in Sources */,
 				EB1E5DDA2E63050E00305D33 /* _GameControllerInputMapping.swift in Sources */,
 				EB1E5DDB2E63050E00305D33 /* _ControllerSkin.swift in Sources */,
+				EB112F802E6AF10600637F9E /* CellProtocol.swift in Sources */,
 				EB1E5DDC2E63050E00305D33 /* PremiumSubscriptionViewController.swift in Sources */,
 				EB1E5DDD2E63050E00305D33 /* NewIconCell.swift in Sources */,
 				EB1E5DDE2E63050E00305D33 /* UserProfileViewController.swift in Sources */,
 				EB1E5DDF2E63050E00305D33 /* ColorPaletteCell.swift in Sources */,
 				EB1E5DE02E63050E00305D33 /* UserProfileMenuItemCell.swift in Sources */,
 				EB1E5DE12E63050E00305D33 /* PremiumSinglePageViewController.swift in Sources */,
+				EB112F272E6AEDC100637F9E /* AnimalBase.swift in Sources */,
 				EB1E5DE22E63050E00305D33 /* ColorPaletteViewController.swift in Sources */,
 				EB1E5DE32E63050E00305D33 /* NotificationListViewController.swift in Sources */,
 				EB1E5DE42E63050E00305D33 /* PremiumDataSource.swift in Sources */,
@@ -3945,6 +4165,7 @@
 				EB1E5E0B2E63050E00305D33 /* ControllersSettingsViewController.swift in Sources */,
 				EB1E5E0C2E63050E00305D33 /* GamesPresentationController.swift in Sources */,
 				EB1E5E0D2E63050E00305D33 /* ControllerSkinTableViewCell.swift in Sources */,
+				EB112F832E6AF21000637F9E /* Extensions.swift in Sources */,
 				EB1E5E0E2E63050E00305D33 /* MelonDSCoreSettingsViewController.swift in Sources */,
 				EB1E5E0F2E63050E00305D33 /* _Cheat.swift in Sources */,
 				EB1E5E102E63050E00305D33 /* SystemSelection.swift in Sources */,
@@ -3968,6 +4189,15 @@
 				EB1E5E222E63050E00305D33 /* ClipboardImportOption.swift in Sources */,
 				EB1E5E232E63050E00305D33 /* OnlineMultiplayer.swift in Sources */,
 				EB1E5E242E63050E00305D33 /* GameCollection.swift in Sources */,
+				EB112F422E6AEDFB00637F9E /* BallBehavior.swift in Sources */,
+				EB112F432E6AEDFB00637F9E /* RouletteCell.swift in Sources */,
+				EB112F442E6AEDFB00637F9E /* AllAnimalViewController.swift in Sources */,
+				EB112F452E6AEDFB00637F9E /* AllAnimalCell.swift in Sources */,
+				EB112F462E6AEDFB00637F9E /* RouletteViewLayout.swift in Sources */,
+				EB112F472E6AEDFB00637F9E /* AnimalRouletteVC.swift in Sources */,
+				EB112F482E6AEDFB00637F9E /* AnimalGameViewController.swift in Sources */,
+				EB112F492E6AEDFB00637F9E /* PlayingBallView.swift in Sources */,
+				EB112F4B2E6AEDFB00637F9E /* PlayingBallCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4033,6 +4263,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EB112F1D2E6AEB2700637F9E /* MainHome.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB112F1C2E6AEB2700637F9E /* Main.storyboard */,
+			);
+			name = MainHome.storyboard;
+			sourceTree = "<group>";
+		};
 		EB6EB4022DBECB9200EAC356 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -4277,10 +4515,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Emulator";
+				INFOPLIST_KEY_CFBundleDisplayName = GBoy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4329,7 +4567,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
-				PRODUCT_NAME = "GemBoy Advance";
+				PRODUCT_NAME = GBoy;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -4358,10 +4596,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "GemBoy Emulator";
+				INFOPLIST_KEY_CFBundleDisplayName = GBoy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4374,7 +4612,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
-				PRODUCT_NAME = "GemBoy Advance";
+				PRODUCT_NAME = GBoy;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="72D-ul-10D">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animal Game View Controller-->
+        <scene sceneID="2se-Nj-AZ4">
+            <objects>
+                <viewController storyboardIdentifier="AnimalGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="72D-ul-10D" customClass="AnimalGameViewController" customModule="Darlion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cDb-RL-Zta">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_principal" translatesAutoresizingMaskIntoConstraints="NO" id="hcA-cv-fHy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plp-I0-VFc">
+                                <rect key="frame" x="0.0" y="98" width="414" height="724"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWQ-fc-tdK" customClass="PlayingBallView" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="312" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-6Y-BQ2">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <view hidden="YES" alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Na4-05-Z07">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="52A-Z4-yUs"/>
+                                            <constraint firstItem="Na4-05-Z07" firstAttribute="top" secondItem="MWQ-fc-tdK" secondAttribute="top" id="N6k-kP-MKs"/>
+                                            <constraint firstItem="c2I-6Y-BQ2" firstAttribute="top" secondItem="MWQ-fc-tdK" secondAttribute="top" id="OHi-CS-1iz"/>
+                                            <constraint firstItem="Na4-05-Z07" firstAttribute="leading" secondItem="MWQ-fc-tdK" secondAttribute="leading" id="bJy-tk-4bl"/>
+                                            <constraint firstAttribute="trailing" secondItem="c2I-6Y-BQ2" secondAttribute="trailing" id="dSu-Lt-3FR"/>
+                                            <constraint firstAttribute="trailing" secondItem="Na4-05-Z07" secondAttribute="trailing" id="jFD-c3-LVH"/>
+                                            <constraint firstItem="c2I-6Y-BQ2" firstAttribute="leading" secondItem="MWQ-fc-tdK" secondAttribute="leading" id="sOA-qj-n9W"/>
+                                            <constraint firstAttribute="bottom" secondItem="c2I-6Y-BQ2" secondAttribute="bottom" id="sUH-52-6pM"/>
+                                            <constraint firstAttribute="bottom" secondItem="Na4-05-Z07" secondAttribute="bottom" id="uRd-o5-Uxk"/>
+                                            <constraint firstAttribute="width" constant="100" id="uxo-7l-YWS"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="animalImage" destination="c2I-6Y-BQ2" id="eNd-Vo-a2c"/>
+                                            <outlet property="errorView" destination="Na4-05-Z07" id="JVN-la-EdU"/>
+                                        </connections>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ek-6Q-d74" customClass="PlayingBallView" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="312" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uyH-YX-tqI">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <view hidden="YES" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnZ-Iz-BuX">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="KnZ-Iz-BuX" secondAttribute="bottom" id="0zb-Xo-UYW"/>
+                                            <constraint firstItem="uyH-YX-tqI" firstAttribute="top" secondItem="3ek-6Q-d74" secondAttribute="top" id="Hwm-dG-Ymp"/>
+                                            <constraint firstItem="uyH-YX-tqI" firstAttribute="leading" secondItem="3ek-6Q-d74" secondAttribute="leading" id="IMK-6n-JLK"/>
+                                            <constraint firstAttribute="height" constant="100" id="JyX-1v-A1c"/>
+                                            <constraint firstItem="KnZ-Iz-BuX" firstAttribute="leading" secondItem="3ek-6Q-d74" secondAttribute="leading" id="SU7-iP-bA9"/>
+                                            <constraint firstAttribute="bottom" secondItem="uyH-YX-tqI" secondAttribute="bottom" id="Tja-8Q-FAZ"/>
+                                            <constraint firstAttribute="width" constant="100" id="eqB-uE-40F"/>
+                                            <constraint firstAttribute="trailing" secondItem="uyH-YX-tqI" secondAttribute="trailing" id="eyI-zJ-4Ui"/>
+                                            <constraint firstItem="KnZ-Iz-BuX" firstAttribute="top" secondItem="3ek-6Q-d74" secondAttribute="top" id="mPj-ka-YXg"/>
+                                            <constraint firstAttribute="trailing" secondItem="KnZ-Iz-BuX" secondAttribute="trailing" id="xWx-JR-7bp"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="animalImage" destination="uyH-YX-tqI" id="Hii-4F-vka"/>
+                                            <outlet property="errorView" destination="KnZ-Iz-BuX" id="Sel-4a-xrP"/>
+                                        </connections>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCO-nq-2xe" customClass="PlayingBallView" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="312" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HcQ-Ad-ykf">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <view hidden="YES" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoH-L6-eOY">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="HcQ-Ad-ykf" firstAttribute="leading" secondItem="SCO-nq-2xe" secondAttribute="leading" id="339-VX-Vs8"/>
+                                            <constraint firstItem="xoH-L6-eOY" firstAttribute="top" secondItem="SCO-nq-2xe" secondAttribute="top" id="4K1-5b-EoW"/>
+                                            <constraint firstAttribute="height" constant="100" id="J6i-91-iOj"/>
+                                            <constraint firstAttribute="bottom" secondItem="HcQ-Ad-ykf" secondAttribute="bottom" id="P4E-UO-beJ"/>
+                                            <constraint firstItem="xoH-L6-eOY" firstAttribute="leading" secondItem="SCO-nq-2xe" secondAttribute="leading" id="SZj-bA-j6T"/>
+                                            <constraint firstAttribute="trailing" secondItem="xoH-L6-eOY" secondAttribute="trailing" id="WfA-ZJ-rxj"/>
+                                            <constraint firstAttribute="bottom" secondItem="xoH-L6-eOY" secondAttribute="bottom" id="Yhq-UZ-3uF"/>
+                                            <constraint firstAttribute="width" constant="100" id="jfM-Ff-FAR"/>
+                                            <constraint firstAttribute="trailing" secondItem="HcQ-Ad-ykf" secondAttribute="trailing" id="l3f-wT-yTH"/>
+                                            <constraint firstItem="HcQ-Ad-ykf" firstAttribute="top" secondItem="SCO-nq-2xe" secondAttribute="top" id="mYU-4K-U22"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="animalImage" destination="HcQ-Ad-ykf" id="fYL-2Y-jRo"/>
+                                            <outlet property="errorView" destination="xoH-L6-eOY" id="Clu-32-Q1D"/>
+                                        </connections>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swu-x7-umo" customClass="PlayingBallView" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="312" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jzP-N0-6l5">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <view hidden="YES" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P5-L5-sYz">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="5P5-L5-sYz" firstAttribute="top" secondItem="swu-x7-umo" secondAttribute="top" id="4bV-ff-uMP"/>
+                                            <constraint firstAttribute="trailing" secondItem="5P5-L5-sYz" secondAttribute="trailing" id="DZZ-ta-ALs"/>
+                                            <constraint firstItem="jzP-N0-6l5" firstAttribute="leading" secondItem="swu-x7-umo" secondAttribute="leading" id="Gmx-8g-HTr"/>
+                                            <constraint firstAttribute="trailing" secondItem="jzP-N0-6l5" secondAttribute="trailing" id="OQJ-Sn-fCl"/>
+                                            <constraint firstAttribute="bottom" secondItem="jzP-N0-6l5" secondAttribute="bottom" id="Sbj-j6-3BN"/>
+                                            <constraint firstAttribute="width" constant="100" id="YQE-vg-ZvT"/>
+                                            <constraint firstItem="jzP-N0-6l5" firstAttribute="top" secondItem="swu-x7-umo" secondAttribute="top" id="bcb-ee-kcT"/>
+                                            <constraint firstItem="5P5-L5-sYz" firstAttribute="leading" secondItem="swu-x7-umo" secondAttribute="leading" id="oVA-UU-fJi"/>
+                                            <constraint firstAttribute="height" constant="100" id="ti9-DD-66O"/>
+                                            <constraint firstAttribute="bottom" secondItem="5P5-L5-sYz" secondAttribute="bottom" id="vzK-lG-ADm"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="animalImage" destination="jzP-N0-6l5" id="Xxf-L5-9mi"/>
+                                            <outlet property="errorView" destination="5P5-L5-sYz" id="QAx-1w-HGv"/>
+                                        </connections>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCe-vp-Gba" customClass="PlayingBallView" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="312" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpm-cu-lr6">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <view hidden="YES" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-qP-ccZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="4w4-ws-spm"/>
+                                            <constraint firstItem="ma4-qP-ccZ" firstAttribute="leading" secondItem="YCe-vp-Gba" secondAttribute="leading" id="Kl7-GE-SLV"/>
+                                            <constraint firstAttribute="bottom" secondItem="ma4-qP-ccZ" secondAttribute="bottom" id="Mr1-Cl-250"/>
+                                            <constraint firstItem="Tpm-cu-lr6" firstAttribute="leading" secondItem="YCe-vp-Gba" secondAttribute="leading" id="QIx-R4-w6a"/>
+                                            <constraint firstItem="Tpm-cu-lr6" firstAttribute="top" secondItem="YCe-vp-Gba" secondAttribute="top" id="TYH-84-n95"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tpm-cu-lr6" secondAttribute="bottom" id="aZ6-JI-bYb"/>
+                                            <constraint firstAttribute="trailing" secondItem="ma4-qP-ccZ" secondAttribute="trailing" id="dj9-ih-kA5"/>
+                                            <constraint firstAttribute="width" constant="100" id="lHF-aA-TC5"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tpm-cu-lr6" secondAttribute="trailing" id="rUm-Dq-5Gh"/>
+                                            <constraint firstItem="ma4-qP-ccZ" firstAttribute="top" secondItem="YCe-vp-Gba" secondAttribute="top" id="uPV-ca-QPl"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="animalImage" destination="Tpm-cu-lr6" id="P42-Cj-Kso"/>
+                                            <outlet property="errorView" destination="ma4-qP-ccZ" id="rfh-Rg-0Fr"/>
+                                        </connections>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eL9-eH-xEW" customClass="PlayingBallView" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="312" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2fZ-Tb-hyF">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <view hidden="YES" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmf-zn-r5u">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2fZ-Tb-hyF" secondAttribute="trailing" id="0xp-lG-DPG"/>
+                                            <constraint firstItem="2fZ-Tb-hyF" firstAttribute="leading" secondItem="eL9-eH-xEW" secondAttribute="leading" id="Dwr-Wf-jby"/>
+                                            <constraint firstItem="mmf-zn-r5u" firstAttribute="leading" secondItem="eL9-eH-xEW" secondAttribute="leading" id="PoH-4v-46o"/>
+                                            <constraint firstAttribute="trailing" secondItem="mmf-zn-r5u" secondAttribute="trailing" id="Taz-vj-Yf8"/>
+                                            <constraint firstItem="2fZ-Tb-hyF" firstAttribute="top" secondItem="eL9-eH-xEW" secondAttribute="top" id="VKI-p1-UpF"/>
+                                            <constraint firstAttribute="width" constant="100" id="kR9-SZ-aiS"/>
+                                            <constraint firstItem="mmf-zn-r5u" firstAttribute="top" secondItem="eL9-eH-xEW" secondAttribute="top" id="lWx-RD-guo"/>
+                                            <constraint firstAttribute="height" constant="100" id="wAU-VO-ej8"/>
+                                            <constraint firstAttribute="bottom" secondItem="2fZ-Tb-hyF" secondAttribute="bottom" id="wvN-h3-dzL"/>
+                                            <constraint firstAttribute="bottom" secondItem="mmf-zn-r5u" secondAttribute="bottom" id="yLb-YI-6L9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="animalImage" destination="2fZ-Tb-hyF" id="LVn-Zy-8Vf"/>
+                                            <outlet property="errorView" destination="mmf-zn-r5u" id="aTx-WI-CY4"/>
+                                        </connections>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMu-aY-bu0" customClass="PlayingBallView" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="312" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="72d-q2-g0E">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <view hidden="YES" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPw-Vr-WTf">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="wPw-Vr-WTf" firstAttribute="leading" secondItem="OMu-aY-bu0" secondAttribute="leading" id="1sD-es-BuA"/>
+                                            <constraint firstAttribute="height" constant="100" id="5dO-Hq-Kyg"/>
+                                            <constraint firstItem="72d-q2-g0E" firstAttribute="top" secondItem="OMu-aY-bu0" secondAttribute="top" id="AhB-R1-uYU"/>
+                                            <constraint firstAttribute="width" constant="100" id="YrX-QJ-tSt"/>
+                                            <constraint firstAttribute="bottom" secondItem="72d-q2-g0E" secondAttribute="bottom" id="cFb-6I-7Ok"/>
+                                            <constraint firstAttribute="trailing" secondItem="wPw-Vr-WTf" secondAttribute="trailing" id="eld-rI-1Ua"/>
+                                            <constraint firstItem="wPw-Vr-WTf" firstAttribute="top" secondItem="OMu-aY-bu0" secondAttribute="top" id="hAc-Pt-nWt"/>
+                                            <constraint firstItem="72d-q2-g0E" firstAttribute="leading" secondItem="OMu-aY-bu0" secondAttribute="leading" id="qST-pc-gCX"/>
+                                            <constraint firstAttribute="bottom" secondItem="wPw-Vr-WTf" secondAttribute="bottom" id="u4K-eN-r3D"/>
+                                            <constraint firstAttribute="trailing" secondItem="72d-q2-g0E" secondAttribute="trailing" id="yQ3-e2-wCL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="animalImage" destination="72d-q2-g0E" id="XXK-fJ-bOh"/>
+                                            <outlet property="errorView" destination="wPw-Vr-WTf" id="d8y-8d-uoQ"/>
+                                        </connections>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aqx-wD-65x" customClass="PlayingBallView" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="157" y="312" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nlJ-Eg-9lY">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <view hidden="YES" alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmO-bQ-laJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="nlJ-Eg-9lY" secondAttribute="trailing" id="37f-i1-ZIP"/>
+                                            <constraint firstAttribute="height" constant="100" id="4VJ-78-oBq"/>
+                                            <constraint firstAttribute="bottom" secondItem="nlJ-Eg-9lY" secondAttribute="bottom" id="BUp-5a-FeU"/>
+                                            <constraint firstAttribute="bottom" secondItem="mmO-bQ-laJ" secondAttribute="bottom" id="HTo-fD-6hd"/>
+                                            <constraint firstItem="mmO-bQ-laJ" firstAttribute="leading" secondItem="Aqx-wD-65x" secondAttribute="leading" id="d1P-0H-1uf"/>
+                                            <constraint firstAttribute="trailing" secondItem="mmO-bQ-laJ" secondAttribute="trailing" id="diG-4t-glJ"/>
+                                            <constraint firstItem="nlJ-Eg-9lY" firstAttribute="leading" secondItem="Aqx-wD-65x" secondAttribute="leading" id="dyb-IN-FgL"/>
+                                            <constraint firstItem="nlJ-Eg-9lY" firstAttribute="top" secondItem="Aqx-wD-65x" secondAttribute="top" id="iCX-Rx-JQV"/>
+                                            <constraint firstAttribute="width" constant="100" id="siL-cj-KTR"/>
+                                            <constraint firstItem="mmO-bQ-laJ" firstAttribute="top" secondItem="Aqx-wD-65x" secondAttribute="top" id="yQk-9n-Kg1"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="animalImage" destination="nlJ-Eg-9lY" id="ATj-fE-hMM"/>
+                                            <outlet property="errorView" destination="mmO-bQ-laJ" id="BEn-7f-b0p"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SCO-nq-2xe" firstAttribute="centerX" secondItem="plp-I0-VFc" secondAttribute="centerX" id="2dA-I0-iCR"/>
+                                    <constraint firstItem="3ek-6Q-d74" firstAttribute="centerX" secondItem="plp-I0-VFc" secondAttribute="centerX" id="3vf-zi-ZFB"/>
+                                    <constraint firstItem="OMu-aY-bu0" firstAttribute="centerX" secondItem="plp-I0-VFc" secondAttribute="centerX" id="8kl-BU-6gD"/>
+                                    <constraint firstItem="YCe-vp-Gba" firstAttribute="centerX" secondItem="plp-I0-VFc" secondAttribute="centerX" id="9Ti-7f-rDA"/>
+                                    <constraint firstItem="eL9-eH-xEW" firstAttribute="centerY" secondItem="plp-I0-VFc" secondAttribute="centerY" id="Aid-CA-pQt"/>
+                                    <constraint firstItem="SCO-nq-2xe" firstAttribute="centerY" secondItem="plp-I0-VFc" secondAttribute="centerY" id="NsS-FJ-pqC"/>
+                                    <constraint firstItem="Aqx-wD-65x" firstAttribute="centerX" secondItem="plp-I0-VFc" secondAttribute="centerX" id="Rda-yl-k2V"/>
+                                    <constraint firstItem="eL9-eH-xEW" firstAttribute="centerX" secondItem="plp-I0-VFc" secondAttribute="centerX" id="Wc8-ft-X40"/>
+                                    <constraint firstItem="MWQ-fc-tdK" firstAttribute="centerY" secondItem="plp-I0-VFc" secondAttribute="centerY" id="ZoG-fa-Y0d"/>
+                                    <constraint firstItem="Aqx-wD-65x" firstAttribute="centerY" secondItem="plp-I0-VFc" secondAttribute="centerY" id="a7j-td-SpE"/>
+                                    <constraint firstItem="swu-x7-umo" firstAttribute="centerX" secondItem="plp-I0-VFc" secondAttribute="centerX" id="eII-Ac-Svu"/>
+                                    <constraint firstItem="MWQ-fc-tdK" firstAttribute="centerX" secondItem="plp-I0-VFc" secondAttribute="centerX" id="fKd-1c-yvv"/>
+                                    <constraint firstItem="swu-x7-umo" firstAttribute="centerY" secondItem="plp-I0-VFc" secondAttribute="centerY" id="fwR-06-B66"/>
+                                    <constraint firstItem="YCe-vp-Gba" firstAttribute="centerY" secondItem="plp-I0-VFc" secondAttribute="centerY" id="gcg-8L-5cM"/>
+                                    <constraint firstItem="OMu-aY-bu0" firstAttribute="centerY" secondItem="plp-I0-VFc" secondAttribute="centerY" id="qwk-sZ-Mlo"/>
+                                    <constraint firstItem="3ek-6Q-d74" firstAttribute="centerY" secondItem="plp-I0-VFc" secondAttribute="centerY" id="rcc-tk-87M"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qj-xl-Lde" customClass="CustomNavigationBar" customModule="Darlion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ngg-3f-iU4"/>
+                        <color key="backgroundColor" name="DarkGray"/>
+                        <constraints>
+                            <constraint firstItem="5qj-xl-Lde" firstAttribute="top" secondItem="ngg-3f-iU4" secondAttribute="top" id="4y5-vn-3BH"/>
+                            <constraint firstItem="ngg-3f-iU4" firstAttribute="trailing" secondItem="hcA-cv-fHy" secondAttribute="trailing" id="50n-xI-mkI"/>
+                            <constraint firstItem="ngg-3f-iU4" firstAttribute="trailing" secondItem="5qj-xl-Lde" secondAttribute="trailing" id="8gj-T0-Qaf"/>
+                            <constraint firstItem="ngg-3f-iU4" firstAttribute="trailing" secondItem="plp-I0-VFc" secondAttribute="trailing" id="CL1-0r-QgN"/>
+                            <constraint firstItem="plp-I0-VFc" firstAttribute="top" secondItem="5qj-xl-Lde" secondAttribute="bottom" id="MXc-gU-ADT"/>
+                            <constraint firstItem="plp-I0-VFc" firstAttribute="leading" secondItem="ngg-3f-iU4" secondAttribute="leading" id="Os0-4R-62W"/>
+                            <constraint firstAttribute="bottom" secondItem="hcA-cv-fHy" secondAttribute="bottom" id="RIk-A2-RjR"/>
+                            <constraint firstItem="5qj-xl-Lde" firstAttribute="leading" secondItem="ngg-3f-iU4" secondAttribute="leading" id="UHf-tx-g8G"/>
+                            <constraint firstItem="plp-I0-VFc" firstAttribute="top" secondItem="ngg-3f-iU4" secondAttribute="top" constant="50" id="c2S-S1-xiT"/>
+                            <constraint firstItem="hcA-cv-fHy" firstAttribute="leading" secondItem="ngg-3f-iU4" secondAttribute="leading" id="hOW-zD-X9M"/>
+                            <constraint firstItem="ngg-3f-iU4" firstAttribute="bottom" secondItem="plp-I0-VFc" secondAttribute="bottom" constant="40" id="vPl-Rw-2ia"/>
+                            <constraint firstItem="hcA-cv-fHy" firstAttribute="top" secondItem="cDb-RL-Zta" secondAttribute="top" id="xey-CD-QRY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collisionView" destination="plp-I0-VFc" id="wEG-Xd-KkG"/>
+                        <outlet property="navigationBar" destination="5qj-xl-Lde" id="paD-Qc-ssE"/>
+                        <outletCollection property="cardViews" destination="MWQ-fc-tdK" collectionClass="NSMutableArray" id="gtZ-QP-aVu"/>
+                        <outletCollection property="cardViews" destination="Aqx-wD-65x" collectionClass="NSMutableArray" id="vUI-tv-OgG"/>
+                        <outletCollection property="cardViews" destination="3ek-6Q-d74" collectionClass="NSMutableArray" id="ChN-mf-szE"/>
+                        <outletCollection property="cardViews" destination="SCO-nq-2xe" collectionClass="NSMutableArray" id="7m5-08-LlW"/>
+                        <outletCollection property="cardViews" destination="swu-x7-umo" collectionClass="NSMutableArray" id="6kf-Rb-KU3"/>
+                        <outletCollection property="cardViews" destination="YCe-vp-Gba" collectionClass="NSMutableArray" id="6MH-FL-9vQ"/>
+                        <outletCollection property="cardViews" destination="eL9-eH-xEW" collectionClass="NSMutableArray" id="YAl-tT-DIY"/>
+                        <outletCollection property="cardViews" destination="OMu-aY-bu0" collectionClass="NSMutableArray" id="58d-Rg-OpS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANx-6e-zp9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-421.73913043478262" y="-122.54464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_principal" width="2975" height="2362"/>
+        <namedColor name="DarkGray">
+            <color red="0.13333333333333333" green="0.0" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

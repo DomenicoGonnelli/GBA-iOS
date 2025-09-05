@@ -64,13 +64,14 @@ class IOSConfig: DatabaseModelProtocolGet{
     init(){}
     
     required init(value: [String : Any]) {
-        lastAppVersion = value["lastAppVersion"] as? String
+//        lastAppVersion = value["lastAppVersion"] as? String
+        lastAppVersion = value["releasedAppVersion"] as? String
         appName = value["appNameNew"] as? String
         versionForRequireUpdate = value["versionForRequireUpdate"] as? String
         GADid = value["GADid_new"] as? String ?? value["GADid"] as? String
         appStoreURL = value["appStoreURL"] as? String
         secretKey = value["secretKey"] as? String
-        checkMode = value["checkMode"] as? Bool ?? false
+        checkMode = false// value["checkMode"] as? Bool ?? false
         if let values = value["maintenanceMode"] as? [String:Any]{
             maintenance = MaintenanceModel(value: values)
         }

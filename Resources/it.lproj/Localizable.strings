@@ -739,3 +739,12 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 
 "Fast_Forward_Set" = "Imposta velocità";
 "mutedItem" = "Rimuovi Audio";
+
+
+"tutorial_text" = "PREMI IL PULSANTE PER INIZIARE";
+"rotation_button" = "RUOTA";
+"rouletteTitle" = "GIRA LA RUOTA";
+"puzzleTitle" = "PUZZLE";
+"questionTitle" = "INDOVINA L'ANIMALE";
+"other_Title" = "Altri giochi";
+"listTitle" = "TUTTI GLI ANIMALI";

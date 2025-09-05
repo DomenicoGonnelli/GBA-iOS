@@ -147,4 +147,34 @@ class FirestoreHelper{
         }
     }
 
+    
+    private class func getAnimalChild() -> CollectionReference{
+        return FirestoreHelper.instance.collection("animals")
+    }
+    
+    // Animal functions
+    class func addAnimal(animal: AnimalModel){
+        getAnimalChild().document(animal.name).setData(animal.datafile)
+    }
+    class func getAnimalsList(_ completion: @escaping ([AnimalModel]) -> ()){
+        let child = getAnimalChild()
+        child.addSnapshotListener{ documentSnapshot, error in
+            let list : [AnimalModel] = Parser.getAnimalsList(snapshot: documentSnapshot)
+            completion(list)
+        }
+    }
+    
+    class func animalDetail(name: String, _ completion: @escaping (AnimalModel?) -> ()){
+        let child = getAnimalChild().document(name)
+        child.addSnapshotListener{ snapshot, error in
+            let child = snapshot?.data()
+            if let child = child{
+                let animal : AnimalModel = AnimalModel(value: child)
+                completion(animal)
+            }else{
+                completion(nil)
+            }
+        }
+    }
+    
 }

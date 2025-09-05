@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iRe-vr-1mQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--All Animal View Controller-->
+        <scene sceneID="haA-Z3-Glg">
+            <objects>
+                <viewController storyboardIdentifier="AllAnimalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iRe-vr-1mQ" customClass="AllAnimalViewController" customModule="Darlion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8RY-Fe-cZy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_principal" translatesAutoresizingMaskIntoConstraints="NO" id="7OD-zi-fcN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Wy-vX-9UQ">
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="f1Y-Ni-G8O">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AllAnimalCell" reuseIdentifier="AllAnimalCell" id="8lG-bT-4Qu" customClass="AllAnimalCell" customModule="Darlion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gAH-FK-NJK">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSX-nX-kEo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asino_cartoon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-cw-teV">
+                                                            <rect key="frame" x="5" y="5" width="90" height="90"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Ubq-cw-teV" secondAttribute="height" multiplier="1:1" id="NUT-ES-Wze"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Ubq-cw-teV" secondAttribute="bottom" constant="5" id="8GH-dM-YAo"/>
+                                                        <constraint firstItem="Ubq-cw-teV" firstAttribute="leading" secondItem="lSX-nX-kEo" secondAttribute="leading" constant="5" id="AMZ-P9-W1V"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ubq-cw-teV" secondAttribute="trailing" constant="5" id="INs-uc-Rzu"/>
+                                                        <constraint firstItem="Ubq-cw-teV" firstAttribute="top" secondItem="lSX-nX-kEo" secondAttribute="top" constant="5" id="TL8-Cj-ckG"/>
+                                                        <constraint firstAttribute="height" constant="100" id="ija-bI-jAr"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lSX-nX-kEo" firstAttribute="top" secondItem="gAH-FK-NJK" secondAttribute="top" id="jZY-kp-6ri"/>
+                                                <constraint firstItem="lSX-nX-kEo" firstAttribute="leading" secondItem="gAH-FK-NJK" secondAttribute="leading" id="uez-DP-3AU"/>
+                                                <constraint firstAttribute="bottom" secondItem="lSX-nX-kEo" secondAttribute="bottom" id="vtJ-kb-sAm"/>
+                                                <constraint firstAttribute="trailing" secondItem="lSX-nX-kEo" secondAttribute="trailing" id="xDS-Lb-MuB"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="animalImage" destination="Ubq-cw-teV" id="bxB-dx-1b7"/>
+                                            <outlet property="animalImageHeight" destination="ija-bI-jAr" id="g4x-Me-bQn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="iRe-vr-1mQ" id="j6s-CN-vxP"/>
+                                    <outlet property="delegate" destination="iRe-vr-1mQ" id="jTH-2h-vFz"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3n-c2-tb2" customClass="CustomNavigationBar" customModule="Darlion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aNy-pS-NcJ"/>
+                        <color key="backgroundColor" name="DarkGray"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7OD-zi-fcN" secondAttribute="bottom" id="0FP-5w-7zp"/>
+                            <constraint firstItem="Y3n-c2-tb2" firstAttribute="top" secondItem="aNy-pS-NcJ" secondAttribute="top" id="0d4-gb-WL0"/>
+                            <constraint firstItem="Y3n-c2-tb2" firstAttribute="leading" secondItem="aNy-pS-NcJ" secondAttribute="leading" id="5Fl-nn-pG3"/>
+                            <constraint firstItem="6Wy-vX-9UQ" firstAttribute="leading" secondItem="aNy-pS-NcJ" secondAttribute="leading" id="Fyi-ol-Ct5"/>
+                            <constraint firstItem="6Wy-vX-9UQ" firstAttribute="top" secondItem="aNy-pS-NcJ" secondAttribute="top" constant="50" id="GLr-Dj-dGW"/>
+                            <constraint firstItem="aNy-pS-NcJ" firstAttribute="trailing" secondItem="7OD-zi-fcN" secondAttribute="trailing" id="OmD-v9-nf1"/>
+                            <constraint firstItem="7OD-zi-fcN" firstAttribute="leading" secondItem="aNy-pS-NcJ" secondAttribute="leading" id="T8v-LX-awI"/>
+                            <constraint firstItem="6Wy-vX-9UQ" firstAttribute="top" secondItem="Y3n-c2-tb2" secondAttribute="bottom" id="bod-2G-3vJ"/>
+                            <constraint firstItem="aNy-pS-NcJ" firstAttribute="trailing" secondItem="Y3n-c2-tb2" secondAttribute="trailing" id="hHo-yz-3YO"/>
+                            <constraint firstItem="7OD-zi-fcN" firstAttribute="top" secondItem="8RY-Fe-cZy" secondAttribute="top" id="j12-Zd-5ks"/>
+                            <constraint firstItem="aNy-pS-NcJ" firstAttribute="bottom" secondItem="6Wy-vX-9UQ" secondAttribute="bottom" id="qYt-IW-Md8"/>
+                            <constraint firstItem="aNy-pS-NcJ" firstAttribute="trailing" secondItem="6Wy-vX-9UQ" secondAttribute="trailing" id="rrH-gp-yq2"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="6Wy-vX-9UQ" id="mzi-Bf-e7V"/>
+                        <outlet property="navigationBar" destination="Y3n-c2-tb2" id="ubs-KG-ScW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4b-dk-ipP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62.318840579710148" y="-25.446428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Asino_cartoon.png" width="994" height="995"/>
+        <image name="background_principal" width="2975" height="2362"/>
+        <namedColor name="DarkGray">
+            <color red="0.13333333333333333" green="0.0" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

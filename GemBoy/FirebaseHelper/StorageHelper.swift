@@ -162,4 +162,58 @@ class StorageHelper{
             }.resume()
         }
     }
+    
+    
+    
+    class func getUrlImage(_ imagePath: String, completion: @escaping (URL?)->()){
+        let storage = Storage.storage()
+        let pathReference = storage.reference(withPath: imagePath)
+        pathReference.downloadURL { url, error in
+            if let url = url {
+                completion(url)
+            }else{
+                completion(nil)
+            }
+        }
+    }
+    
+    /*class func uploadAnimalImage(_ animal: AnimalModel, image: UIImage, completion: ((Bool)->())? = nil){
+        let storage = Storage.storage()
+        let pathReference = storage.reference(withPath: "animalImage/Animal/\(animal.name).jpg")
+        if let data = image.pngData(){
+            pathReference.putData(data, metadata: nil) { (metadata, error) in
+                completion?(error == nil)
+            }
+        }else{
+            completion?(false)
+        }
+    }
+    
+    //Print
+    
+    class func uploadAnimalPrint(_ animal: AnimalModel, image: UIImage, completion: ((Bool)->())? = nil){
+        let storage = Storage.storage()
+        let pathReference = storage.reference(withPath: "animalImage/Prints/\(animal.name).jpg")
+        if let data = image.pngData(){
+            pathReference.putData(data, metadata: nil) { (metadata, error) in
+                completion?(error == nil)
+            }
+        }else{
+            completion?(false)
+        }
+    }*/
+    
+    //Animal Sounds
+    
+    class func getUrlSound(_ soundPath: String, completion: @escaping (URL?)->()){
+        let storage = Storage.storage()
+        let pathReference = storage.reference(withPath: soundPath)
+        pathReference.downloadURL { url, error in
+            if let url = url {
+                completion(url)
+            }else{
+                completion(nil)
+            }
+        }
+    }
 }

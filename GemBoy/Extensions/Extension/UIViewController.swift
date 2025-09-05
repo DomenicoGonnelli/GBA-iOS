@@ -89,9 +89,9 @@ extension UIViewController {
     
     func openApp(goOnTabar: Bool){
         if goOnTabar {
-            TabBarViewController.push(from: self)
+            HomeViewController.push(from: self)
             if var controllers = self.navigationController?.viewControllers{
-                controllers.removeAll(where: {!($0 is TabBarViewController)})
+                controllers.removeAll(where: {!($0 is HomeViewController)})
                 self.navigationController?.viewControllers = controllers
             }
         } else {
