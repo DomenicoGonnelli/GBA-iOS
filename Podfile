@@ -21,7 +21,6 @@ abstract_target 'GemBoyShared' do
   pod 'NESDeltaCore',    :path => 'Cores/NESDeltaCore'
   pod 'SNESDeltaCore',   :path => 'Cores/SNESDeltaCore'
   pod 'N64DeltaCore',    :path => 'Cores/N64DeltaCore'
-  pod 'GBCDeltaCore',    :path => 'Cores/GBCDeltaCore'
   pod 'GBADeltaCore',    :path => 'Cores/GBADeltaCore'
   pod 'MelonDSDeltaCore',:path => 'Cores/MelonDSDeltaCore'
 
@@ -31,7 +30,7 @@ abstract_target 'GemBoyShared' do
   target 'GemBoy' do
   end
 
-  target 'GemBoyNew' do
+  target 'Darlion' do
   end
 end
 
@@ -44,7 +43,7 @@ end
 
 # ---- POST INSTALL: rimuove -l"DeltaCore" dagli OTHER_LDFLAGS per evitare conflitti con Systems.framework ----
 post_install do |installer|
-  targets_to_patch = ["Pods-GemBoy", "Pods-GemBoyNew"]
+  targets_to_patch = ["Pods-GemBoy", "Pods-Darlion"]
 
   installer.pods_project.targets.each do |t|
     next unless targets_to_patch.include?(t.name)

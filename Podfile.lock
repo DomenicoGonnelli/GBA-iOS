@@ -6,8 +6,6 @@ PODS:
     - ZIPFoundation
   - GBADeltaCore (0.1):
     - DeltaCore
-  - GBCDeltaCore (0.1):
-    - DeltaCore
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
@@ -43,7 +41,6 @@ DEPENDENCIES:
   - CollectionViewPagingLayout
   - DeltaCore (from `Cores/DeltaCore`)
   - GBADeltaCore (from `Cores/GBADeltaCore`)
-  - GBCDeltaCore (from `Cores/GBCDeltaCore`)
   - Kingfisher (~> 5.15.7)
   - lottie-ios
   - MelonDSDeltaCore (from `Cores/MelonDSDeltaCore`)
@@ -76,8 +73,6 @@ EXTERNAL SOURCES:
     :path: Cores/DeltaCore
   GBADeltaCore:
     :path: Cores/GBADeltaCore
-  GBCDeltaCore:
-    :path: Cores/GBCDeltaCore
   MelonDSDeltaCore:
     :path: Cores/MelonDSDeltaCore
   N64DeltaCore:
@@ -100,7 +95,6 @@ SPEC CHECKSUMS:
   CollectionViewPagingLayout: 2f8d50683bae57ca88f47fa4ab0195c9079582cf
   DeltaCore: 34fa5d77f195d43597f330216b2fba47ef303384
   GBADeltaCore: 833d6ed008e40daf8c91c92eeebe99cf7817e919
-  GBCDeltaCore: 820ff1db27f67534229e536504ebfedf40ef0abc
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   lottie-ios: 248b380fa1b97d18e792c37d90da7ab2aa0d6562
   MelonDSDeltaCore: 390bafa4bdf8284d30436c98e5e1b571a67ef564
@@ -114,6 +108,6 @@ SPEC CHECKSUMS:
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   ZIPFoundation: b8c29ea7ae353b309bc810586181fd073cb3312c
 
-PODFILE CHECKSUM: 9491fecb60ce0ead293f14ee6fa06c7672ece740
+PODFILE CHECKSUM: a11474cfbd47d2d9e5be63a600db552bb9a625b2
 
 COCOAPODS: 1.16.2

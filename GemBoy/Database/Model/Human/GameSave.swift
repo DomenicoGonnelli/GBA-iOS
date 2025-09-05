@@ -8,7 +8,6 @@
 
 import Foundation
 
-import GBCDeltaCore
 
 import Roxas
 

@@ -151,7 +151,7 @@ class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
 //        connection.start(queue: .main)
 //    }
     
-    var isMuted : Bool {
+    public var isMuted : Bool {
         self.emulatorCore?.audioManager.isMuted ?? false
     }
     

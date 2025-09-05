@@ -64,8 +64,8 @@ class IOSConfig: DatabaseModelProtocolGet{
     init(){}
     
     required init(value: [String : Any]) {
-        lastAppVersion = value["lastAppVersion"] as? String
-//        lastAppVersion = value["releasedAppVersion"] as? String
+//        lastAppVersion = value["lastAppVersion"] as? String
+        lastAppVersion = value["releasedAppVersion"] as? String
         appName = value["appNameNew"] as? String
         versionForRequireUpdate = value["versionForRequireUpdate"] as? String
         GADid = value["GADid_new"] as? String ?? value["GADid"] as? String

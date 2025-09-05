@@ -61,7 +61,7 @@ final class DatabaseManager: RSTPersistentContainer
     private init()
     {
         guard
-            let modelURL = Bundle(for: DatabaseManager.self).url(forResource: "Delta", withExtension: "momd"),
+            let modelURL = Bundle(for: DatabaseManager.self).url(forResource: "dgdb", withExtension: "momd"),
             let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)
 //            let harmonyModel = NSManagedObjectModel.harmonyModel(byMergingWith: [managedObjectModel])
         else { fatalError("Core Data model cannot be found. Aborting.") }

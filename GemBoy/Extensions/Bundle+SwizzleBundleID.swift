@@ -13,22 +13,5 @@ extension Bundle
 {
     
 
-    public static func swizzleBundleID(handler: () -> Void)
-    {
-        let bundleClass: AnyClass = Bundle.self
-        
-        guard
-            let originalMethod = class_getInstanceMethod(bundleClass, #selector(getter: Bundle.infoDictionary)),
-            let swizzledMethod = class_getInstanceMethod(bundleClass, #selector(getter: Bundle.swizzled_infoDictionary))
-        else {
-            print("Failed to swizzle Bundle.infoDictionary.")
-            return
-        }
-            
-        method_exchangeImplementations(originalMethod, swizzledMethod)
-        
-        handler()
-        
-        method_exchangeImplementations(swizzledMethod, originalMethod)
-    }
+   
 }
