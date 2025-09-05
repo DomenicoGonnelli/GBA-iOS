@@ -14,9 +14,6 @@
       location = "group:Cores/SNESDeltaCore/SNESDeltaCore.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Cores/GBCDeltaCore/GBCDeltaCore.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Cores/GBADeltaCore/GBADeltaCore.xcodeproj">
    </FileRef>
    <FileRef
@@ -24,12 +21,6 @@
    </FileRef>
    <FileRef
       location = "group:Cores/MelonDSDeltaCore/MelonDSDeltaCore.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Cores/GPGXDeltaCore">
-   </FileRef>
-   <FileRef
-      location = "group:External/Roxas/Roxas.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -3,7 +3,7 @@
 //  Delta
 //
 //  Created by Domenico Gonnelli on 26/03/25.
-//  Copyright © 2025 Riley Testut. All rights reserved.
+//  Copyright © 2025 Domenico Gonnelli. All rights reserved.
 //
 
 import Foundation
