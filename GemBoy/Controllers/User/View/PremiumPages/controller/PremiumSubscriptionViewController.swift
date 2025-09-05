@@ -28,6 +28,7 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
         IAPProduct.store.delegate = self
         super.viewDidLoad()
         
+        activeCheck(className: "PremiumSubscriptionViewController", numberLine: 31)
         showLoader(bg: .primaryColorFix)
     
         callServices(isNewSubscription: false)
@@ -36,8 +37,10 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
     
     func callServices(isNewSubscription: Bool){
         FirestoreHelper.getPremiumrData() { premium in
+            self.activeCheck(className: "PremiumSubscriptionViewController", numberLine: 40)
             let user = LoginManager.shared.user
             PremiumServices.getAllPremium(){ all in
+                self.activeCheck(className: "PremiumSubscriptionViewController", numberLine: 43)
                 self.hideLoader()
                 var subscriptions = all.filter({$0.subscriptionType == .always})
                 if self.isCollaboration {
@@ -90,6 +93,8 @@ class PremiumSubscriptionViewController : BaseViewController, OnPremiumPagerDele
     func subscribe_premium(selectedSubscription: PremiumSubscriptionModel?) {
         if let productID = selectedSubscription?.iosKeyShort, IAPHelper.canMakePayments(), let product = AppManager.shared.getProduct(productId: productID){
             self.selectedSubscription = selectedSubscription
+            
+            activeCheck(className: "PremiumSubscriptionViewController", numberLine: 97)
             showLoader()
             IAPProduct.store.buyProduct(product)
         } else {
@@ -133,6 +138,7 @@ extension PremiumSubscriptionViewController: IAPHelperDelegate{
         self.delegate?.didBecomePremium()
         FirestoreHelper.updatePremiumUsers(user: p)
         AppManager.premiumExpired = false
+        activeCheck(className: "PremiumSubscriptionViewController", numberLine: 141)
         self.callServices(isNewSubscription: true)
     }
     

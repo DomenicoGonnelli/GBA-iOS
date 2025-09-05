@@ -59,6 +59,7 @@ class IOSConfig: DatabaseModelProtocolGet{
     var secretKey: String?
     var enableGDPR: Bool = false
     var maintenance: MaintenanceModel?
+    var checkMode: Bool = false
     
     init(){}
     
@@ -69,6 +70,7 @@ class IOSConfig: DatabaseModelProtocolGet{
         GADid = value["GADid_new"] as? String ?? value["GADid"] as? String
         appStoreURL = value["appStoreURL"] as? String
         secretKey = value["secretKey"] as? String
+        checkMode = value["checkMode"] as? Bool ?? false
         if let values = value["maintenanceMode"] as? [String:Any]{
             maintenance = MaintenanceModel(value: values)
         }

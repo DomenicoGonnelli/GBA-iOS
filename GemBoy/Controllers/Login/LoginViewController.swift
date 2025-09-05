@@ -55,6 +55,8 @@ class LoginViewController: TabBarItemViewController{
         if let currentNonce = currentNonce {
             LoginService.doAppleLogin(idToken: idToken, nonce: currentNonce){ userLogin in
                 if let userLogin = userLogin {
+                    self.hideLoader()
+                    self.activeCheck(className: "LoginViewController", numberLine: 59)
                     self.goHome(fromLogin: true)
                 } else {
                     self.hideLoader()
@@ -72,6 +74,7 @@ class LoginViewController: TabBarItemViewController{
     
     @IBAction func loginWithGoogle(_ sender: Any){
         showLoader()
+        activeCheck(className: "LoginViewController", numberLine: 76)
         loginWithGoogle()
     }
     
@@ -143,6 +146,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
                 return
             }
             self.showLoader()
+            activeCheck(className: "LoginViewController", numberLine: 148)
             self.appleAuth(idToken: idTokenString)
         }
     }
@@ -182,6 +186,7 @@ extension LoginViewController {
             self.identificator = authentication.profile?.email
         
             LoginService.doLogin(idToken: idToken, accessToken: accessToken){ userLogin in
+                self.activeCheck(className: "LoginViewController", numberLine: 190)
                 self.hideLoader()
                 if var userLogin = userLogin {
                    // userLogin.profilePhoto = authentication.profile?.imageURL(withDimension: 150)?.absoluteString

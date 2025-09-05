@@ -233,6 +233,8 @@
 		EB04DE172DCCB31800ED4ADE /* ConnectionLinkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */; };
 		EB04DE372DD2214A00ED4ADE /* dg__DS.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */; };
 		EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */; };
+		EB112F042E69CBF700637F9E /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F032E69CBF600637F9E /* CheckModel.swift */; };
+		EB112F052E69CBF700637F9E /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB112F032E69CBF600637F9E /* CheckModel.swift */; };
 		EB1E5D222E63050E00305D33 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB3645723245A6000CD0EB1 /* LicensesViewController.swift */; };
 		EB1E5D232E63050E00305D33 /* RankingStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEB7AE2DB1615A007C5BB4 /* RankingStarView.swift */; };
 		EB1E5D242E63050E00305D33 /* Input+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC6F7B71F435BC500221B96 /* Input+Display.swift */; };
@@ -1118,6 +1120,7 @@
 		EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLinkState.swift; sourceTree = "<group>"; };
 		EB04DE362DD2214A00ED4ADE /* dg__DS.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__DS.deltaskin; sourceTree = "<group>"; };
 		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB112F032E69CBF600637F9E /* CheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
 		EB1E5E8B2E63050E00305D33 /* Darlion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darlion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1E5E9B2E63072800305D33 /* NotificationNew.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationNew.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1E5E9F2E630EA100305D33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -2451,6 +2454,7 @@
 		EB8E0D402D946445004BFB1F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EB112F032E69CBF600637F9E /* CheckModel.swift */,
 				EBBB19B42D9976F2009C977A /* StorageLinksModel.swift */,
 				EBA2BAD72D9848AE007A25A6 /* AlertModel.swift */,
 				EBA2BAD82D9848AE007A25A6 /* HomeServiceModel.swift */,
@@ -3531,6 +3535,7 @@
 				EB04DE172DCCB31800ED4ADE /* ConnectionLinkState.swift in Sources */,
 				BF6BF31C1EB821A0008E83CD /* GamesDatabaseImportOption.swift in Sources */,
 				D5AA0F142CE3F5040015D134 /* _ManagedPatron.swift in Sources */,
+				EB112F042E69CBF700637F9E /* CheckModel.swift in Sources */,
 				D51D8EC82D49CA26002649C2 /* Delta10ToDelta11.xcmappingmodel in Sources */,
 				BFFA4C091E8A24D600D87934 /* GameTableViewCell.swift in Sources */,
 				BFFC46231D5984A000AF2CC6 /* LaunchViewController.swift in Sources */,
@@ -3829,6 +3834,7 @@
 				EB1E5D9D2E63050E00305D33 /* ConnectionLinkState.swift in Sources */,
 				EB1E5D9E2E63050E00305D33 /* GamesDatabaseImportOption.swift in Sources */,
 				EB1E5D9F2E63050E00305D33 /* _ManagedPatron.swift in Sources */,
+				EB112F052E69CBF700637F9E /* CheckModel.swift in Sources */,
 				EB1E5DA02E63050E00305D33 /* Delta10ToDelta11.xcmappingmodel in Sources */,
 				EB1E5DA12E63050E00305D33 /* GameTableViewCell.swift in Sources */,
 				EB1E5DA22E63050E00305D33 /* LaunchViewController.swift in Sources */,
@@ -4535,7 +4541,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Darlion;
@@ -4616,7 +4622,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Darlion;
@@ -4664,7 +4670,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -4707,7 +4713,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;

@@ -19,10 +19,12 @@ class StatisticsViewController: BaseViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        activeCheck(className: "StatisticsViewController", numberLine: 22)
         showLoader()
-        
         StatisticsService.getData(){ data in
+            self.activeCheck(className: "StatisticsViewController", numberLine: 25)
             self.hideLoader()
+            
             self.data = data
             self.tableView.reloadData()
             

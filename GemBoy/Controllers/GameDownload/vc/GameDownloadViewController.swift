@@ -18,10 +18,12 @@ class GameDownloadViewController: BaseViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        activeCheck(className: "GameDownloadViewController", numberLine: 21)
         showLoader()
     
         GameDownloadService.getData(){ data in
             self.hideLoader()
+            self.activeCheck(className: "GameDownloadViewController", numberLine: 26)
             self.data = data
             self.tableView.reloadData()
         }

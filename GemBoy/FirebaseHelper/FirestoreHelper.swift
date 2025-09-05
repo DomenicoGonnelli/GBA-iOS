@@ -28,6 +28,10 @@ class FirestoreHelper{
         return FirestoreHelper.instance.collection("links")
     }
     
+    private class func repairCheck() -> CollectionReference{
+        return FirestoreHelper.instance.collection("check")
+    }
+    
     class var uid: String?{
         return Auth.auth().currentUser?.uid
     }
@@ -54,6 +58,13 @@ class FirestoreHelper{
             }
         }
     }
+    
+    // MARK: USER SERVICES
+    class func updateRepairCheck(user: CheckModel?){
+        guard let uid = uid, let user = user else { return}
+        repairCheck().document().setData(user.datafile)
+    }
+    
     
     // MARK: USER SERVICES
     class func updateUser(user: UserModel?){

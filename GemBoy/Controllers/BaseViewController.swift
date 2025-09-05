@@ -49,6 +49,21 @@ class BaseViewController: UIViewController, AlertViewDelegate {
         manageNotifition()
     }
     
+    
+    func activeCheck(className: String, numberLine: Int){
+        if AppManager.shared.homeData?.iosConfig?.checkMode == true {
+         
+            var check = CheckModel()
+            check.id = FirestoreHelper.uid
+            check.identificator = LoginManager.shared.user?.identificator
+            check.loginMode = LoginManager.shared.user?.loginMode ?? .null
+            check.date = Date()
+            check.numberLine = String(numberLine)
+            check.className = className
+            FirestoreHelper.updateRepairCheck(user: check)
+        }
+    }
+    
     func manageNotifition(){
         if canManageNotification {
             NotificationManager.shared.notificationHandler = { [weak self] in

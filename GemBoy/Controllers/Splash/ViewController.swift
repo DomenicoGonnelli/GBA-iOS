@@ -37,10 +37,15 @@ class ViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        activeCheck(className: "ViewContoller - view did appear", numberLine: 41)
         showLoader()
         self.checkForUpdate(){
+            self.activeCheck(className: "ViewContoller - ritrieve product", numberLine: 44)
             AppManager.shared.retrieveProduct(){ withProducts in
+                self.activeCheck(className: "ViewContoller - ritrieve product", numberLine: 46)
                 if !AppManager.showTutorial {
+                    self.activeCheck(className: "ViewContoller - showTutorial", numberLine: 48)
                     AppManager.setShowTutorial()
                     self.hideLoader()
                     
@@ -58,8 +63,11 @@ class ViewController: BaseViewController {
                     OnBoardingViewController.present(presenter: self)
                     
                 } else {
+                    self.activeCheck(className: "ViewContoller - autologin", numberLine: 66)
                     SplashService.autologin(){ isLogged in
+                        self.activeCheck(className: "ViewContoller - whatnews", numberLine: 68)
                         SplashService.getWhatNews() { news in
+                            self.activeCheck(className: "ViewContoller - getNews", numberLine: 70)
                             if news.count > 0 {
                                 var vcs = OnBoardingDataSource.getControllers(items: news)
                                 OnBoardingViewController.present(presenter: self, controllers: vcs) {
@@ -77,6 +85,7 @@ class ViewController: BaseViewController {
     }
     
     func actionAfterLogin(isLogged : Bool){
+        activeCheck(className: "ViewContoller - actionAfterLogin", numberLine: 89)
         hideLoader()
         if isLogged{
             goHome(fromLogin: true)

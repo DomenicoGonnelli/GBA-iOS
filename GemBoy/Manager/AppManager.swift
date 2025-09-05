@@ -47,7 +47,10 @@ class AppManager {
         DispatchQueue(label: "background").async {
             autoreleasepool {
                 IAPProduct.store.requestProducts{ [weak self] success, products in
-                    guard let self = self else { return }
+                    guard let self = self else {
+                        completion(false)
+                        return
+                    }
                     if success, let prod = products {
                         self.products = prod
                         DispatchQueue.main.async {
