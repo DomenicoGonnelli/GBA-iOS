@@ -1,29 +1,29 @@
-[submodule "Cores/DeltaCore"]
-	path = Cores/DeltaCore
+[submodule "Cores/GameCore"]
+	path = Cores/GameCore
 	url = git@github.com:rileytestut/DeltaCore.git
-[submodule "Cores/SNESDeltaCore"]
-	path = Cores/SNESDeltaCore
+[submodule "Cores/SNESGameCore"]
+	path = Cores/SNESGameCore
 	url = git@github.com:rileytestut/SNESDeltaCore.git
 [submodule "External/Roxas"]
 	path = External/Roxas
 	url = git@github.com:rileytestut/Roxas.git
-[submodule "Cores/GBADeltaCore"]
-	path = Cores/GBADeltaCore
-	url = git@github.com:rileytestut/GBADeltaCore.git
-[submodule "Cores/GBCDeltaCore"]
-	path = Cores/GBCDeltaCore
+[submodule "Cores/GBAGameCore"]
+	path = Cores/GBAGameCore
+	url = https://github.com/DomenicoGonnelli/GBADeltaCore.git
+[submodule "Cores/GBCGameCore"]
+	path = Cores/GBCGameCore
 	url = git@github.com:rileytestut/GBCDeltaCore.git
 [submodule "External/Harmony"]
 	path = External/Harmony
 	url = https://github.com/rileytestut/Harmony.git
-[submodule "Cores/NESDeltaCore"]
-	path = Cores/NESDeltaCore
+[submodule "Cores/NESGameCore"]
+	path = Cores/NESGameCore
 	url = git@github.com:rileytestut/NESDeltaCore.git
-[submodule "Cores/N64DeltaCore"]
-	path = Cores/N64DeltaCore
+[submodule "Cores/N64GameCore"]
+	path = Cores/N64GameCore
 	url = git@github.com:rileytestut/N64DeltaCore.git
-[submodule "Cores/MelonDSDeltaCore"]
-	path = Cores/MelonDSDeltaCore
+[submodule "Cores/MelonDSGameCore"]
+	path = Cores/MelonDSGameCore
 	url = https://github.com/rileytestut/MelonDSDeltaCore.git
 [submodule "Cores/GPGXDeltaCore"]
 	path = Cores/GPGXDeltaCore
