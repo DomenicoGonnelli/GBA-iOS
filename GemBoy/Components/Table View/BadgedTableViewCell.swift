@@ -2,7 +2,7 @@
 //  BadgedTableViewCell.swift
 //  Delta
 //
-//  Created by Riley Testut on 11/20/18.
+//  Created by Darlion on 11/20/18.
 //  Copyright © 2018 Riley Testut. All rights reserved.
 //
 

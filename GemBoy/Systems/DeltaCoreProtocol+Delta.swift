@@ -2,18 +2,18 @@
 //  DeltaCoreProtocol+Delta.swift
 //  Delta
 //
-//  Created by Riley Testut on 4/30/17.
+//  Created by Darlion on 4/30/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 
-import DeltaCore
+import GameCore
 
-import NESDeltaCore
-import SNESDeltaCore
+import NESGameCore
+import SNESGameCore
 //import GBCDeltaCore
-import GBADeltaCore
-import N64DeltaCore
-import MelonDSDeltaCore
+import GBAGameCore
+import N64GameCore
+import MelonDSGameCore
 
 import Systems
 
@@ -82,7 +82,7 @@ extension DeltaCoreProtocol
         case N64.core where UIDevice.current.hasA9ProcessorOrBetter: return 1.5
         case MelonDS.core where UIDevice.current.hasA15ProcessorOrBetter || ProcessInfo.processInfo.isJITAvailable: return 3
         case MelonDS.core where UIDevice.current.hasA11ProcessorOrBetter: return 1.5
-        case GPGX.core: return 4
+//        case GPGX.core: return 4
         default: return 1
         }
     }

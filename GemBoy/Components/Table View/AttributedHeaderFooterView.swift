@@ -2,7 +2,7 @@
 //  AttributedHeaderFooterView.swift
 //  Delta
 //
-//  Created by Riley Testut on 11/15/23.
+//  Created by Darlion on 11/15/23.
 //  Copyright © 2023 Riley Testut. All rights reserved.
 //
 

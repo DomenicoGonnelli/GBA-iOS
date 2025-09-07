@@ -2,7 +2,7 @@
 //  GameTableViewCell.swift
 //  Delta
 //
-//  Created by Riley Testut on 3/27/17.
+//  Created by Darlion on 3/27/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 

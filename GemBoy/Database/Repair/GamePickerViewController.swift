@@ -2,7 +2,7 @@
 //  GamePickerViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/4/23.
+//  Created by Darlion on 8/4/23.
 //  Copyright © 2023 Riley Testut. All rights reserved.
 //
 

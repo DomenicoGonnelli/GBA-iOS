@@ -2,13 +2,13 @@
 //  GameControllerInputMappingTransformer.swift
 //  Delta
 //
-//  Created by Riley Testut on 9/27/17.
+//  Created by Darlion on 9/27/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
+import GameCore
 
 @objc(GameControllerInputMappingTransformer)
 class GameControllerInputMappingTransformer: ValueTransformer
@@ -23,7 +23,7 @@ class GameControllerInputMappingTransformer: ValueTransformer
     
     override func transformedValue(_ value: Any?) -> Any?
     {
-        guard let inputMapping = value as? DeltaCore.GameControllerInputMapping else { return nil }
+        guard let inputMapping = value as? GameCore.GameControllerInputMapping else { return nil }
         
         let plistEncoder = PropertyListEncoder()
         
@@ -48,7 +48,7 @@ class GameControllerInputMappingTransformer: ValueTransformer
         
         do
         {
-            let inputMapping = try plistDecoder.decode(DeltaCore.GameControllerInputMapping.self, from: inputMappingData)
+            let inputMapping = try plistDecoder.decode(GameCore.GameControllerInputMapping.self, from: inputMappingData)
             return inputMapping
         }
         catch

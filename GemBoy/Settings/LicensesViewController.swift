@@ -2,7 +2,7 @@
 //  LicensesViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 9/7/19.
+//  Created by Darlion on 9/7/19.
 //  Copyright © 2019 Riley Testut. All rights reserved.
 //
 

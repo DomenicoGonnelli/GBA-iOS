@@ -2,7 +2,7 @@
 //  ContributionsView.swift
 //  Delta
 //
-//  Created by Riley Testut on 2/2/23.
+//  Created by Darlion on 2/2/23.
 //  Copyright © 2023 Riley Testut. All rights reserved.
 //
 

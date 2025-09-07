@@ -2,11 +2,11 @@
 //  EmulatorCore+Delta.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/11/16.
+//  Created by Darlion on 8/11/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
-import DeltaCore
+import GameCore
 import ObjectiveC
 
 private var _isWirelessMultiplayerActive: UInt8 = 0

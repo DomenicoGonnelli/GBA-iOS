@@ -32,11 +32,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		4D6394A9A0424E127DAC20D4 /* libPods-GemBoyShared-GemBoy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0EDF80737AC4DBFA8CCA32 /* libPods-GemBoyShared-GemBoy.a */; };
-		91216657969D0BFC464ABAE9 /* libPods-GemBoyPreviews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4513EA4A379492D8F7CE9A8 /* libPods-GemBoyPreviews.a */; };
+		5442379761553F09D9C58506 /* libPods-GemBoyShared-Darlion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4E6CB1546D7C8868B5B43D /* libPods-GemBoyShared-Darlion.a */; };
 		AC1C991029F8B8C30020E6E4 /* ToastNotificationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C990F29F8B8C30020E6E4 /* ToastNotificationOptions.swift */; };
 		AC1C992729F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C992629F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift */; };
 		ACF7E30F29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF7E30E29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift */; };
+		B18C045395C3E7619301087F /* libPods-GemBoyPreviews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CE77F1D5EAB0B0CA7526F0 /* libPods-GemBoyPreviews.a */; };
 		BF00BEA625B758AA00C8607D /* SystemBIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00BEA525B758AA00C8607D /* SystemBIOS.swift */; };
 		BF02D5DA1DDEBB3000A5E131 /* openvgdb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BF02D5D91DDEBB3000A5E131 /* openvgdb.sqlite */; };
 		BF04E6FF1DB8625C000F35D3 /* ControllerSkinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04E6FE1DB8625C000F35D3 /* ControllerSkinsViewController.swift */; };
@@ -216,7 +216,6 @@
 		D5F702FD2C24CE5300DCD271 /* UISceneSession+Delta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */; };
 		D5F82FB82981D3AC00B229AF /* LegacySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */; };
 		D5FB042C2C5AF40A008329DD /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB042B2C5AF40A008329DD /* libresolv.tbd */; };
-		EA7007DFD0E3FDDBAAC0140A /* libPods-GemBoyShared-Darlion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE64F193A1975A2724E3AEE3 /* libPods-GemBoyShared-Darlion.a */; };
 		EB04DE172DCCB31800ED4ADE /* ConnectionLinkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */; };
 		EB04DE372DD2214A00ED4ADE /* dg__DS.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB04DE362DD2214A00ED4ADE /* dg__DS.dgskin */; };
 		EB0A21F62DC1983D00F5C2CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */; };
@@ -794,6 +793,7 @@
 		EBC970E62DB27475000CA9C1 /* dg_NES.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.dgskin */; };
 		EBD680312E11476F00A92584 /* MenuSlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD680302E11476F00A92584 /* MenuSlider.storyboard */; };
 		EBD680332E11477E00A92584 /* MenuSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD680322E11477700A92584 /* MenuSliderViewController.swift */; };
+		F5E50167912CA24B6A975D99 /* libPods-GemBoyShared-GemBoy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FE68B60C17CB44AE33C8C6 /* libPods-GemBoyShared-GemBoy.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -898,20 +898,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A0EDF80737AC4DBFA8CCA32 /* libPods-GemBoyShared-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyShared-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FC472D0CE8F1DABCC4D91CD /* Pods-GemBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoy/Pods-GemBoy.debug.xcconfig"; sourceTree = "<group>"; };
+		11FE68B60C17CB44AE33C8C6 /* libPods-GemBoyShared-GemBoy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyShared-GemBoy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22506DA00971C4300AF90A35 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31D33FD6D50EFE1EA34FABF1 /* Pods-GemBoyShared-GemBoyNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoyNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoyNew/Pods-GemBoyShared-GemBoyNew.release.xcconfig"; sourceTree = "<group>"; };
-		524B8BC1673D2D6106947DC1 /* Pods-GemBoyShared-Darlion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-Darlion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion.debug.xcconfig"; sourceTree = "<group>"; };
-		5E9C7C16BC517D412965A72B /* Pods-GemBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoy/Pods-GemBoy.release.xcconfig"; sourceTree = "<group>"; };
-		8ECE6641DE30D01EA30FE7F6 /* Pods-DeltaPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeltaPreviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeltaPreviews/Pods-DeltaPreviews.release.xcconfig"; sourceTree = "<group>"; };
-		A01281C7023C0041B25963BE /* Pods-DeltaPreviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeltaPreviews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeltaPreviews/Pods-DeltaPreviews.debug.xcconfig"; sourceTree = "<group>"; };
-		A19FF50F55441BC2B2248241 /* Pods-Delta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.release.xcconfig"; sourceTree = "<group>"; };
-		A35CB1BEA015024306651634 /* Pods-GemBoyShared-GemBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy.release.xcconfig"; sourceTree = "<group>"; };
+		2BE77D97C93A7AB10AF4EA18 /* Pods-GemBoyShared-Darlion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-Darlion.debug.xcconfig"; path = "Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion.debug.xcconfig"; sourceTree = "<group>"; };
+		797ED5D8FB0D02AB4848A750 /* Pods-GemBoyShared-Darlion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-Darlion.release.xcconfig"; path = "Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion.release.xcconfig"; sourceTree = "<group>"; };
+		846C1CAF8FB6DF0FEEB5B1CA /* Pods-GemBoyShared-GemBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoy.release.xcconfig"; path = "Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy.release.xcconfig"; sourceTree = "<group>"; };
+		8682E1BFC999557830719F95 /* Pods-GemBoyPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.release.xcconfig"; path = "Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.release.xcconfig"; sourceTree = "<group>"; };
+		8A4E6CB1546D7C8868B5B43D /* libPods-GemBoyShared-Darlion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyShared-Darlion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D7D32DD9A54624FD9075E9 /* Pods-GemBoyPreviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.debug.xcconfig"; path = "Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.debug.xcconfig"; sourceTree = "<group>"; };
 		AC1C990F29F8B8C30020E6E4 /* ToastNotificationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastNotificationOptions.swift; sourceTree = "<group>"; };
 		AC1C992629F9F1CF0020E6E4 /* GameViewController+ExperimentalToasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+ExperimentalToasts.swift"; sourceTree = "<group>"; };
 		ACF7E30E29F743A3000FE071 /* PHPhotoLibrary+Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Screenshots.swift"; sourceTree = "<group>"; };
-		B4513EA4A379492D8F7CE9A8 /* libPods-GemBoyPreviews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyPreviews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF00BEA525B758AA00C8607D /* SystemBIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemBIOS.swift; sourceTree = "<group>"; };
 		BF02D5D91DDEBB3000A5E131 /* openvgdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openvgdb.sqlite; sourceTree = "<group>"; };
 		BF0418131D01E93400E85BCF /* GBADeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GBADeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1043,11 +1040,7 @@
 		BFFC464B1D5998D600AF2CC6 /* CheatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatTableViewCell.swift; sourceTree = "<group>"; };
 		BFFDF03623E3BB2600931B96 /* libSnes9x.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnes9x.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFDF04523E3D3A600931B96 /* libMupen64Plus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMupen64Plus.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1C7ED01297432ED7A249A12 /* Pods-GemBoyPreviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.debug.xcconfig"; sourceTree = "<group>"; };
 		C6F24AD62D64B452002F939F /* Lu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lu.swift; sourceTree = "<group>"; };
-		C786AF1D2DDB6223BE2063CC /* Pods-Delta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.debug.xcconfig"; sourceTree = "<group>"; };
-		CE64F193A1975A2724E3AEE3 /* libPods-GemBoyShared-Darlion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyShared-Darlion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D19610C5D9B69219F0AEB398 /* Pods-GemBoyShared-GemBoyNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoyNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoyNew/Pods-GemBoyShared-GemBoyNew.debug.xcconfig"; sourceTree = "<group>"; };
 		D5011C47281B6E8B00A0760B /* CharacterSet+Filename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Filename.swift"; sourceTree = "<group>"; };
 		D50CA1562D419E7100F54920 /* GameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsView.swift; sourceTree = "<group>"; };
 		D5147EC72A817B4A00D6CD64 /* ReviewSaveStatesOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSaveStatesOptions.swift; sourceTree = "<group>"; };
@@ -1118,7 +1111,6 @@
 		D5F702FC2C24CE5300DCD271 /* UISceneSession+Delta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISceneSession+Delta.swift"; sourceTree = "<group>"; };
 		D5F82FB72981D3AC00B229AF /* LegacySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacySearchBar.swift; sourceTree = "<group>"; };
 		D5FB042B2C5AF40A008329DD /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		DC4D89BE21D4092119127BDC /* Pods-GemBoyShared-GemBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy.debug.xcconfig"; sourceTree = "<group>"; };
 		EB04DE162DCCB30F00ED4ADE /* ConnectionLinkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLinkState.swift; sourceTree = "<group>"; };
 		EB04DE362DD2214A00ED4ADE /* dg__DS.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg__DS.dgskin; sourceTree = "<group>"; };
 		EB0A21F52DC1983D00F5C2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -1332,8 +1324,8 @@
 		EBC970E52DB27475000CA9C1 /* dg_NES.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.dgskin; sourceTree = "<group>"; };
 		EBD680302E11476F00A92584 /* MenuSlider.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSlider.storyboard; sourceTree = "<group>"; };
 		EBD680322E11477700A92584 /* MenuSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSliderViewController.swift; sourceTree = "<group>"; };
-		FDE5559595A1E50BAFDE7E68 /* Pods-GemBoyShared-Darlion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-Darlion.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion.release.xcconfig"; sourceTree = "<group>"; };
-		FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.release.xcconfig"; path = "Pods/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.release.xcconfig"; sourceTree = "<group>"; };
+		F4CE77F1D5EAB0B0CA7526F0 /* libPods-GemBoyPreviews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyPreviews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBF3A7A07CBB304BBD9E2062 /* Pods-GemBoyShared-GemBoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyShared-GemBoy.debug.xcconfig"; path = "Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -1403,7 +1395,7 @@
 				EBB0FA9A2D96A16800CA8EB1 /* FirebaseCrashlytics in Frameworks */,
 				EBB0FA9E2D96A16800CA8EB1 /* FirebaseMessaging in Frameworks */,
 				EBB0FA9C2D96A16800CA8EB1 /* FirebaseFirestore in Frameworks */,
-				4D6394A9A0424E127DAC20D4 /* libPods-GemBoyShared-GemBoy.a in Frameworks */,
+				F5E50167912CA24B6A975D99 /* libPods-GemBoyShared-GemBoy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,7 +1404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D51CB7A129EDC01400B59678 /* libGemBoyFeatures.a in Frameworks */,
-				91216657969D0BFC464ABAE9 /* libPods-GemBoyPreviews.a in Frameworks */,
+				B18C045395C3E7619301087F /* libPods-GemBoyPreviews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1455,7 +1447,7 @@
 				EB1E5E412E63050E00305D33 /* FirebaseCrashlytics in Frameworks */,
 				EB1E5E432E63050E00305D33 /* FirebaseMessaging in Frameworks */,
 				EB1E5E442E63050E00305D33 /* FirebaseFirestore in Frameworks */,
-				EA7007DFD0E3FDDBAAC0140A /* libPods-GemBoyShared-Darlion.a in Frameworks */,
+				5442379761553F09D9C58506 /* libPods-GemBoyShared-Darlion.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1810,9 +1802,9 @@
 				BF9F4FCE1AAD7B87004C9500 /* DeltaCore.framework */,
 				BFC134E01AAD82460087AD7B /* SNESDeltaCore.framework */,
 				22506DA00971C4300AF90A35 /* Pods.framework */,
-				B4513EA4A379492D8F7CE9A8 /* libPods-GemBoyPreviews.a */,
-				0A0EDF80737AC4DBFA8CCA32 /* libPods-GemBoyShared-GemBoy.a */,
-				CE64F193A1975A2724E3AEE3 /* libPods-GemBoyShared-Darlion.a */,
+				F4CE77F1D5EAB0B0CA7526F0 /* libPods-GemBoyPreviews.a */,
+				8A4E6CB1546D7C8868B5B43D /* libPods-GemBoyShared-Darlion.a */,
+				11FE68B60C17CB44AE33C8C6 /* libPods-GemBoyShared-GemBoy.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1897,7 +1889,7 @@
 				EB8E0D622D947655004BFB1F /* Notification */,
 				BF9F4FCD1AAD7B25004C9500 /* Frameworks */,
 				BFFA71D81AAC406100EE9DD1 /* Products */,
-				FD1E8AE87FA2DB8793F7B937 /* Pods */,
+				C7641A28FE1817FB9E6DE128 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1990,6 +1982,19 @@
 				BFFC46221D5984A000AF2CC6 /* LaunchViewController.swift */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		C7641A28FE1817FB9E6DE128 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5D7D32DD9A54624FD9075E9 /* Pods-GemBoyPreviews.debug.xcconfig */,
+				8682E1BFC999557830719F95 /* Pods-GemBoyPreviews.release.xcconfig */,
+				2BE77D97C93A7AB10AF4EA18 /* Pods-GemBoyShared-Darlion.debug.xcconfig */,
+				797ED5D8FB0D02AB4848A750 /* Pods-GemBoyShared-Darlion.release.xcconfig */,
+				FBF3A7A07CBB304BBD9E2062 /* Pods-GemBoyShared-GemBoy.debug.xcconfig */,
+				846C1CAF8FB6DF0FEEB5B1CA /* Pods-GemBoyShared-GemBoy.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		D502F82129EF05F800ACCDA1 /* Scenes */ = {
@@ -2859,27 +2864,6 @@
 			path = sliderForFast;
 			sourceTree = "<group>";
 		};
-		FD1E8AE87FA2DB8793F7B937 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C786AF1D2DDB6223BE2063CC /* Pods-Delta.debug.xcconfig */,
-				A19FF50F55441BC2B2248241 /* Pods-Delta.release.xcconfig */,
-				A01281C7023C0041B25963BE /* Pods-DeltaPreviews.debug.xcconfig */,
-				8ECE6641DE30D01EA30FE7F6 /* Pods-DeltaPreviews.release.xcconfig */,
-				1FC472D0CE8F1DABCC4D91CD /* Pods-GemBoy.debug.xcconfig */,
-				5E9C7C16BC517D412965A72B /* Pods-GemBoy.release.xcconfig */,
-				C1C7ED01297432ED7A249A12 /* Pods-GemBoyPreviews.debug.xcconfig */,
-				FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */,
-				DC4D89BE21D4092119127BDC /* Pods-GemBoyShared-GemBoy.debug.xcconfig */,
-				A35CB1BEA015024306651634 /* Pods-GemBoyShared-GemBoy.release.xcconfig */,
-				D19610C5D9B69219F0AEB398 /* Pods-GemBoyShared-GemBoyNew.debug.xcconfig */,
-				31D33FD6D50EFE1EA34FABF1 /* Pods-GemBoyShared-GemBoyNew.release.xcconfig */,
-				524B8BC1673D2D6106947DC1 /* Pods-GemBoyShared-Darlion.debug.xcconfig */,
-				FDE5559595A1E50BAFDE7E68 /* Pods-GemBoyShared-Darlion.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2897,13 +2881,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFFA71F61AAC406100EE9DD1 /* Build configuration list for PBXNativeTarget "GemBoy" */;
 			buildPhases = (
-				DBD91E7D7EC2729786B4C5B1 /* [CP] Check Pods Manifest.lock */,
+				5B4F2D1F399CEE87ABF2F0B7 /* [CP] Check Pods Manifest.lock */,
 				BFFA71D31AAC406100EE9DD1 /* Sources */,
 				BFFA71D41AAC406100EE9DD1 /* Frameworks */,
 				BF08DC3325CE07C3007A9CF4 /* Embed Frameworks */,
 				BFFA71D51AAC406100EE9DD1 /* Resources */,
-				0E0279E4F38215820BB0C9A0 /* [CP] Copy Pods Resources */,
 				EB8E0D6D2D947655004BFB1F /* Embed Foundation Extensions */,
+				C92C234219CBD3732A92984F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2938,12 +2922,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D539103729E88B6C0006B350 /* Build configuration list for PBXNativeTarget "GemBoyPreviews" */;
 			buildPhases = (
-				92EDD9C0CE3127182B2AF907 /* [CP] Check Pods Manifest.lock */,
+				D1380428E42278B9352FB11B /* [CP] Check Pods Manifest.lock */,
 				D539102A29E88B6B0006B350 /* Headers */,
 				D539102B29E88B6B0006B350 /* Sources */,
 				D539102C29E88B6B0006B350 /* Frameworks */,
 				D539102D29E88B6B0006B350 /* Resources */,
-				CA9C6F6BA1C90E8127A301EC /* [CP] Copy Pods Resources */,
+				39B0FE243530D75E5F5E1148 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2975,13 +2959,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB1E5E882E63050E00305D33 /* Build configuration list for PBXNativeTarget "Darlion" */;
 			buildPhases = (
-				EB1E5D202E63050E00305D33 /* [CP] Check Pods Manifest.lock */,
+				4E97D795C7A289B33619C54A /* [CP] Check Pods Manifest.lock */,
 				EB1E5D212E63050E00305D33 /* Sources */,
 				EB1E5E252E63050E00305D33 /* Frameworks */,
 				EB1E5E452E63050E00305D33 /* Embed Frameworks */,
 				EB1E5E472E63050E00305D33 /* Resources */,
-				EB1E5E852E63050E00305D33 /* [CP] Copy Pods Resources */,
 				EB1E5EE92E63230900305D33 /* Embed Foundation Extensions */,
+				764E04468044297D71FD25E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3303,24 +3287,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E0279E4F38215820BB0C9A0 /* [CP] Copy Pods Resources */ = {
+		39B0FE243530D75E5F5E1148 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		92EDD9C0CE3127182B2AF907 /* [CP] Check Pods Manifest.lock */ = {
+		4E97D795C7A289B33619C54A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3335,11 +3319,50 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GemBoyPreviews-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GemBoyShared-Darlion-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B4F2D1F399CEE87ABF2F0B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GemBoyShared-GemBoy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		764E04468044297D71FD25E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF14D8981DE7A519002CA1BE /* mogenerator */ = {
@@ -3373,74 +3396,43 @@
 			shellPath = /bin/sh;
 			shellScript = "# Manually build Systems.framework to prevent conflicts between Cocoapods' and SwiftPM's DeltaCore.\n\ncd $SRCROOT/Systems\n./build.sh\n";
 		};
-		CA9C6F6BA1C90E8127A301EC /* [CP] Copy Pods Resources */ = {
+		C92C234219CBD3732A92984F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-GemBoy/Pods-GemBoyShared-GemBoy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DBD91E7D7EC2729786B4C5B1 /* [CP] Check Pods Manifest.lock */ = {
+		D1380428E42278B9352FB11B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GemBoyShared-GemBoy-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB1E5D202E63050E00305D33 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GemBoyShared-Darlion-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB1E5E852E63050E00305D33 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GemBoyPreviews-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemBoyShared-Darlion/Pods-GemBoyShared-Darlion-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -4334,7 +4326,7 @@
 		};
 		BFFA71F71AAC406100EE9DD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC4D89BE21D4092119127BDC /* Pods-GemBoyShared-GemBoy.debug.xcconfig */;
+			baseConfigurationReference = FBF3A7A07CBB304BBD9E2062 /* Pods-GemBoyShared-GemBoy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -4357,10 +4349,10 @@
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"-ObjC",
-					"-l\"GBADeltaCore\"",
-					"-l\"MelonDSDeltaCore\"",
-					"-l\"N64DeltaCore\"",
-					"-l\"NESDeltaCore\"",
+					"-l\"GBAGameCore\"",
+					"-l\"MelonDSGameCore\"",
+					"-l\"N64GameCore\"",
+					"-l\"NESGameCore\"",
 					"-l\"Roxas\"",
 					"-l\"SDWebImage\"",
 					"-l\"SMCalloutView\"",
@@ -4404,7 +4396,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = BETA;
-				SWIFT_INCLUDE_PATHS = "$(inherited) \"$(SRCROOT)/Cores/GPGXDeltaCore/Sources/GPGXBridge\"";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -4414,7 +4406,7 @@
 		};
 		BFFA71F81AAC406100EE9DD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A35CB1BEA015024306651634 /* Pods-GemBoyShared-GemBoy.release.xcconfig */;
+			baseConfigurationReference = 846C1CAF8FB6DF0FEEB5B1CA /* Pods-GemBoyShared-GemBoy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -4449,7 +4441,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_INCLUDE_PATHS = "$(inherited) \"$(SRCROOT)/Cores/GPGXDeltaCore/Sources/GPGXBridge\"";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -4459,7 +4451,7 @@
 		};
 		D539103829E88B6C0006B350 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1C7ED01297432ED7A249A12 /* Pods-GemBoyPreviews.debug.xcconfig */;
+			baseConfigurationReference = A5D7D32DD9A54624FD9075E9 /* Pods-GemBoyPreviews.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -4507,7 +4499,7 @@
 		};
 		D539103929E88B6C0006B350 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEAC7592CEAC62D62C3EF95F /* Pods-GemBoyPreviews.release.xcconfig */;
+			baseConfigurationReference = 8682E1BFC999557830719F95 /* Pods-GemBoyPreviews.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -4597,7 +4589,7 @@
 		};
 		EB1E5E892E63050E00305D33 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 524B8BC1673D2D6106947DC1 /* Pods-GemBoyShared-Darlion.debug.xcconfig */;
+			baseConfigurationReference = 2BE77D97C93A7AB10AF4EA18 /* Pods-GemBoyShared-Darlion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -4667,7 +4659,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = BETA;
-				SWIFT_INCLUDE_PATHS = "$(inherited) \"$(SRCROOT)/Cores/GPGXDeltaCore/Sources/GPGXBridge\"";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -4677,7 +4669,7 @@
 		};
 		EB1E5E8A2E63050E00305D33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDE5559595A1E50BAFDE7E68 /* Pods-GemBoyShared-Darlion.release.xcconfig */;
+			baseConfigurationReference = 797ED5D8FB0D02AB4848A750 /* Pods-GemBoyShared-Darlion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -4712,7 +4704,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_INCLUDE_PATHS = "$(inherited) \"$(SRCROOT)/Cores/GPGXDeltaCore/Sources/GPGXBridge\"";
+				SWIFT_INCLUDE_PATHS = "$(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;

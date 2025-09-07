@@ -2,7 +2,7 @@
 //  CopyDeepLinkActivity.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/5/19.
+//  Created by Darlion on 8/5/19.
 //  Copyright © 2019 Riley Testut. All rights reserved.
 //
 

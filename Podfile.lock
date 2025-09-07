@@ -2,34 +2,34 @@ PODS:
   - Alamofire (5.10.2)
   - CircleBar (0.8.2)
   - CollectionViewPagingLayout (1.1.0)
-  - DeltaCore (0.1):
+  - GameCore (0.1):
     - ZIPFoundation
-  - GBADeltaCore (0.1):
-    - DeltaCore
+  - GBAGameCore (0.1):
+    - GameCore
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
-  - lottie-ios (4.5.1)
-  - MelonDSDeltaCore (0.1):
-    - DeltaCore
-  - N64DeltaCore (0.1):
-    - DeltaCore
-    - N64DeltaCore/RSP (= 0.1)
-    - N64DeltaCore/Video (= 0.1)
-  - N64DeltaCore/RSP (0.1):
-    - DeltaCore
-  - N64DeltaCore/Video (0.1):
-    - DeltaCore
-  - NESDeltaCore (0.1):
-    - DeltaCore
+  - lottie-ios (4.5.2)
+  - MelonDSGameCore (0.1):
+    - GameCore
+  - N64GameCore (0.1):
+    - GameCore
+    - N64GameCore/RSP (= 0.1)
+    - N64GameCore/Video (= 0.1)
+  - N64GameCore/RSP (0.1):
+    - GameCore
+  - N64GameCore/Video (0.1):
+    - GameCore
+  - NESGameCore (0.1):
+    - GameCore
   - ReachabilitySwift (5.2.4)
   - Roxas (0.1)
   - SDWebImage (3.8.3):
     - SDWebImage/Core (= 3.8.3)
   - SDWebImage/Core (3.8.3)
   - SMCalloutView (2.1.5)
-  - SNESDeltaCore (0.1):
-    - DeltaCore
+  - SNESGameCore (0.1):
+    - GameCore
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
@@ -39,18 +39,18 @@ DEPENDENCIES:
   - Alamofire
   - CircleBar (from `https://github.com/DomenicoGonnelli/CircleBar.git`, branch `General`)
   - CollectionViewPagingLayout
-  - DeltaCore (from `Cores/DeltaCore`)
-  - GBADeltaCore (from `Cores/GBADeltaCore`)
+  - GameCore (from `Cores/GameCore`)
+  - GBAGameCore (from `Cores/GBAGameCore`)
   - Kingfisher (~> 5.15.7)
   - lottie-ios
-  - MelonDSDeltaCore (from `Cores/MelonDSDeltaCore`)
-  - N64DeltaCore (from `Cores/N64DeltaCore`)
-  - NESDeltaCore (from `Cores/NESDeltaCore`)
+  - MelonDSGameCore (from `Cores/MelonDSGameCore`)
+  - N64GameCore (from `Cores/N64GameCore`)
+  - NESGameCore (from `Cores/NESGameCore`)
   - ReachabilitySwift
   - Roxas (from `External/Roxas`)
   - SDWebImage (~> 3.8)
   - SMCalloutView (~> 2.1.0)
-  - SNESDeltaCore (from `Cores/SNESDeltaCore`)
+  - SNESGameCore (from `Cores/SNESGameCore`)
   - SQLite.swift (~> 0.12.0)
 
 SPEC REPOS:
@@ -69,20 +69,20 @@ EXTERNAL SOURCES:
   CircleBar:
     :branch: General
     :git: https://github.com/DomenicoGonnelli/CircleBar.git
-  DeltaCore:
-    :path: Cores/DeltaCore
-  GBADeltaCore:
-    :path: Cores/GBADeltaCore
-  MelonDSDeltaCore:
-    :path: Cores/MelonDSDeltaCore
-  N64DeltaCore:
-    :path: Cores/N64DeltaCore
-  NESDeltaCore:
-    :path: Cores/NESDeltaCore
+  GameCore:
+    :path: Cores/GameCore
+  GBAGameCore:
+    :path: Cores/GBAGameCore
+  MelonDSGameCore:
+    :path: Cores/MelonDSGameCore
+  N64GameCore:
+    :path: Cores/N64GameCore
+  NESGameCore:
+    :path: Cores/NESGameCore
   Roxas:
     :path: External/Roxas
-  SNESDeltaCore:
-    :path: Cores/SNESDeltaCore
+  SNESGameCore:
+    :path: Cores/SNESGameCore
 
 CHECKOUT OPTIONS:
   CircleBar:
@@ -93,21 +93,21 @@ SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   CircleBar: 5b882eb3870de5bbda42bef1b2ec6c5c533497db
   CollectionViewPagingLayout: 2f8d50683bae57ca88f47fa4ab0195c9079582cf
-  DeltaCore: 34fa5d77f195d43597f330216b2fba47ef303384
-  GBADeltaCore: 833d6ed008e40daf8c91c92eeebe99cf7817e919
+  GameCore: 1b88f355a8f0e7f088c69ed0c2d2eac783d5f2b3
+  GBAGameCore: 8847205b1c556dc6ae18cc39aebf341746612903
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
-  lottie-ios: 248b380fa1b97d18e792c37d90da7ab2aa0d6562
-  MelonDSDeltaCore: 390bafa4bdf8284d30436c98e5e1b571a67ef564
-  N64DeltaCore: 28c148ad8ee6b6ebd2dfba643f429b06ff89bbdd
-  NESDeltaCore: f03042c80d16c800ddc10b999535d0153229af20
+  lottie-ios: 96784afc26ea031d3e2b6cae342a4b8915072489
+  MelonDSGameCore: 85ef4f7bb442ab0f61868c12928888df95c72863
+  N64GameCore: 23efcf4d2acc3f2833f8a109a90387ed654ab318
+  NESGameCore: 7b013cc5adf144d162f1a6c2882701e983f085f1
   ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
   Roxas: 1990039f843f5dc284918dc82375feb80020ef62
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
   SMCalloutView: 5c0ee363dc8e7204b2fda17dfad38c93e9e23481
-  SNESDeltaCore: c537de1864485166e22749d18bb3fe20c9444c02
+  SNESGameCore: 531a97f7814cd5ee033bbfa6789bb5e8d581a854
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   ZIPFoundation: b8c29ea7ae353b309bc810586181fd073cb3312c
 
-PODFILE CHECKSUM: a11474cfbd47d2d9e5be63a600db552bb9a625b2
+PODFILE CHECKSUM: 0e26648532a4823c1d414fb57bcbe42b61b31bc5
 
 COCOAPODS: 1.16.2

@@ -2,7 +2,7 @@
 //  ImportController.swift
 //  Delta
 //
-//  Created by Riley Testut on 10/10/15.
+//  Created by Darlion on 10/10/15.
 //  Copyright © 2015 Riley Testut. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import MobileCoreServices
 import UniformTypeIdentifiers
 import ObjectiveC
 
-import DeltaCore
+import GameCore
 
 import Roxas
 

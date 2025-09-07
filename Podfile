@@ -17,12 +17,12 @@ abstract_target 'GemBoyShared' do
   pod 'ReachabilitySwift'
 
   # Cores locali
-  pod 'DeltaCore',       :path => 'Cores/DeltaCore'
-  pod 'NESDeltaCore',    :path => 'Cores/NESDeltaCore'
-  pod 'SNESDeltaCore',   :path => 'Cores/SNESDeltaCore'
-  pod 'N64DeltaCore',    :path => 'Cores/N64DeltaCore'
-  pod 'GBADeltaCore',    :path => 'Cores/GBADeltaCore'
-  pod 'MelonDSDeltaCore',:path => 'Cores/MelonDSDeltaCore'
+  pod 'GameCore',       :path => 'Cores/GameCore'
+  pod 'NESGameCore',    :path => 'Cores/NESGameCore'
+  pod 'SNESGameCore',   :path => 'Cores/SNESGameCore'
+  pod 'N64GameCore',    :path => 'Cores/N64GameCore'
+  pod 'GBAGameCore',    :path => 'Cores/GBAGameCore'
+  pod 'MelonDSGameCore',:path => 'Cores/MelonDSGameCore'
 
   pod 'Roxas', :path => 'External/Roxas'
 
@@ -37,7 +37,7 @@ end
 # ---- TARGET DI PREVIEW (non eredita i pods condivisi) ----
 target 'GemBoyPreviews' do
   use_modular_headers!
-  pod 'DeltaCore', :path => 'Cores/DeltaCore'
+  pod 'GameCore', :path => 'Cores/GameCore'
   pod 'Roxas',     :path => 'External/Roxas'
 end
 
@@ -55,15 +55,15 @@ post_install do |installer|
         xcconfig_path = config.base_configuration_reference.real_path
         xcconfig = File.read(xcconfig_path)
         # rimuove ogni occorrenza di -l"DeltaCore"
-        new_xcconfig = xcconfig.gsub(/\s*-l"DeltaCore"\b/, '')
+        new_xcconfig = xcconfig.gsub(/\s*-l"GameCore"\b/, '')
         File.open(xcconfig_path, "w") { |f| f << new_xcconfig }
       else
         # Fallback: operiamo direttamente su OTHER_LDFLAGS in memoria
         flags = config.build_settings['OTHER_LDFLAGS']
         if flags.is_a?(Array)
-          config.build_settings['OTHER_LDFLAGS'] = flags - ['-l"DeltaCore"']
+          config.build_settings['OTHER_LDFLAGS'] = flags - ['-l"GameCore"']
         elsif flags.is_a?(String)
-          config.build_settings['OTHER_LDFLAGS'] = flags.gsub(/\s*-l"DeltaCore"\b/, '')
+          config.build_settings['OTHER_LDFLAGS'] = flags.gsub(/\s*-l"GameCore"\b/, '')
         end
       end
     end

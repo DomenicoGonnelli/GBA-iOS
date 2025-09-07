@@ -2,17 +2,17 @@
 //  PreviewGameViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/11/16.
+//  Created by Darlion on 8/11/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
-import DeltaCore
+import GameCore
 
 private var kvoContext = 0
 
-class PreviewGameViewController: DeltaCore.GameViewController
+class PreviewGameViewController: GameCore.GameViewController
 {
     // If non-nil, will override the default preview action items returned in previewActionItems()
     var overridePreviewActionItems: [UIPreviewActionItem]?
@@ -117,7 +117,7 @@ extension PreviewGameViewController
     {
         super.viewWillDisappear(animated)
         
-        // Pause in viewWillDisappear and not viewDidDisappear like DeltaCore.GameViewController so the audio cuts off earlier if being dismissed
+        // Pause in viewWillDisappear and not viewDidDisappear like GameCore.GameViewController so the audio cuts off earlier if being dismissed
         self.emulatorCore?.pause()
     }
     
@@ -220,7 +220,7 @@ private extension PreviewGameViewController
         if let saveState = self.previewSaveState as? SaveState
         {
             saveState.managedObjectContext?.performAndWait {
-                previewSaveState = DeltaCore.SaveState(fileURL: saveState.fileURL, gameType: saveState.gameType)
+                previewSaveState = GameCore.SaveState(fileURL: saveState.fileURL, gameType: saveState.gameType)
             }
         }
         
@@ -303,7 +303,7 @@ private extension PreviewGameViewController
 
 extension PreviewGameViewController: GameViewControllerDelegate
 {
-    func gameViewControllerShouldResumeEmulation(_ gameViewController: DeltaCore.GameViewController) -> Bool
+    func gameViewControllerShouldResumeEmulation(_ gameViewController: GameCore.GameViewController) -> Bool
     {
         return self.isLivePreview
     }

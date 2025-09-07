@@ -2,13 +2,13 @@
 //  PauseViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 1/30/16.
+//  Created by Darlion on 1/30/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
-import DeltaCore
+import GameCore
 
 class PauseViewController: BaseViewController, PauseInfoProviding
 {

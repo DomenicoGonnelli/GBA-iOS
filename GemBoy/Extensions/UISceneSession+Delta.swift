@@ -2,7 +2,7 @@
 //  UISceneSession+Delta.swift
 //  Delta
 //
-//  Created by Riley Testut on 6/20/24.
+//  Created by Darlion on 6/20/24.
 //  Copyright © 2024 Riley Testut. All rights reserved.
 //
 

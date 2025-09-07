@@ -2,13 +2,13 @@
 //  DeepLinkController.swift
 //  Delta
 //
-//  Created by Riley Testut on 12/28/17.
+//  Created by Darlion on 12/28/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
-import DeltaCore
+import GameCore
 
 import Roxas
 
@@ -103,7 +103,7 @@ private extension DeepLinkController
                         let temporaryURL = FileManager.default.uniqueTemporaryURL()
                         try data.write(to: temporaryURL, options: .atomic)
                         
-                        let saveState = DeltaCore.SaveState(fileURL: temporaryURL, gameType: gameType)
+                        let saveState = GameCore.SaveState(fileURL: temporaryURL, gameType: gameType)
                         userInfo[.saveState] = saveState
                     }
                     catch

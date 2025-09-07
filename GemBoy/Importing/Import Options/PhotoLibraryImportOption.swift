@@ -2,7 +2,7 @@
 //  PhotoLibraryImportOption.swift
 //  Delta
 //
-//  Created by Riley Testut on 5/2/17.
+//  Created by Darlion on 5/2/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 

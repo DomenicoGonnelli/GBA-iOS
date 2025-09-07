@@ -2,18 +2,18 @@
 //  System.swift
 //  Delta
 //
-//  Created by Riley Testut on 4/30/17.
+//  Created by Darlion on 4/30/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 
-import DeltaCore
+import GameCore
 
-import SNESDeltaCore
-import GBADeltaCore
+import SNESGameCore
+import GBAGameCore
 //import GBCDeltaCore
-import NESDeltaCore
-import N64DeltaCore
-import MelonDSDeltaCore
+import NESGameCore
+import N64GameCore
+import MelonDSGameCore
 import Systems
 import UIKit
 
@@ -22,7 +22,7 @@ import UIKit
 enum System: String, CaseIterable
 {
     case nes
-    case genesis
+//    case genesis
     case snes
     case n64
     case gbc
@@ -49,8 +49,8 @@ enum System: String, CaseIterable
             return UIImage(named: "ds_ic")
         case .nes:
             return UIImage(named: "nes_ic")
-        case .genesis:
-            return UIImage(named: "gs_ic")
+//        case .genesis:
+//            return UIImage(named: "gs_ic")
         case .snes:
             return UIImage(named: "snes_ic")
         case .n64:
@@ -68,8 +68,8 @@ enum System: String, CaseIterable
             return UIImage(named: "ds_ic 1")
         case .nes:
             return UIImage(named: "nes_ic 1")
-        case .genesis:
-            return UIImage(named: "gs_ic 1")
+//       ' case .genesis:
+//       '     return UIImage(named: "gs_ic 1")
         case .snes:
             return UIImage(named: "snes_ic 1")
         case .n64:
@@ -93,7 +93,7 @@ extension System
         case .gbc: return "Game Boy Color".localizable
         case .gba: return "Game Boy Advance".localizable
         case .ds: return "Nintendo DS".localizable
-        case .genesis: return "Sega Genesis".localizable
+//        case .genesis: return "Sega Genesis".localizable
         }
     }
     
@@ -106,7 +106,7 @@ extension System
         case .gbc: return "Game Boy Color_s".localizable
         case .gba: return "Game Boy Advance_s".localizable
         case .ds: return "Nintendo DS_s".localizable
-        case .genesis: return "Sega Genesis_s".localizable
+//        case .genesis: return "Sega Genesis_s".localizable
         }
     }
     
@@ -114,7 +114,7 @@ extension System
         switch self
         {
         case .nes: return 1985
-        case .genesis: return 1989
+//        case .genesis: return 1989
         case .snes: return 1990
         case .n64: return 1996
         case .gbc: return 1998
@@ -135,11 +135,11 @@ extension System
         case .gbc: return GBA.coreGBC
         case .gba: return GBA.core
         case .ds: return Settings.preferredCore(for: .ds) ?? MelonDS.core
-        case .genesis: return GPGX.core
+//        case .genesis: return GPGX.core
         }
     }
     
-    var gameType: DeltaCore.GameType {
+    var gameType: GameCore.GameType {
         switch self
         {
         case .nes: return .nes
@@ -148,11 +148,11 @@ extension System
         case .gbc: return .gbc
         case .gba: return .gba
         case .ds: return .ds
-        case .genesis: return .genesis
+//        case .genesis: return .genesis
         }
     }
     
-    init?(gameType: DeltaCore.GameType)
+    init?(gameType: GameCore.GameType)
     {
         switch gameType
         {
@@ -162,13 +162,13 @@ extension System
         case GameType.gbc: self = .gbc
         case GameType.gba: self = .gba
         case GameType.ds: self = .ds
-        case GameType.genesis: self = .genesis
+//        case GameType.genesis: self = .genesis
         default: return nil
         }
     }
 }
 
-extension DeltaCore.GameType
+extension GameCore.GameType
 {
     init?(fileExtension: String)
     {
@@ -180,7 +180,7 @@ extension DeltaCore.GameType
         case "gbc", "gb": self = .gbc
         case "gba": self = .gba
         case "ds", "nds": self = .ds
-        case "gen", "bin", "md", "smd": self = .genesis
+//        case "gen", "bin", "md", "smd": self = .genesis
         default: return nil
         }
     }

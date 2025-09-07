@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import DeltaCore
+import GameCore
 
 protocol LocalGameProtocol: GameProtocol {
     

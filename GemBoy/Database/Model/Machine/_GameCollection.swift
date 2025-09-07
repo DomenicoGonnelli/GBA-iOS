@@ -4,7 +4,7 @@
 import Foundation
 import CoreData
 
-import DeltaCore
+import GameCore
 
 public class _GameCollection: NSManagedObject 
 {   

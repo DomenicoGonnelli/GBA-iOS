@@ -2,7 +2,7 @@
 //  GameCollectionViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/12/16.
+//  Created by Darlion on 8/12/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
@@ -11,8 +11,8 @@ import SwiftUI
 import MobileCoreServices
 import AVFoundation
 import RegexBuilder
-import DeltaCore
-import MelonDSDeltaCore
+import GameCore
+import MelonDSGameCore
 import Roxas
 import SDWebImage
 

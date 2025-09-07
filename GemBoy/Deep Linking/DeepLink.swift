@@ -2,7 +2,7 @@
 //  DeepLink.swift
 //  Delta
 //
-//  Created by Riley Testut on 12/29/17.
+//  Created by Darlion on 12/29/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 

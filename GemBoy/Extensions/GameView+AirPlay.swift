@@ -2,14 +2,14 @@
 //  GameView+AirPlay.swift
 //  Delta
 //
-//  Created by Riley Testut on 11/1/23.
+//  Created by Darlion on 11/1/23.
 //  Copyright © 2023 Riley Testut. All rights reserved.
 //
 
 import Foundation
 import ObjectiveC.runtime
 
-import DeltaCore
+import GameCore
 import Roxas
 
 private var airPlayViewKey = 0

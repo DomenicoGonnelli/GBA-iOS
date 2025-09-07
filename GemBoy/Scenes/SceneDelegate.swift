@@ -2,13 +2,13 @@
 //  SceneDelegate.swift
 //  Delta
 //
-//  Created by Riley Testut on 6/6/22.
+//  Created by Darlion on 6/6/22.
 //  Copyright © 2022 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
-import DeltaCore
+import GameCore
 
 extension UIApplication
 {

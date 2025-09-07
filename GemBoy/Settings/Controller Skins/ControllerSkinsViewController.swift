@@ -2,13 +2,13 @@
 //  ControllerSkinsViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 10/19/16.
+//  Created by Darlion on 10/19/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
-import DeltaCore
+import GameCore
 
 import Roxas
 
@@ -28,7 +28,7 @@ class ControllerSkinsViewController: BaseTableViewController
         }
     }
     
-    var traits: DeltaCore.ControllerSkin.Traits! {
+    var traits: GameCore.ControllerSkin.Traits! {
         didSet {
             self.updateDataSource()
         }

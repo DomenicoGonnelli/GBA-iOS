@@ -2,13 +2,13 @@
 //  VariableFastForward.swift
 //  Delta
 //
-//  Created by Riley Testut on 4/5/23.
+//  Created by Darlion on 4/5/23.
 //  Copyright © 2023 Riley Testut. All rights reserved.
 //
 
 import SwiftUI
 
-import DeltaCore
+import GameCore
 import GemBoyFeatures
 
 struct FastForwardSpeed: RawRepresentable
@@ -77,7 +77,7 @@ struct VariableFastForwardOptions
     @Option(name: "Super Nintendo", description: "Preferred SNES fast forward speed.", values: FastForwardSpeed.speeds(in: System.snes.deltaCore.supportedRates))
     var snes: FastForwardSpeed?
     
-    @Option(name: "Sega Genesis", description: "Preferred Genesis fast forward speed.", values: FastForwardSpeed.speeds(in: System.genesis.deltaCore.supportedRates))
+//    @Option(name: "Sega Genesis", description: "Preferred Genesis fast forward speed.", values: FastForwardSpeed.speeds(in: System.genesis.deltaCore.supportedRates))
     var genesis: FastForwardSpeed?
 
     @Option(name: "Nintendo 64", description: "Preferred N64 fast forward speed.", values: FastForwardSpeed.speeds(in: System.n64.deltaCore.supportedRates))
@@ -105,7 +105,7 @@ extension Feature where Options == VariableFastForwardOptions
             {
             case .nes: return self.nes
             case .snes: return self.snes
-            case .genesis: return self.genesis
+//            case .genesis: return self.genesis
             case .n64: return self.n64
             case .gbc: return self.gbc
             case .gba: return self.gba
@@ -118,7 +118,7 @@ extension Feature where Options == VariableFastForwardOptions
             {
             case .nes: self.nes = newValue
             case .snes: self.snes = newValue
-            case .genesis: self.genesis = newValue
+//            case .genesis: self.genesis = newValue
             case .n64: self.n64 = newValue
             case .gbc: self.gbc = newValue
             case .gba: self.gba = newValue

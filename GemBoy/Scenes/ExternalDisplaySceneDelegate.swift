@@ -2,13 +2,13 @@
 //  ExternalDisplaySceneDelegate.swift
 //  Delta
 //
-//  Created by Riley Testut on 4/17/23.
+//  Created by Darlion on 4/17/23.
 //  Copyright © 2023 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
-import DeltaCore
+import GameCore
 
 extension UIApplication
 {
@@ -29,7 +29,7 @@ extension UIApplication
 
 class ExternalDisplayScene: UIWindowScene
 {
-    let gameViewController = DeltaCore.GameViewController()
+    let gameViewController = GameCore.GameViewController()
     
     var game: GameProtocol? {
         get { self.gameViewController.game }

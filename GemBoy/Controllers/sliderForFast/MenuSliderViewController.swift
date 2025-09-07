@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import DeltaCore
+import GameCore
 
 class MenuSliderViewController: BaseViewController {
     

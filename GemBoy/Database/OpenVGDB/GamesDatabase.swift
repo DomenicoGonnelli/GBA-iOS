@@ -2,7 +2,7 @@
 //  GamesDatabase.swift
 //  Delta
 //
-//  Created by Riley Testut on 11/16/16.
+//  Created by Darlion on 11/16/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 

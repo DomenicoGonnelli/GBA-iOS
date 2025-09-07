@@ -7,7 +7,7 @@
 
 
 import UIKit
-import DeltaCore
+import GameCore
 
 struct DownloadRomOption: ImportOption
 {

@@ -2,7 +2,7 @@
 //  GridCollectionViewCell.swift
 //  Delta
 //
-//  Created by Riley Testut on 10/21/15.
+//  Created by Darlion on 10/21/15.
 //  Copyright © 2015 Riley Testut. All rights reserved.
 //
 

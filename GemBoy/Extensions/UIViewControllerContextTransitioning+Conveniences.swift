@@ -2,7 +2,7 @@
 //  UIViewControllerContextTransitioning+Conveniences.swift
 //  Delta
 //
-//  Created by Riley Testut on 7/28/16.
+//  Created by Darlion on 7/28/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 

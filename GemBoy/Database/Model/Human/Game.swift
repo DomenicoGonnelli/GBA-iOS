@@ -2,21 +2,21 @@
 //  Game.swift
 //  Delta
 //
-//  Created by Riley Testut on 10/3/15.
+//  Created by Darlion on 10/3/15.
 //  Copyright © 2015 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
-import MelonDSDeltaCore
+import GameCore
+import MelonDSGameCore
 
 public extension Game
 {
     typealias Setting = __GameSetting
     
-    static let melonDSBIOSIdentifier = "com.rileytestut.MelonDSDeltaCore.BIOS"
-    static let melonDSDSiBIOSIdentifier = "com.rileytestut.MelonDSDeltaCore.DSiBIOS"
+    static let melonDSBIOSIdentifier = "com.rileytestut.MelonDSGameCore.BIOS"
+    static let melonDSDSiBIOSIdentifier = "com.rileytestut.MelonDSGameCore.DSiBIOS"
 }
 
 @objc(Game)

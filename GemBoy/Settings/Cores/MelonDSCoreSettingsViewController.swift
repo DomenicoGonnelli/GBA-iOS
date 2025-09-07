@@ -2,7 +2,7 @@
 //  MelonDSCoreSettingsViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 4/13/20.
+//  Created by Darlion on 4/13/20.
 //  Copyright © 2020 Riley Testut. All rights reserved.
 //
 
@@ -12,8 +12,8 @@ import SafariServices
 import MobileCoreServices
 import CryptoKit
 
-import DeltaCore
-import MelonDSDeltaCore
+import GameCore
+import MelonDSGameCore
 
 import Roxas
 

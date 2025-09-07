@@ -2,13 +2,13 @@
 //  GameCollection.swift
 //  Delta
 //
-//  Created by Riley Testut on 11/1/15.
+//  Created by Darlion on 11/1/15.
 //  Copyright © 2015 Riley Testut. All rights reserved.
 //
 
 import CoreData
 
-import DeltaCore
+import GameCore
 
 @objc(GameCollection)
 public class GameCollection: _GameCollection

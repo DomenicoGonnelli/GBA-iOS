@@ -2,13 +2,13 @@
 //  GameSettingsView.swift
 //  Delta
 //
-//  Created by Riley Testut on 1/22/25.
+//  Created by Darlion on 1/22/25.
 //  Copyright © 2025 Riley Testut. All rights reserved.
 //
 
 import SwiftUI
 
-import DeltaCore
+import GameCore
 
 struct GameSettingsView: View
 {

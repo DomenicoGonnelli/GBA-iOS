@@ -6,4 +6,3 @@
 //  Copyright © 2021 Riley Testut. All rights reserved.
 //
 
-@_exported import GPGXDeltaCore

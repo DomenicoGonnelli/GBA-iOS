@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:GemBoy.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cores/GameCore/GameCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cores/NESGameCore/NESGameCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cores/SNESGameCore/SNESGameCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cores/GBAGameCore/GBAGameCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cores/N64GameCore/N64GameCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cores/MelonDSGameCore/MelonDSGameCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

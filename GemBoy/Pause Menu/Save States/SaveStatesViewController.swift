@@ -2,7 +2,7 @@
 //  SaveStatesViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 1/23/16.
+//  Created by Darlion on 1/23/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 import CoreData
 import MobileCoreServices
 
-import DeltaCore
-import MelonDSDeltaCore
+import GameCore
+import MelonDSGameCore
 import Roxas
 
 protocol SaveStatesViewControllerDelegate: class

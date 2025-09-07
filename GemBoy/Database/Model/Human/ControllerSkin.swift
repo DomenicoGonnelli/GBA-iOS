@@ -2,17 +2,17 @@
 //  ControllerSkin.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/30/16.
+//  Created by Darlion on 8/30/16.
 //  Copyright (c) 2016 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
+import GameCore
 
 extension ControllerSkinConfigurations
 {
-    init?(traits: DeltaCore.ControllerSkin.Traits)
+    init?(traits: GameCore.ControllerSkin.Traits)
     {
         switch (traits.device, traits.displayType, traits.orientation)
         {
@@ -60,9 +60,9 @@ public class ControllerSkin: _ControllerSkin
     // Transient, not persisted to Core Data.
     public var isReversingScreens: Bool = false
     
-    private lazy var controllerSkin: DeltaCore.ControllerSkin? = {
+    private lazy var controllerSkin: GameCore.ControllerSkin? = {
         
-        let controllerSkin = self.isStandard ? Self.dg_controller(system: System(gameType: self.gameType)) : DeltaCore.ControllerSkin(fileURL: self.fileURL)
+        let controllerSkin = self.isStandard ? Self.dg_controller(system: System(gameType: self.gameType)) : GameCore.ControllerSkin(fileURL: self.fileURL)
         return controllerSkin
     }()
     
@@ -78,22 +78,22 @@ public class ControllerSkin: _ControllerSkin
 
 extension ControllerSkin: ControllerSkinProtocol
 {
-    public func supports(_ traits: DeltaCore.ControllerSkin.Traits) -> Bool
+    public func supports(_ traits: GameCore.ControllerSkin.Traits) -> Bool
     {
         return self.controllerSkin?.supports(traits) ?? false
     }
     
-    public func image(for traits: DeltaCore.ControllerSkin.Traits, preferredSize: DeltaCore.ControllerSkin.Size) -> UIImage?
+    public func image(for traits: GameCore.ControllerSkin.Traits, preferredSize: GameCore.ControllerSkin.Size) -> UIImage?
     {
         return self.controllerSkin?.image(for: traits, preferredSize: preferredSize)
     }
     
-    public func thumbstick(for item: DeltaCore.ControllerSkin.Item, traits: DeltaCore.ControllerSkin.Traits, preferredSize: DeltaCore.ControllerSkin.Size) -> (UIImage, CGSize)?
+    public func thumbstick(for item: GameCore.ControllerSkin.Item, traits: GameCore.ControllerSkin.Traits, preferredSize: GameCore.ControllerSkin.Size) -> (UIImage, CGSize)?
     {
         return self.controllerSkin?.thumbstick(for: item, traits: traits, preferredSize: preferredSize)
     }
     
-    public func items(for traits: DeltaCore.ControllerSkin.Traits) -> [DeltaCore.ControllerSkin.Item]?
+    public func items(for traits: GameCore.ControllerSkin.Traits) -> [GameCore.ControllerSkin.Item]?
     {
         guard var items = self.controllerSkin?.items(for: traits) else { return nil }
         
@@ -147,12 +147,12 @@ extension ControllerSkin: ControllerSkinProtocol
         return items
     }
     
-    public func isTranslucent(for traits: DeltaCore.ControllerSkin.Traits) -> Bool?
+    public func isTranslucent(for traits: GameCore.ControllerSkin.Traits) -> Bool?
     {
         return self.controllerSkin?.isTranslucent(for: traits)
     }
     
-    public func screens(for traits: DeltaCore.ControllerSkin.Traits) -> [DeltaCore.ControllerSkin.Screen]?
+    public func screens(for traits: GameCore.ControllerSkin.Traits) -> [GameCore.ControllerSkin.Screen]?
     {
         guard var screens = self.controllerSkin?.screens(for: traits) else { return nil }
         
@@ -175,12 +175,12 @@ extension ControllerSkin: ControllerSkinProtocol
         return screens
     }
     
-    public func aspectRatio(for traits: DeltaCore.ControllerSkin.Traits) -> CGSize?
+    public func aspectRatio(for traits: GameCore.ControllerSkin.Traits) -> CGSize?
     {
         return self.controllerSkin?.aspectRatio(for: traits)
     }
     
-    public func contentSize(for traits: DeltaCore.ControllerSkin.Traits) -> CGSize?
+    public func contentSize(for traits: GameCore.ControllerSkin.Traits) -> CGSize?
     {
         if let contentSize = self.controllerSkin?.contentSize(for: traits)
         {
@@ -196,7 +196,7 @@ extension ControllerSkin: ControllerSkinProtocol
         return nil
     }
     
-    public func menuInsets(for traits: DeltaCore.ControllerSkin.Traits) -> UIEdgeInsets?
+    public func menuInsets(for traits: GameCore.ControllerSkin.Traits) -> UIEdgeInsets?
     {
         return self.controllerSkin?.menuInsets(for: traits)
     }

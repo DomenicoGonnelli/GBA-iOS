@@ -2,13 +2,13 @@
 //  SaveState.swift
 //  Delta
 //
-//  Created by Riley Testut on 1/31/16.
+//  Created by Darlion on 1/31/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
+import GameCore
 
 @objc public enum SaveStateType: Int16
 {

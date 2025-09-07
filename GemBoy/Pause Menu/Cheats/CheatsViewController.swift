@@ -2,7 +2,7 @@
 //  CheatsViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 5/20/16.
+//  Created by Darlion on 5/20/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 import CoreData
 import SwiftUI
 
-import DeltaCore
-import MelonDSDeltaCore
+import GameCore
+import MelonDSGameCore
 
 import Roxas
 

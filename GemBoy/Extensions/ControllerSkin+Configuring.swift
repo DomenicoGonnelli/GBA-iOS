@@ -2,13 +2,13 @@
 //  ControllerSkin+Configuring.swift
 //  Delta
 //
-//  Created by Riley Testut on 11/2/16.
+//  Created by Darlion on 11/2/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
-import DeltaCore
+import GameCore
 
 extension ControllerSkin
 {
@@ -24,32 +24,32 @@ extension ControllerSkin
         self.configure(with: deltaControllerSkin)
     }
     
-    static func dg_controller(system: System?) -> DeltaCore.ControllerSkin?
+    static func dg_controller(system: System?) -> GameCore.ControllerSkin?
     {
         guard let s = system else { return nil}
-        guard let fileURL = Bundle.main.url(forResource: "dg_\(s.localizableShortName)", withExtension: "dgskin") else { return DeltaCore.ControllerSkin.standardControllerSkin(for: s.gameType) }
+        guard let fileURL = Bundle.main.url(forResource: "dg_\(s.localizableShortName)", withExtension: "dgskin") else { return GameCore.ControllerSkin.standardControllerSkin(for: s.gameType) }
         
-        let controllerSkin = DeltaCore.ControllerSkin(fileURL: fileURL)
+        let controllerSkin = GameCore.ControllerSkin(fileURL: fileURL)
         print(controllerSkin)
         return controllerSkin
     }
     
     
     
-    func configure(with skin: DeltaCore.ControllerSkin)
+    func configure(with skin: GameCore.ControllerSkin)
     {
         // Manually copy values to be stored in database.
-        // Remaining ControllerSkinProtocol requirements will be provided by the ControllerSkin's private DeltaCore.ControllerSkin instance.
+        // Remaining ControllerSkinProtocol requirements will be provided by the ControllerSkin's private GameCore.ControllerSkin instance.
         self.name = skin.name
         self.identifier = skin.identifier
         self.gameType = skin.gameType
         
         var configurations = ControllerSkinConfigurations()
         
-        let allTraitCombinations = DeltaCore.ControllerSkin.Device.allCases.flatMap { device in
-            DeltaCore.ControllerSkin.DisplayType.allCases.flatMap { displayType in
-                DeltaCore.ControllerSkin.Orientation.allCases.map { orientation in
-                    DeltaCore.ControllerSkin.Traits(device: device, displayType: displayType, orientation: orientation)
+        let allTraitCombinations = GameCore.ControllerSkin.Device.allCases.flatMap { device in
+            GameCore.ControllerSkin.DisplayType.allCases.flatMap { displayType in
+                GameCore.ControllerSkin.Orientation.allCases.map { orientation in
+                    GameCore.ControllerSkin.Traits(device: device, displayType: displayType, orientation: orientation)
                 }
             }
         }

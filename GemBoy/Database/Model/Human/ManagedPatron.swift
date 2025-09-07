@@ -2,7 +2,7 @@
 //  ManagedPatron.swift
 //  AltStoreCore
 //
-//  Created by Riley Testut on 4/18/22.
+//  Created by Darlion on 4/18/22.
 //  Copyright © 2022 Riley Testut. All rights reserved.
 //
 

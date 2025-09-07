@@ -2,7 +2,7 @@
 //  String+Profanity.swift
 //  Delta
 //
-//  Created by Riley Testut on 12/4/24.
+//  Created by Darlion on 12/4/24.
 //  Copyright © 2024 Riley Testut. All rights reserved.
 //
 //  Based on IslandOfDoom's IODProfanityFilter ( https://github.com/IslandOfDoom/IODProfanityFilter )

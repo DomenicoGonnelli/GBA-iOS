@@ -2,14 +2,14 @@
 //  CheatDevice.swift
 //  Delta
 //
-//  Created by Riley Testut on 1/30/23.
+//  Created by Darlion on 1/30/23.
 //  Copyright © 2023 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
-import NESDeltaCore
+import GameCore
+import NESGameCore
 
 @objc
 enum CheatDevice: Int16
@@ -66,7 +66,7 @@ extension CheatDevice
             return .gameGenie
             
         case .nesGameGenie:
-            return CheatType(rawValue: DeltaCore.CheatType.gameGenie8.rawValue)
+            return CheatType(rawValue: GameCore.CheatType.gameGenie8.rawValue)
             
         case .gbaCodeBreaker, .dsCodeBreaker:
             return .codeBreaker
@@ -89,8 +89,8 @@ extension CheatDevice
         case .gbGameGenie, .gbcGameShark: return .gbc
         case .gbaActionReplayMax, .gbaGameShark, .gbaCodeBreaker: return .gba
         case .dsActionReplay, .dsCodeBreaker: return .ds
-        case .genesisActionReplay8, .genesisActionReplay10: return .genesis
-        case .cdActionReplay8, .cdActionReplay10: return .genesis
+        case .genesisActionReplay8, .genesisActionReplay10: return nil
+        case .cdActionReplay8, .cdActionReplay10: return nil
             
         // Not yet supported
         case .gameGearActionReplay, .gameGearGameGenie: return nil

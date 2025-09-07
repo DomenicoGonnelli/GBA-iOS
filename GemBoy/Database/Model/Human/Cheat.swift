@@ -2,13 +2,13 @@
 //  Cheat.swift
 //  Delta
 //
-//  Created by Riley Testut on 5/19/16.
+//  Created by Darlion on 5/19/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
+import GameCore
 
 @objc(Cheat)
 public class Cheat: _Cheat, CheatProtocol

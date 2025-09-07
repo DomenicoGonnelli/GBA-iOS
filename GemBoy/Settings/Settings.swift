@@ -2,15 +2,15 @@
 //  Settings.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/23/15.
+//  Created by Darlion on 8/23/15.
 //  Copyright © 2015 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
+import GameCore
 import GemBoyFeatures
-import MelonDSDeltaCore
+import MelonDSGameCore
 
 import Roxas
 
@@ -301,7 +301,7 @@ extension Settings
         NotificationCenter.default.post(name: Settings.didChangeNotification, object: nil, userInfo: [NotificationUserInfoKey.name: key, NotificationUserInfoKey.core: core])
     }
     
-    static func preferredControllerSkin(for system: System, traits: DeltaCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool) -> ControllerSkin?
+    static func preferredControllerSkin(for system: System, traits: GameCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool) -> ControllerSkin?
     {
         if !ExperimentalFeatures.shared.airPlaySkins.isEnabled
         {
@@ -358,7 +358,7 @@ extension Settings
         return nil
     }
     
-    static func setPreferredControllerSkin(_ controllerSkin: ControllerSkin?, for system: System, traits: DeltaCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool)
+    static func setPreferredControllerSkin(_ controllerSkin: ControllerSkin?, for system: System, traits: GameCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool)
     {
         guard let userDefaultKey = self.preferredControllerSkinKey(for: system, traits: traits, forExternalController: isForExternalController) else { return }
         
@@ -369,7 +369,7 @@ extension Settings
         NotificationCenter.default.post(name: Settings.didChangeNotification, object: controllerSkin, userInfo: [NotificationUserInfoKey.name: Name.preferredControllerSkin, NotificationUserInfoKey.system: system, NotificationUserInfoKey.traits: traits])
     }
     
-    static func preferredControllerSkin(for game: Game, traits: DeltaCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool) -> ControllerSkin?
+    static func preferredControllerSkin(for game: Game, traits: GameCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool) -> ControllerSkin?
     {
         let preferredControllerSkin: ControllerSkin?
         
@@ -410,7 +410,7 @@ extension Settings
         return nil
     }
     
-    static func setPreferredControllerSkin(_ controllerSkin: ControllerSkin?, for game: Game, traits: DeltaCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool)
+    static func setPreferredControllerSkin(_ controllerSkin: ControllerSkin?, for game: Game, traits: GameCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool)
     {
         let context = DatabaseManager.shared.newBackgroundContext()
         context.performAndWait {
@@ -469,7 +469,7 @@ extension Settings
 
 private extension Settings
 {
-    static func preferredControllerSkinKey(for system: System, traits: DeltaCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool) -> String?
+    static func preferredControllerSkinKey(for system: System, traits: GameCore.ControllerSkin.Traits, forExternalController isForExternalController: Bool) -> String?
     {
         let systemName: String
         
@@ -481,7 +481,7 @@ private extension Settings
         case .gba: systemName = "gba"
         case .n64: systemName = "n64"
         case .ds: systemName = "ds"
-        case .genesis: systemName = "genesis"
+//        case .genesis: systemName = "genesis"
         }
         
         let orientation: String

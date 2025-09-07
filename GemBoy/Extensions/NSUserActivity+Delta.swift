@@ -2,7 +2,7 @@
 //  NSUserActivity+Delta.swift
 //  Delta
 //
-//  Created by Riley Testut on 5/9/24.
+//  Created by Darlion on 5/9/24.
 //  Copyright © 2024 Riley Testut. All rights reserved.
 //
 

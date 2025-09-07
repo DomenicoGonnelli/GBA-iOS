@@ -2,13 +2,13 @@
 //  SystemBIOS.swift
 //  Delta
 //
-//  Created by Riley Testut on 1/19/21.
+//  Created by Darlion on 1/19/21.
 //  Copyright © 2021 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import MelonDSDeltaCore
+import MelonDSGameCore
 
 protocol SystemBIOS
 {

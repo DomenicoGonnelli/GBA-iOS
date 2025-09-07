@@ -2,17 +2,17 @@
 //  GameViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 5/5/15.
+//  Created by Darlion on 5/5/15.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import UIKit
 import Photos
 
-import DeltaCore
-import GBADeltaCore
-import N64DeltaCore
-import MelonDSDeltaCore
+import GameCore
+import GBAGameCore
+import N64GameCore
+import MelonDSGameCore
 import Systems
 import Network
 import Roxas
@@ -53,9 +53,9 @@ public extension GameProtocol{
     
 }
 
-private extension DeltaCore.ControllerSkin
+private extension GameCore.ControllerSkin
 {
-    func hasTouchScreen(for traits: DeltaCore.ControllerSkin.Traits) -> Bool
+    func hasTouchScreen(for traits: GameCore.ControllerSkin.Traits) -> Bool
     {
         let hasTouchScreen = self.items(for: traits)?.contains(where: { $0.kind == .touchScreen }) ?? false
         return hasTouchScreen
@@ -127,7 +127,7 @@ enum ConnectionLinkType: String {
 }
 
 
-class GameViewController: DeltaCore.GameViewController, AlertViewDelegate
+class GameViewController: GameCore.GameViewController, AlertViewDelegate
 {
     
     var secondaryWindow: UIWindow?
@@ -1007,9 +1007,9 @@ extension GameViewController
             
             switch self.game?.type
             {
-            case .genesis?:
-                // GPGX core does not support cheats yet.
-                pauseViewController.cheatCodesItem = nil
+//            case .genesis?:
+//                // GPGX core does not support cheats yet.
+//                pauseViewController.cheatCodesItem = nil
 
             default: break
             }
@@ -1305,7 +1305,7 @@ private extension GameViewController
     {
         guard let game = self.game as? Game, let window = self.view.window else { return }
         
-        let traits = DeltaCore.ControllerSkin.Traits.defaults(for: window)
+        let traits = GameCore.ControllerSkin.Traits.defaults(for: window)
         let isExternalControllerConnected = ExternalGameControllerManager.shared.connectedControllers.contains(where: { $0.playerIndex != nil })
         
         if Settings.localControllerPlayerIndex != nil
@@ -1320,7 +1320,7 @@ private extension GameViewController
             // No local player, but user has selected an external controller skin, so show that instead.
             self.controllerView.controllerSkin = externalControllerSkin
         }
-        else if let controllerSkin = DeltaCore.ControllerSkin.standardControllerSkin(for: game.type), controllerSkin.hasTouchScreen(for: traits)
+        else if let controllerSkin = GameCore.ControllerSkin.standardControllerSkin(for: game.type), controllerSkin.hasTouchScreen(for: traits)
         {
             var touchControllerSkin = TouchControllerSkin(controllerSkin: controllerSkin)
             
@@ -1641,7 +1641,7 @@ extension GameViewController: SaveStatesViewControllerDelegate
             do
             {
                 try FileManager.default.moveItem(at: saveState.fileURL, to: temporaryURL)
-                temporarySaveState = DeltaCore.SaveState(fileURL: temporaryURL, gameType: saveState.gameType)
+                temporarySaveState = GameCore.SaveState(fileURL: temporaryURL, gameType: saveState.gameType)
             }
             catch
             {
@@ -1984,13 +1984,13 @@ private extension GameViewController
                 // Use preferredControllerSkin directly.
                 controllerSkin = preferredControllerSkin
             }
-            else if let standardSkin = DeltaCore.ControllerSkin.standardControllerSkin(for: game.type), standardSkin.supports(traits)
+            else if let standardSkin = GameCore.ControllerSkin.standardControllerSkin(for: game.type), standardSkin.supports(traits)
             {
                 if standardSkin.hasTouchScreen(for: traits)
                 {
                     // Only use TouchControllerSkin for standard controller skins with touch screens.
                     
-                    var touchControllerSkin = DeltaCore.TouchControllerSkin(controllerSkin: standardSkin)
+                    var touchControllerSkin = GameCore.TouchControllerSkin(controllerSkin: standardSkin)
                     touchControllerSkin.screenLayoutAxis = Settings.features.dsAirPlay.layoutAxis
 
                     if Settings.features.dsAirPlay.topScreenOnly
@@ -2050,7 +2050,7 @@ private extension GameViewController
 /// GameViewControllerDelegate
 extension GameViewController: GameViewControllerDelegate
 {
-    func gameViewController(_ gameViewController: DeltaCore.GameViewController, handleMenuInputFrom gameController: GameController)
+    func gameViewController(_ gameViewController: GameCore.GameViewController, handleMenuInputFrom gameController: GameController)
     {
         guard gameViewController == self else { return }
         
@@ -2082,7 +2082,7 @@ extension GameViewController: GameViewControllerDelegate
         }
     }
     
-    func gameViewControllerShouldPauseEmulation(_ gameViewController: DeltaCore.GameViewController) -> Bool
+    func gameViewControllerShouldPauseEmulation(_ gameViewController: GameCore.GameViewController) -> Bool
     {
         guard gameViewController == self else { return true }
         
@@ -2095,7 +2095,7 @@ extension GameViewController: GameViewControllerDelegate
         return true
     }
     
-    func gameViewControllerShouldResumeEmulation(_ gameViewController: DeltaCore.GameViewController) -> Bool
+    func gameViewControllerShouldResumeEmulation(_ gameViewController: GameCore.GameViewController) -> Bool
     {
         guard gameViewController == self else { return false }
         guard !self.isContinuingHandoff else { return false }
@@ -2109,7 +2109,7 @@ extension GameViewController: GameViewControllerDelegate
         return result
     }
     
-    func gameViewController(_ gameViewController: DeltaCore.GameViewController, didUpdateGameViews gameViews: [GameView])
+    func gameViewController(_ gameViewController: GameCore.GameViewController, didUpdateGameViews gameViews: [GameView])
     {
         // gameViewController could be `self` or ExternalDisplayScene.gameViewController.
         
@@ -2123,7 +2123,7 @@ extension GameViewController: GameViewControllerDelegate
         }
     }
     
-    func gameViewController(_ gameViewController: DeltaCore.GameViewController, optionsFor game: GameProtocol) -> [EmulatorCore.Option: Any]
+    func gameViewController(_ gameViewController: GameCore.GameViewController, optionsFor game: GameProtocol) -> [EmulatorCore.Option: Any]
     {
         if let game = game as? Game, game.type == .n64
         {
@@ -2470,7 +2470,7 @@ private extension GameViewController
         case .preferredControllerSkin:
             guard
                 let system = notification.userInfo?[Settings.NotificationUserInfoKey.system] as? System,
-                let traits = notification.userInfo?[Settings.NotificationUserInfoKey.traits] as? DeltaCore.ControllerSkin.Traits
+                let traits = notification.userInfo?[Settings.NotificationUserInfoKey.traits] as? GameCore.ControllerSkin.Traits
             else { return }
                         
             if system.gameType == self.game?.type && traits.orientation == self.controllerView.controllerSkinTraits?.orientation
@@ -2561,7 +2561,7 @@ private extension GameViewController
                 let temporaryURL = FileManager.default.uniqueTemporaryURL()
                 try FileManager.default.copyItem(at: pausedSaveState.fileURL, to: temporaryURL)
                 
-                _deepLinkResumingSaveState = DeltaCore.SaveState(fileURL: temporaryURL, gameType: game.type)
+                _deepLinkResumingSaveState = GameCore.SaveState(fileURL: temporaryURL, gameType: game.type)
             }
             catch
             {

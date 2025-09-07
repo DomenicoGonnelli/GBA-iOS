@@ -2,12 +2,12 @@
 //  AppDelegate.swift
 //  Delta
 //
-//  Created by Riley Testut on 3/8/15.
+//  Created by Darlion on 3/8/15.
 //  Copyright (c) 2015 Riley Testut. All rights reserved.
 //
 
 import UIKit
-import DeltaCore
+import GameCore
 import FirebaseCore
 import GoogleMobileAds
 import ShowTouches
@@ -178,24 +178,7 @@ private extension AppDelegate
 {
     func registerCores()
     {
-#if LITE
-        
-#if BETA
-        Delta.register(System.nes.deltaCore)
-        Delta.register(System.gbc.deltaCore)
-#else
-        Delta.register(System.nes.deltaCore)
-#endif
-        
-#else
-        
-#if BETA
         System.DGITems.forEach { Delta.register($0.deltaCore) }
-#else
-        System.allCases.filter { $0 != .genesis }.forEach { Delta.register($0.deltaCore) }
-#endif
-        
-#endif
     }
     
     func configureAppearance()

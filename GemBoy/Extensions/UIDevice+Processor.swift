@@ -2,7 +2,7 @@
 //  UIDevice+Processor.swift
 //  Delta
 //
-//  Created by Riley Testut on 9/21/19.
+//  Created by Darlion on 9/21/19.
 //  Copyright © 2019 Riley Testut. All rights reserved.
 //
 

@@ -2,12 +2,12 @@
 //  WFCManager.swift
 //  Delta
 //
-//  Created by Riley Testut on 2/21/25.
+//  Created by Darlion on 2/21/25.
 //  Copyright © 2025 Riley Testut. All rights reserved.
 //
 
 import Foundation
-import MelonDSDeltaCore
+import MelonDSGameCore
 
 private extension URL
 {

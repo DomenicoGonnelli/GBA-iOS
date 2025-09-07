@@ -2,14 +2,14 @@
 //  CheatTextView.swift
 //  Delta
 //
-//  Created by Riley Testut on 5/22/16.
+//  Created by Darlion on 5/22/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import UIKit
 import CoreText
 
-import DeltaCore
+import GameCore
 
 import Roxas
 

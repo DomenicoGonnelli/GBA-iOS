@@ -2,23 +2,23 @@
 //  GameControllerInputMapping.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/30/16.
+//  Created by Darlion on 8/30/16.
 //  Copyright (c) 2016 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
+import GameCore
 
 @objc(GameControllerInputMapping)
 public class GameControllerInputMapping: _GameControllerInputMapping
 {
-    private var inputMapping: DeltaCore.GameControllerInputMapping {
-        get { return self.deltaCoreInputMapping as! DeltaCore.GameControllerInputMapping }
+    private var inputMapping: GameCore.GameControllerInputMapping {
+        get { return self.deltaCoreInputMapping as! GameCore.GameControllerInputMapping }
         set { self.deltaCoreInputMapping = newValue }
     }
     
-    public convenience init(inputMapping: DeltaCore.GameControllerInputMapping, context: NSManagedObjectContext)
+    public convenience init(inputMapping: GameCore.GameControllerInputMapping, context: NSManagedObjectContext)
     {
         self.init(entity: GameControllerInputMapping.entity(), insertInto: context)
         

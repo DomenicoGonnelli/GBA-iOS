@@ -5,9 +5,6 @@
       location = "container:Systems.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../Cores/DeltaCore">
-   </FileRef>
-   <FileRef
-      location = "group:../Cores/GPGXDeltaCore">
+      location = "group:../Cores/GameCore">
    </FileRef>
 </Workspace>

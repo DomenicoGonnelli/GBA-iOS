@@ -11,8 +11,8 @@ import SwiftUI
 import MobileCoreServices
 import AVFoundation
 import RegexBuilder
-import DeltaCore
-import MelonDSDeltaCore
+import GameCore
+import MelonDSGameCore
 import Roxas
 import SDWebImage
 

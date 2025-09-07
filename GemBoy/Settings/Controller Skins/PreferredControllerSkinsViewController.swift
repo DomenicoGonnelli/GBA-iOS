@@ -2,14 +2,14 @@
 //  PreferredControllerSkinsViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 9/30/16.
+//  Created by Darlion on 9/30/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
 // Access UIWindowScene.isStageManagerEnabled
-@_spi(Internal) import DeltaCore
+@_spi(Internal) import GameCore
 
 extension PreferredControllerSkinsViewController
 {
@@ -91,8 +91,8 @@ class PreferredControllerSkinsViewController: UITableViewController
     private var _previousBoundsSize: CGSize?
     private var portraitControllerSkin: ControllerSkin?
     private var landscapeControllerSkin: ControllerSkin?
-    private var portraitTraits: DeltaCore.ControllerSkin.Traits?
-    private var landscapeTraits: DeltaCore.ControllerSkin.Traits?
+    private var portraitTraits: GameCore.ControllerSkin.Traits?
+    private var landscapeTraits: GameCore.ControllerSkin.Traits?
     
     private var loadingTask: Task<Void, Never>?
 }
@@ -183,7 +183,7 @@ extension PreferredControllerSkinsViewController
         controllerSkinsViewController.delegate = self
         controllerSkinsViewController.system = self.system
         
-        let traits: DeltaCore.ControllerSkin.Traits
+        let traits: GameCore.ControllerSkin.Traits
         
         let section = Section(rawValue: indexPath.section)!
         switch section
@@ -373,9 +373,9 @@ private extension PreferredControllerSkinsViewController
         }
     }
     
-    func makeTraits(orientation: DeltaCore.ControllerSkin.Orientation, in window: UIWindow) -> DeltaCore.ControllerSkin.Traits
+    func makeTraits(orientation: GameCore.ControllerSkin.Orientation, in window: UIWindow) -> GameCore.ControllerSkin.Traits
     {
-        var traits = DeltaCore.ControllerSkin.Traits.defaults(for: window)
+        var traits = GameCore.ControllerSkin.Traits.defaults(for: window)
         traits.orientation = orientation
         
         switch self.variant

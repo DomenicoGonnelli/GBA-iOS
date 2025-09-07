@@ -2,14 +2,14 @@
 //  GamesViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 10/12/15.
+//  Created by Darlion on 10/12/15.
 //  Copyright © 2015 Riley Testut. All rights reserved.
 //
 
 import UIKit
 import CoreData
 import MobileCoreServices
-import DeltaCore
+import GameCore
 import Roxas
 
 class GamesViewController: BaseViewController

@@ -2,7 +2,7 @@
 //  NSManagedObjectContext+Conveniences.swift
 //  Delta
 //
-//  Created by Riley Testut on 2/8/16.
+//  Created by Darlion on 2/8/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 

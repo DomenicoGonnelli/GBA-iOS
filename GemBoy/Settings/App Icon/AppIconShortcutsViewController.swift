@@ -2,14 +2,14 @@
 //  AppIconShortcutsViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 12/19/17.
+//  Created by Darlion on 12/19/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-import DeltaCore
+import GameCore
 
 import Roxas
 

@@ -2,13 +2,13 @@
 //  CheatValidator.swift
 //  Delta
 //
-//  Created by Riley Testut on 7/27/16.
+//  Created by Darlion on 7/27/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import Foundation
 
-import DeltaCore
+import GameCore
 
 extension CheatValidator
 {

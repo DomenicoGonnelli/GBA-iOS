@@ -10,9 +10,6 @@
 [submodule "Cores/GBAGameCore"]
 	path = Cores/GBAGameCore
 	url = https://github.com/DomenicoGonnelli/GBADeltaCore.git
-[submodule "Cores/GBCGameCore"]
-	path = Cores/GBCGameCore
-	url = git@github.com:rileytestut/GBCDeltaCore.git
 [submodule "External/Harmony"]
 	path = External/Harmony
 	url = https://github.com/rileytestut/Harmony.git

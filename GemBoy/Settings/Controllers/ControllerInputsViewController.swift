@@ -2,14 +2,14 @@
 //  ControllerInputsViewController.swift
 //  Delta
 //
-//  Created by Riley Testut on 7/1/17.
+//  Created by Darlion on 7/1/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 
 import UIKit
 import Roxas
 
-import DeltaCore
+import GameCore
 
 import SMCalloutView
 
@@ -100,7 +100,7 @@ class ControllerInputsViewController: UIViewController
         
         if let window = self.view.window, !_didLayoutSubviews
         {
-            var traits = DeltaCore.ControllerSkin.Traits.defaults(for: window)
+            var traits = GameCore.ControllerSkin.Traits.defaults(for: window)
             traits.orientation = .portrait
             
             if traits.device == .ipad
@@ -160,7 +160,7 @@ private extension ControllerInputsViewController
 {
     func makeDefaultInputMapping() -> GameControllerInputMapping
     {
-        let deltaCoreInputMapping = self.gameController.defaultInputMapping as? DeltaCore.GameControllerInputMapping ?? DeltaCore.GameControllerInputMapping(gameControllerInputType: gameController.inputType)
+        let deltaCoreInputMapping = self.gameController.defaultInputMapping as? GameCore.GameControllerInputMapping ?? GameCore.GameControllerInputMapping(gameControllerInputType: gameController.inputType)
         
         let inputMapping = GameControllerInputMapping(inputMapping: deltaCoreInputMapping, context: self.managedObjectContext)
         inputMapping.gameControllerInputType = gameController.inputType
@@ -614,7 +614,7 @@ private extension ControllerInputsViewController
 
 extension ControllerInputsViewController: GameControllerReceiver
 {
-    func gameController(_ gameController: GameController, didActivate controllerInput: DeltaCore.Input, value: Double)
+    func gameController(_ gameController: GameController, didActivate controllerInput: GameCore.Input, value: Double)
     {
         guard self.isViewLoaded, value > 0.9 else { return }
         
@@ -638,7 +638,7 @@ extension ControllerInputsViewController: GameControllerReceiver
         }
     }
     
-    func gameController(_ gameController: GameController, didDeactivate input: DeltaCore.Input)
+    func gameController(_ gameController: GameController, didDeactivate input: GameCore.Input)
     {
     }
 }

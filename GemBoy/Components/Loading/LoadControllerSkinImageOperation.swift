@@ -2,13 +2,13 @@
 //  LoadControllerSkinImageOperation.swift
 //  Delta
 //
-//  Created by Riley Testut on 10/28/16.
+//  Created by Darlion on 10/28/16.
 //  Copyright © 2016 Riley Testut. All rights reserved.
 //
 
 import UIKit
 
-import DeltaCore
+import GameCore
 
 import Roxas
 
@@ -24,14 +24,14 @@ extension LoadControllerSkinImageOperation
 class ControllerSkinImageCacheKey: NSObject
 {
     let controllerSkin: ControllerSkin
-    let traits: DeltaCore.ControllerSkin.Traits
-    let size: DeltaCore.ControllerSkin.Size
+    let traits: GameCore.ControllerSkin.Traits
+    let size: GameCore.ControllerSkin.Size
     
     override var hash: Int {
         return self.controllerSkin.hashValue ^ self.traits.hashValue ^ self.size.hashValue
     }
     
-    init(controllerSkin: ControllerSkin, traits: DeltaCore.ControllerSkin.Traits, size: DeltaCore.ControllerSkin.Size)
+    init(controllerSkin: ControllerSkin, traits: GameCore.ControllerSkin.Traits, size: GameCore.ControllerSkin.Size)
     {
         self.controllerSkin = controllerSkin
         self.traits = traits
@@ -50,10 +50,10 @@ class ControllerSkinImageCacheKey: NSObject
 class LoadControllerSkinImageOperation: RSTLoadOperation<UIImage, ControllerSkinImageCacheKey>
 {
     let controllerSkin: ControllerSkin
-    let traits: DeltaCore.ControllerSkin.Traits
-    let size: DeltaCore.ControllerSkin.Size
+    let traits: GameCore.ControllerSkin.Traits
+    let size: GameCore.ControllerSkin.Size
     
-    init(controllerSkin: ControllerSkin, traits: DeltaCore.ControllerSkin.Traits, size: DeltaCore.ControllerSkin.Size)
+    init(controllerSkin: ControllerSkin, traits: GameCore.ControllerSkin.Traits, size: GameCore.ControllerSkin.Size)
     {
         self.controllerSkin = controllerSkin
         self.traits = traits

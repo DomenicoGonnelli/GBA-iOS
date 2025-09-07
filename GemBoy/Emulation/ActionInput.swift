@@ -2,11 +2,11 @@
 //  ActionInput.swift
 //  Delta
 //
-//  Created by Riley Testut on 8/28/17.
+//  Created by Darlion on 8/28/17.
 //  Copyright © 2017 Riley Testut. All rights reserved.
 //
 
-import DeltaCore
+import GameCore
 
 public extension GameControllerInputType
 {
