@@ -24,9 +24,14 @@ public enum UserProfileMenuItem {
             loginMode.append(.biometricLoginFI)
         }
         
+        var config : [UserProfileMenuItem] = [.downloadGames, .settings, .changeLanguage]
+        if AppManager.shared.inReview {
+            config = [.settings, .changeLanguage]
+        }
+        
         return [
             "loginMode": loginMode,
-            "configuration":[.downloadGames, .settings,.changeLanguage],
+            "configuration": config,
             "contactUS": [.contactUs],
             "userInfo" : [.push, .medals, .statistics, .shareApp],
             "clear":[.deleteAccount,.logout]

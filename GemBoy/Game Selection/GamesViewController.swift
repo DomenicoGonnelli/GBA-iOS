@@ -522,7 +522,12 @@ extension GamesViewController: ImportControllerDelegate
         
         let importController = ImportController(documentTypes: documentTypes)
         importController.delegate = self
-        importController.importOptions = [itunesImportOption, downloadImportOption]
+        if AppManager.shared.inReview {
+            importController.importOptions = [itunesImportOption]
+        } else {
+            importController.importOptions = [itunesImportOption, downloadImportOption]
+        }
+    
         
         return importController
     }
