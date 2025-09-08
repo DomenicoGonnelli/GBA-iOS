@@ -16,7 +16,7 @@ class HomeViewController: AnimalBaseViewController {
     
     @IBOutlet weak var tableView : UITableView!
     
-    let sections : [homeSection] = [.roulette,.question,.list]
+    let sections : [homeSection] = [.roulette,.question,.list, .other]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +69,7 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
         case .some(.list):
             AllAnimalViewController.present(presenter: self)
         case .other:
-            LaunchViewController.push(from: self)
+            UserProfileViewController.push2(prensenter: self, backcontroller: self)
         }
         
     }
