@@ -20,7 +20,7 @@ PODS:
     - GameCore
   - N64GameCore/Video (0.1):
     - GameCore
-  - NESGameCore (0.1):
+  - NESGameCore (0.2):
     - GameCore
   - ReachabilitySwift (5.2.4)
   - Roxas (0.1)
@@ -99,7 +99,7 @@ SPEC CHECKSUMS:
   lottie-ios: 96784afc26ea031d3e2b6cae342a4b8915072489
   MelonDSGameCore: 877b63dc18cec075c9b25adbe0e8add69d5251a1
   N64GameCore: f1047ea75f06ab31831adc7c651de84314f10282
-  NESGameCore: 8e482d134424b3d695ec5c69d0f10387c19a69d1
+  NESGameCore: 5dba3646fc6bd51218c0d9e134c80162dd2d06ff
   ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
   Roxas: 1990039f843f5dc284918dc82375feb80020ef62
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c

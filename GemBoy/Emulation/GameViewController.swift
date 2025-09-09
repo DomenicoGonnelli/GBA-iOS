@@ -2252,11 +2252,10 @@ private extension GameViewController
                 duration = 2.0
             }
             
-            let toastView = RSTToastView(text: "JIT Compilation Enabled".localizable, detailText: detailText)
-            toastView.edgeOffset.vertical = 8
-            self.show(toastView, duration: duration)
-            
-            UserDefaults.standard.jitEnabledAlertCount += 1
+//            let toastView = RSTToastView(text: "JIT Compilation Enabled".localizable, detailText: detailText)
+//            toastView.edgeOffset.vertical = 8
+//            
+//            UserDefaults.standard.jitEnabledAlertCount += 1
         }
         
         DispatchQueue.main.async {
