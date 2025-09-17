@@ -29,26 +29,17 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
         
         
     
-        let stat = StatisticsViewController.instance()
-        stat.tabBarItem = UITabBarItem(title: "classificationTab".localizable, image: UIImage(named: "classification"), selectedImage: UIImage(named: "classificationSelected"))
-        stat.tabBarItem.badgeColor = .white
-        vc.append(stat)
+        let myBookingListViewController = MyBookingListViewController.instance()
+        myBookingListViewController.tabBarItem = UITabBarItem(title: "classificationTab".localizable, image: UIImage(named: "classification"), selectedImage: UIImage(named: "classificationSelected"))
+        myBookingListViewController.tabBarItem.badgeColor = .white
+        vc.append(myBookingListViewController)
         
-        let challenge = StatisticsUserViewController.instance()
-        challenge.tabBarItem = UITabBarItem(title: "challengeTab".localizable, image: UIImage(named: "gp"), selectedImage: UIImage(named: "gpSelected"))
-        challenge.tabBarItem.badgeColor = .white
-        vc.append(challenge)
+    
 //
-        let home = StartGameViewController.instance()
+        let home = AliceHomeViewController.instance
         home.tabBarItem = UITabBarItem(title: "homeTab".localizable, image: UIImage(named: "home"), selectedImage: UIImage(named: "homeSelected"))
         home.tabBarItem.badgeColor = .white
-        home.controller = self
         vc.append(home)
-        
-        let tutorialVC = TutorialLongViewController.instance()
-        //userVC.tabController = self
-        tutorialVC.tabBarItem = UITabBarItem(title: "rulesTab".localizable, image: UIImage(named: "rules"), selectedImage: UIImage(named: "rulesSelected"))
-        vc.append(tutorialVC)
         
         
         let userVC = UserProfileViewController.instance2()
@@ -132,7 +123,7 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
     }
     
     func goToHomePage(){
-        if let vc = viewControllers?.first(where: {$0 is StartGameViewController}){
+        if let vc = viewControllers?.first(where: {$0 is AliceHomeViewController}){
             tabController?.selectedViewController = vc
         }
     }

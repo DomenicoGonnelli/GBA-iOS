@@ -15,6 +15,7 @@ abstract_target 'GemBoyShared' do
   pod 'CircleBar', :git => 'https://github.com/DomenicoGonnelli/CircleBar.git', :branch => 'General'
   pod 'CollectionViewPagingLayout'
   pod 'ReachabilitySwift'
+  pod 'SkyFloatingLabelTextField'
 
   # Cores locali
   pod 'GameCore',       :path => 'Cores/GameCore'

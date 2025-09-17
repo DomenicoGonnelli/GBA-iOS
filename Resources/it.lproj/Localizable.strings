@@ -748,3 +748,33 @@ Grazie per usare <b><AppName/></b> e buon divertimento con i tuoi titoli preferi
 "questionTitle" = "INDOVINA L'ANIMALE";
 "other_Title" = "Altri giochi";
 "listTitle" = "TUTTI GLI ANIMALI";
+
+
+
+
+"allDayText" = "Ripetizioni Matematica";
+"halfDayText"= "Ripetizioni Fisica";
+"messagesText"= "Ripetizioni aggiuntive";
+"yogaText"= "Ripetizioni universitarie";
+"nullText"= "Nessun servizio aggiuntivo";
+
+
+"selectOptionTitle" = "Scegli il pacchetto più adatto a te";
+"addOptionTitle" = "Vuoi aggiungere un ulteriore servizio?";
+
+"wellnessShort" = "Seleziona orario per Ripetizioni Matematica";
+"messagesShort"= "Seleziona orario per Ripetizioni Fisica";
+"yogaShort"= "Seleziona orario per riperizioni universitarie";
+
+
+"homeTabTitle" = "Home";
+"classificationTab" = "Prenotazioni";
+"userTabTitle" = "Profilo";
+
+"userEditDataTitle" = "Aggiorna i tuoi dati";
+
+"MoreUserInfoButtonContinue" = "Continua";
+
+"AtLeast2char" = "Scrivi almento 2 caratteri";
+
+"noBookingLabel" = "Non hai effettuato nessuna prenotazione";

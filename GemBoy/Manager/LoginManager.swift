@@ -117,6 +117,7 @@ class LoginManager {
         }
     }
 
+    var booking: AliceBookingList?
     
     func deleteAccount(completion: @escaping ((Bool)->Void)){
         StorageHelper.deleteAllGames(){ done in

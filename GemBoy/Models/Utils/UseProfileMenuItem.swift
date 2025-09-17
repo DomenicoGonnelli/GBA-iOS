@@ -26,7 +26,7 @@ public enum UserProfileMenuItem {
         
         var config : [UserProfileMenuItem] = [.downloadGames, .settings, .changeLanguage]
         if AppManager.shared.inReview {
-            config = [.settings, .changeLanguage]
+            config = [.changeLanguage]
         }
         
         return [

@@ -666,6 +666,32 @@
 		EB52BD0F2E4BD33C002CBE49 /* GameDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52BD082E4BD33C002CBE49 /* GameDownloadViewController.swift */; };
 		EB52BD102E4BD33C002CBE49 /* GameDownload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD072E4BD33C002CBE49 /* GameDownload.storyboard */; };
 		EB52BD942E5CB051002CBE49 /* dg_DS.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB52BD932E5CB051002CBE49 /* dg_DS.dgskin */; };
+		EB56FFBC2E79557C0098B8C3 /* AddDataUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56FFA42E79557C0098B8C3 /* AddDataUser.storyboard */; };
+		EB56FFBE2E79557C0098B8C3 /* AliceHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56FFB92E79557C0098B8C3 /* AliceHome.storyboard */; };
+		EB56FFBF2E79557C0098B8C3 /* MyBookingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56FFAC2E79557C0098B8C3 /* MyBookingList.storyboard */; };
+		EB56FFC02E79557C0098B8C3 /* AliceSelectDays.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56FFB42E79557C0098B8C3 /* AliceSelectDays.storyboard */; };
+		EB56FFC12E79557C0098B8C3 /* MyBookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFAA2E79557C0098B8C3 /* MyBookingCell.swift */; };
+		EB56FFC22E79557C0098B8C3 /* AddDataUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFA52E79557C0098B8C3 /* AddDataUserViewController.swift */; };
+		EB56FFC42E79557C0098B8C3 /* AliceHoursCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFB12E79557C0098B8C3 /* AliceHoursCell.swift */; };
+		EB56FFC52E79557C0098B8C3 /* AliceScrollableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFB22E79557C0098B8C3 /* AliceScrollableCell.swift */; };
+		EB56FFC62E79557C0098B8C3 /* AliceHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFB82E79557C0098B8C3 /* AliceHomeViewController.swift */; };
+		EB56FFC72E79557C0098B8C3 /* AliceSelectDaysServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFAF2E79557C0098B8C3 /* AliceSelectDaysServices.swift */; };
+		EB56FFC82E79557C0098B8C3 /* MyBookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFAD2E79557C0098B8C3 /* MyBookingListViewController.swift */; };
+		EB56FFC92E79557C0098B8C3 /* AliceSelectDaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFB52E79557C0098B8C3 /* AliceSelectDaysVC.swift */; };
+		EB56FFCA2E79557C0098B8C3 /* MyBookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFAA2E79557C0098B8C3 /* MyBookingCell.swift */; };
+		EB56FFCB2E79557C0098B8C3 /* AddDataUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFA52E79557C0098B8C3 /* AddDataUserViewController.swift */; };
+		EB56FFCD2E79557C0098B8C3 /* AliceHoursCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFB12E79557C0098B8C3 /* AliceHoursCell.swift */; };
+		EB56FFCE2E79557C0098B8C3 /* AliceScrollableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFB22E79557C0098B8C3 /* AliceScrollableCell.swift */; };
+		EB56FFCF2E79557C0098B8C3 /* AliceHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFB82E79557C0098B8C3 /* AliceHomeViewController.swift */; };
+		EB56FFD02E79557C0098B8C3 /* AliceSelectDaysServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFAF2E79557C0098B8C3 /* AliceSelectDaysServices.swift */; };
+		EB56FFD12E79557C0098B8C3 /* MyBookingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFAD2E79557C0098B8C3 /* MyBookingListViewController.swift */; };
+		EB56FFD22E79557C0098B8C3 /* AliceSelectDaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFB52E79557C0098B8C3 /* AliceSelectDaysVC.swift */; };
+		EB56FFD32E79557C0098B8C3 /* AddDataUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56FFA42E79557C0098B8C3 /* AddDataUser.storyboard */; };
+		EB56FFD52E79557C0098B8C3 /* AliceHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56FFB92E79557C0098B8C3 /* AliceHome.storyboard */; };
+		EB56FFD62E79557C0098B8C3 /* MyBookingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56FFAC2E79557C0098B8C3 /* MyBookingList.storyboard */; };
+		EB56FFD72E79557C0098B8C3 /* AliceSelectDays.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB56FFB42E79557C0098B8C3 /* AliceSelectDays.storyboard */; };
+		EB56FFDA2E79564A0098B8C3 /* FirebaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFD92E7956440098B8C3 /* FirebaseExtension.swift */; };
+		EB56FFDB2E79564A0098B8C3 /* FirebaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56FFD92E7956440098B8C3 /* FirebaseExtension.swift */; };
 		EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB092D977F1B00311D39 /* NotificationManager.swift */; };
 		EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */; };
 		EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69AB072D977F1B00311D39 /* AppManager.swift */; };
@@ -792,6 +818,22 @@
 		EBC970E62DB27475000CA9C1 /* dg_NES.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EBC970E52DB27475000CA9C1 /* dg_NES.dgskin */; };
 		EBD680312E11476F00A92584 /* MenuSlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD680302E11476F00A92584 /* MenuSlider.storyboard */; };
 		EBD680332E11477E00A92584 /* MenuSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD680322E11477700A92584 /* MenuSliderViewController.swift */; };
+		EBFC184C2E795B3B00F6298F /* AliceBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18252E795B3B00F6298F /* AliceBooking.swift */; };
+		EBFC18512E795B3B00F6298F /* AliceOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18272E795B3B00F6298F /* AliceOptions.swift */; };
+		EBFC185E2E795B3B00F6298F /* AliceBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18252E795B3B00F6298F /* AliceBooking.swift */; };
+		EBFC18632E795B3B00F6298F /* AliceOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18272E795B3B00F6298F /* AliceOptions.swift */; };
+		EBFC18672E79624300F6298F /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18662E79624000F6298F /* DateExt.swift */; };
+		EBFC18682E79624300F6298F /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18662E79624000F6298F /* DateExt.swift */; };
+		EBFC186D2E79646800F6298F /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC186A2E79646800F6298F /* EventModel.swift */; };
+		EBFC186E2E79646800F6298F /* ClassificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC186B2E79646800F6298F /* ClassificationModel.swift */; };
+		EBFC186F2E79646800F6298F /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18692E79646800F6298F /* CampaignModel.swift */; };
+		EBFC18702E79646800F6298F /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC186A2E79646800F6298F /* EventModel.swift */; };
+		EBFC18712E79646800F6298F /* ClassificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC186B2E79646800F6298F /* ClassificationModel.swift */; };
+		EBFC18722E79646800F6298F /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18692E79646800F6298F /* CampaignModel.swift */; };
+		EBFC18752E7964FF00F6298F /* SwipableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18732E7964FF00F6298F /* SwipableModel.swift */; };
+		EBFC18762E7964FF00F6298F /* SwipableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18732E7964FF00F6298F /* SwipableModel.swift */; };
+		EBFC18782E79669500F6298F /* GrandPrixNotStartedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18772E79669500F6298F /* GrandPrixNotStartedCell.swift */; };
+		EBFC18792E79669500F6298F /* GrandPrixNotStartedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC18772E79669500F6298F /* GrandPrixNotStartedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1192,6 +1234,19 @@
 		EB52BDBD2E5DFFD6002CBE49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB52BDBE2E5DFFE2002CBE49 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EB52BDBF2E5DFFE3002CBE49 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EB56FFA42E79557C0098B8C3 /* AddDataUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDataUser.storyboard; sourceTree = "<group>"; };
+		EB56FFA52E79557C0098B8C3 /* AddDataUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataUserViewController.swift; sourceTree = "<group>"; };
+		EB56FFAA2E79557C0098B8C3 /* MyBookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingCell.swift; sourceTree = "<group>"; };
+		EB56FFAC2E79557C0098B8C3 /* MyBookingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyBookingList.storyboard; sourceTree = "<group>"; };
+		EB56FFAD2E79557C0098B8C3 /* MyBookingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingListViewController.swift; sourceTree = "<group>"; };
+		EB56FFAF2E79557C0098B8C3 /* AliceSelectDaysServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliceSelectDaysServices.swift; sourceTree = "<group>"; };
+		EB56FFB12E79557C0098B8C3 /* AliceHoursCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliceHoursCell.swift; sourceTree = "<group>"; };
+		EB56FFB22E79557C0098B8C3 /* AliceScrollableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliceScrollableCell.swift; sourceTree = "<group>"; };
+		EB56FFB42E79557C0098B8C3 /* AliceSelectDays.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AliceSelectDays.storyboard; sourceTree = "<group>"; };
+		EB56FFB52E79557C0098B8C3 /* AliceSelectDaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliceSelectDaysVC.swift; sourceTree = "<group>"; };
+		EB56FFB82E79557C0098B8C3 /* AliceHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliceHomeViewController.swift; sourceTree = "<group>"; };
+		EB56FFB92E79557C0098B8C3 /* AliceHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AliceHome.storyboard; sourceTree = "<group>"; };
+		EB56FFD92E7956440098B8C3 /* FirebaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseExtension.swift; sourceTree = "<group>"; };
 		EB69AB072D977F1B00311D39 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		EB69AB082D977F1B00311D39 /* LocalAuthenticationManagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationManagar.swift; sourceTree = "<group>"; };
 		EB69AB092D977F1B00311D39 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -1321,6 +1376,14 @@
 		EBC970E52DB27475000CA9C1 /* dg_NES.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_NES.dgskin; sourceTree = "<group>"; };
 		EBD680302E11476F00A92584 /* MenuSlider.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSlider.storyboard; sourceTree = "<group>"; };
 		EBD680322E11477700A92584 /* MenuSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSliderViewController.swift; sourceTree = "<group>"; };
+		EBFC18252E795B3B00F6298F /* AliceBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliceBooking.swift; sourceTree = "<group>"; };
+		EBFC18272E795B3B00F6298F /* AliceOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliceOptions.swift; sourceTree = "<group>"; };
+		EBFC18662E79624000F6298F /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
+		EBFC18692E79646800F6298F /* CampaignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignModel.swift; sourceTree = "<group>"; };
+		EBFC186A2E79646800F6298F /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		EBFC186B2E79646800F6298F /* ClassificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationModel.swift; sourceTree = "<group>"; };
+		EBFC18732E7964FF00F6298F /* SwipableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableModel.swift; sourceTree = "<group>"; };
+		EBFC18772E79669500F6298F /* GrandPrixNotStartedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandPrixNotStartedCell.swift; sourceTree = "<group>"; };
 		F34AA981FBC24C21CB403B13 /* libPods-GemBoyShared-Darlion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GemBoyShared-Darlion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE5943571FCD2C74CC0ACD7 /* Pods-GemBoyPreviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemBoyPreviews.release.xcconfig"; path = "Target Support Files/Pods-GemBoyPreviews/Pods-GemBoyPreviews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1345,8 +1408,6 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EB69AB162D977F6D00311D39 /* FirebaseHelper */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = FirebaseHelper;
 			sourceTree = "<group>";
 		};
@@ -1908,6 +1969,7 @@
 		BFFA71D91AAC406100EE9DD1 /* GemBoy */ = {
 			isa = PBXGroup;
 			children = (
+				EB56FFBB2E79557C0098B8C3 /* CASA DI ALICE */,
 				EB9D84092E1AD172006ED231 /* json */,
 				EB6EB4122DBED21C00EAC356 /* GamesDatabase.storyboard */,
 				EB6EB4132DBED21C00EAC356 /* PauseMenu.storyboard */,
@@ -2458,6 +2520,100 @@
 			path = GameDownload;
 			sourceTree = "<group>";
 		};
+		EB56FFA62E79557C0098B8C3 /* UpdateData */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFA42E79557C0098B8C3 /* AddDataUser.storyboard */,
+				EB56FFA52E79557C0098B8C3 /* AddDataUserViewController.swift */,
+			);
+			path = UpdateData;
+			sourceTree = "<group>";
+		};
+		EB56FFAB2E79557C0098B8C3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFAA2E79557C0098B8C3 /* MyBookingCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		EB56FFAE2E79557C0098B8C3 /* Mybooking */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFAB2E79557C0098B8C3 /* cell */,
+				EB56FFAC2E79557C0098B8C3 /* MyBookingList.storyboard */,
+				EB56FFAD2E79557C0098B8C3 /* MyBookingListViewController.swift */,
+			);
+			path = Mybooking;
+			sourceTree = "<group>";
+		};
+		EB56FFB02E79557C0098B8C3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFAF2E79557C0098B8C3 /* AliceSelectDaysServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EB56FFB32E79557C0098B8C3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFB12E79557C0098B8C3 /* AliceHoursCell.swift */,
+				EB56FFB22E79557C0098B8C3 /* AliceScrollableCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		EB56FFB62E79557C0098B8C3 /* AliceSelectDays */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFB32E79557C0098B8C3 /* cell */,
+				EB56FFB42E79557C0098B8C3 /* AliceSelectDays.storyboard */,
+				EB56FFB52E79557C0098B8C3 /* AliceSelectDaysVC.swift */,
+			);
+			path = AliceSelectDays;
+			sourceTree = "<group>";
+		};
+		EB56FFB72E79557C0098B8C3 /* AliceSelectDays */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFB02E79557C0098B8C3 /* Services */,
+				EB56FFB62E79557C0098B8C3 /* AliceSelectDays */,
+			);
+			path = AliceSelectDays;
+			sourceTree = "<group>";
+		};
+		EB56FFBA2E79557C0098B8C3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFB82E79557C0098B8C3 /* AliceHomeViewController.swift */,
+				EB56FFB92E79557C0098B8C3 /* AliceHome.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EB56FFBB2E79557C0098B8C3 /* CASA DI ALICE */ = {
+			isa = PBXGroup;
+			children = (
+				EBFC18652E79623A00F6298F /* Extensions */,
+				EBFC18402E795B3B00F6298F /* Model */,
+				EB56FFD82E79563F0098B8C3 /* Services */,
+				EB56FFA62E79557C0098B8C3 /* UpdateData */,
+				EB56FFAE2E79557C0098B8C3 /* Mybooking */,
+				EB56FFB72E79557C0098B8C3 /* AliceSelectDays */,
+				EB56FFBA2E79557C0098B8C3 /* Home */,
+			);
+			path = "CASA DI ALICE";
+			sourceTree = "<group>";
+		};
+		EB56FFD82E79563F0098B8C3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB56FFD92E7956440098B8C3 /* FirebaseExtension.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EB69AB192D977FC800311D39 /* IAP */ = {
 			isa = PBXGroup;
 			children = (
@@ -2862,6 +3018,60 @@
 			path = sliderForFast;
 			sourceTree = "<group>";
 		};
+		EBFC18262E795B3B00F6298F /* Alicebookin */ = {
+			isa = PBXGroup;
+			children = (
+				EBFC18252E795B3B00F6298F /* AliceBooking.swift */,
+			);
+			path = Alicebookin;
+			sourceTree = "<group>";
+		};
+		EBFC18282E795B3B00F6298F /* Alice */ = {
+			isa = PBXGroup;
+			children = (
+				EBFC18262E795B3B00F6298F /* Alicebookin */,
+				EBFC18272E795B3B00F6298F /* AliceOptions.swift */,
+			);
+			path = Alice;
+			sourceTree = "<group>";
+		};
+		EBFC18402E795B3B00F6298F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBFC18772E79669500F6298F /* GrandPrixNotStartedCell.swift */,
+				EBFC18742E7964FF00F6298F /* Others */,
+				EBFC186C2E79646800F6298F /* Events */,
+				EBFC18282E795B3B00F6298F /* Alice */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBFC18652E79623A00F6298F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBFC18662E79624000F6298F /* DateExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EBFC186C2E79646800F6298F /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				EBFC18692E79646800F6298F /* CampaignModel.swift */,
+				EBFC186A2E79646800F6298F /* EventModel.swift */,
+				EBFC186B2E79646800F6298F /* ClassificationModel.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		EBFC18742E7964FF00F6298F /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				EBFC18732E7964FF00F6298F /* SwipableModel.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2882,8 +3092,8 @@
 				42BDDE50F324AF8B7D2076CB /* [CP] Check Pods Manifest.lock */,
 				BFFA71D31AAC406100EE9DD1 /* Sources */,
 				BFFA71D41AAC406100EE9DD1 /* Frameworks */,
-				BF08DC3325CE07C3007A9CF4 /* Embed Frameworks */,
 				BFFA71D51AAC406100EE9DD1 /* Resources */,
+				BF08DC3325CE07C3007A9CF4 /* Embed Frameworks */,
 				EB8E0D6D2D947655004BFB1F /* Embed Foundation Extensions */,
 				889549D4790DBE7DCEC604BA /* [CP] Copy Pods Resources */,
 			);
@@ -3141,6 +3351,10 @@
 				EB3EB5F72DA0738D004FFACF /* PremiumSinglePage.storyboard in Resources */,
 				EBAEB7B62DB163E5007C5BB4 /* SystemSelection.xib in Resources */,
 				EBBB19672D9971A8009C977A /* GothamRnd-BookItal.otf in Resources */,
+				EB56FFD32E79557C0098B8C3 /* AddDataUser.storyboard in Resources */,
+				EB56FFD52E79557C0098B8C3 /* AliceHome.storyboard in Resources */,
+				EB56FFD62E79557C0098B8C3 /* MyBookingList.storyboard in Resources */,
+				EB56FFD72E79557C0098B8C3 /* AliceSelectDays.storyboard in Resources */,
 				EBBB19682D9971A8009C977A /* GothamRnd-Book.otf in Resources */,
 				EB3EB5762DA0719A004FFACF /* Dashboard.storyboard in Resources */,
 				EBBB19692D9971A8009C977A /* loaderPink.json in Resources */,
@@ -3232,6 +3446,10 @@
 				EB1E5E642E63050E00305D33 /* Loader.xib in Resources */,
 				EB1E5E652E63050E00305D33 /* Splash.storyboard in Resources */,
 				EB1E5E662E63050E00305D33 /* TutorialLong.storyboard in Resources */,
+				EB56FFBC2E79557C0098B8C3 /* AddDataUser.storyboard in Resources */,
+				EB56FFBE2E79557C0098B8C3 /* AliceHome.storyboard in Resources */,
+				EB56FFBF2E79557C0098B8C3 /* MyBookingList.storyboard in Resources */,
+				EB56FFC02E79557C0098B8C3 /* AliceSelectDays.storyboard in Resources */,
 				EB1E5E672E63050E00305D33 /* TutorialSplit.storyboard in Resources */,
 				EB1E5E682E63050E00305D33 /* OnBoarding.storyboard in Resources */,
 				EB1E5EA02E630EA100305D33 /* GoogleService-Info.plist in Resources */,
@@ -3439,6 +3657,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB3645823245A6000CD0EB1 /* LicensesViewController.swift in Sources */,
+				EB56FFCA2E79557C0098B8C3 /* MyBookingCell.swift in Sources */,
+				EB56FFCB2E79557C0098B8C3 /* AddDataUserViewController.swift in Sources */,
+				EB56FFCD2E79557C0098B8C3 /* AliceHoursCell.swift in Sources */,
+				EB56FFCE2E79557C0098B8C3 /* AliceScrollableCell.swift in Sources */,
+				EB56FFCF2E79557C0098B8C3 /* AliceHomeViewController.swift in Sources */,
+				EB56FFD02E79557C0098B8C3 /* AliceSelectDaysServices.swift in Sources */,
+				EB56FFD12E79557C0098B8C3 /* MyBookingListViewController.swift in Sources */,
+				EB56FFD22E79557C0098B8C3 /* AliceSelectDaysVC.swift in Sources */,
 				EBAEB7B02DB1615A007C5BB4 /* RankingStarView.swift in Sources */,
 				BFC6F7B81F435BC500221B96 /* Input+Display.swift in Sources */,
 				BF59426A1E09BBD00051894B /* GridCollectionViewCell.swift in Sources */,
@@ -3485,6 +3711,7 @@
 				D552DE3A2D39C5A500E737BE /* WFCServersView.swift in Sources */,
 				EB69AB1A2D977FC800311D39 /* IAPHelper.swift in Sources */,
 				EBD680332E11477E00A92584 /* MenuSliderViewController.swift in Sources */,
+				EB56FFDB2E79564A0098B8C3 /* FirebaseExtension.swift in Sources */,
 				EB69AB1B2D977FC800311D39 /* IAPProduct.swift in Sources */,
 				D5A9C01D29DE058C00A8D610 /* VariableFastForward.swift in Sources */,
 				BFE593CA21F3F8B7003412A6 /* GameSave.swift in Sources */,
@@ -3519,6 +3746,8 @@
 				EB52BD0D2E4BD33C002CBE49 /* GameDownloadModel.swift in Sources */,
 				EB52BD0E2E4BD33C002CBE49 /* DownlaodCell.swift in Sources */,
 				EB112F672E6AEEBD00637F9E /* Enumerators.swift in Sources */,
+				EBFC184C2E795B3B00F6298F /* AliceBooking.swift in Sources */,
+				EBFC18512E795B3B00F6298F /* AliceOptions.swift in Sources */,
 				EB112F6A2E6AEEBD00637F9E /* AnimalModel.swift in Sources */,
 				EB52BD0F2E4BD33C002CBE49 /* GameDownloadViewController.swift in Sources */,
 				D552DE3D2D39DB2A00E737BE /* WFCServer.swift in Sources */,
@@ -3541,6 +3770,9 @@
 				BFDD04F11D5E2C27002D450E /* GameCollectionViewController.swift in Sources */,
 				BFE4269E1D9C68E600DC913F /* SaveStatesStoryboardSegue.swift in Sources */,
 				EB3EB5752DA0719A004FFACF /* TabBarViewController.swift in Sources */,
+				EBFC186D2E79646800F6298F /* EventModel.swift in Sources */,
+				EBFC186E2E79646800F6298F /* ClassificationModel.swift in Sources */,
+				EBFC186F2E79646800F6298F /* CampaignModel.swift in Sources */,
 				BFFA71DD1AAC406100EE9DD1 /* AppDelegate.swift in Sources */,
 				BF525EE81FF5F370004AA849 /* DeepLinkController.swift in Sources */,
 				BF59426B1E09BBD00051894B /* GridCollectionViewLayout.swift in Sources */,
@@ -3591,6 +3823,7 @@
 				EB9D83FA2E1A5B7D006ED231 /* AutoshrinkLabel.swift in Sources */,
 				BFFC464C1D5998D600AF2CC6 /* CheatTableViewCell.swift in Sources */,
 				EB6EB3DB2DBE303C00EAC356 /* MenuCell.swift in Sources */,
+				EBFC18752E7964FF00F6298F /* SwipableModel.swift in Sources */,
 				D5B4235C2BD9C24000093054 /* RoundedImageView.swift in Sources */,
 				BF5942941E09BD1A0051894B /* NSManagedObject+Conveniences.swift in Sources */,
 				EB112F862E6AF66500637F9E /* Parser.swift in Sources */,
@@ -3649,6 +3882,7 @@
 				EB69AB0A2D977F1B00311D39 /* NotificationManager.swift in Sources */,
 				EB69AB0B2D977F1B00311D39 /* LocalAuthenticationManagar.swift in Sources */,
 				EB69AB0C2D977F1B00311D39 /* AppManager.swift in Sources */,
+				EBFC18672E79624300F6298F /* DateExt.swift in Sources */,
 				BFD097211D3A01B8005A44C2 /* SaveStatesViewController.swift in Sources */,
 				BF6EE5EB1F7C5F8F0051AD6C /* GameControllerInputMapping.swift in Sources */,
 				EB21EA472DB937F700B6B1F4 /* StartGameViewController.swift in Sources */,
@@ -3677,6 +3911,7 @@
 				BFFC461E1D59823500AF2CC6 /* GamesPresentationController.swift in Sources */,
 				BF99A5971DC2F9C400468E9E /* ControllerSkinTableViewCell.swift in Sources */,
 				EB112F822E6AF21000637F9E /* Extensions.swift in Sources */,
+				EBFC18792E79669500F6298F /* GrandPrixNotStartedCell.swift in Sources */,
 				BFE9908024451E15006409A7 /* MelonDSCoreSettingsViewController.swift in Sources */,
 				BF5942861E09BC8B0051894B /* _Cheat.swift in Sources */,
 				EBAEB7B42DB162F9007C5BB4 /* SystemSelection.swift in Sources */,
@@ -3747,6 +3982,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1E5D222E63050E00305D33 /* LicensesViewController.swift in Sources */,
+				EB56FFC12E79557C0098B8C3 /* MyBookingCell.swift in Sources */,
+				EB56FFC22E79557C0098B8C3 /* AddDataUserViewController.swift in Sources */,
+				EB56FFC42E79557C0098B8C3 /* AliceHoursCell.swift in Sources */,
+				EB56FFC52E79557C0098B8C3 /* AliceScrollableCell.swift in Sources */,
+				EB56FFC62E79557C0098B8C3 /* AliceHomeViewController.swift in Sources */,
+				EB56FFC72E79557C0098B8C3 /* AliceSelectDaysServices.swift in Sources */,
+				EB56FFC82E79557C0098B8C3 /* MyBookingListViewController.swift in Sources */,
+				EB56FFC92E79557C0098B8C3 /* AliceSelectDaysVC.swift in Sources */,
 				EB1E5D232E63050E00305D33 /* RankingStarView.swift in Sources */,
 				EB1E5D242E63050E00305D33 /* Input+Display.swift in Sources */,
 				EB1E5D252E63050E00305D33 /* GridCollectionViewCell.swift in Sources */,
@@ -3793,6 +4036,7 @@
 				EB1E5D502E63050E00305D33 /* WFCServersView.swift in Sources */,
 				EB1E5D512E63050E00305D33 /* IAPHelper.swift in Sources */,
 				EB1E5D522E63050E00305D33 /* MenuSliderViewController.swift in Sources */,
+				EB56FFDA2E79564A0098B8C3 /* FirebaseExtension.swift in Sources */,
 				EB1E5D532E63050E00305D33 /* IAPProduct.swift in Sources */,
 				EB1E5D542E63050E00305D33 /* VariableFastForward.swift in Sources */,
 				EB1E5D552E63050E00305D33 /* GameSave.swift in Sources */,
@@ -3827,6 +4071,8 @@
 				EB1E5D742E63050E00305D33 /* GameDownloadModel.swift in Sources */,
 				EB1E5D752E63050E00305D33 /* DownlaodCell.swift in Sources */,
 				EB112F6C2E6AEEBD00637F9E /* Enumerators.swift in Sources */,
+				EBFC185E2E795B3B00F6298F /* AliceBooking.swift in Sources */,
+				EBFC18632E795B3B00F6298F /* AliceOptions.swift in Sources */,
 				EB112F6F2E6AEEBD00637F9E /* AnimalModel.swift in Sources */,
 				EB1E5D762E63050E00305D33 /* GameDownloadViewController.swift in Sources */,
 				EB1E5D772E63050E00305D33 /* WFCServer.swift in Sources */,
@@ -3849,6 +4095,9 @@
 				EB1E5D892E63050E00305D33 /* GameCollectionViewController.swift in Sources */,
 				EB1E5D8A2E63050E00305D33 /* SaveStatesStoryboardSegue.swift in Sources */,
 				EB1E5D8B2E63050E00305D33 /* TabBarViewController.swift in Sources */,
+				EBFC18702E79646800F6298F /* EventModel.swift in Sources */,
+				EBFC18712E79646800F6298F /* ClassificationModel.swift in Sources */,
+				EBFC18722E79646800F6298F /* CampaignModel.swift in Sources */,
 				EB1E5D8C2E63050E00305D33 /* AppDelegate.swift in Sources */,
 				EB1E5D8D2E63050E00305D33 /* DeepLinkController.swift in Sources */,
 				EB1E5D8E2E63050E00305D33 /* GridCollectionViewLayout.swift in Sources */,
@@ -3899,6 +4148,7 @@
 				EB1E5DB92E63050E00305D33 /* AutoshrinkLabel.swift in Sources */,
 				EB1E5DBA2E63050E00305D33 /* CheatTableViewCell.swift in Sources */,
 				EB1E5DBB2E63050E00305D33 /* MenuCell.swift in Sources */,
+				EBFC18762E7964FF00F6298F /* SwipableModel.swift in Sources */,
 				EB1E5DBC2E63050E00305D33 /* RoundedImageView.swift in Sources */,
 				EB1E5DBD2E63050E00305D33 /* NSManagedObject+Conveniences.swift in Sources */,
 				EB112F852E6AF66500637F9E /* Parser.swift in Sources */,
@@ -3957,6 +4207,7 @@
 				EB1E5DEF2E63050E00305D33 /* NotificationManager.swift in Sources */,
 				EB1E5DF02E63050E00305D33 /* LocalAuthenticationManagar.swift in Sources */,
 				EB1E5DF12E63050E00305D33 /* AppManager.swift in Sources */,
+				EBFC18682E79624300F6298F /* DateExt.swift in Sources */,
 				EB1E5DF22E63050E00305D33 /* SaveStatesViewController.swift in Sources */,
 				EB1E5DF32E63050E00305D33 /* GameControllerInputMapping.swift in Sources */,
 				EB1E5DF42E63050E00305D33 /* StartGameViewController.swift in Sources */,
@@ -3985,6 +4236,7 @@
 				EB1E5E0C2E63050E00305D33 /* GamesPresentationController.swift in Sources */,
 				EB1E5E0D2E63050E00305D33 /* ControllerSkinTableViewCell.swift in Sources */,
 				EB112F832E6AF21000637F9E /* Extensions.swift in Sources */,
+				EBFC18782E79669500F6298F /* GrandPrixNotStartedCell.swift in Sources */,
 				EB1E5E0E2E63050E00305D33 /* MelonDSCoreSettingsViewController.swift in Sources */,
 				EB1E5E0F2E63050E00305D33 /* _Cheat.swift in Sources */,
 				EB1E5E102E63050E00305D33 /* SystemSelection.swift in Sources */,
@@ -4332,7 +4584,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GBoy;
@@ -4341,7 +4593,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.12;
+				MARKETING_VERSION = 3.13;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"-ObjC",
@@ -4412,7 +4664,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GBoy;
@@ -4421,7 +4673,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.12;
+				MARKETING_VERSION = 3.13;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"${inherited}",
@@ -4595,7 +4847,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Darlion;
@@ -4604,7 +4856,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.GemboyAdvance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4636,7 +4888,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Darlion;
@@ -4645,7 +4897,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"-ld64",
 					"${inherited}",
@@ -4684,7 +4936,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -4699,7 +4951,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.GemboyAdvance.Notification;
@@ -4727,7 +4979,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -4741,7 +4993,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.GemboyAdvance.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4767,7 +5019,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 33;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -4782,7 +5034,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.12;
+				MARKETING_VERSION = 3.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
@@ -4810,7 +5062,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -4824,7 +5076,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.12;
+				MARKETING_VERSION = 3.13;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound.Notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";

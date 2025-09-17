@@ -10,7 +10,7 @@ import FirebaseAuth
 //
 class FirestoreHelper{
     
-    private static var instance : Firestore{
+    static var instance : Firestore{
         get{
             return Firestore.firestore()
         }
