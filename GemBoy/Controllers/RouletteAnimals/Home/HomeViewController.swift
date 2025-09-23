@@ -16,7 +16,7 @@ class HomeViewController: AnimalBaseViewController {
     
     @IBOutlet weak var tableView : UITableView!
     
-    let sections : [homeSection] = [.roulette,.question,.list]
+    let sections : [homeSection] = [.roulette,.question,.list,.other]
     
     override func viewDidLoad() {
         super.viewDidLoad()

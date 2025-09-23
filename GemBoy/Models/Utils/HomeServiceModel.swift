@@ -67,6 +67,10 @@ class IOSConfig: DatabaseModelProtocolGet{
 //        lastAppVersion = value["lastAppVersion"] as? String
         lastAppVersion = value["releasedAppVersion"] as? String
         appName = value["appNameNew"] as? String
+        #if ANIMAL
+            appName = value["appNameAnimal"] as? String
+        #endif
+        
         versionForRequireUpdate = value["versionForRequireUpdate"] as? String
         GADid = value["GADid_new"] as? String ?? value["GADid"] as? String
         appStoreURL = value["appStoreURL"] as? String

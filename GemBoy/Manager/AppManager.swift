@@ -128,6 +128,9 @@ class AppManager {
     }
     
     static var showTutorial: Bool{
+#if ANIMAL
+        return true
+#endif
         return UserDefaults.standard.bool(forKey: "showTutorial2")
     }
     

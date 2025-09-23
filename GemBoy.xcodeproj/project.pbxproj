@@ -625,6 +625,8 @@
 		EB21EA452DB935C500B6B1F4 /* StartGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */; };
 		EB21EA472DB937F700B6B1F4 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */; };
 		EB21EA492DB93F0E00B6B1F4 /* StartGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */; };
+		EB3A2D702E81EE6000CE04F9 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3A2D6F2E81EE5500CE04F9 /* StartController.swift */; };
+		EB3A2D732E81EE9A00CE04F9 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3A2D722E81EE9A00CE04F9 /* StartController.swift */; };
 		EB3EB55A2D9F510F004FFACF /* libReachabilitySwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */; };
 		EB3EB5662DA037D4004FFACF /* dg_GBA.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB55F2DA037D4004FFACF /* dg_GBA.dgskin */; };
 		EB3EB56E2DA047DF004FFACF /* dg_N64.dgskin in Resources */ = {isa = PBXBuildFile; fileRef = EB3EB56D2DA047DF004FFACF /* dg_N64.dgskin */; };
@@ -952,7 +954,7 @@
 		BF0418131D01E93400E85BCF /* GBADeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GBADeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF04E6FE1DB8625C000F35D3 /* ControllerSkinsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerSkinsViewController.swift; sourceTree = "<group>"; };
 		BF07200E219A3A9500F05DA4 /* ZIPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF090CF11B490D8300DCAB45 /* Delta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Delta-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF090CF11B490D8300DCAB45 /* GB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GB-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF107EC31BF413F000E0C32C /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		BF11734F1DA32CF600047DF8 /* ControllersSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllersSettingsViewController.swift; sourceTree = "<group>"; };
 		BF13A7551D5D29B0000BB055 /* PreviewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewGameViewController.swift; sourceTree = "<group>"; };
@@ -962,7 +964,6 @@
 		BF1DAD5C1D9F576000E752A7 /* PreferredControllerSkinsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferredControllerSkinsViewController.swift; sourceTree = "<group>"; };
 		BF1F45AC21AF57BA00EF9895 /* HarmonyMetadataKey+Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HarmonyMetadataKey+Keys.swift"; sourceTree = "<group>"; };
 		BF1F45BE21AF676F00EF9895 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		BF27CC861BC9E3C600A20D89 /* Delta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Delta.entitlements; sourceTree = "<group>"; };
 		BF27CC8A1BC9FE4D00A20D89 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-appletvos/Pods.framework"; sourceTree = "<group>"; };
 		BF27CC941BCB7B7A00A20D89 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		BF2B98E51C97E32F00F6D57D /* SaveStatesCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveStatesCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -1068,7 +1069,7 @@
 		BFEC732C1AAECC4A00650035 /* Roxas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Roxas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF0742B1E9DC17500ACDF4A /* GBCDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GBCDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA4C081E8A24D600D87934 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
-		BFFA71D71AAC406100EE9DD1 /* GBoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFA71D71AAC406100EE9DD1 /* Farm Sound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Farm Sound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFA71DB1AAC406100EE9DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFA71DC1AAC406100EE9DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFC461B1D59823500AF2CC6 /* GamesPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesPresentationController.swift; sourceTree = "<group>"; };
@@ -1195,6 +1196,8 @@
 		EB21EA442DB935C500B6B1F4 /* StartGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartGame.storyboard; sourceTree = "<group>"; };
 		EB21EA462DB937EE00B6B1F4 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		EB21EA482DB93F0700B6B1F4 /* StartGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameCell.swift; sourceTree = "<group>"; };
+		EB3A2D6F2E81EE5500CE04F9 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		EB3A2D722E81EE9A00CE04F9 /* StartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		EB3EB5592D9F510F004FFACF /* libReachabilitySwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReachabilitySwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3EB55F2DA037D4004FFACF /* dg_GBA.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_GBA.dgskin; sourceTree = "<group>"; };
 		EB3EB56D2DA047DF004FFACF /* dg_N64.dgskin */ = {isa = PBXFileReference; lastKnownFileType = file; path = dg_N64.dgskin; sourceTree = "<group>"; };
@@ -1956,7 +1959,7 @@
 		BFFA71D81AAC406100EE9DD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFFA71D71AAC406100EE9DD1 /* GBoy.app */,
+				BFFA71D71AAC406100EE9DD1 /* Farm Sound.app */,
 				D5D7C1F129E60DFF00663793 /* libGemBoyFeatures.a */,
 				D539102F29E88B6B0006B350 /* GemBoyPreviews.framework */,
 				EB8E0D612D947655004BFB1F /* Notification.appex */,
@@ -2007,8 +2010,7 @@
 		BFFA71DA1AAC406100EE9DD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BF090CF11B490D8300DCAB45 /* Delta-Bridging-Header.h */,
-				BF27CC861BC9E3C600A20D89 /* Delta.entitlements */,
+				BF090CF11B490D8300DCAB45 /* GB-Bridging-Header.h */,
 				BFFA71DB1AAC406100EE9DD1 /* Info.plist */,
 				EB1E5E9F2E630EA100305D33 /* GoogleService-Info.plist */,
 				EB1E5EC92E63115600305D33 /* GoogleService-Info_gemboy.plist */,
@@ -2214,6 +2216,7 @@
 		EB112F1A2E6AEAFB00637F9E /* RouletteAnimals */ = {
 			isa = PBXGroup;
 			children = (
+				EB3A2D6F2E81EE5500CE04F9 /* StartController.swift */,
 				EB112F812E6AF21000637F9E /* Extensions.swift */,
 				EB112F712E6AEFDD00637F9E /* Managers */,
 				EB112F662E6AEEBD00637F9E /* Models */,
@@ -3049,6 +3052,7 @@
 		EBFC18652E79623A00F6298F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EB3A2D722E81EE9A00CE04F9 /* StartController.swift */,
 				EBFC18662E79624000F6298F /* DateExt.swift */,
 			);
 			path = Extensions;
@@ -3123,7 +3127,7 @@
 				EBBB19F62D998826009C977A /* GoogleSignInSwift */,
 			);
 			productName = Delta;
-			productReference = BFFA71D71AAC406100EE9DD1 /* GBoy.app */;
+			productReference = BFFA71D71AAC406100EE9DD1 /* Farm Sound.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D539102E29E88B6B0006B350 /* GemBoyPreviews */ = {
@@ -3811,6 +3815,7 @@
 				D5AE76C42C2B59360086471B /* Keychain.swift in Sources */,
 				D5CDCCF12A859E7500E22131 /* ReviewSaveStatesViewController.swift in Sources */,
 				BF5942881E09BC8B0051894B /* _Game.swift in Sources */,
+				EB3A2D702E81EE6000CE04F9 /* StartController.swift in Sources */,
 				BF95E2771E4977BF0030E7AD /* GameMetadata.swift in Sources */,
 				BFFC461F1D59823500AF2CC6 /* GamesStoryboardSegue.swift in Sources */,
 				BF2B98E61C97E32F00F6D57D /* SaveStatesCollectionHeaderView.swift in Sources */,
@@ -4136,6 +4141,7 @@
 				EB1E5DAB2E63050E00305D33 /* Keychain.swift in Sources */,
 				EB1E5DAD2E63050E00305D33 /* ReviewSaveStatesViewController.swift in Sources */,
 				EB1E5DAE2E63050E00305D33 /* _Game.swift in Sources */,
+				EB3A2D732E81EE9A00CE04F9 /* StartController.swift in Sources */,
 				EB1E5DB02E63050E00305D33 /* GameMetadata.swift in Sources */,
 				EB1E5DB12E63050E00305D33 /* GamesStoryboardSegue.swift in Sources */,
 				EB1E5DB22E63050E00305D33 /* SaveStatesCollectionHeaderView.swift in Sources */,
@@ -4584,10 +4590,28 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_TEAM = S797C2F3U5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"STATIC_LIBRARY=1",
+					"STATIC_LIBRARY=1",
+					_NETINET_TCP_VAR_H_,
+					"MELONDS_VERSION=\\\"0.9.5\\\"",
+					"STATIC_LIBRARY=1",
+					MUPENPLUSAPI,
+					TXFILTER_LIB,
+					OS_IOS,
+					GLESX,
+					GL_ERROR_DEBUG,
+					GL_DEBUG,
+					GLESX,
+					"PNG_ARM_NEON_OPT=0",
+					DANIMAL,
+				);
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = GBoy;
+				INFOPLIST_KEY_CFBundleDisplayName = "Farm Sound";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4633,9 +4657,9 @@
 					"-framework",
 					"\"JavaScriptCore\"",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG -DANIMAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
-				PRODUCT_NAME = GBoy;
+				PRODUCT_NAME = "Farm Sound";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -4645,7 +4669,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = BETA;
 				SWIFT_INCLUDE_PATHS = "$(inherited)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/GB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4664,10 +4688,28 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_TEAM = S797C2F3U5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"STATIC_LIBRARY=1",
+					"STATIC_LIBRARY=1",
+					_NETINET_TCP_VAR_H_,
+					"MELONDS_VERSION=\\\"0.9.5\\\"",
+					"STATIC_LIBRARY=1",
+					MUPENPLUSAPI,
+					TXFILTER_LIB,
+					OS_IOS,
+					GLESX,
+					GL_ERROR_DEBUG,
+					GL_DEBUG,
+					GLESX,
+					"PNG_ARM_NEON_OPT=0",
+					DANIMAL,
+				);
 				INFOPLIST_FILE = "GemBoy/Supporting Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = GBoy;
+				INFOPLIST_KEY_CFBundleDisplayName = "Farm Sound";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4678,9 +4720,9 @@
 					"-ld64",
 					"${inherited}",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR -DANIMAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomenicoGonnelli.FarmSound;
-				PRODUCT_NAME = GBoy;
+				PRODUCT_NAME = "Farm Sound";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -4690,7 +4732,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_INCLUDE_PATHS = "$(inherited)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/GB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4869,7 +4911,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = BETA;
 				SWIFT_INCLUDE_PATHS = "$(inherited)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/GB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4914,7 +4956,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_INCLUDE_PATHS = "$(inherited)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/Delta-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GemBoy/Supporting Files/GB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -5019,7 +5061,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 35;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -5062,7 +5104,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_TEAM = S797C2F3U5;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
