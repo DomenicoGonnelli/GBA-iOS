@@ -27,19 +27,7 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
         super.viewDidLoad()
         var vc : [UIViewController] = []
         
-        
     
-        let myBookingListViewController = MyBookingListViewController.instance()
-        myBookingListViewController.tabBarItem = UITabBarItem(title: "classificationTab".localizable, image: UIImage(named: "classification"), selectedImage: UIImage(named: "classificationSelected"))
-        myBookingListViewController.tabBarItem.badgeColor = .white
-        vc.append(myBookingListViewController)
-        
-    
-//
-        let home = AliceHomeViewController.instance
-        home.tabBarItem = UITabBarItem(title: "homeTab".localizable, image: UIImage(named: "home"), selectedImage: UIImage(named: "homeSelected"))
-        home.tabBarItem.badgeColor = .white
-        vc.append(home)
         
         
         let userVC = UserProfileViewController.instance2()
@@ -123,9 +111,9 @@ class TabBarViewController: UIViewController, AlertViewDelegate{
     }
     
     func goToHomePage(){
-        if let vc = viewControllers?.first(where: {$0 is AliceHomeViewController}){
-            tabController?.selectedViewController = vc
-        }
+//        if let vc = viewControllers?.first(where: {$0 is AliceHomeViewController}){
+//            tabController?.selectedViewController = vc
+//        }
     }
     
 //    func refreshHome(){

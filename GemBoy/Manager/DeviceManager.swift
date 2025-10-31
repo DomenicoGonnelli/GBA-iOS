@@ -14,8 +14,14 @@ import Network
 
 class DeviceManager {
     
-    //static var group = "group.com.domenico.gonnelli.gba.emulator"
+    
+#if Darlion
+    static var group = "group.com.Darlion.GemboyAdvance.App"
+#else
     static var group = "group.com.DomenicoGonnelli.FarmSound"
+    //static var group = "group.com.domenico.gonnelli.gba.emulator"
+#endif
+    
     
     static var currentDevice : DevicesType {
         switch UIDevice.current.userInterfaceIdiom {

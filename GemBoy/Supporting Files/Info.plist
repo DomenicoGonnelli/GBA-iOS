@@ -253,7 +253,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>APP uses your microphone to emulate the Nintendo DS microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Press &quot;OK&quot; to allow App to use images from your Photo Library as game artwork.</string>
+	<string>Press "OK" to allow App to use images from your Photo Library as game artwork.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>com.rileytestut.Delta.PlayGame</string>

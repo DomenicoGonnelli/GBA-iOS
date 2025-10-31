@@ -49,6 +49,10 @@ class LoginViewController: TabBarItemViewController{
             appleButton?.isHidden = true
         }
         
+#if Darlion
+        appleButton?.isHidden = true
+#endif
+        
     }
     
     func appleAuth( idToken: String){

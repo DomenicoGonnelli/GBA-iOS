@@ -109,7 +109,10 @@ extension GamesViewController
     {
         canManageNotification = true
         super.viewDidLoad()
+        
+#if !Darlion
         AppStoreReviewManager.requestReviewIfAppropriate()
+#endif
         self.placeholderView = RSTPlaceholderView(frame: self.view.bounds)
         self.placeholderView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.placeholderView.textLabel.text = "No_Games".localizable
